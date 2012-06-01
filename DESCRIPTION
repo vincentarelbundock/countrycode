@@ -10,7 +10,8 @@ Description: Standardize country names, convert them into one of
     seven coding schemes, convert between coding schemes, and
     assign region descriptors.
 Version: 0.7
-URL: http://www.umich.edu/~varel, https://github.com/vincentarelbundock/countrycode
+URL: http://www.umich.edu/~varel,
+    https://github.com/vincentarelbundock/countrycode
 Date: 2012-06-01
 Collate:
     'countrycode.R'

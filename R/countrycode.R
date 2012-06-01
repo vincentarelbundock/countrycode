@@ -20,10 +20,6 @@
 #'   \emph{only}:  "continent", "region"
 #' @export
 #' @aliases countrycode
-#' @author Vincent Arel-Bundock \email{varel@@umich.edu}
-#' @references
-#'     \url{http://www.umich.edu/~varel}
-#'     \url{https://github.com/vincentarelbundock/countrycode}
 #' @examples
 #' codes.of.origin <- countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
