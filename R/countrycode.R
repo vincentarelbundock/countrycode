@@ -28,37 +28,37 @@
 #' codes.of.origin <- countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, nomatch=FALSE){
-	o_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "country.name")
-	d_codes<-c("region", "continent", "cowc", "cown", "fips04", "imf", 
-               "iso2c", "iso3c", "iso3n", "country.name")
-	if (!origin %in% o_codes){stop("Origin code not supported")}
-	if (!destination %in% d_codes){stop("Destination code not supported")}
-	if (origin != "country.name"){
-		matches <- match(sourcevar, countrycode_data[, origin])
-		destination.vector <- countrycode_data[matches, destination]
-		destination.vector[is.na(sourcevar) == TRUE] <- NA
-	}else{
-		# Prepare destination.vector
+    o_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "country.name")
+    d_codes<-c("region", "continent", "cowc", "cown", "fips04", "imf", 
+                "iso2c", "iso3c", "iso3n", "country.name")
+    if (!origin %in% o_codes){stop("Origin code not supported")}
+    if (!destination %in% d_codes){stop("Destination code not supported")}
+    if (origin != "country.name"){
+        matches <- match(sourcevar, countrycode_data[, origin])
+        destination.vector <- countrycode_data[matches, destination]
+        destination.vector[is.na(sourcevar) == TRUE] <- NA
+    }else{
+        # Prepare destination.vector
         destination.vector <- rep(NA, length(sourcevar))
-		# For each regex in the database -> find matches
-		for (i in 1:nrow(countrycode_data)){
-			Origin_code <- countrycode_data$regex[i]
-			Destination_code <- countrycode_data[i, destination]
-			matches <- as.vector(grep(Origin_code, as.vector(sourcevar), perl = TRUE, 
+        # For each regex in the database -> find matches
+        for (i in 1:nrow(countrycode_data)){
+            Origin_code <- countrycode_data$regex[i]
+            Destination_code <- countrycode_data[i, destination]
+            matches <- as.vector(grep(Origin_code, as.vector(sourcevar), perl = TRUE, 
                                       ignore.case = TRUE, value = FALSE))
-			# For each match -> replace in target vector
-			for (j in matches) {
-				destination.vector[j] <- Destination_code
-			}
-		}
-	}
+            # For each match -> replace in target vector
+            for (j in matches) {
+                destination.vector[j] <- Destination_code
+            }
+        }
+    }
     if(nomatch){
         badmatch <- unique(sourcevar[is.na(destination.vector)])
         if(length(badmatch) > 0){
             warning("Some values were not matched: ", paste(badmatch, collapse=", "), "\n")
         }
     }
-	return(destination.vector)
+    return(destination.vector)
 }
 
 #' countrycode unit test
