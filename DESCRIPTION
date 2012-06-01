@@ -1,16 +1,18 @@
 Package: countrycode
-Type: Package
-Title: Create and manipulate data frames that contain country names or
-        country coding schemes
-Version: 0.6
-Date: 2012-03-30
-Author: Vincent Arel-Bundock <varel@umich.edu>
 Maintainer: Vincent Arel-Bundock <varel@umich.edu>
-Description: Standardizes country names, converts them into one of
-        seven coding schemes, assigns region descriptors, and generates
-        empty dyadic or country-year dataframes from the coding
-        schemes.
 License: GPL-3
-LazyLoad: yes
+Title: Convert country names and country codes
 LazyData: yes
-URL: http://www.umich.edu/~varel/
+Type: Package
+LazyLoad: yes
+Author: Vincent Arel-Bundock <varel@umich.edu>
+Description: Standardize country names, convert them into one of
+    seven coding schemes, convert between coding schemes, and
+    assign region descriptors.
+Version: 0.7
+URL: http://www.umich.edu/~varel, https://github.com/vincentarelbundock/countrycode
+Date: 2012-06-01
+Collate:
+    'countrycode.R'
+    'countrycode-package.R'
+    'countrycode_data.R'
