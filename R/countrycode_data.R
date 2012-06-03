@@ -7,12 +7,14 @@
 #'   \item country.name: Long country name 
 #'   \item cowc: Correlates of War character
 #'   \item cown: Correlates of War numeric
+#'   \item fao: Food and Agriculture Organization of the United Nations numerical code
 #'   \item fips104: FIPS 10-4 (Federal Information Processing Standard) 
 #'   \item imf: International Monetary Fund 
 #'   \item iso2c: ISO-2 character
 #'   \item iso3c: ISO-3 character
 #'   \item iso2n: ISO-2 numeric 
 #'   \item iso3n: ISO-3 numeric 
+#'   \item un: United Nations numerical code 
 #'   \item regex: Regular expression used to convert long names to code 
 #'   \item region: Regions as defined in the World Bank Development Indicators 
 #'   \item continent: Continent as defined in the World Bank Development Indicators 

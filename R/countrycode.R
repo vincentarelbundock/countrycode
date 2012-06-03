@@ -1,6 +1,6 @@
 #' Convert country codes
 #'
-#' Converts long country names into one of seven different coding schemes.
+#' Converts long country names into one of 9 different coding schemes.
 #' Translates from one scheme to another. Converts country name or coding
 #' scheme to the official short English country name. Creates a new variable
 #' with the name of the continent or region to which each country belongs. 
@@ -11,11 +11,12 @@
 #' @param nomatch Prints unique elements from sourcevar for which no match was found
 #' @keywords countrycode 
 #' @note Supports the following coding schemes: Correlates of War character, 
-#'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF, FIPS 10-4, 
-#'   official English short country names (ISO), continent, region. 
+#'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, FIPS 10-4,
+#'   FAO numeric, United Nations numeric, official English short country names (ISO), 
+#'   continent, region. 
 #' 
 #'   The following strings can be used as arguments for \code{origin} or \code{destination}: 
-#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "country.name". 
+#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "fao", "un", "country.name". 
 #'   The following strings can be used as arguments for \code{destination}
 #'   \emph{only}:  "continent", "region"
 #' @export
@@ -24,9 +25,9 @@
 #' codes.of.origin <- countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, nomatch=FALSE){
-    o_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "country.name")
-    d_codes<-c("region", "continent", "cowc", "cown", "fips04", "imf", 
-                "iso2c", "iso3c", "iso3n", "country.name")
+    o_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "country.name")
+    d_codes<-c("region", "continent", "cowc", "cown", "fao", "fips04", "imf", 
+                "iso2c", "iso3c", "iso3n", "un", "country.name")
     if (!origin %in% o_codes){stop("Origin code not supported")}
     if (!destination %in% d_codes){stop("Destination code not supported")}
     if (origin != "country.name"){

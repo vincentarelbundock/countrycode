@@ -3,3 +3,5 @@ Version 0.7 (2012-06-01)
     Fixed 2 Congo-related problems
     Added option for countrycode() to report codes for which no match was found
     Moved documentation to roxygen2
+    Fixed Trinidad Tobago regex
+    Added UN and FAO country codes
