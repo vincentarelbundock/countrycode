@@ -54,10 +54,12 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE){
         if(length(nomatch) > 0){
             warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n")
         }
-        if(origin=='country.name' & length(destination_list) > 0){
-            destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
-            destination_list <- sort(unique(do.call('c', destination_list)))
-            warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n")
+        if(origin=='country.name'){
+           if(length(destination_list) > 0){
+               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
+               destination_list <- sort(unique(do.call('c', destination_list)))
+               warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n")
+           }
         }
     }
     return(destination_vector)
