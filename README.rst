@@ -33,14 +33,12 @@ Examples
 
 Load library: 
 
-.. code-block::
-
+.. code-block:: r
     > library(countrycode)
 
 Convert single country codes: 
 
-.. code-block::
-
+.. code-block:: r
     > countrycode(232,"cown","country.name")
     [1] "ANDORRA"
     > countrycode("United States","country.name","iso3c")
@@ -50,16 +48,14 @@ Convert single country codes:
 
 Convert a vector of country codes
 
-.. code-block::
-   
+.. code-block:: r
     > cowcodes <- c("ALG","ALB","UKG","CAN","USA")
     > countrycode(cowcodes,"cowc","iso3c")
     [1] "DZA" "ALB" "GBR" "CAN" "USA"
 
 Generate vectors and 2 data frames without a common id (i.e. can't merge the 2 df):
 
-.. code-block::
-    
+.. code-block:: r
     > isocodes <- c(12,8,826,124,840)
     > var1     <- sample(1:500,5)
     > var2     <- sample(1:500,5)
@@ -69,8 +65,7 @@ Generate vectors and 2 data frames without a common id (i.e. can't merge the 2 d
 
 Inspect the data:
 
-.. code-block::
-
+.. code-block:: r
     > df1
       cowcodes var1
     1      ALG   71
@@ -88,8 +83,7 @@ Inspect the data:
 
 Create a common variable with the iso3c code in each data frame, merge the data, and create a country identifier: 
 
-.. code-block::
-
+.. code-block:: r
     > df1$iso3c   <- countrycode(df1$cowcodes, "cowc", "iso3c")
     > df2$iso3c   <- countrycode(df2$isocodes, "iso3n", "iso3c")
     > df3         <- merge(df1,df2,id="iso3c")
