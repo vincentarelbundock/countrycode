@@ -1,7 +1,7 @@
 R: countrycode
 ==============
 
-`countrycode` standardizes country names, converts them into one of seven coding schemes, assigns region descriptors, and generates empty dyadic or country-year dataframes from the coding schemes. Scroll down for more details or visit the `countrycode CRAN page <http://cran.r-project.org/web/packages/countrycode/index.html>`_ 
+`countrycode` standardizes country names, converts them into one of seven coding schemes, assigns region descriptors, and generates empty dyadic or country-year dataframes from the coding schemes. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html) 
 
 Problem
 -------
@@ -64,7 +64,6 @@ Generate vectors and 2 data frames without a common id (i.e. can't merge the 2 d
 > var2     <- sample(1:500,5)
 > df1      <- as.data.frame(cbind(cowcodes,var1))
 > df2      <- as.data.frame(cbind(isocodes,var2))
->  
 ```     
 
 Inspect the data:
