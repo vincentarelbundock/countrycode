@@ -33,66 +33,71 @@ Examples
 
 Load library: 
 
-.. code-block:: r
-    > library(countrycode)
+```r    
+> library(countrycode)
+```
 
 Convert single country codes: 
 
-.. code-block:: r
-    > countrycode(232,"cown","country.name")
-    [1] "ANDORRA"
-    > countrycode("United States","country.name","iso3c")
-    [1] "USA"
-    > countrycode("DZA","iso3c","cowc")
-    [1] "ALG"
+```r    
+> countrycode(232,"cown","country.name")
+[1] "ANDORRA"
+> countrycode("United States","country.name","iso3c")
+[1] "USA"
+> countrycode("DZA","iso3c","cowc")
+[1] "ALG"
+```     
 
 Convert a vector of country codes
 
-.. code-block:: r
-    > cowcodes <- c("ALG","ALB","UKG","CAN","USA")
-    > countrycode(cowcodes,"cowc","iso3c")
-    [1] "DZA" "ALB" "GBR" "CAN" "USA"
+```r    
+> cowcodes <- c("ALG","ALB","UKG","CAN","USA")
+> countrycode(cowcodes,"cowc","iso3c")
+[1] "DZA" "ALB" "GBR" "CAN" "USA"
+```     
 
 Generate vectors and 2 data frames without a common id (i.e. can't merge the 2 df):
 
-.. code-block:: r
-    > isocodes <- c(12,8,826,124,840)
-    > var1     <- sample(1:500,5)
-    > var2     <- sample(1:500,5)
-    > df1      <- as.data.frame(cbind(cowcodes,var1))
-    > df2      <- as.data.frame(cbind(isocodes,var2))
-    >  
+```r    
+> isocodes <- c(12,8,826,124,840)
+> var1     <- sample(1:500,5)
+> var2     <- sample(1:500,5)
+> df1      <- as.data.frame(cbind(cowcodes,var1))
+> df2      <- as.data.frame(cbind(isocodes,var2))
+>  
+```     
 
 Inspect the data:
 
-.. code-block:: r
-    > df1
-      cowcodes var1
-    1      ALG   71
-    2      ALB  427
-    3      UKG  180
-    4      CAN   21
-    5      USA  383
-    > df2
-      isocodes var2
-    1       12  238
-    2        8  329
-    3      826  463
-    4      124  437
-    5      840   26
+```r    
+> df1
+cowcodes var1
+1      ALG   71
+2      ALB  427
+3      UKG  180
+4      CAN   21
+5      USA  383
+> df2
+isocodes var2
+1       12  238
+2        8  329
+3      826  463
+4      124  437
+5      840   26
+```     
 
 Create a common variable with the iso3c code in each data frame, merge the data, and create a country identifier: 
 
-.. code-block:: r
-    > df1$iso3c   <- countrycode(df1$cowcodes, "cowc", "iso3c")
-    > df2$iso3c   <- countrycode(df2$isocodes, "iso3n", "iso3c")
-    > df3         <- merge(df1,df2,id="iso3c")
-    > df3$country <- countrycode(df3$iso3c, "iso3c", "country.name")
-    > df3
-      iso3c cowcodes var1 isocodes var2        country
-    1   ALB      ALB  113        8  245        ALBANIA
-    2   CAN      CAN  373      124  197         CANADA
-    3   DZA      ALG  254       12  295        ALGERIA
-    4   GBR      UKG  351      826   57 UNITED KINGDOM
-    5   USA      USA  241      840   85  UNITED STATES
-     
+```r    
+> df1$iso3c   <- countrycode(df1$cowcodes, "cowc", "iso3c")
+> df2$iso3c   <- countrycode(df2$isocodes, "iso3n", "iso3c")
+> df3         <- merge(df1,df2,id="iso3c")
+> df3$country <- countrycode(df3$iso3c, "iso3c", "country.name")
+> df3
+iso3c cowcodes var1 isocodes var2        country
+1   ALB      ALB  113        8  245        ALBANIA
+2   CAN      CAN  373      124  197         CANADA
+3   DZA      ALG  254       12  295        ALGERIA
+4   GBR      UKG  351      826   57 UNITED KINGDOM
+5   USA      USA  241      840   85  UNITED STATES
+```     
