@@ -8,7 +8,7 @@
 #' @param sourcevar Vector which contains the codes or country names to be converted
 #' @param origin Coding scheme of origin (name enclosed in quotes "")
 #' @param destination Coding scheme of destination (name enclosed in quotes "")
-#' @param nomatch Prints unique elements from sourcevar for which no match was found
+#' @param warn Prints unique elements from sourcevar for which no match was found
 #' @keywords countrycode 
 #' @note Supports the following coding schemes: Correlates of War character, 
 #'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, FIPS 10-4,
@@ -24,53 +24,55 @@
 #' @examples
 #' codes.of.origin <- countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
-countrycode <- function (sourcevar, origin, destination, nomatch=FALSE){
-    o_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "country.name")
-    d_codes<-c("region", "continent", "cowc", "cown", "fao", "fips04", "imf", 
+countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+    # Sanity check
+    origin_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "country.name")
+    destination_codes<-c("region", "continent", "cowc", "cown", "fao", "fips04", "imf", 
                 "iso2c", "iso3c", "iso3n", "un", "country.name")
-    if (!origin %in% o_codes){stop("Origin code not supported")}
-    if (!destination %in% d_codes){stop("Destination code not supported")}
+    if (!origin %in% origin_codes){stop("Origin code not supported")}
+    if (!destination %in% destination_codes){stop("Destination code not supported")}
+    # Prepare output vector
+    destination_vector <- rep(NA, length(sourcevar))
+    # All but regex-based operations
     if (origin != "country.name"){
         matches <- match(sourcevar, countrycode_data[, origin])
-        destination.vector <- countrycode_data[matches, destination]
-        destination.vector[is.na(sourcevar) == TRUE] <- NA
+        destination_vector <- countrycode_data[matches, destination]
     }else{
-        # Prepare destination.vector
-        destination.vector <- rep(NA, length(sourcevar))
         # For each regex in the database -> find matches
+        destination_list <- lapply(sourcevar, function(k) k)
         for (i in 1:nrow(countrycode_data)){
-            Origin_code <- countrycode_data$regex[i]
-            Destination_code <- countrycode_data[i, destination]
-            matches <- as.vector(grep(Origin_code, as.vector(sourcevar), perl = TRUE, 
-                                      ignore.case = TRUE, value = FALSE))
-            # For each match -> replace in target vector
-            for (j in matches) {
-                destination.vector[j] <- Destination_code
-            }
+            matches <- grep(countrycode_data$regex[i], sourcevar, perl=TRUE, ignore.case=TRUE, value=FALSE)
+            destination_vector[matches] <- countrycode_data[i, destination]
+            # Warning-related
+            destination_list[matches] <- lapply(destination_list[matches], function(k) c(k, countrycode_data[i, destination]))
+        }
+        destination_list <- destination_list[lapply(destination_list, length) > 2]
+    }
+    # Warnings
+    if(warn){
+        nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
+        if(length(nomatch) > 0){
+            warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n")
+        }
+        if(origin=='country.name' & length(destination_list) > 0){
+            destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
+            destination_list <- sort(unique(do.call('c', destination_list)))
+            warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n")
         }
     }
-    if(nomatch){
-        badmatch <- unique(sourcevar[is.na(destination.vector)])
-        if(length(badmatch) > 0){
-            warning("Some values were not matched: ", paste(badmatch, collapse=", "), "\n")
-        }
-    }
-    return(destination.vector)
+    return(destination_vector)
 }
 
-#' countrycode unit test
+#' countrycode tests
 #'
 #' Runs a series of tests.
 #' Returns TRUE if all tests passed.
 #' Prints test description when some tests fail. 
 #'
 #' @keywords countrycode_test 
-#' @export
 #' @aliases countrycode_test
-#' @author Vincent Arel-Bundock \email{varel@@umich.edu}
-#' @examples
-#' countrycode_test()
 countrycode_test <- function(){
+    print("Don't worry about warning messages produced by this function. What matters is the TRUE outcome")
     test_result = TRUE
     # Missing values
     x = countrycode(c('BAD', 'BLA', 'CAN'), 'iso3c', 'country.name')
@@ -87,13 +89,15 @@ countrycode_test <- function(){
         test_result = FALSE
         warning('Congo test failed')
     }
-    # Does nomatch break conversion?
-    x = suppressWarnings(countrycode(c('ALG', 'USA'), 'cowc', 'iso2c', nomatch=TRUE))
-    y = suppressWarnings(countrycode(c('BLA', 'USA'), 'cowc', 'iso2c', nomatch=TRUE))
+    # Does warn break conversion?
+    x = countrycode(c('ALG', 'USA'), 'cowc', 'iso2c', warn=TRUE)
+    y = countrycode(c('BLA', 'USA'), 'cowc', 'iso2c', warn=TRUE)
     if(!all(x == c('DZ','US')) & !all(y == c(NA, 'US'))){
         test_result = FALSE
         warning('nomatch test failed')
     }
+    # Multiple regex matches
+    x = countrycode(countrycode_data[,'country.name'], 'country.name', 'cowc', warn=TRUE)  
     return(test_result)
 }
 
