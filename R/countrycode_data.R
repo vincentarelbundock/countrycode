@@ -1,6 +1,6 @@
 #' Country code translation data frame
 #' 
-#' A data frame with 265 observations on the following 11 variables.
+#' A data frame with 262 observations on the following 14 variables.
 #' Used internally by the \code{countrycode()} function.
 #' 
 #' \itemize{
@@ -15,6 +15,7 @@
 #'   \item iso2n: ISO-2 numeric 
 #'   \item iso3n: ISO-3 numeric 
 #'   \item un: United Nations numerical code 
+#'   \item wb: World Bank (very similar but not identical to iso3c) 
 #'   \item regex: Regular expression used to convert long names to code 
 #'   \item region: Regions as defined in the World Bank Development Indicators 
 #'   \item continent: Continent as defined in the World Bank Development Indicators 

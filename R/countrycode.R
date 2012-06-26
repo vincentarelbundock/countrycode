@@ -1,6 +1,6 @@
 #' Convert country codes
 #'
-#' Converts long country names into one of 9 different coding schemes.
+#' Converts long country names into one of many different coding schemes.
 #' Translates from one scheme to another. Converts country name or coding
 #' scheme to the official short English country name. Creates a new variable
 #' with the name of the continent or region to which each country belongs. 
@@ -12,11 +12,11 @@
 #' @keywords countrycode 
 #' @note Supports the following coding schemes: Correlates of War character, 
 #'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, FIPS 10-4,
-#'   FAO numeric, United Nations numeric, official English short country names (ISO), 
-#'   continent, region. 
+#'   FAO numeric, United Nations numeric, World Bank character, 
+#'   official English short country names (ISO), continent, region. 
 #' 
 #'   The following strings can be used as arguments for \code{origin} or \code{destination}: 
-#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "fao", "un", "country.name". 
+#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "fao", "un", "wb", "country.name". 
 #'   The following strings can be used as arguments for \code{destination}
 #'   \emph{only}:  "continent", "region"
 #' @export
@@ -26,9 +26,9 @@
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn=FALSE){
     # Sanity check
-    origin_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "country.name")
+    origin_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "wb", "country.name")
     destination_codes<-c("region", "continent", "cowc", "cown", "fao", "fips04", "imf", 
-                "iso2c", "iso3c", "iso3n", "un", "country.name")
+                "iso2c", "iso3c", "iso3n", "un", "wb", "country.name")
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}
     # Prepare output vector

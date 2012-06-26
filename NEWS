@@ -1,7 +1,16 @@
+Version 0.8 (2012-06-26)
+------------------------
+
+* Added World Bank (wb) country codes. Very similar, but slightly different from iso3c. 
+
 Version 0.7 (2012-06-01)
-    Removed useless functions countrycode.nomatch and countryframe
-    Fixed 2 Congo-related problems
-    Added option for countrycode() to report codes for which no match was found
-    Moved documentation to roxygen2
-    Fixed Trinidad Tobago regex
-    Added UN and FAO country codes
+------------------------
+
+* Removed useless functions countrycode.nomatch and countryframe
+* Fixed 2 Congo-related problems
+* Added option for countrycode() to report codes for which no match was found
+* Moved documentation to roxygen2
+* Fixed Trinidad Tobago regex
+* Added UN and FAO country codes
+
+

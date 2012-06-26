@@ -9,10 +9,10 @@ Author: Vincent Arel-Bundock <varel@umich.edu>
 Description: Standardize country names, convert them into one of
     seven coding schemes, convert between coding schemes, and
     assign region descriptors.
-Version: 0.7
+Version: 0.8
 URL: http://www.umich.edu/~varel,
     https://github.com/vincentarelbundock/countrycode
-Date: 2012-06-01
+Date: 2012-06-26
 Collate:
     'countrycode.R'
     'countrycode-package.R'
