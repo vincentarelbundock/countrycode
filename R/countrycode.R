@@ -91,6 +91,12 @@ countrycode_test <- function(){
         test_result = FALSE
         warning('Congo test failed')
     }
+    # Niger/Nigeria
+    y = countrycode(c('nigeria', 'niger'), 'country.name', 'country.name')
+    if(!all(y == c('NIGERIA','NIGER'))){
+        test_result = FALSE
+        warning('Nigeria test failed')
+    }
     # Does warn break conversion?
     x = countrycode(c('ALG', 'USA'), 'cowc', 'iso2c', warn=TRUE)
     y = countrycode(c('BLA', 'USA'), 'cowc', 'iso2c', warn=TRUE)
