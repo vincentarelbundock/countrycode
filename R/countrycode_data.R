@@ -7,6 +7,7 @@
 #'   \item country.name: Long country name 
 #'   \item cowc: Correlates of War character
 #'   \item cown: Correlates of War numeric
+#'   \item gw: Gledditsch and Ward
 #'   \item fao: Food and Agriculture Organization of the United Nations numerical code
 #'   \item fips104: FIPS 10-4 (Federal Information Processing Standard) 
 #'   \item imf: International Monetary Fund 
