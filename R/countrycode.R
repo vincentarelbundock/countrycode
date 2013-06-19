@@ -13,10 +13,10 @@
 #' @note Supports the following coding schemes: Correlates of War character, 
 #'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, FIPS 10-4,
 #'   FAO numeric, United Nations numeric, World Bank character, 
-#'   official English short country names (ISO), continent, region. 
+#'   official English short country names (ISO), continent, region, GW (Gleditsch and Ward). 
 #' 
 #'   The following strings can be used as arguments for \code{origin} or \code{destination}: 
-#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "fao", "un", "wb", "country.name". 
+#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "fao", "un", "wb", "country.name", "gw". 
 #'   The following strings can be used as arguments for \code{destination}
 #'   \emph{only}:  "continent", "region"
 #' @export
@@ -26,9 +26,9 @@
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn=FALSE){
     # Sanity check
-    origin_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "wb", "country.name")
+    origin_codes<-c("cowc", "cown", "fips04", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "wb", "country.name", "gw")
     destination_codes<-c("region", "continent", "cowc", "cown", "fao", "fips04", "imf", 
-                "iso2c", "iso3c", "iso3n", "un", "wb", "country.name")
+                "iso2c", "iso3c", "iso3n", "un", "wb", "country.name" "gw")
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}
     # Prepare output vector
