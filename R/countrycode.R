@@ -31,20 +31,25 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE){
                 "iso2c", "iso3c", "iso3n", "un", "wb", "country.name")
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}
+    if (origin == 'country.name'){
+        dict = na.omit(countrycode_data[,c('regex', destination)])
+    }else{
+        dict = na.omit(countrycode_data[,c(origin, destination)])
+    }
     # Prepare output vector
     destination_vector <- rep(NA, length(sourcevar))
     # All but regex-based operations
     if (origin != "country.name"){
-        matches <- match(sourcevar, countrycode_data[, origin])
-        destination_vector <- countrycode_data[matches, destination]
+        matches <- match(sourcevar, dict[, origin])
+        destination_vector <- dict[matches, destination]
     }else{
         # For each regex in the database -> find matches
         destination_list <- lapply(sourcevar, function(k) k)
-        for (i in 1:nrow(countrycode_data)){
-            matches <- grep(countrycode_data$regex[i], sourcevar, perl=TRUE, ignore.case=TRUE, value=FALSE)
-            destination_vector[matches] <- countrycode_data[i, destination]
+        for (i in 1:nrow(dict)){
+            matches <- grep(dict$regex[i], sourcevar, perl=TRUE, ignore.case=TRUE, value=FALSE)
+            destination_vector[matches] <- dict[i, destination]
             # Warning-related
-            destination_list[matches] <- lapply(destination_list[matches], function(k) c(k, countrycode_data[i, destination]))
+            destination_list[matches] <- lapply(destination_list[matches], function(k) c(k, dict[i, destination]))
         }
         destination_list <- destination_list[lapply(destination_list, length) > 2]
     }
@@ -97,6 +102,8 @@ countrycode_test <- function(){
         test_result = FALSE
         warning('Nigeria test failed')
     }
+    #
+    print(countrycode(NA, 'cowc', 'iso3c') != 'ABW')
     # Does warn break conversion?
     x = countrycode(c('ALG', 'USA'), 'cowc', 'iso2c', warn=TRUE)
     y = countrycode(c('BLA', 'USA'), 'cowc', 'iso2c', warn=TRUE)
