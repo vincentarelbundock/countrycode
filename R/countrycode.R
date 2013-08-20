@@ -15,10 +15,10 @@
 #'   FAO numeric, United Nations numeric, World Bank character, 
 #'   official English short country names (ISO), continent, region. 
 #' 
-#'   The following strings can be used as arguments for \code{origin} or \code{destination}: 
-#'   "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf", "fips104", "fao", "un", "wb", "country.name". 
-#'   The following strings can be used as arguments for \code{destination}
-#'   \emph{only}:  "continent", "region"
+#'   The following strings can be used as arguments for \code{origin} or
+#'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
+#'   "fips104", "fao", "un", "wb", "country.name".  The following strings can be
+#'   used as arguments for \code{destination} \emph{only}:  "continent", "region" 
 #' @export
 #' @aliases countrycode
 #' @examples
