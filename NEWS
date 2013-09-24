@@ -2,6 +2,7 @@ Version 0.17 (2013-??-??)
 -------------------------
 
 * Bug: fips04 -> fips104 (Thanks to Florian Hollenbach)
+* Complete FIPS104 codes (Thanks to Andy Halterman)
 
 Version 0.16 (2013-08-20)
 -------------------------
@@ -72,5 +73,6 @@ Version 0.7 (2012-06-01)
 * Moved documentation to roxygen2
 * Fixed Trinidad Tobago regex
 * Added UN and FAO country codes
+
 
 
