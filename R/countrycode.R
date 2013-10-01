@@ -26,9 +26,8 @@
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn=FALSE){
     # Sanity check
-    origin_codes<-c("cowc", "cown", "fips104", "imf", "iso2c", "iso3c", "iso3n", "fao", "un", "wb", "country.name")
-    destination_codes<-c("region", "continent", "cowc", "cown", "fao", "fips104", "imf", 
-                "iso2c", "iso3c", "iso3n", "un", "wb", "country.name")
+    origin_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("continent","region","regex"))]
+    destination_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("regex"))]
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}
     if (origin == 'country.name'){
