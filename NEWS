@@ -6,6 +6,7 @@ Version 0.17 (2013-??-??)
 * Generic code name validity check (Thanks to Stefan Zeugner)
 * Fixed IMF codes (Thanks to Stefan Zeugner)
 * Regex fix to work better with Database of Political Insitutions (Thanks to Christopher Gandrud)
+* Avoids confusion with Eq Guinea (Thanks to Christopher Gandrud)
 
 Version 0.16 (2013-08-20)
 -------------------------
