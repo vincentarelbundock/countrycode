@@ -12,13 +12,15 @@
 #' @keywords countrycode 
 #' @note Supports the following coding schemes: Correlates of War character, 
 #'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, FIPS 10-4,
-#'   FAO numeric, United Nations numeric, World Bank character, 
+#'   FAO numeric, United Nations numeric, UN Comtrade numeric, World Bank character, 
 #'   official English short country names (ISO), continent, region. 
 #' 
 #'   The following strings can be used as arguments for \code{origin} or
 #'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
 #'   "fips104", "fao", "un", "wb", "country.name".  The following strings can be
-#'   used as arguments for \code{destination} \emph{only}:  "continent", "region" 
+#'   used as arguments for \code{destination} \emph{only}:  "continent", "region".
+#'   The following string can be used as argument for \code{origin} \emph{only}:
+#'   "uncomtrade".
 #' @export
 #' @aliases countrycode
 #' @examples
@@ -27,7 +29,7 @@
 countrycode <- function (sourcevar, origin, destination, warn=FALSE){
     # Sanity check
     origin_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("continent","region","regex"))]
-    destination_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("regex"))]
+    destination_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("regex", "uncomtrade"))]
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}
     if (origin == 'country.name'){
