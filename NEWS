@@ -1,6 +1,7 @@
-Version 0.17 (2013-??-??)
+Version 0.17 (2014-06-11)
 -------------------------
 
+* Added International Olympic Committee codes (Thanks to Devon Meunier)
 * Bug: fips04 -> fips104 (Thanks to Florian Hollenbach)
 * Complete FIPS104 codes (Thanks to Andy Halterman)
 * Generic code name validity check (Thanks to Stefan Zeugner)

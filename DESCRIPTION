@@ -12,7 +12,7 @@ Description: Standardize country names, convert them into one of
 Version: 0.17
 URL: http://www.umich.edu/~varel,
     https://github.com/vincentarelbundock/countrycode
-Date: 2013-??-??
+Date: 2014-06-11
 Collate:
     'countrycode.R'
     'countrycode-package.R'
