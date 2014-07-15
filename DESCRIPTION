@@ -7,13 +7,8 @@ Type: Package
 LazyLoad: yes
 Author: Vincent Arel-Bundock <varel@umich.edu>
 Description: Standardize country names, convert them into one of
-    seven coding schemes, convert between coding schemes, and
+    eleven coding schemes, convert between coding schemes, and
     assign region descriptors.
 Version: 0.17
-URL: http://www.umich.edu/~varel,
-    https://github.com/vincentarelbundock/countrycode
-Date: 2014-06-11
-Collate:
-    'countrycode.R'
-    'countrycode-package.R'
-    'countrycode_data.R'
+URL: https://github.com/vincentarelbundock/countrycode
+Date: 2014-07-14
