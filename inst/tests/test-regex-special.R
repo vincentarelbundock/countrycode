@@ -58,11 +58,11 @@ test_that('some common abbreviations are properly matched', {
     expect_that(iso3c_of('u.s.a.'), matches('USA'))
     expect_that(iso3c_of('u.k.'), matches('GBR'))
     expect_that(iso3c_of('fyrom'), matches('MKD'))
-    expect_that(iso3c_of('united arab em.'), matches('UAE'))
-    expect_that(iso3c_of('united arab republic'), matches(NA_character_))
-    expect_that(iso3c_of('emirates'), matches('UAE'))
-    expect_that(iso3c_of('uae'), matches('UAE'))
-    expect_that(iso3c_of('u.a.e.'), matches('UAE'))
+    expect_that(iso3c_of('united arab em.'), matches('ARE'))
+    expect_that(iso3c_of('united arab republic'), equals(NA_character_))
+    expect_that(iso3c_of('emirates'), matches('ARE'))
+    expect_that(iso3c_of('uae'), matches('ARE'))
+    expect_that(iso3c_of('u.a.e.'), matches('ARE'))
 })
 
 test_that('the two Congos are distinguished', {
@@ -71,7 +71,7 @@ test_that('the two Congos are distinguished', {
     expect_that(iso3c_of('congo, republic of the'), matches('COG'))
     expect_that(iso3c_of('congo, republic'), matches('COG'))
     expect_that(iso3c_of('congo, rep.'), matches('COG'))
-    expect_that(iso3c_of('ROC'), matches(NA_character_))   # Since ROC might mean Taiwan
+    expect_that(iso3c_of('ROC'), equals(NA_character_))   # Since ROC might mean Taiwan
     expect_that(iso3c_of('congo-brazzaville'), matches('COG'))
     expect_that(iso3c_of('french congo'), matches('COG'))
     
