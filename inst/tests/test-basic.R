@@ -3,7 +3,7 @@ context('Basic conversions')
 test_that('valid iso3c to country.name works', {
     name_of <- function(iso3c_code) countrycode(iso3c_code, 'iso3c', 'country.name')
     
-    expect_that(name_of('CAN'), matches('Canada'))
+    expect_that(name_of('CAN'), equals('Canada'))
     expect_that(name_of(c('USA', 'CAN')), equals(c('United States', 'Canada')))
 })
 
