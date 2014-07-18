@@ -57,28 +57,6 @@ test_that('former Soviet republics are properly matched', {
 })
 
 test_that('some common abbreviations are properly matched', {
-<<<<<<< HEAD
-    expect_that(iso3c_of('u.s.'), matches('USA'))
-    expect_that(iso3c_of('u.s.a.'), matches('USA'))
-    expect_that(iso3c_of('u.k.'), matches('GBR'))
-    expect_that(iso3c_of('fyrom'), matches('MKD'))
-    expect_that(iso3c_of('united arab em.'), matches('ARE'))
-    expect_that(iso3c_of('united arab republic'), equals(NA_character_))
-    expect_that(iso3c_of('emirates'), matches('ARE'))
-    expect_that(iso3c_of('uae'), matches('ARE'))
-    expect_that(iso3c_of('u.a.e.'), matches('ARE'))
-})
-
-test_that('the two Congos are distinguished', {
-    expect_that(iso3c_of('republic of congo'), matches('COG'))
-    expect_that(iso3c_of('republic of the congo'), matches('COG'))
-    expect_that(iso3c_of('congo, republic of the'), matches('COG'))
-    expect_that(iso3c_of('congo, republic'), matches('COG'))
-    expect_that(iso3c_of('congo, rep.'), matches('COG'))
-    expect_that(iso3c_of('ROC'), equals(NA_character_))   # Since ROC might mean Taiwan
-    expect_that(iso3c_of('congo-brazzaville'), matches('COG'))
-    expect_that(iso3c_of('french congo'), matches('COG'))
-=======
     expect_that(iso3c_of('u.s.'), equals('USA'))
     expect_that(iso3c_of('u.s.a.'), equals('USA'))
     expect_that(iso3c_of('u.k.'), equals('GBR'))
@@ -134,7 +112,6 @@ test_that('the two Congos are distinguished', {
     expect_that(iso3c_of('congo-brazzaville'), equals('COG'))
     expect_that(iso3c_of('french congo'), equals('COG'))
     expect_that(no_warn_iso3c_of('ROC'), equals(NA_character_))   # Could be Taiwan or Congo
->>>>>>> regex-updates
     
     expect_that(iso3c_of('democratic republic of the congo'), equals('COD'))
     expect_that(iso3c_of('congo, democratic republic of the'), equals('COD'))
