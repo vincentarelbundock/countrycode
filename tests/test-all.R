@@ -2,7 +2,6 @@
 
 ## Setup
 library(testthat)
-library(countrycode)
 
-## Runs the tests in inst/tests
-test_package("countrycode")
+## Runs the tests in tests/testthat
+test_check('countrycode')
