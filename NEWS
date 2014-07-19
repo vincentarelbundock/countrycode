@@ -1,3 +1,9 @@
+Version 0.18 (????-??-??)
+-------------------------
+
+* Nils Enevoldsen did wonderful work refactoring most of the regex in the dictionary.
+* Nils also added a bunch of tests. Thanks!
+
 Version 0.17 (2014-07-15)
 -------------------------
 

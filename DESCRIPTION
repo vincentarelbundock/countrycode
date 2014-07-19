@@ -12,4 +12,5 @@ Description: Standardize country names, convert them into one of
 Version: 0.17
 URL: https://github.com/vincentarelbundock/countrycode
 Date: 2014-07-14
-Suggests: testthat (>= 0.5)
+Suggests:
+    testthat (>= 0.5)
