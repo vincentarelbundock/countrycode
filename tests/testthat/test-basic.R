@@ -40,3 +40,14 @@ test_that('warn=FALSE does not give warnings', {
     expect_that(iso2c_of('BLA'), not(gives_warning()))
     expect_that(iso2c_of(c('BLA', 'USA')), not(gives_warning()))
 })
+
+code_names <- names(countrycode_data)[names(countrycode_data) != c('regex', 'continent', 'region')]
+
+for(code_name in code_names){
+    code_list <- countrycode_data[, code_name]
+    dupes <- code_list[duplicated(code_list, incomparables=NA)]
+    dupes <- toString(dupes)
+    test_that(paste('there are zero duplicate', code_name, 'code values'), {
+        expect_that(dupes, equals(''))
+    })
+}
