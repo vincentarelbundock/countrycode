@@ -239,7 +239,7 @@ Tajikistan,TAJ,702,208,TI,923,TJK,TJ,TJK,762,762,TJK,tajik,Asia,Central Asia
 Thailand,THI,800,216,TH,578,THA,TH,THA,764,764,THA,thailand|\bsiam,Asia,South-Eastern Asia
 Timor-Leste,ETM,860,176,TT,537,TLS,TL,TLS,626,626,TMP,^(?=.*leste).*timor|^(?=.*east).*timor,Asia,South-Eastern Asia
 Togo,TOG,461,217,TO,742,TOG,TG,TGO,768,768,TGO,togo,Africa,Western Africa
-Tokelau,,,,TL,,,,TKL,772,772,TKL,tokelau,Oceania,Polynesia
+Tokelau,,,,TL,,,TK,TKL,772,772,TKL,tokelau,Oceania,Polynesia
 Tonga,TON,955,219,TN,866,TGA,TO,TON,776,776,TON,tonga,Oceania,Polynesia
 Trinidad and Tobago,TRI,52,220,TD,369,TTO,TT,TTO,780,780,TTO,trinidad|tobago,Americas,Caribbean
 Tunisia,TUN,616,222,TS,744,TUN,TN,TUN,788,788,TUN,tunisia,Africa,Northern Africa
