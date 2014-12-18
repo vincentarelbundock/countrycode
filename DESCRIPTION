@@ -1,16 +1,16 @@
 Package: countrycode
-Maintainer: Vincent Arel-Bundock <varel@umich.edu>
+Maintainer: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
 License: GPL-3
 Title: Convert country names and country codes
 LazyData: yes
 Type: Package
 LazyLoad: yes
-Author: Vincent Arel-Bundock <varel@umich.edu>
+Author: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
 Description: Standardize country names, convert them into one of
     eleven coding schemes, convert between coding schemes, and
     assign region descriptors.
-Version: 0.17
+Version: 0.18
 URL: https://github.com/vincentarelbundock/countrycode
-Date: 2014-07-14
+Date: 2014-12-17
 Suggests:
     testthat (>= 0.5)

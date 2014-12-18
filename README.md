@@ -1,8 +1,3 @@
-Contributions
-=============
-
-If you would like to improve the country code dictionary, please modify the file held in this other repository: https://github.com/vincentarelbundock/pycountrycode/tree/master/countrycode/data
-
 R: countrycode
 ==============
 

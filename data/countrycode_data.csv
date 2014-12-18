@@ -1,6 +1,6 @@
 country_name,cowc,cown,fao,fips104,imf,ioc,iso2c,iso3c,iso3n,un,wb,regex,continent,region
 Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia
-Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b(a|å)land,Europe,Northern Europe
+Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b(a|Ã¥)land,Europe,Northern Europe
 Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe
 Algeria,ALG,615,4,AG,612,ALG,DZ,DZA,12,12,DZA,algeria,Africa,Northern Africa
 American Samoa,,,,AS,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia
@@ -59,7 +59,7 @@ Costa Rica,COS,94,48,CS,238,CRC,CR,CRI,188,188,CRI,costa.?rica,Americas,Central 
 Cote d'Ivoire,CDI,437,107,IV,662,CIV,CI,CIV,384,384,CIV,ivoire|ivory,Africa,Western Africa
 Croatia,CRO,344,98,HR,960,CRO,HR,HRV,191,191,HRV,croatia,Europe,Southern Europe
 Cuba,CUB,40,49,CU,928,CUB,CU,CUB,192,192,CUB,\bcuba,Americas,Caribbean
-Curacao,,,,UC,354,,CW,CUW,531,531,CUW,^(?!.*bonaire).*\bcura(c|ç)ao,Americas,Caribbean
+Curacao,,,,UC,354,,CW,CUW,531,531,CUW,^(?!.*bonaire).*\bcura(c|Ã§)ao,Americas,Caribbean
 Cyprus,CYP,352,50,CY,423,CYP,CY,CYP,196,196,CYP,cyprus,Asia,Western Asia
 Czech Republic,CZR,316,167,EZ,935,CZE,CZ,CZE,203,203,CZE,^(?=.*rep).*czech|czechia|bohemia,Europe,Eastern Europe
 Czechoslovakia,CZE,315,,,934,TCH,CS,CSK,200,,,czechoslovakia,,
@@ -195,11 +195,11 @@ Portugal,POR,235,174,PO,182,POR,PT,PRT,620,620,PRT,portugal,Europe,Southern Euro
 Puerto Rico,,,,RQ,,PUR,PR,PRI,630,630,PRI,puerto.?rico,Americas,Caribbean
 Qatar,QAT,694,179,QA,453,QAT,QA,QAT,634,634,QAT,qatar,Asia,Western Asia
 Republic of Vietnam,RVN,817,,,,VNM,,,714,,,,,
-Reunion,,,,RE,696,,RE,REU,638,638,REU,r(e|é)union,Africa,Eastern Africa
+Reunion,,,,RE,696,,RE,REU,638,638,REU,r(e|Ã©)union,Africa,Eastern Africa
 Romania,ROM,360,183,RO,968,ROU,RO,ROU,642,642,ROM,r(o|u|ou)mania,Europe,Eastern Europe
 Russian Federation,RUS,365,185,RS,922,RUS,RU,RUS,643,643,RUS,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics,Europe,Eastern Europe
 Rwanda,RWA,517,184,RW,714,RWA,RW,RWA,646,646,RWA,rwanda,Africa,Eastern Africa
-Saint Barthelemy,,,,,,,BL,BLM,652,652,BLM,barth(e|é)lemy,Americas,Caribbean
+Saint Barthelemy,,,,,,,BL,BLM,652,652,BLM,barth(e|Ã©)lemy,Americas,Caribbean
 "Saint Helena, Ascension and Tristan da Cunha",,,,SH,856,,SH,SHN,654,654,SHN,helena,Africa,Western Africa
 Saint Kitts and Nevis,SKN,60,188,SC,361,SKN,KN,KNA,659,659,KNA,kitts|\bnevis,Americas,Caribbean
 Saint Lucia,SLU,56,189,ST,362,LCA,LC,LCA,662,662,LCA,\blucia,Americas,Caribbean
@@ -208,7 +208,7 @@ Saint Pierre and Miquelon,,,,,363,,PM,SPM,666,666,SPM,miquelon,Americas,Northern
 Saint Vincent and the Grenadines,SVG,57,191,VC,364,VIN,VC,VCT,670,670,VCT,vincent,Americas,Caribbean
 Samoa,WSM,990,244,SM,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
 San Marino,SNM,331,192,SM,135,SMR,SM,SMR,674,674,SMR,san.?marino,Europe,Southern Europe
-Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,\bs(a|ã)o.?tom(e|é),Africa,Middle Africa
+Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,\bs(a|Ã£)o.?tom(e|Ã©),Africa,Middle Africa
 Saudi Arabia,SAU,670,194,SA,456,KSA,SA,SAU,682,682,SAU,\bsa\w*.?arabia,Asia,Western Asia
 Saxony,SAX,269,,,,,,,,,,saxony,,
 Senegal,SEN,433,195,SG,722,SEN,SN,SEN,686,686,SEN,senegal,Africa,Western Africa
@@ -264,7 +264,7 @@ Viet Nam,DRV,816,237,VM,582,VIE,VN,VNM,704,704,VNM,^(?!.*republic).*viet.?nam|^(
 "Virgin Islands, U.S.",,,,VQ,,ISV,VI,VIR,850,850,VIR,^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,Americas,Caribbean
 Wallis and Futuna,,,,WS,,,WF,WLF,876,876,WLF,futuna|wallis,Oceania,Polynesia
 Western Sahara,,,,WI,,,EH,ESH,732,732,ESH,sahara,Africa,Northern Africa
-Wuerttemburg,WRT,271,,,,,,,,,,w(ue|ü)rttemburg,,
+Wuerttemburg,WRT,271,,,,,,,,,,w(ue|Ã¼)rttemburg,,
 Yemen,YEM,679,249,YM,474,YEM,YE,YEM,887,887,YEM,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Asia,Western Asia
 Yemen Arab Republic,YAR,678,,,,YAR,,,,,,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,,
 Yemen People's Republic,YPR,680,,,,YMD,YD,YMD,720,,,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,,
