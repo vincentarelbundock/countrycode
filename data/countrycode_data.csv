@@ -3,7 +3,7 @@ Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia
 Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b(a|å)land,Europe,Northern Europe
 Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe
 Algeria,ALG,615,4,AG,612,ALG,DZ,DZA,12,12,DZA,algeria,Africa,Northern Africa
-American Samoa,,,,AS,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia
+American Samoa,,,,AQ,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia
 Andorra,AND,232,6,AN,,AND,AD,AND,20,20,ADO,andorra,Europe,Southern Europe
 Angola,ANG,540,7,AO,614,ANG,AO,AGO,24,24,AGO,angola,Africa,Middle Africa
 Anguilla,,,,AV,312,AIA,AI,AIA,660,660,AIA,anguill?a,Americas,Caribbean
@@ -206,7 +206,7 @@ Saint Lucia,SLU,56,189,ST,362,LCA,LC,LCA,662,662,LCA,\blucia,Americas,Caribbean
 Saint Martin (French part),,,,,352,,MF,MAF,663,663,MAF,^(?=.*collectivity).*martin|^(?=.*france).*martin|^(?=.*french).*martin,Americas,Caribbean
 Saint Pierre and Miquelon,,,,,363,,PM,SPM,666,666,SPM,miquelon,Americas,Northern America
 Saint Vincent and the Grenadines,SVG,57,191,VC,364,VIN,VC,VCT,670,670,VCT,vincent,Americas,Caribbean
-Samoa,WSM,990,244,SM,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
+Samoa,WSM,990,244,WS,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
 San Marino,SNM,331,192,SM,135,SMR,SM,SMR,674,674,SMR,san.?marino,Europe,Southern Europe
 Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,\bs(a|ã)o.?tom(e|é),Africa,Middle Africa
 Saudi Arabia,SAU,670,194,SA,456,KSA,SA,SAU,682,682,SAU,\bsa\w*.?arabia,Asia,Western Asia
@@ -216,7 +216,7 @@ Serbia,,,272,RI,942,SRB,RS,SRB,688,688,SRB,^(?!.*monte).*serbia,Europe,Southern 
 Seychelles,SEY,591,196,SE,718,SEY,SC,SYC,690,690,SYC,seychell,Africa,Eastern Africa
 Sierra Leone,SIE,451,197,SL,724,SLE,SL,SLE,694,694,SLE,sierra,Africa,Western Africa
 Singapore,SIN,830,200,SN,576,SIN,SG,SGP,702,702,SGP,singapore,Asia,South-Eastern Asia
-Sint Maarten (Dutch part),,,,NN,352,,SX,SXM,534,534,SXM,^(?!.*martin)(?!.*saba).*maarten,Americas,Caribbean
+Sint Maarten (Dutch part),,,,NN,,,SX,SXM,534,534,SXM,^(?!.*martin)(?!.*saba).*maarten,Americas,Caribbean
 Slovakia,SLO,317,199,LO,936,SVK,SK,SVK,703,703,SVK,^(?!.*cze).*slovak,Europe,Eastern Europe
 Slovenia,SLV,349,198,SI,961,SLO,SI,SVN,705,705,SVN,slovenia,Europe,Southern Europe
 Solomon Islands,SOL,940,25,BP,813,SOL,SB,SLB,90,90,SLB,solomon,Oceania,Melanesia
@@ -262,7 +262,7 @@ Vanuatu,VAN,935,155,NH,846,VAN,VU,VUT,548,548,VUT,vanuatu|new.?hebrides,Oceania,
 Viet Nam,DRV,816,237,VM,582,VIE,VN,VNM,704,704,VNM,^(?!.*republic).*viet.?nam|^(?=.*socialist).*viet.?nam,Asia,South-Eastern Asia
 "Virgin Islands, British",,,,VI,,,VG,VGB,92,92,VGB,^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin,Americas,Caribbean
 "Virgin Islands, U.S.",,,,VQ,,ISV,VI,VIR,850,850,VIR,^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,Americas,Caribbean
-Wallis and Futuna,,,,WS,,,WF,WLF,876,876,WLF,futuna|wallis,Oceania,Polynesia
+Wallis and Futuna,,,,WF,,,WF,WLF,876,876,WLF,futuna|wallis,Oceania,Polynesia
 Western Sahara,,,,WI,,,EH,ESH,732,732,ESH,sahara,Africa,Northern Africa
 Wuerttemburg,WRT,271,,,,,,,,,,w(ue|ü)rttemburg,,
 Yemen,YEM,679,249,YM,474,YEM,YE,YEM,887,887,YEM,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Asia,Western Asia

@@ -5,6 +5,7 @@ Title: Convert country names and country codes
 LazyData: yes
 Type: Package
 LazyLoad: yes
+Encoding: UTF-8
 Author: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
 Description: Standardize country names, convert them into one of
     eleven coding schemes, convert between coding schemes, and

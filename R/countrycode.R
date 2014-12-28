@@ -25,6 +25,7 @@
 #' codes.of.origin <- countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+    get('countrycode_data')
     # Sanity check
     origin_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("continent","region","regex"))]
     destination_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("regex"))]
