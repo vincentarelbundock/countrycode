@@ -1,10 +1,9 @@
+This is a re-submission of countrycode 0.18. Changes:
+
+* No more calls to a global variable. Should fix 'no visible binding for global variable' problem.
+* Tested against current R-devel.
+
 ## Test environments
-
-* local OS X install, R 3.1.0
+* local OS X install
+* Current R-devel
 * win-builder 
-
-## R CMD check results
-
-1 WARNING:
-
-* non-ASCII characters are required for this package
