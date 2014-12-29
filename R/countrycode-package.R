@@ -8,7 +8,7 @@
 #'
 #' @name countrycode-package
 #' @aliases countrycode-package
-#' @title Convert country codes or country names
+#' @title Convert Country Codes or Country Names
 #' @author Vincent Arel-Bundock \email{varel@@umich.edu}
 #' @references
 #'     \url{http://www.umich.edu/~varel}

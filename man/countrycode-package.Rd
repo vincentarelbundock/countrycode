@@ -3,7 +3,7 @@
 \docType{package}
 \name{countrycode-package}
 \alias{countrycode-package}
-\title{Convert country codes or country names}
+\title{Convert Country Codes or Country Names}
 \description{
 Convert country codes or country names
 }

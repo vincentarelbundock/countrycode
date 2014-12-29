@@ -2,7 +2,7 @@
 % Please edit documentation in R/countrycode.R
 \name{countrycode}
 \alias{countrycode}
-\title{Convert country codes}
+\title{Convert Country Codes}
 \usage{
 countrycode(sourcevar, origin, destination, warn = FALSE)
 }

@@ -1,4 +1,4 @@
-#' Country code translation data frame
+#' Country Code Translation Data Frame
 #'
 #' A data frame with 262 observations on the following 15 variables.
 #' Used internally by the \code{countrycode()} function.

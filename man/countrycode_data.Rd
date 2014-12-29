@@ -3,7 +3,7 @@
 \docType{data}
 \name{countrycode_data}
 \alias{countrycode_data}
-\title{Country code translation data frame}
+\title{Country Code Translation Data Frame}
 \format{A data frame with 260 rows and 11 columns}
 \usage{
 countrycode_data
