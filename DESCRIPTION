@@ -1,7 +1,7 @@
 Package: countrycode
 Maintainer: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
 License: GPL-3
-Title: Convert country names and country codes
+Title: Convert Country Names and Country Codes
 LazyData: yes
 Type: Package
 LazyLoad: yes
