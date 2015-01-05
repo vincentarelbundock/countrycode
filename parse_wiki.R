@@ -20,7 +20,8 @@ str <- gsub(pattern = '(\\\n)(.*)', replacement = "", x = str, perl = TRUE)
 countries <- str[-1]
 # add ones not included in the list, but can be found in countrycode-package
 countries <- c(countries,"Aland_Islands")
-
+# remove possible duplicates
+countries <- countries[!duplicated(countries)]
 urls <- paste0("http://en.wikipedia.org/wiki/",countries)
 
 
@@ -52,6 +53,16 @@ for (i in 1:length(urls)){
   ## as there are some strings with no ; marks, we get rid of them
   dd <- read.table(text = str, sep = ";", colClasses = "character")
   names(dd) <- c(countries[i],"lang")
+
+  ## English language region name from title-element
+  title <- xpathSApply(doc, "//title", saveXML)
+  title <- gsub(pattern = "( - Wikipedia)(.*)", replacement = "", x = title, perl = TRUE)
+  title <- str_replace_all(title, '<title>','')
+  # fix this exception ""Northern economic region, Russia"
+  newrow <- data.frame(title,"English.wikipedia")
+  names(newrow) <- c(countries[i],"lang")
+  dd <- rbind(dd,newrow)
+    
   if (i == 1) dat <- dd
   dat <- dat[!duplicated(dat["lang"]),]
   if (i != 1) dat <- merge(dat,dd,by="lang", all.x=TRUE)
@@ -70,13 +81,14 @@ new_names <- str_replace_all(new_names, "\\.{2}", ".")
 new_names <- str_replace_all(new_names, "\\)", "")
 new_names <- str_replace_all(new_names, "\\(", "")
 names(data) <- new_names
-# then the english country names from row.names of the data
-english.name <- row.names(data)
+
+# then the for merging with countrycode "base" data
+merge.name <- row.names(data)
 ## remove the .x's and .y's
-english.name <- str_replace_all(english.name, "\\.x", "")
-english.name <- str_replace_all(english.name, "\\.y", "")
+merge.name <- str_replace_all(merge.name, "\\.x", "")
+merge.name <- str_replace_all(merge.name, "\\.y", "")
 ## apply the new naMES
-data$country.name.english <- english.name
+data$merge.name <- merge.name
 
 for (i in 1:ncol(data)) {
   data[[i]] <- as.character(data[[i]])
@@ -88,8 +100,7 @@ GHurl <- getURL("https://raw.githubusercontent.com/muuankarski/data/master/world
 wiki <- read.csv(text = GHurl)
 wiki[2][wiki[2] == ""] <- NA
 
-data <- merge(data,wiki[1:2],by="country.name.english")
-data <- data[c(max(ncol(data)),1:max(ncol(data))-1)]
+data <- merge(data,wiki[1:2],by="merge.name")
 
 write.csv(data, "data/wiki_names.csv", row.names = FALSE)
 
