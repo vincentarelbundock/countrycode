@@ -72,11 +72,11 @@ test_that('the Netherlands Antilles are all matched correctly', {
     expect_that(iso3c_of('netherlands antilles'), equals('ANT'))                                  # A former country
     expect_that(iso3c_of('dutch antilles'), equals('ANT'))                                        # A former country
     expect_that(no_warn_iso3c_of('dutch caribbean'), equals(NA_character_))                        # The meaning of this unit is ambiguous
-    
+
     expect_that(iso3c_of('aruba'), equals('ABW'))                                                 # A country of the Netherlands
-    
+
     expect_that(iso3c_of('cura\u00E7ao'), equals('CUW'))                                          # A country of the Netherlands
-    
+
     expect_that(iso3c_of('sint maarten'), equals('SXM'))                                          # A country of the Netherlands
     expect_that(iso3c_of('collectivity of saint martin'), equals('MAF'))                          # A French overseas collectivity
     expect_that(iso3c_of('saint martin (french part)'), equals('MAF'))                            # A French overseas collectivity
@@ -87,11 +87,11 @@ test_that('the Netherlands Antilles are all matched correctly', {
     expect_that(no_warn_iso3c_of('St-Martin / St-Maarten'), equals(NA_character_))                 # An island, not a political entity
     expect_that(no_warn_iso3c_of('St. Martin and St. Maarten'), equals(NA_character_))             # An island, not a political entity
     expect_that(no_warn_iso3c_of('St Maarten – St Martin'), equals(NA_character_))                 # An island, not a political entity
-        
+
     expect_that(iso3c_of('bonaire, saba, and sint eustatius'), equals('BES'))                     # Municipalities of the Netherlands
     expect_that(iso3c_of('bes islands'), equals('BES'))                                           # Municipalities of the Netherlands
     expect_that(iso3c_of('caribbean netherlands'), equals('BES'))                                 # Municipalities of the Netherlands
-    
+
     expect_that(no_warn_iso3c_of('greater antilles'), equals(NA_character_))                       # Not a political entity
     expect_that(no_warn_iso3c_of('lesser antilles'), equals(NA_character_))                        # Not a political entity
     expect_that(no_warn_iso3c_of('abc islands'), equals(NA_character_))                            # Not a political entity
@@ -112,7 +112,7 @@ test_that('the two Congos are distinguished', {
     expect_that(iso3c_of('congo-brazzaville'), equals('COG'))
     expect_that(iso3c_of('french congo'), equals('COG'))
     expect_that(no_warn_iso3c_of('ROC'), equals(NA_character_))   # Could be Taiwan or Congo
-    
+
     expect_that(iso3c_of('democratic republic of the congo'), equals('COD'))
     expect_that(iso3c_of('congo, democratic republic of the'), equals('COD'))
     expect_that(iso3c_of('dem rep of the congo'), equals('COD'))
@@ -133,17 +133,17 @@ test_that('the two Congos are distinguished', {
 test_that('the four Yemens are distinguished', {
     expect_that(cowc_of('yemen'), equals('YEM'))
     expect_that(cowc_of('republic of yemen'), equals('YEM'))
-    
+
     expect_that(cowc_of('yemen arab republic'), equals('YAR'))
     expect_that(cowc_of('north yemen'), equals('YAR'))
     expect_that(cowc_of('yemen (sana\'a)'), equals('YAR'))
-    
+
     expect_that(cowc_of('yemen people\'s republic'), equals('YPR'))
     expect_that(cowc_of('people\'s democratic republic of yemen'), equals('YPR'))
     expect_that(cowc_of('south yemen'), equals('YPR'))
     expect_that(cowc_of('democratic yemen'), equals('YPR'))
     expect_that(cowc_of('yemen (aden)'), equals('YPR'))
-    
+
     expect_that(no_warn_cowc_of('democratic republic of yemen'), equals(NA_character_))
 })
 
@@ -170,4 +170,9 @@ test_that('some old and colonial names are matched', {
     expect_that(iso3c_of('trucial states'), equals('OMN'))
     expect_that(iso3c_of('formosa'), equals('TWN'))
     expect_that(iso3c_of('new hebrides'), equals('VUT'))
+})
+
+test_that('some weird cases are matched', {
+    expect_that(iso3c_of('France, Martinique'), equals('MTQ'))
+    expect_that(iso3c_of('Martinique, France'), equals('MTQ'))
 })

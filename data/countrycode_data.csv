@@ -78,7 +78,7 @@ Falkland Islands (Malvinas),,,,FK,323,,FK,FLK,238,238,FLK,falkland|malvinas,Amer
 Faroe Islands,,,64,FO,816,,FO,FRO,234,234,FRO,faroe|faeroe,Europe,Northern Europe
 Fiji,FIJ,950,66,FJ,819,FIJ,FJ,FJI,242,242,FJI,fiji,Oceania,Melanesia
 Finland,FIN,375,67,FI,172,FIN,FI,FIN,246,246,FIN,finland,Europe,Northern Europe
-France,FRN,220,68,FR,132,FRA,FR,FRA,250,250,FRA,^(?!.*\bdep).*france|french.?republic|\bgaul,Europe,Western Europe
+France,FRN,220,68,FR,132,FRA,FR,FRA,250,250,FRA,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Europe,Western Europe
 French Guiana,,,,FG,333,,GF,GUF,254,254,GUF,^(?=.*french).*guiana,Americas,South America
 French Polynesia,,,,FP,887,,PF,PYF,258,258,PYF,french.?polynesia,Oceania,Polynesia
 French Southern Territories,,,,,,,TF,ATF,260,,ATF,french.?southern|\bfr.*\bso.*\ban.*\b\bt,,
@@ -203,7 +203,7 @@ Saint Barthelemy,,,,,,,BL,BLM,652,652,BLM,barth(e|é)lemy,Americas,Caribbean
 "Saint Helena, Ascension and Tristan da Cunha",,,,SH,856,,SH,SHN,654,654,SHN,helena,Africa,Western Africa
 Saint Kitts and Nevis,SKN,60,188,SC,361,SKN,KN,KNA,659,659,KNA,kitts|\bnevis,Americas,Caribbean
 Saint Lucia,SLU,56,189,ST,362,LCA,LC,LCA,662,662,LCA,\blucia,Americas,Caribbean
-Saint Martin (French part),,,,,352,,MF,MAF,663,663,MAF,^(?=.*collectivity).*martin|^(?=.*france).*martin|^(?=.*french).*martin,Americas,Caribbean
+Saint Martin (French part),,,,,352,,MF,MAF,663,663,MAF,^(?=.*collectivity).*martin|^(?=.*france).*martin(?!ique)|^(?=.*french).*martin(?!ique),Americas,Caribbean
 Saint Pierre and Miquelon,,,,,363,,PM,SPM,666,666,SPM,miquelon,Americas,Northern America
 Saint Vincent and the Grenadines,SVG,57,191,VC,364,VIN,VC,VCT,670,670,VCT,vincent,Americas,Caribbean
 Samoa,WSM,990,244,WS,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
