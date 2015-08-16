@@ -80,7 +80,7 @@ Fiji,FIJ,950,66,FJ,819,FIJ,FJ,FJI,242,242,FJI,fiji,Oceania,Melanesia
 Finland,FIN,375,67,FI,172,FIN,FI,FIN,246,246,FIN,finland,Europe,Northern Europe
 France,FRN,220,68,FR,132,FRA,FR,FRA,250,250,FRA,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Europe,Western Europe
 French Guiana,,,,FG,333,,GF,GUF,254,254,GUF,^(?=.*french).*guiana,Americas,South America
-French Polynesia,,,,FP,887,,PF,PYF,258,258,PYF,french.?polynesia,Oceania,Polynesia
+French Polynesia,,,,FP,887,,PF,PYF,258,258,PYF,french.?polynesia|tahiti,Oceania,Polynesia
 French Southern Territories,,,,,,,TF,ATF,260,,ATF,french.?southern|\bfr.*\bso.*\ban.*\b\bt,,
 Gabon,GAB,481,74,GB,646,GAB,GA,GAB,266,266,GAB,gabon,Africa,Middle Africa
 Gambia,GAM,420,75,GA,648,GAM,GM,GMB,270,270,GMB,gambia,Africa,Western Africa

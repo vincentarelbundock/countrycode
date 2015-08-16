@@ -10,8 +10,8 @@ Author: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
 Description: Standardize country names, convert them into one of
     eleven coding schemes, convert between coding schemes, and
     assign region descriptors.
-Version: 0.18
+Version: 0.19
 URL: https://github.com/vincentarelbundock/countrycode
-Date: 2014-12-17
+Date: 2015-??-??
 Suggests:
     testthat (>= 0.5)
