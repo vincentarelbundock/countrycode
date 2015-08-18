@@ -126,8 +126,8 @@ Kazakhstan,KZK,705,108,KZ,916,KAZ,KZ,KAZ,398,398,KAZ,kazak,Asia,Central Asia
 Kenya,KEN,501,114,KE,664,KEN,KE,KEN,404,404,KEN,kenya|british.?east.?africa|east.?africa.?prot,Africa,Eastern Africa
 Kiribati,KIR,946,83,KR,826,KIR,KI,KIR,296,296,KIR,kiribati,Oceania,Micronesia
 Korea,KOR,730,,,,,,,,,,,,
-"Korea, Democratic People's Republic of",PRK,731,116,KN,,PRK,KP,PRK,408,408,PRK,^(?=.*dem).*\bkorea|^(?=.*peo).*\bkorea|^(?=.*nor).*\bkorea|\bd\.?p\.?r\.?k,Asia,Eastern Asia
-"Korea, Republic of",ROK,732,117,KS,542,KOR,KR,KOR,410,410,KOR,^(?!.*dem)(?!.*peo)(?!.*nor).*\bkorea|\br\.?o\.?k\b,Asia,Eastern Asia
+"Korea, Democratic People's Republic of",PRK,731,116,KN,,PRK,KP,PRK,408,408,PRK,^(?=.*democrat).*\bkorea|^(?=.*people).*\bkorea|^(?=.*north).*\bkorea|\bd\.?p\.?r\.?k,Asia,Eastern Asia
+"Korea, Republic of",ROK,732,117,KS,542,KOR,KR,KOR,410,410,KOR,^(?!.*democrat)(?!.*people)(?!.*north).*\bkorea|\br\.?o\.?k\b,Asia,Eastern Asia
 Kosovo,KOS,347,,KV,967,,,,,,KSV,kosovo,,
 Kuwait,KUW,690,118,KU,443,KUW,KW,KWT,414,414,KWT,kuwait,Asia,Western Asia
 Kyrgyzstan,KYR,703,113,KG,917,KGZ,KG,KGZ,417,417,KGZ,kyrgyz|kirghiz,Asia,Central Asia
