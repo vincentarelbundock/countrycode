@@ -13,7 +13,7 @@ Argentina,ARG,160,9,AR,213,ARG,AR,ARG,32,32,ARG,argentin,Americas,South America
 Armenia,ARM,371,1,AM,911,ARM,AM,ARM,51,51,ARM,armenia,Asia,Western Asia
 Aruba,,,,AA,314,ARU,AW,ABW,533,533,ABW,^(?!.*bonaire).*\baruba,Americas,Caribbean
 Australia,AUL,900,10,AS,193,AUS,AU,AUS,36,36,AUS,australia,Oceania,Australia and New Zealand
-Austria,AUS,305,11,AU,122,AUT,AT,AUT,40,40,AUT,^(?!.*hungary).*austria|\baust.*\bemp,Europe,Western Europe
+Austria,AUS,305,11,AU,122,AUT,AT,AUT,40,40,AUT,^(?!.*hungary).*austria|\baustri.*\bemp,Europe,Western Europe
 Austria-Hungary,AUH,300,,,,,,,,,,austria-hungary,,
 Azerbaijan,AZE,373,52,AJ,912,AZE,AZ,AZE,31,31,AZE,azerbaijan,Asia,Western Asia
 Baden,BAD,267,,,,,,,,,,baden,,
