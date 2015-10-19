@@ -1,6 +1,6 @@
 country_name,cowc,cown,fao,fips104,imf,ioc,iso2c,iso3c,iso3n,un,wb,regex,continent,region
 Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia
-Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b(a|å)land,Europe,Northern Europe
+Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b\wland,Europe,Northern Europe
 Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe
 Algeria,ALG,615,4,AG,612,ALG,DZ,DZA,12,12,DZA,algeria,Africa,Northern Africa
 American Samoa,,,,AQ,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia
@@ -39,21 +39,21 @@ Brunei Darussalam,BRU,835,26,BX,516,BRU,BN,BRN,96,96,BRN,brunei,Asia,South-Easte
 Bulgaria,BUL,355,27,BU,918,BUL,BG,BGR,100,100,BGR,bulgaria,Europe,Eastern Europe
 Burkina Faso,BFO,439,233,UV,748,BUR,BF,BFA,854,854,BFA,burkina|\bfaso|upper.?volta,Africa,Western Africa
 Burundi,BUI,516,29,BY,618,BDI,BI,BDI,108,108,BDI,burundi,Africa,Eastern Africa
-Cambodia,CAM,811,115,CB,522,CAM,KH,KHM,116,116,KHM,cambodia|kampuchea|khmer|^p\.?r\.?k\.?$,Asia,South-Eastern Asia
+Cambodia,CAM,811,115,CB,522,CAM,KH,KHM,116,116,KHM,cambodia|kampuchea|khmer,Asia,South-Eastern Asia
 Cameroon,CAO,471,32,CM,622,CMR,CM,CMR,120,120,CMR,cameroon,Africa,Middle Africa
 Canada,CAN,20,33,CA,156,CAN,CA,CAN,124,124,CAN,canada,Americas,Northern America
 Cabo Verde,CAP,402,35,CV,624,CPV,CV,CPV,132,132,CPV,verde,Africa,Western Africa
 Cayman Islands,,,,CJ,377,CAY,KY,CYM,136,136,CYM,cayman,Americas,Caribbean
-Central African Republic,CEN,482,37,CT,626,CAF,CF,CAF,140,140,CAF,\bcen.*\baf|^c\.?a\.?r\.?$,Africa,Middle Africa
+Central African Republic,CEN,482,37,CT,626,CAF,CF,CAF,140,140,CAF,\bcentral.african.republic,Africa,Middle Africa
 Chad,CHA,483,39,CD,628,CHA,TD,TCD,148,148,TCD,\bchad,Africa,Middle Africa
 Chile,CHL,155,40,CI,228,CHI,CL,CHL,152,152,CHL,\bchile,Americas,South America
-China,CHN,710,351,CH,924,CHN,CN,CHN,156,156,CHN,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai).*china|^p\.?r\.?c\.?$,Asia,Eastern Asia
+China,CHN,710,351,CH,924,CHN,CN,CHN,156,156,CHN,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai).*china,Asia,Eastern Asia
 Christmas Island,,,,CX,,,CX,CXR,162,,CXR,christmas,,
 Cocos (Keeling) Islands,,,,,,,CC,CCK,166,,CCK,\bcocos|keeling,,
 Colombia,COL,100,44,CO,233,COL,CO,COL,170,170,COL,colombia,Americas,South America
 Comoros,COM,581,45,CN,632,COM,KM,COM,174,174,COM,comoro,Africa,Eastern Africa
-"Congo, the Democratic Republic of the",DRC,490,250,CG,636,COD,CD,COD,180,180,ZAR,"\bdem.*congo|congo.*\bdem|congo.*\bdr|\bdr.*congo|\bd\.?r\.?c|\bd\.?r\.?o\.?c|\br\.?d\.?c|belgian.?congo|congo.?free.?state|kinshasa|zaire|l\w{1,2}opoldville",Africa,Middle Africa
-Congo,CON,484,46,CF,634,CGO,CG,COG,178,178,COG,"^(?!.*\bdem)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l\w{1,2}opoldville)(?!.*free).*\bcongo",Africa,Middle Africa
+"Congo, the Democratic Republic of the",DRC,490,250,CG,636,COD,CD,COD,180,180,ZAR,"\bdem.*congo|congo.*\bdem|congo.*\bdr|\bdr.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc",Africa,Middle Africa
+Congo,CON,484,46,CF,634,CGO,CG,COG,178,178,COG,"^(?!.*\bdem)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo",Africa,Middle Africa
 Cook Islands,,,47,CW,815,COK,CK,COK,184,184,COK,\bcook,Oceania,Polynesia
 Costa Rica,COS,94,48,CS,238,CRC,CR,CRI,188,188,CRI,costa.?rica,Americas,Central America
 Cote d'Ivoire,CDI,437,107,IV,662,CIV,CI,CIV,384,384,CIV,ivoire|ivory,Africa,Western Africa
@@ -66,7 +66,7 @@ Czechoslovakia,CZE,315,,,934,TCH,CS,CSK,200,,,czechoslovakia,,
 Denmark,DEN,390,54,DA,128,DEN,DK,DNK,208,208,DNK,denmark,Europe,Northern Europe
 Djibouti,DJI,522,72,DJ,611,DJI,DJ,DJI,262,262,DJI,djibouti,Africa,Eastern Africa
 Dominica,DMA,54,55,DO,321,DMA,DM,DMA,212,212,DMA,dominica(?!n),Americas,Caribbean
-Dominican Republic,DOM,42,56,DR,243,DOM,DO,DOM,214,214,DOM,dominican,Americas,Caribbean
+Dominican Republic,DOM,42,56,DR,243,DOM,DO,DOM,214,214,DOM,dominican.rep,Americas,Caribbean
 Ecuador,ECU,130,58,EC,248,ECU,EC,ECU,218,218,ECU,ecuador,Americas,South America
 Egypt,EGY,651,59,EG,469,EGY,EG,EGY,818,818,EGY,egypt,Africa,Northern Africa
 El Salvador,SAL,92,60,ES,253,ESA,SV,SLV,222,222,SLV,el.?salvador,Americas,Central America
@@ -81,12 +81,12 @@ Finland,FIN,375,67,FI,172,FIN,FI,FIN,246,246,FIN,finland,Europe,Northern Europe
 France,FRN,220,68,FR,132,FRA,FR,FRA,250,250,FRA,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Europe,Western Europe
 French Guiana,,,,FG,333,,GF,GUF,254,254,GUF,^(?=.*french).*guiana,Americas,South America
 French Polynesia,,,,FP,887,,PF,PYF,258,258,PYF,french.?polynesia|tahiti,Oceania,Polynesia
-French Southern Territories,,,,,,,TF,ATF,260,,ATF,french.?southern|\bfr.*\bso.*\ban.*\b\bt,,
+French Southern Territories,,,,,,,TF,ATF,260,,ATF,french.?southern,,
 Gabon,GAB,481,74,GB,646,GAB,GA,GAB,266,266,GAB,gabon,Africa,Middle Africa
 Gambia,GAM,420,75,GA,648,GAM,GM,GMB,270,270,GMB,gambia,Africa,Western Africa
 Georgia,GRG,372,73,GG,915,GEO,GE,GEO,268,268,GEO,^(?!.*south).*georgia,Asia,Western Asia
-German Democratic Republic,GDR,265,,,,GDR,DD,DDR,278,,,german.?democratic.?republic|^(d|g)\.?d\.?r\.?$|^(?=.*east).*germany,,
-Federal Republic of Germany,GFR,260,,,,FRG,,,280,,,^(?=.*\bfed.*\brep).*german|^f\.?r\.?g\.?$|^b\.?r\.?d\.?$|^(?=.*west).*germany|bonn.?republic,,
+German Democratic Republic,GDR,265,,,,GDR,DD,DDR,278,,,german.?democratic.?republic|democratic.?republic.*germany|(?=.*east).*germany,,
+Federal Republic of Germany,GFR,260,,,,FRG,,,280,,,^(?=.*\bfed.*\brep).*german|(?=.*west).*germany|bonn.?republic,,
 Germany,GMY,255,79,GM,134,GER,DE,DEU,276,276,DEU,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,Europe,Western Europe
 Ghana,GHA,452,81,GH,652,GHA,GH,GHA,288,288,GHA,ghana|gold.?coast,Africa,Western Africa
 Gibraltar,,,,GI,823,,GI,GIB,292,292,GIB,gibraltar,Europe,Southern Europe
@@ -126,8 +126,8 @@ Kazakhstan,KZK,705,108,KZ,916,KAZ,KZ,KAZ,398,398,KAZ,kazak,Asia,Central Asia
 Kenya,KEN,501,114,KE,664,KEN,KE,KEN,404,404,KEN,kenya|british.?east.?africa|east.?africa.?prot,Africa,Eastern Africa
 Kiribati,KIR,946,83,KR,826,KIR,KI,KIR,296,296,KIR,kiribati,Oceania,Micronesia
 Korea,KOR,730,,,,,,,,,,,,
-"Korea, Democratic People's Republic of",PRK,731,116,KN,,PRK,KP,PRK,408,408,PRK,^(?=.*democrat).*\bkorea|^(?=.*people).*\bkorea|^(?=.*north).*\bkorea|\bd\.?p\.?r\.?k,Asia,Eastern Asia
-"Korea, Republic of",ROK,732,117,KS,542,KOR,KR,KOR,410,410,KOR,^(?!.*democrat)(?!.*people)(?!.*north).*\bkorea|\br\.?o\.?k\b,Asia,Eastern Asia
+"Korea, Democratic People's Republic of",PRK,731,116,KN,,PRK,KP,PRK,408,408,PRK,^(?=.*democrat).*\bkorea|^(?=.*people).*\bkorea|^(?=.*north).*\bkorea|dprk,Asia,Eastern Asia
+"Korea, Republic of",ROK,732,117,KS,542,KOR,KR,KOR,410,410,KOR,^(?!.*democrat)(?!.*people)(?!.*north).*\bkorea,Asia,Eastern Asia
 Kosovo,KOS,347,,KV,967,,,,,,KSV,kosovo,,
 Kuwait,KUW,690,118,KU,443,KUW,KW,KWT,414,414,KWT,kuwait,Asia,Western Asia
 Kyrgyzstan,KYR,703,113,KG,917,KGZ,KG,KGZ,417,417,KGZ,kyrgyz|kirghiz,Asia,Central Asia
@@ -141,7 +141,7 @@ Liechtenstein,LIE,223,,LS,,LIE,LI,LIE,438,438,LIE,liechtenstein,Europe,Western E
 Lithuania,LIT,368,126,LH,946,LTU,LT,LTU,440,440,LTU,lithuania,Europe,Northern Europe
 Luxembourg,LUX,212,256,LU,137,LUX,LU,LUX,442,442,LUX,^(?!.*belg).*luxem,Europe,Western Europe
 Macao,,,,MC,546,,MO,MAC,446,446,MAC,maca(o|u),Asia,Eastern Asia
-"Macedonia, the former Yugoslav Republic of",MAC,343,154,MK,962,MKD,MK,MKD,807,807,MKD,macedonia|^f\.?y\.?r\.?o\.?m\.?$,Europe,Southern Europe
+"Macedonia, the former Yugoslav Republic of",MAC,343,154,MK,962,MKD,MK,MKD,807,807,MKD,macedonia|fyrom,Europe,Southern Europe
 Madagascar,MAG,580,129,MA,674,MAD,MG,MDG,450,450,MDG,madagascar|malagasy,Africa,Eastern Africa
 Malawi,MAW,553,130,MI,676,MAW,MW,MWI,454,454,MWI,malawi|nyasa,Africa,Eastern Africa
 Malaysia,MAL,820,131,MY,548,MAS,MY,MYS,458,458,MYS,malaysia,Asia,South-Eastern Asia
@@ -184,7 +184,7 @@ Pakistan,PAK,770,165,PK,564,PAK,PK,PAK,586,586,PAK,^(?!.*east).*paki?stan,Asia,S
 Palau,PAL,986,180,PS,565,PLW,PW,PLW,585,585,PLW,palau,Oceania,Micronesia
 "Palestine, State of",,,,,487,PLE,PS,PSE,275,275,WBG,palestin|\bgaza|west.?bank,Asia,Western Asia
 Panama,PAN,95,166,PM,283,PAN,PA,PAN,591,591,PAN,panama,Americas,Central America
-Papua New Guinea,PNG,910,168,PP,853,PNG,PG,PNG,598,598,PNG,papua|\bp.*\bn.*\bguin.*|^p\.?n\.?g\.?$|new.?guinea,Oceania,Melanesia
+Papua New Guinea,PNG,910,168,PP,853,PNG,PG,PNG,598,598,PNG,papua|new.?guinea,Oceania,Melanesia
 Paraguay,PAR,150,169,PA,288,PAR,PY,PRY,600,600,PRY,paraguay,Americas,South America
 Parma,PMA,335,,,,,,,,,,parma,,
 Peru,PER,135,170,PE,293,PER,PE,PER,604,604,PER,peru,Americas,South America
@@ -253,7 +253,7 @@ Uganda,UGA,500,226,UG,746,UGA,UG,UGA,800,800,UGA,uganda,Africa,Eastern Africa
 Ukraine,UKR,369,230,UP,926,UKR,UA,UKR,804,804,UKR,ukrain,Europe,Eastern Europe
 United Arab Emirates,UAE,696,225,AE,466,UAE,AE,ARE,784,784,ARE,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Asia,Western Asia
 United Kingdom,UKG,200,229,UK,112,GBR,GB,GBR,826,826,GBR,united.?kingdom|britain|^u\.?k\.?$,Europe,Northern Europe
-United States,USA,2,231,US,111,USA,US,USA,840,840,USA,^(?!.*islands).*united.?states|^u\.?s\.?a\.?$|^u\.?s\.?$,Americas,Northern America
+United States,USA,2,231,US,111,USA,US,USA,840,840,USA,united.?states|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),Americas,Northern America
 United States Minor Outlying Islands,,,,,,,UM,UMI,581,,UMI,minor.?outlying.?is,,
 Uruguay,URU,165,234,UY,298,URU,UY,URY,858,858,URY,uruguay,Americas,South America
 Uzbekistan,UZB,704,235,UZ,927,UZB,UZ,UZB,860,860,UZB,uzbek,Asia,Central Asia
