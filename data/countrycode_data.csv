@@ -263,12 +263,12 @@ Viet Nam,DRV,816,237,VM,582,VIE,VN,VNM,704,704,VNM,^(?!.*republic).*viet.?nam|^(
 "Virgin Islands, British",,,,VI,,,VG,VGB,92,92,VGB,^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin,Americas,Caribbean
 "Virgin Islands, U.S.",,,,VQ,,ISV,VI,VIR,850,850,VIR,^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,Americas,Caribbean
 Wallis and Futuna,,,,WF,,,WF,WLF,876,876,WLF,futuna|wallis,Oceania,Polynesia
-Western Sahara,,,,WI,,,EH,ESH,732,732,ESH,sahara,Africa,Northern Africa
+Western Sahara,,,,WI,,,EH,ESH,732,732,ESH,western.sahara,Africa,Northern Africa
 Wuerttemburg,WRT,271,,,,,,,,,,w(ue|ü)rttemburg,,
 Yemen,YEM,679,249,YM,474,YEM,YE,YEM,887,887,YEM,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Asia,Western Asia
 Yemen Arab Republic,YAR,678,,,,YAR,,,,,,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,,
 Yemen People's Republic,YPR,680,,,,YMD,YD,YMD,720,,,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,,
 Yugoslavia,YUG,345,,,188,YUG,YU,YUG,,,YUG,yugoslavia,,
 Zambia,ZAM,551,251,ZA,754,ZAM,ZM,ZMB,894,894,ZMB,zambia|northern.?rhodesia,Africa,Eastern Africa
-Zanzibar,ZAN,511,,,,,,EAZ,,,,zanz,,
+Zanzibar,ZAN,511,,,,,,EAZ,,,,zanzibar,,
 Zimbabwe,ZIM,552,181,ZI,698,ZIM,ZW,ZWE,716,716,ZWE,zimbabwe|^(?!.*northern).*rhodesia,Africa,Eastern Africa
