@@ -85,7 +85,7 @@ French Southern Territories,,,,,,,TF,ATF,260,,ATF,french.?southern,,
 Gabon,GAB,481,74,GB,646,GAB,GA,GAB,266,266,GAB,gabon,Africa,Middle Africa
 Gambia,GAM,420,75,GA,648,GAM,GM,GMB,270,270,GMB,gambia,Africa,Western Africa
 Georgia,GRG,372,73,GG,915,GEO,GE,GEO,268,268,GEO,^(?!.*south).*georgia,Asia,Western Asia
-German Democratic Republic,GDR,265,,,,GDR,DD,DDR,278,,,german.?democratic.?republic|democratic.?republic.*germany|(?=.*east).*germany,,
+German Democratic Republic,GDR,265,,,,GDR,DD,DDR,278,,,german.?democratic.?republic|democratic.?republic.*germany|east.germany,,
 Federal Republic of Germany,GFR,260,,,,FRG,,,280,,,^(?=.*\bfed.*\brep).*german|(?=.*west).*germany|bonn.?republic,,
 Germany,GMY,255,79,GM,134,GER,DE,DEU,276,276,DEU,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,Europe,Western Europe
 Ghana,GHA,452,81,GH,652,GHA,GH,GHA,288,288,GHA,ghana|gold.?coast,Africa,Western Africa
@@ -152,7 +152,7 @@ Marshall Islands,MSI,983,127,RM,867,MHL,MH,MHL,584,584,MHL,marshall,Oceania,Micr
 Martinique,,,,MB,349,,MQ,MTQ,474,474,MTQ,martinique,Americas,Caribbean
 Mauritania,MAA,435,136,MR,682,MTN,MR,MRT,478,478,MRT,mauritania,Africa,Western Africa
 Mauritius,MAS,590,137,MP,684,MRI,MU,MUS,480,480,MUS,mauritius,Africa,Eastern Africa
-Mayotte,,,,,,,YT,MYT,175,175,MYT,mayotte,Africa,Eastern Africa
+Mayotte,,,,,,,YT,MYT,175,175,MYT,\bmayotte,Africa,Eastern Africa
 Mecklenburg Schwerin,MEC,280,,,,,,,,,,mecklenbur.*schwerin,,
 Mexico,MEX,70,138,MX,273,MEX,MX,MEX,484,484,MEX,\bmexic,Americas,Central America
 "Micronesia, Federated States of",FSM,987,145,FM,868,FSM,FM,FSM,583,583,FSM,micronesia,Oceania,Micronesia
