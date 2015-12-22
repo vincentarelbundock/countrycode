@@ -1,6 +1,6 @@
 #' Country Code Translation Data Frame
 #'
-#' A data frame with 262 observations on the following 15 variables.
+#' A data frame with 262 observations on the following 17 variables.
 #' Used internally by the \code{countrycode()} function.
 #'
 #' \itemize{
@@ -20,6 +20,10 @@
 #'   \item regex: Regular expression used to convert long names to code
 #'   \item region: Regions as defined in the World Bank Development Indicators
 #'   \item continent: Continent as defined in the World Bank Development Indicators
+#'   \item eu28: Memberstates of the European Union (as of December 2015),
+#'              without special territories
+#'   \item ar5: IPCC's regional mapping used both in the Fifth Assessment Report
+#'             (AR5) and for the Reference Concentration Pathways (RCP)
 #'
 #' }
 #'
@@ -46,6 +50,6 @@
 #' @keywords datasets
 #' @name countrycode_data
 #' @usage countrycode_data
-#' @format A data frame with 260 rows and 11 columns
+#' @format A data frame with 260 rows and 17 columns
 NULL
 

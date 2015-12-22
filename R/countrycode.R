@@ -18,7 +18,8 @@
 #'   The following strings can be used as arguments for \code{origin} or
 #'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
 #'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-#'   used as arguments for \code{destination} \emph{only}:  "continent", "region"
+#'   used as arguments for \code{destination} \emph{only}:  "continent", "region",
+#'   "eu28", "ar5"
 #' @export
 #' @aliases countrycode
 #' @examples
@@ -26,7 +27,7 @@
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn=FALSE){
     # Sanity check
-    origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex"))]
+    origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]
     destination_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}

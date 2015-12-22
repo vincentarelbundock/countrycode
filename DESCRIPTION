@@ -15,3 +15,4 @@ URL: https://github.com/vincentarelbundock/countrycode
 Date: 2015-??-??
 Suggests:
     testthat (>= 0.5)
+RoxygenNote: 5.0.1
