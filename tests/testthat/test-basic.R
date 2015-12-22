@@ -41,7 +41,7 @@ test_that('warn=FALSE does not give warnings', {
     expect_that(iso2c_of(c('BLA', 'USA')), not(gives_warning()))
 })
 
-code_names <- names(countrycode_data)[names(countrycode_data) != c('regex', 'continent', 'region')]
+code_names <- names(countrycode_data)[!names(countrycode_data) %in% c('regex', 'continent', 'region')]
 
 for(code_name in code_names){
     code_list <- countrycode_data[, code_name]

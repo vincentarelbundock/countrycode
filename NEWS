@@ -3,6 +3,7 @@ Version 0.19 (????-??-??)
 
 * Martinique regex improvement (Thanks to Martyn Plummer)
 * "Tahiti" country name string converts to French Polynesia
+* Added ar5 and eu28 as possible destinations (Thanks to Niklas Roming)
 
 Version 0.18 (2014-12-17)
 -------------------------
