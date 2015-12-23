@@ -57,7 +57,7 @@ countrycode <- function (sourcevar, origin, destination, warn = TRUE){
     if(warn){
         nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
         if(length(nomatch) > 0){
-            warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n")
+            warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n", call. = FALSE)
         }
         if(origin=='country.name'){
            if(length(destination_list) > 0){
