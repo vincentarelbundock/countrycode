@@ -25,7 +25,7 @@
 #' @examples
 #' codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
-countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+countrycode <- function (sourcevar, origin, destination, warn = TRUE){
     # Sanity check
     origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]
     destination_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
@@ -63,7 +63,8 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE){
            if(length(destination_list) > 0){
                destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
                destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n")
+               warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n",
+               call. = FALSE)
            }
         }
     }
