@@ -61,7 +61,7 @@ countrycode <- function (sourcevar, origin, destination, warn = TRUE){
         }
         if(origin=='country.name'){
            if(length(destination_list) > 0){
-               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
+               destination_list <- lapply(destination_list, function(k) paste(k, collapse=', '))
                destination_list <- sort(unique(do.call('c', destination_list)))
                warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n",
                call. = FALSE)
