@@ -1,40 +1,72 @@
 #' Convert Country Codes
 #'
 #' Converts long country names into one of many different coding schemes.
-#' Translates from one scheme to another. Converts country name or coding
-#' scheme to the official short English country name. Creates a new variable
-#' with the name of the continent or region to which each country belongs.
+#' Translates from one scheme to another. Converts country name or coding scheme
+#' to the official short English country name. Creates a new variable with the
+#' name of the continent or region to which each country belongs.
 #'
-#' @param sourcevar Vector which contains the codes or country names to be converted
+#' @param sourcevar Vector which contains the codes or country names to be
+#'   converted
 #' @param origin Coding scheme of origin (name enclosed in quotes "")
 #' @param destination Coding scheme of destination (name enclosed in quotes "")
-#' @param warn Prints unique elements from sourcevar for which no match was found
+#' @param warn Prints unique elements from sourcevar for which no match was
+#'   found
+#' @param addendum An optional dataframe containing two or more columns, adding
+#'   custom region mappings. One column must have the same name as one of the
+#'   columns already present in \code{countrycode_data} and is used as reference
+#'   to add the other column(s) to the dataframe.
 #' @keywords countrycode
 #' @note Supports the following coding schemes: Correlates of War character,
-#'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
-#'   Olympic Committee, FIPS 10-4, FAO numeric, United Nations numeric,
-#'   World Bank character, official English short country names (ISO), continent, region.
+#'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric,
+#'   International Olympic Committee, FIPS 10-4, FAO numeric, United Nations
+#'   numeric, World Bank character, official English short country names (ISO),
+#'   continent, region.
 #'
 #'   The following strings can be used as arguments for \code{origin} or
 #'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-#'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-#'   used as arguments for \code{destination} \emph{only}:  "continent", "region",
-#'   "eu28", "ar5"
+#'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings
+#'   can be used as arguments for \code{destination} \emph{only}:  "continent",
+#'   "region", "eu28", "ar5", "cat"
 #' @export
 #' @aliases countrycode
 #' @examples
 #' codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
-countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+countrycode <- function (sourcevar, origin, destination, warn=FALSE, addendum){
+
+  # define a vector of regions that can only be used as destinations
+  regions <- c("continent","region","regex", "eu28", "ar5", "cat")
+
+  countrycode_data <- countrycode::countrycode_data
+
+  if(!missing(addendum)){
+
+    # find intersecting column names
+    ref <- intersect(names(addendum), names(countrycode_data))
+
+    # check if one single valid reference mapping for the addendum is supplied
+    if (length(ref) == 1){
+      countrycode_data <- merge(countrycode_data, addendum)
+
+      # FIXME: this does not work
+      # regions <- c(regions, setdiff(names(addendum), ref))
+
+    } else {
+      warning(addendum, "does not contain a valid region mapping.
+              Continuing with unaltered countrycode data.")
+    }
+
+  }
+
     # Sanity check
-    origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]
-    destination_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
+    origin_codes <- names(countrycode_data)[!(names(countrycode_data) %in% regions)]
+    destination_codes <- names(countrycode_data)[!(names(countrycode_data) %in% c("regex"))]
     if (!origin %in% origin_codes){stop("Origin code not supported")}
     if (!destination %in% destination_codes){stop("Destination code not supported")}
     if (origin == 'country.name'){
-        dict = na.omit(countrycode::countrycode_data[,c('regex', destination)])
+        dict = na.omit(countrycode_data[,c('regex', destination)])
     }else{
-        dict = na.omit(countrycode::countrycode_data[,c(origin, destination)])
+        dict = na.omit(countrycode_data[,c(origin, destination)])
     }
     # Prepare output vector
     destination_vector <- rep(NA, length(sourcevar))
