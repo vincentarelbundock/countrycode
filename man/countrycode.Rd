@@ -4,34 +4,42 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = FALSE)
+countrycode(sourcevar, origin, destination, warn = FALSE, addendum)
 }
 \arguments{
-\item{sourcevar}{Vector which contains the codes or country names to be converted}
+\item{sourcevar}{Vector which contains the codes or country names to be
+converted}
 
 \item{origin}{Coding scheme of origin (name enclosed in quotes "")}
 
 \item{destination}{Coding scheme of destination (name enclosed in quotes "")}
 
-\item{warn}{Prints unique elements from sourcevar for which no match was found}
+\item{warn}{Prints unique elements from sourcevar for which no match was
+found}
+
+\item{addendum}{An optional dataframe containing two or more columns, adding
+custom region mappings. One column must have the same name as one of the
+columns already present in \code{countrycode_data} and is used as reference
+to add the other column(s) to the dataframe.}
 }
 \description{
 Converts long country names into one of many different coding schemes.
-Translates from one scheme to another. Converts country name or coding
-scheme to the official short English country name. Creates a new variable
-with the name of the continent or region to which each country belongs.
+Translates from one scheme to another. Converts country name or coding scheme
+to the official short English country name. Creates a new variable with the
+name of the continent or region to which each country belongs.
 }
 \note{
 Supports the following coding schemes: Correlates of War character,
-  CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
-  Olympic Committee, FIPS 10-4, FAO numeric, United Nations numeric,
-  World Bank character, official English short country names (ISO), continent, region.
+  CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric,
+  International Olympic Committee, FIPS 10-4, FAO numeric, United Nations
+  numeric, World Bank character, official English short country names (ISO),
+  continent, region.
 
   The following strings can be used as arguments for \code{origin} or
   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-  "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-  used as arguments for \code{destination} \emph{only}:  "continent", "region",
-  "eu28", "ar5"
+  "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings
+  can be used as arguments for \code{destination} \emph{only}:  "continent",
+  "region", "eu28", "ar5", "cat"
 }
 \examples{
 codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
