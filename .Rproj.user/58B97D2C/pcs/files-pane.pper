@@ -1,9 +1,0 @@
-{
-    "path" : "/git_repositories/countrycode",
-    "sortOrder" : [
-        {
-            "ascending" : true,
-            "columnIndex" : 2
-        }
-    ]
-}
