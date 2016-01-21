@@ -4,7 +4,7 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = FALSE)
+countrycode(sourcevar, origin, destination, warn = TRUE)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be converted}

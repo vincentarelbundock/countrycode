@@ -27,6 +27,7 @@
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn = TRUE){
     # Sanity check
+    if(is.null(sourcevar)) stop("sourcevar is NULL (does not exist)", call. = FALSE)
     origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]
     destination_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
     if (!origin %in% origin_codes){stop("Origin code not supported")}
