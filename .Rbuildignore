@@ -4,3 +4,5 @@ Makefile
 prep.R
 README.md
 tests
+^.*\.Rproj$
+^\.Rproj\.user$

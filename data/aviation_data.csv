@@ -1,0 +1,274 @@
+country_name,icao,icaoregion,statfor,pru
+Afghanistan,OA,O,Asia/Pacific,Asia
+Aland Islands,EF,E,ESRA North-West,Eurocontrol
+Albania,LA,L,ESRA East,Eurocontrol
+Algeria,DA,D,North-Africa,Africa
+American Samoa,NS,N,Asia/Pacific,Asia
+Andorra,"NA","NA","NA","NA"
+Angola,FN,F,Southern-Africa,Africa
+Anguilla,TQ,T,Mid-Atlantic,Southern America
+Antarctica,N,N,Asia/Pacific,Asia
+Antigua and Barbuda,TA,T,Mid-Atlantic,Southern America
+Argentina,SA,S,South-Atlantic,Southern America
+Armenia,UD,U,Other Europe,Eurocontrol
+Aruba,TN,T,Mid-Atlantic,Southern America
+Australia,Y,Y,Asia/Pacific,Asia
+Austria,LO,L,ESRA North-West,Eurocontrol
+Austria-Hungary,"NA","NA","NA","NA"
+Azerbaijan,UB,U,Other Europe,Asia
+Baden,"NA","NA","NA","NA"
+Bahamas,MY,M,Mid-Atlantic,Southern America
+Bahrain,OB,O,Middle-East,Middle East
+Bangladesh,VG,V,Asia/Pacific,Asia
+Barbados,TB,T,Mid-Atlantic,Southern America
+Bavaria,"NA","NA","NA","NA"
+Belarus,UM,U,Other Europe,Asia
+Belgium,EB,E,ESRA North-West,Eurocontrol
+Belize,MZ,M,Mid-Atlantic,Southern America
+Benin,DB,D,Southern Africa,Africa
+Bermuda,TX,T,Mid-Atlantic,Southern America
+Bhutan,VQ,V,Asia/Pacific,Asia
+"Bolivia, Plurinational State of",SL,S,South-Atlantic,Southern America
+"Bonaire, Sint Eustatius and Saba",TN,T,Mid-Atlantic,Southern America
+Bosnia and Herzegovina,LQ,L,ESRA East,Eurocontrol
+Botswana,FB,F,Southern Africa,Africa
+Bouvet Island,"NA","NA","NA","NA"
+Brazil,S[BDIJNSW],S,South-Atlantic,Southern America
+British Indian Ocean Territory,F,"NA",Southern Africa,Africa
+Brunei Darussalam,WB,W,Asia/Pacific,Asia
+Bulgaria,LB,L,ESRA East,Eurocontrol
+Burkina Faso,DF,D,Southern Africa,Africa
+Burundi,HB,H,Southern Africa,Africa
+Cambodia,VD,V,Asia/Pacific,Asia
+Cameroon,FK,F,Southern Africa,Africa
+Canada,C,C,North Atlantic,Northern America
+Cabo Verde,GV,G,Southern Africa,Africa
+Cayman Islands,MW,M,Mid-Atlantic,Southern America
+Central African Republic,FE,F,Southern Africa,Africa
+Chad,FT,F,Southern Africa,Africa
+Chile,S[CH],S,South-Atlantic,Southern America
+China,Z,Z,Asia/Pacific,China
+Christmas Island,Y,Y,Asia/Pacific,Asia
+Cocos (Keeling) Islands,Y,Y,Asia/Pacific,Asia
+Colombia,SK,S,South-Atlantic,Southern America
+Comoros,FM,F,Southern Africa,Africa
+"Congo, the Democratic Republic of the",FZ,F,Southern Africa,Africa
+Congo,FC,F,Southern Africa,Africa
+Cook Islands,NC,N,Asia/Pacific,Asia
+Costa Rica,MR,M,Mid-Atlantic,Southern America
+Cote d'Ivoire,DI,D,Southern Africa,Africa
+Croatia,LD,L,ESRA East,Eurocontrol
+Cuba,MU,M,Mid-Atlantic,Southern America
+Curacao,TN,T,Mid-Atlantic,Southern America
+Cyprus,LC,L,ESRA Mediterranean,Eurocontrol
+Czech Republic,LK,L,ESRA East,Eurocontrol
+Czechoslovakia,"NA","NA","NA","NA"
+Denmark,EK,E,ESRA North-West,Eurocontrol
+Djibouti,HD,H,Southern Africa,Africa
+Dominica,TD,T,Mid-Atlantic,Southern America
+Dominican Republic,MD,M,Mid-Atlantic,Southern America
+Ecuador,SE,S,South-Atlantic,Southern America
+Egypt,HE,H,North-Africa,Middle East
+El Salvador,MS,M,Mid-Atlantic,Southern America
+Equatorial Guinea,FG,F,Southern Africa,Africa
+Eritrea,HH,H,Southern Africa,Africa
+Estonia,EE,E,Other Europe,Eurocontrol
+Ethiopia,HA,H,Southern Africa,Africa
+Falkland Islands (Malvinas),SF,S,South-Atlantic,Southern America
+Faroe Islands,EK,E,ESRA North-West,Eurocontrol
+Fiji,NF,N,Asia/Pacific,Asia
+Finland,EF,E,ESRA North-West,Eurocontrol
+France,LF,L,ESRA North-West,Eurocontrol
+French Guiana,SO,S,South-Atlantic,Southern America
+French Polynesia,NT,N,Asia/Pacific,Asia
+French Southern Territories,"NA","NA","NA","NA"
+Gabon,FO,F,Southern Africa,Africa
+Gambia,GB,G,Southern Africa,Africa
+Georgia,UG,U,Other Europe,Eurocontrol
+German Democratic Republic,ET,E,ESRA North-West,Eurocontrol
+Federal Republic of Germany,ED,E,ESRA North-West,Eurocontrol
+Germany,E[DT],E,ESRA North-West,Eurocontrol
+Ghana,DG,D,Southern Africa,Africa
+Gibraltar,LX,L,Other Europe,Eurocontrol
+Greece,LG,L,ESRA Mediterranean,Eurocontrol
+Greenland,BG,B,Other Europe,Northern America
+Grenada,TG,T,Mid-Atlantic,Southern America
+Guadeloupe,TF,T,Mid-Atlantic,Southern America
+Guam,PG,P,Asia/Pacific,Asia
+Guatemala,MG,M,Mid-Atlantic,Southern America
+Guernsey,EG,E,ESRA North-West,Eurocontrol
+Guinea,GU,G,Southern Africa,Africa
+Guinea-Bissau,GG,G,Southern Africa,Africa
+Guyana,SY,S,South-Atlantic,Southern America
+Haiti,MT,M,Mid-Atlantic,Southern America
+Hanover,"NA","NA","NA","NA"
+Heard Island and McDonald Islands,"NA","NA","NA","NA"
+Hesse Electoral,"NA","NA","NA","NA"
+Hesse Grand Ducal,"NA","NA","NA","NA"
+Holy See (Vatican City State),"NA","NA","NA","NA"
+Honduras,MH,M,Mid-Atlantic,Southern America
+Hong Kong,VH,V,Asia/Pacific,China
+Hungary,LH,L,ESRA East,Eurocontrol
+Iceland,BI,B,Other Europe,Northern America
+India,V[AEIO],V,Asia/Pacific,Asia
+Indonesia,W[AIQR],W,Asia/Pacific,Asia
+"Iran, Islamic Republic of",OI,O,Middle-East,Middle East
+Iraq,OR,O,Middle-East,Middle East
+Ireland,EI,E,ESRA North-West,Eurocontrol
+Isle of Man,EG,E,ESRA North-West,Eurocontrol
+Israel,LL,L,Middle-East,Middle East
+Italy,LI,L,ESRA Mediterranean,Eurocontrol
+Jamaica,MK,M,Mid-Atlantic,Southern America
+Japan,R[JO],R,Asia/Pacific,Asia
+Jersey,EG,E,ESRA North-West,Eurocontrol
+Jordan,OJ,O,Middle-East,Middle East
+Kazakhstan,UA,U,Asia/Pacific,Asia
+Kenya,HK,H,Asia/Pacific,Africa
+Kiribati,NG,N,Asia/Pacific,Asia
+Korea,"NA","NA","NA","NA"
+"Korea, Democratic People's Republic of",ZK,Z,Asia/Pacific,Asia
+"Korea, Republic of",RK,R,Asia/Pacific,Asia
+Kosovo,BK,B,ESRA East,Eurocontrol
+Kuwait,OK,O,Middle-East,Middle East
+Kyrgyzstan,UA,U,Asia/Pacific,Asia
+Lao People's Democratic Republic,VL,V,Asia/Pacific,Asia
+Latvia,EV,E,Other Europe,Eurocontrol
+Lebanon,OL,O,Middle-East,Middle East
+Lesotho,FX,F,Southern Africa,Africa
+Liberia,GL,G,Southern Africa,Africa
+Libya,HL,H,North-Africa,Africa
+Liechtenstein,LS,L,ESRA North-West,Eurocontrol
+Lithuania,EY,E,Other Europe,Eurocontrol
+Luxembourg,EL,E,ESRA North-West,Eurocontrol
+Macao,VM,V,Asia/Pacific,China
+"Macedonia, the former Yugoslav Republic of",LW,L,ESRA East,Eurocontrol
+Madagascar,FM,F,Southern Africa,Africa
+Malawi,FW,F,Southern Africa,Africa
+Malaysia,W[BM],W,Asia/Pacific,Asia
+Maldives,VR,V,Asia/Pacific,Asia
+Mali,GA,G,Southern Africa,Africa
+Malta,LM,L,ESRA Mediterranean,Eurocontrol
+Marshall Islands,PK,P,Asia/Pacific,Asia
+Martinique,TF,T,Mid-Atlantic,Southern America
+Mauritania,GQ,G,Southern Africa,Africa
+Mauritius,FI,F,Southern Africa,Africa
+Mayotte,FM,F,Southern Africa,Africa
+Mecklenburg Schwerin,"NA","NA","NA","NA"
+Mexico,MM,M,Mid-Atlantic,Southern America
+"Micronesia, Federated States of",PT,P,Asia/Pacific,Asia
+Modena,"NA","NA","NA","NA"
+"Moldova, Republic of",LU,L,ESRA East,Eurocontrol
+Monaco,LN,L,ESRA North-West,Eurocontrol
+Mongolia,ZM,Z,Asia/Pacific,Asia
+Montenegro,LY,L,ESRA East,Eurocontrol
+Montserrat,TR,T,Mid-Atlantic,Southern America
+Morocco,GM,G,North-Africa,Africa
+Mozambique,FQ,F,Southern Africa,Africa
+Myanmar,VY,V,Asia/Pacific,Asia
+Namibia,FY,F,Southern Africa,Africa
+Nauru,AN,A,Asia/Pacific,Asia
+Nepal,VN,V,Asia/Pacific,Asia
+Netherlands,EH,E,ESRA North-West,Eurocontrol
+Netherlands Antilles,TN,T,Mid-Atlantic,Southern America
+New Caledonia,NW,N,Asia/Pacific,Asia
+New Zealand,NZ,N,Asia/Pacific,Asia
+Nicaragua,MN,M,Mid-Atlantic,Southern America
+Niger,DR,D,Southern Africa,Africa
+Nigeria,DN,D,Southern Africa,Africa
+Niue,NI,N,Asia/Pacific,Asia
+Norfolk Island,Y,Y,Asia/Pacific,Asia
+Northern Mariana Islands,PG,P,Asia/Pacific,Asia
+Norway,EN,E,ESRA North-West,Eurocontrol
+Oman,OO,O,Middle-East,Middle East
+Pakistan,OP,O,Asia/Pacific,Asia
+Palau,PT,P,Asia/Pacific,Asia
+"Palestine, State of",LV,L,Middle-East,Middle East
+Panama,MP,M,Mid-Atlantic,Southern America
+Papua New Guinea,AY,A,Asia/Pacific,Asia
+Paraguay,SG,S,South-Atlantic,Southern America
+Parma,"NA","NA","NA","NA"
+Peru,SP,S,South-Atlantic,Southern America
+Philippines,RP,R,Asia/Pacific,Asia
+Pitcairn,"NA","NA","NA",Asia
+Poland,EP,E,ESRA East,Eurocontrol
+Portugal,LP,L,ESRA Mediterranean,Eurocontrol
+Puerto Rico,TJ,T,Mid-Atlantic,Southern America
+Qatar,OT,O,Middle-East,Middle East
+Republic of Vietnam,VV,V,"NA",Asia
+Reunion,FM,F,Southern Africa,Africa
+Romania,LR,L,ESRA East,Eurocontrol
+Russian Federation,U[^ABDGKMT],U,Asia/Pacific,Russia
+Rwanda,HR,H,Southern Africa,Africa
+Saint Barthelemy,TF,T,Mid-Atlantic,Southern America
+"Saint Helena, Ascension and Tristan da Cunha",FH,F,Southern Africa,Africa
+Saint Kitts and Nevis,TK,T,Mid-Atlantic,Southern America
+Saint Lucia,TL,T,Mid-Atlantic,Southern America
+Saint Martin (French part),TF,T,Mid-Atlantic,Southern America
+Saint Pierre and Miquelon,LF,L,ESRA North-West,Northern America
+Saint Vincent and the Grenadines,TV,T,Mid-Atlantic,Southern America
+Samoa,NS,N,Asia/Pacific,Asia
+San Marino,"NA","NA","NA","NA"
+Sao Tome and Principe,FP,F,Southern Africa,Africa
+Saudi Arabia,OE,O,Middle-East,Middle East
+Saxony,"NA","NA","NA","NA"
+Senegal,GO,"NA",Southern Africa,Africa
+Serbia,LY,L,ESRA East,Eurocontrol
+Seychelles,FS,F,Southern Africa,Africa
+Sierra Leone,GF,G,Southern Africa,Africa
+Singapore,WS,W,Asia/Pacific,Asia
+Sint Maarten (Dutch part),TN,T,Mid-Atlantic,Southern America
+Slovakia,LZ,L,ESRA East,Eurocontrol
+Slovenia,LJ,L,ESRA East,Eurocontrol
+Solomon Islands,AG,A,Asia/Pacific,Asia
+Somalia,HC,H,Southern Africa,Africa
+South Africa,FA,F,Southern Africa,Africa
+South Georgia and the South Sandwich Islands,"NA","NA","NA","NA"
+South Sudan,HS,H,Southern Africa,Africa
+Spain,LE,L,ESRA Mediterranean,Eurocontrol
+Sri Lanka,VC,V,Asia/Pacific,Asia
+Sudan,HS,H,Southern Africa,Africa
+Suriname,SM,S,South-Atlantic,Southern America
+Svalbard and Jan Mayen,EN,E,ESRA North-West,Eurocontrol
+Swaziland,FD,F,Southern Africa,Africa
+Sweden,ES,E,ESRA North-West,Eurocontrol
+Switzerland,LS,L,ESRA North-West,Eurocontrol
+Syrian Arab Republic,OS,O,Middle-East,Middle East
+"Taiwan, Province of China",RC,R,Asia/Pacific,Asia
+Tajikistan,UT,U,Asia/Pacific,Asia
+"Tanzania, United Republic of",HT,H,Southern Africa,Africa
+Thailand,VT,V,Asia/Pacific,Asia
+Timor-Leste,WP,W,Asia/Pacific,Asia
+Togo,DX,D,Southern Africa,Africa
+Tokelau,"NA","NA","NA","NA"
+Tonga,NF,N,Asia/Pacific,Asia
+Trinidad and Tobago,TT,T,Mid-Atlantic,Southern America
+Tunisia,DT,D,North-Africa,Africa
+Turkey,LT,L,ESRA Mediterranean,Eurocontrol
+Turkmenistan,UT,U,Asia/Pacific,Asia
+Turks and Caicos Islands,MB,M,Mid-Atlantic,Southern America
+Tuscany,"NA","NA","NA","NA"
+Tuvalu,NG,N,Asia/Pacific,Asia
+Two Sicilies,"NA","NA","NA","NA"
+Uganda,HU,H,Southern Africa,Africa
+Ukraine,UK,U,ESRA East,Eurocontrol
+United Arab Emirates,OM,O,Middle-East,Middle East
+United Kingdom,EG,E,ESRA North-West,Eurocontrol
+United States,K,K,North Atlantic,Northern America
+United States Minor Outlying Islands,P[JON|MDY|AWK|LPA|BAR|LUR],P,Asia/Pacific,Asia
+Uruguay,SU,S,South-Atlantic,Southern America
+Uzbekistan,UT,U,Asia/Pacific,Asia
+Vanuatu,NV,N,Asia/Pacific,Asia
+"Venezuela, Bolivarian Republic of",SV,S,South-Atlantic,Southern America
+Viet Nam,VV,V,Asia/Pacific,Asia
+"Virgin Islands, British",TU,T,Mid-Atlantic,Southern America
+"Virgin Islands, U.S.",TI,T,Mid-Atlantic,Southern America
+Wallis and Futuna,NL,N,Asia/Pacific,Asia
+Western Sahara,GS,G,Southern Africa,Africa
+Wuerttemburg,"NA","NA","NA","NA"
+Yemen,OY,O,Middle-East,Middle East
+Yemen Arab Republic,"NA","NA","NA","NA"
+Yemen People's Republic,"NA","NA","NA","NA"
+Yugoslavia,"NA","NA","NA","NA"
+Zambia,FL,F,Southern Africa,Africa
+Zanzibar,"NA","NA","NA","NA"
+Zimbabwe,FV,F,Southern Africa,Africa

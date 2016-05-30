@@ -9,7 +9,7 @@
 countrycode_data
 }
 \description{
-A data frame with 262 observations on the following 17 variables.
+A data frame with 262 observations on the following 21 variables.
 Used internally by the \code{countrycode()} function.
 }
 \details{
@@ -21,6 +21,7 @@ Used internally by the \code{countrycode()} function.
   \item fips104: FIPS 10-4 (Federal Information Processing Standard)
   \item imf: International Monetary Fund
   \item iso2c: ISO-2 character
+  \item iso3c: ISO-3 character
   \item iso3c: ISO-3 character
   \item iso2n: ISO-2 numeric
   \item iso3n: ISO-3 numeric
@@ -34,6 +35,10 @@ Used internally by the \code{countrycode()} function.
              without special territories
   \item ar5: IPCC's regional mapping used both in the Fifth Assessment Report
             (AR5) and for the Reference Concentration Pathways (RCP)
+  \item icao: \href{https://en.wikipedia.org/wiki/International_Civil_Aviation_Organization_airport_code#Prefixes}{ICAO country}
+  \item icaoregion: ICAO region
+  \item statfor: Eurocontrol's \href{https://www.eurocontrol.int/faq/how-are-regions-defined}{STATFOR region}
+  \item pru: Eurocontrol's PRU regions
 
 }
 }
