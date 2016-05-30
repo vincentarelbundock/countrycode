@@ -1,6 +1,6 @@
 #' Country Code Translation Data Frame
 #'
-#' A data frame with 262 observations on the following 21 variables.
+#' A data frame with 273 observations on the following 21 variables.
 #' Used internally by the \code{countrycode()} function.
 #'
 #' \itemize{
@@ -55,6 +55,6 @@
 #' @keywords datasets
 #' @name countrycode_data
 #' @usage countrycode_data
-#' @format A data frame with 260 rows and 17 columns
+#' @format A data frame with 273 rows and 21 columns
 NULL
 
