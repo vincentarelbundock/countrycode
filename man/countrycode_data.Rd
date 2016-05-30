@@ -4,12 +4,12 @@
 \name{countrycode_data}
 \alias{countrycode_data}
 \title{Country Code Translation Data Frame}
-\format{A data frame with 260 rows and 17 columns}
+\format{A data frame with 273 rows and 21 columns}
 \usage{
 countrycode_data
 }
 \description{
-A data frame with 262 observations on the following 21 variables.
+A data frame with 273 observations on the following 21 variables.
 Used internally by the \code{countrycode()} function.
 }
 \details{
