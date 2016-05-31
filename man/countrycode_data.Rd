@@ -22,7 +22,6 @@ Used internally by the \code{countrycode()} function.
   \item imf: International Monetary Fund
   \item iso2c: ISO-2 character
   \item iso3c: ISO-3 character
-  \item iso3c: ISO-3 character
   \item iso2n: ISO-2 numeric
   \item iso3n: ISO-3 numeric
   \item un: United Nations numerical code
