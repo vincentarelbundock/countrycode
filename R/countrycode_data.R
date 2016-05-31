@@ -1,6 +1,6 @@
 #' Country Code Translation Data Frame
 #'
-#' A data frame with 262 observations on the following 17 variables.
+#' A data frame with 273 observations on the following 21 variables.
 #' Used internally by the \code{countrycode()} function.
 #'
 #' \itemize{
@@ -24,6 +24,10 @@
 #'              without special territories
 #'   \item ar5: IPCC's regional mapping used both in the Fifth Assessment Report
 #'             (AR5) and for the Reference Concentration Pathways (RCP)
+#'   \item icao: \href{https://en.wikipedia.org/wiki/International_Civil_Aviation_Organization_airport_code#Prefixes}{ICAO country}
+#'   \item icaoregion: ICAO region
+#'   \item statfor: Eurocontrol's \href{https://www.eurocontrol.int/faq/how-are-regions-defined}{STATFOR region}
+#'   \item pru: Eurocontrol's PRU regions
 #'
 #' }
 #'
@@ -50,6 +54,6 @@
 #' @keywords datasets
 #' @name countrycode_data
 #' @usage countrycode_data
-#' @format A data frame with 260 rows and 17 columns
+#' @format A data frame with 273 rows and 21 columns
 NULL
 

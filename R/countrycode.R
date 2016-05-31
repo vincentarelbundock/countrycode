@@ -13,59 +13,103 @@
 #' @note Supports the following coding schemes: Correlates of War character,
 #'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
 #'   Olympic Committee, FIPS 10-4, FAO numeric, United Nations numeric,
-#'   World Bank character, official English short country names (ISO), continent, region.
+#'   World Bank character, official English short country names (ISO), continent, region,
+#'   ICAO country code, ICAO region, Eurocontrol's STATFOR and PRU regions.
 #'
 #'   The following strings can be used as arguments for \code{origin} or
 #'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-#'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
+#'   "fips104", "fao", "ioc", "un", "wb", "country.name", "icao".
+#'   The following strings can be
 #'   used as arguments for \code{destination} \emph{only}:  "continent", "region",
-#'   "eu28", "ar5"
+#'   "eu28", "ar5", "icaoregion", "statfor" and "pru"
+#' @seealso \href{https://en.wikipedia.org/wiki/International_Civil_Aviation_Organization_airport_code}{ICAO airport codes},
+#'   Eurocontrol's \href{https://www.eurocontrol.int/faq/how-are-regions-defined}{STATFOR regions}
 #' @export
 #' @aliases countrycode
 #' @examples
-#' codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
+#' # Vector of values to be converted
+#' codes.of.origin <- countrycode::countrycode_data$cowc
 #' countrycode(codes.of.origin, "cowc", "iso3c")
-countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+#' # some ICAO country codes
+#' countrycode(c('EB', 'LI', 'LF'),"icao","country.name")
+countrycode <-
+  function (sourcevar, origin, destination, warn = FALSE) {
     # Sanity check
-    origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]
-    destination_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
-    if (!origin %in% origin_codes){stop("Origin code not supported")}
-    if (!destination %in% destination_codes){stop("Destination code not supported")}
-    if (origin == 'country.name'){
-        dict = na.omit(countrycode::countrycode_data[,c('regex', destination)])
-    }else{
-        dict = na.omit(countrycode::countrycode_data[,c(origin, destination)])
+    origin_codes <- names(countrycode::countrycode_data)[!(
+      names(countrycode::countrycode_data) %in% c(
+        "continent",
+        "region",
+        "regex",
+        "eu28",
+        "ar5",
+        "icaoregion",
+        "statfor",
+        "pru"
+      )
+    )]
+    destination_codes <-
+      names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
+    if (!origin %in% origin_codes) {
+      stop("Origin code not supported")
+    }
+    if (!destination %in% destination_codes) {
+      stop("Destination code not supported")
+    }
+    if (origin == 'country.name') {
+      dict = na.omit(countrycode::countrycode_data[, c('regex', destination)])
+    } else{
+      dict = na.omit(countrycode::countrycode_data[, c(origin, destination)])
     }
     # Prepare output vector
     destination_vector <- rep(NA, length(sourcevar))
     # All but regex-based operations
-    if (origin != "country.name"){
-        matches <- match(sourcevar, dict[, origin])
-        destination_vector <- dict[matches, destination]
-    }else{
-        # For each regex in the database -> find matches
-        destination_list <- lapply(sourcevar, function(k) k)
-        for (i in 1:nrow(dict)){
-            matches <- grep(dict$regex[i], sourcevar, perl=TRUE, ignore.case=TRUE, value=FALSE)
-            destination_vector[matches] <- dict[i, destination]
-            # Warning-related
-            destination_list[matches] <- lapply(destination_list[matches], function(k) c(k, dict[i, destination]))
-        }
-        destination_list <- destination_list[lapply(destination_list, length) > 2]
+    if (origin != "country.name") {
+      matches <- match(sourcevar, dict[, origin])
+      destination_vector <- dict[matches, destination]
+    } else{
+      # For each regex in the database -> find matches
+      destination_list <- lapply(sourcevar, function(k)
+        k)
+      for (i in 1:nrow(dict)) {
+        matches <-
+          grep(
+            dict$regex[i],
+            sourcevar,
+            perl = TRUE,
+            ignore.case = TRUE,
+            value = FALSE
+          )
+        destination_vector[matches] <- dict[i, destination]
+        # Warning-related
+        destination_list[matches] <-
+          lapply(destination_list[matches], function(k)
+            c(k, dict[i, destination]))
+      }
+      destination_list <-
+        destination_list[lapply(destination_list, length) > 2]
     }
     # Warnings
-    if(warn){
-        nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
-        if(length(nomatch) > 0){
-            warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n")
+    if (warn) {
+      nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
+      if (length(nomatch) > 0) {
+        warning("Some values were not matched: ",
+                paste(nomatch, collapse = ", "),
+                "\n")
+      }
+      if (origin == 'country.name') {
+        if (length(destination_list) > 0) {
+          destination_list <-
+            lapply(destination_list, function(k)
+              paste(k, collapse = ','))
+          destination_list <-
+            sort(unique(do.call('c', destination_list)))
+          warning(
+            "Some strings were matched more than once: ",
+            paste(destination_list, collapse = "; "),
+            "\n"
+          )
         }
-        if(origin=='country.name'){
-           if(length(destination_list) > 0){
-               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
-               destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n")
-           }
-        }
+      }
     }
     return(destination_vector)
-}
+  }

@@ -25,17 +25,26 @@ with the name of the continent or region to which each country belongs.
 Supports the following coding schemes: Correlates of War character,
   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
   Olympic Committee, FIPS 10-4, FAO numeric, United Nations numeric,
-  World Bank character, official English short country names (ISO), continent, region.
+  World Bank character, official English short country names (ISO), continent, region,
+  ICAO country code, ICAO region, Eurocontrol's STATFOR and PRU regions.
 
   The following strings can be used as arguments for \code{origin} or
   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-  "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
+  "fips104", "fao", "ioc", "un", "wb", "country.name", "icao".
+  The following strings can be
   used as arguments for \code{destination} \emph{only}:  "continent", "region",
-  "eu28", "ar5"
+  "eu28", "ar5", "icaoregion", "statfor" and "pru"
 }
 \examples{
-codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
+# Vector of values to be converted
+codes.of.origin <- countrycode::countrycode_data$cowc
 countrycode(codes.of.origin, "cowc", "iso3c")
+# some ICAO country codes
+countrycode(c('EB', 'LI', 'LF'),"icao","country.name")
+}
+\seealso{
+\href{https://en.wikipedia.org/wiki/International_Civil_Aviation_Organization_airport_code}{ICAO airport codes},
+  Eurocontrol's \href{https://www.eurocontrol.int/faq/how-are-regions-defined}{STATFOR regions}
 }
 \keyword{countrycode}
 
