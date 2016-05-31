@@ -35,8 +35,8 @@
 countrycode <-
   function (sourcevar, origin, destination, warn = FALSE) {
     # Sanity check
-    origin_codes <- names(countrycode_data)[!(
-      names(countrycode_data) %in% c(
+    origin_codes <- names(countrycode::countrycode_data)[!(
+      names(countrycode::countrycode_data) %in% c(
         "continent",
         "region",
         "regex",
@@ -48,7 +48,7 @@ countrycode <-
       )
     )]
     destination_codes <-
-      names(countrycode_data)[!(names(countrycode_data) %in% c("regex"))]
+      names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
     if (!origin %in% origin_codes) {
       stop("Origin code not supported")
     }
@@ -56,9 +56,9 @@ countrycode <-
       stop("Destination code not supported")
     }
     if (origin == 'country.name') {
-      dict = na.omit(countrycode_data[, c('regex', destination)])
+      dict = na.omit(countrycode::countrycode_data[, c('regex', destination)])
     } else{
-      dict = na.omit(countrycode_data[, c(origin, destination)])
+      dict = na.omit(countrycode::countrycode_data[, c(origin, destination)])
     }
     # Prepare output vector
     destination_vector <- rep(NA, length(sourcevar))
