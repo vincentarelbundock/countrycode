@@ -48,7 +48,7 @@ Central African Republic,CEN,482,37,CT,626,CAF,CF,CAF,140,140,CAF,\bcentral.afri
 Chad,CHA,483,39,CD,628,CHA,TD,TCD,148,148,TCD,\bchad,Africa,Middle Africa,,MAF
 Chile,CHL,155,40,CI,228,CHI,CL,CHL,152,152,CHL,\bchile,Americas,South America,,LAM
 China,CHN,710,351,CH,924,CHN,CN,CHN,156,156,CHN,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai).*china,Asia,Eastern Asia,,ASIA
-Christmas Island,,,,CX,,,CX,CXR,162,,CXR,christmas,,,,ASIA
+Christmas Island,,,,CX,,,CX,CXR,162,,CXR,christmas,Oceania,,,ASIA
 Cocos (Keeling) Islands,,,,,,,CC,CCK,166,,CCK,\bcocos|keeling,,,,ASIA
 Colombia,COL,100,44,CO,233,COL,CO,COL,170,170,COL,colombia,Americas,South America,,LAM
 Comoros,COM,581,45,CN,632,COM,KM,COM,174,174,COM,comoro,Africa,Eastern Africa,,MAF
