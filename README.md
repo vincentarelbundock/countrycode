@@ -62,8 +62,8 @@ Generate vectors and 2 data frames without a common id (i.e. can't merge the 2 d
 > isocodes <- c(12,8,826,124,840)
 > var1     <- sample(1:500,5)
 > var2     <- sample(1:500,5)
-> df1      <- as.data.frame(cbind(cowcodes,var1))
-> df2      <- as.data.frame(cbind(isocodes,var2))
+> df1      <- data.frame(cowcodes,var1)
+> df2      <- data.frame(isocodes,var2)
 ```
 
 Inspect the data:
