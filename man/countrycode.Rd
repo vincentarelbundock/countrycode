@@ -4,7 +4,7 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = FALSE)
+countrycode(sourcevar, origin, destination, warn = FALSE, dictionary = NULL)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be converted}
@@ -14,6 +14,13 @@ countrycode(sourcevar, origin, destination, warn = FALSE)
 \item{destination}{Coding scheme of destination (name enclosed in quotes "")}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
+
+\item{dictionary}{A data frame which supplies custom country codes.
+Variables correspond to country codes, observations must refer to unique
+countries.  When countrycode uses a user-supplied dictionary, no sanity
+checks are conducted. The data frame format must resemble
+countrycode::countrycode_data. Custom dictionaries only work with strings
+(no regexes).}
 }
 \description{
 Converts long country names into one of many different coding schemes.
