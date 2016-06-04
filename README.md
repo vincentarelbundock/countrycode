@@ -11,17 +11,17 @@ Different data sources use different coding schemes to represent countries (e.g.
 Solution
 --------
 
-The countrycode function can convert to and from 7 different country coding schemes. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes, or into standardized country names (official short English). It can create new variables with the name of the continent and/or region to which each country belongs.
+The `countrycode` function can convert to and from 7 different country coding schemes. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes, or into standardized country names (official short English or UN official names). It can create new variables with the name of the continent and/or region to which each country belongs.
 
 Supported country codes
 -----------------------
 
-Correlates of War character, CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF, Food and Agriculture Organization of the United Nations, International Olympic Committee, United Nations numeric, FIPS 10-4, official English short country names (ISO), continent, region.
+Correlates of War character, CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF, Food and Agriculture Organization of the United Nations, International Olympic Committee, United Nations numeric, FIPS 10-4, official English short country names (ISO), continent, region, and UN official country names in English, French, Spanish, Russian, Chinese and Arabic.
 
 Extra arguments
 ---------------
 
-Use warn=TRUE to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
+Use `warn = TRUE` to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
 
 Installation
 ------------
@@ -51,15 +51,15 @@ Convert single country codes:
 Convert a vector of country codes
 
 ```R
-> cowcodes <- c("ALG","ALB","UKG","CAN","USA")
-> countrycode(cowcodes,"cowc","iso3c")
+> cowcodes <- c("ALG", "ALB", "UKG", "CAN", "USA")
+> countrycode(cowcodes, "cowc", "iso3c")
 [1] "DZA" "ALB" "GBR" "CAN" "USA"
 ```
 
 Generate vectors and 2 data frames without a common id (i.e. can't merge the 2 df):
 
 ```R
-> isocodes <- c(12,8,826,124,840)
+> isocodes <- c(12, 8, 826, 124, 840)
 > var1     <- sample(1:500,5)
 > var2     <- sample(1:500,5)
 > df1      <- data.frame(cowcodes,var1)
@@ -90,7 +90,7 @@ Create a common variable with the iso3c code in each data frame, merge the data,
 ```R
 > df1$iso3c   <- countrycode(df1$cowcodes, "cowc", "iso3c")
 > df2$iso3c   <- countrycode(df2$isocodes, "iso3n", "iso3c")
-> df3         <- merge(df1,df2,id="iso3c")
+> df3         <- merge(df1, df2, id = "iso3c")
 > df3$country <- countrycode(df3$iso3c, "iso3c", "country.name")
 > df3
 iso3c cowcodes var1 isocodes var2        country

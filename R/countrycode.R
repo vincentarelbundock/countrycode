@@ -17,15 +17,20 @@
 #'
 #'   The following strings can be used as arguments for \code{origin} or
 #'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-#'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-#'   used as arguments for \code{destination} \emph{only}:  "continent", "region",
-#'   "eu28", "ar5"
+#'   "fips104", "fao", "ioc", "un", "wb", "country.name", "un_name_en",
+#'   "un_name_fr", "un_name_es", "un_name_ru", "un_name_zh", "un_name_ar".
+#'   The following strings can be used as arguments for \code{destination}
+#'   \emph{only}:  "continent", "region", "eu28", "ar5".
 #' @export
 #' @aliases countrycode
 #' @examples
-#' codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
+#' # Vector of values to be converted
+#' codes.of.origin <- countrycode::countrycode_data$cowc
+#' # Convert to ISO3-character codes
 #' countrycode(codes.of.origin, "cowc", "iso3c")
-countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+#' # Convert to Arabic UN official country names
+#' countrycode(codes.of.origin, "cowc", "un_name_ar")
+countrycode <- function (sourcevar, origin, destination, warn = FALSE) {
     # Sanity check
     if(is.null(sourcevar)) stop("sourcevar is NULL (does not exist).", call. = FALSE)
     origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]

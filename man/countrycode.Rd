@@ -29,13 +29,18 @@ Supports the following coding schemes: Correlates of War character,
 
   The following strings can be used as arguments for \code{origin} or
   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-  "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-  used as arguments for \code{destination} \emph{only}:  "continent", "region",
-  "eu28", "ar5"
+  "fips104", "fao", "ioc", "un", "wb", "country.name", "un_name_en",
+  "un_name_fr", "un_name_es", "un_name_ru", "un_name_zh", "un_name_ar".
+  The following strings can be used as arguments for \code{destination}
+  \emph{only}:  "continent", "region", "eu28", "ar5".
 }
 \examples{
-codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
+# Vector of values to be converted
+codes.of.origin <- countrycode::countrycode_data$cowc
+# Convert to ISO3-character codes
 countrycode(codes.of.origin, "cowc", "iso3c")
+# Convert to Arabic UN official country names
+countrycode(codes.of.origin, "cowc", "un_name_ar")
 }
 \keyword{countrycode}
 
