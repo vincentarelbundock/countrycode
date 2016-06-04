@@ -18,11 +18,6 @@ Supported country codes
 
 Correlates of War character, CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF, Food and Agriculture Organization of the United Nations, International Olympic Committee, United Nations numeric, FIPS 10-4, official English short country names (ISO), continent, region.
 
-Extra arguments
----------------
-
-Use warn=TRUE to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
-
 Installation
 ------------
 
@@ -100,3 +95,45 @@ iso3c cowcodes var1 isocodes var2        country
 4   GBR      UKG  351      826   57 UNITED KINGDOM
 5   USA      USA  241      840   85  UNITED STATES
 ```
+
+Custom country codes dictionaries
+---------------------------------
+
+Since version 0.19, countrycode accepts user supplied dictionaries via the ``dictionary`` argument. For example, 
+
+```
+library(countrycode)
+url = 'https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/aviation.csv'
+custom_dict = read.csv(url, stringsAsFactors=FALSE)
+
+head(custom_dict)
+
+      iso3c  eurocontrol_pru eurocontrol_statfor icao icao_region
+  1   ABW Southern America        Mid-Atlantic   TN           T
+  2   AFG             Asia        Asia/Pacific   OA           O
+  3   AGO           Africa     Southern-Africa   FN           F
+  4   AIA Southern America        Mid-Atlantic   TQ           T
+  5   ALA      Eurocontrol     ESRA North-West   EF           E
+  6   ALB      Eurocontrol           ESRA East   LA           L
+
+countrycode('ABW', 'iso3c', 'icao', dictionary=custom_dict)
+
+> 'TN'
+```
+
+You can also merge your custom dictionary to ``countrycode``'s to get access to all codes:
+
+```
+custom_dict = merge(countrycode::countrycode_data, custom_dict)
+countrycode('Canada', 'country.name', 'icao', dictionary=custom_dict)
+
+> 'C'
+```
+
+
+Extra arguments
+---------------
+
+Use warn=TRUE to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
+
+

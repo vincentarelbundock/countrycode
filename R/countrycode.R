@@ -9,6 +9,12 @@
 #' @param origin Coding scheme of origin (name enclosed in quotes "")
 #' @param destination Coding scheme of destination (name enclosed in quotes "")
 #' @param warn Prints unique elements from sourcevar for which no match was found
+#' @param dictionary A data frame which supplies custom country codes.
+#' Variables correspond to country codes, observations must refer to unique
+#' countries.  When countrycode uses a user-supplied dictionary, no sanity
+#' checks are conducted. The data frame format must resemble
+#' countrycode::countrycode_data. Custom dictionaries only work with strings
+#' (no regexes).
 #' @keywords countrycode
 #' @note Supports the following coding schemes: Correlates of War character,
 #'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
@@ -25,25 +31,28 @@
 #' @examples
 #' codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
 #' countrycode(codes.of.origin, "cowc", "iso3c")
-countrycode <- function (sourcevar, origin, destination, warn=FALSE){
+countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=NULL){
     # Sanity check
-    if(is.null(sourcevar)) stop("sourcevar is NULL (does not exist).", call. = FALSE)
-    origin_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("continent","region","regex", "eu28", "ar5"))]
-    destination_codes <- names(countrycode::countrycode_data)[!(names(countrycode::countrycode_data) %in% c("regex"))]
-    if (!origin %in% origin_codes){stop("Origin code not supported")}
-    if (!destination %in% destination_codes){stop("Destination code not supported")}
-    if (origin == 'country.name'){
-        dict = na.omit(countrycode::countrycode_data[,c('regex', destination)])
-    }else{
-        dict = na.omit(countrycode::countrycode_data[,c(origin, destination)])
+    if(is.null(dictionary)){ # no sanity check if custom dictionary
+        if(is.null(sourcevar)){ 
+            stop("sourcevar is NULL (does not exist).", call. = FALSE)
+        }
+        codes = names(countrycode::countrycode_data)
+        codes_origin = codes[!codes %in% c("continent","region","regex", "eu28", "ar5")]
+        codes_destination = codes[!codes %in% c('regex')]
+        if (!origin %in% codes_origin){
+            stop("Origin code not supported")
+        }
+        if (!destination %in% codes_destination){
+            stop("Destination code not supported")
+        }
+        dictionary = countrycode::countrycode_data
     }
-    # Prepare output vector
+
+    # Convert
     destination_vector <- rep(NA, length(sourcevar))
-    # All but regex-based operations
-    if (origin != "country.name"){
-        matches <- match(sourcevar, dict[, origin])
-        destination_vector <- dict[matches, destination]
-    }else{
+    if (origin == 'country.name'){ # regex codes
+        dict = na.omit(dictionary[,c('regex', destination)])
         # For each regex in the database -> find matches
         destination_list <- lapply(sourcevar, function(k) k)
         for (i in 1:nrow(dict)){
@@ -53,7 +62,12 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE){
             destination_list[matches] <- lapply(destination_list[matches], function(k) c(k, dict[i, destination]))
         }
         destination_list <- destination_list[lapply(destination_list, length) > 2]
+    }else{ # non-regex codes
+        dict = na.omit(dictionary[, c(origin, destination)])
+        matches <- match(sourcevar, dict[, origin])
+        destination_vector <- dict[matches, destination]
     }
+
     # Warnings
     if(warn){
         nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))

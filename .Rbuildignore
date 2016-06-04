@@ -1,5 +1,6 @@
 cran-comments.md
 data/countrycode_data.csv
+data/extra
 Makefile
 prep.R
 README.md
