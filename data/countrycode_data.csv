@@ -1,4 +1,4 @@
-country_name,cowc,cown,fao,fips104,imf,ioc,iso2c,iso3c,iso3n,un,wb,regex,continent,region,eu28,ar5
+country_name,cowc,cown,fao,fips105,imf,ioc,iso2c,iso3c,iso3n,un,wb,regex,continent,region,eu28,ar5
 Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia,,ASIA
 Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b\wland,Europe,Northern Europe,,OECD1990
 Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe,,EIT
@@ -47,7 +47,7 @@ Cayman Islands,,,,CJ,377,CAY,KY,CYM,136,136,CYM,cayman,Americas,Caribbean,,LAM
 Central African Republic,CEN,482,37,CT,626,CAF,CF,CAF,140,140,CAF,\bcentral.african.republic,Africa,Middle Africa,,MAF
 Chad,CHA,483,39,CD,628,CHA,TD,TCD,148,148,TCD,\bchad,Africa,Middle Africa,,MAF
 Chile,CHL,155,40,CI,228,CHI,CL,CHL,152,152,CHL,\bchile,Americas,South America,,LAM
-China,CHN,710,351,CH,924,CHN,CN,CHN,156,156,CHN,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai).*china,Asia,Eastern Asia,,ASIA
+China,CHN,710,351,CH,924,CHN,CN,CHN,156,156,CHN,^(?!.\bmac)(?!.\bhong)(?!.\btai)(?!.\brep).*china|^(?=.*peo)(?=.*rep).*china,Asia,Eastern Asia,,ASIA
 Christmas Island,,,,CX,,,CX,CXR,162,,CXR,christmas,Oceania,,,ASIA
 Cocos (Keeling) Islands,,,,,,,CC,CCK,166,,CCK,\bcocos|keeling,,,,ASIA
 Colombia,COL,100,44,CO,233,COL,CO,COL,170,170,COL,colombia,Americas,South America,,LAM
@@ -233,7 +233,7 @@ Swaziland,SWA,572,209,WZ,734,SWZ,SZ,SWZ,748,748,SWZ,swaziland,Africa,Southern Af
 Sweden,SWD,380,210,SW,144,SWE,SE,SWE,752,752,SWE,sweden,Europe,Northern Europe,EU,OECD1990
 Switzerland,SWZ,225,211,SZ,146,SUI,CH,CHE,756,756,CHE,switz|swiss,Europe,Western Europe,,OECD1990
 Syrian Arab Republic,SYR,652,212,SY,463,SYR,SY,SYR,760,760,SYR,syria,Asia,Western Asia,,MAF
-"Taiwan, Province of China",TAW,713,,TW,528,TPE,TW,TWN,158,,TWN,taiwan|taipei|formosa,Asia,Eastern Asia,,ASIA
+"Taiwan, Province of China",TAW,713,,TW,528,TPE,TW,TWN,158,,TWN,taiwan|taipei|formosa|^(?!.*peo)(?=.*rep).*china,Asia,Eastern Asia,,ASIA
 Tajikistan,TAJ,702,208,TI,923,TJK,TJ,TJK,762,762,TJK,tajik,Asia,Central Asia,,EIT
 "Tanzania, United Republic of",TAZ,510,215,TZ,738,TAN,TZ,TZA,834,834,TZA,tanzania,Africa,Eastern Africa,,MAF
 Thailand,THI,800,216,TH,578,THA,TH,THA,764,764,THA,thailand|\bsiam,Asia,South-Eastern Asia,,ASIA

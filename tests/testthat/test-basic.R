@@ -43,7 +43,8 @@ test_that('warn=FALSE does not give warnings', {
 
 code_names <- names(countrycode_data)[!names(countrycode_data) %in% c('regex', 'continent', 'region')]
 
-for(code_name in code_names){
+code_dups = code_names[!code_names %in% c('eu28', 'ar5')]
+for(code_name in code_dups){
     code_list <- countrycode_data[, code_name]
     dupes <- code_list[duplicated(code_list, incomparables=NA)]
     dupes <- toString(dupes)

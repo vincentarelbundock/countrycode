@@ -131,6 +131,11 @@ test_that('the two Congos are distinguished', {
     expect_that(iso3c_of('congo free state'), equals('COD'))
 })
 
+test_that('China and Taiwan and distinguished', {
+    expect_that(iso3c_of("People's Republic of China"), equals('CHN'))
+    expect_that(iso3c_of('Republic of China'), equals('TWN'))
+})
+
 test_that('the four Yemens are distinguished', {
     expect_that(cowc_of('yemen'), equals('YEM'))
     expect_that(cowc_of('republic of yemen'), equals('YEM'))
