@@ -9,6 +9,7 @@ Version 0.19 (????-??-??)
 * Republic of China == Taiwan (Thanks to Nils Enevoldsen)
 * Martinique regex improvement (Thanks to Martyn Plummer)
 * Tahiti country name string converts to French Polynesia
+* Taiwan FAO code is 214 (Thanks to Matthieu Stigler)
 
 Version 0.18 (2014-12-17)
 -------------------------
