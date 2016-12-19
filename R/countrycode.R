@@ -50,22 +50,42 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
     }
 
     # Convert
-    destination_vector <- rep(NA, length(sourcevar))
-    if (origin == 'country.name'){ # regex codes
-        dict = na.omit(dictionary[,c('regex', destination)])
-        # For each regex in the database -> find matches
-        destination_list <- lapply(sourcevar, function(k) k)
-        for (i in 1:nrow(dict)){
-            matches <- grep(dict$regex[i], sourcevar, perl=TRUE, ignore.case=TRUE, value=FALSE)
-            destination_vector[matches] <- dict[i, destination]
-            # Warning-related
-            destination_list[matches] <- lapply(destination_list[matches], function(k) c(k, dict[i, destination]))
-        }
-        destination_list <- destination_list[lapply(destination_list, length) > 2]
-    }else{ # non-regex codes
-        dict = na.omit(dictionary[, c(origin, destination)])
-        matches <- match(sourcevar, dict[, origin])
-        destination_vector <- dict[matches, destination]
+    if (origin == 'country.name') { # regex codes
+        dict <- stats::na.omit(dictionary[, c('regex', destination)])
+        sourcefctr <- factor(sourcevar)
+
+        # match levels of sourcefctr
+        matches <-
+          sapply(c(levels(sourcefctr), NA), function(x) { # add NA so there's at least one item
+            matchidx <- sapply(dict$regex, function(y) grepl(y, x, perl = TRUE, ignore.case = TRUE))
+            dict[matchidx, destination]
+          })
+
+        # fill elements that have zero matches with the appropriate NA
+        matches[sapply(matches, length) == 0] <- `class<-`(NA, class(dict[[destination]]))
+
+        # create destination_list with elements that have more than one match
+        destination_list <- matches[sapply(matches, length) > 1]
+
+        # add sourcevar value to beginning of match results to replicate previous behavior
+        destination_list <- Map(c, names(destination_list), destination_list)
+
+        # remove all but last match to replicate previous behavior
+        matches <- sapply(matches, function(x) { x[length(x)] })
+
+        # apply new levels to sourcefctr and unname
+        destination_vector <- unname(matches[as.numeric(sourcefctr)])
+
+    } else { # non-regex codes
+        dict <- stats::na.omit(dictionary[, c(origin, destination)])
+        sourcefctr <- factor(sourcevar)
+
+        # match levels of sourcefctr
+        matchidxs <- match(levels(sourcefctr), dict[, origin])
+        matches <- dict[matchidxs, destination]
+
+        # apply new levels to sourcefctr
+        destination_vector <- matches[as.numeric(sourcefctr)]
     }
 
     # Warnings
