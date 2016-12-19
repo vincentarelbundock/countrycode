@@ -1,8 +1,10 @@
 Version 0.19 (????-??-??)
 -------------------------
 
+* Considerably speed up regex conversion by using factors (Thanks to CJ Yetman)
 * countrycode() now includes the "dictionary" argument, which allows
   user-supplied dictionary data.frames
+* updated tests to new testthat convention (Thanks to CJ Yetman)
 * Modified README to illustrate use of custom dictionaries
 * Added aviation data to the github repo as a custom dictionary (Thanks to Enrico Spinielli)
 * Added ar5 and eu28 as possible destinations (Thanks to Niklas Roming)
