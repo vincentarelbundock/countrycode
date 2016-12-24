@@ -36,7 +36,7 @@ Supports the following coding schemes: Correlates of War character,
 
   The following strings can be used as arguments for \code{origin} or
   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-  "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
+  "fips104", "fao", "ioc", "un", "wb", "country.name", "country.name.de".  The following strings can be
   used as arguments for \code{destination} \emph{only}:  "continent", "region",
   "eu28", "ar5"
 }
