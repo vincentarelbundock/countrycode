@@ -23,7 +23,7 @@
 #'
 #'   The following strings can be used as arguments for \code{origin} or
 #'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-#'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
+#'   "fips104", "fao", "ioc", "un", "wb", "country.name", "country.name.de".  The following strings can be
 #'   used as arguments for \code{destination} \emph{only}:  "continent", "region",
 #'   "eu28", "ar5"
 #' @export
@@ -42,7 +42,7 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
     if(is.null(dictionary)){ # no sanity check if custom dictionary
         codes = names(countrycode::countrycode_data)
         codes_origin = codes[!codes %in% c("continent","region","regex", "eu28", "ar5")]
-        codes_destination = codes[!codes %in% c('regex')]
+        codes_destination = codes[!grepl('regex', codes)]
         if (!origin %in% codes_origin){
             stop("Origin code not supported")
         }
@@ -53,8 +53,14 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
     }
 
     # Convert
-    if (origin == 'country.name') { # regex codes
-        dict <- stats::na.omit(dictionary[, c('regex', destination)])
+    if (origin == 'country.name' | origin == 'country.name.de') { # regex codes
+        if ( origin == 'country.name.de' ){
+            dict <- stats::na.omit(dictionary[, c('regex.de', destination)])    
+            colnames(dict)[1] <- 'regex'
+            } 
+        if ( origin == 'country.name' ){
+            dict <- stats::na.omit(dictionary[, c('regex', destination)])
+            }
         sourcefctr <- factor(sourcevar)
 
         # match levels of sourcefctr

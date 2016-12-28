@@ -1,10 +1,11 @@
 #' Country Code Translation Data Frame
 #'
-#' A data frame with 262 observations on the following 17 variables.
+#' A data frame with 262 observations on the following 19 variables.
 #' Used internally by the \code{countrycode()} function.
 #'
 #' \itemize{
 #'   \item country.name: Long country name
+#'   \item country.name.de: Long German country name
 #'   \item cowc: Correlates of War character
 #'   \item cown: Correlates of War numeric
 #'   \item fao: Food and Agriculture Organization of the United Nations numerical code
@@ -18,6 +19,7 @@
 #'   \item wb: World Bank (very similar but not identical to iso3c)
 #'   \item ioc: International Olympic Committee
 #'   \item regex: Regular expression used to convert long names to code
+#'   \item regex.de: Regular expression used to convert long German names to code
 #'   \item region: Regions as defined in the World Bank Development Indicators
 #'   \item continent: Continent as defined in the World Bank Development Indicators
 #'   \item eu28: Memberstates of the European Union (as of December 2015),
