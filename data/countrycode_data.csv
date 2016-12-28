@@ -1,4 +1,4 @@
-country_name,cowc,cown,fao,fips105,imf,ioc,iso2c,iso3c,iso3n,un,wb,regex,continent,region,eu28,ar5
+country.name,cowc,cown,fao,fips105,imf,ioc,iso2c,iso3c,iso3n,un,wb,country.name.regex,continent,region,eu28,ar5
 Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia,,ASIA
 Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b\wland,Europe,Northern Europe,,OECD1990
 Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe,,EIT
