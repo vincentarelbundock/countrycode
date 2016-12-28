@@ -81,8 +81,8 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
         sourcefctr <- factor(sourcevar)
 
         # match levels of sourcefctr
-        matchidxs <- match(levels(sourcefctr), dict[, origin])
-        matches <- dict[matchidxs, destination]
+        matchidxs <- match(levels(sourcefctr), dict[[origin]])
+        matches <- dict[[matchidxs, destination]]
 
         # apply new levels to sourcefctr
         destination_vector <- matches[as.numeric(sourcefctr)]
