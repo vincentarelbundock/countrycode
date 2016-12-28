@@ -33,10 +33,13 @@
 #' countrycode(codes.of.origin, "cowc", "iso3c")
 countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=NULL){
     # Sanity check
+    if (missing(sourcevar)) {
+        stop('sourcevar is NULL (does not exist).')
+    }
+    if (! mode(sourcevar) %in% c('character', 'numeric')) {
+        stop('sourcevar must be a character or numeric vector')
+    }
     if(is.null(dictionary)){ # no sanity check if custom dictionary
-        if(is.null(sourcevar)){ 
-            stop("sourcevar is NULL (does not exist).", call. = FALSE)
-        }
         codes = names(countrycode::countrycode_data)
         codes_origin = codes[!codes %in% c("continent","region","regex", "eu28", "ar5")]
         codes_destination = codes[!codes %in% c('regex')]
