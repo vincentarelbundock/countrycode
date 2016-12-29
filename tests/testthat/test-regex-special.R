@@ -175,6 +175,21 @@ test_that('some old and colonial names are matched', {
     expect_equal(iso3c_of('new hebrides'), 'VUT')
 })
 
+test_that('Micronesia != Federated States of Micronesia', {
+    expect_equal(iso3c_of('Micronesia'), NA_character_)
+    expect_equal(iso3c_of('Federated States of Micronesia'), 'FSM')
+    expect_equal(iso3c_of('Micronesia, Federated States of'), 'FSM')
+    expect_equal(iso3c_of('Micronesia (Federated States of)'), 'FSM')
+})
+
+test_that('South Africa', {
+    expect_equal(iso3c_of('Southern Africa'), NA_character_)
+    expect_equal(iso3c_of('South Africa'), 'ZAF')
+    expect_equal(iso3c_of('South-Africa'), 'ZAF')
+    #expect_equal(iso3c_of('S.Africa'), 'ZAF')
+    #expect_equal(iso3c_of('S. Africa'), 'ZAF')
+})
+
 test_that('some weird cases are matched', {
     expect_equal(iso3c_of('France, Martinique'), 'MTQ')
     expect_equal(iso3c_of('Martinique, France'), 'MTQ')
