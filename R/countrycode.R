@@ -74,10 +74,10 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
                        "region", "country.name.ar", "country.name.es",
                        "country.name.fr", "country.name.ru", "country.name.zh")
         bad_destination = c('country.name.en.regex', 'country.name.de.regex')
-        if (origin %in% bad_origin){
+        if ((origin %in% bad_origin) | (!origin %in% colnames(countrycode_data))){
             stop("Origin code not supported")
         }
-        if (destination %in% bad_destination){
+        if ((destination %in% bad_destination) | (!destination %in% colnames(countrycode_data))){
             stop("Destination code not supported")
         }
 

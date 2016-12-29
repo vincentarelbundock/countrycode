@@ -102,37 +102,28 @@ iso3c cowcodes var1 isocodes var2        country
 Custom country codes dictionaries
 ---------------------------------
 
-Since version 0.19, countrycode accepts user supplied dictionaries via the ``dictionary`` argument. For example, 
+Since version 0.19, countrycode accepts user supplied dictionaries via the ``dictionary`` argument. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
+
+Load the library and download the custom dictionary data.frame:
 
 ```
 library(countrycode)
-url = 'https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/aviation.csv'
-custom_dict = read.csv(url, stringsAsFactors=FALSE)
-
-head(custom_dict)
-
-      iso3c  eurocontrol_pru eurocontrol_statfor icao icao_region
-  1   ABW Southern America        Mid-Atlantic   TN           T
-  2   AFG             Asia        Asia/Pacific   OA           O
-  3   AGO           Africa     Southern-Africa   FN           F
-  4   AIA Southern America        Mid-Atlantic   TQ           T
-  5   ALA      Eurocontrol     ESRA North-West   EF           E
-  6   ALB      Eurocontrol           ESRA East   LA           L
-
-countrycode('ABW', 'iso3c', 'icao', dictionary=custom_dict)
-
-> 'TN'
+url = "https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/us_states.csv"
+state_dict = read.csv(url, stringsAsFactors=FALSE)
 ```
 
-You can also merge your custom dictionary to ``countrycode``'s to get access to all codes:
+Convert:
 
 ```
-custom_dict = merge(countrycode::countrycode_data, custom_dict)
-countrycode('Canada', 'country.name', 'icao', dictionary=custom_dict)
-
-> 'C'
+countrycode('State of Alabama', 'state', 'abbreviation', 
+            dictionary=state_dict,
+            origin_regex=TRUE)
+[1] "AL"
+countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', dictionary=state_dict)
+[1] "Michigan" "Ohio"     NA        
 ```
 
+Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::countrycode_data`` to gain access to all other codes. 
 
 Extra arguments
 ---------------
