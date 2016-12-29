@@ -4,7 +4,7 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = FALSE, dictionary = NULL,
+countrycode(sourcevar, origin, destination, warn = TRUE, dictionary = NULL,
   origin_regex = FALSE)
 }
 \arguments{
@@ -28,8 +28,7 @@ converted (character or factor)}
 Variables correspond to country codes, observations must refer to unique
 countries.  When countrycode uses a user-supplied dictionary, no sanity
 checks are conducted. The data frame format must resemble
-countrycode::countrycode_data. Custom dictionaries only work with strings
-(no regexes).}
+countrycode::countrycode_data.}
 
 \item{origin_regex}{Logical: When using a custom dictionary, if TRUE then the
 origin codes will be matched as regex, if FALSE they will be matched exactly.

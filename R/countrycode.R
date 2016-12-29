@@ -39,15 +39,25 @@
 #' # German to French
 #' countrycode('Albanien', 'country.name.de', 'country.name.fr') 
 countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=NULL, origin_regex=FALSE){
-    # auto-set origin_regex for regex origins in default dictionary
-    if(origin == 'country.name'){ # defaults to English
+
+    # Case-insensitive matching
+    if(is.null(dictionary)){ # only for built-in dictionary
+        if((class(sourcevar) == 'character') & !grepl('country', origin)){
+            sourcevar = toupper(sourcevar)
+        }
+    }
+
+    # Regex defaults to English
+    if(origin == 'country.name'){ 
         origin = 'country.name.en'
     }
     if(destination == 'country.name'){
         destination = 'country.name.en'
     }
+
+    # Auto-set origin_regex for regex origins
     default_regex_codes <- c('country.name.en', 'country.name.de')
-    if (is.null(dictionary)) {
+    if (is.null(dictionary)) { # don't apply to custom dictionaries
         if (origin %in% default_regex_codes) {
             origin <- paste0(origin, '.regex')
             origin_regex <- TRUE
@@ -55,19 +65,21 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=N
             origin_regex <- FALSE
         }
     }
-    # Sanity check
+
+    # Sanity checks
     if (missing(sourcevar)) {
         stop('sourcevar is NULL (does not exist).')
     }
     if (! mode(sourcevar) %in% c('character', 'numeric')) {
-        stop('sourcevar must be a character or numeric vector. This error often arises when users pass a tibble (e.g., from dplyr) instead of a column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2] vs. my_tbl[[2]])')
+        stop('sourcevar must be a character or numeric vector. This error often
+             arises when users pass a tibble (e.g., from dplyr) instead of a
+             column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2]
+                                              vs. my_tbl[[2]])')
     }
     if(is.null(dictionary)){ # no sanity check if custom dictionary
-
         if(is.null(sourcevar)){
             stop("sourcevar is NULL (does not exist).", call. = FALSE)
         }
-
         bad_origin = c("ar5", "continent", "eurocontrol_pru",
                        "eurocontrol_statfor", "eu28", "icao", "icao_region",
                        "region", "country.name.ar", "country.name.es",
@@ -79,7 +91,6 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=N
         if ((destination %in% bad_destination) | (!destination %in% colnames(countrycode_data))){
             stop("Destination code not supported")
         }
-
         dictionary = countrycode::countrycode_data
     }
 
