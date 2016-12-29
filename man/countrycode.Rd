@@ -8,11 +8,19 @@ countrycode(sourcevar, origin, destination, warn = FALSE, dictionary = NULL,
   origin_regex = FALSE)
 }
 \arguments{
-\item{sourcevar}{Vector which contains the codes or country names to be converted}
+\item{sourcevar}{Vector which contains the codes or country names to be
+converted (character or factor)}
 
-\item{origin}{Coding scheme of origin (name enclosed in quotes "")}
+\item{origin}{Coding scheme of origin (string enclosed in quotes ""): 
+"cowc", "cown", "fao", "fipas105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
+"un", "wb", "country.name", "country.name.de".}
 
-\item{destination}{Coding scheme of destination (name enclosed in quotes "")}
+\item{destination}{Coding scheme of destination (string enclosed in quotes ""): 
+"ar5", "continent", "cowc", "cown", "eu28", "eurocontrol_pru",
+"eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
+"ioc", "iso2c", "iso3c", "iso3n", "region", "un", "wb", "country.name",
+"country.name.ar", "country.name.de", "country.name.en", "country.name.es",
+"country.name.fr", "country.name.ru", "country.name.zh".}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 
@@ -34,20 +42,17 @@ scheme to the official short English country name. Creates a new variable
 with the name of the continent or region to which each country belongs.
 }
 \note{
-Supports the following coding schemes: Correlates of War character,
-  CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
-  Olympic Committee, FIPS 10-4, FAO numeric, United Nations numeric,
-  World Bank character, official English short country names (ISO), continent, region.
-
-  The following strings can be used as arguments for \code{origin} or
-  \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-  "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-  used as arguments for \code{destination} \emph{only}:  "continent", "region",
-  "eu28", "ar5"
+For a complete description of available country codes and languages,
+please read the documentation for the \code{countrycode_data} conversion
+dictionary.  Type: \code{?countrycode_data}.
 }
 \examples{
-codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
-countrycode(codes.of.origin, "cowc", "iso3c")
+# ISO to Correlates of War
+countrycode(c('USA', 'DZA'), 'iso3c', 'cown') 
+# English to ISO
+countrycode('Albania', 'country.name', 'iso3c') 
+# German to French
+countrycode('Albanien', 'country.name.de', 'country.name.fr') 
 }
 \keyword{countrycode}
 

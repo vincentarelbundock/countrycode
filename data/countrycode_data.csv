@@ -1,274 +1,274 @@
-country.name,cowc,cown,fao,fips105,imf,ioc,iso2c,iso3c,iso3n,un,wb,country.name.regex,continent,region,eu28,ar5
-Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia,,ASIA
-Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b\wland,Europe,Northern Europe,,OECD1990
-Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe,,EIT
-Algeria,ALG,615,4,AG,612,ALG,DZ,DZA,12,12,DZA,algeria,Africa,Northern Africa,,MAF
-American Samoa,,,,AQ,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia,,ASIA
-Andorra,AND,232,6,AN,,AND,AD,AND,20,20,ADO,andorra,Europe,Southern Europe,,OECD1990
-Angola,ANG,540,7,AO,614,ANG,AO,AGO,24,24,AGO,angola,Africa,Middle Africa,,MAF
-Anguilla,,,,AV,312,AIA,AI,AIA,660,660,AIA,anguill?a,Americas,Caribbean,,LAM
-Antarctica,,,,AY,,,AQ,ATA,10,,ATA,antarctica,,,,LAM
-Antigua and Barbuda,AAB,58,8,AC,311,ANT,AG,ATG,28,28,ATG,antigua,Americas,Caribbean,,LAM
-Argentina,ARG,160,9,AR,213,ARG,AR,ARG,32,32,ARG,argentin,Americas,South America,,LAM
-Armenia,ARM,371,1,AM,911,ARM,AM,ARM,51,51,ARM,armenia,Asia,Western Asia,,EIT
-Aruba,,,,AA,314,ARU,AW,ABW,533,533,ABW,^(?!.*bonaire).*\baruba,Americas,Caribbean,,LAM
-Australia,AUL,900,10,AS,193,AUS,AU,AUS,36,36,AUS,australia,Oceania,Australia and New Zealand,,OECD1990
-Austria,AUS,305,11,AU,122,AUT,AT,AUT,40,40,AUT,^(?!.*hungary).*austria|\baustri.*\bemp,Europe,Western Europe,EU,OECD1990
-Austria-Hungary,AUH,300,,,,,,,,,,austria-hungary,,,,
-Azerbaijan,AZE,373,52,AJ,912,AZE,AZ,AZE,31,31,AZE,azerbaijan,Asia,Western Asia,,EIT
-Baden,BAD,267,,,,,,,,,,baden,,,,
-Bahamas,BHM,31,12,BF,313,BAH,BS,BHS,44,44,BHS,bahamas,Americas,Caribbean,,LAM
-Bahrain,BAH,692,13,BA,419,BRN,BH,BHR,48,48,BHR,bahrain,Asia,Western Asia,,MAF
-Bangladesh,BNG,771,16,BG,513,BAN,BD,BGD,50,50,BGD,bangladesh|^(?=.*east).*paki?stan,Asia,Southern Asia,,ASIA
-Barbados,BAR,53,14,BB,316,BAR,BB,BRB,52,52,BRB,barbados,Americas,Caribbean,,LAM
-Bavaria,BAV,245,,,,,,,,,,bavaria,,,,
-Belarus,BLR,370,57,BO,913,BLR,BY,BLR,112,112,BLR,belarus|byelo,Europe,Eastern Europe,,EIT
-Belgium,BEL,211,255,BE,124,BEL,BE,BEL,56,56,BEL,^(?!.*luxem).*belgium,Europe,Western Europe,EU,OECD1990
-Belize,BLZ,80,23,BH,339,BIZ,BZ,BLZ,84,84,BLZ,belize|^(?=.*british).*honduras,Americas,Central America,,LAM
-Benin,BEN,434,53,BN,638,BEN,BJ,BEN,204,204,BEN,benin|dahome,Africa,Western Africa,,MAF
-Bermuda,,,,,319,BER,BM,BMU,60,60,BMU,bermuda,Americas,Northern America,,LAM
-Bhutan,BHU,760,18,BT,514,BHU,BT,BTN,64,64,BTN,bhutan,Asia,Southern Asia,,ASIA
-"Bolivia, Plurinational State of",BOL,145,19,BL,218,BOL,BO,BOL,68,68,BOL,bolivia,Americas,South America,,LAM
-"Bonaire, Sint Eustatius and Saba",,,,,,,BQ,BES,535,535,,^(?=.*bonaire).*eustatius|^(?=.*carib).*netherlands|\bbes.?islands,Americas,Caribbean,,
-Bosnia and Herzegovina,BOS,346,80,BK,963,BIH,BA,BIH,70,70,BIH,herzegovina|bosnia,Europe,Southern Europe,,EIT
-Botswana,BOT,571,20,BC,616,BOT,BW,BWA,72,72,BWA,botswana|bechuana,Africa,Southern Africa,,MAF
-Bouvet Island,,,,,,,BV,BVT,74,,BVT,bouvet,,,,LAM
-Brazil,BRA,140,21,BR,223,BRA,BR,BRA,76,76,BRA,brazil,Americas,South America,,LAM
-British Indian Ocean Territory,,,,,,,IO,IOT,86,,IOT,british.?indian.?ocean,,,,ASIA
-Brunei Darussalam,BRU,835,26,BX,516,BRU,BN,BRN,96,96,BRN,brunei,Asia,South-Eastern Asia,,ASIA
-Bulgaria,BUL,355,27,BU,918,BUL,BG,BGR,100,100,BGR,bulgaria,Europe,Eastern Europe,EU,EIT
-Burkina Faso,BFO,439,233,UV,748,BUR,BF,BFA,854,854,BFA,burkina|\bfaso|upper.?volta,Africa,Western Africa,,MAF
-Burundi,BUI,516,29,BY,618,BDI,BI,BDI,108,108,BDI,burundi,Africa,Eastern Africa,,MAF
-Cambodia,CAM,811,115,CB,522,CAM,KH,KHM,116,116,KHM,cambodia|kampuchea|khmer,Asia,South-Eastern Asia,,ASIA
-Cameroon,CAO,471,32,CM,622,CMR,CM,CMR,120,120,CMR,cameroon,Africa,Middle Africa,,MAF
-Canada,CAN,20,33,CA,156,CAN,CA,CAN,124,124,CAN,canada,Americas,Northern America,,OECD1990
-Cabo Verde,CAP,402,35,CV,624,CPV,CV,CPV,132,132,CPV,verde,Africa,Western Africa,,MAF
-Cayman Islands,,,,CJ,377,CAY,KY,CYM,136,136,CYM,cayman,Americas,Caribbean,,LAM
-Central African Republic,CEN,482,37,CT,626,CAF,CF,CAF,140,140,CAF,\bcentral.african.republic,Africa,Middle Africa,,MAF
-Chad,CHA,483,39,CD,628,CHA,TD,TCD,148,148,TCD,\bchad,Africa,Middle Africa,,MAF
-Chile,CHL,155,40,CI,228,CHI,CL,CHL,152,152,CHL,\bchile,Americas,South America,,LAM
-China,CHN,710,351,CH,924,CHN,CN,CHN,156,156,CHN,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*peo)(?=.*rep).*china,Asia,Eastern Asia,,ASIA
-Christmas Island,,,,CX,,,CX,CXR,162,,CXR,christmas,Oceania,,,ASIA
-Cocos (Keeling) Islands,,,,,,,CC,CCK,166,,CCK,\bcocos|keeling,,,,ASIA
-Colombia,COL,100,44,CO,233,COL,CO,COL,170,170,COL,colombia,Americas,South America,,LAM
-Comoros,COM,581,45,CN,632,COM,KM,COM,174,174,COM,comoro,Africa,Eastern Africa,,MAF
-"Congo, the Democratic Republic of the",DRC,490,250,CG,636,COD,CD,COD,180,180,ZAR,"\bdem.*congo|congo.*\bdem|congo.*\bdr|\bdr.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc",Africa,Middle Africa,,MAF
-Congo,CON,484,46,CF,634,CGO,CG,COG,178,178,COG,"^(?!.*\bdem)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo",Africa,Middle Africa,,MAF
-Cook Islands,,,47,CW,815,COK,CK,COK,184,184,COK,\bcook,Oceania,Polynesia,,ASIA
-Costa Rica,COS,94,48,CS,238,CRC,CR,CRI,188,188,CRI,costa.?rica,Americas,Central America,,LAM
-Cote d'Ivoire,CDI,437,107,IV,662,CIV,CI,CIV,384,384,CIV,ivoire|ivory,Africa,Western Africa,,MAF
-Croatia,CRO,344,98,HR,960,CRO,HR,HRV,191,191,HRV,croatia,Europe,Southern Europe,EU,EIT
-Cuba,CUB,40,49,CU,928,CUB,CU,CUB,192,192,CUB,\bcuba,Americas,Caribbean,,LAM
-Curacao,,,,UC,354,,CW,CUW,531,531,CUW,^(?!.*bonaire).*\bcura(c|ç)ao,Americas,Caribbean,,LAM
-Cyprus,CYP,352,50,CY,423,CYP,CY,CYP,196,196,CYP,cyprus,Asia,Western Asia,EU,EIT
-Czech Republic,CZR,316,167,EZ,935,CZE,CZ,CZE,203,203,CZE,^(?=.*rep).*czech|czechia|bohemia,Europe,Eastern Europe,EU,EIT
-Czechoslovakia,CZE,315,,,934,TCH,CS,CSK,200,,,czechoslovakia,,,,
-Denmark,DEN,390,54,DA,128,DEN,DK,DNK,208,208,DNK,denmark,Europe,Northern Europe,EU,OECD1990
-Djibouti,DJI,522,72,DJ,611,DJI,DJ,DJI,262,262,DJI,djibouti,Africa,Eastern Africa,,MAF
-Dominica,DMA,54,55,DO,321,DMA,DM,DMA,212,212,DMA,dominica(?!n),Americas,Caribbean,,LAM
-Dominican Republic,DOM,42,56,DR,243,DOM,DO,DOM,214,214,DOM,dominican.rep,Americas,Caribbean,,LAM
-Ecuador,ECU,130,58,EC,248,ECU,EC,ECU,218,218,ECU,ecuador,Americas,South America,,LAM
-Egypt,EGY,651,59,EG,469,EGY,EG,EGY,818,818,EGY,egypt,Africa,Northern Africa,,MAF
-El Salvador,SAL,92,60,ES,253,ESA,SV,SLV,222,222,SLV,el.?salvador,Americas,Central America,,LAM
-Equatorial Guinea,EQG,411,61,EK,642,GEQ,GQ,GNQ,226,226,GNQ,guine.*eq|eq.*guine|^(?=.*span).*guinea,Africa,Middle Africa,,MAF
-Eritrea,ERI,531,178,ER,643,ERI,ER,ERI,232,232,ERI,eritrea,Africa,Eastern Africa,,MAF
-Estonia,EST,366,63,EN,939,EST,EE,EST,233,233,EST,estonia,Europe,Northern Europe,EU,EIT
-Ethiopia,ETH,530,238,ET,644,ETH,ET,ETH,231,231,ETH,ethiopia|abyssinia,Africa,Eastern Africa,,MAF
-Falkland Islands (Malvinas),,,,FK,323,,FK,FLK,238,238,FLK,falkland|malvinas,Americas,South America,,LAM
-Faroe Islands,,,64,FO,816,,FO,FRO,234,234,FRO,faroe|faeroe,Europe,Northern Europe,,OECD1990
-Fiji,FIJ,950,66,FJ,819,FIJ,FJ,FJI,242,242,FJI,fiji,Oceania,Melanesia,,ASIA
-Finland,FIN,375,67,FI,172,FIN,FI,FIN,246,246,FIN,finland,Europe,Northern Europe,EU,OECD1990
-France,FRN,220,68,FR,132,FRA,FR,FRA,250,250,FRA,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Europe,Western Europe,EU,OECD1990
-French Guiana,,,,FG,333,,GF,GUF,254,254,GUF,^(?=.*french).*guiana,Americas,South America,,LAM
-French Polynesia,,,,FP,887,,PF,PYF,258,258,PYF,french.?polynesia|tahiti,Oceania,Polynesia,,ASIA
-French Southern Territories,,,,,,,TF,ATF,260,,ATF,french.?southern,,,,LAM
-Gabon,GAB,481,74,GB,646,GAB,GA,GAB,266,266,GAB,gabon,Africa,Middle Africa,,MAF
-Gambia,GAM,420,75,GA,648,GAM,GM,GMB,270,270,GMB,gambia,Africa,Western Africa,,MAF
-Georgia,GRG,372,73,GG,915,GEO,GE,GEO,268,268,GEO,^(?!.*south).*georgia,Asia,Western Asia,,EIT
-German Democratic Republic,GDR,265,,,,GDR,DD,DDR,278,,,german.?democratic.?republic|democratic.?republic.*germany|east.germany,,,,
-Federal Republic of Germany,GFR,260,,,,FRG,,,280,,,^(?=.*\bfed.*\brep).*german|(?=.*west).*germany|bonn.?republic,,,,
-Germany,GMY,255,79,GM,134,GER,DE,DEU,276,276,DEU,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,Europe,Western Europe,EU,OECD1990
-Ghana,GHA,452,81,GH,652,GHA,GH,GHA,288,288,GHA,ghana|gold.?coast,Africa,Western Africa,,MAF
-Gibraltar,,,,GI,823,,GI,GIB,292,292,GIB,gibraltar,Europe,Southern Europe,,OECD1990
-Greece,GRC,350,84,GR,174,GRE,GR,GRC,300,300,GRC,greece|hellenic|hellas,Europe,Southern Europe,EU,OECD1990
-Greenland,,,,GL,326,,GL,GRL,304,304,GRL,greenland,Americas,Northern America,,OECD1990
-Grenada,GRN,55,86,GJ,328,GRN,GD,GRD,308,308,GRD,grenada,Americas,Caribbean,,LAM
-Guadeloupe,,,,GP,329,,GP,GLP,312,312,GLP,guadeloupe,Americas,Caribbean,,LAM
-Guam,,,,GU,829,GUM,GU,GUM,316,316,GUM,\bguam,Oceania,Micronesia,,OECD1990
-Guatemala,GUA,90,89,GT,258,GUA,GT,GTM,320,320,GTM,guatemala,Americas,Central America,,LAM
-Guernsey,,,,GK,,,GG,GGY,831,831,GGY,guernsey,Europe,Northern Europe,,OECD1990
-Guinea,GUI,438,90,GV,656,GUI,GN,GIN,324,324,GIN,^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea,Africa,Western Africa,,MAF
-Guinea-Bissau,GNB,404,175,PU,654,GBS,GW,GNB,624,624,GNB,bissau|^(?=.*portu).*guinea,Africa,Western Africa,,MAF
-Guyana,GUY,110,91,GY,336,GUY,GY,GUY,328,328,GUY,guyana|british.?guiana,Americas,South America,,MAF
-Haiti,HAI,41,93,HA,263,HAI,HT,HTI,332,332,HTI,haiti,Americas,Caribbean,,LAM
-Hanover,HAN,240,,,,,,,,,,hanover,,,,
-Heard Island and McDonald Islands,,,,,,,HM,HMD,334,,HMD,heard.*mcdonald,,,,ASIA
-Hesse Electoral,HSE,273,,,,,,,,,,hesse.*lectoral,,,,
-Hesse Grand Ducal,HSG,275,,,,,,,,,,hess.*gran.*ducal,,,,
-Holy See (Vatican City State),PAP,327,,VT,,,VA,VAT,336,336,VAT,holy.?see|vatican|papal.?st,Europe,Southern Europe,,OECD1990
-Honduras,HON,91,95,HO,268,HON,HN,HND,340,340,HND,^(?!.*brit).*honduras,Americas,Central America,,LAM
-Hong Kong,,,,,532,HKG,HK,HKG,344,344,HKG,hong.?kong,Asia,Eastern Asia,,
-Hungary,HUN,310,97,HU,944,HUN,HU,HUN,348,348,HUN,^(?!.*austr).*hungary,Europe,Eastern Europe,EU,EIT
-Iceland,ICE,395,99,IC,176,ISL,IS,ISL,352,352,ISL,iceland,Europe,Northern Europe,,OECD1990
-India,IND,750,100,IN,534,IND,IN,IND,356,356,IND,india(?!.*ocea),Asia,Southern Asia,,ASIA
-Indonesia,INS,850,101,ID,536,INA,ID,IDN,360,360,IDN,indonesia,Asia,South-Eastern Asia,,ASIA
-"Iran, Islamic Republic of",IRN,630,102,IR,429,IRI,IR,IRN,364,364,IRN,\biran|persia,Asia,Southern Asia,,MAF
-Iraq,IRQ,645,103,IZ,433,IRQ,IQ,IRQ,368,368,IRQ,\biraq|mesopotamia,Asia,Western Asia,,MAF
-Ireland,IRE,205,104,EI,178,IRL,IE,IRL,372,372,IRL,ireland,Europe,Northern Europe,EU,OECD1990
-Isle of Man,,,,IM,,,IM,IMN,833,833,IMY,^(?=.*isle).*\bman,Europe,Northern Europe,,OECD1990
-Israel,ISR,666,105,IS,436,ISR,IL,ISR,376,376,ISR,israel,Asia,Western Asia,,MAF
-Italy,ITA,325,106,IT,136,ITA,IT,ITA,380,380,ITA,italy,Europe,Southern Europe,EU,OECD1990
-Jamaica,JAM,51,109,JM,343,JAM,JM,JAM,388,388,JAM,jamaica,Americas,Caribbean,,LAM
-Japan,JPN,740,110,JA,158,JPN,JP,JPN,392,392,JPN,japan,Asia,Eastern Asia,,OECD1990
-Jersey,,,,,,,JE,JEY,832,832,JEY,jersey,Europe,Northern Europe,,OECD1990
-Jordan,JOR,663,112,JO,439,JOR,JO,JOR,400,400,JOR,jordan,Asia,Western Asia,,MAF
-Kazakhstan,KZK,705,108,KZ,916,KAZ,KZ,KAZ,398,398,KAZ,kazak,Asia,Central Asia,,EIT
-Kenya,KEN,501,114,KE,664,KEN,KE,KEN,404,404,KEN,kenya|british.?east.?africa|east.?africa.?prot,Africa,Eastern Africa,,MAF
-Kiribati,KIR,946,83,KR,826,KIR,KI,KIR,296,296,KIR,kiribati,Oceania,Micronesia,,ASIA
-Korea,KOR,730,,,,,,,,,,,,,,ASIA
-"Korea, Democratic People's Republic of",PRK,731,116,KN,,PRK,KP,PRK,408,408,PRK,^(?=.*democrat).*\bkorea|^(?=.*people).*\bkorea|^(?=.*north).*\bkorea|dprk,Asia,Eastern Asia,,ASIA
-"Korea, Republic of",ROK,732,117,KS,542,KOR,KR,KOR,410,410,KOR,^(?!.*democrat)(?!.*people)(?!.*north).*\bkorea,Asia,Eastern Asia,,
-Kosovo,KOS,347,,KV,967,,,,,,KSV,kosovo,,,,
-Kuwait,KUW,690,118,KU,443,KUW,KW,KWT,414,414,KWT,kuwait,Asia,Western Asia,,MAF
-Kyrgyzstan,KYR,703,113,KG,917,KGZ,KG,KGZ,417,417,KGZ,kyrgyz|kirghiz,Asia,Central Asia,,EIT
-Lao People's Democratic Republic,LAO,812,120,LA,544,LAO,LA,LAO,418,418,LAO,\blaos?\b,Asia,South-Eastern Asia,,ASIA
-Latvia,LAT,367,119,LG,941,LAT,LV,LVA,428,428,LVA,latvia,Europe,Northern Europe,EU,EIT
-Lebanon,LEB,660,121,LE,446,LIB,LB,LBN,422,422,LBN,lebanon,Asia,Western Asia,,MAF
-Lesotho,LES,570,122,LT,666,LES,LS,LSO,426,426,LSO,lesotho|basuto,Africa,Southern Africa,,MAF
-Liberia,LBR,450,123,LI,668,LBR,LR,LBR,430,430,LBR,liberia,Africa,Western Africa,,MAF
-Libya,LIB,620,124,LY,672,LBA,LY,LBY,434,434,LBY,libya,Africa,Northern Africa,,MAF
-Liechtenstein,LIE,223,,LS,,LIE,LI,LIE,438,438,LIE,liechtenstein,Europe,Western Europe,EU,OECD1990
-Lithuania,LIT,368,126,LH,946,LTU,LT,LTU,440,440,LTU,lithuania,Europe,Northern Europe,EU,EIT
-Luxembourg,LUX,212,256,LU,137,LUX,LU,LUX,442,442,LUX,^(?!.*belg).*luxem,Europe,Western Europe,EU,OECD1990
-Macao,,,,MC,546,,MO,MAC,446,446,MAC,maca(o|u),Asia,Eastern Asia,,
-"Macedonia, the former Yugoslav Republic of",MAC,343,154,MK,962,MKD,MK,MKD,807,807,MKD,macedonia|fyrom,Europe,Southern Europe,,EIT
-Madagascar,MAG,580,129,MA,674,MAD,MG,MDG,450,450,MDG,madagascar|malagasy,Africa,Eastern Africa,,MAF
-Malawi,MAW,553,130,MI,676,MAW,MW,MWI,454,454,MWI,malawi|nyasa,Africa,Eastern Africa,,MAF
-Malaysia,MAL,820,131,MY,548,MAS,MY,MYS,458,458,MYS,malaysia,Asia,South-Eastern Asia,,MAF
-Maldives,MAD,781,132,MV,556,MDV,MV,MDV,462,462,MDV,maldive,Asia,Southern Asia,,ASIA
-Mali,MLI,432,133,ML,678,MLI,ML,MLI,466,466,MLI,\bmali\b,Africa,Western Africa,,MAF
-Malta,MLT,338,134,MT,181,MLT,MT,MLT,470,470,MLT,\bmalta,Europe,Southern Europe,EU,EIT
-Marshall Islands,MSI,983,127,RM,867,MHL,MH,MHL,584,584,MHL,marshall,Oceania,Micronesia,,ASIA
-Martinique,,,,MB,349,,MQ,MTQ,474,474,MTQ,martinique,Americas,Caribbean,,LAM
-Mauritania,MAA,435,136,MR,682,MTN,MR,MRT,478,478,MRT,mauritania,Africa,Western Africa,,MAF
-Mauritius,MAS,590,137,MP,684,MRI,MU,MUS,480,480,MUS,mauritius,Africa,Eastern Africa,,MAF
-Mayotte,,,,,,,YT,MYT,175,175,MYT,\bmayotte,Africa,Eastern Africa,,MAF
-Mecklenburg Schwerin,MEC,280,,,,,,,,,,mecklenbur.*schwerin,,,,
-Mexico,MEX,70,138,MX,273,MEX,MX,MEX,484,484,MEX,\bmexic,Americas,Central America,,LAM
-"Micronesia, Federated States of",FSM,987,145,FM,868,FSM,FM,FSM,583,583,FSM,micronesia,Oceania,Micronesia,,ASIA
-Modena,MOD,332,,,,,,,,,,modena,,,,
-"Moldova, Republic of",MLD,359,146,MD,921,MDA,MD,MDA,498,498,MDA,moldov|b(a|e)ssarabia,Europe,Eastern Europe,,EIT
-Monaco,MNC,221,140,MN,,MON,MC,MCO,492,492,MCO,monaco,Europe,Western Europe,,OECD1990
-Mongolia,MON,712,141,MG,948,MGL,MN,MNG,496,496,MNG,mongolia,Asia,Eastern Asia,,ASIA
-Montenegro,MNG,341,273,MJ,943,MNE,ME,MNE,499,499,MNE,^(?!.*serbia).*montenegro,Europe,Southern Europe,,EIT
-Montserrat,,,,MH,351,,MS,MSR,500,500,MSR,montserrat,Americas,Caribbean,,LAM
-Morocco,MOR,600,143,MO,686,MAR,MA,MAR,504,504,MAR,morocco|\bmaroc,Africa,Northern Africa,,MAF
-Mozambique,MZM,541,144,MZ,688,MOZ,MZ,MOZ,508,508,MOZ,mozambique,Africa,Eastern Africa,,MAF
-Myanmar,MYA,775,28,BM,518,MYA,MM,MMR,104,104,MMR,myanmar|burma,Asia,South-Eastern Asia,,ASIA
-Namibia,NAM,565,147,WA,728,NAM,NA,NAM,516,516,NAM,namibia,Africa,Southern Africa,,MAF
-Nauru,NAU,970,148,NR,836,NRU,NR,NRU,520,520,NRU,nauru,Oceania,Micronesia,,ASIA
-Nepal,NEP,790,149,NP,558,NEP,NP,NPL,524,524,NPL,nepal,Asia,Southern Asia,,ASIA
-Netherlands,NTH,210,150,NL,138,NED,NL,NLD,528,528,NLD,^(?!.*\bant)(?!.*\bcarib).*netherlands,Europe,Western Europe,EU,OECD1990
-Netherlands Antilles,,,,,353,AHO,AN,ANT,530,,ANT,^(?=.*\bant).*(nether|dutch),Americas,Caribbean,,LAM
-New Caledonia,,,,NC,839,,NC,NCL,540,540,NCL,new.?caledonia,Oceania,Melanesia,,ASIA
-New Zealand,NEW,920,156,NZ,196,NZL,NZ,NZL,554,554,NZL,new.?zealand,Oceania,Australia and New Zealand,,OECD1990
-Nicaragua,NIC,93,157,NU,278,NCA,NI,NIC,558,558,NIC,nicaragua,Americas,Central America,,LAM
-Niger,NIR,436,158,NG,692,NIG,NE,NER,562,562,NER,\bniger(?!ia),Africa,Western Africa,,MAF
-Nigeria,NIG,475,159,NI,694,NGR,NG,NGA,566,566,NGA,nigeria,Africa,Western Africa,,MAF
-Niue,,,160,NE,,,NU,NIU,570,570,NIU,niue,Oceania,Polynesia,,ASIA
-Norfolk Island,,,,,,,NF,NFK,574,574,NFK,norfolk,Oceania,Australia and New Zealand,,ASIA
-Northern Mariana Islands,,,,CQ,,,MP,MNP,580,580,MNP,mariana,Oceania,Micronesia,,ASIA
-Norway,NOR,385,162,NO,142,NOR,NO,NOR,578,578,NOR,norway,Europe,Northern Europe,,MAF
-Oman,OMA,698,221,MU,449,OMA,OM,OMN,512,512,OMN,\boman|trucial,Asia,Western Asia,,
-Pakistan,PAK,770,165,PK,564,PAK,PK,PAK,586,586,PAK,^(?!.*east).*paki?stan,Asia,Southern Asia,,ASIA
-Palau,PAL,986,180,PS,565,PLW,PW,PLW,585,585,PLW,palau,Oceania,Micronesia,,ASIA
-"Palestine, State of",,,,,487,PLE,PS,PSE,275,275,WBG,palestin|\bgaza|west.?bank,Asia,Western Asia,,MAF
-Panama,PAN,95,166,PM,283,PAN,PA,PAN,591,591,PAN,panama,Americas,Central America,,LAM
-Papua New Guinea,PNG,910,168,PP,853,PNG,PG,PNG,598,598,PNG,papua|new.?guinea,Oceania,Melanesia,,ASIA
-Paraguay,PAR,150,169,PA,288,PAR,PY,PRY,600,600,PRY,paraguay,Americas,South America,,LAM
-Parma,PMA,335,,,,,,,,,,parma,,,,
-Peru,PER,135,170,PE,293,PER,PE,PER,604,604,PER,peru,Americas,South America,,LAM
-Philippines,PHI,840,171,RP,566,PHI,PH,PHL,608,608,PHL,philippines,Asia,South-Eastern Asia,,ASIA
-Pitcairn,,,,,,,PN,PCN,612,612,PCN,pitcairn,Oceania,Polynesia,,ASIA
-Poland,POL,290,173,PL,964,POL,PL,POL,616,616,POL,poland,Europe,Eastern Europe,EU,EIT
-Portugal,POR,235,174,PO,182,POR,PT,PRT,620,620,PRT,portugal,Europe,Southern Europe,EU,OECD1990
-Puerto Rico,,,,RQ,,PUR,PR,PRI,630,630,PRI,puerto.?rico,Americas,Caribbean,,LAM
-Qatar,QAT,694,179,QA,453,QAT,QA,QAT,634,634,QAT,qatar,Asia,Western Asia,,MAF
-Republic of Vietnam,RVN,817,,,,VNM,,,714,,,,,,,
-Reunion,,,,RE,696,,RE,REU,638,638,REU,r(e|é)union,Africa,Eastern Africa,,MAF
-Romania,ROM,360,183,RO,968,ROU,RO,ROU,642,642,ROM,r(o|u|ou)mania,Europe,Eastern Europe,EU,EIT
-Russian Federation,RUS,365,185,RS,922,RUS,RU,RUS,643,643,RUS,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics,Europe,Eastern Europe,,EIT
-Rwanda,RWA,517,184,RW,714,RWA,RW,RWA,646,646,RWA,rwanda,Africa,Eastern Africa,,MAF
-Saint Barthelemy,,,,,,,BL,BLM,652,652,BLM,barth(e|é)lemy,Americas,Caribbean,,
-"Saint Helena, Ascension and Tristan da Cunha",,,,SH,856,,SH,SHN,654,654,SHN,helena,Africa,Western Africa,,MAF
-Saint Kitts and Nevis,SKN,60,188,SC,361,SKN,KN,KNA,659,659,KNA,kitts|\bnevis,Americas,Caribbean,,LAM
-Saint Lucia,SLU,56,189,ST,362,LCA,LC,LCA,662,662,LCA,\blucia,Americas,Caribbean,,LAM
-Saint Martin (French part),,,,,352,,MF,MAF,663,663,MAF,^(?=.*collectivity).*martin|^(?=.*france).*martin(?!ique)|^(?=.*french).*martin(?!ique),Americas,Caribbean,,
-Saint Pierre and Miquelon,,,,,363,,PM,SPM,666,666,SPM,miquelon,Americas,Northern America,,OECD1990
-Saint Vincent and the Grenadines,SVG,57,191,VC,364,VIN,VC,VCT,670,670,VCT,vincent,Americas,Caribbean,,LAM
-Samoa,WSM,990,244,WS,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia,,ASIA
-San Marino,SNM,331,192,SM,135,SMR,SM,SMR,674,674,SMR,san.?marino,Europe,Southern Europe,,OECD1990
-Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,\bs(a|ã)o.?tom(e|é),Africa,Middle Africa,,MAF
-Saudi Arabia,SAU,670,194,SA,456,KSA,SA,SAU,682,682,SAU,\bsa\w*.?arabia,Asia,Western Asia,,MAF
-Saxony,SAX,269,,,,,,,,,,saxony,,,,
-Senegal,SEN,433,195,SG,722,SEN,SN,SEN,686,686,SEN,senegal,Africa,Western Africa,,MAF
-Serbia,,,272,RI,942,SRB,RS,SRB,688,688,SRB,^(?!.*monte).*serbia,Europe,Southern Europe,,EIT
-Seychelles,SEY,591,196,SE,718,SEY,SC,SYC,690,690,SYC,seychell,Africa,Eastern Africa,,MAF
-Sierra Leone,SIE,451,197,SL,724,SLE,SL,SLE,694,694,SLE,sierra,Africa,Western Africa,,MAF
-Singapore,SIN,830,200,SN,576,SIN,SG,SGP,702,702,SGP,singapore,Asia,South-Eastern Asia,,ASIA
-Sint Maarten (Dutch part),,,,NN,,,SX,SXM,534,534,SXM,^(?!.*martin)(?!.*saba).*maarten,Americas,Caribbean,,LAM
-Slovakia,SLO,317,199,LO,936,SVK,SK,SVK,703,703,SVK,^(?!.*cze).*slovak,Europe,Eastern Europe,EU,EIT
-Slovenia,SLV,349,198,SI,961,SLO,SI,SVN,705,705,SVN,slovenia,Europe,Southern Europe,EU,EIT
-Solomon Islands,SOL,940,25,BP,813,SOL,SB,SLB,90,90,SLB,solomon,Oceania,Melanesia,,ASIA
-Somalia,SOM,520,201,SO,726,SOM,SO,SOM,706,706,SOM,somali,Africa,Eastern Africa,,MAF
-South Africa,SAF,560,202,SF,199,RSA,ZA,ZAF,710,710,ZAF,\bs\w*.?africa,Africa,Southern Africa,,MAF
-South Georgia and the South Sandwich Islands,,,,,,,GS,SGS,239,,SGS,south.?georgia|sandwich,,,,LAM
-South Sudan,SSD,626,277,OD,733,,SS,SSD,728,728,SSD,\bs\w*.?sudan,Africa,Northern Africa,,MAF
-Spain,SPN,230,203,SP,184,ESP,ES,ESP,724,724,ESP,spain,Europe,Southern Europe,EU,OECD1990
-Sri Lanka,SRI,780,38,CE,524,SRI,LK,LKA,144,144,LKA,sri.?lanka|ceylon,Asia,Southern Asia,,ASIA
-Sudan,SUD,625,276,SU,732,SUD,SD,SDN,736,729,SDN,^(?!.*\bs(?!u)).*sudan,Africa,Northern Africa,,MAF
-Suriname,SUR,115,207,NS,366,SUR,SR,SUR,740,740,SUR,surinam|dutch.?guiana,Americas,South America,,LAM
-Svalbard and Jan Mayen,,,,SV,,,SJ,SJM,744,744,SJM,svalbard,Europe,Northern Europe,,OECD1990
-Swaziland,SWA,572,209,WZ,734,SWZ,SZ,SWZ,748,748,SWZ,swaziland,Africa,Southern Africa,,MAF
-Sweden,SWD,380,210,SW,144,SWE,SE,SWE,752,752,SWE,sweden,Europe,Northern Europe,EU,OECD1990
-Switzerland,SWZ,225,211,SZ,146,SUI,CH,CHE,756,756,CHE,switz|swiss,Europe,Western Europe,,OECD1990
-Syrian Arab Republic,SYR,652,212,SY,463,SYR,SY,SYR,760,760,SYR,syria,Asia,Western Asia,,MAF
-"Taiwan, Province of China",TAW,713,214,TW,528,TPE,TW,TWN,158,,TWN,taiwan|taipei|formosa|^(?!.*peo)(?=.*rep).*china,Asia,Eastern Asia,,ASIA
-Tajikistan,TAJ,702,208,TI,923,TJK,TJ,TJK,762,762,TJK,tajik,Asia,Central Asia,,EIT
-"Tanzania, United Republic of",TAZ,510,215,TZ,738,TAN,TZ,TZA,834,834,TZA,tanzania,Africa,Eastern Africa,,MAF
-Thailand,THI,800,216,TH,578,THA,TH,THA,764,764,THA,thailand|\bsiam,Asia,South-Eastern Asia,,ASIA
-Timor-Leste,ETM,860,176,TT,537,TLS,TL,TLS,626,626,TMP,^(?=.*leste).*timor|^(?=.*east).*timor,Asia,South-Eastern Asia,,ASIA
-Togo,TOG,461,217,TO,742,TOG,TG,TGO,768,768,TGO,togo,Africa,Western Africa,,MAF
-Tokelau,,,,TL,,,TK,TKL,772,772,TKL,tokelau,Oceania,Polynesia,,ASIA
-Tonga,TON,955,219,TN,866,TGA,TO,TON,776,776,TON,tonga,Oceania,Polynesia,,MAF
-Trinidad and Tobago,TRI,52,220,TD,369,TTO,TT,TTO,780,780,TTO,trinidad|tobago,Americas,Caribbean,,LAM
-Tunisia,TUN,616,222,TS,744,TUN,TN,TUN,788,788,TUN,tunisia,Africa,Northern Africa,,MAF
-Turkey,TUR,640,223,TU,186,TUR,TR,TUR,792,792,TUR,turkey,Asia,Western Asia,,OECD1990
-Turkmenistan,TKM,701,213,TX,925,TKM,TM,TKM,795,795,TKM,turkmen,Asia,Central Asia,,EIT
-Turks and Caicos Islands,,,,,,,TC,TCA,796,796,TCA,turks,Americas,Caribbean,,LAM
-Tuscany,TUS,337,,,,,,,,,,tuscany,,,,
-Tuvalu,TUV,947,227,TV,,TUV,TV,TUV,798,798,TUV,tuvalu,Oceania,Polynesia,,ASIA
-Two Sicilies,SIC,329,,,,,,,,,,two.?sicilies,,,,
-Uganda,UGA,500,226,UG,746,UGA,UG,UGA,800,800,UGA,uganda,Africa,Eastern Africa,,MAF
-Ukraine,UKR,369,230,UP,926,UKR,UA,UKR,804,804,UKR,ukrain,Europe,Eastern Europe,,EIT
-United Arab Emirates,UAE,696,225,AE,466,UAE,AE,ARE,784,784,ARE,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Asia,Western Asia,,MAF
-United Kingdom,UKG,200,229,UK,112,GBR,GB,GBR,826,826,GBR,united.?kingdom|britain|^u\.?k\.?$,Europe,Northern Europe,EU,OECD1990
-United States,USA,2,231,US,111,USA,US,USA,840,840,USA,united.?states|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),Americas,Northern America,,OECD1990
-United States Minor Outlying Islands,,,,,,,UM,UMI,581,,UMI,minor.?outlying.?is,,,,ASIA
-Uruguay,URU,165,234,UY,298,URU,UY,URY,858,858,URY,uruguay,Americas,South America,,LAM
-Uzbekistan,UZB,704,235,UZ,927,UZB,UZ,UZB,860,860,UZB,uzbek,Asia,Central Asia,,EIT
-Vanuatu,VAN,935,155,NH,846,VAN,VU,VUT,548,548,VUT,vanuatu|new.?hebrides,Oceania,Melanesia,,ASIA
-"Venezuela, Bolivarian Republic of",VEN,101,236,VE,299,VEN,VE,VEN,862,862,VEN,venezuela,Americas,South America,,LAM
-Viet Nam,DRV,816,237,VM,582,VIE,VN,VNM,704,704,VNM,^(?!.*republic).*viet.?nam|^(?=.*socialist).*viet.?nam,Asia,South-Eastern Asia,,ASIA
-"Virgin Islands, British",,,,VI,,,VG,VGB,92,92,VGB,^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin,Americas,Caribbean,,LAM
-"Virgin Islands, U.S.",,,,VQ,,ISV,VI,VIR,850,850,VIR,^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,Americas,Caribbean,,LAM
-Wallis and Futuna,,,,WF,,,WF,WLF,876,876,WLF,futuna|wallis,Oceania,Polynesia,,ASIA
-Western Sahara,,,,WI,,,EH,ESH,732,732,ESH,western.sahara,Africa,Northern Africa,,MAF
-Wuerttemburg,WRT,271,,,,,,,,,,w(ue|ü)rttemburg,,,,
-Yemen,YEM,679,249,YM,474,YEM,YE,YEM,887,887,YEM,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Asia,Western Asia,,MAF
-Yemen Arab Republic,YAR,678,,,,YAR,,,,,,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,,,,
-Yemen People's Republic,YPR,680,,,,YMD,YD,YMD,720,,,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,,,,
-Yugoslavia,YUG,345,,,188,YUG,YU,YUG,,,YUG,yugoslavia,,,,
-Zambia,ZAM,551,251,ZA,754,ZAM,ZM,ZMB,894,894,ZMB,zambia|northern.?rhodesia,Africa,Eastern Africa,,MAF
-Zanzibar,ZAN,511,,,,,,EAZ,,,,zanzibar,,,,MAF
-Zimbabwe,ZIM,552,181,ZI,698,ZIM,ZW,ZWE,716,716,ZWE,zimbabwe|^(?!.*northern).*rhodesia,Africa,Eastern Africa,,MAF
+"ar5","continent","cowc","cown","eu28","eurocontrol_pru","eurocontrol_statfor","fao","fips105","icao","icao_region","imf","ioc","iso2c","iso3c","iso3n","region","un","wb","country.name.ar","country.name.de","country.name.de.regex","country.name.en","country.name.en.regex","country.name.es","country.name.fr","country.name.ru","country.name.zh"
+"ASIA","Asia","AFG",700,NA,"Asia","Asia/Pacific",2,"AF","OA","O",512,"AFG","AF","AFG",4,"Southern Asia",4,"AFG"," أفغانستان","Afghanistan","afghan","Afghanistan","afghan","Afganistán","Afghanistan","Афганистан","阿富汗"
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","ESRA North-West",NA,NA,"EF","E",NA,NA,"AX","ALA",248,"Northern Europe",248,"ALA",NA,"Aland Islands","\baland","Aland Islands","\b\wland",NA,NA,NA,NA
+"EIT","Europe","ALB",339,NA,"Eurocontrol","ESRA East",3,"AL","LA","L",914,"ALB","AL","ALB",8,"Southern Europe",8,"ALB","ألبانيا","Albanien","albanien","Albania","albania","Albania","Albanie","Албания","阿尔巴尼亚"
+"MAF","Africa","ALG",615,NA,"Africa","North-Africa",4,"AG","DA","D",612,"ALG","DZ","DZA",12,"Northern Africa",12,"DZA","الجزائر","Algerien","algerien","Algeria","algeria","Argelia","Algérie","Алжир","阿尔及利亚"
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"AQ","NS","N",859,"ASA","AS","ASM",16,"Polynesia",16,"ASM",NA,"Amerikanisch-Samoa","^(?=.*amerik).*samoa","American Samoa","^(?=.*americ).*samoa",NA,NA,NA,NA
+"OECD1990","Europe","AND",232,NA,NA,NA,6,"AN",NA,NA,NA,"AND","AD","AND",20,"Southern Europe",20,"ADO"," أندورا","Andorra","andorra","Andorra","andorra","Andorra","Andorre","Андорра","安道尔"
+"MAF","Africa","ANG",540,NA,"Africa","Southern-Africa",7,"AO","FN","F",614,"ANG","AO","AGO",24,"Middle Africa",24,"AGO","أنغولا","Angola","angola","Angola","angola","Angola","Angola","Ангола","安哥拉"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"AV","TQ","T",312,"AIA","AI","AIA",660,"Caribbean",660,"AIA",NA,"Anguilla","anguill?a","Anguilla","anguill?a",NA,NA,NA,NA
+"LAM",NA,NA,NA,NA,"Asia","Asia/Pacific",NA,"AY","N","N",NA,NA,"AQ","ATA",10,NA,NA,"ATA",NA,"Antarktis","antarktis","Antarctica","antarctica",NA,NA,NA,NA
+"LAM","Americas","AAB",58,NA,"Southern America","Mid-Atlantic",8,"AC","TA","T",311,"ANT","AG","ATG",28,"Caribbean",28,"ATG","أنتيغوا وبربودا","Antigua und Barbuda","antigua","Antigua and Barbuda","antigua","Antigua y Barbuda","Antigua-et-Barbuda","Антигуа и Барбуда","安提瓜和巴布达"
+"LAM","Americas","ARG",160,NA,"Southern America","South-Atlantic",9,"AR","SA","S",213,"ARG","AR","ARG",32,"South America",32,"ARG","الأرجنتين","Argentinien","argentin","Argentina","argentin","Argentina","Argentine","Аргентина","阿根廷"
+"EIT","Asia","ARM",371,NA,"Eurocontrol","Other Europe",1,"AM","UD","U",911,"ARM","AM","ARM",51,"Western Asia",51,"ARM"," أرمينيا","Armenien","armenien","Armenia","armenia","Armenia","Arménie","Армения","亚美尼亚"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"AA","TN","T",314,"ARU","AW","ABW",533,"Caribbean",533,"ABW",NA,"Aruba","^(?!.*bonaire).*\baruba","Aruba","^(?!.*bonaire).*\baruba",NA,NA,NA,NA
+"OECD1990","Oceania","AUL",900,NA,"Asia","Asia/Pacific",10,"AS","Y","Y",193,"AUS","AU","AUS",36,"Australia and New Zealand",36,"AUS","أستراليا","Australien","australien","Australia","australia","Australia","Australie","Австралия","澳大利亚"
+"OECD1990","Europe","AUS",305,"EU","Eurocontrol","ESRA North-West",11,"AU","LO","L",122,"AUT","AT","AUT",40,"Western Europe",40,"AUT","النمسا","Österreich","^(?!.*ungarn).*(ö|o)sterreich","Austria","^(?!.*hungary).*austria|\baustri.*\bemp","Austria","Autriche","Австрия","奥地利"
+NA,NA,"AUH",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Österreich-Ungarn","(ö|o)sterreich-ungarn","Austria-Hungary","austria-hungary",NA,NA,NA,NA
+"EIT","Asia","AZE",373,NA,"Asia","Other Europe",52,"AJ","UB","U",912,"AZE","AZ","AZE",31,"Western Asia",31,"AZE","أذربيجان","Aserbaidschan","aserbaidsch","Azerbaijan","azerbaijan","Azerbaiyán","Azerbaïdjan","Азербайджан","阿塞拜疆"
+NA,NA,"BAD",267,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Baden","baden","Baden","baden",NA,NA,NA,NA
+"LAM","Americas","BHM",31,NA,"Southern America","Mid-Atlantic",12,"BF","MY","M",313,"BAH","BS","BHS",44,"Caribbean",44,"BHS","جزر البهاما","Bahamas","bahamas","Bahamas","bahamas","Bahamas","Bahamas","Багамские Острова","巴哈马"
+"MAF","Asia","BAH",692,NA,"Middle East","Middle-East",13,"BA","OB","O",419,"BRN","BH","BHR",48,"Western Asia",48,"BHR","البحرين","Bahrain","bahrain","Bahrain","bahrain","Bahrein","Bahreïn","Бахрейн","巴林"
+"ASIA","Asia","BNG",771,NA,"Asia","Asia/Pacific",16,"BG","VG","V",513,"BAN","BD","BGD",50,"Southern Asia",50,"BGD","بنغلاديش","Bangladesch","bangladesch|^(?=.*ost).*paki?stan","Bangladesh","bangladesh|^(?=.*east).*paki?stan","Bangladesh","Bangladesh","Бангладеш","孟加拉国"
+"LAM","Americas","BAR",53,NA,"Southern America","Mid-Atlantic",14,"BB","TB","T",316,"BAR","BB","BRB",52,"Caribbean",52,"BRB","بربادوس","Barbados","barbados","Barbados","barbados","Barbados","Barbade","Барбадос","巴巴多斯"
+NA,NA,"BAV",245,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Bayern","bayern","Bavaria","bavaria",NA,NA,NA,NA
+"EIT","Europe","BLR",370,NA,"Asia","Other Europe",57,"BO","UM","U",913,"BLR","BY","BLR",112,"Eastern Europe",112,"BLR","بيلاروس* ","Weißrussland","wei(ss|ß)russland|belarus|byelo","Belarus","belarus|byelo","Belarús","Bélarus","Беларусь","白俄罗斯"
+"OECD1990","Europe","BEL",211,"EU","Eurocontrol","ESRA North-West",255,"BE","EB","E",124,"BEL","BE","BEL",56,"Western Europe",56,"BEL","بلجيكا","Belgien","^(?!.*luxem).*belgien","Belgium","^(?!.*luxem).*belgium","Bélgica","Belgique","Бельгия","比利时"
+"LAM","Americas","BLZ",80,NA,"Southern America","Mid-Atlantic",23,"BH","MZ","M",339,"BIZ","BZ","BLZ",84,"Central America",84,"BLZ","بليز","Belize","belize|^(?=.*british).*honduras","Belize","belize|^(?=.*british).*honduras","Belice","Belize","Белиз","伯利兹"
+"MAF","Africa","BEN",434,NA,"Africa","Southern Africa",53,"BN","DB","D",638,"BEN","BJ","BEN",204,"Western Africa",204,"BEN","بنن","Benin","benin|dahome","Benin","benin|dahome","Benin","Bénin","Бенин","贝宁"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,NA,"TX","T",319,"BER","BM","BMU",60,"Northern America",60,"BMU",NA,"Bermuda","bermuda","Bermuda","bermuda",NA,NA,NA,NA
+"ASIA","Asia","BHU",760,NA,"Asia","Asia/Pacific",18,"BT","VQ","V",514,"BHU","BT","BTN",64,"Southern Asia",64,"BTN","بوتان","Bhutan","bhutan","Bhutan","bhutan","Bhután","Bhoutan","Бутан","不丹"
+"LAM","Americas","BOL",145,NA,"Southern America","South-Atlantic",19,"BL","SL","S",218,"BOL","BO","BOL",68,"South America",68,"BOL","بوليفيا (دولة-متعددة القوميات)","Bolivien","bolivien","Bolivia (Plurinational State of)","bolivia","Bolivia (Estado Plurinacional de)","Bolivie (État plurinational de)","Боливия (Многонациональное Государство)","玻利维亚"
+NA,"Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,NA,"TN","T",NA,NA,"BQ","BES",535,"Caribbean",535,NA,NA,"Bonaire, Sint Eustatius und Saba","^(?=.*bonaire).*eustatius|^(?=.*karib).*niederlande|\bbes.?inseln","Bonaire, Sint Eustatius and Saba","^(?=.*bonaire).*eustatius|^(?=.*carib).*netherlands|\bbes.?islands",NA,NA,NA,NA
+"EIT","Europe","BOS",346,NA,"Eurocontrol","ESRA East",80,"BK","LQ","L",963,"BIH","BA","BIH",70,"Southern Europe",70,"BIH","البوسنة والهرسك* ","Bosnien und Herzegowina","herzegowina|bosnien","Bosnia and Herzegovina","herzegovina|bosnia","Bosnia y Herzegovina","Bosnie-Herzégovine","Босния и Герцеговина","波斯尼亚和黑塞哥维那"
+"MAF","Africa","BOT",571,NA,"Africa","Southern Africa",20,"BC","FB","F",616,"BOT","BW","BWA",72,"Southern Africa",72,"BWA","بوتسوانا","Botswana","bots(w|u)ana|bechuana","Botswana","botswana|bechuana","Botswana","Botswana","Ботсвана","博茨瓦纳"
+"LAM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"BV","BVT",74,NA,NA,"BVT",NA,"Bouvet Island","bouvet","Bouvet Island","bouvet",NA,NA,NA,NA
+"LAM","Americas","BRA",140,NA,"Southern America","South-Atlantic",21,"BR","S[BDIJNSW]","S",223,"BRA","BR","BRA",76,"South America",76,"BRA","البرازيل","Brasilien","brasil","Brazil","brazil","Brasil","Brésil","Бразилия","巴西"
+"ASIA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"IO","IOT",86,NA,NA,"IOT",NA,"Britisches Territorium im Indischen Ozean","britisches.territorium.im.indischen.ozean","British Indian Ocean Territory","british.?indian.?ocean",NA,NA,NA,NA
+"ASIA","Asia","BRU",835,NA,"Asia","Asia/Pacific",26,"BX","WB","W",516,"BRU","BN","BRN",96,"South-Eastern Asia",96,"BRN","بروني دار السلام","Brunei Darussalam","brunei","Brunei Darussalam","brunei","Brunei Darussalam","Brunei Darussalam","Бруней-Даруссалам","文莱达鲁萨兰国"
+"EIT","Europe","BUL",355,"EU","Eurocontrol","ESRA East",27,"BU","LB","L",918,"BUL","BG","BGR",100,"Eastern Europe",100,"BGR","بلغاريا","Bulgarien","bulgarien","Bulgaria","bulgaria","Bulgaria","Bulgarie","Болгария","保加利亚"
+"MAF","Africa","BFO",439,NA,"Africa","Southern Africa",233,"UV","DF","D",748,"BUR","BF","BFA",854,"Western Africa",854,"BFA","بوركينا فاسو","Burkina Faso","burkina|\bfaso|upper.?volta","Burkina Faso","burkina|\bfaso|upper.?volta","Burkina Faso","Burkina Faso","Буркина-Фасо","布基纳法索"
+"MAF","Africa","BUI",516,NA,"Africa","Southern Africa",29,"BY","HB","H",618,"BDI","BI","BDI",108,"Eastern Africa",108,"BDI","بوروندي","Burundi","burundi","Burundi","burundi","Burundi","Burundi","Бурунди","布隆迪"
+"MAF","Africa","CAP",402,NA,"Africa","Southern Africa",35,"CV","GV","G",624,"CPV","CV","CPV",132,"Western Africa",132,"CPV","الرأس الأخضر","Cabo Verde","verde","Cabo Verde","verde","Cabo Verde","Cabo Verde (République de)","Кабо-Верде","佛得角"
+"ASIA","Asia","CAM",811,NA,"Asia","Asia/Pacific",115,"CB","VD","V",522,"CAM","KH","KHM",116,"South-Eastern Asia",116,"KHM","كمبوديا","Kambodscha","kambodscha|kampuchea|khmer","Cambodia","cambodia|kampuchea|khmer","Camboya","Cambodge","Камбоджа","柬埔寨"
+"MAF","Africa","CAO",471,NA,"Africa","Southern Africa",32,"CM","FK","F",622,"CMR","CM","CMR",120,"Middle Africa",120,"CMR","الكاميرون","Kamerun","kamerun","Cameroon","cameroon","Camerún","Cameroun","Камерун","喀麦隆"
+"OECD1990","Americas","CAN",20,NA,"Northern America","North Atlantic",33,"CA","C","C",156,"CAN","CA","CAN",124,"Northern America",124,"CAN","كندا","Kanada","kanada","Canada","canada","Canadá","Canada","Канада","加拿大"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"CJ","MW","M",377,"CAY","KY","CYM",136,"Caribbean",136,"CYM",NA,"Cayman Inseln","cayman","Cayman Islands","cayman",NA,NA,NA,NA
+"MAF","Africa","CEN",482,NA,"Africa","Southern Africa",37,"CT","FE","F",626,"CAF","CF","CAF",140,"Middle Africa",140,"CAF","جمهورية أفريقيا الوسطى","Zentralafrikanische Republik","\bzentralafrikanische.republik","Central African Republic","\bcentral.african.republic","República Centroafricana","République centrafricaine","Центральноафриканская Республика","中非共和国"
+"MAF","Africa","CHA",483,NA,"Africa","Southern Africa",39,"CD","FT","F",628,"CHA","TD","TCD",148,"Middle Africa",148,"TCD","تشاد","Tschad","\btschad","Chad","\bchad","Chad","Tchad","Чад","乍得"
+"LAM","Americas","CHL",155,NA,"Southern America","South-Atlantic",40,"CI","S[CH]","S",228,"CHI","CL","CHL",152,"South America",152,"CHL"," شيلي","Chile","\bchile","Chile","\bchile","Chile","Chili","Чили","智利"
+"ASIA","Asia","CHN",710,NA,"China","Asia/Pacific",351,"CH","Z","Z",924,"CHN","CN","CHN",156,"Eastern Asia",156,"CHN","الصين","China","^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*Volksrepublik).*china","China","^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*peo)(?=.*rep).*china","China","Chine","Китай","中国"
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"CX","Y","Y",NA,NA,"CX","CXR",162,NA,NA,"CXR",NA,"Weihnachtsinsel","weihnachtsinsel","Christmas Island","christmas",NA,NA,NA,NA
+"ASIA",NA,NA,NA,NA,"Asia","Asia/Pacific",NA,NA,"Y","Y",NA,NA,"CC","CCK",166,NA,NA,"CCK",NA,"Kokosinseln (Keelinginseln)","\bkokos|keeling","Cocos (Keeling) Islands","\bcocos|keeling",NA,NA,NA,NA
+"LAM","Americas","COL",100,NA,"Southern America","South-Atlantic",44,"CO","SK","S",233,"COL","CO","COL",170,"South America",170,"COL","كولومبيا","Kolumbien","kolumbien","Colombia","colombia","Colombia","Colombie","Колумбия","哥伦比亚"
+"MAF","Africa","COM",581,NA,"Africa","Southern Africa",45,"CN","FM","F",632,"COM","KM","COM",174,"Eastern Africa",174,"COM","جزر القمر","Komoren","komoren","Comoros","comoro","Comoras","Comores","Коморские Острова","科摩罗"
+"MAF","Africa","CON",484,NA,"Africa","Southern Africa",46,"CF","FC","F",634,"CGO","CG","COG",178,"Middle Africa",178,"COG","الكونغو","Kongo","^(?!.*\bdem)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bkongo","Congo","^(?!.*\bdem)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo","Congo","Congo","Конго","刚果"
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",47,"CW","NC","N",815,"COK","CK","COK",184,"Polynesia",184,"COK",NA,"Cookinseln","\bcook","Cook Islands","\bcook",NA,NA,NA,NA
+"LAM","Americas","COS",94,NA,"Southern America","Mid-Atlantic",48,"CS","MR","M",238,"CRC","CR","CRI",188,"Central America",188,"CRI","كوستاريكا","Costa Rica","costa.?rica","Costa Rica","costa.?rica","Costa Rica","Costa Rica","Коста-Рика","哥斯达黎加"
+"MAF","Africa","CDI",437,NA,"Africa","Southern Africa",107,"IV","DI","D",662,"CIV","CI","CIV",384,"Western Africa",384,"CIV","كوت ديفوار","Elfenbeinküste","elfenbein|ivoire|ivory","Côte D'Ivoire","ivoire|ivory","Côte d'Ivoire","Côte D'Ivoire","Кот-д'Ивуар","科特迪瓦"
+"EIT","Europe","CRO",344,"EU","Eurocontrol","ESRA East",98,"HR","LD","L",960,"CRO","HR","HRV",191,"Southern Europe",191,"HRV","كرواتيا","Kroatien","kroatien","Croatia","croatia","Croacia","Croatie","Хорватия"," 克罗地亚"
+"LAM","Americas","CUB",40,NA,"Southern America","Mid-Atlantic",49,"CU","MU","M",928,"CUB","CU","CUB",192,"Caribbean",192,"CUB","كوبا","Kuba","\bkuba","Cuba","\bcuba","Cuba","Cuba","Куба","古巴"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"UC","TN","T",354,NA,"CW","CUW",531,"Caribbean",531,"CUW",NA,"Curacao","^(?!.*bonaire).*\bcura(c|ç)ao","Curacao","^(?!.*bonaire).*\bcura(c|ç)ao",NA,NA,NA,NA
+"EIT","Asia","CYP",352,"EU","Eurocontrol","ESRA Mediterranean",50,"CY","LC","L",423,"CYP","CY","CYP",196,"Western Asia",196,"CYP","قبرص","Zypern","zypern","Cyprus","cyprus","Chipre","Chypre","Кипр","塞浦路斯"
+NA,NA,"CZE",315,NA,NA,NA,NA,NA,NA,NA,934,"TCH","CS","CSK",200,NA,NA,NA,NA,"Tschechoslowakei","tschechoslowakei|^csr$","Czechoslovakia","czechoslovakia",NA,NA,NA,NA
+"EIT","Europe","CZR",316,"EU","Eurocontrol","ESRA East",167,"EZ","LK","L",935,"CZE","CZ","CZE",203,"Eastern Europe",203,"CZE","الجمهورية التشيكية","Tschechische Republik","^(?!.*slowak)tschechi.*","Czech Republic","^(?=.*rep).*czech|czechia|bohemia","República Checa","République tchèque","Чешская Республика","捷克共和国"
+"ASIA","Asia","PRK",731,NA,"Asia","Asia/Pacific",116,"KN","ZK","Z",NA,"PRK","KP","PRK",408,"Eastern Asia",408,"PRK","جمهورية كوريا الشعبية الديمقراطية ","Korea, Demokratische Volksrepublik","^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk","Democratic People's Republic of Korea","^(?=.*democrat).*\bkorea|^(?=.*people).*\bkorea|^(?=.*north).*\bkorea|dprk","República Popular Democrática de Corea","République populaire démocratique de Corée","Корейская Народно-Демократическая Республика","朝鲜民主主义人民共和国"
+"MAF","Africa","DRC",490,NA,"Africa","Southern Africa",250,"CG","FZ","F",636,"COD","CD","COD",180,"Middle Africa",180,"ZAR","جمهورية الكونغو الديمقراطية","Demokratische Republik Kongo","\bdem.*kongo|kongo.*\bdem|kongo.*\bdr|\bdr.*kongo|belgien.?kongo|kongo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc","Democratic Republic of the Congo","\bdem.*congo|congo.*\bdem|congo.*\bdr|\bdr.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc","República Democrática del Congo","République démocratique du Congo","Демократическая Республика Конго","刚果民主共和国"
+"OECD1990","Europe","DEN",390,"EU","Eurocontrol","ESRA North-West",54,"DA","EK","E",128,"DEN","DK","DNK",208,"Northern Europe",208,"DNK","الدانمرك","Dänemark","d(a|ae|ä)nemark","Denmark","denmark","Dinamarca","Danemark","Дания","丹麦"
+"MAF","Africa","DJI",522,NA,"Africa","Southern Africa",72,"DJ","HD","H",611,"DJI","DJ","DJI",262,"Eastern Africa",262,"DJI","جيبوتي","Dschibuti","dschibuti","Djibouti","djibouti","Djibouti","Djibouti","Джибути","吉布提"
+"LAM","Americas","DMA",54,NA,"Southern America","Mid-Atlantic",55,"DO","TD","T",321,"DMA","DM","DMA",212,"Caribbean",212,"DMA","دومينيكا","Dominica","dominica(?!n)","Dominica","dominica(?!n)","Dominica","Dominique","Доминика","多米尼克"
+"LAM","Americas","DOM",42,NA,"Southern America","Mid-Atlantic",56,"DR","MD","M",243,"DOM","DO","DOM",214,"Caribbean",214,"DOM","الجمهورية الدومينيكية","Dominikanische Republik","dominikanische","Dominican Republic","dominican.rep","República Dominicana","République dominicaine","Доминиканская Республика","多米尼加共和国"
+"LAM","Americas","ECU",130,NA,"Southern America","South-Atlantic",58,"EC","SE","S",248,"ECU","EC","ECU",218,"South America",218,"ECU","إكوادور","Ecuador","ecuador","Ecuador","ecuador","Ecuador","Équateur","Эквадор","厄瓜多尔"
+"MAF","Africa","EGY",651,NA,"Middle East","North-Africa",59,"EG","HE","H",469,"EGY","EG","EGY",818,"Northern Africa",818,"EGY","مصر","Ägypten","(ä|a)gypten","Egypt","egypt","Egipto","Égypte","Египет","埃及"
+"LAM","Americas","SAL",92,NA,"Southern America","Mid-Atlantic",60,"ES","MS","M",253,"ESA","SV","SLV",222,"Central America",222,"SLV","السلفادور","El Salvador","el.?salvador","El Salvador","el.?salvador","El Salvador","El Salvador","Сальвадор","萨尔瓦多"
+"MAF","Africa","EQG",411,NA,"Africa","Southern Africa",61,"EK","FG","F",642,"GEQ","GQ","GNQ",226,"Middle Africa",226,"GNQ","غينيا الإستوائية","Äquatorialguinea","(a|ä)quatorialguinea|^(?=.*span).*guinea","Equatorial Guinea","guine.*eq|eq.*guine|^(?=.*span).*guinea","Guinea Ecuatorial","Guinée équatoriale","Экваториальная Гвинея","赤道几内亚"
+"MAF","Africa","ERI",531,NA,"Africa","Southern Africa",178,"ER","HH","H",643,"ERI","ER","ERI",232,"Eastern Africa",232,"ERI","إريتريا","Eritrea","eritrea","Eritrea","eritrea","Eritrea","Érythrée","Эритрея","厄立特里亚"
+"EIT","Europe","EST",366,"EU","Eurocontrol","Other Europe",63,"EN","EE","E",939,"EST","EE","EST",233,"Northern Europe",233,"EST","إستونيا","Estland","estland","Estonia","estonia","Estonia","Estonie","Эстония","爱沙尼亚"
+"MAF","Africa","ETH",530,NA,"Africa","Southern Africa",238,"ET","HA","H",644,"ETH","ET","ETH",231,"Eastern Africa",231,"ETH","إثيوبيا","Äthiopien",".?th(i|)opien|abyssinia","Ethiopia","ethiopia|abyssinia","Etiopía","Éthiopie","Эфиопия","埃塞俄比亚"
+"LAM","Americas",NA,NA,NA,"Southern America","South-Atlantic",NA,"FK","SF","S",323,NA,"FK","FLK",238,"South America",238,"FLK",NA,"Falklandinseln (Malvinas)","falkland|malvinas","Falkland Islands (Malvinas)","falkland|malvinas",NA,NA,NA,NA
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","ESRA North-West",64,"FO","EK","E",816,NA,"FO","FRO",234,"Northern Europe",234,"FRO",NA,"Färöer Inseln","f(a|ä)r(o|ö|oe)er","Faroe Islands","faroe|faeroe",NA,NA,NA,NA
+NA,NA,"GFR",260,NA,NA,NA,NA,NA,NA,NA,NA,"FRG",NA,NA,280,NA,NA,NA,NA,"Bundesrepublik Deutschland","^(?=.*\bbundesrepublik).*deutschland|westdeutschland|brd","Federal Republic of Germany","^(?=.*\bfed.*\brep).*german|(?=.*west).*germany|bonn.?republic",NA,NA,NA,NA
+"ASIA","Oceania","FIJ",950,NA,"Asia","Asia/Pacific",66,"FJ","NF","N",819,"FIJ","FJ","FJI",242,"Melanesia",242,"FJI","فيجي","Fidschi","fiji|fidschi","Fiji","fiji","Fiji","Fidji","Фиджи","斐济"
+"OECD1990","Europe","FIN",375,"EU","Eurocontrol","ESRA North-West",67,"FI","EF","E",172,"FIN","FI","FIN",246,"Northern Europe",246,"FIN","فنلندا","Finnland","finnland","Finland","finland","Finlandia","Finlande","Финляндия","芬兰"
+"OECD1990","Europe","FRN",220,"EU","Eurocontrol","ESRA North-West",68,"FR","LF","L",132,"FRA","FR","FRA",250,"Western Europe",250,"FRA","فرنسا","Frankreich","frankreich|französische.?republik","France","^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul","Francia","France","Франция","法国"
+"LAM","Americas",NA,NA,NA,"Southern America","South-Atlantic",NA,"FG","SO","S",333,NA,"GF","GUF",254,"South America",254,"GUF",NA,"Französisch-Guayana","französisch.?guayana","French Guiana","^(?=.*french).*guiana",NA,NA,NA,NA
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"FP","NT","N",887,NA,"PF","PYF",258,"Polynesia",258,"PYF",NA,"Französisch Polynesien","französisch.?polynesien|tahiti","French Polynesia","french.?polynesia|tahiti",NA,NA,NA,NA
+"LAM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"TF","ATF",260,NA,NA,"ATF",NA,"Französische Südgebiete","französische.?südgebiete","French Southern Territories","french.?southern",NA,NA,NA,NA
+"MAF","Africa","GAB",481,NA,"Africa","Southern Africa",74,"GB","FO","F",646,"GAB","GA","GAB",266,"Middle Africa",266,"GAB","غابون","Gabun","gabun","Gabon","gabon","Gabón","Gabon","Габон","加蓬"
+"MAF","Africa","GAM",420,NA,"Africa","Southern Africa",75,"GA","GB","G",648,"GAM","GM","GMB",270,"Western Africa",270,"GMB","غامبيا","Gambia","gambia","Gambia (Islamic Republic of the)","gambia","Gambia","Gambie (République islamique de)","Гамбия","冈比亚"
+"EIT","Asia","GRG",372,NA,"Eurocontrol","Other Europe",73,"GG","UG","U",915,"GEO","GE","GEO",268,"Western Asia",268,"GEO","جورجيا","Georgien","^(?!.*süd).*georgien","Georgia","^(?!.*south).*georgia","Georgia","Géorgie","Грузия","格鲁吉亚"
+NA,NA,"GDR",265,NA,"Eurocontrol","ESRA North-West",NA,NA,"ET","E",NA,"GDR","DD","DDR",278,NA,NA,NA,NA,"Deutsche Demokratische Republik","deutsche.?demokratische.?republik|ostdeutschland|ddr","German Democratic Republic","german.?democratic.?republic|democratic.?republic.*germany|east.germany",NA,NA,NA,NA
+"OECD1990","Europe","GMY",255,"EU","Eurocontrol","ESRA North-West",79,"GM","E[DT]","E",134,"GER","DE","DEU",276,"Western Europe",276,"DEU","*ألمانيا","Deutschland","^(?!.*ost).*deutschland|^(?=.*\bbundesrepublik).*deutschland","Germany","^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german","Alemania","Allemagne","Германия","德国"
+"MAF","Africa","GHA",452,NA,"Africa","Southern Africa",81,"GH","DG","D",652,"GHA","GH","GHA",288,"Western Africa",288,"GHA","غانا","Ghana","ghana|gold.?küste","Ghana","ghana|gold.?coast","Ghana","Ghana","Гана","加纳"
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","Other Europe",NA,"GI","LX","L",823,NA,"GI","GIB",292,"Southern Europe",292,"GIB",NA,"Gibraltar","gibraltar","Gibraltar","gibraltar",NA,NA,NA,NA
+"OECD1990","Europe","GRC",350,"EU","Eurocontrol","ESRA Mediterranean",84,"GR","LG","L",174,"GRE","GR","GRC",300,"Southern Europe",300,"GRC","اليونان","Griechenland","griechenland|hellenic|hellas","Greece","greece|hellenic|hellas","Grecia","Grèce","Греция","希腊"
+"OECD1990","Americas",NA,NA,NA,"Northern America","Other Europe",NA,"GL","BG","B",326,NA,"GL","GRL",304,"Northern America",304,"GRL",NA,"Grönland","gr(o|ö)nland","Greenland","greenland",NA,NA,NA,NA
+"LAM","Americas","GRN",55,NA,"Southern America","Mid-Atlantic",86,"GJ","TG","T",328,"GRN","GD","GRD",308,"Caribbean",308,"GRD","غرينادا","Grenada","grenada","Grenada","grenada","Granada","Grenade","Гренада","格林纳达"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"GP","TF","T",329,NA,"GP","GLP",312,"Caribbean",312,"GLP",NA,"Guadeloupe","guadeloupe","Guadeloupe","guadeloupe",NA,NA,NA,NA
+"OECD1990","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"GU","PG","P",829,"GUM","GU","GUM",316,"Micronesia",316,"GUM",NA,"Guam","\bguam","Guam","\bguam",NA,NA,NA,NA
+"LAM","Americas","GUA",90,NA,"Southern America","Mid-Atlantic",89,"GT","MG","M",258,"GUA","GT","GTM",320,"Central America",320,"GTM","غواتيمالا","Guatemala","guatemala","Guatemala","guatemala","Guatemala","Guatemala","Гватемала","危地马拉"
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","ESRA North-West",NA,"GK","EG","E",NA,NA,"GG","GGY",831,"Northern Europe",831,"GGY",NA,"Guernsey","guernsey","Guernsey","guernsey",NA,NA,NA,NA
+"MAF","Africa","GUI",438,NA,"Africa","Southern Africa",90,"GV","GU","G",656,"GUI","GN","GIN",324,"Western Africa",324,"GIN","غينيا","Guinea","^(?!.*Äquatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea","Guinea","^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea","Guinea","Guinée","Гвинея","几内亚"
+"MAF","Africa","GNB",404,NA,"Africa","Southern Africa",175,"PU","GG","G",654,"GBS","GW","GNB",624,"Western Africa",624,"GNB","غينيا-بيساو","Guinea-Bissau","bissau|^(?=.*portu).*guinea","Guinea Bissau","bissau|^(?=.*portu).*guinea","Guinea Bissau","Guinée Bissau","Гвинея-Бисау","几内亚比绍"
+"MAF","Americas","GUY",110,NA,"Southern America","South-Atlantic",91,"GY","SY","S",336,"GUY","GY","GUY",328,"South America",328,"GUY","غيانا","Guyana","gu(y|i)ana|britisch.?gua(y|i)ana","Guyana","guyana|british.?guiana","Guyana","Guyana","Гайана","圭亚那"
+"LAM","Americas","HAI",41,NA,"Southern America","Mid-Atlantic",93,"HA","MT","M",263,"HAI","HT","HTI",332,"Caribbean",332,"HTI","هايتي","Haiti","haiti","Haiti","haiti","Haití","Haïti","Гаити","海地"
+NA,NA,"HAN",240,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Hannover","hannover","Hanover","hanover",NA,NA,NA,NA
+"ASIA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"HM","HMD",334,NA,NA,"HMD",NA,"Heard und McDonaldinseln","heard.*mcdonald","Heard Island and McDonald Islands","heard.*mcdonald",NA,NA,NA,NA
+NA,NA,"HSE",273,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Kurfürstentum Hessen","kurf(ü|u)rsten.*hessen","Hesse Electoral","hesse.*lectoral",NA,NA,NA,NA
+NA,NA,"HSG",275,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Großherzogtum Hessen","gro(ß|ss)herzog.*hessen","Hesse Grand Ducal","hess.*gran.*ducal",NA,NA,NA,NA
+"OECD1990","Europe","PAP",327,NA,NA,NA,NA,"VT",NA,NA,NA,NA,"VA","VAT",336,"Southern Europe",336,"VAT",NA,"Vatikanstaat","vatikan","Holy See (Vatican City State)","holy.?see|vatican|papal.?st",NA,NA,NA,NA
+"LAM","Americas","HON",91,NA,"Southern America","Mid-Atlantic",95,"HO","MH","M",268,"HON","HN","HND",340,"Central America",340,"HND","هندوراس","Honduras","^(?!.*brit).*honduras","Honduras","^(?!.*brit).*honduras","Honduras","Honduras","Гондурас","洪都拉斯"
+NA,"Asia",NA,NA,NA,"China","Asia/Pacific",NA,NA,"VH","V",532,"HKG","HK","HKG",344,"Eastern Asia",344,"HKG",NA,"Hongkong","hong.?kong","Hong Kong","hong.?kong",NA,NA,NA,NA
+"EIT","Europe","HUN",310,"EU","Eurocontrol","ESRA East",97,"HU","LH","L",944,"HUN","HU","HUN",348,"Eastern Europe",348,"HUN","هنغاريا","Ungarn","^(?!.*(ö|o)sterreich).*ungarn","Hungary","^(?!.*austr).*hungary","Hungría","Hongrie","Венгрия","匈牙利"
+"OECD1990","Europe","ICE",395,NA,"Northern America","Other Europe",99,"IC","BI","B",176,"ISL","IS","ISL",352,"Northern Europe",352,"ISL","آيسلندا","Island","^island","Iceland","iceland","Islandia","Islande","Исландия","冰岛"
+"ASIA","Asia","IND",750,NA,"Asia","Asia/Pacific",100,"IN","V[AEIO]","V",534,"IND","IN","IND",356,"Southern Asia",356,"IND","الهند","Indien","indien(?!.*ocea)","India","india(?!.*ocea)","India","Inde","Индия","印度"
+"ASIA","Asia","INS",850,NA,"Asia","Asia/Pacific",101,"ID","W[AIQR]","W",536,"INA","ID","IDN",360,"South-Eastern Asia",360,"IDN","إندونيسيا","Indonesien","indonesien","Indonesia","indonesia","Indonesia","Indonésie","Индонезия","印度尼西亚"
+"MAF","Asia","IRN",630,NA,"Middle East","Middle-East",102,"IR","OI","O",429,"IRI","IR","IRN",364,"Southern Asia",364,"IRN","إيران (جمهورية - إسلامية)","Iran","\biran|persia","Iran (Islamic Republic of)","\biran|persia","Irán (República Islámica del)","Iran (République islamique d')","Иран (Исламская Республика)","伊朗伊斯兰共和国"
+"MAF","Asia","IRQ",645,NA,"Middle East","Middle-East",103,"IZ","OR","O",433,"IRQ","IQ","IRQ",368,"Western Asia",368,"IRQ","العراق","Irak","\birak|mesopotamia","Iraq","\biraq|mesopotamia","Iraq","Iraq","Ирак","伊拉克"
+"OECD1990","Europe","IRE",205,"EU","Eurocontrol","ESRA North-West",104,"EI","EI","E",178,"IRL","IE","IRL",372,"Northern Europe",372,"IRL","أيرلندا","Irland","irland","Ireland","ireland","Irlanda","Irlande","Ирландия","爱尔兰"
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","ESRA North-West",NA,"IM","EG","E",NA,NA,"IM","IMN",833,"Northern Europe",833,"IMY",NA,"Isle of Man","^(?=.*isle).*\bman|^man.*insel","Isle of Man","^(?=.*isle).*\bman",NA,NA,NA,NA
+"MAF","Asia","ISR",666,NA,"Middle East","Middle-East",105,"IS","LL","L",436,"ISR","IL","ISR",376,"Western Asia",376,"ISR","إسرائيل","Israel","israel","Israel","israel","Israel","Israël","Израиль","以色列"
+"OECD1990","Europe","ITA",325,"EU","Eurocontrol","ESRA Mediterranean",106,"IT","LI","L",136,"ITA","IT","ITA",380,"Southern Europe",380,"ITA","إيطاليا","Italien","italien","Italy","italy","Italia","Italie","Италия","意大利"
+"LAM","Americas","JAM",51,NA,"Southern America","Mid-Atlantic",109,"JM","MK","M",343,"JAM","JM","JAM",388,"Caribbean",388,"JAM","جامايكا","Jamaika","jamaika","Jamaica","jamaica","Jamaica","Jamaïque","Ямайка","牙买加"
+"OECD1990","Asia","JPN",740,NA,"Asia","Asia/Pacific",110,"JA","R[JO]","R",158,"JPN","JP","JPN",392,"Eastern Asia",392,"JPN","اليابان","Japan","japan","Japan","japan","Japón","Japon","Япония","日本"
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","ESRA North-West",NA,NA,"EG","E",NA,NA,"JE","JEY",832,"Northern Europe",832,"JEY",NA,"Jersey","jersey","Jersey","jersey",NA,NA,NA,NA
+"MAF","Asia","JOR",663,NA,"Middle East","Middle-East",112,"JO","OJ","O",439,"JOR","JO","JOR",400,"Western Asia",400,"JOR","الأردن","Jordanien","jordan","Jordan","jordan","Jordania","Jordanie","Иордания","约旦"
+"EIT","Asia","KZK",705,NA,"Asia","Asia/Pacific",108,"KZ","UA","U",916,"KAZ","KZ","KAZ",398,"Central Asia",398,"KAZ","كازاخستان","Kasachstan","kasach","Kazakhstan","kazak","Kazajstán","Kazakhstan","Казахстан","哈萨克斯坦"
+"MAF","Africa","KEN",501,NA,"Africa","Asia/Pacific",114,"KE","HK","H",664,"KEN","KE","KEN",404,"Eastern Africa",404,"KEN","كينيا","Kenia","kenia|britisch.?ost.?afrika|protektorat.?ostafrika","Kenya","kenya|british.?east.?africa|east.?africa.?prot","Kenya","Kenya","Кения","肯尼亚"
+"ASIA","Oceania","KIR",946,NA,"Asia","Asia/Pacific",83,"KR","NG","N",826,"KIR","KI","KIR",296,"Micronesia",296,"KIR","كيريباس","Kiribati","kiribati","Kiribati","kiribati","Kiribati","Kiribati","Кирибати","基里巴斯共和国"
+"ASIA",NA,"KOR",730,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Korea",NA,NA,NA,NA,NA
+NA,NA,"KOS",347,NA,NA,NA,NA,"KV",NA,NA,967,NA,NA,NA,NA,NA,NA,"KSV",NA,"Kosovo","kosovo","Kosovo","kosovo",NA,NA,NA,NA
+"MAF","Asia","KUW",690,NA,"Middle East","Middle-East",118,"KU","OK","O",443,"KUW","KW","KWT",414,"Western Asia",414,"KWT","الكويت","Kuwait","kuwait","Kuwait","kuwait","Kuwait","Koweït","Кувейт","科威特"
+"EIT","Asia","KYR",703,NA,"Asia","Asia/Pacific",113,"KG","UA","U",917,"KGZ","KG","KGZ",417,"Central Asia",417,"KGZ","قيرغيزستان","Kirgisistan","kirgisistan|kirghiz","Kyrgyzstan","kyrgyz|kirghiz","Kirguistán","Kirghizistan","Кыргызстан","吉尔吉斯斯坦"
+"ASIA","Asia","LAO",812,NA,"Asia","Asia/Pacific",120,"LA","VL","V",544,"LAO","LA","LAO",418,"South-Eastern Asia",418,"LAO","جمهورية لاو الديمقراطية الشعبية","Demokratische Volksrepublik Laos","\blaos?\b","Lao People's Democratic Republic","\blaos?\b","República Democrática Popular Lao","République démocratique populaire lao","Лаосская Народно-Демократическая Республика","老挝人民民主共和国"
+"EIT","Europe","LAT",367,"EU","Eurocontrol","Other Europe",119,"LG","EV","E",941,"LAT","LV","LVA",428,"Northern Europe",428,"LVA","لاتفيا","Lettland","lettland","Latvia","latvia","Letonia","Lettonie","Латвия","拉脱维亚"
+"MAF","Asia","LEB",660,NA,"Middle East","Middle-East",121,"LE","OL","O",446,"LIB","LB","LBN",422,"Western Asia",422,"LBN","لبنان","Libanon","libanon","Lebanon","lebanon","Líbano","Liban","Ливан","黎巴嫩"
+"MAF","Africa","LES",570,NA,"Africa","Southern Africa",122,"LT","FX","F",666,"LES","LS","LSO",426,"Southern Africa",426,"LSO","ليسوتو","Lesotho","lesotho|basuto","Lesotho","lesotho|basuto","Lesotho","Lesotho","Лесото","莱索托"
+"MAF","Africa","LBR",450,NA,"Africa","Southern Africa",123,"LI","GL","G",668,"LBR","LR","LBR",430,"Western Africa",430,"LBR","ليبريا","Liberia","liberia","Liberia","liberia","Liberia","Libéria","Либерия","利比里亚"
+"MAF","Africa","LIB",620,NA,"Africa","North-Africa",124,"LY","HL","H",672,"LBA","LY","LBY",434,"Northern Africa",434,"LBY","ليبيا","Libyen","libyen","Libya","libya","Libia","Libye","Ливия","利比亚"
+"OECD1990","Europe","LIE",223,"EU","Eurocontrol","ESRA North-West",NA,"LS","LS","L",NA,"LIE","LI","LIE",438,"Western Europe",438,"LIE","ليختنشتاين","Liechtenstein","liechtenstein","Liechtenstein","liechtenstein","Liechtenstein","Liechtenstein","Лихтенштейн","列支敦士登"
+"EIT","Europe","LIT",368,"EU","Eurocontrol","Other Europe",126,"LH","EY","E",946,"LTU","LT","LTU",440,"Northern Europe",440,"LTU","ليتوانيا","Litauen","litauen","Lithuania","lithuania","Lituania","Lituanie","Литва","立陶宛"
+"OECD1990","Europe","LUX",212,"EU","Eurocontrol","ESRA North-West",256,"LU","EL","E",137,"LUX","LU","LUX",442,"Western Europe",442,"LUX","لكسمبرغ","Luxemburg","^(?!.*belg).*luxem","Luxembourg","^(?!.*belg).*luxem","Luxemburgo","Luxembourg","Люксембург","卢森堡"
+NA,"Asia",NA,NA,NA,"China","Asia/Pacific",NA,"MC","VM","V",546,NA,"MO","MAC",446,"Eastern Asia",446,"MAC",NA,"Macao","maca(o|u)","Macao","maca(o|u)",NA,NA,NA,NA
+"MAF","Africa","MAG",580,NA,"Africa","Southern Africa",129,"MA","FM","F",674,"MAD","MG","MDG",450,"Eastern Africa",450,"MDG","مدغشقر","Madagaskar","madagaskar|malagasy","Madagascar","madagascar|malagasy","Madagascar","Madagascar","Мадагаскар","马达加斯加"
+"MAF","Africa","MAW",553,NA,"Africa","Southern Africa",130,"MI","FW","F",676,"MAW","MW","MWI",454,"Eastern Africa",454,"MWI","ملاوي","Malawi","malawi|nyasa","Malawi","malawi|nyasa","Malawi","Malawi","Малави","马拉维"
+"MAF","Asia","MAL",820,NA,"Asia","Asia/Pacific",131,"MY","W[BM]","W",548,"MAS","MY","MYS",458,"South-Eastern Asia",458,"MYS","ماليزيا","Malaysia","malaysia","Malaysia","malaysia","Malasia","Malaisie","Малайзия","马来西亚"
+"ASIA","Asia","MAD",781,NA,"Asia","Asia/Pacific",132,"MV","VR","V",556,"MDV","MV","MDV",462,"Southern Asia",462,"MDV","ملديف","Malediven","malediven","Maldives","maldive","Maldivas","Maldives","Мальдивские Острова","马尔代夫"
+"MAF","Africa","MLI",432,NA,"Africa","Southern Africa",133,"ML","GA","G",678,"MLI","ML","MLI",466,"Western Africa",466,"MLI","مالي","Mali","\bmali\b","Mali","\bmali\b","Malí","Mali","Мали","马里"
+"EIT","Europe","MLT",338,"EU","Eurocontrol","ESRA Mediterranean",134,"MT","LM","L",181,"MLT","MT","MLT",470,"Southern Europe",470,"MLT","مالطة","Malta","\bmalta","Malta","\bmalta","Malta","Malte","Мальта","马耳他"
+"ASIA","Oceania","MSI",983,NA,"Asia","Asia/Pacific",127,"RM","PK","P",867,"MHL","MH","MHL",584,"Micronesia",584,"MHL","جزر مارشال","Marshallinseln","marshall","Marshall Islands","marshall","Islas Marshall","Îles Marshall","Маршалловы Острова","马绍尔群岛"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"MB","TF","T",349,NA,"MQ","MTQ",474,"Caribbean",474,"MTQ",NA,"Martinique","martinique","Martinique","martinique",NA,NA,NA,NA
+"MAF","Africa","MAA",435,NA,"Africa","Southern Africa",136,"MR","GQ","G",682,"MTN","MR","MRT",478,"Western Africa",478,"MRT","موريتانيا","Mauretanien","mauretanien","Mauritania","mauritania","Mauritania","Mauritanie","Мавритания","毛里塔尼亚"
+"MAF","Africa","MAS",590,NA,"Africa","Southern Africa",137,"MP","FI","F",684,"MRI","MU","MUS",480,"Eastern Africa",480,"MUS","موريشيوس","Mauritius","mauritius","Mauritius","mauritius","Mauricio","Maurice","Маврикий","毛里求斯"
+"MAF","Africa",NA,NA,NA,"Africa","Southern Africa",NA,NA,"FM","F",NA,NA,"YT","MYT",175,"Eastern Africa",175,"MYT",NA,"Mayotte","\bmayotte","Mayotte","\bmayotte",NA,NA,NA,NA
+NA,NA,"MEC",280,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mecklenburg-Schwerin","mecklenbur.*schwerin","Mecklenburg Schwerin","mecklenbur.*schwerin",NA,NA,NA,NA
+"LAM","Americas","MEX",70,NA,"Southern America","Mid-Atlantic",138,"MX","MM","M",273,"MEX","MX","MEX",484,"Central America",484,"MEX","المكسيك","Mexiko","\bmexik","Mexico","\bmexic","México","Mexique","Мексика","墨西哥"
+"ASIA","Oceania","FSM",987,NA,"Asia","Asia/Pacific",145,"FM","PT","P",868,"FSM","FM","FSM",583,"Micronesia",583,"FSM","ميكرونيزيا (ولايات ــ الموحدة)","Mikronesien","mikronesien","Micronesia (Federated States of)","micronesia","Micronesia (Estados Federados de)","Micronésie (États fédérés de)","Микронезия (Федеративные Штаты)","密克罗尼西亚联邦"
+NA,NA,"MOD",332,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Modena","modena","Modena","modena",NA,NA,NA,NA
+"OECD1990","Europe","MNC",221,NA,"Eurocontrol","ESRA North-West",140,"MN","LN","L",NA,"MON","MC","MCO",492,"Western Europe",492,"MCO","موناكو","Monaco","monaco","Monaco","monaco","Mónaco","Monaco","Монако","摩纳哥"
+"ASIA","Asia","MON",712,NA,"Asia","Asia/Pacific",141,"MG","ZM","Z",948,"MGL","MN","MNG",496,"Eastern Asia",496,"MNG","منغوليا","Mongolei","mongolei","Mongolia","mongolia","Mongolia","Mongolie","Монголия","蒙古"
+"EIT","Europe","MNG",341,NA,"Eurocontrol","ESRA East",273,"MJ","LY","L",943,"MNE","ME","MNE",499,"Southern Europe",499,"MNE","الجبل الأسود ","Montenegro","^(?!.*serbien).*montenegro","Montenegro","^(?!.*serbia).*montenegro","Montenegro","Monténégro","Черногория","黑山共和国 "
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"MH","TR","T",351,NA,"MS","MSR",500,"Caribbean",500,"MSR",NA,"Montserrat","montserrat","Montserrat","montserrat",NA,NA,NA,NA
+"MAF","Africa","MOR",600,NA,"Africa","North-Africa",143,"MO","GM","G",686,"MAR","MA","MAR",504,"Northern Africa",504,"MAR","المغرب","Marokko","marokko|\bmaroc","Morocco","morocco|\bmaroc","Marruecos","Maroc","Марокко","摩洛哥"
+"MAF","Africa","MZM",541,NA,"Africa","Southern Africa",144,"MZ","FQ","F",688,"MOZ","MZ","MOZ",508,"Eastern Africa",508,"MOZ","موزامبيق","Mosambik","mosambik","Mozambique","mozambique","Mozambique","Mozambique","Мозамбик","莫桑比克"
+"ASIA","Asia","MYA",775,NA,"Asia","Asia/Pacific",28,"BM","VY","V",518,"MYA","MM","MMR",104,"South-Eastern Asia",104,"MMR","ميانمار","Myanmar","myanmar|burma","Myanmar","myanmar|burma","Myanmar","Myanmar","Мьянма","缅甸"
+"MAF","Africa","NAM",565,NA,"Africa","Southern Africa",147,"WA","FY","F",728,"NAM","NA","NAM",516,"Southern Africa",516,"NAM","ناميبيا","Namibia","namibia","Namibia","namibia","Namibia","Namibie","Намибия","纳米比亚"
+"ASIA","Oceania","NAU",970,NA,"Asia","Asia/Pacific",148,"NR","AN","A",836,"NRU","NR","NRU",520,"Micronesia",520,"NRU","ناورو","Nauru","nauru","Nauru","nauru","Nauru","Nauru","Науру","瑙鲁"
+"ASIA","Asia","NEP",790,NA,"Asia","Asia/Pacific",149,"NP","VN","V",558,"NEP","NP","NPL",524,"Southern Asia",524,"NPL","نيبال","Nepal","nepal","Nepal","nepal","Nepal","Népal","Непал","尼泊尔"
+"OECD1990","Europe","NTH",210,"EU","Eurocontrol","ESRA North-West",150,"NL","EH","E",138,"NED","NL","NLD",528,"Western Europe",528,"NLD","هولندا","Niederlande","niederlande","Netherlands","^(?!.*\bant)(?!.*\bcarib).*netherlands","Países Bajos","Pays-Bas","Нидерланды","荷兰"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,NA,"TN","T",353,"AHO","AN","ANT",530,"Caribbean",NA,"ANT",NA,"Niederländische Antillen","niederl(a|ä)ndische.?antillen","Netherlands Antilles","^(?=.*\bant).*(nether|dutch)",NA,NA,NA,NA
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"NC","NW","N",839,NA,"NC","NCL",540,"Melanesia",540,"NCL",NA,"Neu-Kaledonien","neu.?kaledonien","New Caledonia","new.?caledonia",NA,NA,NA,NA
+"OECD1990","Oceania","NEW",920,NA,"Asia","Asia/Pacific",156,"NZ","NZ","N",196,"NZL","NZ","NZL",554,"Australia and New Zealand",554,"NZL","نيوزيلندا","Neuseeland","neuseeland","New Zealand","new.?zealand","Nueva Zelandia","Nouvelle-Zélande","Новая Зеландия","新西兰"
+"LAM","Americas","NIC",93,NA,"Southern America","Mid-Atlantic",157,"NU","MN","M",278,"NCA","NI","NIC",558,"Central America",558,"NIC","نيكاراغوا","Nicaragua","nicaragua","Nicaragua","nicaragua","Nicaragua","Nicaragua","Никарагуа","尼加拉瓜"
+"MAF","Africa","NIR",436,NA,"Africa","Southern Africa",158,"NG","DR","D",692,"NIG","NE","NER",562,"Western Africa",562,"NER","النيجر","Niger","\bniger(?!ia)","Niger","\bniger(?!ia)","Niger","Niger","Нигер","尼日尔"
+"MAF","Africa","NIG",475,NA,"Africa","Southern Africa",159,"NI","DN","D",694,"NGR","NG","NGA",566,"Western Africa",566,"NGA","نيجيريا","Nigeria","nigeria","Nigeria","nigeria","Nigeria","Nigéria","Нигерия","尼日利亚"
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",160,"NE","NI","N",NA,NA,"NU","NIU",570,"Polynesia",570,"NIU",NA,"Niue","niue","Niue","niue",NA,NA,NA,NA
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,NA,"Y","Y",NA,NA,"NF","NFK",574,"Australia and New Zealand",574,"NFK",NA,"Norfolk-Insel","norfolk","Norfolk Island","norfolk",NA,NA,NA,NA
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"CQ","PG","P",NA,NA,"MP","MNP",580,"Micronesia",580,"MNP",NA,"Nördliche Marianen","marianen","Northern Mariana Islands","mariana",NA,NA,NA,NA
+"MAF","Europe","NOR",385,NA,"Eurocontrol","ESRA North-West",162,"NO","EN","E",142,"NOR","NO","NOR",578,"Northern Europe",578,"NOR","النرويج","Norwegen","norwegen","Norway","norway","Noruega","Norvège","Норвегия","挪威"
+NA,"Asia","OMA",698,NA,"Middle East","Middle-East",221,"MU","OO","O",449,"OMA","OM","OMN",512,"Western Asia",512,"OMN","عمان","Oman","\boman|trucial","Oman","\boman|trucial","Omán","Oman","Оман","阿曼"
+"ASIA","Asia","PAK",770,NA,"Asia","Asia/Pacific",165,"PK","OP","O",564,"PAK","PK","PAK",586,"Southern Asia",586,"PAK","باكستان","Pakistan","^(?!.*ost).*paki?stan","Pakistan","^(?!.*east).*paki?stan","Pakistán","Pakistan","Пакистан","巴基斯坦"
+"ASIA","Oceania","PAL",986,NA,"Asia","Asia/Pacific",180,"PS","PT","P",565,"PLW","PW","PLW",585,"Micronesia",585,"PLW","بالاو","Palau","palau","Palau","palau","Palau","Palaos","Палау","帕劳"
+"MAF","Asia",NA,NA,NA,"Middle East","Middle-East",NA,NA,"LV","L",487,"PLE","PS","PSE",275,"Western Asia",275,"WBG",NA,"Palästina","pal(ä|a)stin|\bgaza|west.?bank","Palestine, State of","palestin|\bgaza|west.?bank",NA,NA,NA,NA
+"LAM","Americas","PAN",95,NA,"Southern America","Mid-Atlantic",166,"PM","MP","M",283,"PAN","PA","PAN",591,"Central America",591,"PAN","بنما","Panama","panama","Panama","panama","Panamá","Panama","Панама","巴拿马"
+"ASIA","Oceania","PNG",910,NA,"Asia","Asia/Pacific",168,"PP","AY","A",853,"PNG","PG","PNG",598,"Melanesia",598,"PNG","بابوا غينيا الجديدة","Papua-Neuguinea","papua|neu.?guinea","Papua New Guinea","papua|new.?guinea","Papua Nueva Guinea","Papouasie-Nouvelle-Guinée","Папуа-Новая Гвинея","巴布亚新几内亚"
+"LAM","Americas","PAR",150,NA,"Southern America","South-Atlantic",169,"PA","SG","S",288,"PAR","PY","PRY",600,"South America",600,"PRY","باراغواي","Paraguay","paraguay","Paraguay","paraguay","Paraguay","Paraguay","Парагвай","巴拉圭"
+NA,NA,"PMA",335,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Parma","parma","Parma","parma",NA,NA,NA,NA
+"LAM","Americas","PER",135,NA,"Southern America","South-Atlantic",170,"PE","SP","S",293,"PER","PE","PER",604,"South America",604,"PER","بيرو","Peru","peru","Peru","peru","Perú","Pérou","Перу","秘鲁"
+"ASIA","Asia","PHI",840,NA,"Asia","Asia/Pacific",171,"RP","RP","R",566,"PHI","PH","PHL",608,"South-Eastern Asia",608,"PHL","الفلبين","Philippinen","philippinen","Philippines","philippines","Filipinas","Philippines","Филиппины","菲律宾"
+"ASIA","Oceania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"PN","PCN",612,"Polynesia",612,"PCN",NA,"Pitcairn","pitcairn","Pitcairn","pitcairn",NA,NA,NA,NA
+"EIT","Europe","POL",290,"EU","Eurocontrol","ESRA East",173,"PL","EP","E",964,"POL","PL","POL",616,"Eastern Europe",616,"POL","بولندا","Polen","polen","Poland","poland","Polonia","Pologne","Польша","波兰"
+"OECD1990","Europe","POR",235,"EU","Eurocontrol","ESRA Mediterranean",174,"PO","LP","L",182,"POR","PT","PRT",620,"Southern Europe",620,"PRT","البرتغال","Portugal","portugal","Portugal","portugal","Portugal","Portugal","Португалия","葡萄牙"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"RQ","TJ","T",NA,"PUR","PR","PRI",630,"Caribbean",630,"PRI",NA,"Puerto Rico","puerto.?rico","Puerto Rico","puerto.?rico",NA,NA,NA,NA
+"MAF","Asia","QAT",694,NA,"Middle East","Middle-East",179,"QA","OT","O",453,"QAT","QA","QAT",634,"Western Asia",634,"QAT","قطر","Katar","(q|k)atar","Qatar","qatar","Qatar","Qatar","Катар","卡塔尔"
+NA,"Asia","ROK",732,NA,"Asia","Asia/Pacific",117,"KS","RK","R",542,"KOR","KR","KOR",410,"Eastern Asia",410,"KOR","جمهورية كوريا","Korea, Republik von","^(?!.*demokrat)(?!.*volk)(?!.*nord).*korea","Republic of Korea","^(?!.*democrat)(?!.*people)(?!.*north).*\bkorea","República de Corea","République de Corée","Республика Корея","大韩民国"
+"EIT","Europe","MLD",359,NA,"Eurocontrol","ESRA East",146,"MD","LU","L",921,"MDA","MD","MDA",498,"Eastern Europe",498,"MDA","جمهورية مولدوفا","Republik Moldau","moldau|moldov|b(a|e)ssarabia","Republic of Moldova","moldov|b(a|e)ssarabia","República de Moldova","République de Moldova","Республика Молдова","摩尔多瓦共和国"
+NA,NA,"RVN",817,NA,NA,NA,NA,NA,NA,NA,NA,"VNM",NA,NA,714,NA,NA,NA,NA,NA,NA,"Republic of Vietnam",NA,NA,NA,NA,NA
+"MAF","Africa",NA,NA,NA,"Africa","Southern Africa",NA,"RE","FM","F",696,NA,"RE","REU",638,"Eastern Africa",638,"REU",NA,"Reunion","r(e|é)union","Reunion","r(e|é)union",NA,NA,NA,NA
+"EIT","Europe","ROM",360,"EU","Eurocontrol","ESRA East",183,"RO","LR","L",968,"ROU","RO","ROU",642,"Eastern Europe",642,"ROM","رومانيا","Rumänien","rum(a|ä)nien","Romania","r(o|u|ou)mania","Rumania","Roumanie","Румыния","罗马尼亚"
+"EIT","Europe","RUS",365,NA,"Russia","Asia/Pacific",185,"RS","U[^ABDGKMT]","U",922,"RUS","RU","RUS",643,"Eastern Europe",643,"RUS","الاتحاد الروسي","Russische Föderation","\brussland|russ.*föderation|sowjet.?union|u\.?s\.?s\.?r|sowjet.?republik|udssr","Russian Federation","\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics","Federación de Rusia","Fédération de Russie","Российская Федерация","俄罗斯联邦"
+"MAF","Africa","RWA",517,NA,"Africa","Southern Africa",184,"RW","HR","H",714,"RWA","RW","RWA",646,"Eastern Africa",646,"RWA","رواندا","Ruanda","r(u|w)anda","Rwanda","rwanda","Rwanda","Rwanda","Руанда","卢旺达"
+NA,"Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,NA,"TF","T",NA,NA,"BL","BLM",652,"Caribbean",652,"BLM",NA,"Saint-Barthelemy","barth(e|é)lemy","Saint Barthelemy","barth(e|é)lemy",NA,NA,NA,NA
+"MAF","Africa",NA,NA,NA,"Africa","Southern Africa",NA,"SH","FH","F",856,NA,"SH","SHN",654,"Western Africa",654,"SHN",NA,"St. Helena, Ascension und Tristan da Cunha","helena","Saint Helena, Ascension and Tristan da Cunha","helena",NA,NA,NA,NA
+"LAM","Americas","SKN",60,NA,"Southern America","Mid-Atlantic",188,"SC","TK","T",361,"SKN","KN","KNA",659,"Caribbean",659,"KNA","سانت كيتس ونيفس","St. Kitts und Nevis","kitts|\bnevis","Saint Kitts and Nevis","kitts|\bnevis","Saint Kitts y Nevis","Saint-Kitts-et-Nevis","Сент-Китс и Невис","圣基茨和尼维斯"
+"LAM","Americas","SLU",56,NA,"Southern America","Mid-Atlantic",189,"ST","TL","T",362,"LCA","LC","LCA",662,"Caribbean",662,"LCA","سانت لوسيا","Saint Lucia","\blucia","Saint Lucia","\blucia","Santa Lucía","Sainte-Lucie","Сент-Люсия","圣卢西亚"
+NA,"Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,NA,"TF","T",352,NA,"MF","MAF",663,"Caribbean",663,"MAF",NA,"Saint Martin (französischer Teil)","^(?=.*franz).*saint.*martin(?!ique)","Saint Martin (French part)","^(?=.*collectivity).*martin|^(?=.*france).*martin(?!ique)|^(?=.*french).*martin(?!ique)",NA,NA,NA,NA
+"OECD1990","Americas",NA,NA,NA,"Northern America","ESRA North-West",NA,NA,"LF","L",363,NA,"PM","SPM",666,"Northern America",666,"SPM",NA,"Saint-Pierre und Miquelon","miquelon","Saint Pierre and Miquelon","miquelon",NA,NA,NA,NA
+"LAM","Americas","SVG",57,NA,"Southern America","Mid-Atlantic",191,"VC","TV","T",364,"VIN","VC","VCT",670,"Caribbean",670,"VCT","سانت فنسنت وجزر غرينادين","St. Vincent und die Grenadinen","vincent","Saint Vincent and the Grenadines","vincent","San Vicente y las Granadinas","Saint-Vincent-et- les Grenadines","Сент-Винсент и Гренадины","圣文森特和格林纳丁斯"
+"ASIA","Oceania","WSM",990,NA,"Asia","Asia/Pacific",244,"WS","NS","N",862,"SAM","WS","WSM",882,"Polynesia",882,"WSM","ساموا","Samoa","^(?!.*amer).*samoa","Samoa","^(?!.*amer).*samoa","Samoa","Samoa","Самоа","萨摩亚"
+"OECD1990","Europe","SNM",331,NA,NA,NA,192,"SM",NA,NA,135,"SMR","SM","SMR",674,"Southern Europe",674,"SMR","سان مارينو","San Marino","san.?marino","San Marino","san.?marino","San Marino","Saint-Marin","Сан-Марино","圣马力诺"
+"MAF","Africa","STP",403,NA,"Africa","Southern Africa",193,"TP","FP","F",716,"STP","ST","STP",678,"Middle Africa",678,"STP","سان تومي وبرينسيبي","Sao Tome und Principe","\bs(a|ã)o.?tom(e|é)","Sao Tome and Principe","\bs(a|ã)o.?tom(e|é)","Santo Tomé y Príncipe","Sao Tomé-et-Principe","Сан-Томе и Принсипи","圣多美和普林西比"
+"MAF","Asia","SAU",670,NA,"Middle East","Middle-East",194,"SA","OE","O",456,"KSA","SA","SAU",682,"Western Asia",682,"SAU","المملكة العربية السعودية","Saudi Arabien","\bsa\w*.?arabien","Saudi Arabia","\bsa\w*.?arabia","Arabia Saudita","Arabie saoudite","Саудовская Аравия","沙特阿拉伯"
+NA,NA,"SAX",269,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sachsen","sachsen","Saxony","saxony",NA,NA,NA,NA
+"MAF","Africa","SEN",433,NA,NA,NA,195,"SG",NA,NA,722,"SEN","SN","SEN",686,"Western Africa",686,"SEN","السنغال","Senegal","senegal","Senegal","senegal","Senegal","Sénégal","Сенегал","塞内加尔"
+"EIT","Europe",NA,NA,NA,"Eurocontrol","ESRA East",272,"RI","LY","L",942,"SRB","RS","SRB",688,"Southern Europe",688,"SRB","صربيا","Serbien","^(?!.*monte).*serbien","Serbia","^(?!.*monte).*serbia","Serbia","Serbie","Сербия","塞尔维亚共和国"
+"MAF","Africa","SEY",591,NA,"Africa","Southern Africa",196,"SE","FS","F",718,"SEY","SC","SYC",690,"Eastern Africa",690,"SYC","سيشيل","Seychellen","seychell","Seychelles","seychell","Seychelles","Seychelles","Сейшельские Острова","塞舌尔"
+"MAF","Africa","SIE",451,NA,"Africa","Southern Africa",197,"SL","GF","G",724,"SLE","SL","SLE",694,"Western Africa",694,"SLE","سيراليون","Sierra Leone","sierra","Sierra Leone","sierra","Sierra Leona","Sierra Leone","Сьерра-Леоне ","塞拉利昂"
+"ASIA","Asia","SIN",830,NA,"Asia","Asia/Pacific",200,"SN","WS","W",576,"SIN","SG","SGP",702,"South-Eastern Asia",702,"SGP","سنغافورة","Singapur","singapur","Singapore","singapore","Singapur","Singapour","Сингапур","新加坡"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"NN","TN","T",NA,NA,"SX","SXM",534,"Caribbean",534,"SXM",NA,"Sint Maarten (Niederländischer Teil)","^(?!.*martin)(?!.*saba).*maarten","Sint Maarten (Dutch part)","^(?!.*martin)(?!.*saba).*maarten",NA,NA,NA,NA
+"EIT","Europe","SLO",317,"EU","Eurocontrol","ESRA East",199,"LO","LZ","L",936,"SVK","SK","SVK",703,"Eastern Europe",703,"SVK","سلوفاكيا","Slowakei","^(?!.*tsch).*slowakei","Slovakia","^(?!.*cze).*slovak","Eslovaquia","Slovaquie","Словакия","斯洛伐克"
+"EIT","Europe","SLV",349,"EU","Eurocontrol","ESRA East",198,"SI","LJ","L",961,"SLO","SI","SVN",705,"Southern Europe",705,"SVN","سلوفينيا ","Slowenien","slowenien","Slovenia","slovenia","Eslovenia ","Slovénie","Словения","斯洛文尼亚 "
+"ASIA","Oceania","SOL",940,NA,"Asia","Asia/Pacific",25,"BP","AG","A",813,"SOL","SB","SLB",90,"Melanesia",90,"SLB","جزر سليمان","Salomon-Inseln","salomon","Solomon Islands","solomon","Islas Salomón","Îles Salomon","Соломоновы Острова","所罗门群岛"
+"MAF","Africa","SOM",520,NA,"Africa","Southern Africa",201,"SO","HC","H",726,"SOM","SO","SOM",706,"Eastern Africa",706,"SOM"," الصومال","Somalia","somali","Somalia","somali","Somalia","Somalie","Сомали","索马里"
+"MAF","Africa","SAF",560,NA,"Africa","Southern Africa",202,"SF","FA","F",199,"RSA","ZA","ZAF",710,"Southern Africa",710,"ZAF","جنوب أفريقيا","Südafrika","\bs(ü|u)d*.?afrika","South Africa","\bs\w*.?africa","Sudáfrica","Afrique du Sud","Южная Африка","南非"
+"LAM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"GS","SGS",239,NA,NA,"SGS",NA,"Südgeorgien und die Südlichen Sandwichinseln","süd.?georgia|sandwich","South Georgia and the South Sandwich Islands","south.?georgia|sandwich",NA,NA,NA,NA
+"MAF","Africa","SSD",626,NA,"Africa","Southern Africa",277,"OD","HS","H",733,NA,"SS","SSD",728,"Northern Africa",728,"SSD","جمهورية جنوب السودان","Südsudan","^s(ü|u)d.?sudan","South Sudan","\bs\w*.?sudan","Sudán del Sur","Soudan du Sud","Южный Судан","南苏丹"
+"OECD1990","Europe","SPN",230,"EU","Eurocontrol","ESRA Mediterranean",203,"SP","LE","L",184,"ESP","ES","ESP",724,"Southern Europe",724,"ESP","إسبانيا","Spanien","spanien","Spain","spain","España","Espagne","Испания","西班牙"
+"ASIA","Asia","SRI",780,NA,"Asia","Asia/Pacific",38,"CE","VC","V",524,"SRI","LK","LKA",144,"Southern Asia",144,"LKA","سري لانكا","Sri Lanka","sri.?lanka|ceylon","Sri Lanka","sri.?lanka|ceylon","Sri Lanka","Sri Lanka","Шри-Ланка","斯里兰卡"
+"MAF","Africa","SUD",625,NA,"Africa","Southern Africa",276,"SU","HS","H",732,"SUD","SD","SDN",736,"Northern Africa",729,"SDN","السودان","Sudan","^(?!süd).?sudan","Sudan","^(?!.*\bs(?!u)).*sudan","Sudán","Soudan","Судан","苏丹"
+"LAM","Americas","SUR",115,NA,"Southern America","South-Atlantic",207,"NS","SM","S",366,"SUR","SR","SUR",740,"South America",740,"SUR","سورينام","Surinam","surinam|niederl(a|ä)ndisch.?gua(y|i)ana","Suriname","surinam|dutch.?guiana","Suriname","Suriname","Суринам","苏里南"
+"OECD1990","Europe",NA,NA,NA,"Eurocontrol","ESRA North-West",NA,"SV","EN","E",NA,NA,"SJ","SJM",744,"Northern Europe",744,"SJM",NA,"Svalbard und Jan Mayen","svalbard","Svalbard and Jan Mayen","svalbard",NA,NA,NA,NA
+"MAF","Africa","SWA",572,NA,"Africa","Southern Africa",209,"WZ","FD","F",734,"SWZ","SZ","SWZ",748,"Southern Africa",748,"SWZ","سوازيلند","Swasiland","swasiland","Swaziland","swaziland","Swazilandia","Swaziland","Свазиленд","斯威士兰"
+"OECD1990","Europe","SWD",380,"EU","Eurocontrol","ESRA North-West",210,"SW","ES","E",144,"SWE","SE","SWE",752,"Northern Europe",752,"SWE","السويد","Schweden","schweden","Sweden","sweden","Suecia","Suède","Швеция","瑞典"
+"OECD1990","Europe","SWZ",225,NA,"Eurocontrol","ESRA North-West",211,"SZ","LS","L",146,"SUI","CH","CHE",756,"Western Europe",756,"CHE","سويسرا","Schweiz","schweiz","Switzerland","switz|swiss","Suiza","Suisse","Швейцария","瑞士"
+"MAF","Asia","SYR",652,NA,"Middle East","Middle-East",212,"SY","OS","O",463,"SYR","SY","SYR",760,"Western Asia",760,"SYR","الجمهورية العربية السورية","Syrische Arabische Republik","syrien|syrisch","Syrian Arab Republic","syria","República Árabe Siria","République arabe syrienne","Сирийская Арабская Республика","阿拉伯叙利亚共和国"
+"ASIA","Asia","TAW",713,NA,"Asia","Asia/Pacific",214,"TW","RC","R",528,"TPE","TW","TWN",158,"Eastern Asia",NA,"TWN",NA,"Taiwan","taiwan|taipei|formosa","Taiwan, Province of China","taiwan|taipei|formosa|^(?!.*peo)(?=.*rep).*china",NA,NA,NA,NA
+"EIT","Asia","TAJ",702,NA,"Asia","Asia/Pacific",208,"TI","UT","U",923,"TJK","TJ","TJK",762,"Central Asia",762,"TJK","طاجيكستان","Tadschikistan","tadschikistan","Tajikistan","tajik","Tayikistán","Tadjikistan","Таджикистан","塔吉克斯坦"
+"ASIA","Asia","THI",800,NA,"Asia","Asia/Pacific",216,"TH","VT","V",578,"THA","TH","THA",764,"South-Eastern Asia",764,"THA","تايلند","Thailand","thailand|\bsiam","Thailand","thailand|\bsiam","Tailandia","Thaïlande","Таиланд","泰国"
+"EIT","Europe","MAC",343,NA,"Eurocontrol","ESRA East",154,"MK","LW","L",962,"MKD","MK","MKD",807,"Southern Europe",807,"MKD","جمهورية مقدونيا اليوغوسلافية السابقة* ","Mazedonien","mazedonien|fyrom","The former Yugoslav Republic of Macedonia","macedonia|fyrom","ex República Yugoslava de Macedonia","Ex-République yougoslave de Macédoine","Бывшая югославская Республика Македония","前南斯拉夫的马其顿共和国"
+"ASIA","Asia","ETM",860,NA,"Asia","Asia/Pacific",176,"TT","WP","W",537,"TLS","TL","TLS",626,"South-Eastern Asia",626,"TMP","تيمور- ليشتي","Timor-Leste","^(?=.*leste).*timor|^(?=.*ost).*timor","Timor-Leste","^(?=.*leste).*timor|^(?=.*east).*timor","Timor-Leste","Timor-Leste","Тимор-Лешти","东帝汶"
+"MAF","Africa","TOG",461,NA,"Africa","Southern Africa",217,"TO","DX","D",742,"TOG","TG","TGO",768,"Western Africa",768,"TGO","توغو","Togo","togo","Togo","togo","Togo","Togo","Того","多哥"
+"ASIA","Oceania",NA,NA,NA,NA,NA,NA,"TL",NA,NA,NA,NA,"TK","TKL",772,"Polynesia",772,"TKL",NA,"Tokelau","tokelau","Tokelau","tokelau",NA,NA,NA,NA
+"MAF","Oceania","TON",955,NA,"Asia","Asia/Pacific",219,"TN","NF","N",866,"TGA","TO","TON",776,"Polynesia",776,"TON","تونغا","Tonga","tonga","Tonga","tonga","Tonga","Tonga","Тонга","汤加"
+"LAM","Americas","TRI",52,NA,"Southern America","Mid-Atlantic",220,"TD","TT","T",369,"TTO","TT","TTO",780,"Caribbean",780,"TTO","ترينيداد وتوباغو","Trinidad und Tobago","trinidad|tobago","Trinidad and Tobago","trinidad|tobago","Trinidad yTobago","Trinité-et-Tobago","Тринидад и Тобаго","特立尼达和多巴哥"
+"MAF","Africa","TUN",616,NA,"Africa","North-Africa",222,"TS","DT","D",744,"TUN","TN","TUN",788,"Northern Africa",788,"TUN","تونس","Tunesien","tunesien","Tunisia","tunisia","Túnez","Tunisie","Тунис","突尼斯"
+"OECD1990","Asia","TUR",640,NA,"Eurocontrol","ESRA Mediterranean",223,"TU","LT","L",186,"TUR","TR","TUR",792,"Western Asia",792,"TUR","تركيا","Türkei","türkei","Turkey","turkey","Turquía","Turquie","Турция","土耳其"
+"EIT","Asia","TKM",701,NA,"Asia","Asia/Pacific",213,"TX","UT","U",925,"TKM","TM","TKM",795,"Central Asia",795,"TKM","تركمانستان","Turkmenistan","turkmen","Turkmenistan","turkmen","Turkmenistán","Turkménistan","Туркменистан","土库曼斯坦"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,NA,"MB","M",NA,NA,"TC","TCA",796,"Caribbean",796,"TCA",NA,"Turks- und Caicosinseln","turks","Turks and Caicos Islands","turks",NA,NA,NA,NA
+NA,NA,"TUS",337,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Toskana","toskana","Tuscany","tuscany",NA,NA,NA,NA
+"ASIA","Oceania","TUV",947,NA,"Asia","Asia/Pacific",227,"TV","NG","N",NA,"TUV","TV","TUV",798,"Polynesia",798,"TUV","توفالو","Tuvalu","tuvalu","Tuvalu","tuvalu","Tuvalu","Tuvalu","Тувалу","图瓦卢"
+NA,NA,"SIC",329,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Königreich beider Sizilien","sizilien","Two Sicilies","two.?sicilies",NA,NA,NA,NA
+"MAF","Africa","UGA",500,NA,"Africa","Southern Africa",226,"UG","HU","H",746,"UGA","UG","UGA",800,"Eastern Africa",800,"UGA","أوغندا","Uganda","uganda","Uganda","uganda","Uganda","Ouganda","Уганда","乌干达"
+"EIT","Europe","UKR",369,NA,"Eurocontrol","ESRA East",230,"UP","UK","U",926,"UKR","UA","UKR",804,"Eastern Europe",804,"UKR","أوكرانيا","Ukraine","ukrain","Ukraine","ukrain","Ucrania","Ukraine","Украина","乌克兰"
+"MAF","Asia","UAE",696,NA,"Middle East","Middle-East",225,"AE","OM","O",466,"UAE","AE","ARE",784,"Western Asia",784,"ARE","الإمارات العربية المتحدة","Vereinigte Arabische Emirate","arabische.?emirate","United Arab Emirates","emirates|^u\.?a\.?e\.?$|united.?arab.?em","Emiratos Árabes Unidos","Émirats arabes unis","Объединенные Арабские Эмираты","阿拉伯联合酋长国"
+"OECD1990","Europe","UKG",200,"EU","Eurocontrol","ESRA North-West",229,"UK","EG","E",112,"GBR","GB","GBR",826,"Northern Europe",826,"GBR","المملكة المتحدة لبريطانيا العظمى وآيرلندا الشمالية ","Großbritannien","gro(ss|ß)britannien|britanien|vereinigtes.?k(ö|o)nigreich|^u\.?k\.?$","United Kingdom of Great Britain and Northern Ireland","united.?kingdom|britain|^u\.?k\.?$","Reino Unido de Gran Bretaña e Irlanda del Norte","Royaume-Uni de Grande-Bretagne et d'Irlande du Nord","Соединенное Королевство Великобритании и Северной Ирландии","大不列颠及北爱尔兰联合王国"
+"MAF","Africa","TAZ",510,NA,"Africa","Southern Africa",215,"TZ","HT","H",738,"TAN","TZ","TZA",834,"Eastern Africa",834,"TZA","جمهورية تنزانيا المتحدة* ","Tansania","tansania","United Republic of Tanzania","tanzania","República Unida de Tanzanía","République-Unie de Tanzanie","Объединенная Республика Танзания","坦桑尼亚联合共和国"
+"OECD1990","Americas","USA",2,NA,"Northern America","North Atlantic",231,"US","K","K",111,"USA","US","USA",840,"Northern America",840,"USA","الولايات المتحدة الأمريكية ","Vereinigte Staaten","vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands)","United States of America","united.?states|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands)","Estados Unidos de América","États-Unis d'Amérique","Соединенные Штаты Америки","美利坚合众国"
+"ASIA",NA,NA,NA,NA,"Asia","Asia/Pacific",NA,NA,"P[JON|MDY|AWK|LPA|BAR|LUR]","P",NA,NA,"UM","UMI",581,NA,NA,"UMI",NA,"United States Minor Outlying Islands","minor.?outlying.?is","United States Minor Outlying Islands","minor.?outlying.?is",NA,NA,NA,NA
+"LAM","Americas","URU",165,NA,"Southern America","South-Atlantic",234,"UY","SU","S",298,"URU","UY","URY",858,"South America",858,"URY","أوروغواي","Uruguay","uruguay","Uruguay","uruguay","Uruguay","Uruguay","Уругвай","乌拉圭"
+"EIT","Asia","UZB",704,NA,"Asia","Asia/Pacific",235,"UZ","UT","U",927,"UZB","UZ","UZB",860,"Central Asia",860,"UZB"," أوزبكستان","Usbekistan","usbek","Uzbekistan","uzbek","Uzbekistán","Ouzbékistan","Узбекистан","乌兹别克斯坦"
+"ASIA","Oceania","VAN",935,NA,"Asia","Asia/Pacific",155,"NH","NV","N",846,"VAN","VU","VUT",548,"Melanesia",548,"VUT","فانواتو","Vanuatu","vanuatu|neue.?hebriden","Vanuatu","vanuatu|new.?hebrides","Vanuatu","Vanuatu","Вануату","瓦努阿图"
+"LAM","Americas","VEN",101,NA,"Southern America","South-Atlantic",236,"VE","SV","S",299,"VEN","VE","VEN",862,"South America",862,"VEN","فنزويلا (جمهورية - البوليفارية)","Venezuela","venezuela","Venezuela, Bolivarian Republic of","venezuela","Venezuela (República Bolivariana de)","Venezuela (République bolivarienne du)","Венесуэла (Боливарианская Республика)","委内瑞拉"
+"ASIA","Asia","DRV",816,NA,"Asia","Asia/Pacific",237,"VM","VV","V",582,"VIE","VN","VNM",704,"South-Eastern Asia",704,"VNM","فييت نام ","Vietnam","^(?!.*republik).*viet.?nam|^(?=.*sozialist).*viet.?nam","Viet Nam","^(?!.*republic).*viet.?nam|^(?=.*socialist).*viet.?nam","Viet Nam","Viet Nam","Вьетнам","越南"
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"VI","TU","T",NA,NA,"VG","VGB",92,"Caribbean",92,"VGB",NA,"Britische Jungferninseln","brit.*jungferninseln","Virgin Islands, British","^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin",NA,NA,NA,NA
+"LAM","Americas",NA,NA,NA,"Southern America","Mid-Atlantic",NA,"VQ","TI","T",NA,"ISV","VI","VIR",850,"Caribbean",850,"VIR",NA,"Virgin Islands, U.S.","^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin","Virgin Islands, U.S.","^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin",NA,NA,NA,NA
+"ASIA","Oceania",NA,NA,NA,"Asia","Asia/Pacific",NA,"WF","NL","N",NA,NA,"WF","WLF",876,"Polynesia",876,"WLF",NA,"Wallis und Futuna","futuna|wallis","Wallis and Futuna","futuna|wallis",NA,NA,NA,NA
+"MAF","Africa",NA,NA,NA,"Africa","Southern Africa",NA,"WI","GS","G",NA,NA,"EH","ESH",732,"Northern Africa",732,"ESH",NA,"Westsahara","westsahara","Western Sahara","western.sahara",NA,NA,NA,NA
+NA,NA,"WRT",271,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Württemberg","w(ue|ü)rttemberg","Wuerttemburg","w(ue|ü)rttemburg",NA,NA,NA,NA
+"MAF","Asia","YEM",679,NA,"Middle East","Middle-East",249,"YM","OY","O",474,"YEM","YE","YEM",887,"Western Asia",887,"YEM","اليمن","Jemen","^(?!.*arab)(?!.*nord)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*süd)(?!.*aden)(?!.*\bp\.?d\.?r).*jemen","Yemen","^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen","Yemen","Yémen","Йемен","也门"
+NA,NA,"YAR",678,NA,NA,NA,NA,NA,NA,NA,NA,"YAR",NA,NA,NA,NA,NA,NA,NA,"Jemenitische Arabische Republik","^(?=.*arab).*jemen|^(?=.*nord).*jemen|^(?=.*sana).*jemen","Yemen Arab Republic","^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen",NA,NA,NA,NA
+NA,NA,"YPR",680,NA,NA,NA,NA,NA,NA,NA,NA,"YMD","YD","YMD",720,NA,NA,NA,NA,"Demokratische Volksrepublik Jemen","^(?=.*volk).*jemen|^(?!.*rep)(?=.*dem).*jemen|^(?=.*süd).*jemen|^(?=.*aden).*jemen|^(?=.*\bp\.?d\.?r).*jemen","Yemen People's Republic","^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen",NA,NA,NA,NA
+NA,NA,"YUG",345,NA,NA,NA,NA,NA,NA,NA,188,"YUG","YU","YUG",NA,NA,NA,"YUG",NA,"Jugoslawien","jugoslawien","Yugoslavia","yugoslavia",NA,NA,NA,NA
+"MAF","Africa","ZAM",551,NA,"Africa","Southern Africa",251,"ZA","FL","F",754,"ZAM","ZM","ZMB",894,"Eastern Africa",894,"ZMB","زامبيا","Sambia","sambia|nord.?rhodesien","Zambia","zambia|northern.?rhodesia","Zambia","Zambie","Замбия","赞比亚"
+"MAF",NA,"ZAN",511,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"EAZ",NA,NA,NA,NA,NA,"Sansibar","sansibar","Zanzibar","zanzibar",NA,NA,NA,NA
+"MAF","Africa","ZIM",552,NA,"Africa","Southern Africa",181,"ZI","FV","F",698,"ZIM","ZW","ZWE",716,"Eastern Africa",716,"ZWE","زمبابوي","Simbabwe","(z|s)imbabwe|^(?!.*nord).*rhodesien","Zimbabwe","zimbabwe|^(?!.*northern).*rhodesia","Zimbabwe","Zimbabwe","Зимбабве","津巴布韦"

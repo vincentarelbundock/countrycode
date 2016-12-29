@@ -5,3 +5,4 @@ Makefile
 prep.R
 README.md
 tests
+utilities

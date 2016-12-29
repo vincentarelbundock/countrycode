@@ -35,12 +35,15 @@ Load library:
 Convert single country codes:
 
 ```R
-> countrycode(232,"cown","country.name")
-[1] "ANDORRA"
-> countrycode("United States","country.name","iso3c")
-[1] "USA"
-> countrycode("DZA","iso3c","cowc")
-[1] "ALG"
+# ISO to Correlates of War
+countrycode('DZA', 'iso3c', 'cown') 
+[1]   615
+# English to ISO
+countrycode('Albania', 'country.name', 'iso3c') 
+[1] "ALB"
+# German to French
+countrycode('Albanien', 'country.name.de', 'country.name.fr') 
+[1] "Albanie"
 ```
 
 Convert a vector of country codes

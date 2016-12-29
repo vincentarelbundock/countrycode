@@ -3,9 +3,8 @@ context('Internal validity of regex')
 iso3c_of <- function(name) countrycode(name, 'country.name', 'iso3c')
 
 test_that('all country names with iso3c codes are matched exactly once', {
-    name <- subset(countrycode_data, !is.na(iso3c))$country.name
+    name <- subset(countrycode_data, !is.na(iso3c))$country.name.en
     iso3c_from_name <- countrycode(name, 'country.name', 'iso3c', warn = TRUE)
-
     expect_warning(iso3c_from_name, NA)
 })
 

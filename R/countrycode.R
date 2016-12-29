@@ -5,9 +5,17 @@
 #' scheme to the official short English country name. Creates a new variable
 #' with the name of the continent or region to which each country belongs.
 #'
-#' @param sourcevar Vector which contains the codes or country names to be converted
-#' @param origin Coding scheme of origin (name enclosed in quotes "")
-#' @param destination Coding scheme of destination (name enclosed in quotes "")
+#' @param sourcevar Vector which contains the codes or country names to be
+#' converted (character or factor)
+#' @param origin Coding scheme of origin (string enclosed in quotes ""): 
+#' "cowc", "cown", "fao", "fipas105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
+#' "un", "wb", "country.name", "country.name.de". 
+#' @param destination Coding scheme of destination (string enclosed in quotes ""): 
+#' "ar5", "continent", "cowc", "cown", "eu28", "eurocontrol_pru",
+#' "eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
+#' "ioc", "iso2c", "iso3c", "iso3n", "region", "un", "wb", "country.name",
+#' "country.name.ar", "country.name.de", "country.name.en", "country.name.es",
+#' "country.name.fr", "country.name.ru", "country.name.zh".
 #' @param warn Prints unique elements from sourcevar for which no match was found
 #' @param dictionary A data frame which supplies custom country codes.
 #' Variables correspond to country codes, observations must refer to unique
@@ -19,24 +27,27 @@
 #' origin codes will be matched as regex, if FALSE they will be matched exactly.
 #' When using the default dictionary (dictionary = NULL), origin_regex will be ignored.
 #' @keywords countrycode
-#' @note Supports the following coding schemes: Correlates of War character,
-#'   CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF numeric, International
-#'   Olympic Committee, FIPS 10-4, FAO numeric, United Nations numeric,
-#'   World Bank character, official English short country names (ISO), continent, region.
-#'
-#'   The following strings can be used as arguments for \code{origin} or
-#'   \code{destination}: "cowc", "cown", "iso3c", "iso3n", "iso2c", "imf",
-#'   "fips104", "fao", "ioc", "un", "wb", "country.name".  The following strings can be
-#'   used as arguments for \code{destination} \emph{only}:  "continent", "region",
-#'   "eu28", "ar5"
+#' @note For a complete description of available country codes and languages,
+#' please read the documentation for the \code{countrycode_data} conversion
+#' dictionary.  Type: \code{?countrycode_data}. 
 #' @export
 #' @aliases countrycode
 #' @examples
-#' codes.of.origin <- countrycode::countrycode_data$cowc # Vector of values to be converted
-#' countrycode(codes.of.origin, "cowc", "iso3c")
+#' # ISO to Correlates of War
+#' countrycode(c('USA', 'DZA'), 'iso3c', 'cown') 
+#' # English to ISO
+#' countrycode('Albania', 'country.name', 'iso3c') 
+#' # German to French
+#' countrycode('Albanien', 'country.name.de', 'country.name.fr') 
 countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=NULL, origin_regex=FALSE){
     # auto-set origin_regex for regex origins in default dictionary
-    default_regex_codes <- c('country.name', 'country.name.de')
+    if(origin == 'country.name'){ # defaults to English
+        origin = 'country.name.en'
+    }
+    if(destination == 'country.name'){
+        destination = 'country.name.en'
+    }
+    default_regex_codes <- c('country.name.en', 'country.name.de')
     if (is.null(dictionary)) {
         if (origin %in% default_regex_codes) {
             origin <- paste0(origin, '.regex')
@@ -57,18 +68,19 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
         if(is.null(sourcevar)){
             stop("sourcevar is NULL (does not exist).", call. = FALSE)
         }
-      
-        codes = names(countrycode::countrycode_data)
-        codes_origin = codes[!codes %in% c("continent","region","regex", "eu28", "ar5")]
-        codes_destination = codes[!codes %in% c('regex')]
-      
-        if (!origin %in% codes_origin){
+
+        bad_origin = c("ar5", "continent", "eurocontrol_pru",
+                       "eurocontrol_statfor", "eu28", "icao", "icao_region",
+                       "region", "country.name.ar", "country.name.es",
+                       "country.name.fr", "country.name.ru", "country.name.zh")
+        bad_destination = c('country.name.en.regex', 'country.name.de.regex')
+        if (origin %in% bad_origin){
             stop("Origin code not supported")
         }
-      
-        if (!destination %in% codes_destination){
+        if (destination %in% bad_destination){
             stop("Destination code not supported")
         }
+
         dictionary = countrycode::countrycode_data
     }
 

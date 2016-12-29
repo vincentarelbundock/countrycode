@@ -1,13 +1,15 @@
 Version 0.19 (????-??-??)
 -------------------------
 
+* Better docs and examples
+* English country names are now official UN versions 
 * Considerably speed up regex conversion by using factors (Thanks to CJ Yetman)
 * countrycode() now includes the "dictionary" argument, which allows
   user-supplied dictionary data.frames
 * updated tests to new testthat convention (Thanks to CJ Yetman)
 * Modified README to illustrate use of custom dictionaries
-* Added aviation data to the github repo as a custom dictionary (Thanks to Enrico Spinielli)
-* Added ar5 and eu28 as possible destinations (Thanks to Niklas Roming)
+* Added aviation codes (Thanks to Enrico Spinielli)
+* Added ar5 and eu28 (Thanks to Niklas Roming)
 * Republic of China == Taiwan (Thanks to Nils Enevoldsen)
 * Martinique regex improvement (Thanks to Martyn Plummer)
 * Tahiti country name string converts to French Polynesia
