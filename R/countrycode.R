@@ -21,8 +21,7 @@
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
 #' checks are conducted. The data frame format must resemble
-#' countrycode::countrycode_data. Custom dictionaries only work with strings
-#' (no regexes).
+#' countrycode::countrycode_data. 
 #' @param origin_regex Logical: When using a custom dictionary, if TRUE then the
 #' origin codes will be matched as regex, if FALSE they will be matched exactly.
 #' When using the default dictionary (dictionary = NULL), origin_regex will be ignored.
