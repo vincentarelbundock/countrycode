@@ -39,7 +39,7 @@
 #' countrycode('Albania', 'country.name', 'iso3c') 
 #' # German to French
 #' countrycode('Albanien', 'country.name.de', 'country.name.fr') 
-countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=NULL, origin_regex=FALSE){
+countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=NULL, origin_regex=FALSE){
     # auto-set origin_regex for regex origins in default dictionary
     if(origin == 'country.name'){ # defaults to English
         origin = 'country.name.en'
