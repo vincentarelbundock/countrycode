@@ -8,7 +8,7 @@
 #' @param sourcevar Vector which contains the codes or country names to be
 #' converted (character or factor)
 #' @param origin Coding scheme of origin (string enclosed in quotes ""): 
-#' "cowc", "cown", "fao", "fipas105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
+#' "cowc", "cown", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
 #' "un", "wb", "country.name", "country.name.de". 
 #' @param destination Coding scheme of destination (string enclosed in quotes ""): 
 #' "ar5", "continent", "cowc", "cown", "eu28", "eurocontrol_pru",
