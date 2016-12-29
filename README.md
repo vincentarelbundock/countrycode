@@ -16,7 +16,7 @@ The countrycode function can convert to and from 7 different country coding sche
 Supported country codes
 -----------------------
 
-Correlates of War character, CoW-numeric, ISO3-character, ISO3-numeric, ISO2-character, IMF, Food and Agriculture Organization of the United Nations, International Olympic Committee, United Nations numeric, FIPS 10-4, official English short country names (ISO), continent, region.
+Correlates of War character; CoW-numeric; ISO 3-character; ISO 3-numeric; ISO 2-character; International Monetary Fund; Euro-control (aviation); Food and Agriculture Organization of the United Nations; International Olympic Committee; International Civil Aviation Organization; IPCC, United Nations numeric; FIPS 10-4; official English short country names (ISO); country names in Arabic, Chinese, English, French, German, Russian, Spanish, continent; region.
 
 Installation
 ------------
