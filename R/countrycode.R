@@ -76,7 +76,7 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=N
              column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2]
                                               vs. my_tbl[[2]])')
     }
-    if(is.null(dictionary)){ # no sanity check if custom dictionary
+    if(is.null(dictionary)){ # built-in dictionary
         if(is.null(sourcevar)){
             stop("sourcevar is NULL (does not exist).", call. = FALSE)
         }
@@ -92,6 +92,20 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=N
             stop("Destination code not supported")
         }
         dictionary = countrycode::countrycode_data
+    }else{ # custom dictionary
+        if(class(dictionary) != 'data.frame'){
+            stop("Custom dictionary must be a data frame with codes as columns.")
+        }
+        if(!origin %in% colnames(dictionary)){
+            stop("Origin code must correpond to a column name in the dictionary data frame.")
+        }
+        if(!destination %in% colnames(dictionary)){
+            stop("Destination code must correpond to a column name in the dictionary data frame.")
+        }
+        dups = any(duplicated(na.omit(dictionary[, origin])))
+        if(dups){
+            stop("Countrycode cannot accept dictionaries with duplicated origin codes")
+        }
     }
 
     # Convert
