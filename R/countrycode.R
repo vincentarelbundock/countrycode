@@ -61,7 +61,7 @@ countrycode <- function (sourcevar, origin, destination, warn=FALSE, dictionary=
         stop('sourcevar is NULL (does not exist).')
     }
     if (! mode(sourcevar) %in% c('character', 'numeric')) {
-        stop('sourcevar must be a character or numeric vector')
+        stop('sourcevar must be a character or numeric vector. This error often arises when users pass a tibble (e.g., from dplyr) instead of a column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2] vs. my_tbl[[2]])')
     }
     if(is.null(dictionary)){ # no sanity check if custom dictionary
 
