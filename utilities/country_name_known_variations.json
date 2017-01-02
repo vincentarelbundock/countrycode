@@ -1,0 +1,22 @@
+{
+  "United States of America":[
+    "U.S.A.",
+    "United States",
+    "USA"
+    ],
+  "Republic of Korea":[
+    "South Korea",
+    "Republic of Korea"
+    ],
+  "Democratic People's Republic of Korea":[
+    //"Korea DPR",
+    //"Korea D.P.R.",
+    //"DPR Korea",
+    //"D.P.R. Korea",
+    //"D.P.R Korea",
+    "North Korea",
+    "DPRK",
+    "Democratic People's Republic of Korea",
+    "Korea, Democratic People's Republic"
+    ]
+}
