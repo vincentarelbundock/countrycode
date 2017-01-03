@@ -1,7 +1,7 @@
 library(devtools)
 document()
 
-dat = read.csv('data/countrycode_data.csv', stringsAsFactors=FALSE, na.strings=c('', 'NA'))
+dat = read.csv('data/countrycode_data.csv', stringsAsFactors=FALSE, na.strings=c(''))
 dat$iso2c[dat$country.name.en=='Namibia'] = 'NA'
 cn = grep('country.name', colnames(dat))
 for(n in cn){
