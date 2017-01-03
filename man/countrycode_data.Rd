@@ -20,6 +20,7 @@ A data frame used internally by the \code{countrycode()} function.
   \item cown: Correlates of War numeric
   \item eurocontrol_pru:  European Organisation for the Safety of Air Navigation
   \item eurocontrol_statfor:  European Organisation for the Safety of Air Navigation
+  \item eurostat:  Eurostat
   \item eu28: Member states of the European Union (as of December 2015),
               without special territories
   \item fao: Food and Agriculture Organization of the United Nations numerical code

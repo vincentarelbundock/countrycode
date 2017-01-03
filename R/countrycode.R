@@ -7,11 +7,11 @@
 #'
 #' @param sourcevar Vector which contains the codes or country names to be
 #' converted (character or factor)
-#' @param origin Coding scheme of origin (string enclosed in quotes ""): 
-#' "cowc", "cown", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
-#' "un", "wb", "country.name", "country.name.de". 
-#' @param destination Coding scheme of destination (string enclosed in quotes ""): 
-#' "ar5", "continent", "cowc", "cown", "eu28", "eurocontrol_pru",
+#' @param origin Coding scheme of origin (string enclosed in quotes ""):
+#' "cowc", "cown", "eurostat", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
+#' "un", "wb", "country.name", "country.name.de".
+#' @param destination Coding scheme of destination (string enclosed in quotes ""):
+#' "ar5", "continent", "cowc", "cown", "eurostat", "eu28", "eurocontrol_pru",
 #' "eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
 #' "ioc", "iso2c", "iso3c", "iso3n", "region", "un", "wb", "country.name",
 #' "country.name.ar", "country.name.de", "country.name.en", "country.name.es",
@@ -21,23 +21,23 @@
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
 #' checks are conducted. The data frame format must resemble
-#' countrycode::countrycode_data. 
+#' countrycode::countrycode_data.
 #' @param origin_regex Logical: When using a custom dictionary, if TRUE then the
 #' origin codes will be matched as regex, if FALSE they will be matched exactly.
 #' When using the default dictionary (dictionary = NULL), origin_regex will be ignored.
 #' @keywords countrycode
 #' @note For a complete description of available country codes and languages,
 #' please read the documentation for the \code{countrycode_data} conversion
-#' dictionary.  Type: \code{?countrycode_data}. 
+#' dictionary.  Type: \code{?countrycode_data}.
 #' @export
 #' @aliases countrycode
 #' @examples
 #' # ISO to Correlates of War
-#' countrycode(c('USA', 'DZA'), 'iso3c', 'cown') 
+#' countrycode(c('USA', 'DZA'), 'iso3c', 'cown')
 #' # English to ISO
-#' countrycode('Albania', 'country.name', 'iso3c') 
+#' countrycode('Albania', 'country.name', 'iso3c')
 #' # German to French
-#' countrycode('Albanien', 'country.name.de', 'country.name.fr') 
+#' countrycode('Albanien', 'country.name.de', 'country.name.fr')
 countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=NULL, origin_regex=FALSE){
 
     # Case-insensitive matching
@@ -48,7 +48,7 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=N
     }
 
     # Regex defaults to English
-    if(origin == 'country.name'){ 
+    if(origin == 'country.name'){
         origin = 'country.name.en'
     }
     if(destination == 'country.name'){

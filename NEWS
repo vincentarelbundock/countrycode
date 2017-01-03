@@ -2,7 +2,7 @@ Version 0.19 (????-??-??)
 -------------------------
 
 * Better docs and examples
-* English country names are now official UN versions 
+* English country names are now official UN versions
 * Considerably speed up regex conversion by using factors (Thanks to CJ Yetman)
 * countrycode() now includes the "dictionary" argument, which allows
   user-supplied dictionary data.frames
@@ -10,6 +10,7 @@ Version 0.19 (????-??-??)
 * Modified README to illustrate use of custom dictionaries
 * Added aviation codes (Thanks to Enrico Spinielli)
 * Added ar5 and eu28 (Thanks to Niklas Roming)
+* Added eurostat (Thanks to @cjyetman)
 * Republic of China == Taiwan (Thanks to Nils Enevoldsen)
 * Martinique regex improvement (Thanks to Martyn Plummer)
 * Tahiti country name string converts to French Polynesia
@@ -93,7 +94,7 @@ Version 0.9 (2012-12-26)
 Version 0.8 (2012-06-26)
 ------------------------
 
-* Added World Bank (wb) country codes. Very similar, but slightly different from iso3c. 
+* Added World Bank (wb) country codes. Very similar, but slightly different from iso3c.
 
 Version 0.7 (2012-06-01)
 ------------------------

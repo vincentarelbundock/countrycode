@@ -11,12 +11,12 @@ countrycode(sourcevar, origin, destination, warn = TRUE, dictionary = NULL,
 \item{sourcevar}{Vector which contains the codes or country names to be
 converted (character or factor)}
 
-\item{origin}{Coding scheme of origin (string enclosed in quotes ""): 
-"cowc", "cown", "fao", "fipas105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
+\item{origin}{Coding scheme of origin (string enclosed in quotes ""):
+"cowc", "cown", "eurostat", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
 "un", "wb", "country.name", "country.name.de".}
 
-\item{destination}{Coding scheme of destination (string enclosed in quotes ""): 
-"ar5", "continent", "cowc", "cown", "eu28", "eurocontrol_pru",
+\item{destination}{Coding scheme of destination (string enclosed in quotes ""):
+"ar5", "continent", "cowc", "cown", "eurostat", "eu28", "eurocontrol_pru",
 "eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
 "ioc", "iso2c", "iso3c", "iso3n", "region", "un", "wb", "country.name",
 "country.name.ar", "country.name.de", "country.name.en", "country.name.es",
@@ -47,11 +47,11 @@ dictionary.  Type: \code{?countrycode_data}.
 }
 \examples{
 # ISO to Correlates of War
-countrycode(c('USA', 'DZA'), 'iso3c', 'cown') 
+countrycode(c('USA', 'DZA'), 'iso3c', 'cown')
 # English to ISO
-countrycode('Albania', 'country.name', 'iso3c') 
+countrycode('Albania', 'country.name', 'iso3c')
 # German to French
-countrycode('Albanien', 'country.name.de', 'country.name.fr') 
+countrycode('Albanien', 'country.name.de', 'country.name.fr')
 }
 \keyword{countrycode}
 
