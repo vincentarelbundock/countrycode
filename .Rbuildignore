@@ -4,3 +4,5 @@ data/extra
 README.md
 tests
 utilities
+^.*\.Rproj$
+^\.Rproj\.user$

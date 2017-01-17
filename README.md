@@ -102,7 +102,7 @@ iso3c cowcodes var1 isocodes var2        country
 Custom country codes dictionaries
 ---------------------------------
 
-Since version 0.19, countrycode accepts user supplied dictionaries via the ``dictionary`` argument. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
+Since version 0.19, countrycode accepts user supplied dictionaries via the ``custom_dict`` argument. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
 
 Load the library and download the custom dictionary data.frame:
 
@@ -116,10 +116,10 @@ Convert:
 
 ```
 countrycode('State of Alabama', 'state', 'abbreviation', 
-            dictionary=state_dict,
+            custom_dict=state_dict,
             origin_regex=TRUE)
 [1] "AL"
-countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', dictionary=state_dict)
+countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dict)
 [1] "Michigan" "Ohio"     NA        
 ```
 

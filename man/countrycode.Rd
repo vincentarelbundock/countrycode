@@ -4,7 +4,7 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = TRUE, dictionary = NULL,
+countrycode(sourcevar, origin, destination, warn = TRUE, custom_dict = NULL,
   origin_regex = FALSE)
 }
 \arguments{
@@ -24,7 +24,7 @@ converted (character or factor)}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 
-\item{dictionary}{A data frame which supplies custom country codes.
+\item{custom_dict}{A data frame which supplies custom country codes.
 Variables correspond to country codes, observations must refer to unique
 countries.  When countrycode uses a user-supplied dictionary, no sanity
 checks are conducted. The data frame format must resemble

@@ -4,7 +4,7 @@ Version 0.19 (????-??-??)
 * Better docs and examples
 * English country names are now official UN versions
 * Considerably speed up regex conversion by using factors (Thanks to CJ Yetman)
-* countrycode() now includes the "dictionary" argument, which allows
+* countrycode() now includes the "custom_dict" argument, which allows
   user-supplied dictionary data.frames
 * updated tests to new testthat convention (Thanks to CJ Yetman)
 * Modified README to illustrate use of custom dictionaries
