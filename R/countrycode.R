@@ -17,7 +17,7 @@
 #' "country.name.ar", "country.name.de", "country.name.en", "country.name.es",
 #' "country.name.fr", "country.name.ru", "country.name.zh".
 #' @param warn Prints unique elements from sourcevar for which no match was found
-#' @param dictionary A data frame which supplies custom country codes.
+#' @param custom_dict A data frame which supplies custom country codes.
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
 #' checks are conducted. The data frame format must resemble
@@ -38,7 +38,8 @@
 #' countrycode('Albania', 'country.name', 'iso3c')
 #' # German to French
 #' countrycode('Albanien', 'country.name.de', 'country.name.fr')
-countrycode <- function (sourcevar, origin, destination, warn=TRUE, dictionary=NULL, origin_regex=FALSE){
+countrycode <- function (sourcevar, origin, destination, warn=TRUE, custom_dict=NULL, origin_regex=FALSE){
+    dictionary <- custom_dict
 
     # Case-insensitive matching
     if(is.null(dictionary)){ # only for built-in dictionary
