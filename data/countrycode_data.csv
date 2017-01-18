@@ -162,7 +162,7 @@ LAM,Americas,,,,Southern America,Mid-Atlantic,,MH,TR,T,351,,MS,MSR,500,Caribbean
 MAF,Africa,MOR,600,,Africa,North-Africa,143,MO,GM,G,686,MAR,MA,MAR,504,Northern Africa,504,MAR,المغرب,Marokko,marokko|\bmaroc,Morocco,morocco|\bmaroc,Marruecos,Maroc,Марокко,摩洛哥,MA
 MAF,Africa,MZM,541,,Africa,Southern Africa,144,MZ,FQ,F,688,MOZ,MZ,MOZ,508,Eastern Africa,508,MOZ,موزامبيق,Mosambik,mosambik,Mozambique,mozambique,Mozambique,Mozambique,Мозамбик,莫桑比克,MZ
 ASIA,Asia,MYA,775,,Asia,Asia/Pacific,28,BM,VY,V,518,MYA,MM,MMR,104,South-Eastern Asia,104,MMR,ميانمار,Myanmar,myanmar|burma,Myanmar,myanmar|burma,Myanmar,Myanmar,Мьянма,缅甸,MM
-MAF,Africa,NAM,565,,Africa,Southern Africa,147,WA,FY,F,728,NAM,NA,NAM,516,Southern Africa,516,NAM,ناميبيا,Namibia,namibia,Namibia,namibia,Namibia,Namibie,Намибия,纳米比亚,
+MAF,Africa,NAM,565,,Africa,Southern Africa,147,WA,FY,F,728,NAM,NA,NAM,516,Southern Africa,516,NAM,ناميبيا,Namibia,namibia,Namibia,namibia,Namibia,Namibie,Намибия,纳米比亚,NA
 ASIA,Oceania,NAU,970,,Asia,Asia/Pacific,148,NR,AN,A,836,NRU,NR,NRU,520,Micronesia,520,NRU,ناورو,Nauru,nauru,Nauru,nauru,Nauru,Nauru,Науру,瑙鲁,NR
 ASIA,Asia,NEP,790,,Asia,Asia/Pacific,149,NP,VN,V,558,NEP,NP,NPL,524,Southern Asia,524,NPL,نيبال,Nepal,nepal,Nepal,nepal,Nepal,Népal,Непал,尼泊尔,NP
 OECD1990,Europe,NTH,210,EU,Eurocontrol,ESRA North-West,150,NL,EH,E,138,NED,NL,NLD,528,Western Europe,528,NLD,هولندا,Niederlande,niederlande,Netherlands,^(?!.*\bant)(?!.*\bcarib).*netherlands,Países Bajos,Pays-Bas,Нидерланды,荷兰,NL
