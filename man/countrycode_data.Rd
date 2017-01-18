@@ -36,6 +36,8 @@ A data frame used internally by the \code{countrycode()} function.
   \item region: Regions as defined in the World Bank Development Indicators
   \item un: United Nations numerical code
   \item wb: World Bank (very similar but not identical to iso3c)
+  \item wb_api2c: 2 character codes used by the World Bank API
+  \item wb_api3c: 3 character codes used by the World Bank API
   \item country.name: country name (English)
   \item country.name.en.regex: Regular expression used to convert English names to code
   \item country.name.ar: country name (Arabic)
