@@ -6,6 +6,9 @@ Version 0.19 (????-??-??)
 * Considerably speed up regex conversion by using factors (Thanks to CJ Yetman)
 * countrycode() now includes the "custom_dict" argument, which allows
   user-supplied dictionary data.frames
+* adds a "custom_match" argument, which allows a user-supplied named vector of
+  custom origin->destination matches that will supercede any matching values in
+  the default result (issue #107) (Thanks to @cjyetman)
 * updated tests to new testthat convention (Thanks to CJ Yetman)
 * Modified README to illustrate use of custom dictionaries
 * Added aviation codes (Thanks to Enrico Spinielli)
