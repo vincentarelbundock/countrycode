@@ -33,6 +33,8 @@ A data frame used internally by the \code{countrycode()} function.
   \item iso3c: ISO-3 character
   \item iso2n: ISO-2 numeric
   \item iso3n: ISO-3 numeric
+  \item p4_ccode: Polity IV numeric country code
+  \item p4_scode: Polity IV alpha country code
   \item region: Regions as defined in the World Bank Development Indicators
   \item un: United Nations numerical code
   \item wb: World Bank (very similar but not identical to iso3c)
