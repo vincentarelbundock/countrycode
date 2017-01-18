@@ -22,6 +22,10 @@
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
 #' checks are conducted. The data frame format must resemble
 #' countrycode::countrycode_data.
+#' @param custom_match A named vector which supplies custom origin and
+#' destination matches that will supercede any matching default result. The name
+#' of each element will be used as the origin code, and the value of each
+#' element will be used as the destination code.
 #' @param origin_regex Logical: When using a custom dictionary, if TRUE then the
 #' origin codes will be matched as regex, if FALSE they will be matched exactly.
 #' When using the default dictionary (dictionary = NULL), origin_regex will be ignored.
@@ -38,7 +42,8 @@
 #' countrycode('Albania', 'country.name', 'iso3c')
 #' # German to French
 #' countrycode('Albanien', 'country.name.de', 'country.name.fr')
-countrycode <- function (sourcevar, origin, destination, warn=TRUE, custom_dict=NULL, origin_regex=FALSE){
+countrycode <- function(sourcevar, origin, destination, warn = TRUE,
+                        custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
     dictionary <- custom_dict
 
     # Case-insensitive matching
@@ -133,6 +138,13 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, custom_dict=
         # remove all but last match to replicate previous behavior
         matches <- sapply(matches, function(x) { x[length(x)] })
 
+        # replace with custom matches if set
+        if (!is.null(custom_match)) {
+          matchidxs <- match(names(matches), names(custom_match))
+          cust_matched <- !is.na(matchidxs)
+          matches[cust_matched] <- custom_match[matchidxs][cust_matched]
+        }
+
         # apply new levels to sourcefctr and unname
         destination_vector <- unname(matches[as.numeric(sourcefctr)])
 
@@ -144,6 +156,13 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, custom_dict=
         matchidxs <- match(levels(sourcefctr), dict[[origin]])
         matches <- dict[[destination]][matchidxs]
 
+        # replace with custom matches if set
+        if (!is.null(custom_match)) {
+          matchidxs <- match(levels(sourcefctr), names(custom_match))
+          cust_matched <- !is.na(matchidxs)
+          matches[cust_matched] <- custom_match[matchidxs][cust_matched]
+        }
+
         # apply new levels to sourcefctr
         destination_vector <- matches[as.numeric(sourcefctr)]
     }
@@ -151,6 +170,7 @@ countrycode <- function (sourcevar, origin, destination, warn=TRUE, custom_dict=
     # Warnings
     if(warn){
         nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
+        nomatch <- nomatch[!nomatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
         if(length(nomatch) > 0){
             warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n")
         }

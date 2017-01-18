@@ -5,7 +5,7 @@
 \title{Convert Country Codes}
 \usage{
 countrycode(sourcevar, origin, destination, warn = TRUE, custom_dict = NULL,
-  origin_regex = FALSE)
+  custom_match = NULL, origin_regex = FALSE)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be
@@ -29,6 +29,11 @@ Variables correspond to country codes, observations must refer to unique
 countries.  When countrycode uses a user-supplied dictionary, no sanity
 checks are conducted. The data frame format must resemble
 countrycode::countrycode_data.}
+
+\item{custom_match}{A named vector which supplies custom origin and
+destination matches that will supercede any matching default result. The name
+of each element will be used as the origin code, and the value of each
+element will be used as the destination code.}
 
 \item{origin_regex}{Logical: When using a custom dictionary, if TRUE then the
 origin codes will be matched as regex, if FALSE they will be matched exactly.
