@@ -26,6 +26,8 @@
 #'   \item region: Regions as defined in the World Bank Development Indicators
 #'   \item un: United Nations numerical code
 #'   \item wb: World Bank (very similar but not identical to iso3c)
+#'   \item wb_api2c: World Bank API 2 character code
+#'   \item wb_api3c: World Bank API 3 character code
 #'   \item country.name: country name (English)
 #'   \item country.name.en.regex: Regular expression used to convert English names to code
 #'   \item country.name.ar: country name (Arabic)

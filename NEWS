@@ -14,6 +14,7 @@ Version 0.19 (????-??-??)
 * Added aviation codes (Thanks to Enrico Spinielli)
 * Added ar5 and eu28 (Thanks to Niklas Roming)
 * Added eurostat (Thanks to @cjyetman)
+* Added 2 and 3 character codes for the World Bank API: wb_api2c and wb_api3c (Thanks to @cjyetman)
 * Republic of China == Taiwan (Thanks to Nils Enevoldsen)
 * Martinique regex improvement (Thanks to Martyn Plummer)
 * Tahiti country name string converts to French Polynesia
