@@ -9,11 +9,11 @@
 #' converted (character or factor)
 #' @param origin Coding scheme of origin (string enclosed in quotes ""):
 #' "cowc", "cown", "eurostat", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
-#' "un", "wb", "wb_api2c", "wb_api3c", "country.name", "country.name.de".
+#' "p4_ccode", "p4_scode", "un", "wb", "wb_api2c", "wb_api3c", "country.name", "country.name.de".
 #' @param destination Coding scheme of destination (string enclosed in quotes ""):
 #' "ar5", "continent", "cowc", "cown", "eurostat", "eu28", "eurocontrol_pru",
 #' "eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
-#' "ioc", "iso2c", "iso3c", "iso3n", "region", "un", "wb", "wb_api2c", "wb_api3c",
+#' "ioc", "iso2c", "iso3c", "iso3n", "p4_ccode", "p4_scode", "region", "un", "wb", "wb_api2c", "wb_api3c",
 #' "country.name", "country.name.ar", "country.name.de", "country.name.en",
 #' "country.name.es", "country.name.fr", "country.name.ru", "country.name.zh".
 #' @param warn Prints unique elements from sourcevar for which no match was found
