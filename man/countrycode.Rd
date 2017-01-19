@@ -12,15 +12,17 @@ countrycode(sourcevar, origin, destination, warn = TRUE, custom_dict = NULL,
 converted (character or factor)}
 
 \item{origin}{Coding scheme of origin (string enclosed in quotes ""):
-"cowc", "cown", "eurostat", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c", "iso3n",
-"p4_ccode", "p4_scode", "un", "wb", "wb_api2c", "wb_api3c", "country.name", "country.name.de".}
+"cowc", "cown", "eurostat", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c",
+"iso3n", "p4_ccode", "p4_scode", "un", "wb", "wb_api2c", "wb_api3c", "wvs",
+"country.name", "country.name.de".}
 
 \item{destination}{Coding scheme of destination (string enclosed in quotes ""):
 "ar5", "continent", "cowc", "cown", "eurostat", "eu28", "eurocontrol_pru",
 "eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
-"ioc", "iso2c", "iso3c", "iso3n", "p4_ccode", "p4_scode", "region", "un", "wb", "wb_api2c", "wb_api3c",
-"country.name", "country.name.ar", "country.name.de", "country.name.en",
-"country.name.es", "country.name.fr", "country.name.ru", "country.name.zh".}
+"ioc", "iso2c", "iso3c", "iso3n", "p4_ccode", "p4_scode", "region", "un",
+"wb", "wb_api2c", "wb_api3c", "wvs", "country.name", "country.name.ar",
+"country.name.de", "country.name.en", "country.name.es", "country.name.fr",
+"country.name.ru", "country.name.zh".}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 

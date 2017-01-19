@@ -40,6 +40,7 @@ A data frame used internally by the \code{countrycode()} function.
   \item wb: World Bank (very similar but not identical to iso3c)
   \item wb_api2c: World Bank API 2 character code
   \item wb_api3c: World Bank API 3 character code
+  \item wvs: World Values Survey numeric code
   \item country.name: country name (English)
   \item country.name.en.regex: Regular expression used to convert English names to code
   \item country.name.ar: country name (Arabic)

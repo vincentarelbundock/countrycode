@@ -16,6 +16,7 @@ Version 0.19 (????-??-??)
 * Added eurostat (Thanks to @cjyetman)
 * Added 2 and 3 character codes for the World Bank API: wb_api2c and wb_api3c (Thanks to @cjyetman)
 * Added alpha and numeric codes for Polity IV: p4_scode and p4_ccode (Thanks to @cjyetman)
+* Added wvs for numeric World Values Survey code (Thanks to @cjyetman)
 * Republic of China == Taiwan (Thanks to Nils Enevoldsen)
 * Martinique regex improvement (Thanks to Martyn Plummer)
 * Tahiti country name string converts to French Polynesia
