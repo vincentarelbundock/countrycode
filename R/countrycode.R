@@ -137,6 +137,9 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         # add sourcevar value to beginning of match results to replicate previous behavior
         destination_list <- Map(c, names(destination_list), destination_list)
 
+        # set elements with multiple matches to the appropriate NA
+        matches[sapply(matches, length) > 1] <- `class<-`(NA, class(dict[[destination]]))
+
         # remove all but last match to replicate previous behavior
         matches <- sapply(matches, function(x) { x[length(x)] })
 
@@ -174,13 +177,13 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
         nomatch <- nomatch[!nomatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
         if(length(nomatch) > 0){
-            warning("Some values were not matched: ", paste(nomatch, collapse=", "), "\n")
+            warning("Some values were not matched unambiguously: ", paste(nomatch, collapse=", "), "\n")
         }
         if(origin_regex){
            if(length(destination_list) > 0){
                destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
                destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once: ", paste(destination_list, collapse="; "), "\n")
+               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n")
            }
         }
     }

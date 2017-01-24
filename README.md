@@ -125,6 +125,40 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 
 Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::countrycode_data`` to gain access to all other codes. 
 
+Custom country match vector
+---------------------------------
+
+Since version 0.19, `countrycode` accepts a user supplied named vector of custom 
+matches via the `custom_match` argument. Any match pairs in the `custom_match` 
+vector will supercede the default results of the command. This allows the user 
+to convert to an available country code and make minor post-edits all at once. 
+The names of the named vector are used as the origin code, and the values of the 
+named vector are used as the destination code.
+
+For example, Eurostat uses a modified version of iso2c, with Greece (EL instead 
+of GR) and the UK (UK instead of GB) being the only differences. Getting a proper 
+result converting to Eurostat is easy to achieve using the `iso2c` destination 
+and the new `custom_match` argument. (Note: since version 0.19, `countrycode` 
+also includes a `eurostat` origin/destination code, so while this is a good 
+example, doing so for Eurostat is not necessary)
+
+example: convert from country name to Eurostat code
+```r
+library(countrycode)
+country_names <- c('Greece', 'United Kingdom', 'Germany', 'France')
+custom_match <- c(Greece = 'EL', `United Kingdom` = 'UK')
+countrycode(country_names, 'country.name', 'iso2c', custom_match = custom_match)
+```
+
+example: convert from Eurostat code to country name
+```r
+library(eurostat)
+library(countrycode)
+df <- eurostat::get_eurostat("nama_10_lp_ulc")
+custom_match <- c(EL = 'Greece', UK = 'United Kingdom')
+countrycode(df$geo, 'iso2c', 'country.name', custom_match = custom_match)
+```
+
 Extra arguments
 ---------------
 

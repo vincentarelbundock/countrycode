@@ -4,6 +4,12 @@
     "United States",
     "USA"
     ],
+  "United Kingdom of Great Britain and Northern Ireland":[
+    "United Kingdom",
+    "The United Kingdom",
+    "United Kingdom of Great Britain",
+    "United Kingdom of Great Britain and Northern Ireland"
+    ],
   "Republic of Korea":[
     "South Korea",
     "Republic of Korea",
@@ -26,5 +32,23 @@
     "D.R. Congo",
     "DR Congo",
     "Democratic Republic of Congo"
-  ]
+    ],
+  "United States Minor Outlying Islands":[
+    "United States Minor Outlying Islands",
+    "US Minor Outlying Islands",
+    "U.S. Minor Outlying Islands",
+    "Minor Outlying Islands US",
+    "Minor Outlying Islands U.S.",
+    "Minor Outlying Islands, US",
+    "Minor Outlying Islands, U.S."
+    ],
+  "Virgin Islands, U.S.":[
+    "United States Virgin Islands",
+    "US Virgin Islands",
+    "U.S. Virgin Islands",
+    "Virgin Islands US",
+    "Virgin Islands U.S.",
+    "Virgin Islands, US",
+    "Virgin Islands, U.S."
+    ]
 }
