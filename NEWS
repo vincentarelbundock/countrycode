@@ -10,6 +10,7 @@ Version 0.19 (????-??-??)
   custom origin->destination matches that will supercede any matching values in
   the default result (issue #107) (Thanks to @cjyetman)
 * updated tests to new testthat convention (Thanks to CJ Yetman)
+* when more than one match is found for a given string, <NA> is returned rather than arbitrarily choosing the last match found (Thanks to @cjyetman)
 * Modified README to illustrate use of custom dictionaries
 * Added aviation codes (Thanks to Enrico Spinielli)
 * Added ar5 and eu28 (Thanks to Niklas Roming)
@@ -24,6 +25,7 @@ Version 0.19 (????-??-??)
 * Southern Africa
 * Federated States of Micronesia
 * D.R. Congo (found in WVS) matches Democratic Republic of the Congo (Thanks to @cjyetman)
+* improved regex for Ireland and United States of America (Thanks to @cjyetman)
 
 Version 0.18 (2014-12-17)
 -------------------------
