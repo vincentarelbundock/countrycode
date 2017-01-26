@@ -101,8 +101,11 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         }
         dictionary = countrycode::countrycode_data
     }else{ # custom dictionary
+        if('tbl_df' %in% class(dictionary)){ # allow tibble
+            dictionary <- as.data.frame(dictionary)
+        }
         if(class(dictionary) != 'data.frame'){
-            stop("Custom dictionary must be a data frame with codes as columns.")
+            stop("Custom dictionary must be a data frame or tibble with codes as columns.")
         }
         if(!origin %in% colnames(dictionary)){
             stop("Origin code must correpond to a column name in the dictionary data frame.")
