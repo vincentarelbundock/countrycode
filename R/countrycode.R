@@ -93,10 +93,10 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
                        "region", "country.name.ar", "country.name.es",
                        "country.name.fr", "country.name.ru", "country.name.zh")
         bad_destination = c('country.name.en.regex', 'country.name.de.regex')
-        if ((origin %in% bad_origin) | (!origin %in% colnames(countrycode_data))){
+        if ((origin %in% bad_origin) | (!origin %in% colnames(countrycode::countrycode_data))){
             stop("Origin code not supported")
         }
-        if ((destination %in% bad_destination) | (!destination %in% colnames(countrycode_data))){
+        if ((destination %in% bad_destination) | (!destination %in% colnames(countrycode::countrycode_data))){
             stop("Destination code not supported")
         }
         dictionary = countrycode::countrycode_data
@@ -113,7 +113,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         if(!destination %in% colnames(dictionary)){
             stop("Destination code must correpond to a column name in the dictionary data frame.")
         }
-        dups = any(duplicated(na.omit(dictionary[, origin])))
+        dups = any(duplicated(stats::na.omit(dictionary[, origin])))
         if(dups){
             stop("Countrycode cannot accept dictionaries with duplicated origin codes")
         }
