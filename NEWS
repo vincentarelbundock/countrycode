@@ -1,31 +1,40 @@
-Version 0.19 (????-??-??)
+Version 0.19 (2017-02-06)
 -------------------------
 
-* Better docs and examples
-* English country names are now official UN versions
-* Considerably speed up regex conversion by using factors (Thanks to CJ Yetman)
-* countrycode() now includes the "custom_dict" argument, which allows
-  user-supplied dictionary data.frames
-* adds a "custom_match" argument, which allows a user-supplied named vector of
-  custom origin->destination matches that will supercede any matching values in
-  the default result (issue #107) (Thanks to @cjyetman)
-* updated tests to new testthat convention (Thanks to CJ Yetman)
-* when more than one match is found for a given string, <NA> is returned rather than arbitrarily choosing the last match found (Thanks to @cjyetman)
-* Modified README to illustrate use of custom dictionaries
-* Added aviation codes (Thanks to Enrico Spinielli)
-* Added ar5 and eu28 (Thanks to Niklas Roming)
-* Added eurostat (Thanks to @cjyetman)
-* Added 2 and 3 character codes for the World Bank API: wb_api2c and wb_api3c (Thanks to @cjyetman)
-* Added alpha and numeric codes for Polity IV: p4_scode and p4_ccode (Thanks to @cjyetman)
-* Added wvs for numeric World Values Survey code (Thanks to @cjyetman)
-* Republic of China == Taiwan (Thanks to Nils Enevoldsen)
-* Martinique regex improvement (Thanks to Martyn Plummer)
-* Tahiti country name string converts to French Polynesia
-* Taiwan FAO code is 214 (Thanks to Matthieu Stigler)
+New features
+
+* "custom_dict" argument allows user-supplied dictionary data.frames
+* "custom_match" argument allows a user-supplied named vector of custom
+  origin->destination matches that will supercede any matching values in the
+  default result (issue #107) (Thanks to @cjyetman)
+* German, French, Spanish, Russian, Chinese, and Arabic country names as destination codes
+* German regular expression to convert from German names to codes. (Thanks to @sumtxt)
+* Aviation codes (Thanks to Enrico Spinielli)
+* ar5 and eu28 (Thanks to Niklas Roming)
+* eurostat (Thanks to @cjyetman)
+* 2 and 3 character codes for the World Bank API: wb_api2c and wb_api3c (Thanks to @cjyetman)
+* alpha and numeric codes for Polity IV: p4_scode and p4_ccode (Thanks to @cjyetman)
+* World Values Survey numeric code (Thanks to @cjyetman)
+
+Regex fixes and improvements:
+
+* Improved regex for Ireland and United States of America (Thanks to @cjyetman)
+* D.R. Congo (found in WVS) matches Democratic Republic of the Congo (Thanks to @cjyetman)
 * Southern Africa
 * Federated States of Micronesia
-* D.R. Congo (found in WVS) matches Democratic Republic of the Congo (Thanks to @cjyetman)
-* improved regex for Ireland and United States of America (Thanks to @cjyetman)
+* Republic of China == Taiwan (Thanks to Nils Enevoldsen)
+* Martinique (Thanks to Martyn Plummer)
+* Tahiti country name string converts to French Polynesia
+
+Misc:
+
+* Major speed-up in regex conversion by using factors (Thanks to @cjyetman)
+* when more than one match is found for a given string, <NA> is returned rather
+  than arbitrarily choosing the last match found (Thanks to @cjyetman)
+* updated tests to new testthat convention (Thanks to @cjyetman)
+* English country names are now official UN versions
+* Better docs, examples, and README
+* Taiwan FAO code is 214 (Thanks to Matthieu Stigler)
 
 Version 0.18 (2014-12-17)
 -------------------------
