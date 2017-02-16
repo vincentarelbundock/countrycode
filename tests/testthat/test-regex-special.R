@@ -196,3 +196,8 @@ test_that('some weird cases are matched', {
     expect_equal(iso3c_of('France, Martinique'), 'MTQ')
     expect_equal(iso3c_of('Martinique, France'), 'MTQ')
 })
+
+test_that('Northern Ireland is not Ireland', {
+    expect_equal(iso3c_of('Northern Ireland'), NA_character_)
+    expect_equal(iso3c_of('Ireland'), 'IRL')
+})
