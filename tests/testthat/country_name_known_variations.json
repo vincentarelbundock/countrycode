@@ -11,22 +11,28 @@
     "United Kingdom of Great Britain and Northern Ireland"
     ],
   "Republic of Korea":[
-    "South Korea",
-    "Republic of Korea",
     "Korea, Republic of",
     "Korea, Rep. of",
-    "Rep. of Korea"
+    "Korea, South",
+    "Korea South",
+    "Republic of Korea",
+    "Rep. of Korea",
+    "South Korea"
     ],
   "Democratic People's Republic of Korea":[
-    "Korea DPR",
-    "Korea D.P.R.",
+    "Democratic People's Republic of Korea",
+    "DPRK",
     "DPR Korea",
     "D.P.R. Korea",
     "D.P.R Korea",
-    "North Korea",
-    "DPRK",
-    "Democratic People's Republic of Korea",
-    "Korea, Democratic People's Republic"
+    "Korea DPR",
+    "Korea D.P.R.",
+    "Korea, North",
+    "Korea North",
+    "Korea, South",
+    "Korea South",
+    "Korea, Democratic People's Republic",
+    "North Korea"
     ],
   "Democratic Republic of the Congo":[
     "D.R. Congo",

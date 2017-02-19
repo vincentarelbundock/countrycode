@@ -17,3 +17,8 @@ test_that('sentence with two matches returns NA',{
 test_that('sentence with a single match',{
     expect_equal(countrycode('report from Canada.', 'country.name', 'country.name'), 'Canada')
 })
+
+test_that('known issues with previous versions of countrycode',{
+    # http://stackoverflow.com/questions/42235490/from-string-to-regex-to-new-string
+    expect_equal(countrycode('Stuff happens in North Korea', 'country.name', 'iso3c'), 'PRK')
+})
