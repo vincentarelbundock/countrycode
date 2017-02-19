@@ -61,4 +61,3 @@ countrycode('Albania', 'country.name', 'iso3c')
 countrycode('Albanien', 'country.name.de', 'country.name.fr')
 }
 \keyword{countrycode}
-
