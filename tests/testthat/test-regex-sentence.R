@@ -1,7 +1,9 @@
 context('Use of regexes in sentences')
 
 f = function(k) gsub('COUNTRY', k, 'The governement of COUNTRY was reelected.')
-origin = countrycode::countrycode_data$country.name.en
+origin = countrycode::countrycode_data
+# Only test country names with valid regex
+origin = origin[!is.na(origin$country.name.en.regex), 'country.name.en']
 sentence = sapply(origin, f)
 target = countrycode(sentence, 'country.name', 'country.name')
 problems = origin[is.na(target)]
