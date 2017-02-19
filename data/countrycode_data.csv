@@ -76,7 +76,7 @@ EIT,Europe,EST,366,EU,Eurocontrol,Other Europe,63,EN,EE,E,939,EST,EE,EST,233,Nor
 MAF,Africa,ETH,530,,Africa,Southern Africa,238,ET,HA,H,644,ETH,ET,ETH,231,Eastern Africa,231,ETH,إثيوبيا,Äthiopien,.?th(i|)opien|abyssinia,Ethiopia,ethiopia|abyssinia,Etiopía,Éthiopie,Эфиопия,埃塞俄比亚,ET,ET,ETH,ETI,529,231
 LAM,Americas,,,,Southern America,South-Atlantic,,FK,SF,S,323,,FK,FLK,238,South America,238,FLK,,Falklandinseln (Malvinas),falkland|malvinas,Falkland Islands (Malvinas),falkland|malvinas,,,,,FK,,,,,
 OECD1990,Europe,,,,Eurocontrol,ESRA North-West,64,FO,EK,E,816,,FO,FRO,234,Northern Europe,234,FRO,,Färöer Inseln,f(a|ä)r(o|ö|oe)er,Faroe Islands,faroe|faeroe,,,,,FO,FO,FRO,,,
-,,GFR,260,,,,,,,,,FRG,,,280,,,,,Bundesrepublik Deutschland,^(?=.*\bbundesrepublik).*deutschland|westdeutschland|brd,Federal Republic of Germany,^(?=.*\bfed.*\brep).*german|(?=.*west).*germany|bonn.?republic,,,,,,,,,,
+,,GFR,260,,,,,,,,,FRG,,,280,,,,,Bundesrepublik Deutschland,^(?=.*\bbundesrepublik).*deutschland|westdeutschland|brd,Federal Republic of Germany,(?=.*west).*germany|bonn.?republic,,,,,,,,,,
 ASIA,Oceania,FIJ,950,,Asia,Asia/Pacific,66,FJ,NF,N,819,FIJ,FJ,FJI,242,Melanesia,242,FJI,فيجي,Fidschi,fiji|fidschi,Fiji,fiji,Fiji,Fidji,Фиджи,斐济,FJ,FJ,FJI,FJI,950,
 OECD1990,Europe,FIN,375,EU,Eurocontrol,ESRA North-West,67,FI,EF,E,172,FIN,FI,FIN,246,Northern Europe,246,FIN,فنلندا,Finnland,finnland,Finland,finland,Finlandia,Finlande,Финляндия,芬兰,FI,FI,FIN,FIN,375,246
 OECD1990,Europe,FRN,220,EU,Eurocontrol,ESRA North-West,68,FR,LF,L,132,FRA,FR,FRA,250,Western Europe,250,FRA,فرنسا,Frankreich,frankreich|französische.?republik,France,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Francia,France,Франция,法国,FR,FR,FRA,FRN,220,250
