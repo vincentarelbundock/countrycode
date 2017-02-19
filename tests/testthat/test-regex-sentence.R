@@ -21,4 +21,6 @@ test_that('sentence with a single match',{
 test_that('known issues with previous versions of countrycode',{
     # http://stackoverflow.com/questions/42235490/from-string-to-regex-to-new-string
     expect_equal(countrycode('Stuff happens in North Korea', 'country.name', 'iso3c'), 'PRK')
+    expect_equal(countrycode('I heard that Ireland is beautiful.', 'country.name', 'iso3c'), 'IRL')
+    expect_equal(countrycode('   Ireland    ', 'country.name', 'iso3c'), 'IRL')
 })

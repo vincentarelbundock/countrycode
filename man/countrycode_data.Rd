@@ -68,6 +68,8 @@ To produce consistent conversion, some entries had to be removed from the
 
     This is a (possibly incomplete) list of countries and codes that were dropped:
 
+    Regexes match "Federal Republic of Germany" to cowc code 'GMY'. 
+    Regexes match "West Germany" corresponds to cowc code "GFR".
     KOREA, REPUBLIC OF: cown 731 730, cowc PRK KOR
     YEMEN: cown 680 678, cowc YAR YPR
     GERMANY: cown 267 260 245, cowc BAV GFR BAD
