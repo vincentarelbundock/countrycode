@@ -12,8 +12,9 @@ test_that('countrycode can catch countries in the middle of a sentence', {
     expect_equal(length(problems), 0)
 })
 
-test_that('sentence with two matches returns NA',{
-    expect_equal(countrycode('report from Canada and the United States.', 'country.name', 'country.name'), NA_character_)
+test_that('sentence with two matches returns NA and produces a warning',{
+    expect_equal(countrycode('report from Canada and the United States.', 'country.name', 'country.name', warn=FALSE), NA_character_)
+    expect_warning(countrycode('report from Canada and the United States.', 'country.name', 'country.name'))
 })
 
 test_that('sentence with a single match',{
