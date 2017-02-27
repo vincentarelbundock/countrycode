@@ -44,7 +44,7 @@
 "Texas","TX",".*texas.*"
 "Utah","UT",".*utah.*"
 "Vermont","VT",".*vermont.*"
-"Virginia","VA",".*virginia.*"
+"Virginia","VA","^(?!.*west).*virginia.*"
 "Washington","WA",".*washington.*"
 "West Virginia","WV",".*west.*virginia.*"
 "Wisconsin","WI",".*wisconsin.*"
