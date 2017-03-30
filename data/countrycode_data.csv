@@ -1,6 +1,6 @@
 ar5,continent,cowc,cown,eu28,eurocontrol_pru,eurocontrol_statfor,fao,fips105,icao,icao_region,imf,ioc,iso2c,iso3c,iso3n,region,un,wb,country.name.ar,country.name.de,country.name.de.regex,country.name.en,country.name.en.regex,country.name.es,country.name.fr,country.name.ru,country.name.zh,eurostat,wb_api2c,wb_api3c,p4_scode,p4_ccode,wvs
 ASIA,Asia,AFG,700,,Asia,Asia/Pacific,2,AF,OA,O,512,AFG,AF,AFG,4,Southern Asia,4,AFG,أفغانستان,Afghanistan,afghan,Afghanistan,afghan,Afganistán,Afghanistan,Афганистан,阿富汗,AF,AF,AFG,AFG,700,4
-OECD1990,Europe,,,,Eurocontrol,ESRA North-West,,,EF,E,,,AX,ALA,248,Northern Europe,248,ALA,,Aland Islands,\baland,Aland Islands,\b\wland,,,,,,,,,,
+OECD1990,Europe,,,,Eurocontrol,ESRA North-West,,,EF,E,,,AX,ALA,248,Northern Europe,248,ALA,,Aland Islands,\båland,Aland Islands,\båland,,,,,,,,,,
 EIT,Europe,ALB,339,,Eurocontrol,ESRA East,3,AL,LA,L,914,ALB,AL,ALB,8,Southern Europe,8,ALB,ألبانيا,Albanien,albanien,Albania,albania,Albania,Albanie,Албания,阿尔巴尼亚,AL,AL,ALB,ALB,339,8
 MAF,Africa,ALG,615,,Africa,North-Africa,4,AG,DA,D,612,ALG,DZ,DZA,12,Northern Africa,12,DZA,الجزائر,Algerien,algerien,Algeria,algeria,Argelia,Algérie,Алжир,阿尔及利亚,DZ,DZ,DZA,ALG,615,12
 ASIA,Oceania,,,,Asia,Asia/Pacific,,AQ,NS,N,859,ASA,AS,ASM,16,Polynesia,16,ASM,,Amerikanisch-Samoa,^(?=.*amerik).*samoa,American Samoa,^(?=.*americ).*samoa,,,,,AS,AS,ASM,,,16
