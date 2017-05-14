@@ -18,12 +18,11 @@ each country belongs.
 Type ?countrycode_data to get a list of available origin and destination
 codes.
 }
-\author{
-Vincent Arel-Bundock \email{vincent.arel-bundock@umontreal.ca}
-}
 \references{
 \url{http://arelbundock.com}
     \url{https://github.com/vincentarelbundock/countrycode}
 }
+\author{
+Vincent Arel-Bundock \email{vincent.arel-bundock@umontreal.ca}
+}
 \keyword{package}
-
