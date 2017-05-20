@@ -6,7 +6,7 @@ Version 0.19.1 (2017-02-06)
 * Fixed North Korea regex and added tests
 * Fixed Sudan iso3n code
 * Removed lookbehind from Ireland regex for javascript compatibility (request by plotly)
-* Added return_na argument
+* Added nomatch argument
 
 Version 0.19 (2017-02-06)
 -------------------------

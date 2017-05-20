@@ -2,9 +2,12 @@
 % Please edit documentation in R/countrycode.R
 \name{countrycode}
 \alias{countrycode}
-\title{Convert Country Codes}
+\title{Converts long country names into one of many different coding schemes.
+Translates from one scheme to another. Converts country name or coding
+scheme to the official short English country name. Creates a new variable
+with the name of the continent or region to which each country belongs.}
 \usage{
-countrycode(sourcevar, origin, destination, warn = TRUE, return_na = TRUE,
+countrycode(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
   custom_dict = NULL, custom_match = NULL, origin_regex = FALSE)
 }
 \arguments{
@@ -26,9 +29,12 @@ converted (character or factor)}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 
-\item{return_na}{When countrycode fails to find a match for the code of
-origin, it returns NA (return_na = TRUE) or the origin code (return_na =
-FALSE).}
+\item{nomatch}{When countrycode fails to find a match for the code of
+origin, it fills-in the destination vector with nomatch. The default
+behavior is to fill non-matching codes with NA. If nomatch = NULL,
+countrycode tries to use the origin vector to fill-in missing values in the
+destination vector. nomatch must be either NULL, of length 1, or of the same
+length as sourcevar.}
 
 \item{custom_dict}{A data frame which supplies custom country codes.
 Variables correspond to country codes, observations must refer to unique

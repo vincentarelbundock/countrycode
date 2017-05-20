@@ -1,4 +1,4 @@
-#' Convert Country Codes
+# Convert Country Codes
 #'
 #' Converts long country names into one of many different coding schemes.
 #' Translates from one scheme to another. Converts country name or coding
@@ -19,9 +19,12 @@
 #' "country.name.de", "country.name.en", "country.name.es", "country.name.fr",
 #' "country.name.ru", "country.name.zh".
 #' @param warn Prints unique elements from sourcevar for which no match was found
-#' @param return_na When countrycode fails to find a match for the code of
-#' origin, it returns NA (return_na = TRUE) or the origin code (return_na =
-#' FALSE).
+#' @param nomatch When countrycode fails to find a match for the code of
+#' origin, it fills-in the destination vector with nomatch. The default
+#' behavior is to fill non-matching codes with NA. If nomatch = NULL,
+#' countrycode tries to use the origin vector to fill-in missing values in the
+#' destination vector. nomatch must be either NULL, of length 1, or of the same
+#' length as sourcevar. 
 #' @param custom_dict A data frame which supplies custom country codes.
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
@@ -47,7 +50,7 @@
 #' countrycode('Albania', 'country.name', 'iso3c')
 #' # German to French
 #' countrycode('Albanien', 'country.name.de', 'country.name.fr')
-countrycode <- function(sourcevar, origin, destination, warn = TRUE, return_na = TRUE,
+countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
                         custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
 
     # Regex naming scheme
@@ -98,6 +101,10 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, return_na =
              arises when users pass a tibble (e.g., from dplyr) instead of a
              column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2]
                                               vs. my_tbl[[2]])')
+    }
+
+    if (!is.null(nomatch) & (length(nomatch) != 1) & (length(nomatch) != length(sourcevar))) {
+        stop('nomatch needs to be NULL, or of length 1 or ', length(sourcevar), '.')
     }
 
     if (!origin %in% valid_origin) {
@@ -187,22 +194,33 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, return_na =
         destination_vector <- matches[as.numeric(sourcefctr)]
     }
 
-    # Replace NA with origin code if return_na = FALSE and classes match
-    if (return_na == FALSE) {
-        if (class(destination_vector)[1] == class(origin_vector)[1]) {
-            idx <- is.na(destination_vector)
-            destination_vector[idx] <- origin_vector[idx]
+    # Filling-in failed matches
+    sane_sourcevar <- class(sourcevar)[1] == class(destination_vector)[1]
+    sane_nomatch <- class(nomatch)[1] == class(destination_vector)[1]
+    idx <- is.na(destination_vector)
+    if (length(nomatch) == 0) { # NULL
+        if (sane_sourcevar) {
+            destination_vector[idx] <- sourcevar[idx]
         } else {
-            warning("The argument `return_na` cannot equal TRUE when the origin and destination vectors are of different classes (e.g., character vs. numeric)")
+            warning("The origin and destination codes are not of the same
+                    class. Filling-in bad matches with NA instead.")
         }
+    } else if ((length(nomatch) == 1) & is.na(nomatch)) { # NA
+    } else if ((length(nomatch) == 1) & sane_nomatch) { # single replacement
+        destination_vector[idx] <- nomatch
+    } else if ((length(nomatch) == length(sourcevar)) & sane_sourcevar) { # vector replacement
+        destination_vector[idx] <- nomatch[idx]
+    } else {
+        warning("The argument `nomatch` must be NULL, NA, or of the same class
+                as the destination vector. Filling-in bad matches with NA instead.")
     }
 
     # Warnings
     if(warn){
-        nomatch <- sort(unique(origin_vector[is.na(destination_vector)]))
-        nomatch <- nomatch[!nomatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
-        if(length(nomatch) > 0){
-            warning("Some values were not matched unambiguously: ", paste(nomatch, collapse=", "), "\n")
+        badmatch <- sort(unique(origin_vector[is.na(destination_vector)]))
+        badmatch <- badmatch[!badmatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
+        if(length(badmatch) > 0){
+            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n")
         }
         if(origin_regex){
            if(length(destination_list) > 0){
