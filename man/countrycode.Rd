@@ -4,8 +4,8 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = TRUE, custom_dict = NULL,
-  custom_match = NULL, origin_regex = FALSE)
+countrycode(sourcevar, origin, destination, warn = TRUE, return_na = TRUE,
+  custom_dict = NULL, custom_match = NULL, origin_regex = FALSE)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be
@@ -25,6 +25,10 @@ converted (character or factor)}
 "country.name.ru", "country.name.zh".}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
+
+\item{return_na}{When countrycode fails to find a match for the code of
+origin, it returns NA (return_na = TRUE) or the origin code (return_na =
+FALSE).}
 
 \item{custom_dict}{A data frame which supplies custom country codes.
 Variables correspond to country codes, observations must refer to unique

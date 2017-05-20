@@ -19,6 +19,9 @@
 #' "country.name.de", "country.name.en", "country.name.es", "country.name.fr",
 #' "country.name.ru", "country.name.zh".
 #' @param warn Prints unique elements from sourcevar for which no match was found
+#' @param return_na When countrycode fails to find a match for the code of
+#' origin, it returns NA (return_na = TRUE) or the origin code (return_na =
+#' FALSE).
 #' @param custom_dict A data frame which supplies custom country codes.
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
@@ -44,29 +47,20 @@
 #' countrycode('Albania', 'country.name', 'iso3c')
 #' # German to French
 #' countrycode('Albanien', 'country.name.de', 'country.name.fr')
-countrycode <- function(sourcevar, origin, destination, warn = TRUE,
+countrycode <- function(sourcevar, origin, destination, warn = TRUE, return_na = TRUE,
                         custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
-    dictionary <- custom_dict
 
-    # Case-insensitive matching
-    if(is.null(dictionary)){ # only for built-in dictionary
-        if((class(sourcevar) == 'character') & !grepl('country', origin)){
-            sourcevar = toupper(sourcevar)
+    # Regex naming scheme
+    if (is.null(custom_dict)) { # only for default dictionary
+        # English regex is default
+        if (origin == 'country.name') {
+            origin <- 'country.name.en'
         }
-    }
-
-    # Regex defaults to English
-    if(origin == 'country.name'){
-        origin = 'country.name.en'
-    }
-    if(destination == 'country.name'){
-        destination = 'country.name.en'
-    }
-
-    # Auto-set origin_regex for regex origins
-    default_regex_codes <- c('country.name.en', 'country.name.de')
-    if (is.null(dictionary)) { # don't apply to custom dictionaries
-        if (origin %in% default_regex_codes) {
+        if (destination == 'country.name') {
+            destination <- 'country.name.en'
+        }
+        # .regex extension in dictionary colnames
+        if (origin %in% c('country.name.en', 'country.name.de')) {
             origin <- paste0(origin, '.regex')
             origin_regex <- TRUE
         } else {
@@ -74,55 +68,73 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         }
     }
 
+    # Set conversion dictionary
+    if (!is.null(custom_dict)) {
+        dictionary <- custom_dict
+        valid_origin <- colnames(dictionary)
+        valid_destination <- colnames(dictionary)
+    } else {
+        dictionary = countrycode::countrycode_data
+        # Modify this manually when adding codes
+        valid_origin = c("cowc", "cown", "fao", "fips105", "imf", "ioc",
+                         "iso2c", "iso3c", "iso3n", "p4_ccode", "p4_scode",
+                         "un", "wb", "wb_api2c", "wb_api3c", "wvs",
+                         "country.name.en.regex", "country.name.de.regex")
+        valid_destination <- colnames(dictionary)
+    }
+
+    # Allow tibbles as conversion dictionary
+    if('tbl_df' %in% class(dictionary)){ # allow tibble
+        dictionary <- as.data.frame(dictionary)
+    }
+
     # Sanity checks
     if (missing(sourcevar)) {
         stop('sourcevar is NULL (does not exist).')
     }
-    if (! mode(sourcevar) %in% c('character', 'numeric')) {
+
+    if (!mode(sourcevar) %in% c('character', 'numeric')) {
         stop('sourcevar must be a character or numeric vector. This error often
              arises when users pass a tibble (e.g., from dplyr) instead of a
              column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2]
                                               vs. my_tbl[[2]])')
     }
-    if(is.null(dictionary)){ # built-in dictionary
-        if(is.null(sourcevar)){
-            stop("sourcevar is NULL (does not exist).", call. = FALSE)
-        }
-        bad_origin = c("ar5", "continent", "eurocontrol_pru",
-                       "eurocontrol_statfor", "eu28", "icao", "icao_region",
-                       "region", "country.name.ar", "country.name.es",
-                       "country.name.fr", "country.name.ru", "country.name.zh")
-        bad_destination = c('country.name.en.regex', 'country.name.de.regex')
-        if ((origin %in% bad_origin) | (!origin %in% colnames(countrycode::countrycode_data))){
-            stop("Origin code not supported")
-        }
-        if ((destination %in% bad_destination) | (!destination %in% colnames(countrycode::countrycode_data))){
-            stop("Destination code not supported")
-        }
-        dictionary = countrycode::countrycode_data
-    }else{ # custom dictionary
-        if('tbl_df' %in% class(dictionary)){ # allow tibble
-            dictionary <- as.data.frame(dictionary)
-        }
-        if(class(dictionary) != 'data.frame'){
-            stop("Custom dictionary must be a data frame or tibble with codes as columns.")
-        }
-        if(!origin %in% colnames(dictionary)){
-            stop("Origin code must correpond to a column name in the dictionary data frame.")
-        }
-        if(!destination %in% colnames(dictionary)){
-            stop("Destination code must correpond to a column name in the dictionary data frame.")
-        }
-        dups = any(duplicated(stats::na.omit(dictionary[, origin])))
-        if(dups){
-            stop("Countrycode cannot accept dictionaries with duplicated origin codes")
+
+    if (!origin %in% valid_origin) {
+        stop('Origin code not supported by countrycode or present in the user-supplied custom_dict.')
+    }
+
+    if (!destination %in% valid_destination) {
+        stop('Destination code not supported by countrycode or present in the user-supplied custom_dict.')
+    }
+
+    if(class(dictionary) != 'data.frame'){
+        stop("Dictionary must be a data frame or tibble with codes as columns.")
+    }
+
+    if(!destination %in% colnames(dictionary)){
+        stop("Destination code must correpond to a column name in the dictionary data frame.")
+    }
+
+    dups = any(duplicated(stats::na.omit(dictionary[, origin])))
+    if(dups){
+        stop("Countrycode cannot accept dictionaries with duplicated origin codes")
+    }
+
+    # Copy origin_vector for later re-use
+    origin_vector <- sourcevar 
+
+    # Case-insensitive matching 
+    if(is.null(custom_dict)){ # only for built-in dictionary
+        if((class(origin_vector) == 'character') & !grepl('country', origin)){
+            origin_vector = toupper(origin_vector)
         }
     }
 
     # Convert
     if (origin_regex) { # regex codes
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
-        sourcefctr <- factor(sourcevar)
+        sourcefctr <- factor(origin_vector)
 
         # match levels of sourcefctr
         matches <-
@@ -137,7 +149,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         # create destination_list with elements that have more than one match
         destination_list <- matches[sapply(matches, length) > 1]
 
-        # add sourcevar value to beginning of match results to replicate previous behavior
+        # add origin_vector value to beginning of match results to replicate previous behavior
         destination_list <- Map(c, names(destination_list), destination_list)
 
         # set elements with multiple matches to the appropriate NA
@@ -158,7 +170,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
 
     } else { # non-regex codes
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
-        sourcefctr <- factor(sourcevar)
+        sourcefctr <- factor(origin_vector)
 
         # match levels of sourcefctr
         matchidxs <- match(levels(sourcefctr), dict[[origin]])
@@ -175,9 +187,19 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE,
         destination_vector <- matches[as.numeric(sourcefctr)]
     }
 
+    # Replace NA with origin code if return_na = FALSE and classes match
+    if (return_na == FALSE) {
+        if (class(destination_vector)[1] == class(origin_vector)[1]) {
+            idx <- is.na(destination_vector)
+            destination_vector[idx] <- origin_vector[idx]
+        } else {
+            warning("The argument `return_na` cannot equal TRUE when the origin and destination vectors are of different classes (e.g., character vs. numeric)")
+        }
+    }
+
     # Warnings
     if(warn){
-        nomatch <- sort(unique(sourcevar[is.na(destination_vector)]))
+        nomatch <- sort(unique(origin_vector[is.na(destination_vector)]))
         nomatch <- nomatch[!nomatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
         if(length(nomatch) > 0){
             warning("Some values were not matched unambiguously: ", paste(nomatch, collapse=", "), "\n")
