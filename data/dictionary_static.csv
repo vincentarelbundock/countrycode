@@ -46,6 +46,7 @@ Canada,canada,Kanada,kanada,OECD1990,Americas,,Northern America,North Atlantic,C
 Cayman Islands,cayman,Cayman Inseln,cayman,LAM,Americas,,Southern America,Mid-Atlantic,MW,M,377,Caribbean,136
 Central African Republic,\bcentral.african.republic,Zentralafrikanische Republik,\bzentralafrikanische.republik,MAF,Africa,,Africa,Southern Africa,FE,F,626,Middle Africa,140
 Chad,\bchad,Tschad,\btschad,MAF,Africa,,Africa,Southern Africa,FT,F,628,Middle Africa,148
+Channel Islands,\bchannel.islands,,,,,,,,,,,,
 Chile,\bchile,Chile,\bchile,LAM,Americas,,Southern America,South-Atlantic,S[CH],S,228,South America,152
 China,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*peo)(?=.*rep).*china,China,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*Volksrepublik).*china,ASIA,Asia,,China,Asia/Pacific,Z,Z,924,Eastern Asia,156
 Christmas Island,christmas,Weihnachtsinsel,weihnachtsinsel,ASIA,Oceania,,Asia,Asia/Pacific,Y,Y,,,

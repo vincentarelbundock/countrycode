@@ -21,17 +21,18 @@ To get an up-to-date list of supported country codes, install the package and ty
 * 600+ variants of country names in different languages and formats.
 * Correlates of War (numeric and character)
 * ISO (2/3-character and numeric)
+* United Nations
 * International Monetary Fund
+* World Bank
+* Polity IV
 * European Central Bank
 * Euro-control (aviation)
 * Eurostat
 * Food and Agriculture Organization of the United Nations
 * International Olympic Committee
 * International Civil Aviation Organization
-* Polity IV
 * United Nations Procurement Division
 * AR5
-* World Bank
 * Federal Information Processing Standard (FIPS)
 * Global Administrative Unit Layers (GAUL)
 * Geopolitical Entities, Names and Codes (GENC)
@@ -58,12 +59,14 @@ Convert single country codes:
 # ISO to Correlates of War
 countrycode('DZA', 'iso3c', 'cown') 
 [1]   615
+
 # English to ISO
 countrycode('Albania', 'country.name', 'iso3c') 
 [1] "ALB"
-# German to French
-countrycode('Albanien', 'country.name.de', 'country.name.fr') 
-[1] "Albanie"
+
+# German to Arabic
+countrycode(c('Algerien', 'Albanien'), 'country.name.de', 'un.name.ar') 
+[1] "الجزائر" "ألبانيا"
 ```
 
 ## Unicode CLDR names

@@ -15,7 +15,7 @@ src = c('cldr' = FALSE,
         'polity4_cs' = FALSE,
         'un' = FALSE,
         'unpd' = FALSE,
-        'world_bank' = FALSE,
+        'world_bank' = TRUE,
         'world_bank_api' = FALSE,
         'wvs' = FALSE)
 src = c('static' = TRUE, src) # static must always be true
