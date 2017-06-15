@@ -3,6 +3,11 @@ R: countrycode
 
 `countrycode` standardizes country names, converts them into one of seven coding schemes, assigns region descriptors, and generates empty dyadic or country-year dataframes from the coding schemes. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
 
+Contributions
+-------------
+
+Want to contribute? Great! Scroll all the way down for details.
+
 Problem
 -------
 
@@ -22,6 +27,7 @@ Installation
 ------------
 
 From the R console, type ``install.packages("countrycode")``
+
 
 Examples
 --------
@@ -123,7 +129,7 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 [1] "Michigan" "Ohio"     NA        
 ```
 
-Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::countrycode_data`` to gain access to all other codes. 
+Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::codelist`` or ``countrycode::codelist_panel`` to gain access to all other codes. 
 
 Custom country match vector
 ---------------------------------
@@ -164,4 +170,19 @@ Extra arguments
 
 Use warn=TRUE to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
 
+Contributions
+-------------
 
+The best way to contribute is to add a ``get_*`` function that downloads country codes from an official sources and formats the data.
+
+Each data source must be associated with a script called ``get_source.R`` in the ``dictionary`` folder. For instance, ``get_world_bank.R`` or ``get_fao.R``.
+
+Each ``get_source.R`` file must include a **single** function also named ``get_source``. That function downloads the original data and cleans it. It returns:
+
+ A data.frame or tibble
+
+* One column must be called ``regex`` and use countrycode regexes as unique identifiers.
+    - Please use the ``CountryToRegex`` function from ``utilities.R`` to produce that column.
+* No duplicate entries for a single country (if data is cross-sectional) or country-year (if data is panel). 
+
+If you feel a bit lazier (or don't have access to a solid online source), you can also merge your new country code manual in the ``dictionary_static.csv`` file located in the ``data`` folder.

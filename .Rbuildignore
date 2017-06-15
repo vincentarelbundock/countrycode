@@ -1,8 +1,9 @@
 cran-comments.md
-data/countrycode_data.csv
+data/backup.rds
+data/dictionary_static.csv
 data/extra
 README.md
 tests
-utilities
+dictionary
 ^.*\.Rproj$
 ^\.Rproj\.user$

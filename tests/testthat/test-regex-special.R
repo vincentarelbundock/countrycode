@@ -1,9 +1,9 @@
 context('Special cases of regex')
 
 iso3c_of <- function(name) countrycode(name, 'country.name', 'iso3c', warn = TRUE)
-no_warn_iso3c_of <- function(name) countrycode(name, 'country.name', 'iso3c')
+no_warn_iso3c_of <- function(name) countrycode(name, 'country.name', 'iso3c', warn = FALSE)
 cowc_of <- function(name) countrycode(name, 'country.name', 'cowc', warn = TRUE)
-no_warn_cowc_of <- function(name) countrycode(name, 'country.name', 'cowc')
+no_warn_cowc_of <- function(name) countrycode(name, 'country.name', 'cowc', warn = FALSE)
 
 test_that('accented characters are properly matched', {
     #expect_equal(iso3c_of('\u00C5land Islands'), 'ALA')
@@ -178,14 +178,14 @@ test_that('some old and colonial names are matched', {
 })
 
 test_that('Micronesia != Federated States of Micronesia', {
-    expect_equal(iso3c_of('Micronesia'), NA_character_)
+    expect_equal(no_warn_iso3c_of('Micronesia'), NA_character_)
     expect_equal(iso3c_of('Federated States of Micronesia'), 'FSM')
     expect_equal(iso3c_of('Micronesia, Federated States of'), 'FSM')
     expect_equal(iso3c_of('Micronesia (Federated States of)'), 'FSM')
 })
 
 test_that('South Africa', {
-    expect_equal(iso3c_of('Southern Africa'), NA_character_)
+    expect_equal(no_warn_iso3c_of('Southern Africa'), NA_character_)
     expect_equal(iso3c_of('South Africa'), 'ZAF')
     expect_equal(iso3c_of('South-Africa'), 'ZAF')
     #expect_equal(iso3c_of('S.Africa'), 'ZAF')
@@ -198,6 +198,6 @@ test_that('some weird cases are matched', {
 })
 
 test_that('Northern Ireland is not Ireland', {
-    expect_equal(iso3c_of('Northern Ireland'), NA_character_)
+    expect_equal(no_warn_iso3c_of('Northern Ireland'), NA_character_)
     expect_equal(iso3c_of('Ireland'), 'IRL')
 })
