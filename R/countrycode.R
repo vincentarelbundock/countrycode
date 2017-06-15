@@ -35,16 +35,17 @@
 #' @note For a complete description of available country codes and languages,
 #' please read the documentation for the \code{codelist} conversion
 #' dictionary.  Type: \code{?codelist}.
-#'
-#' The Correlates of War (cow) and Polity 4 (p4) project produce codes in
-#' country year format. Some countries go through political transitions that
-#' justify changing codes over time. When building a purely cross-sectional
-#' conversion dictionary, this forces us to make arbitrary choices with respect
-#' to some entities (e.g., Western Germany, Vietnam, Serbia). `countrycode`
-#' includes a reconciled dataset in panel format:
-#' `countrycode::codelist_panel`. Instead of converting codes using the
-#' `countrycode` function, we recommend that users dealing with panel data
-#' "left-merge" their data into this panel dictionary.
+#' @note Panel data (i.e., country-year) can pose particular problems when
+#' converting codes. For instance, some countries like Vietnam or Serbia go
+#' through political transitions that justify changing codes over time. This
+#' can pose problems when using codes from organizations like CoW or Polity IV,
+#' which produce codes in country-year format. Instead of converting codes
+#' using the `countrycode` function, we recommend that users use the
+#' ``countrycode::codelist_panel`` data.frame as a base into which they can
+#' merge their other data. This data.frame includes most relevant code, and is
+#' already "reconciled" to ensure that each political unit is only represented
+#' by one row in any given year. From there, it is just a matter of using `R`'s
+#' `merge` function to combine different datasets which use different codes.
 #'
 #' @export
 #' @aliases countrycode
