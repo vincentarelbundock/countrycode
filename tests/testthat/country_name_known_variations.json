@@ -1,10 +1,10 @@
 {
-  "United States of America":[
+  "United States":[
     "U.S.A.",
     "United States",
     "USA"
     ],
-  "United Kingdom of Great Britain and Northern Ireland":[
+  "United Kingdom":[
     "United Kingdom",
     "The United Kingdom",
     "United Kingdom of Great Britain",
@@ -14,7 +14,7 @@
     "Republic of Ireland",
     "Ireland"
     ],
-  "Republic of Korea":[
+  "South Korea":[
     "Korea, Republic of",
     "Korea, Rep. of",
     "Korea, South",
@@ -23,7 +23,7 @@
     "Rep. of Korea",
     "South Korea"
     ],
-  "Democratic People's Republic of Korea":[
+  "North Korea":[
     "Democratic People's Republic of Korea",
     "DPRK",
     "DPR Korea",
@@ -37,7 +37,7 @@
     "Korea (the Democratic People's Republic of)",
     "North Korea"
     ],
-  "Democratic Republic of the Congo":[
+  "Congo - Kinshasa":[
     "D.R. Congo",
     "DR Congo",
     "Democratic Republic of Congo"
@@ -51,7 +51,7 @@
     "Minor Outlying Islands, US",
     "Minor Outlying Islands, U.S."
     ],
-  "Virgin Islands, U.S.":[
+  "U.S. Virgin Islands":[
     "United States Virgin Islands",
     "US Virgin Islands",
     "U.S. Virgin Islands",

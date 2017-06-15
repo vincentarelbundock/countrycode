@@ -3,11 +3,11 @@ context('Basic conversions')
 test_that('valid iso3c to country.name works', {
     name_of <- function(iso3c_code) countrycode(iso3c_code, 'iso3c', 'country.name')
     expect_equal(name_of('CAN'), 'Canada')
-    expect_equal(name_of(c('USA', 'CAN')), c('United States of America', 'Canada'))
+    expect_equal(name_of(c('USA', 'CAN')), c('United States', 'Canada'))
 })
 
 test_that('invalid iso3c to country.name returns NA', {
-    name_of <- function(iso3c_code) countrycode(iso3c_code, 'iso3c', 'country.name')
+    name_of <- function(iso3c_code) countrycode(iso3c_code, 'iso3c', 'country.name', warn = FALSE)
     expect_equal(name_of('BAD'), NA_character_)
     expect_equal(name_of(c('BAD', 'BLA', 'CAN')), c(NA_character_, NA_character_, 'Canada'))
 })
@@ -30,9 +30,9 @@ test_that('warn=FALSE does not give warnings', {
 
 allow_duplicates = c('ar5', 'continent', 'eu28', 'eurocontrol_pru',
                      'eurocontrol_statfor', 'icao', 'icao_region', 'region') 
-cn = colnames(countrycode_data)[!colnames(countrycode_data) %in% allow_duplicates]
+cn = colnames(codelist)[!colnames(codelist) %in% allow_duplicates]
 for(code_name in cn){
-    code_list <- countrycode_data[, code_name]
+    code_list <- codelist[, code_name]
     code_list <- na.omit(code_list)
     dupes <- code_list[duplicated(code_list)]
     dupes <- toString(dupes)

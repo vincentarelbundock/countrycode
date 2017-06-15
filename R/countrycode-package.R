@@ -7,7 +7,7 @@
 #' with the name of the continent and/or several regional groupings to which
 #' each country belongs.
 #'
-#' Type ?countrycode_data to get a list of available origin and destination
+#' Type ?codelist to get a list of available origin and destination
 #' codes.
 #'
 #' @name countrycode-package

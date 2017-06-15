@@ -7,17 +7,11 @@
 #'
 #' @param sourcevar Vector which contains the codes or country names to be
 #' converted (character or factor)
-#' @param origin Coding scheme of origin (string enclosed in quotes ""):
-#' "cowc", "cown", "eurostat", "fao", "fips105", "imf", "ioc", "iso2c", "iso3c",
-#' "iso3n", "p4_ccode", "p4_scode", "un", "wb", "wb_api2c", "wb_api3c", "wvs",
-#' "country.name", "country.name.de".
-#' @param destination Coding scheme of destination (string enclosed in quotes ""):
-#' "ar5", "continent", "cowc", "cown", "eurostat", "eu28", "eurocontrol_pru",
-#' "eurocontrol_statfor", "fao", "fips105", "icao", "icao_region", "imf",
-#' "ioc", "iso2c", "iso3c", "iso3n", "p4_ccode", "p4_scode", "region", "un",
-#' "wb", "wb_api2c", "wb_api3c", "wvs", "country.name", "country.name.ar",
-#' "country.name.de", "country.name.en", "country.name.es", "country.name.fr",
-#' "country.name.ru", "country.name.zh".
+#' @param origin Coding scheme of origin (string such as "iso3c" enclosed in
+#' quotes ""): type "?codelist" for a list of available codes.
+#' @param destination Coding scheme of destination (string such as "iso3c"
+#' enclosed in quotes ""): type `?codelist` for a list of
+#' available codes.
 #' @param warn Prints unique elements from sourcevar for which no match was found
 #' @param nomatch When countrycode fails to find a match for the code of
 #' origin, it fills-in the destination vector with nomatch. The default
@@ -29,7 +23,7 @@
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
 #' checks are conducted. The data frame format must resemble
-#' countrycode::countrycode_data.
+#' countrycode::codelist.
 #' @param custom_match A named vector which supplies custom origin and
 #' destination matches that will supercede any matching default result. The name
 #' of each element will be used as the origin code, and the value of each
@@ -39,8 +33,19 @@
 #' When using the default dictionary (dictionary = NULL), origin_regex will be ignored.
 #' @keywords countrycode
 #' @note For a complete description of available country codes and languages,
-#' please read the documentation for the \code{countrycode_data} conversion
-#' dictionary.  Type: \code{?countrycode_data}.
+#' please read the documentation for the \code{codelist} conversion
+#' dictionary.  Type: \code{?codelist}.
+#'
+#' The Correlates of War (cow) and Polity 4 (p4) project produce codes in
+#' country year format. Some countries go through political transitions that
+#' justify changing codes over time. When building a purely cross-sectional
+#' conversion dictionary, this forces us to make arbitrary choices with respect
+#' to some entities (e.g., Western Germany, Vietnam, Serbia). `countrycode`
+#' includes a reconciled dataset in panel format:
+#' `countrycode::codelist_panel`. Instead of converting codes using the
+#' `countrycode` function, we recommend that users dealing with panel data
+#' "left-merge" their data into this panel dictionary.
+#'
 #' @export
 #' @aliases countrycode
 #' @examples
@@ -77,11 +82,13 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         valid_origin <- colnames(dictionary)
         valid_destination <- colnames(dictionary)
     } else {
-        dictionary = countrycode::countrycode_data
+        dictionary = countrycode::codelist
         # Modify this manually when adding codes
-        valid_origin = c("cowc", "cown", "fao", "fips105", "imf", "ioc",
-                         "iso2c", "iso3c", "iso3n", "p4_ccode", "p4_scode",
-                         "un", "wb", "wb_api2c", "wb_api3c", "wvs",
+        valid_origin = c("country.name", "country.name.de", "cowc", "cown",
+                         "ecb", "eurostat", "fao", "fips", "gaul", "genc2c",
+                         "genc3c", "genc3n", "imf", "ioc", "iso2c", "iso3c",
+                         "iso3n", "p4c", "p4nj", "un", "unpd", "wb",
+                         "wb_api2c", "wb_api3c", "wvs",
                          "country.name.en.regex", "country.name.de.regex")
         valid_destination <- colnames(dictionary)
     }
