@@ -1,12 +1,14 @@
 Package: countrycode
-Maintainer: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
 License: GPL-3
 Title: Convert Country Names and Country Codes
 LazyData: yes
 Type: Package
 LazyLoad: yes
 Encoding: UTF-8
-Author: Vincent Arel-Bundock <vincent.arel-bundock@umontreal.ca>
+Authors@R: c(
+    person("Vincent", "Arel-Bundock", email = "vincent.arel-bundock@umontreal.ca", role = c("aut", "cre")),
+    person("CJ", "Yetman, email = "cj@cjyetman.com", role = "ctb")
+    )
 Description: Standardize country names, convert them into one of
     eleven coding schemes, convert between coding schemes, and
     assign region descriptors.
