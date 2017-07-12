@@ -7,7 +7,7 @@ LazyLoad: yes
 Encoding: UTF-8
 Authors@R: c(
     person("Vincent", "Arel-Bundock", email = "vincent.arel-bundock@umontreal.ca", role = c("aut", "cre")),
-    person("CJ", "Yetman, email = "cj@cjyetman.com", role = "ctb")
+    person("CJ", "Yetman", email = "cj@cjyetman.com", role = "ctb")
     )
 Description: Standardize country names, convert them into one of
     eleven coding schemes, convert between coding schemes, and
