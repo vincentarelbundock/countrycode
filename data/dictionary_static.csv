@@ -136,7 +136,7 @@ Lebanon,lebanon,Libanon,libanon,MAF,Asia,,Middle East,Middle-East,OL,O,446,Weste
 Lesotho,lesotho|basuto,Lesotho,lesotho|basuto,MAF,Africa,,Africa,Southern Africa,FX,F,666,Southern Africa,426
 Liberia,liberia,Liberia,liberia,MAF,Africa,,Africa,Southern Africa,GL,G,668,Western Africa,430
 Libya,libya,Libyen,libyen,MAF,Africa,,Africa,North-Africa,HL,H,672,Northern Africa,434
-Liechtenstein,liechtenstein,Liechtenstein,liechtenstein,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,LS,L,,Western Europe,438
+Liechtenstein,liechtenstein,Liechtenstein,liechtenstein,OECD1990,Europe,,Eurocontrol,ESRA North-West,LS,L,,Western Europe,438
 Lithuania,lithuania,Litauen,litauen,EIT,Europe,EU,Eurocontrol,Other Europe,EY,E,946,Northern Europe,440
 Luxembourg,^(?!.*belg).*luxem,Luxemburg,^(?!.*belg).*luxem,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,EL,E,137,Western Europe,442
 Macao,maca(o|u),Macao,maca(o|u),,Asia,,China,Asia/Pacific,VM,V,546,Eastern Asia,446
