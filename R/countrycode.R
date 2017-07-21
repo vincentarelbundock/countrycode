@@ -92,6 +92,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
                          "wb_api2c", "wb_api3c", "wvs",
                          "country.name.en.regex", "country.name.de.regex")
         valid_destination <- colnames(dictionary)
+        valid_destination <- c(valid_destination, 'google', 'dstk')
     }
 
     # Allow tibbles as conversion dictionary
@@ -127,8 +128,12 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         stop("Dictionary must be a data frame or tibble with codes as columns.")
     }
 
-    if(!destination %in% colnames(dictionary)){
-        stop("Destination code must correpond to a column name in the dictionary data frame.")
+    if ((destination == 'google') & (origin != 'country.name.en.regex')) {
+        stop('origin must equal "country.name" when the destination is "google".')
+    }
+
+    if ((destination == 'dstk') & (origin != 'country.name.en.regex')) {
+        stop('origin must equal "country.name" when the destination is "google".')
     }
 
     dups = any(duplicated(stats::na.omit(dictionary[, origin])))
@@ -147,7 +152,17 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     # Convert
-    if (origin_regex) { # regex codes
+    if (destination == 'google') {
+
+        origin_regex = FALSE
+        destination_vector <- sapply(origin_vector, parse_google)
+
+    } else if (destination == 'dstk') {
+
+        origin_regex = FALSE
+        destination_vector <- sapply(origin_vector, parse_dstk)
+
+    } else if (origin_regex) { # regex codes
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
         sourcefctr <- factor(origin_vector)
 
