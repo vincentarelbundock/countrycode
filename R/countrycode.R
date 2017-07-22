@@ -152,72 +152,32 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     # Convert
-    if (destination == 'google') {
-
+    if (destination %in% c('google', 'dstk')) { # web api
         origin_regex = FALSE
-        destination_vector <- sapply(origin_vector, parse_google)
-
-    } else if (destination == 'dstk') {
-
-        origin_regex = FALSE
-        destination_vector <- sapply(origin_vector, parse_dstk)
-
+        destination_vector <- sapply(origin_vector, parse_api, api = destination)
     } else if (origin_regex) { # regex codes
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
-        sourcefctr <- factor(origin_vector)
-
-        # match levels of sourcefctr
-        matches <-
-          sapply(c(levels(sourcefctr), NA), function(x) { # add NA so there's at least one item
-            matchidx <- sapply(dict[[origin]], function(y) grepl(y, x, perl = TRUE, ignore.case = TRUE))
-            dict[matchidx, destination]
-          })
-
-        # fill elements that have zero matches with the appropriate NA
-        matches[sapply(matches, length) == 0] <- `class<-`(NA, class(dict[[destination]]))
-
-        # create destination_list with elements that have more than one match
-        destination_list <- matches[sapply(matches, length) > 1]
-
-        # add origin_vector value to beginning of match results to replicate previous behavior
-        destination_list <- Map(c, names(destination_list), destination_list)
-
-        # set elements with multiple matches to the appropriate NA
-        matches[sapply(matches, length) > 1] <- `class<-`(NA, class(dict[[destination]]))
-
-        # remove all but last match to replicate previous behavior
-        matches <- sapply(matches, function(x) { x[length(x)] })
-
-        # replace with custom matches if set
-        if (!is.null(custom_match)) {
-          matchidxs <- match(names(matches), names(custom_match))
-          cust_matched <- !is.na(matchidxs)
-          matches[cust_matched] <- custom_match[matchidxs][cust_matched]
-        }
-
-        # apply new levels to sourcefctr and unname
-        destination_vector <- unname(matches[as.numeric(sourcefctr)])
-
+        destination_vector <- parse_regex(origin_vector, dict, warn)
     } else { # non-regex codes
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
-        sourcefctr <- factor(origin_vector)
+        origin_factor <- factor(origin_vector)
 
-        # match levels of sourcefctr
-        matchidxs <- match(levels(sourcefctr), dict[[origin]])
+        # match levels of origin_factor
+        matchidxs <- match(levels(origin_factor), dict[[origin]])
         matches <- dict[[destination]][matchidxs]
 
-        # replace with custom matches if set
-        if (!is.null(custom_match)) {
-          matchidxs <- match(levels(sourcefctr), names(custom_match))
-          cust_matched <- !is.na(matchidxs)
-          matches[cust_matched] <- custom_match[matchidxs][cust_matched]
-        }
-
-        # apply new levels to sourcefctr
-        destination_vector <- matches[as.numeric(sourcefctr)]
+        # apply new levels to origin_factor
+        destination_vector <- matches[as.numeric(origin_factor)]
     }
 
-    # Filling-in failed matches
+    # replace with custom matches if set
+    if (!is.null(custom_match)) {
+      matchidxs <- match(levels(origin_factor), names(custom_match))
+      cust_matched <- !is.na(matchidxs)
+      matches[cust_matched] <- custom_match[matchidxs][cust_matched]
+    }
+
+    # Filling-in failed matches with user-supplied `nomatch` argument
     sane_sourcevar <- class(sourcevar)[1] == class(destination_vector)[1]
     sane_nomatch <- class(nomatch)[1] == class(destination_vector)[1]
     idx <- is.na(destination_vector)
@@ -238,20 +198,5 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
                 as the destination vector. Filling-in bad matches with NA instead.")
     }
 
-    # Warnings
-    if(warn){
-        badmatch <- sort(unique(origin_vector[is.na(destination_vector)]))
-        badmatch <- badmatch[!badmatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
-        if(length(badmatch) > 0){
-            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n")
-        }
-        if(origin_regex){
-           if(length(destination_list) > 0){
-               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
-               destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n")
-           }
-        }
-    }
     return(destination_vector)
 }
