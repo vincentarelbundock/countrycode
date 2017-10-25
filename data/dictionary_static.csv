@@ -195,7 +195,7 @@ Republic of Korea,^(?!.*d.*p.*r)(?!.*democrat)(?!.*people)(?!.*north).*\bkorea(?
 Republic of Moldova,moldov|b(a|e)ssarabia,Republik Moldau,moldau|moldov|b(a|e)ssarabia,EIT,Europe,,Eurocontrol,ESRA East,LU,L,921,Eastern Europe,498
 Reunion,r(e|é)union,Reunion,r(e|é)union,MAF,Africa,,Africa,Southern Africa,FM,F,696,Eastern Africa,638
 Romania,r(o|u|ou)mania,Rumänien,rum(a|ä)nien,EIT,Europe,EU,Eurocontrol,ESRA East,LR,L,968,Eastern Europe,642
-Russian Federation,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics,Russische Föderation,\brussland|russ.*föderation|sowjet.?union|u\.?s\.?s\.?r|sowjet.?republik|udssr,EIT,Europe,,Russia,Asia/Pacific,U[^ABDGKMT],U,922,Eastern Europe,643
+Russian Federation,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics,Russische Föderation,\brussland|russ.*föderation|sowjet.?union|u\.?s\.?s\.?r|sowjet.?republik|udssr,EIT,Europe,,Russia,Other Europe,U[^ABDGKMT],U,922,Eastern Europe,643
 Rwanda,rwanda,Ruanda,r(u|w)anda,MAF,Africa,,Africa,Southern Africa,HR,H,714,Eastern Africa,646
 Saint Barthelemy,barth(e|é)lemy,Saint-Barthelemy,barth(e|é)lemy,,Americas,,Southern America,Mid-Atlantic,TF,T,,Caribbean,652
 "Saint Helena, Ascension and Tristan da Cunha",helena,"St. Helena, Ascension und Tristan da Cunha",helena,MAF,Africa,,Africa,Southern Africa,FH,F,856,Western Africa,654
