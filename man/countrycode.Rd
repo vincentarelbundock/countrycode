@@ -74,6 +74,6 @@ countrycode(c('USA', 'DZA'), 'iso3c', 'cown')
 # English to ISO
 countrycode('Albania', 'country.name', 'iso3c')
 # German to French
-countrycode('Albanien', 'country.name.de', 'country.name.fr')
+countrycode('Albanien', 'country.name.de', 'iso.name.fr')
 }
 \keyword{countrycode}

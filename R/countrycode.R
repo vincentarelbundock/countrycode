@@ -55,7 +55,7 @@
 #' # English to ISO
 #' countrycode('Albania', 'country.name', 'iso3c')
 #' # German to French
-#' countrycode('Albanien', 'country.name.de', 'country.name.fr')
+#' countrycode('Albanien', 'country.name.de', 'iso.name.fr')
 countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
                         custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
 

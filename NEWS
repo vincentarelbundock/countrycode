@@ -1,11 +1,12 @@
-Version 1.00.0 (2017-06-15)
+Version 1.00.0 (2018-02-08)
 ---------------------------
 
-* Country-Year conversion dictionary
-* Dictionary built from original source
 * Huge thanks to @cjyetman for his incredible work on this major release!
+* Country-Year (panel) conversion dictionary
+* Dictionary built from original sources
 * Liechtenstein should not be in eu28
 * Russia eurocontrol region fix
+* CLRD country names 
 
 Version 0.19.1 (2017-02-06)
 ---------------------------

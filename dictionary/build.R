@@ -99,6 +99,6 @@ panel = cbind(a, b)
 # Save files
 codelist = cs
 codelist_panel = panel
-saveRDS(dat, 'data/backup.rds')
-save(codelist, file = 'data/codelist.rda')
-save(codelist_panel, file = 'data/codelist_panel.rda')
+saveRDS(dat, 'data/backup.rds', compress = 'xz')
+save(codelist, file = 'data/codelist.rda', compress = 'xz')
+save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz')

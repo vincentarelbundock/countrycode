@@ -77,6 +77,5 @@
 #' @docType data
 #' @keywords datasets
 #' @name codelist
-#' @usage ?codelist
 #' @format data frame with codes as columns
 NULL
