@@ -36,6 +36,7 @@
 #'              (AR5) and for the Reference Concentration Pathways (RCP)
 #'   \item continent: Continent as defined in the World Bank Development Indicators
 #'   \item cow.name: Correlates of War country name
+#'   \item dstk: Uses the Data Science Toolkit's web API to parse country names. origin must be 'country.name'
 #'   \item ecb.name: European Central Bank country name
 #'   \item eurocontrol_pru:  European Organisation for the Safety of Air Navigation
 #'   \item eurocontrol_statfor:  European Organisation for the Safety of Air Navigation
@@ -45,6 +46,7 @@
 #'   \item fao.name: Food and Agriculture Organization of the United Nations country name
 #'   \item fips.name: FIPS 10-4 Country name
 #'   \item genc.name: Geopolitical Entities, Names and Codes standard country names
+#'   \item google: Uses Google's web API to parse country names. origin must be 'country.name'
 #'   \item icao: International Civil Aviation Organization
 #'   \item icao_region: International Civil Aviation Organization (Region)
 #'   \item ioc.name: International Olympic Committee country name

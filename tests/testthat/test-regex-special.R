@@ -65,40 +65,41 @@ test_that('some common abbreviations are properly matched', {
     expect_equal(iso3c_of('u.k.'), 'GBR')
     expect_equal(iso3c_of('fyrom'), 'MKD')
     expect_equal(iso3c_of('united arab em.'), 'ARE')
-    expect_equal(no_warn_iso3c_of('united arab republic'), NA_character_) # Doesn't have in iso3c
     expect_equal(iso3c_of('emirates'), 'ARE')
     expect_equal(iso3c_of('uae'), 'ARE')
     expect_equal(iso3c_of('u.a.e.'), 'ARE')
+    expect_true(is.na(no_warn_iso3c_of('united arab republic'))) # Doesn't have in iso3c
 })
 
 test_that('the Netherlands Antilles are all matched correctly', {
     expect_equal(iso3c_of('netherlands antilles'), 'ANT')                                  # A former country
     expect_equal(iso3c_of('dutch antilles'), 'ANT')                                        # A former country
-    expect_equal(no_warn_iso3c_of('dutch caribbean'), NA_character_)                       # The meaning of this unit is ambiguous
+    expect_true(is.na(no_warn_iso3c_of('dutch caribbean')))                       # The meaning of this unit is ambiguous
     expect_equal(iso3c_of('aruba'), 'ABW')                                                 # A country of the Netherlands
     expect_equal(iso3c_of('curaçao'), 'CUW')                                          # A country of the Netherlands
     expect_equal(iso3c_of('sint maarten'), 'SXM')                                          # A country of the Netherlands
     expect_equal(iso3c_of('collectivity of saint martin'), 'MAF')                          # A French overseas collectivity
     expect_equal(iso3c_of('saint martin (french part)'), 'MAF')                            # A French overseas collectivity
-    expect_equal(no_warn_iso3c_of('saint martin'), NA_character_)                           # The meaning of this unit is ambiguous
-    expect_equal(no_warn_iso3c_of('st. martin'), NA_character_)                             # The meaning of this unit is ambiguous
-    expect_equal(no_warn_iso3c_of('saint-martin'), NA_character_)                           # An island, not a political entity
-    expect_equal(no_warn_iso3c_of('St-Martin / Sint Maarten'), NA_character_)               # An island, not a political entity
-    expect_equal(no_warn_iso3c_of('St-Martin / St-Maarten'), NA_character_)                 # An island, not a political entity
-    expect_equal(no_warn_iso3c_of('St. Martin and St. Maarten'), NA_character_)             # An island, not a political entity
-    expect_equal(no_warn_iso3c_of('St Maarten – St Martin'), NA_character_)                 # An island, not a political entity
     expect_equal(iso3c_of('bonaire, saba, and sint eustatius'), 'BES')                     # Municipalities of the Netherlands
     expect_equal(iso3c_of('bes islands'), 'BES')                                           # Municipalities of the Netherlands
     expect_equal(iso3c_of('caribbean netherlands'), 'BES')                                 # Municipalities of the Netherlands
-    expect_equal(no_warn_iso3c_of('greater antilles'), NA_character_)                       # Not a political entity
-    expect_equal(no_warn_iso3c_of('lesser antilles'), NA_character_)                        # Not a political entity
-    expect_equal(no_warn_iso3c_of('abc islands'), NA_character_)                            # Not a political entity
-    expect_equal(no_warn_iso3c_of('leeward islands'), NA_character_)                        # Not a political entity
-    expect_equal(no_warn_iso3c_of('leeward antilles'), NA_character_)                       # Not a political entity
-    expect_equal(no_warn_iso3c_of('aruba, bonaire, and curaçao'), NA_character_)            # Not a political entity
-    expect_equal(no_warn_iso3c_of('sss islands'), NA_character_)                            # Not a political entity
-    expect_equal(no_warn_iso3c_of('windward islands'), NA_character_)                       # Not a political entity
-    expect_equal(no_warn_iso3c_of('sint maarten, saba, and sint eustatius'), NA_character_) # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('saint martin')))                           # The meaning of this unit is ambiguous
+    expect_true(is.na(no_warn_iso3c_of('st. martin')))                             # The meaning of this unit is ambiguous
+    expect_true(is.na(no_warn_iso3c_of('saint-martin')))                           # An island, not a political entity
+    expect_true(is.na(no_warn_iso3c_of('St-Martin / Sint Maarten')))               # An island, not a political entity
+    expect_true(is.na(no_warn_iso3c_of('St-Martin / St-Maarten')))                 # An island, not a political entity
+    expect_true(is.na(no_warn_iso3c_of('St. Martin and St. Maarten')))             # An island, not a political entity
+    expect_true(is.na(no_warn_iso3c_of('St Maarten – St Martin')))                 # An island, not a political entity
+    expect_true(is.na(no_warn_iso3c_of('greater antilles')))                       # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('lesser antilles')))                        # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('abc islands')))                            # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('leeward islands')))                        # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('leeward antilles')))                       # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('aruba, bonaire, and curaçao')))            # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('sss islands')))                            # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('windward islands')))                       # Not a political entity
+    expect_true(is.na(no_warn_iso3c_of('sint maarten, saba, and sint eustatius'))) # Not a political entity
+
 })
 
 test_that('the two Congos are distinguished', {
@@ -109,7 +110,6 @@ test_that('the two Congos are distinguished', {
     expect_equal(iso3c_of('congo, rep.'), 'COG')
     expect_equal(iso3c_of('congo-brazzaville'), 'COG')
     expect_equal(iso3c_of('french congo'), 'COG')
-    expect_equal(no_warn_iso3c_of('ROC'), NA_character_)   # Could be Taiwan or Congo
     expect_equal(iso3c_of('democratic republic of the congo'), 'COD')
     expect_equal(iso3c_of('congo, democratic republic of the'), 'COD')
     expect_equal(iso3c_of('dem rep of the congo'), 'COD')
@@ -125,6 +125,7 @@ test_that('the two Congos are distinguished', {
     expect_equal(iso3c_of('belgian congo'), 'COD')
     expect_equal(iso3c_of('republic of the congo-léopoldville'), 'COD')
     expect_equal(iso3c_of('congo free state'), 'COD')
+    expect_true(is.na(no_warn_iso3c_of('ROC')))   # Could be Taiwan or Congo
 })
 
 test_that('China and Taiwan', {
@@ -149,7 +150,7 @@ test_that('the four Yemens are distinguished', {
     expect_equal(cowc_of('south yemen'), 'YPR')
     expect_equal(cowc_of('democratic yemen'), 'YPR')
     expect_equal(cowc_of('yemen (aden)'), 'YPR')
-    expect_equal(no_warn_cowc_of('democratic republic of yemen'), NA_character_)
+    expect_true(is.na(no_warn_cowc_of('democratic republic of yemen')))
 })
 
 test_that('some old and colonial names are matched', {
@@ -178,14 +179,14 @@ test_that('some old and colonial names are matched', {
 })
 
 test_that('Micronesia != Federated States of Micronesia', {
-    expect_equal(no_warn_iso3c_of('Micronesia'), NA_character_)
+    expect_true(is.na(no_warn_iso3c_of('Micronesia')))
     expect_equal(iso3c_of('Federated States of Micronesia'), 'FSM')
     expect_equal(iso3c_of('Micronesia, Federated States of'), 'FSM')
     expect_equal(iso3c_of('Micronesia (Federated States of)'), 'FSM')
 })
 
 test_that('South Africa', {
-    expect_equal(no_warn_iso3c_of('Southern Africa'), NA_character_)
+    expect_true(is.na(no_warn_iso3c_of('Southern Africa')))
     expect_equal(iso3c_of('South Africa'), 'ZAF')
     expect_equal(iso3c_of('South-Africa'), 'ZAF')
     #expect_equal(iso3c_of('S.Africa'), 'ZAF')
@@ -198,6 +199,6 @@ test_that('some weird cases are matched', {
 })
 
 test_that('Northern Ireland is not Ireland', {
-    expect_equal(no_warn_iso3c_of('Northern Ireland'), NA_character_)
+    expect_true(is.na(no_warn_iso3c_of('Northern Ireland')))
     expect_equal(iso3c_of('Ireland'), 'IRL')
 })
