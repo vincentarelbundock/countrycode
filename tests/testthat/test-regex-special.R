@@ -72,14 +72,17 @@ test_that('some common abbreviations are properly matched', {
 })
 
 test_that('the Netherlands Antilles are all matched correctly', {
-    expect_equal(iso3c_of('netherlands antilles'), 'ANT')                                  # A former country
-    expect_equal(iso3c_of('dutch antilles'), 'ANT')                                        # A former country
-    expect_equal(no_warn_iso3c_of('dutch caribbean'), NA_character_)                       # The meaning of this unit is ambiguous
-    expect_equal(iso3c_of('aruba'), 'ABW')                                                 # A country of the Netherlands
-    expect_equal(iso3c_of('curaçao'), 'CUW')                                          # A country of the Netherlands
-    expect_equal(iso3c_of('sint maarten'), 'SXM')                                          # A country of the Netherlands
-    expect_equal(iso3c_of('collectivity of saint martin'), 'MAF')                          # A French overseas collectivity
-    expect_equal(iso3c_of('saint martin (french part)'), 'MAF')                            # A French overseas collectivity
+    # The codes for the Netherlands Antilles are deleted from ISO 3166-1 and
+    # transitionally reserved for a period of 50 years:
+    # https://www.iso.org/news/2010/12/Ref1383.html
+    expect_true(is.na(no_warn_iso3c_of('netherlands antilles'))                             # A former country
+    expect_true(is.na(no_warn_iso3c_of('dutch antilles'))                                   # A former country
+    expect_equal(no_warn_iso3c_of('dutch caribbean'), NA_character_)                        # The meaning of this unit is ambiguous
+    expect_equal(iso3c_of('aruba'), 'ABW')                                                  # A country of the Netherlands
+    expect_equal(iso3c_of('curaçao'), 'CUW')                                                # A country of the Netherlands
+    expect_equal(iso3c_of('sint maarten'), 'SXM')                                           # A country of the Netherlands
+    expect_equal(iso3c_of('collectivity of saint martin'), 'MAF')                           # A French overseas collectivity
+    expect_equal(iso3c_of('saint martin (french part)'), 'MAF')                             # A French overseas collectivity
     expect_equal(no_warn_iso3c_of('saint martin'), NA_character_)                           # The meaning of this unit is ambiguous
     expect_equal(no_warn_iso3c_of('st. martin'), NA_character_)                             # The meaning of this unit is ambiguous
     expect_equal(no_warn_iso3c_of('saint-martin'), NA_character_)                           # An island, not a political entity

@@ -15,12 +15,14 @@ src = c('cldr' = FALSE,
         'polity4_cs' = FALSE,
         'un' = FALSE,
         'unpd' = FALSE,
-        'world_bank' = TRUE,
+        'vdem' = TRUE,
+        'vdem_cs' = TRUE,
+        'world_bank' = FALSE,
         'world_bank_api' = FALSE,
         'wvs' = FALSE)
 src = c('static' = TRUE, src) # static must always be true
-panel_only = c('cow', 'polity4')
-crosssection_only = c('cow_cs', 'polity4_cs')
+panel_only = c('cow', 'polity4', 'vdem')
+crosssection_only = c('cow_cs', 'polity4_cs', 'vdem_cs')
 
 # Flip toggle back to TRUE if dataset is not available in backup
 bak = readRDS('data/backup.rds')

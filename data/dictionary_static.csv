@@ -36,6 +36,7 @@ Bouvet Island,bouvet,Bouvet Island,bouvet,LAM,,,,,,,,,
 Brazil,brazil,Brasilien,brasil,LAM,Americas,,Southern America,South-Atlantic,S[BDIJNSW],S,223,South America,76
 British Indian Ocean Territory,british.?indian.?ocean,Britisches Territorium im Indischen Ozean,britisches.territorium.im.indischen.ozean,ASIA,,,,,,,,,
 Brunei Darussalam,brunei,Brunei Darussalam,brunei,ASIA,Asia,,Asia,Asia/Pacific,WB,W,516,South-Eastern Asia,96
+Brunswick,brunswick,,,,,,,,,,,,
 Bulgaria,bulgaria,Bulgarien,bulgarien,EIT,Europe,EU,Eurocontrol,ESRA East,LB,L,918,Eastern Europe,100
 Burkina Faso,burkina|\bfaso|upper.?volta,Burkina Faso,burkina|\bfaso|upper.?volta,MAF,Africa,,Africa,Southern Africa,DF,D,748,Western Africa,854
 Burundi,burundi,Burundi,burundi,MAF,Africa,,Africa,Southern Africa,HB,H,618,Eastern Africa,108
@@ -61,8 +62,9 @@ Croatia,croatia,Kroatien,kroatien,EIT,Europe,EU,Eurocontrol,ESRA East,LD,L,960,S
 Cuba,\bcuba,Kuba,\bkuba,LAM,Americas,,Southern America,Mid-Atlantic,MU,M,928,Caribbean,192
 Curacao,^(?!.*bonaire).*\bcura(c|ç)ao,Curacao,^(?!.*bonaire).*\bcura(c|ç)ao,LAM,Americas,,Southern America,Mid-Atlantic,TN,T,354,Caribbean,531
 Cyprus,cyprus,Zypern,zypern,EIT,Asia,EU,Eurocontrol,ESRA Mediterranean,LC,L,423,Western Asia,196
-Czechoslovakia,czechoslovakia,Tschechoslowakei,tschechoslowakei|^csr$,,,,,,,,934,,
 Czech Republic,^(?=.*rep).*czech|czechia|bohemia,Tschechische Republik,^(?!.*slowak)tschechi.*,EIT,Europe,EU,Eurocontrol,ESRA East,LK,L,935,Eastern Europe,203
+Czechoslovakia,czechoslovakia,Tschechoslowakei,tschechoslowakei|^csr$,,,,,,,,934,,
+Democratic People's Republic of Korea,dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*peo.*rep.*)|(d.p.r|dpr|north|dem.*peo.*rep.*).+korea,"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk,ASIA,Asia,,Asia,Asia/Pacific,ZK,Z,,Eastern Asia,408
 Democratic Republic of the Congo,\bdem.*congo|congo.*\bdem|congo.*\bd[\.]?r|\bd[\.]?r.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Demokratische Republik Kongo,\bdem.*kongo|kongo.*\bdem|kongo.*\bdr|\bdr.*kongo|belgien.?kongo|kongo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,MAF,Africa,,Africa,Southern Africa,FZ,F,636,Middle Africa,180
 Denmark,denmark,Dänemark,d(a|ae|ä)nemark,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,EK,E,128,Northern Europe,208
 Djibouti,djibouti,Dschibuti,dschibuti,MAF,Africa,,Africa,Southern Africa,HD,H,611,Eastern Africa,262
@@ -87,7 +89,7 @@ French Southern Territories,french.?southern,Französische Südgebiete,französi
 Gabon,gabon,Gabun,gabun,MAF,Africa,,Africa,Southern Africa,FO,F,646,Middle Africa,266
 Gambia (Islamic Republic of the),gambia,Gambia,gambia,MAF,Africa,,Africa,Southern Africa,GB,G,648,Western Africa,270
 Georgia,^(?!.*south).*georgia,Georgien,^(?!.*süd).*georgien,EIT,Asia,,Eurocontrol,Other Europe,UG,U,915,Western Asia,268
-German Democratic Republic,german.?democratic.?republic|democratic.?republic.*germany|east.germany|germany.*east,Deutsche Demokratische Republik,deutsche.?demokratische.?republik|ostdeutschland|ddr,,,,Eurocontrol,ESRA North-West,ET,E,,,
+German Democratic Republic,german.?democratic.?rep|democratic.?rep.*germany|east.germany|germany.*east,Deutsche Demokratische Republik,deutsche.?demokratische.?republik|ostdeutschland|ddr,,,,Eurocontrol,ESRA North-West,ET,E,,,
 Germany,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,Deutschland,^(?!.*ost).*deutschland|^(?=.*\bbundesrepublik).*deutschland,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,E[DT],E,134,Western Europe,276
 Ghana,ghana|gold.?coast,Ghana,ghana|gold.?küste,MAF,Africa,,Africa,Southern Africa,DG,D,652,Western Africa,288
 Gibraltar,gibraltar,Gibraltar,gibraltar,OECD1990,Europe,,Eurocontrol,Other Europe,LX,L,823,Southern Europe,292
@@ -102,10 +104,13 @@ Guinea,^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea,Guinea,^(?!.*
 Guinea Bissau,bissau|^(?=.*portu).*guinea,Guinea-Bissau,bissau|^(?=.*portu).*guinea,MAF,Africa,,Africa,Southern Africa,GG,G,654,Western Africa,624
 Guyana,guyana|british.?guiana,Guyana,gu(y|i)ana|britisch.?gua(y|i)ana,MAF,Americas,,Southern America,South-Atlantic,SY,S,336,South America,328
 Haiti,haiti,Haiti,haiti,LAM,Americas,,Southern America,Mid-Atlantic,MT,M,263,Caribbean,332
+Hamburg,hamburg,,,,,,,,,,,,
 Hanover,hanover,Hannover,hannover,,,,,,,,,,
 Heard Island and McDonald Islands,heard.*mcdonald,Heard und McDonaldinseln,heard.*mcdonald,ASIA,,,,,,,,,
 Hesse Electoral,hesse.*lectoral,Kurfürstentum Hessen,kurf(ü|u)rsten.*hessen,,,,,,,,,,
 Hesse Grand Ducal,hess.*gran.*ducal,Großherzogtum Hessen,gro(ß|ss)herzog.*hessen,,,,,,,,,,
+Hesse-Darmstadt,hesse.darmstadt,,,,,,,,,,,,
+Hesse-Kassel,hesse.kassel,,,,,,,,,,,,
 Holy See (Vatican City State),holy.?see|vatican|papal.?st,Vatikanstaat,vatikan,OECD1990,Europe,,,,,,,Southern Europe,336
 Honduras,^(?!.*brit).*honduras,Honduras,^(?!.*brit).*honduras,LAM,Americas,,Southern America,Mid-Atlantic,MH,M,268,Central America,340
 Hong Kong,hong.?kong,Hongkong,hong.?kong,,Asia,,China,Asia/Pacific,VH,V,532,Eastern Asia,344
@@ -126,7 +131,6 @@ Jordan,jordan,Jordanien,jordan,MAF,Asia,,Middle East,Middle-East,OJ,O,439,Wester
 Kazakhstan,kazak,Kasachstan,kasach,EIT,Asia,,Asia,Asia/Pacific,UA,U,916,Central Asia,398
 Kenya,kenya|british.?east.?africa|east.?africa.?prot,Kenia,kenia|britisch.?ost.?afrika|protektorat.?ostafrika,MAF,Africa,,Africa,Asia/Pacific,HK,H,664,Eastern Africa,404
 Kiribati,kiribati,Kiribati,kiribati,ASIA,Oceania,,Asia,Asia/Pacific,NG,N,826,Micronesia,296
-Democratic People's Republic of Korea,dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*peo.*rep.*)|(d.p.r|dpr|north|dem.*peo.*rep.*).+korea,"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk,ASIA,Asia,,Asia,Asia/Pacific,ZK,Z,,Eastern Asia,408
 Kosovo,kosovo,Kosovo,kosovo,,,,,,,,967,,
 Kuwait,kuwait,Kuwait,kuwait,MAF,Asia,,Middle East,Middle-East,OK,O,443,Western Asia,414
 Kyrgyzstan,kyrgyz|kirghiz,Kirgisistan,kirgisistan|kirghiz,EIT,Asia,,Asia,Asia/Pacific,UA,U,917,Central Asia,417
@@ -163,10 +167,11 @@ Morocco,morocco|\bmaroc,Marokko,marokko|\bmaroc,MAF,Africa,,Africa,North-Africa,
 Mozambique,mozambique,Mosambik,mosambik,MAF,Africa,,Africa,Southern Africa,FQ,F,688,Eastern Africa,508
 Myanmar,myanmar|burma,Myanmar,myanmar|burma,ASIA,Asia,,Asia,Asia/Pacific,VY,V,518,South-Eastern Asia,104
 Namibia,namibia,Namibia,namibia,MAF,Africa,,Africa,Southern Africa,FY,F,728,Southern Africa,516
+Nassau,nassau,,,,,,,,,,,,
 Nauru,nauru,Nauru,nauru,ASIA,Oceania,,Asia,Asia/Pacific,AN,A,836,Micronesia,520
 Nepal,nepal,Nepal,nepal,ASIA,Asia,,Asia,Asia/Pacific,VN,V,558,Southern Asia,524
 Netherlands,^(?!.*\bant)(?!.*\bcarib).*netherlands,Niederlande,niederlande,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,EH,E,138,Western Europe,528
-Netherlands Antilles,^(?=.*\bant).*(nether|dutch),Niederländische Antillen,niederl(a|ä)ndische.?antillen,LAM,Americas,,Southern America,Mid-Atlantic,TN,T,353,Caribbean,
+Netherlands Antilles,netherlands.antil|dutch.antil,Niederländische Antillen,niederl(a|ä)ndische.?antillen,LAM,Americas,,Southern America,Mid-Atlantic,TN,T,353,Caribbean,
 New Caledonia,new.?caledonia,Neu-Kaledonien,neu.?kaledonien,ASIA,Oceania,,Asia,Asia/Pacific,NW,N,839,Melanesia,540
 New Zealand,new.?zealand,Neuseeland,neuseeland,OECD1990,Oceania,,Asia,Asia/Pacific,NZ,N,196,Australia and New Zealand,554
 Nicaragua,nicaragua,Nicaragua,nicaragua,LAM,Americas,,Southern America,Mid-Atlantic,MN,M,278,Central America,558
@@ -176,6 +181,7 @@ Niue,niue,Niue,niue,ASIA,Oceania,,Asia,Asia/Pacific,NI,N,,Polynesia,570
 Norfolk Island,norfolk,Norfolk-Insel,norfolk,ASIA,Oceania,,Asia,Asia/Pacific,Y,Y,,Australia and New Zealand,574
 Northern Mariana Islands,mariana,Nördliche Marianen,marianen,ASIA,Oceania,,Asia,Asia/Pacific,PG,P,,Micronesia,580
 Norway,norway,Norwegen,norwegen,MAF,Europe,,Eurocontrol,ESRA North-West,EN,E,142,Northern Europe,578
+Oldenburg,oldenburg,,,,,,,,,,,,
 Oman,\boman|trucial,Oman,\boman|trucial,,Asia,,Middle East,Middle-East,OO,O,449,Western Asia,512
 Pakistan,^(?!.*east).*paki?stan,Pakistan,^(?!.*ost).*paki?stan,ASIA,Asia,,Asia,Asia/Pacific,OP,O,564,Southern Asia,586
 Palau,palau,Palau,palau,ASIA,Oceania,,Asia,Asia/Pacific,PT,P,565,Micronesia,585
@@ -186,6 +192,7 @@ Paraguay,paraguay,Paraguay,paraguay,LAM,Americas,,Southern America,South-Atlanti
 Parma,parma,Parma,parma,,,,,,,,,,
 Peru,peru,Peru,peru,LAM,Americas,,Southern America,South-Atlantic,SP,S,293,South America,604
 Philippines,philippines,Philippinen,philippinen,ASIA,Asia,,Asia,Asia/Pacific,RP,R,566,South-Eastern Asia,608
+Piedmont-Sardinia,piedmont.sardinia,,,,,,,,,,,,
 Pitcairn,pitcairn,Pitcairn,pitcairn,ASIA,Oceania,,,,,,,Polynesia,612
 Poland,poland,Polen,polen,EIT,Europe,EU,Eurocontrol,ESRA East,EP,E,964,Eastern Europe,616
 Portugal,portugal,Portugal,portugal,OECD1990,Europe,EU,Eurocontrol,ESRA Mediterranean,LP,L,182,Southern Europe,620
@@ -208,6 +215,7 @@ Samoa,^(?!.*amer).*samoa,Samoa,^(?!.*amer).*samoa,ASIA,Oceania,,Asia,Asia/Pacifi
 San Marino,san.?marino,San Marino,san.?marino,OECD1990,Europe,,,,,,135,Southern Europe,674
 Sao Tome and Principe,\bs(a|ã)o.?tom(e|é),Sao Tome und Principe,\bs(a|ã)o.?tom(e|é),MAF,Africa,,Africa,Southern Africa,FP,F,716,Middle Africa,678
 Saudi Arabia,\bsa\w*.?arabia,Saudi Arabien,\bsa\w*.?arabien,MAF,Asia,,Middle East,Middle-East,OE,O,456,Western Asia,682
+Saxe-Weimar-Eisenach,saxe.weimar.eisenach,,,,,,,,,,,,
 Saxony,saxony,Sachsen,sachsen,,,,,,,,,,
 Senegal,senegal,Senegal,senegal,MAF,Africa,,,,,,722,Western Africa,686
 Serbia,^(?!.*monte).*serbia,Serbien,^(?!.*monte).*serbien,EIT,Europe,,Eurocontrol,ESRA East,LY,L,942,Southern Europe,688
@@ -218,7 +226,7 @@ Sint Maarten (Dutch part),^(?!.*martin)(?!.*saba).*maarten,Sint Maarten (Niederl
 Slovakia,^(?!.*cze).*slovak,Slowakei,^(?!.*tsch).*slowakei,EIT,Europe,EU,Eurocontrol,ESRA East,LZ,L,936,Eastern Europe,703
 Slovenia,slovenia,Slowenien,slowenien,EIT,Europe,EU,Eurocontrol,ESRA East,LJ,L,961,Southern Europe,705
 Solomon Islands,solomon,Salomon-Inseln,salomon,ASIA,Oceania,,Asia,Asia/Pacific,AG,A,813,Melanesia,90
-Somalia,somali,Somalia,somali,MAF,Africa,,Africa,Southern Africa,HC,H,726,Eastern Africa,706
+Somalia,somali,Somalia,somalia,MAF,Africa,,Africa,Southern Africa,HC,H,726,Eastern Africa,706
 South Africa,south.africa|s\\..?africa,Südafrika,\bs(ü|u)d*.?afrika,MAF,Africa,,Africa,Southern Africa,FA,F,199,Southern Africa,710
 South Georgia and the South Sandwich Islands,south.?georgia|sandwich,Südgeorgien und die Südlichen Sandwichinseln,süd.?georgia|sandwich,LAM,,,,,,,,,
 South Sudan,\bs\w*.?sudan,Südsudan,^s(ü|u)d.?sudan,MAF,Africa,,Africa,Southern Africa,HS,H,733,Northern Africa,728
@@ -252,8 +260,8 @@ Ukraine,ukrain,Ukraine,ukrain,EIT,Europe,,Eurocontrol,ESRA East,UK,U,926,Eastern
 United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Vereinigte Arabische Emirate,arabische.?emirate,MAF,Asia,,Middle East,Middle-East,OM,O,466,Western Asia,784
 United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$,Großbritannien,gro(ss|ß)britannien|britanien|vereinigtes.?k(ö|o)nigreich|^u\.?k\.?$,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,EG,E,112,Northern Europe,826
 United Republic of Tanzania,tanzania,Tansania,tansania,MAF,Africa,,Africa,Southern Africa,HT,H,738,Eastern Africa,834
-United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),OECD1990,Americas,,Northern America,North Atlantic,K,K,111,Northern America,840
 United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,ASIA,,,Asia,Asia/Pacific,P[JON|MDY|AWK|LPA|BAR|LUR],P,,,
+United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),OECD1990,Americas,,Northern America,North Atlantic,K,K,111,Northern America,840
 Uruguay,uruguay,Uruguay,uruguay,LAM,Americas,,Southern America,South-Atlantic,SU,S,298,South America,858
 Uzbekistan,uzbek,Usbekistan,usbek,EIT,Asia,,Asia,Asia/Pacific,UT,U,927,Central Asia,860
 Vanuatu,vanuatu|new.?hebrides,Vanuatu,vanuatu|neue.?hebriden,ASIA,Oceania,,Asia,Asia/Pacific,NV,N,846,Melanesia,548
@@ -264,6 +272,7 @@ Viet Nam,^(?!.*republic).*viet.?nam|^(?=.*socialist).*viet.?nam,Vietnam,^(?!.*re
 Wallis and Futuna,futuna|wallis,Wallis und Futuna,futuna|wallis,ASIA,Oceania,,Asia,Asia/Pacific,NL,N,,Polynesia,876
 Western Sahara,western.sahara,Westsahara,westsahara,MAF,Africa,,Africa,Southern Africa,GS,G,,Northern Africa,732
 Wuerttemburg,w(ue|ü)rttemburg,Württemberg,w(ue|ü)rttemberg,,,,,,,,,,
+Würtemberg,w.rtemberg,,,,,,,,,,,,
 Yemen,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Jemen,^(?!.*arab)(?!.*nord)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*süd)(?!.*aden)(?!.*\bp\.?d\.?r).*jemen,MAF,Asia,,Middle East,Middle-East,OY,O,474,Western Asia,887
 Yemen Arab Republic,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,Jemenitische Arabische Republik,^(?=.*arab).*jemen|^(?=.*nord).*jemen|^(?=.*sana).*jemen,,,,,,,,,,
 Yemen People's Republic,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,Demokratische Volksrepublik Jemen,^(?=.*volk).*jemen|^(?!.*rep)(?=.*dem).*jemen|^(?=.*süd).*jemen|^(?=.*aden).*jemen|^(?=.*\bp\.?d\.?r).*jemen,,,,,,,,,,

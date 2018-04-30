@@ -34,6 +34,7 @@ Origin and Destination:
   \item p4c: Polity IV character country code
   \item un: United Nations numerical code
   \item unpd: United Nations Procurement Division
+  \item vdem: Varieties of Democracy (V-Dem version 8, April 2018)
   \item wb: World Bank (very similar but not identical to iso3c)
   \item wvs: World Values Survey numeric code
 }

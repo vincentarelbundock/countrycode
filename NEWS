@@ -1,3 +1,9 @@
+Version 1.01.0 (2018-??-??)
+---------------------------
+
+* V-Dem 8 country codes (panel and cross-section)
+* Fixed Netherlands Antilles test (ANT code retired by ISO)
+
 Version 1.00.0 (2018-02-08)
 ---------------------------
 
