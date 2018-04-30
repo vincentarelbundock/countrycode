@@ -208,6 +208,15 @@ countrycode(df$geo, 'iso2c', 'country.name', custom_match = custom_match)
 
 Use `warn = TRUE` to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
 
+Use the `nomatch` argument to specify the value that `countrycode` inserts where no match was found:
+
+```r
+> countrycode(c('DZA', 'USA', '???'), 'iso3c', 'country.name', nomatch = 'BAD CODE')
+> [1] "Algeria"       "United States" "BAD CODE"  
+> countrycode(c('Canada', 'Fake country'), 'country.name', 'iso3c', nomatch = 'BAD')
+> [1] "CAN" "BAD"
+```
+
 # Contributions
 
 The best way to contribute is to add a ``get_*`` function that downloads country codes from an official sources and formats the data.
