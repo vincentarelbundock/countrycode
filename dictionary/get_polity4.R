@@ -1,4 +1,5 @@
 get_polity4 = function(){
+
     url = 'http://www.systemicpeace.org/inscr/p4v2015.xls'
     download.file(url, tmpxls <- tempfile(fileext = '.xls'), quiet = TRUE)
     p4 = readxl::read_excel(tmpxls) %>%

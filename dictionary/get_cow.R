@@ -24,12 +24,9 @@ get_cow = function() {
     # IMPORTANT/ARBITRARY CHOICES
     cow = cow %>% 
           dplyr::mutate(cow.name = ifelse(cow.name == 'German Federal Republic', 'Germany', cow.name),
-                        cow.name = ifelse(cowc == 'DRV', NA, cow.name), # temp to avoid countrycode warning
                         cow.name = ifelse(cowc == 'RVN', 'Vietnam', cow.name),
                         country.name.en.regex = CountryToRegex(cow.name),
-                        country.name.en.regex = ifelse(cowc == 'DRV', 'democratic.republic.of.vietnam', country.name.en.regex),
-                        cow.name = ifelse(cowc == 'DRV', 'Democratic Republic of Vietnam', cow.name)
-                        ) %>% 
+                        country.name.en.regex = ifelse(cowc == 'DRV', 'democratic.republic.of.vietnam', country.name.en.regex)) %>% 
           dplyr::filter((cowc != 'GFR') | (year != 1990)) %>% # date overlap
           dplyr::arrange(cowc, year) %>%
           dplyr::select(order(colnames(.))) %>%

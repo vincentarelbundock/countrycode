@@ -1,5 +1,5 @@
 get_polity4_cs = function(){
-    source('code/get_polity4.R')
+    source('dictionary/get_polity4.R')
     p4 = get_polity4()
     cs = p4 %>% 
          dplyr::arrange(country.name.en.regex, year) %>%

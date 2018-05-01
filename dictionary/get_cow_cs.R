@@ -1,5 +1,5 @@
 get_cow_cs = function() {
-    source('code/get_cow.R')
+    source('dictionary/get_cow.R')
     out = get_cow()
     cs = out %>% 
 		 dplyr::arrange(country.name.en.regex, year) %>%

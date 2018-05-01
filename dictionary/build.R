@@ -2,8 +2,8 @@ source('dictionary/utilities.R')
 
 # Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
 src = c('cldr' = FALSE,
-        'cow' = FALSE,
-        'cow_cs' = FALSE,
+        'cow' = TRUE,
+        'cow_cs' = TRUE,
         'ecb' = FALSE,
         'eurostat' = FALSE,
         'fao' = FALSE,
@@ -11,8 +11,8 @@ src = c('cldr' = FALSE,
         'genc' = FALSE,
         'ioc' = FALSE,
         'iso' = FALSE,
-        'polity4' = FALSE,
-        'polity4_cs' = FALSE,
+        'polity4' = TRUE,
+        'polity4_cs' = TRUE,
         'un' = FALSE,
         'unpd' = FALSE,
         'vdem' = TRUE,
@@ -42,7 +42,6 @@ for (n in names(src)[!src]) {
         dat[[n]] = bak[[n]]
     }
 }
-
 # Sanity check: duplicate merge id
 for (n in names(dat)) {
     if ('year' %in% colnames(dat[[n]])) {
@@ -59,12 +58,48 @@ for (n in names(dat)) {
 cs = Reduce(dplyr::left_join, dat[!names(dat) %in% panel_only])
 
 # Panel
+panel = dat[panel_only]
+
+# Hack: Extend time coverage of panel data
+extend = function(x) {
+    years = setdiff(2000:lubridate::year(Sys.Date()), x$year)
+    if (length(years) == 0) {
+        out = x
+    } else {
+        tmp = data.frame(year = years)
+        out = x %>% 
+              filter(year == max(year)) %>% 
+              select(-year) %>% 
+              merge(tmp) %>%
+              select(colnames(x)) %>%
+              rbind(x, .)
+    }
+    return(out)
+}
+panel = lapply(panel, extend)
+
+# Panel merge
 rec = expand.grid('country.name.en.regex' = dat$static$country.name.en.regex,
-                  'year' = 1800:2017,
+                  'year' = unique(unlist(lapply(panel, function(x) x$year))),
                   stringsAsFactors = FALSE)
-panel = c(list(rec), dat[panel_only])
+panel = c(list(rec), panel)
 panel = Reduce(dplyr::left_join, panel) %>%
         dplyr::left_join(cs[, !grepl('^cow|^p4', colnames(cs))])
+
+# Drop inexistent countries-years from the panel
+tmp = read_csv('dictionary/panel_small_countries.csv') %>%
+      mutate(end = ifelse(is.na(end), lubridate::year(Sys.Date()), end))
+panel$exists = FALSE
+for (i in 1:nrow(tmp)) {
+    panel$exists = if_else((panel$iso3c == tmp$iso3c[[i]]) & (panel$year %in% tmp$start[[i]]:tmp$end[[i]]),
+                           true = TRUE, false = panel$exists, missing = panel$exists)
+}
+panel$exists = ifelse(!is.na(panel$cowc), TRUE, panel$exists)
+panel$exists = ifelse(!is.na(panel$vdem), TRUE, panel$exists)
+panel$exists = ifelse(!is.na(panel$p4c), TRUE, panel$exists)
+panel = panel %>% 
+        filter(exists) %>%
+        select(-exists)
      
 # English names: Priority ordering
 priority = c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'country.name.en')

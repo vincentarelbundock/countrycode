@@ -75,8 +75,8 @@ test_that('the Netherlands Antilles are all matched correctly', {
     # The codes for the Netherlands Antilles are deleted from ISO 3166-1 and
     # transitionally reserved for a period of 50 years:
     # https://www.iso.org/news/2010/12/Ref1383.html
-    expect_true(is.na(no_warn_iso3c_of('netherlands antilles'))                             # A former country
-    expect_true(is.na(no_warn_iso3c_of('dutch antilles'))                                   # A former country
+    expect_equal(no_warn_iso3c_of('netherlands antilles'), NA_character_)                   # A former country
+    expect_equal(no_warn_iso3c_of('dutch antilles'), NA_character_)                         # A former country
     expect_equal(no_warn_iso3c_of('dutch caribbean'), NA_character_)                        # The meaning of this unit is ambiguous
     expect_equal(iso3c_of('aruba'), 'ABW')                                                  # A country of the Netherlands
     expect_equal(iso3c_of('curaçao'), 'CUW')                                                # A country of the Netherlands
