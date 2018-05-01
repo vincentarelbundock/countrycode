@@ -2,8 +2,8 @@ source('dictionary/utilities.R')
 
 # Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
 src = c('cldr' = FALSE,
-        'cow' = TRUE,
-        'cow_cs' = TRUE,
+        'cow' = FALSE,
+        'cow_cs' = FALSE,
         'ecb' = FALSE,
         'eurostat' = FALSE,
         'fao' = FALSE,
@@ -11,8 +11,8 @@ src = c('cldr' = FALSE,
         'genc' = FALSE,
         'ioc' = FALSE,
         'iso' = FALSE,
-        'polity4' = TRUE,
-        'polity4_cs' = TRUE,
+        'polity4' = FALSE,
+        'polity4_cs' = FALSE,
         'un' = FALSE,
         'unpd' = FALSE,
         'vdem' = TRUE,
@@ -62,7 +62,7 @@ panel = dat[panel_only]
 
 # Hack: Extend time coverage of panel data
 extend = function(x) {
-    years = setdiff(2000:lubridate::year(Sys.Date()), x$year)
+    years = setdiff(2010:lubridate::year(Sys.Date()), x$year)
     if (length(years) == 0) {
         out = x
     } else {
@@ -87,7 +87,7 @@ panel = Reduce(dplyr::left_join, panel) %>%
         dplyr::left_join(cs[, !grepl('^cow|^p4', colnames(cs))])
 
 # Drop inexistent countries-years from the panel
-tmp = read_csv('dictionary/panel_small_countries.csv') %>%
+tmp = read_csv('dictionary/data_small_countries.csv') %>%
       mutate(end = ifelse(is.na(end), lubridate::year(Sys.Date()), end))
 panel$exists = FALSE
 for (i in 1:nrow(tmp)) {

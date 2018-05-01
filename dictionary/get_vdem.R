@@ -1,27 +1,19 @@
-# vdem8.csv was extracted manually from pages 34 and 35 of the V-Dem Codebook
-# v8 April 2018. 
+# vdem8 does not allow direct download, so we can't scrape. Vincent extracted
+# these data from the V-Dem v8 April 2018 CSV file.
 source('dictionary/utilities.R')
 
 get_vdem = function() {
-
-    dat = read_csv('dictionary/vdem8_april2018.csv') %>%
+    out = readRDS('dictionary/data_vdem_v8_april2018.rds') %>%
           # Explicitly remove tricky countries. Clean this later.
-          filter(Name != 'Vietnam, Republic of',
-                 Name != 'Palestine/British Mandate',
-                 Name != 'Palestine/Gaza',
-                 Name != 'Palestine/West Bank',
-                 Name != 'Somaliland',
-                 Name != 'Saxe-Weimar-Eisenach') %>%
-          mutate(regex = CountryToRegex(Name)) %>%
-          tidyr::separate(Coverage, into = c('start', 'end'), sep = '–')
-    out = list()
-    for (i in 1:nrow(dat)) {
-        out[[i]] = data.frame('country.name.en.regex' = dat$regex[[i]],
-                              'vdem' = dat$ID[[i]],
-                              'year' = dat$start[[i]]:dat$end[[i]],
-                              stringsAsFactors = FALSE)
-    } 
-    out = do.call('rbind', out)
+          filter(country_name != 'Democratic Republic of Vietnam',
+                 country_name != 'Republic of Vietnam',
+                 country_name != 'Somaliland',
+                 country_name != 'Republic of Vietnam',
+                 country_name != 'Palestine/British Mandate',
+                 country_name != 'Palestine/Gaza',
+                 country_name != 'Palestine/West Bank',
+                 country_name != 'Saxe-Weimar-Eisenach') %>%
+          mutate(country.name.en.regex = CountryToRegex(country_name)) %>%
+          select(country.name.en.regex, vdem = country_id, year)
     return(out)
-
 }
