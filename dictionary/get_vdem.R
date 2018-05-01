@@ -14,6 +14,6 @@ get_vdem = function() {
                  country_name != 'Palestine/West Bank',
                  country_name != 'Saxe-Weimar-Eisenach') %>%
           mutate(country.name.en.regex = CountryToRegex(country_name)) %>%
-          select(country.name.en.regex, vdem = country_id, year)
+          select(country.name.en.regex, vdem.name = country_name, vdem = country_id, year)
     return(out)
 }

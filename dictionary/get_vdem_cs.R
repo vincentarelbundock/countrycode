@@ -5,7 +5,7 @@ source('dictionary/utilities.R')
 get_vdem_cs = function() {
     source('dictionary/get_vdem.R')
     out = get_vdem() %>%
-          select(country.name.en.regex, vdem) %>%
+          select(country.name.en.regex, vdem.name, vdem) %>%
           unique
     return(out)
 }

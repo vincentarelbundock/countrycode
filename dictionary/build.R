@@ -42,6 +42,7 @@ for (n in names(src)[!src]) {
         dat[[n]] = bak[[n]]
     }
 }
+
 # Sanity check: duplicate merge id
 for (n in names(dat)) {
     if ('year' %in% colnames(dat[[n]])) {
@@ -78,15 +79,15 @@ extend = function(x) {
 }
 panel = lapply(panel, extend)
 
-# Panel merge
+# Panel merge into a rectangular data.frame
 rec = expand.grid('country.name.en.regex' = dat$static$country.name.en.regex,
                   'year' = unique(unlist(lapply(panel, function(x) x$year))),
                   stringsAsFactors = FALSE)
 panel = c(list(rec), panel)
 panel = Reduce(dplyr::left_join, panel) %>%
-        dplyr::left_join(cs[, !grepl('^cow|^p4', colnames(cs))])
+        dplyr::left_join(cs[, !grepl('^cow|^p4|^vdem', colnames(cs))])
 
-# Drop inexistent countries-years from the panel
+# Drop inexistent country-years from the panel
 tmp = read_csv('dictionary/data_small_countries.csv') %>%
       mutate(end = ifelse(is.na(end), lubridate::year(Sys.Date()), end))
 panel$exists = FALSE
@@ -95,19 +96,19 @@ for (i in 1:nrow(tmp)) {
                            true = TRUE, false = panel$exists, missing = panel$exists)
 }
 panel$exists = ifelse(!is.na(panel$cowc), TRUE, panel$exists)
-panel$exists = ifelse(!is.na(panel$vdem), TRUE, panel$exists)
 panel$exists = ifelse(!is.na(panel$p4c), TRUE, panel$exists)
+panel$exists = ifelse(!is.na(panel$vdem), TRUE, panel$exists)
 panel = panel %>% 
         filter(exists) %>%
         select(-exists)
      
 # English names: Priority ordering
-priority = c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'country.name.en')
+priority = c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
 
 # English names: Panel
-tmp = rep(NA, nrow(panel))
+tmp = character(nrow(panel))
 for (i in priority) {
-    tmp = ifelse(is.na(tmp), panel[, i], tmp)
+    tmp = if_else(tmp == '', true = panel[, i], false = tmp)
 }
 panel$country.name.en = tmp
 
