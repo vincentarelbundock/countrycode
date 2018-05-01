@@ -102,17 +102,20 @@ panel = panel %>%
         filter(exists) %>%
         select(-exists)
      
-# English names: Priority ordering
+# English names with priority ordering
 priority = c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
-
-# English names: Panel
-tmp = character(nrow(panel))
+panel$country.name = NA
+cs$country.name = NA
 for (i in priority) {
-    tmp = if_else(tmp == '', true = panel[, i], false = tmp)
+    panel$country.name = ifelse(is.na(panel$country.name), panel[, i], panel$country.name)
+    cs$country.name = ifelse(is.na(cs$country.name), cs[, i], cs$country.name)
 }
-panel$country.name.en = tmp
+panel$country.name.en = panel$country.name
+cs$country.name.en = cs$country.name
+panel$country.name = NULL
+cs$country.name = NULL
 
-# English names: Cross-sectional
+# Panel: English names
 tmp = rep(NA, nrow(cs))
 for (i in priority) {
     tmp = ifelse(is.na(tmp), cs[, i], tmp)
