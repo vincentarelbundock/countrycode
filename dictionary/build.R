@@ -131,7 +131,8 @@ panel = sort_col(panel)
 # Exclude name columns for panel to save space
 a = panel %>% dplyr::select(country.name.en, year)
 b = panel %>% dplyr::select(-matches('cldr|name|regex|year'))
-panel = cbind(a, b)
+panel = cbind(a, b) %>%
+        arrange(cowc, cown, iso3c, iso3n, p4c, vdem, year)
 
 # Save files
 codelist = cs
