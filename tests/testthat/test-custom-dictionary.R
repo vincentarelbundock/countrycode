@@ -13,3 +13,13 @@ test_that('custom dictionary with regex', {
     expect_equal(test_func(c('U.S.A.', 'West Germany')), c('USA', 'DEU'))
     expect_equal(test_func(c('U.S.A.', 'West Germany', 'XXX')), c('USA', 'DEU', NA))
 })
+
+test_that('canadian provinces test', {
+    dict <- data.frame('regex' = c('qu.bec', 'alberta', 'british.columbia'),
+                       'abbreviation' = c('QC', 'AB', 'BC'),
+                       'province' = c('Quebec', 'Alberta', 'British Columbia'),
+                       stringsAsFactors = FALSE)
+    expect_equal(countrycode('Québec', 'regex', 'abbreviation', custom_dict = dict, origin_regex = TRUE), 'QC')
+    expect_equal(countrycode(c('Alberta', 'British Columbia'), 'regex', 'abbreviation', custom_dict = dict, origin_regex = TRUE), c('AB', 'BC'))
+    expect_equal(countrycode('QC', 'abbreviation', 'province', custom_dict = dict), 'Quebec')
+})
