@@ -4,6 +4,7 @@ Version 1.01.0 (2018-??-??)
 * V-Dem 8 country codes (panel and cross-section)
 * Fixed Netherlands Antilles test (ANT code retired by ISO)
 * codelist_panel now excludes years where a country didn't exist
+* Scraping function for UN M49 codes. (Thanks to @cjyetman and @emilBeBri)
 
 Version 1.00.0 (2018-02-08)
 ---------------------------
