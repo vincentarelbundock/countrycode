@@ -79,7 +79,6 @@ Estonia,estonia,Estland,estland,EIT,Europe,EU,Eurocontrol,Other Europe,EE,E,939,
 Ethiopia,ethiopia|abyssinia,Äthiopien,.?th(i|)opien|abyssinia,MAF,Africa,,Africa,Southern Africa,HA,H,644,Eastern Africa
 Falkland Islands (Malvinas),falkland|malvinas,Falklandinseln (Malvinas),falkland|malvinas,LAM,Americas,,Southern America,South-Atlantic,SF,S,323,South America
 Faroe Islands,faroe|faeroe,Färöer Inseln,f(a|ä)r(o|ö|oe)er,OECD1990,Europe,,Eurocontrol,ESRA North-West,EK,E,816,Northern Europe
-Federal Republic of Germany,(?=.*west).*germany|bonn.?republic,Bundesrepublik Deutschland,^(?=.*\bbundesrepublik).*deutschland|westdeutschland|brd,,,,,,,,,
 Fiji,fiji,Fidschi,fiji|fidschi,ASIA,Oceania,,Asia,Asia/Pacific,NF,N,819,Melanesia
 Finland,finland,Finnland,finnland,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,EF,E,172,Northern Europe
 France,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Frankreich,frankreich|französische.?republik,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,LF,L,132,Western Europe
