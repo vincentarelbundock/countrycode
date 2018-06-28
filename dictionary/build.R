@@ -57,7 +57,8 @@ for (n in names(dat)) {
 }
 
 # Cross-section
-cs = Reduce(dplyr::left_join, dat[!names(dat) %in% panel_only])
+f = function(x, y) dplyr::left_join(x, y, by = 'country.name.en.regex')
+cs = Reduce(f, dat[!names(dat) %in% panel_only])
 
 # Panel
 panel = dat[panel_only]
