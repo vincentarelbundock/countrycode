@@ -12,7 +12,7 @@ Different data sources use different coding schemes to represent countries (e.g.
 
 ## The Solution
 
-The countrycode function can convert to and from 7 different country coding schemes. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes, or into standardized country names (official short English). It can create new variables with the name of the continent and/or region to which each country belongs.
+The `countrycode` function can convert to and from 30+ different country coding schemes, and to 600+ variants of country names in different languages and formats. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes or country names. It can create new variables with various regional groupings.
 
 ## Supported country codes
 
@@ -25,6 +25,7 @@ To get an up-to-date list of supported country codes, install the package and ty
 * International Monetary Fund
 * World Bank
 * Polity IV
+* Varieties of Democracy
 * European Central Bank
 * Euro-control (aviation)
 * Eurostat
@@ -41,7 +42,6 @@ To get an up-to-date list of supported country codes, install the package and ty
 ## Installation
 
 From the R console, type ``install.packages("countrycode")``
-
 
 # Examples
 
