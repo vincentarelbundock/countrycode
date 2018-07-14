@@ -17,6 +17,8 @@
 #'   \item genc2c: GENC 2-letter code
 #'   \item genc3c: GENC 3-letter code
 #'   \item genc3n: GENC numeric code
+#'   \item gwc: Gleditsch & Ward character
+#'   \item gwn: Gleditsch & Ward numeric
 #'   \item imf: International Monetary Fund
 #'   \item ioc: International Olympic Committee
 #'   \item iso2c: ISO-2 character
