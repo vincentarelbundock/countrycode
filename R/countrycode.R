@@ -18,7 +18,7 @@
 #' behavior is to fill non-matching codes with NA. If nomatch = NULL,
 #' countrycode tries to use the origin vector to fill-in missing values in the
 #' destination vector. nomatch must be either NULL, of length 1, or of the same
-#' length as sourcevar. 
+#' length as sourcevar.
 #' @param custom_dict A data frame which supplies custom country codes.
 #' Variables correspond to country codes, observations must refer to unique
 #' countries.  When countrycode uses a user-supplied dictionary, no sanity
@@ -87,7 +87,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         # Modify this manually when adding codes
         valid_origin = c("country.name", "country.name.de", "cowc", "cown",
                          "ecb", "eurostat", "fao", "fips", "gaul", "genc2c",
-                         "genc3c", "genc3n", "imf", "ioc", "iso2c", "iso3c",
+                         "genc3c", "genc3n", "gwc", "gwn", "imf", "ioc", "iso2c", "iso3c",
                          "iso3n", "p4c", "p4nj", "un", "un_m49", "unpd",
                          "vdem", "wb", "wb_api2c", "wb_api3c", "wvs",
                          "country.name.en.regex", "country.name.de.regex")
@@ -137,9 +137,9 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     # Copy origin_vector for later re-use
-    origin_vector <- sourcevar 
+    origin_vector <- sourcevar
 
-    # Case-insensitive matching 
+    # Case-insensitive matching
     if(is.null(custom_dict)){ # only for built-in dictionary
         if((class(origin_vector) == 'character') & !grepl('country', origin)){
             origin_vector = toupper(origin_vector)

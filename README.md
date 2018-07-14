@@ -20,6 +20,7 @@ To get an up-to-date list of supported country codes, install the package and ty
 
 * 600+ variants of country names in different languages and formats.
 * Correlates of War (numeric and character)
+* Gleditsch & Ward (numeric and character)
 * ISO (2/3-character and numeric)
 * United Nations
 * International Monetary Fund
