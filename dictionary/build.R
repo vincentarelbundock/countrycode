@@ -1,6 +1,6 @@
 source('dictionary/utilities.R')
 
-# Source: TRUE -- web source has priority. FALSE -- backup source has priority.
+# Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
 src = c('cldr' = FALSE,
         'cow' = FALSE,
         'cow_cs' = FALSE,
@@ -71,9 +71,9 @@ extend = function(x) {
         out = x
     } else {
         tmp = data.frame(year = years)
-        out = x %>%
-              filter(year == max(year)) %>%
-              select(-year) %>%
+        out = x %>% 
+              filter(year == max(year)) %>% 
+              select(-year) %>% 
               merge(tmp) %>%
               select(colnames(x)) %>%
               rbind(x, .)
@@ -101,10 +101,10 @@ for (i in 1:nrow(tmp)) {
 panel$exists = ifelse(!is.na(panel$cowc), TRUE, panel$exists)
 panel$exists = ifelse(!is.na(panel$p4c), TRUE, panel$exists)
 panel$exists = ifelse(!is.na(panel$vdem), TRUE, panel$exists)
-panel = panel %>%
+panel = panel %>% 
         filter(exists) %>%
         select(-exists)
-
+     
 # English names with priority ordering
 priority = c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
 panel$country.name = NA
