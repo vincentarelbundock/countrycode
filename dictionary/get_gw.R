@@ -18,14 +18,14 @@ get_gw = function(){
     dplyr::slice(which.max(death)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(
-      country = dplyr::replace(country, gwc == "CDI", "Cote d'Ivoire"),
-      country = dplyr::replace(country, gwc == "PRK", "North Korea"),
+      country = replace(country, gwc == "CDI", "Cote d'Ivoire"),
+      country = replace(country, gwc == "PRK", "North Korea"),
       country.name.en.regex = CountryToRegex(country),
-      country.name.en.regex = dplyr::replace(country.name.en.regex, gwc == "TBT",
+      country.name.en.regex = replace(country.name.en.regex, gwc == "TBT",
                                       "tibet"),
-      country.name.en.regex = dplyr::replace(country.name.en.regex, gwc == "DRV",
+      country.name.en.regex = replace(country.name.en.regex, gwc == "DRV",
                                       "democratic.republic.of.vietnam"),
-      country.name.en.regex = dplyr::replace(country.name.en.regex, gwc == "RVN",
+      country.name.en.regex = replace(country.name.en.regex, gwc == "RVN",
                                       "republic.of.vietnam")) %>%
     dplyr::select(gwn, gwc, country.name.en.regex)
 
