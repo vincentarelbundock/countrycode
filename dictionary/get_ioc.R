@@ -13,7 +13,8 @@ get_ioc = function() {
     ioc = data.frame(ioc, ioc.name) %>%
           dplyr::filter(ioc.name != 'Virgin Islands, US') %>%
           dplyr::mutate(ioc.name = ifelse(ioc.name == 'Brésil', 'Brazil', ioc.name),
-                        ioc.name = ifelse(ioc.name == 'Éthiopie', 'Ethiopia', ioc.name)) %>%
+                        ioc.name = ifelse(ioc.name == 'Éthiopie', 'Ethiopia', ioc.name),
+                        ioc.name = ifelse(ioc.name == 'Dominique', 'Dominica', ioc.name)) %>%
           dplyr::mutate(country.name.en.regex = CountryToRegex(ioc.name))
     return(ioc)
 }

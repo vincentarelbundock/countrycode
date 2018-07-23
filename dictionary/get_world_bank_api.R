@@ -1,4 +1,5 @@
 get_world_bank_api = function() {
+
     # Download
     tmp <- tempfile(fileext = '.json')
     url <- 'http://api.worldbank.org/en/countries/?format=json&per_page=2000'

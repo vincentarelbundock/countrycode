@@ -12,7 +12,7 @@ get_ecb = function() {
             "New Zealand Oceania",
             "Residual for BOP and IIP step 3 ECB needs (J2-DK-GB-SE-4A-D8-CH-CA-US-JP-C4-7Z)",
             "UNRWA (United Nations Relief and Works Agency for Palestine)",
-            "West Germany")
+            "EU 12 (fixed composition) including West Germany as of 1 November 1993")
 
     url <- 'http://a-sdw.ecb.europa.eu/datastructure.do?conceptMnemonic=REF_AREA&datasetinstanceid=122'
     ecb <-

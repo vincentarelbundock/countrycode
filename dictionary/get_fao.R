@@ -16,7 +16,7 @@ get_fao = function() {
           "Palmyra Atoll", "Paracel Islands", "Prince Edward Island", "Ross Dependency", 
           "Scarborough Reef", "Senkaku Islands", "Spratly Islands", "Tromelin Island", 
           "Wake Island", "West Papua", "The West Bank", "Occupied Palestinian Territory", 
-          "Bassas da India", "Gaza Strip", "Panama, Former Canal Zone")
+          "Bassas da India", "Gaza Strip", "Panama, Former Canal Zone", "Åland Islands")
 
     
     fao <- readxl::read_excel(tmp_xlsx) %>% 

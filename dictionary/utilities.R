@@ -1,20 +1,23 @@
 library(pacman)
 p_load(tidyverse, countrycode, janitor, tibble, dplyr, tidyr, readr, readxl,
-       rvest, RSelenium, httr, jsonlite, zoo)
+       rvest, httr, jsonlite, zoo, purrr)
 options(stringsAsFactors=FALSE)
+#p_load(RSelenium)
 
 # warn if not running in an UTF-8 locale
 if (! l10n_info()$`UTF-8`) warning('Running in a non-UTF-8 locale!')
 
 #' Use countrycode regexes as unique country IDs
-custom_dict = readr::read_csv('dictionary/data_static.csv', na = '') %>% 
+custom_dict = readr::read_csv('dictionary/data_regex.csv', na = '') %>% 
               dplyr::select(country.name.en.regex, country.name.en.regex) 
-CountryToRegex = function(x, warn=TRUE) countrycode(x, 
-                                                    'country.name.en.regex', 
-                                                    'country.name.en.regex', 
-                                                    custom_dict=custom_dict, 
-                                                    origin_regex=TRUE, 
-                                                    warn=warn)
+CountryToRegex = function(x, warn=TRUE, custom_match = NULL) 
+                 countrycode(x, 
+                             'country.name.en.regex', 
+                             'country.name.en.regex', 
+                             custom_dict=custom_dict, 
+                             origin_regex=TRUE, 
+                             warn=warn,
+                             custom_match = custom_match)
 
 #' Download data from original web source 
 LoadSource = function(src = 'world_bank') {
@@ -35,40 +38,3 @@ LoadSource = function(src = 'world_bank') {
     }
     return(out)
 }
-
-#' Drop datasets that fail sanity checks
-SanityCheck = function(data_list) {
-    # Data.frame vs. try-error
-    check = sapply(data_list, function(x) 'data.frame' %in% class(x))
-    if (any(!check)) {
-        warning('Failed to download or produce valid data.frame: ', 
-                paste(names(data_list)[!check], collapse = ', '))
-    }
-    data_list = data_list[check] 
-
-    # 50 rows
-    check = sapply(data_list, function(x) nrow(x) >= 50)
-    if (any(!check)) {
-        warning('Fewer than 50 rows: ', 
-                paste(names(data_list)[!check], collapse = ','))
-    }
-    data_list = data_list[check] 
-
-    # 2 columns
-    check = sapply(data_list, function(x) ncol(x) >= 2)
-    if (any(!check)) {
-        warning('Fewer than 2 columns: ', 
-                paste(names(data_list)[!check], collapse = ','))
-    }
-    data_list = data_list[check] 
-
-    # Merge ID
-    check = sapply(data_list, function(x) 'country.name.en.regex' %in% colnames(x))
-    if (any(!check)) {
-        warning('Merge ID missing: ', 
-                paste(names(data_list)[!check], collapse = ','))
-    }
-    data_list = data_list[check] 
-    return(data_list)
-}
-

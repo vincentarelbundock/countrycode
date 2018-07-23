@@ -22,6 +22,7 @@ get_eurostat = function() {
                              !eurostat %in% bad_code
                              ) %>%  # remove lines without data
                dplyr::mutate(eurostat.name = ifelse(eurostat.name == 'China (including Hong Kong)', 'China', eurostat.name), # regex issue
+                             eurostat.name = ifelse(eurostat.name == 'China including Hong Kong', 'China', eurostat.name), # regex issue
                              country.name.en.regex = CountryToRegex(eurostat.name)) %>%
                dplyr::arrange(eurostat)
 

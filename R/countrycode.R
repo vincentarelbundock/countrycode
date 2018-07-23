@@ -83,7 +83,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         valid_origin <- colnames(dictionary)
         valid_destination <- colnames(dictionary)
     } else {
-        dictionary = countrycode::codelist
+        dictionary = countrycode::codelist_map[[origin]][[destination]]
         # Modify this manually when adding codes
         valid_origin = c("country.name", "country.name.de", "cowc", "cown",
                          "ecb", "eurostat", "fao", "fips", "gaul", "genc2c",
@@ -98,6 +98,12 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     if('tbl_df' %in% class(dictionary)){ # allow tibble
         dictionary <- as.data.frame(dictionary)
     }
+
+    # Many-to-one but not one-to-many
+    if ('unique_target' %in% colnames(dictionary)) {
+        dictionary[!dictionary$unique_target, destination] = NA
+    }
+    dict <- stats::na.omit(dictionary[, c(origin, destination)])
 
     # Sanity checks
     if (missing(sourcevar)) {
@@ -123,15 +129,15 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         stop('Destination code not supported by countrycode or present in the user-supplied custom_dict.')
     }
 
-    if(class(dictionary) != 'data.frame'){
+    if(class(dict) != 'data.frame'){
         stop("Dictionary must be a data frame or tibble with codes as columns.")
     }
 
-    if(!destination %in% colnames(dictionary)){
+    if(!destination %in% colnames(dict)){
         stop("Destination code must correpond to a column name in the dictionary data frame.")
     }
 
-    dups = any(duplicated(stats::na.omit(dictionary[, origin])))
+    dups = any(duplicated(stats::na.omit(dict[, origin])))
     if(dups){
         stop("Countrycode cannot accept dictionaries with duplicated origin codes")
     }
@@ -148,7 +154,6 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
 
     # Convert
     if (origin_regex) { # regex codes
-        dict <- stats::na.omit(dictionary[, c(origin, destination)])
         sourcefctr <- factor(origin_vector)
 
         # match levels of sourcefctr
@@ -184,7 +189,6 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         destination_vector <- unname(matches[as.numeric(sourcefctr)])
 
     } else { # non-regex codes
-        dict <- stats::na.omit(dictionary[, c(origin, destination)])
         sourcefctr <- factor(origin_vector)
 
         # match levels of sourcefctr
