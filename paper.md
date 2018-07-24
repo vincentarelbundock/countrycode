@@ -26,6 +26,7 @@ affiliations:
     index: 3
 date: 23 July 2018
 bibliography: paper.bib
+CJKmainfont: STSong
 ---
 
 # Summary
