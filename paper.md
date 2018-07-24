@@ -1,25 +1,31 @@
 ---
 title: 'countrycode: An R package to convert country names and country codes'
-authors:
-- affiliation: Université de Montréal
-  name: Vincent Arel-Bundock
-  orcid: 0000-0003-2042-7063
-- affiliation: Massachusetts Institute of Technology
-  name: Nils Enevoldsen
-  orcid: 0000-0001-7195-4117
-- affiliation: Hertie School of Governance
-  name: CJ Yetman
-  orcid: 0000-0001-5099-9500
-date: "7 July 2018"
-output: pdf_document
-bibliography: paper.bib
 tags:
-- R
-- CRAN
-- social science
-- country names
-- country codes
-- geography
+  - R
+  - CRAN
+  - social science
+  - country names
+  - country codes
+  - geography
+authors:
+  - name: Vincent Arel-Bundock
+    orcid: 0000-0003-2042-7063
+    affiliation: 1
+  - name: Nils Enevoldsen
+    orcid: 0000-0001-7195-4117
+    affiliation: 2
+  - name: CJ Yetman
+    orcid: 0000-0001-5099-9500
+    affiliation: 3
+affiliations:
+  - name: Université de Montréal
+    index: 1
+  - name: Massachussetts Institute of Technology
+    index: 2
+  - name: Hertie School of Governance
+    index: 3
+date: 23 July 2018
+bibliography: paper.bib
 ---
 
 # Summary
