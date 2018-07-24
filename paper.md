@@ -20,7 +20,6 @@ tags:
 - country names
 - country codes
 - geography
-CJKmainfont: STSong
 ---
 
 # Summary
