@@ -3,6 +3,7 @@ data/backup.rds
 data/dictionary_static.csv
 data/extra
 README.md
+joss
 tests
 dictionary
 ^.*\.Rproj$
