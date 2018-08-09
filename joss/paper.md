@@ -52,10 +52,10 @@ countrycode(c('Antigua and Barbuda', 'Russia'),
             origin = 'country.name', destination = 'genc3c')
 [1] "ATG" "RUS"
 
-# ISO codes to long-form Chinese names
-countrycode(c('VUT', 'CAN'), 
-            origin = 'iso3c', destination = 'un.name.zh')
-[1] "瓦努阿图" "加拿大"
+# ISO codes to long-form Finnish names
+countrycode(c('DOM', 'CAN'), 
+            origin = 'iso3c', destination = 'cldr.name.fi')
+[1] "Dominikaaninen tasavalta" "Kanada"
 ```
 
 # Acknowledgements
