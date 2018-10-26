@@ -6,5 +6,6 @@ README.md
 joss
 tests
 dictionary
+.travis.yml
 ^.*\.Rproj$
 ^\.Rproj\.user$
