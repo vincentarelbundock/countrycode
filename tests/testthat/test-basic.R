@@ -1,5 +1,9 @@
 context('Basic conversions')
 
+test_that('intentional failure to test travis', {
+    expect_equal(3, 4)
+})
+
 test_that('valid iso3c to country.name works', {
     name_of <- function(iso3c_code) countrycode(iso3c_code, 'iso3c', 'country.name')
     expect_equal(name_of('CAN'), 'Canada')
