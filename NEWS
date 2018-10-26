@@ -6,6 +6,7 @@ Version 1.01.0 (2018-??-??)
 * Fixed Netherlands Antilles test (ANT code retired by ISO)
 * codelist_panel now excludes years where a country didn't exist
 * Scraping function for UN M49 codes. (Thanks to @cjyetman and @emilBeBri)
+* `nomatch = NULL` now works as expected when sourcvar is a factor (#192 thanks to @jhuovari for reporting)
 
 Version 1.00.0 (2018-02-08)
 ---------------------------
@@ -15,12 +16,12 @@ Version 1.00.0 (2018-02-08)
 * Dictionary built from original sources
 * Liechtenstein should not be in eu28
 * Russia eurocontrol region fix
-* CLRD country names 
+* CLRD country names
 
 Version 0.19.1 (2017-02-06)
 ---------------------------
 
-* Move to Semantic Versioning 2.0.0 
+* Move to Semantic Versioning 2.0.0
   http://semver.org/#semantic-versioning-specification-semver
 * Fixed North Korea regex and added tests
 * Fixed Sudan iso3n code
