@@ -8,6 +8,8 @@ If you use `countrycode` in your research, we would be very grateful if you coul
 
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
 
+[![Travis-CI Build Status](https://travis-ci.org/vincentarelbundock/countrycode.svg?branch=master)](https://travis-ci.org/vincentarelbundock/countrycode)
+
 ## Contributions
 
 Want to contribute? Great! Scroll all the way down for details.
