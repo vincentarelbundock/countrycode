@@ -21,8 +21,8 @@ test_that('nomatch argument works correctly when sourcevar is a factor', {
     expect_equal(countrycode(factor(c('XXX', 'USA', 'YYY')), 'iso3c', 'iso2c', nomatch = NULL), c('XXX', 'US', 'YYY'))
 
     # nomatch NA should replace unmatched elements with NA
-    expect_equal(countrycode(factor('XXX'), 'iso3c', 'iso2c', nomatch = NA), NA_character_)
-    expect_equal(countrycode(factor(c('XXX', 'USA', 'YYY')), 'iso3c', 'iso2c', nomatch = NA), c(NA, 'US', NA))
+    expect_equal(countrycode(factor('XXX'), 'iso3c', 'iso2c', nomatch = NA, warn = FALSE), NA_character_)
+    expect_equal(countrycode(factor(c('XXX', 'USA', 'YYY')), 'iso3c', 'iso2c', nomatch = NA, warn = FALSE), c(NA, 'US', NA))
 
     # nomatch factor vector (undecided behavior; currently skipped/ignored)
     # expect_equal(countrycode(factor('XXX'), 'iso3c', 'iso2c', nomatch = factor('YY')), factor('YY'))
