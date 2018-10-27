@@ -8,4 +8,4 @@ r_binary_packages:
   - testthat
 
 after_success:
-  - Rscript -e 'devtools::install();devtools::test()'
+  - Rscript -e "library(devtools);devtools::test()"
