@@ -8,4 +8,5 @@ r_binary_packages:
   - testthat
 
 after_success:
-  - Rscript -e "library(devtools);devtools::test()"
+  - Rscript -e "library(devtools);devtools::test()" # run first to log a nice summary
+  - Rscript -e "library(devtools);devtools::test(reporter = 'fail')" # run twice for failure
