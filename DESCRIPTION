@@ -13,11 +13,11 @@ Authors@R: c(
 Description: Standardize country names, convert them into one of
     eleven coding schemes, convert between coding schemes, and
     assign region descriptors.
-Version: 1.00.0
+Version: 1.01.0
 URL: https://github.com/vincentarelbundock/countrycode
-Date: 2018-02-08
+Date: 2018-10-26
 Depends:
     R (>= 2.10)
 Suggests:
     testthat (>= 0.5)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
