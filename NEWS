@@ -1,5 +1,10 @@
+Version 1.1.1 (2018-10-31)
+--------------------------
+
+* Bug: Typo prevented users for using "p4n" as origin code
+
 Version 1.1.0 (2018-10-26)
----------------------------
+--------------------------
 
 * Gleditsch and Ward codes (Thanks to Altaf Ali)
 * V-Dem 8 country codes (panel and cross-section)
