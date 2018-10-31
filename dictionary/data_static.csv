@@ -261,7 +261,7 @@ United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Vereinigte Arabisc
 United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$,Großbritannien,gro(ss|ß)britannien|britanien|vereinigtes.?k(ö|o)nigreich|^u\.?k\.?$,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,EG,EUR,112,Northern Europe
 United Republic of Tanzania,tanzania,Tansania,tansania,MAF,Africa,,Africa,Southern Africa,HT,AFI,738,Eastern Africa
 United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,ASIA,,,Asia,Asia/Pacific,P[JON|MDY|AWK|LPA|BAR|LUR],P,,
-United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),OECD1990,Americas,,Northern America,North Atlantic,K,NAM,111,Northern America
+United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),OECD1990,Americas,,Northern America,North Atlantic,K,NAM|ASIAPAC,111,Northern America
 Uruguay,uruguay,Uruguay,uruguay,LAM,Americas,,Southern America,South-Atlantic,SU,CARSAM,298,South America
 Uzbekistan,uzbek,Usbekistan,usbek,EIT,Asia,,Asia,Asia/Pacific,UT,EUR,927,Central Asia
 Vanuatu,vanuatu|new.?hebrides,Vanuatu,vanuatu|neue.?hebriden,ASIA,Oceania,,Asia,Asia/Pacific,NV,ASIAPAC,846,Melanesia
@@ -279,3 +279,4 @@ Yemen People's Republic,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south
 Yugoslavia,yugoslavia,Jugoslawien,jugoslawien,,,,,,,,188,
 Zambia,zambia|northern.?rhodesia,Sambia,sambia|nord.?rhodesien,MAF,Africa,,Africa,Southern Africa,FL,AFI,754,Eastern Africa
 Zanzibar,zanzibar,Sansibar,sansibar,MAF,,,,,,,,
+Zimbabwe,zimbabwe|^(?!.*northern).*rhodesia,Simbabwe,(z|s)imbabwe|^(?!.*nord).*rhodesien,MAF,Africa,,Africa,Southern Africa,FV,AFI,698,Eastern Africa
