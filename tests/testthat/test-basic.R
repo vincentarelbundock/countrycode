@@ -33,7 +33,7 @@ test_that('warn=FALSE does not give warnings', {
 })
 
 allow_duplicates = c('ar5', 'continent', 'eu28', 'eurocontrol_pru',
-                     'eurocontrol_statfor', 'icao', 'icao_region', 'region') 
+                     'eurocontrol_statfor', 'icao', 'icao.region', 'region') 
 cn = colnames(codelist)[!colnames(codelist) %in% allow_duplicates]
 for(code_name in cn){
     code_list <- codelist[, code_name]
