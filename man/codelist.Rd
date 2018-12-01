@@ -55,8 +55,8 @@ Destination only:
   \item fao.name: Food and Agriculture Organization of the United Nations country name
   \item fips.name: FIPS 10-4 Country name
   \item genc.name: Geopolitical Entities, Names and Codes standard country names
-  \item icao: International Civil Aviation Organization
-  \item icao_region: International Civil Aviation Organization (Region)
+  \item icao.name: International Civil Aviation Organization country name
+  \item icao.region: International Civil Aviation Organization region
   \item ioc.name: International Olympic Committee country name
   \item iso.name.en: ISO English short name
   \item iso.name.fr: ISO French short name

@@ -3,7 +3,7 @@ context('Duplicate entries in the dictionaries')
 
 # Duplicates allowed in these codes
 destination_codes = c('ar5', 'continent', 'eu28', 'eurocontrol_pru',
-                      'eurocontrol_statfor', 'icao', 'icao_region',
+                      'eurocontrol_statfor', 'icao', 'icao.region',
                       'region')
 
 # Load data
@@ -13,7 +13,7 @@ panel = countrycode::codelist_panel
 # Cross-section
 test_that('no duplicated entries in the cross-sectional dictionary (required for one-to-one mapping)', {
     destination_codes = c('ar5', 'continent', 'eu28', 'eurocontrol_pru',
-                          'eurocontrol_statfor', 'icao', 'icao_region',
+                          'eurocontrol_statfor', 'icao', 'icao.region',
                           'region')
     f = function(x) any(duplicated(na.omit(x)))
     dup = apply(cs, 2, f)
