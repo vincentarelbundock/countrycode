@@ -2,7 +2,7 @@ Version 1.1.0.9999 (2018-??-??)
 --------------------------
 
 * Bug: Typo prevented users for using "p4n" as origin code
-* Fixed bad icao.region codes (Thanks to @espinelli)
+* Fixed bad icao.region codes (Thanks to @espinielli)
 
 Version 1.1.0 (2018-10-26)
 --------------------------
