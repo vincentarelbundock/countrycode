@@ -1,12 +1,9 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
+warnings_are_errors: true
 language: r
 cache: packages
 r_binary_packages:
   - devtools
   - roxygen2
   - testthat
-
-after_success:
-  - Rscript -e "library(devtools);devtools::test()" # run first to log a nice summary
-  - Rscript -e "library(devtools);devtools::test(reporter = 'fail')" # run twice for failure

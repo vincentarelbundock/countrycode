@@ -1,8 +1,6 @@
-library(jsonlite)
-
 context('Known country name variations')
 
-variations <- fromJSON('country_name_known_variations.json')
+source('data-known-name-variations.R')
 
 test_that('correct matches are returned for known country name variations', {
   match_known <- function(known_variations) countrycode(known_variations, 'country.name', 'country.name')

@@ -5,7 +5,6 @@ data/extra
 README.md
 LICENSE*
 joss
-tests
 dictionary
 revdep*
 .travis.yml
