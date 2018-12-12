@@ -1,12 +1,9 @@
-get_polity4_cs = function(){
-    source('dictionary/get_polity4.R')
-    p4 = get_polity4()
-    cs = p4 %>% 
-         dplyr::arrange(country.name.en.regex, year) %>%
-         dplyr::select(-year) %>% 
-         dplyr::group_by(country.name.en.regex) %>%
-         dplyr::do(tail(., 1)) %>% # assumes proper sorting
-         dplyr::mutate(p4n = ifelse(p4.name == 'Yugoslavia', NA, p4n), # tricky time series issues; use panel version of the dictionary
-                       p4n = ifelse(p4.name == 'Vietnam North', NA, p4n))
-         return(cs)
+get_polity4_cs = function() {
+    out = read.csv('dictionary/data_panel.csv', na.strings = '') %>%
+          dplyr::arrange(country.name.en.regex, year) %>%
+          dplyr::group_by(country.name.en.regex) %>%
+          dplyr::summarize(p4c = dplyr::last(na.omit(p4c)),
+                           p4n = dplyr::last(na.omit(p4n)),
+                           p4.name = dplyr::last(na.omit(p4.name)))
+    return(out)
 }

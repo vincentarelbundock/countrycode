@@ -88,3 +88,23 @@ rec = expand.grid('country.name.en.regex' = countrycode::codelist$country.name.e
                   stringsAsFactors = FALSE)
 dat = list(rec, p4, cow, vdem) %>%
       purrr::reduce(dplyr::left_join, by = c('year', 'country.name.en.regex'))
+
+# Remove countries which are not recorded by V-Dem, CoW, or Polity
+dat = dat %>% 
+      dplyr::filter(!is.na(cow.name) | !is.na(p4.name) | !is.na(vdem.name))
+
+# Add small countries not covered by V-Dem, CoW, or Polity
+small = read.csv('dictionary/data_small_countries.csv', na.strings = '') %>%
+        dplyr::mutate(end = ifelse(is.na(end), max(dat$year), end),
+                      # TODO: Fix Aland Islands conversion
+                      country.name.en.regex = CountryToRegex(country)) %>%
+        dplyr::select(country.name.en.regex, start, end) %>%
+        na.omit # TODO: Most for Aland Islands problem
+small = lapply(1:nrow(small), function(i) 
+                              data.frame('country.name.en.regex' = small$country.name.en.regex[i],
+                                         'year' = small$start[i]:small$end[i]))
+dat = dplyr::bind_rows(c(list(dat), small))
+
+# Save 
+dat = dat %>% dplyr::arrange(country.name.en.regex, year)
+readr::write_csv(dat, 'dictionary/data_panel.csv', na = '')

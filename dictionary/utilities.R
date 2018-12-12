@@ -10,8 +10,10 @@ if (! l10n_info()$`UTF-8`) warning('Running in a non-UTF-8 locale!')
 custom_dict = read.csv('dictionary/data_static.csv', na = '') %>% 
               dplyr::select(country.name.en.regex, country.name.en.regex) 
 CountryToRegex = function(x, warn=TRUE) countrycode(x, 
-                                                    'country.name', 
                                                     'country.name.en.regex', 
+                                                    'country.name.en.regex', 
+                                                    origin_regex = TRUE,
+                                                    custom_dict = custom_dict,
                                                     warn=warn)
 
 #' Download data from original web source 
