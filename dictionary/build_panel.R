@@ -99,11 +99,18 @@ small = read.csv('dictionary/data_small_countries.csv', na.strings = '') %>%
                       # TODO: Fix Aland Islands conversion
                       country.name.en.regex = CountryToRegex(country)) %>%
         dplyr::select(country.name.en.regex, start, end) %>%
+        dplyr::filter(!country.name.en.regex %in% dat$country.name.en.regex) %>% # avoid duplicates
         na.omit # TODO: Most for Aland Islands problem
 small = lapply(1:nrow(small), function(i) 
                               data.frame('country.name.en.regex' = small$country.name.en.regex[i],
                                          'year' = small$start[i]:small$end[i]))
 dat = dplyr::bind_rows(c(list(dat), small))
+
+# Sanity check
+idx = paste(dat$country.name.en.regex, dat$year)
+if (anyDuplicated(idx)) {
+    stop('Duplicate country-year observations.')
+}
 
 # Save 
 dat = dat %>% dplyr::arrange(country.name.en.regex, year)
