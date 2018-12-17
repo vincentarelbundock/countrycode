@@ -182,7 +182,7 @@ Northern Mariana Islands,mariana,Nördliche Marianen,marianen,ASIA,Oceania,NA,As
 Norway,norway,Norwegen,norwegen,MAF,Europe,NA,Eurocontrol,ESRA North-West,142,Northern Europe
 Oldenburg,oldenburg,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Oman,\boman|trucial,Oman,\boman|trucial,NA,Asia,NA,Middle East,Middle-East,449,Western Asia
-Orange Free State, orange.free.state,,,,,,,,,
+Orange Free State,orange.free.state,,,,,,,,,
 Pakistan,^(?!.*east).*paki?stan,Pakistan,^(?!.*ost).*paki?stan,ASIA,Asia,NA,Asia,Asia/Pacific,564,Southern Asia
 Palau,palau,Palau,palau,ASIA,Oceania,NA,Asia,Asia/Pacific,565,Micronesia
 "Palestine, State of",palestin|\bgaza|west.?bank,Palästina,pal(ä|a)stin|\bgaza|west.?bank,MAF,Asia,NA,Middle East,Middle-East,487,Western Asia
@@ -196,7 +196,7 @@ Piedmont-Sardinia,piedmont.sardinia,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Pitcairn,pitcairn,Pitcairn,pitcairn,ASIA,Oceania,NA,NA,NA,NA,Polynesia
 Poland,poland,Polen,polen,EIT,Europe,EU,Eurocontrol,ESRA East,964,Eastern Europe
 Portugal,portugal,Portugal,portugal,OECD1990,Europe,EU,Eurocontrol,ESRA Mediterranean,182,Southern Europe
-Prussia, prussia,,,,,,,,,
+Prussia,prussia,,,,,,,,,
 Puerto Rico,puerto.?rico,Puerto Rico,puerto.?rico,LAM,Americas,NA,Southern America,Mid-Atlantic,NA,Caribbean
 Qatar,qatar,Katar,(q|k)atar,MAF,Asia,NA,Middle East,Middle-East,453,Western Asia
 Republic of Korea,^(?!.*d.*p.*r)(?!.*democrat)(?!.*people)(?!.*north).*\bkorea(?!.*d.*p.*r),"Korea, Republik von",^(?!.*demokrat)(?!.*volk)(?!.*nord).*korea,NA,Asia,NA,Asia,Asia/Pacific,542,Eastern Asia
@@ -215,13 +215,13 @@ Saint Vincent and the Grenadines,vincent,St. Vincent und die Grenadinen,vincent,
 Samoa,^(?!.*amer).*samoa,Samoa,^(?!.*amer).*samoa,ASIA,Oceania,NA,Asia,Asia/Pacific,862,Polynesia
 San Marino,san.?marino,San Marino,san.?marino,OECD1990,Europe,NA,NA,NA,135,Southern Europe
 Sao Tome and Principe,\bs(a|ã)o.?tom(e|é),Sao Tome und Principe,\bs(a|ã)o.?tom(e|é),MAF,Africa,NA,Africa,Southern Africa,716,Middle Africa
-Sardinia, ^sardinia,,,,,,,,,
+Sardinia,^sardinia,,,,,,,,,
 Saudi Arabia,\bsa\w*.?arabia,Saudi Arabien,\bsa\w*.?arabien,MAF,Asia,NA,Middle East,Middle-East,456,Western Asia
 Saxe-Weimar-Eisenach,saxe.weimar.eisenach,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Saxony,saxony,Sachsen,sachsen,NA,NA,NA,NA,NA,NA,NA
 Senegal,senegal,Senegal,senegal,MAF,Africa,NA,NA,NA,722,Western Africa
 Serbia,^(?!.*monte).*serbia,Serbien,^(?!.*monte).*serbien,EIT,Europe,NA,Eurocontrol,ESRA East,942,Southern Europe
-Serbia and Montenegro, serbia.and.montenegro,,,,,,,,,
+Serbia and Montenegro,serbia.and.montenegro,,,,,,,,,
 Seychelles,seychell,Seychellen,seychell,MAF,Africa,NA,Africa,Southern Africa,718,Eastern Africa
 Sierra Leone,sierra,Sierra Leone,sierra,MAF,Africa,NA,Africa,Southern Africa,724,Western Africa
 Singapore,singapore,Singapur,singapur,ASIA,Asia,NA,Asia,Asia/Pacific,576,South-Eastern Asia
@@ -263,7 +263,7 @@ Uganda,uganda,Uganda,uganda,MAF,Africa,NA,Africa,Southern Africa,746,Eastern Afr
 Ukraine,ukrain,Ukraine,ukrain,EIT,Europe,NA,Eurocontrol,ESRA East,926,Eastern Europe
 United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Vereinigte Arabische Emirate,arabische.?emirate,MAF,Asia,NA,Middle East,Middle-East,466,Western Asia
 United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$,Großbritannien,gro(ss|ß)britannien|britanien|vereinigtes.?k(ö|o)nigreich|^u\.?k\.?$,OECD1990,Europe,EU,Eurocontrol,ESRA North-West,112,Northern Europe
-United Province CA, united.province.ca,,,,,,,,,
+United Province CA,united.province.ca,,,,,,,,,
 United Republic of Tanzania,tanzania,Tansania,tansania,MAF,Africa,NA,Africa,Southern Africa,738,Eastern Africa
 United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,ASIA,NA,NA,Asia,Asia/Pacific,NA,NA
 United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),OECD1990,Americas,NA,Northern America,North Atlantic,111,Northern America
