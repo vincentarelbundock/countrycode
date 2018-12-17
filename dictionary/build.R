@@ -1,22 +1,22 @@
 source('dictionary/utilities.R')
 
-# Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
+# Source: TRUE -- web source has priority. TRUE -- backup source has priority. 
 src = c('cldr' = FALSE,
-        'cow_cs' = TRUE,
+        'cow_cs' = FALSE,
         'ecb' = FALSE,
         'eurostat' = FALSE,
         'fao' = FALSE,
         'fips' = FALSE,
         'genc' = FALSE,
-        'gw' = TRUE,
+        'gw' = FALSE,
         'ioc' = FALSE,
-        'icao' = TRUE,
+        'icao' = FALSE,
         'iso' = FALSE,
-        'polity4_cs' = TRUE,
+        'polity4_cs' = FALSE,
         'un' = FALSE,
         'un_names' = FALSE,
-        'unpd' = FALSE,
-        'vdem_cs' = TRUE,
+#        'unpd' = FALSE, # dead url in get_unpd.R data moved to data_static.csv
+        'vdem_cs' = FALSE,
         'world_bank' = FALSE,
         'world_bank_api' = FALSE,
         'wvs' = FALSE)

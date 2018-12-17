@@ -6,6 +6,7 @@ get_ecb = function() {
             "Australia, Oceania and other territories",
             "Central and South Africa countries",
             "EU 12 (fixed composition) including West Germany",
+            "EU 12 (fixed composition) including West Germany as of 1 November 1993",
             "Euro area countries except Germany, France, Italy and Spain",
             "G20 (Argentina,Australia,Brazil,Canada,China,European Union,France,Germany,India,Indonesia,Italy,Japan,Mexico,Russia,Saudi Arabia,South Africa,South Korea,Turkey,United Kingdom,United States)",
             "Gaza and Jericho",

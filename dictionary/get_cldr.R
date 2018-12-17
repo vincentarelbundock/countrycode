@@ -16,7 +16,7 @@ get_cldr <- function() {
     full_url <- 'https://api.github.com/repos/unicode-cldr/cldr-localenames-full/releases/latest'
     full_zip_url <- jsonlite::fromJSON(full_url)$zipball_url
     zipfile <- tempfile(fileext = '.zip')
-    httr::GET(full_zip_url, httr::write_disk(zipfile), httr::progress())
+    httr::GET(full_zip_url, httr::write_disk(zipfile))#, httr::progress())
     utils::flush.console() # workaround bug in httr
     
     # unzip only the files named 'territories.json'
@@ -27,7 +27,7 @@ get_cldr <- function() {
     
     # build a list of data frames for each 'territories.json' file and merge
     get_names <- function(filelist) {
-        pb <- txtProgressBar(max = length(filelist), style = 3)
+        #pb <- txtProgressBar(max = length(filelist), style = 3)
         langlist <- 
             lapply(seq_along(filelist), function(i) {
                 file <- filelist[[i]]
@@ -41,10 +41,10 @@ get_cldr <- function() {
                     tidyr::spread(variant, name) %>% 
                     dplyr::mutate_at(vars(-iso2c, -cldr.name), funs(if_else(is.na(.), cldr.name, .)))
                 names(lang)[-1] <- paste0(names(lang)[-1], '.', langId)
-                setTxtProgressBar(pb, i)
+                #setTxtProgressBar(pb, i)
                 return(lang)
             })
-        close(pb)
+        #close(pb)
         return(langlist)
     }
     cldr <- get_names(filelist)
@@ -54,7 +54,8 @@ get_cldr <- function() {
     bad <- c("Ascension Island", "Clipperton Island", "Diego Garcia", 
           "Ceuta & Melilla", "European Union", "Eurozone", "Micronesia", 
           "Canary Islands", "St. Martin", "Outlying Oceania", "Tristan da Cunha", 
-          "U.S. Outlying Islands", "United Nations", "Unknown Region")
+          "U.S. Outlying Islands", "United Nations", "Unknown Region",
+          "Pseudo-Accents", "Pseudo-Bidi")
     cldr <- 
         cldr %>% 
         dplyr::filter(! nchar(iso2c) > 2) %>% # remove rows with 3 digit codes
@@ -65,6 +66,9 @@ get_cldr <- function() {
 
     # remove duplicated columns
     cldr <- cldr[!duplicated(as.list(cldr))]
+
+    # weird cases with no matching regexes
+    clrd = cldr[!cldr$cldr.name.af %in% c('XA', 'XB'),]
 
     # codes to lower-case
     colnames(cldr) = tolower(colnames(cldr))

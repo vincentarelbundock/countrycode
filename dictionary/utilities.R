@@ -24,7 +24,7 @@ LoadSource = function(src = 'world_bank') {
     # execute get_function
     function_name = paste0('get_', src)
     out = try({
-              setTimeLimit(cpu = 30);
+              setTimeLimit(cpu = 120);
               eval(parse(text = function_name))()
               }, silent = TRUE)
     # output as data.frame with meta-data attributes
