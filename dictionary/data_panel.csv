@@ -6080,6 +6080,52 @@ country.name.en.regex,year,p4n,p4c,p4.name,cowc,cown,cow.name,vdem.name,vdem
 ^(?!.*north).*\bireland,2017,205,IRE,Ireland,IRE,205,Ireland,Ireland,81
 ^(?!.*north).*\bireland,2018,205,IRE,Ireland,IRE,205,Ireland,Ireland,81
 ^(?!.*north).*\bireland,2019,205,IRE,Ireland,IRE,205,Ireland,Ireland,81
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1815,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1816,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1817,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1818,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1819,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1820,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1821,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1822,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1823,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1824,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1825,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1826,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1827,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1828,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1829,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1830,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1831,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1832,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1833,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1834,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1835,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1836,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1837,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1838,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1839,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1840,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1841,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1842,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1843,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1844,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1845,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1846,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1847,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1848,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1849,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1850,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1851,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1852,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1853,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1854,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1855,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1856,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1857,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1858,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1859,324,SAR,Sardinia,,,,,
+^(?!.*piedmont)(?!.*italy).*\bsardinia,1860,324,SAR,Sardinia,,,,,
 ^(?!.*serbia).*montenegro,1789,,,,,,,Montenegro,183
 ^(?!.*serbia).*montenegro,1790,,,,,,,Montenegro,183
 ^(?!.*serbia).*montenegro,1791,,,,,,,Montenegro,183
@@ -7228,81 +7274,6 @@ country.name.en.regex,year,p4n,p4c,p4.name,cowc,cown,cow.name,vdem.name,vdem
 ^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,1988,680,YPR,Yemen South,YPR,680,Yemen People's Republic,South Yemen,23
 ^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,1989,680,YPR,Yemen South,YPR,680,Yemen People's Republic,South Yemen,23
 ^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,1990,680,YPR,Yemen South,YPR,680,Yemen People's Republic,South Yemen,23
-^(?=.*rep).*czech|czechia|bohemia,1918,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1919,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1920,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1921,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1922,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1923,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1924,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1925,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1926,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1927,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1928,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1929,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1930,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1931,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1932,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1933,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1934,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1935,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1936,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1937,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1938,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1939,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1940,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1941,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1942,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1943,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1944,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1945,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1946,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1947,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1948,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1949,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1950,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1951,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1952,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1953,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1954,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1955,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1956,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1957,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1958,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1959,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1960,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1961,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1962,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1963,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1964,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1965,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1966,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1967,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1968,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1969,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1970,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1971,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1972,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1973,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1974,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1975,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1976,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1977,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1978,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1979,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1980,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1981,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1982,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1983,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1984,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1985,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1986,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1987,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1988,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1989,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1990,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1991,,,,,,,Czech Republic,157
-^(?=.*rep).*czech|czechia|bohemia,1992,,,,,,,Czech Republic,157
 ^(?=.*rep).*czech|czechia|bohemia,1993,316,CZR,Czech Republic,CZR,316,Czech Republic,Czech Republic,157
 ^(?=.*rep).*czech|czechia|bohemia,1994,316,CZR,Czech Republic,CZR,316,Czech Republic,Czech Republic,157
 ^(?=.*rep).*czech|czechia|bohemia,1995,316,CZR,Czech Republic,CZR,316,Czech Republic,Czech Republic,157
@@ -11964,81 +11935,81 @@ cyprus,2016,352,CYP,Cyprus,CYP,352,Cyprus,Cyprus,156
 cyprus,2017,352,CYP,Cyprus,CYP,352,Cyprus,Cyprus,156
 cyprus,2018,352,CYP,Cyprus,CYP,352,Cyprus,Cyprus,156
 cyprus,2019,352,CYP,Cyprus,CYP,352,Cyprus,Cyprus,156
-czechoslovakia,1918,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1919,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1920,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1921,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1922,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1923,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1924,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1925,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1926,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1927,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1928,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1929,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1930,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1931,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1932,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1933,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1934,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1935,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1936,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1937,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1938,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1939,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1940,315,CZE,Czechoslovakia,,,,,
-czechoslovakia,1941,315,CZE,Czechoslovakia,,,,,
-czechoslovakia,1942,315,CZE,Czechoslovakia,,,,,
-czechoslovakia,1943,315,CZE,Czechoslovakia,,,,,
-czechoslovakia,1944,315,CZE,Czechoslovakia,,,,,
-czechoslovakia,1945,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1946,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1947,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1948,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1949,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1950,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1951,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1952,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1953,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1954,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1955,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1956,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1957,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1958,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1959,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1960,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1961,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1962,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1963,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1964,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1965,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1966,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1967,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1968,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1969,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1970,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1971,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1972,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1973,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1974,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1975,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1976,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1977,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1978,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1979,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1980,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1981,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1982,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1983,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1984,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1985,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1986,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1987,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1988,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1989,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1990,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1991,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
-czechoslovakia,1992,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,,
+czechoslovakia,1918,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1919,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1920,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1921,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1922,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1923,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1924,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1925,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1926,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1927,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1928,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1929,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1930,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1931,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1932,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1933,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1934,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1935,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1936,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1937,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1938,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1939,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1940,315,CZE,Czechoslovakia,,,,Czechoslovakia,157
+czechoslovakia,1941,315,CZE,Czechoslovakia,,,,Czechoslovakia,157
+czechoslovakia,1942,315,CZE,Czechoslovakia,,,,Czechoslovakia,157
+czechoslovakia,1943,315,CZE,Czechoslovakia,,,,Czechoslovakia,157
+czechoslovakia,1944,315,CZE,Czechoslovakia,,,,Czechoslovakia,157
+czechoslovakia,1945,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1946,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1947,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1948,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1949,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1950,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1951,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1952,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1953,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1954,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1955,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1956,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1957,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1958,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1959,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1960,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1961,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1962,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1963,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1964,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1965,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1966,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1967,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1968,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1969,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1970,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1971,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1972,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1973,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1974,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1975,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1976,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1977,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1978,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1979,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1980,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1981,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1982,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1983,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1984,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1985,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1986,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1987,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1988,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1989,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1990,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1991,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
+czechoslovakia,1992,315,CZE,Czechoslovakia,CZE,315,Czechoslovakia,Czechoslovakia,157
 denmark,1789,,,,,,,Denmark,158
 denmark,1790,,,,,,,Denmark,158
 denmark,1791,,,,,,,Denmark,158
