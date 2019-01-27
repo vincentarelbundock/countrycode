@@ -66,7 +66,7 @@ cs$country.name.en = cs$country.name
 cs$country.name = NULL
 
 # Panel
-tmp = cs %>% dplyr::select(-matches('cldr|p4|cow|vdem'))
+tmp = cs %>% dplyr::select(-dplyr::matches('cldr|p4|cow|vdem'))
 panel = read.csv('dictionary/data_panel.csv', na.strings = '') %>%
         dplyr::left_join(tmp, by = 'country.name.en.regex')
 

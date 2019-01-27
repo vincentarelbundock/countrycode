@@ -51,7 +51,7 @@ extend_coverage = function(dat, last_year = 2019) {
     out = dat
     tmp = dat %>% 
           dplyr::filter(year == max(year))
-    for (y in setdiff(2000:last_year, dat$year)) {
+    for (y in base::setdiff(2000:last_year, dat$year)) {
         tmp$year = y
         out = rbind(out, tmp)
     }
