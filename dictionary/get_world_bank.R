@@ -1,4 +1,5 @@
 get_world_bank = function() {
+
     url <- 'http://databank.worldbank.org/data/download/site-content/CLASS.xls'
 
     filename <- tempfile(fileext = '.xls')

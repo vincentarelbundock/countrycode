@@ -17,7 +17,7 @@ src = c('cldr' = FALSE,
         'un_names' = FALSE,
 #        'unpd' = FALSE, # dead url in get_unpd.R data moved to data_static.csv
         'vdem_cs' = FALSE,
-        'world_bank' = FALSE,
+        'world_bank' = TRUE,
         'world_bank_api' = FALSE,
         'wvs' = FALSE)
 src = c('static' = TRUE, src) # static must always be true
