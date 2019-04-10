@@ -1,6 +1,6 @@
 library(pacman)
 p_load(tidyverse, countrycode, janitor, tibble, dplyr, tidyr, readr, readxl,
-       rvest, RSelenium, httr, jsonlite, zoo)
+       rvest, RSelenium, httr, jsonlite, zoo, here)
 options(stringsAsFactors=FALSE)
 
 # warn if not running in an UTF-8 locale

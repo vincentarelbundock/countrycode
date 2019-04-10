@@ -1,3 +1,4 @@
+setwd(here::here())
 source('dictionary/utilities.R')
 
 # Polity4
@@ -15,23 +16,26 @@ p4 = readxl::read_excel(tmpxls) %>%
 url = 'http://www.correlatesofwar.org/data-sets/cow-country-codes/cow-country-codes'
 tmp = tempfile()
 download.file(url, tmp, quiet = TRUE)
-codes = read.csv(tmp) %>%
-        dplyr::rename(cowc=StateAbb,
-                      cown=CCode,
-                      cow.name=StateNme) %>%
-        # TODO: Find solution to regex problem
-        dplyr::filter(cow.name != 'Republic of Vietnam') %>%
-        unique # there are dups in the original file
+codes_raw = read.csv(tmp)
 unlink(tmp)
 url = 'http://www.correlatesofwar.org/data-sets/state-system-membership/system2016'
 tmp = tempfile()
 download.file(url, tmp, quiet = TRUE)
-cow = read.csv(tmp) %>% 
+cow_raw = read.csv(tmp)
+unlink(tmp)
+
+codes = codes_raw %>%
+        dplyr::rename(cowc=StateAbb,
+                      cown=CCode,
+                      cow.name=StateNme) %>%
+        # there are dups in the original file
+        unique 
+
+cow = cow_raw %>%
       dplyr::rename(cowc=stateabb, cown=ccode) %>%
       dplyr::left_join(codes, by = c('cowc', 'cown')) %>% 
       dplyr::select(cowc, cown, cow.name, year) %>%
       dplyr::mutate(country.name.en.regex = CountryToRegex(cow.name))
-unlink(tmp)
 
 # V-Dem
 vdem = readRDS('dictionary/data_vdem_v8_april2018.rds') %>%
@@ -85,9 +89,10 @@ vdem = vdem %>%
                      )
 
 # Merge
+idx <- read.csv('dictionary/data_static.csv', na = '')$country.name.en.regex
 yea = c(p4$year, cow$year, vdem$year) 
 yea = min(yea):max(yea)
-rec = expand.grid('country.name.en.regex' = countrycode::codelist$country.name.en.regex,
+rec = expand.grid('country.name.en.regex' = idx,
                   'year' = yea,
                   stringsAsFactors = FALSE)
 dat = list(rec, p4, cow, vdem) %>%
@@ -111,9 +116,14 @@ small = lapply(1:nrow(small), function(i)
 dat = dplyr::bind_rows(c(list(dat), small))
 
 # Sanity check
-idx = paste(dat$country.name.en.regex, dat$year)
-if (anyDuplicated(idx)) {
-    stop('Duplicate country-year observations.')
+variables <- colnames(dat)[colnames(dat) != 'year']
+for (v in variables) {
+    tmp <-  dat[, c(v, 'year')]
+    tmp <- na.omit(tmp)
+    bad <- nrow(tmp) != nrow(unique(tmp))
+    if (bad) {
+        stop('Duplicate country-year observations.')
+    }
 }
 
 # Save 

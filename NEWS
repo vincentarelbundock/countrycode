@@ -5,6 +5,7 @@ Version 1.1.0.9999 (2018-??-??)
 * Fixed bad icao.region codes (Thanks to @espinielli)
 * Added country name "United Arab Republic" and its regex (Thanks to Gina Reynolds)
 * Added SOM to wb code (Thanks to Fabian Besche)
+* Added Vietname to codelist_panel
 
 Version 1.1.0 (2018-10-26)
 --------------------------
