@@ -7,7 +7,7 @@ options(stringsAsFactors=FALSE)
 if (! l10n_info()$`UTF-8`) warning('Running in a non-UTF-8 locale!')
 
 #' Use countrycode regexes as unique country IDs
-custom_dict = read.csv('dictionary/data_static.csv', na = '') %>% 
+custom_dict = read.csv('dictionary/data_static.csv', na = '', stringsAsFactors = FALSE) %>% 
               dplyr::select(country.name.en.regex, country.name.en.regex) 
 CountryToRegex = function(x, warn=TRUE) countrycode(x, 
                                                     'country.name.en.regex', 
