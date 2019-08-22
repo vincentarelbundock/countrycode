@@ -2,10 +2,7 @@
 % Please edit documentation in R/countrycode.R
 \name{countrycode}
 \alias{countrycode}
-\title{Converts long country names into one of many different coding schemes.
-Translates from one scheme to another. Converts country name or coding
-scheme to the official short English country name. Creates a new variable
-with the name of the continent or region to which each country belongs.}
+\title{Convert Country Codes}
 \usage{
 countrycode(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
   custom_dict = NULL, custom_match = NULL, origin_regex = FALSE)

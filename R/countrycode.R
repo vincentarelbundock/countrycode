@@ -1,4 +1,4 @@
-# Convert Country Codes
+#' Convert Country Codes
 #'
 #' Converts long country names into one of many different coding schemes.
 #' Translates from one scheme to another. Converts country name or coding
