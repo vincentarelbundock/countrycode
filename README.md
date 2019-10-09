@@ -66,15 +66,15 @@ Convert single country codes:
 
 ```R
 # ISO to Correlates of War
-countrycode('DZA', 'iso3c', 'cown') 
+countrycode('DZA', origin = 'iso3c', destination = 'cown') 
 [1]   615
 
 # English to ISO
-countrycode('Albania', 'country.name', 'iso3c') 
+countrycode('Albania', origin = 'country.name', destination = 'iso3c') 
 [1] "ALB"
 
 # German to Arabic
-countrycode(c('Algerien', 'Albanien'), 'country.name.de', 'un.name.ar') 
+countrycode(c('Algerien', 'Albanien'), origin = 'country.name.de', destination = 'un.name.ar') 
 [1] "الجزائر" "ألبانيا"
 ```
 
@@ -83,9 +83,9 @@ countrycode(c('Algerien', 'Albanien'), 'country.name.de', 'un.name.ar')
 The Unicode organisation hosts the CLDR project, which publishes many variants of country names. For each language/culture locale, there is a full set of names, plus possible 'alt-short' or 'alt-variant' variations of specific country names.
 
 ```
-> countrycode('United States of America', 'country.name', 'cldr.name.en')
+> countrycode('United States of America', origin = 'country.name', destination = 'cldr.name.en')
 > [1] "United States"
-> countrycode('United States of America', 'country.name', 'cldr.short.en')
+> countrycode('United States of America', origin = 'country.name', destination = 'cldr.short.en')
 > [1] "US"
 ```
 
@@ -105,8 +105,8 @@ To see a full list of country name variants available, inspect this data.frame:
 ## Convert a vector of country codes
 
 ```R
-> cowcodes <- c("ALG","ALB","UKG","CAN","USA")
-> countrycode(cowcodes,"cowc","iso3c")
+> cowcodes <- c("ALG", "ALB", "UKG", "CAN", "USA")
+> countrycode(cowcodes, origin = "cowc", destination = "iso3c")
 [1] "DZA" "ALB" "GBR" "CAN" "USA"
 ```
 
@@ -142,10 +142,10 @@ isocodes var2
 Create a common variable with the iso3c code in each data frame, merge the data, and create a country identifier:
 
 ```R
-> df1$iso3c   <- countrycode(df1$cowcodes, "cowc", "iso3c")
-> df2$iso3c   <- countrycode(df2$isocodes, "iso3n", "iso3c")
+> df1$iso3c   <- countrycode(df1$cowcodes, origin = "cowc", destination = "iso3c")
+> df2$iso3c   <- countrycode(df2$isocodes, origin = "iso3n", destination = "iso3c")
 > df3         <- merge(df1,df2,id="iso3c")
-> df3$country <- countrycode(df3$iso3c, "iso3c", "country.name")
+> df3$country <- countrycode(df3$iso3c, origin = "iso3c", destination = "country.name")
 > df3
 iso3c cowcodes var1 isocodes var2        country
 1   ALB      ALB  113        8  245        ALBANIA
@@ -170,9 +170,11 @@ state_dict = read.csv(url, stringsAsFactors=FALSE)
 Convert:
 
 ```
-countrycode('State of Alabama', 'state', 'abbreviation', 
-            custom_dict=state_dict,
-            origin_regex=TRUE)
+countrycode('State of Alabama', 
+            origin = 'state', 
+            destination = 'abbreviation', 
+            custom_dict = state_dict,
+            origin_regex = TRUE)
 [1] "AL"
 countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dict)
 [1] "Michigan" "Ohio"     NA        
@@ -201,7 +203,10 @@ example: convert from country name to Eurostat code
 library(countrycode)
 country_names <- c('Greece', 'United Kingdom', 'Germany', 'France')
 custom_match <- c(Greece = 'EL', `United Kingdom` = 'UK')
-countrycode(country_names, 'country.name', 'iso2c', custom_match = custom_match)
+countrycode(country_names, 
+            origin = 'country.name', 
+            destination = 'iso2c', 
+            custom_match = custom_match)
 ```
 
 example: convert from Eurostat code to country name
@@ -210,7 +215,7 @@ library(eurostat)
 library(countrycode)
 df <- eurostat::get_eurostat("nama_10_lp_ulc")
 custom_match <- c(EL = 'Greece', UK = 'United Kingdom')
-countrycode(df$geo, 'iso2c', 'country.name', custom_match = custom_match)
+countrycode(df$geo, origin = 'iso2c', destination = 'country.name', custom_match = custom_match)
 ```
 
 # Extra arguments
@@ -220,9 +225,9 @@ Use `warn = TRUE` to print out a list of source elements for which no match was 
 Use the `nomatch` argument to specify the value that `countrycode` inserts where no match was found:
 
 ```r
-> countrycode(c('DZA', 'USA', '???'), 'iso3c', 'country.name', nomatch = 'BAD CODE')
+> countrycode(c('DZA', 'USA', '???'), origin = 'iso3c', destination = 'country.name', nomatch = 'BAD CODE')
 > [1] "Algeria"       "United States" "BAD CODE"  
-> countrycode(c('Canada', 'Fake country'), 'country.name', 'iso3c', nomatch = 'BAD')
+> countrycode(c('Canada', 'Fake country'), origin = 'country.name', destination = 'iso3c', nomatch = 'BAD')
 > [1] "CAN" "BAD"
 ```
 

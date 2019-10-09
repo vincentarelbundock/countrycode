@@ -67,10 +67,10 @@ by one row in any given year. From there, it is just a matter of using `R`'s
 }
 \examples{
 # ISO to Correlates of War
-countrycode(c('USA', 'DZA'), 'iso3c', 'cown')
+countrycode(c('USA', 'DZA'), origin = 'iso3c', destination = 'cown')
 # English to ISO
-countrycode('Albania', 'country.name', 'iso3c')
+countrycode('Albania', origin = 'country.name', destination = 'iso3c')
 # German to French
-countrycode('Albanien', 'country.name.de', 'iso.name.fr')
+countrycode('Albanien', origin = 'country.name.de', destination = 'iso.name.fr')
 }
 \keyword{countrycode}

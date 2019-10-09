@@ -51,11 +51,11 @@
 #' @aliases countrycode
 #' @examples
 #' # ISO to Correlates of War
-#' countrycode(c('USA', 'DZA'), 'iso3c', 'cown')
+#' countrycode(c('USA', 'DZA'), origin = 'iso3c', destination = 'cown')
 #' # English to ISO
-#' countrycode('Albania', 'country.name', 'iso3c')
+#' countrycode('Albania', origin = 'country.name', destination = 'iso3c')
 #' # German to French
-#' countrycode('Albanien', 'country.name.de', 'iso.name.fr')
+#' countrycode('Albanien', origin = 'country.name.de', destination = 'iso.name.fr')
 countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
                         custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
 
