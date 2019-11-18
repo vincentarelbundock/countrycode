@@ -1,6 +1,6 @@
 # R: countrycode
 
-`countrycode` standardizes country names, converts them into ~20 different coding schemes, assigns region descriptors, and generates empty dyadic or country-year dataframes from the coding schemes. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
+`countrycode` standardizes country names, converts them into ~20 different coding schemes, and assigns region descriptors. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
 
 If you use `countrycode` in your research, we would be very grateful if you could cite our paper:
 
