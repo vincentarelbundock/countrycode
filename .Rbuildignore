@@ -11,3 +11,4 @@ revdep*
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .here
+^CRAN-RELEASE$

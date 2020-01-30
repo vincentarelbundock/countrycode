@@ -1,8 +1,9 @@
+setwd(here::here())
 source('dictionary/utilities.R')
 
-# Source: TRUE -- web source has priority. TRUE -- backup source has priority. 
+# Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
 src = c('cldr' = FALSE,
-        'cow_cs' = TRUE,
+        'cow_cs' = FALSE,
         'ecb' = FALSE,
         'eurostat' = FALSE,
         'fao' = FALSE,
@@ -89,9 +90,21 @@ if (anyDuplicated(cs$country.name.en)) {
     stop('Duplicate country observations in cross-sectional dataset')
 }
 
+# Encoding: convert to UTF-8 if there are non-ASCII characters
+for (col in colnames(codelist)[sapply(codelist, class) == 'character']) {
+    if (!all(na.omit(stringi::stri_enc_mark(codelist[[col]])) == 'ASCII')) {
+        codelist[[col]] <- enc2utf8(codelist[[col]])
+    }
+}
+for (col in colnames(codelist_panel)[sapply(codelist_panel, class) == 'character']) {
+    if (!all(na.omit(stringi::stri_enc_mark(codelist_panel[[col]])) == 'ASCII')) {
+        codelist_panel[[col]] <- enc2utf8(codelist_panel[[col]])
+    }
+}
+
 # Save files
 codelist = cs
 codelist_panel = panel
-saveRDS(dat, 'data/backup.rds', compress = 'xz')
-save(codelist, file = 'data/codelist.rda', compress = 'xz')
-save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz')
+saveRDS(dat, 'data/backup.rds', compress = 'xz', version = 2)
+save(codelist, file = 'data/codelist.rda', compress = 'xz', version = 2)
+save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz', version = 2)
