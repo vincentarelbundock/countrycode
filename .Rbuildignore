@@ -10,3 +10,4 @@ revdep*
 .travis.yml
 ^.*\.Rproj$
 ^\.Rproj\.user$
+.here

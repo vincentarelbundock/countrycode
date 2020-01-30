@@ -4,8 +4,16 @@
 \alias{countrycode}
 \title{Convert Country Codes}
 \usage{
-countrycode(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
-  custom_dict = NULL, custom_match = NULL, origin_regex = FALSE)
+countrycode(
+  sourcevar,
+  origin,
+  destination,
+  warn = TRUE,
+  nomatch = NA,
+  custom_dict = NULL,
+  custom_match = NULL,
+  origin_regex = FALSE
+)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be
