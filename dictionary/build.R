@@ -91,14 +91,14 @@ if (anyDuplicated(cs$country.name.en)) {
 }
 
 # Encoding: convert to UTF-8 if there are non-ASCII characters
-for (col in colnames(codelist)[sapply(codelist, class) == 'character']) {
-    if (!all(na.omit(stringi::stri_enc_mark(codelist[[col]])) == 'ASCII')) {
-        codelist[[col]] <- enc2utf8(codelist[[col]])
+for (col in colnames(cs)[sapply(cs, class) == 'character']) {
+    if (!all(na.omit(stringi::stri_enc_mark(cs[[col]])) == 'ASCII')) {
+        cs[[col]] <- enc2utf8(cs[[col]])
     }
 }
-for (col in colnames(codelist_panel)[sapply(codelist_panel, class) == 'character']) {
-    if (!all(na.omit(stringi::stri_enc_mark(codelist_panel[[col]])) == 'ASCII')) {
-        codelist_panel[[col]] <- enc2utf8(codelist_panel[[col]])
+for (col in colnames(panel)[sapply(panel, class) == 'character']) {
+    if (!all(na.omit(stringi::stri_enc_mark(panel[[col]])) == 'ASCII')) {
+        panel[[col]] <- enc2utf8(panel[[col]])
     }
 }
 

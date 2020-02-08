@@ -279,7 +279,7 @@ Republic of Vietnam,(?!social).*republic.of.viet.?nam|south.viet.?nam|viet.?nam.
 Wallis and Futuna,futuna|wallis,Wallis und Futuna,futuna|wallis,ASIA,Oceania,,Asia,Asia/Pacific,,Polynesia,Wallis and Futuna Islands,876
 Western Sahara,western.sahara,Westsahara,westsahara,MAF,Africa,,Africa,Southern Africa,,Northern Africa,Western Sahara,732
 Wuerttemburg,w(ue|ü)rttemburg,Württemberg,w(ue|ü)rttemberg,,,,,,,,,
-Würtemberg,w.rtemberg,,,,,,,,,,,
+Wurtemberg,w.rtemberg,,,,,,,,,,,
 Yemen,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Jemen,^(?!.*arab)(?!.*nord)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*süd)(?!.*aden)(?!.*\bp\.?d\.?r).*jemen,MAF,Asia,,Middle East,Middle-East,474,Western Asia,Yemen,887
 Yemen Arab Republic,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,Jemenitische Arabische Republik,^(?=.*arab).*jemen|^(?=.*nord).*jemen|^(?=.*sana).*jemen,,,,,,,,,
 Yemen People's Republic,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,Demokratische Volksrepublik Jemen,^(?=.*volk).*jemen|^(?!.*rep)(?=.*dem).*jemen|^(?=.*süd).*jemen|^(?=.*aden).*jemen|^(?=.*\bp\.?d\.?r).*jemen,,,,,,,,,
