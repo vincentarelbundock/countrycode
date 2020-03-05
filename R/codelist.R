@@ -23,7 +23,6 @@
 #'   \item ioc: International Olympic Committee
 #'   \item iso2c: ISO-2 character
 #'   \item iso3c: ISO-3 character
-#'   \item iso2n: ISO-2 numeric
 #'   \item iso3n: ISO-3 numeric
 #'   \item p4n: Polity IV numeric country code
 #'   \item p4c: Polity IV character country code
