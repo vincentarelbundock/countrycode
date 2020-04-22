@@ -20,6 +20,7 @@ src = c('cldr' = FALSE,
         'vdem_cs' = FALSE,
         'world_bank' = FALSE,
         'world_bank_api' = FALSE,
+        'world_bank_region' = FALSE,
         'wvs' = FALSE)
 src = c('static' = TRUE, src) # static must always be true
 

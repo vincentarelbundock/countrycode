@@ -4,7 +4,9 @@
 \name{codelist_panel}
 \alias{codelist_panel}
 \title{Country Code Translation Data Frame (Country-Year Panel)}
-\format{data frame with codes as columns}
+\format{
+data frame with codes as columns
+}
 \usage{
 codelist_panel
 }

@@ -20,4 +20,4 @@ Depends:
     R (>= 2.10)
 Suggests:
     testthat (>= 0.5)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0

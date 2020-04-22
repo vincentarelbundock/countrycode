@@ -105,7 +105,6 @@ dat = dat %>%
 # Add small countries not covered by V-Dem, CoW, or Polity
 small = read.csv('dictionary/data_small_countries.csv', na.strings = '') %>%
         dplyr::mutate(end = ifelse(is.na(end), max(dat$year), end),
-                      # TODO: Fix Aland Islands conversion
                       country.name.en.regex = CountryToRegex(country)) %>%
         dplyr::select(country.name.en.regex, start, end) %>%
         dplyr::filter(!country.name.en.regex %in% dat$country.name.en.regex) %>% # avoid duplicates

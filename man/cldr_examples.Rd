@@ -4,7 +4,9 @@
 \name{cldr_examples}
 \alias{cldr_examples}
 \title{List of CLDR country name codes and associated examples}
-\format{data frame}
+\format{
+data frame
+}
 \usage{
 cldr_examples
 }

@@ -4,7 +4,9 @@
 \name{codelist}
 \alias{codelist}
 \title{Country Code Translation Data Frame (Cross-Sectional)}
-\format{data frame with codes as columns}
+\format{
+data frame with codes as columns
+}
 \description{
 A data frame used internally by the \code{countrycode()} function. `countrycode` can use any valid code as destination, but only some codes can be used as origin.
 }
