@@ -4,6 +4,7 @@ source('dictionary/utilities.R')
 # Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
 src = c('cldr' = FALSE,
         'cow_cs' = FALSE,
+        'dhs' = FALSE,
         'ecb' = FALSE,
         'eurostat' = FALSE,
         'fao' = FALSE,

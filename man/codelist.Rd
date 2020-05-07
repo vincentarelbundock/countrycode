@@ -18,6 +18,7 @@ Origin and Destination:
   \item country.name.de: country name (German)
   \item cowc: Correlates of War character
   \item cown: Correlates of War numeric
+  \item dhs: Demographic and Health Surveys Program
   \item ecb: European Central Bank
   \item eurostat:  Eurostat
   \item fao: Food and Agriculture Organization of the United Nations numerical code
