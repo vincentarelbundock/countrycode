@@ -1,12 +1,23 @@
-library(pacman)
-p_load(tidyverse, countrycode, janitor, tibble, dplyr, tidyr, readr, readxl,
-       rvest, RSelenium, httr, jsonlite, zoo, here)
+###########
+#  setup  #
+###########
+library(here)
+library(janitor)
+library(readxl)
+library(rvest)
+library(RSelenium)
+library(checkmate)
+library(httr)
+library(jsonlite)
+library(zoo)
+library(countrycode)
+library(tidyverse)
 options(stringsAsFactors=FALSE)
+setwd(here::here())
 
-# warn if not running in an UTF-8 locale
-if (! l10n_info()$`UTF-8`) warning('Running in a non-UTF-8 locale!')
-
-#' Use countrycode regexes as unique country IDs
+#############################
+#  unique IDs with regexes  #
+#############################
 custom_dict = read.csv('dictionary/data_static.csv', na = '', stringsAsFactors = FALSE) %>% 
               dplyr::select(country.name.en.regex, country.name.en.regex) 
 
@@ -17,7 +28,9 @@ CountryToRegex = function(x, warn=TRUE) countrycode(x,
                                                     custom_dict = custom_dict,
                                                     warn=warn)
 
-#' Download data from original web source 
+###############################
+#  download from web sources  #
+###############################
 LoadSource = function(src = 'world_bank') {
     # load get_function
     script_name = paste0('dictionary/get_', src, '.R')
@@ -37,39 +50,43 @@ LoadSource = function(src = 'world_bank') {
     return(out)
 }
 
-#' Drop datasets that fail sanity checks
-SanityCheck = function(data_list) {
-    # Data.frame vs. try-error
-    check = sapply(data_list, function(x) 'data.frame' %in% class(x))
-    if (any(!check)) {
-        warning('Failed to download or produce valid data.frame: ', 
-                paste(names(data_list)[!check], collapse = ', '))
+# Hack to artificially extend the temporal coverage of panel datasets using the
+# last available year
+ExtendCoverage = function(dat, last_year = 2020) {
+    out = dat
+    tmp = dat %>% 
+          dplyr::filter(year == max(year))
+    for (y in base::setdiff(2000:last_year, dat$year)) {
+        tmp$year = y
+        out = rbind(out, tmp)
     }
-    data_list = data_list[check] 
-
-    # 50 rows
-    check = sapply(data_list, function(x) nrow(x) >= 50)
-    if (any(!check)) {
-        warning('Fewer than 50 rows: ', 
-                paste(names(data_list)[!check], collapse = ','))
-    }
-    data_list = data_list[check] 
-
-    # 2 columns
-    check = sapply(data_list, function(x) ncol(x) >= 2)
-    if (any(!check)) {
-        warning('Fewer than 2 columns: ', 
-                paste(names(data_list)[!check], collapse = ','))
-    }
-    data_list = data_list[check] 
-
-    # Merge ID
-    check = sapply(data_list, function(x) 'country.name.en.regex' %in% colnames(x))
-    if (any(!check)) {
-        warning('Merge ID missing: ', 
-                paste(names(data_list)[!check], collapse = ','))
-    }
-    data_list = data_list[check] 
-    return(data_list)
+    return(out)
 }
 
+###################
+#  sanity checks  #
+###################
+
+if (! l10n_info()$`UTF-8`) warning('Running in a non-UTF-8 locale!')
+
+SanityCheck <- function(dataset) {
+
+    # is a data.frame-like object
+    checkmate::assert_true(inherits(dataset, 'data.frame'))
+
+    # unique identifier: country.name.en.regex
+    checkmate::assert_true('country.name.en.regex' %in% colnames(dataset))
+
+    # minimum number of rows and columns
+    checkmate::assert_numeric(nrow(dataset), lower = 50)
+    checkmate::assert_numeric(ncol(dataset), lower = 2)
+
+    # duplicate indices
+    if ('year' %in% colnames(dataset)) { # panel
+        idx <- paste(dataset[['country.name.en.regex']], dataset[['year']]) 
+        checkmate::assert_true(anyDuplicated(idx) == 0)
+    } else { # cross-section
+        checkmate::assert_true(anyDuplicated(dataset[['country.name.en.regex']]) == 0)
+    }
+
+}

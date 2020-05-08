@@ -1,77 +1,92 @@
 setwd(here::here())
 source('dictionary/utilities.R')
 
-# Source: TRUE -- web source has priority. FALSE -- backup source has priority. 
-src = c('cldr' = FALSE,
-        'cow_cs' = FALSE,
-        'dhs' = FALSE,
-        'ecb' = FALSE,
-        'eurostat' = FALSE,
-        'fao' = FALSE,
-        'fips' = FALSE,
-        'genc' = FALSE,
-        'gw' = FALSE,
-        'ioc' = FALSE,
-        'icao' = FALSE,
-        'iso' = FALSE,
-        'polity4_cs' = FALSE,
-        'un' = FALSE,
-        'un_names' = FALSE,
-#        'unpd' = FALSE, # dead url in get_unpd.R data moved to data_static.csv
-        'vdem_cs' = FALSE,
-        'world_bank' = FALSE,
-        'world_bank_api' = FALSE,
-        'world_bank_region' = FALSE,
-        'wvs' = FALSE)
-src = c('static' = TRUE, src) # static must always be true
+###############
+#  load data  #
+###############
+from_backup <- c(
+    'cow_cs',
+    'dhs',
+    'ecb',
+    'eurostat',
+    'fao',
+    'fips',
+    'genc',
+    'gw',
+    'ioc',
+    'icao',
+    'iso',
+    'polity4_cs',
+    'un',
+    'un_names',
+    'vdem_cs',
+    'world_bank',
+    'world_bank_api',
+    'world_bank_region',
+    'wvs'
+)
 
-# Flip toggle back to TRUE if dataset is not available in backup
-bak = readRDS('data/backup.rds')
-src[!names(src) %in% names(bak)] = TRUE
+from_source <- c(
+    'static' # static must always come from source
+) 
 
-# Download
-dat = lapply(names(src)[src], LoadSource)
-names(dat) = names(src)[src]
+from_panel <- c(
+    'cow',
+    'polity4',
+    'small_countries',
+    'vdem'
+)
 
-# Sanity checks (drop datasets that fail)
-dat = SanityCheck(dat)
+# 'unpd' web source is dead; moved to data_static.csv
 
-# Overwrite from backup if src toggle is FALSE and dataset is already stored in backup file
-for (n in names(src)[!src]) {
-    if (n %in% names(bak)) {
-        cat('Loading', n, 'from backup.\n')
-        dat[[n]] = bak[[n]]
-    }
+backup <- readRDS('data/backup.rds')
+
+# sanity check: missing datasets
+sanity <- setdiff(from_backup, names(backup))
+if (length(sanity) > 0) { 
+    msg <- paste('The following data sources are not available in the backup file:', sanity)
+    stop(msg)
 }
 
-# Sanity check: duplicate merge id
-for (n in names(dat)) {
-    if ('year' %in% colnames(dat[[n]])) {
-        idx = paste(dat[[n]]$country.name.en.regex, dat[[n]]$year)
-    } else {
-        idx = dat[[n]]$country.name.en.regex
-    }
-    if (any(duplicated(idx))) {
-        stop('Dataset ', n, ' includes duplicate country (or country-year) indices.')
-    }
+dat <- list()
+
+for (i in from_source) {
+    dat[[i]] <- LoadSource(i)
 }
 
-# Cross-section
-cs = purrr::reduce(dat, dplyr::left_join, by = 'country.name.en.regex')
+for (i in from_backup) {
+    dat[[i]] <- backup[[i]]
+}
+
+###################
+#  sanity checks  #
+###################
+
+sapply(dat, SanityCheck)
+
+###################
+#  cross section  #
+###################
+
+# merge
+cs <- purrr::reduce(dat, dplyr::left_join, by = 'country.name.en.regex')
 
 # English names with priority ordering
-priority = c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
-cs$country.name = NA
+priority <- c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
+cs$country.name <-  NA
 for (i in priority) {
-    cs$country.name = ifelse(is.na(cs$country.name), cs[, i], cs$country.name)
+    cs$country.name <- ifelse(is.na(cs$country.name), cs[, i], cs$country.name)
 }
-cs$country.name.en = cs$country.name
-cs$country.name = NULL
+cs$country.name.en <- cs$country.name
+cs$country.name <- NULL
 
-# Panel
-tmp = cs %>% dplyr::select(-dplyr::matches('cldr|p4|cow|vdem'))
-panel = read.csv('dictionary/data_panel.csv', na.strings = '') %>%
-        dplyr::left_join(tmp, by = 'country.name.en.regex')
+###########
+#  panel  #
+###########
+
+tmp <- cs %>% dplyr::select(-dplyr::matches('cldr|p4|cow|vdem'))
+panel <- read.csv('dictionary/data_panel.csv', na.strings = '') %>%
+         dplyr::left_join(tmp, by = 'country.name.en.regex')
 
 # Clean-up
 sort_col = function(x) { # cldr columns at the end
