@@ -2,8 +2,6 @@
 
 warnings_are_errors: false
 language: r
-r:
-  - oldrel
 cache: packages
 r_binary_packages:
   - devtools
