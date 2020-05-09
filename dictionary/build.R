@@ -1,11 +1,13 @@
 setwd(here::here())
 source('dictionary/utilities.R')
 
+
 ###############
 #  load data  #
 ###############
+
 from_backup <- c(
-    'cow_cs',
+    'cldr',
     'dhs',
     'ecb',
     'eurostat',
@@ -15,11 +17,9 @@ from_backup <- c(
     'gw',
     'ioc',
     'icao',
-    'iso',
-    'polity4_cs',
+    'iso', 
     'un',
     'un_names',
-    'vdem_cs',
     'world_bank',
     'world_bank_api',
     'world_bank_region',
@@ -27,19 +27,16 @@ from_backup <- c(
 )
 
 from_source <- c(
-    'static' # static must always come from source
-) 
-
-from_panel <- c(
     'cow',
     'polity4',
     'small_countries',
     'vdem'
-)
+) 
+
 
 # 'unpd' web source is dead; moved to data_static.csv
 
-backup <- readRDS('data/backup.rds')
+backup <- readRDS('dictionary/data_backup.rds')
 
 # sanity check: missing datasets
 sanity <- setdiff(from_backup, names(backup))
@@ -50,6 +47,8 @@ if (length(sanity) > 0) {
 
 dat <- list()
 
+dat[['static']] <- LoadSource('static')
+
 for (i in from_source) {
     dat[[i]] <- LoadSource(i)
 }
@@ -58,20 +57,73 @@ for (i in from_backup) {
     dat[[i]] <- backup[[i]]
 }
 
+
 ###################
 #  sanity checks  #
 ###################
 
-sapply(dat, SanityCheck)
+all(sapply(dat, SanityCheck))
+
+# overwrite backup
+for (i in from_source) {
+    backup[[i]] <- dat[[i]]
+}
+
 
 ###################
-#  cross section  #
+#  cross-section  #
 ###################
 
-# merge
-cs <- purrr::reduce(dat, dplyr::left_join, by = 'country.name.en.regex')
+idx <- sapply(dat, function(x) !'year' %in% names(x))
+cs <- dat[idx] %>% reduce(left_join, by = 'country.name.en.regex')
 
-# English names with priority ordering
+# sanity check
+SanityCheck(cs)
+checkmate::assert_true(nrow(cs) > 250)
+checkmate::assert_true(ncol(cs) > 50)
+
+
+###########
+#  panel  #
+###########
+
+idx <- sapply(dat, function(x) 'year' %in% names(x))
+pan <- dat[idx]
+pan <- lapply(pan, ExtendCoverage, last_year = 2020)
+
+cou <- sapply(pan, function(x) x$country.name.en.regex) %>% unlist %>% unique
+yea <- sapply(pan, function(x) x$year) %>% unlist %>% unique
+yea <- min(yea):max(yea)
+rec <- expand_grid(country.name.en.regex = cou,
+                   year = yea)
+pan <- c(list(rec), pan) %>%
+       purrr::reduce(left_join, by = c('country.name.en.regex', 'year'))
+
+idx <- (pan[, 3:ncol(pan)] %>% is.na %>% rowSums) != (ncol(pan) - 2)
+pan <- pan[idx,]
+
+###########
+#  merge  #
+###########
+
+# merge last panel observation into cs
+tmp <- pan %>%
+       arrange(country.name.en.regex, year) %>%
+       group_by(country.name.en.regex) %>%
+       mutate_at(vars(-group_cols()), na.locf, na.rm = FALSE) %>% 
+       filter(year == max(year)) %>%
+       # arbitrary choices
+       mutate(p4n = ifelse(p4.name == 'Prussia', NA, p4n),
+              p4c = ifelse(p4.name == 'Prussia', NA, p4c),
+              p4n = ifelse(p4.name == 'Serbia and Montenegro', NA, p4n),
+              p4c = ifelse(p4.name == 'Serbia and Montenegro', NA, p4c),
+              vdem = ifelse(vdem.name == 'Czechoslovakia', NA, vdem))
+
+cs <- cs %>% 
+      left_join(tmp, by = 'country.name.en.regex') %>%
+      select(-year)
+
+# english names with priority
 priority <- c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
 cs$country.name <-  NA
 for (i in priority) {
@@ -80,32 +132,34 @@ for (i in priority) {
 cs$country.name.en <- cs$country.name
 cs$country.name <- NULL
 
+# merge cs into pan
+idx <- c('country.name.en.regex', setdiff(colnames(cs), colnames(pan)))
+pan <- pan %>% 
+       left_join(cs[, idx], by = 'country.name.en.regex') %>%
+       select(-matches('name$|cldr'))
+
+
 ###########
-#  panel  #
+#  clean  #
 ###########
 
-tmp <- cs %>% dplyr::select(-dplyr::matches('cldr|p4|cow|vdem'))
-panel <- read.csv('dictionary/data_panel.csv', na.strings = '') %>%
-         dplyr::left_join(tmp, by = 'country.name.en.regex')
+idx <- c('country.name.en.regex', setdiff(colnames(cs), colnames(pan)))
+pan <- pan %>%
+       left_join(cs[, idx], by = 'country.name.en.regex') %>%
+       select(country.name.en, year, order(names(.))) %>%
+       select(-matches('cldr|name$|iso.name|un.name')) %>%
+       arrange(country.name.en, year)
 
-# Clean-up
-sort_col = function(x) { # cldr columns at the end
-    x = x[, sort(colnames(x))]
-    idx = grepl('^cldr', colnames(x))
-    x = cbind(x[, !idx], x[, idx])
-    return(x)
-}
-cs = sort_col(cs)
-panel = panel %>% select(country.name.en, year, order(names(.)))
+idx1 <- sort(grep('cldr', colnames(cs), value = TRUE))
+idx2 <- sort(setdiff(colnames(cs), idx1))
 
-# Sanity check: duplicates
-idx = paste(panel$country.name.en, panel$year)
-if (anyDuplicated(idx)) {
-    stop('Duplicate country year observations in panel dataset')
-}
-if (anyDuplicated(cs$country.name.en)) {
-    stop('Duplicate country observations in cross-sectional dataset')
-}
+cs <- cs[, c(idx1, idx2)] %>%
+      arrange(country.name.en)
+
+
+############
+#  sanity  #
+############
 
 # Encoding: convert to UTF-8 if there are non-ASCII characters
 for (col in colnames(cs)[sapply(cs, class) == 'character']) {
@@ -113,15 +167,25 @@ for (col in colnames(cs)[sapply(cs, class) == 'character']) {
         cs[[col]] <- enc2utf8(cs[[col]])
     }
 }
-for (col in colnames(panel)[sapply(panel, class) == 'character']) {
-    if (!all(na.omit(stringi::stri_enc_mark(panel[[col]])) == 'ASCII')) {
-        panel[[col]] <- enc2utf8(panel[[col]])
+
+for (col in colnames(pan)[sapply(pan, class) == 'character']) {
+    if (!all(na.omit(stringi::stri_enc_mark(pan[[col]])) == 'ASCII')) {
+        pan[[col]] <- enc2utf8(pan[[col]])
     }
 }
 
-# Save files
-codelist = cs
-codelist_panel = panel
-saveRDS(dat, 'data/backup.rds', compress = 'xz', version = 2)
+SanityCheck(cs)
+SanityCheck(pan)
+
+
+###########
+##  save  #
+###########
+
+codelist <- cs
+codelist_panel <- pan
+
+saveRDS(dat, 'dictionary/data_backup.rds', compress = 'xz', version = 2)
 save(codelist, file = 'data/codelist.rda', compress = 'xz', version = 2)
 save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz', version = 2)
+

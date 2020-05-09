@@ -6,10 +6,10 @@ source(here::here('dictionary/utilities.R'))
 get_small_countries <- function() {
 
     idx <- read.csv('dictionary/data_small_countries.csv', na.strings = '') %>%
-           dplyr::mutate(end = ifelse(is.na(end), last_year, 2020))
+           dplyr::mutate(end = replace_na(end, 2020))
 
     rec <- expand_grid(iso3c = idx$iso3c,
-                       year = min(idx$start):last_year) %>%
+                       year = min(idx$start):2020) %>%
            left_join(idx[, c('iso3c', 'country')], by = 'iso3c') %>%
            mutate(country.name.en.regex = CountryToRegex(country))
 
@@ -19,7 +19,7 @@ get_small_countries <- function() {
     }
 
     out <- rec %>%
-           select(country.name.en.regex, iso3c, year)
+           select(country.name.en.regex, year)
 
     return(out)
 

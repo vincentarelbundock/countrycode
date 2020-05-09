@@ -81,6 +81,12 @@ SanityCheck <- function(dataset) {
     checkmate::assert_numeric(nrow(dataset), lower = 50)
     checkmate::assert_numeric(ncol(dataset), lower = 2)
 
+    # missing indices
+    if ('year' %in% colnames(dataset)) { # panel
+        checkmate::assert_false(any(is.na(dataset[['year']])))
+    }
+    checkmate::assert_false(any(is.na(dataset[['country.name.en.regex']])))
+
     # duplicate indices
     if ('year' %in% colnames(dataset)) { # panel
         idx <- paste(dataset[['country.name.en.regex']], dataset[['year']]) 
