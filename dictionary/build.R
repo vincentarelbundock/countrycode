@@ -23,14 +23,14 @@ from_backup <- c(
     'world_bank',
     'world_bank_api',
     'world_bank_region',
-    'wvs'
-)
-
-from_source <- c(
+    'wvs',
     'cow',
     'polity4',
     'small_countries',
     'vdem'
+)
+
+from_source <- c(
 ) 
 
 
@@ -145,7 +145,6 @@ pan <- pan %>%
 
 idx <- c('country.name.en.regex', setdiff(colnames(cs), colnames(pan)))
 pan <- pan %>%
-       left_join(cs[, idx], by = 'country.name.en.regex') %>%
        select(country.name.en, year, order(names(.))) %>%
        select(-matches('cldr|name$|iso.name|un.name')) %>%
        arrange(country.name.en, year)
@@ -185,7 +184,10 @@ SanityCheck(pan)
 codelist <- cs
 codelist_panel <- pan
 
-saveRDS(dat, 'dictionary/data_backup.rds', compress = 'xz', version = 2)
+if (length(from_source) > 0) {
+    saveRDS(dat, 'dictionary/data_backup.rds', compress = 'xz', version = 2)
+}
+
 save(codelist, file = 'data/codelist.rda', compress = 'xz', version = 2)
 save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz', version = 2)
 
