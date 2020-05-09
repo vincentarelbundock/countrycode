@@ -1,6 +1,6 @@
 # R: countrycode
 
-`countrycode` standardizes country names, converts them into ~20 different coding schemes, and assigns region descriptors. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
+`countrycode` standardizes country names, converts them into ~40 different coding schemes, and assigns region descriptors. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
 
 If you use `countrycode` in your research, we would be very grateful if you could cite our paper:
 
@@ -20,7 +20,7 @@ Different data sources use different coding schemes to represent countries (e.g.
 
 ## The Solution
 
-The `countrycode` function can convert to and from 30+ different country coding schemes, and to 600+ variants of country names in different languages and formats. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes or country names. It can create new variables with various regional groupings.
+The `countrycode` function can convert to and from 40+ different country coding schemes, and to 600+ variants of country names in different languages and formats. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes or country names. It can create new variables with various regional groupings.
 
 ## Supported country codes
 
