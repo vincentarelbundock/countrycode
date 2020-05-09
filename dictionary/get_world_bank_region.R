@@ -73,20 +73,21 @@ manual <- tribble(
 "Tokelau",                                      "East Asia & Pacific",
 "Tuscany",                                      "Europe & Central Asia",
 "Two Sicilies",                                 "Europe & Central Asia",
-"United Arab Republic",                         NA,
+"United Arab Republic",                         "Middle East & North Africa",
 "United Province CA",                           NA,
 "United States Minor Outlying Islands",         NA,
-"Republic of Vietnam",                          NA,
+"Republic of Vietnam",                          "East Asia & Pacific",
 "Wallis and Futuna",                            NA,
 "Western Sahara",                               NA,
 "Wuerttemburg",                                 "Europe & Central Asia",
 "Wurtemberg",                                   "Europe & Central Asia",
-"Yemen Arab Republic",                          NA,
-"Yemen People's Republic",                      NA,
+"Yemen Arab Republic",                          "Middle East & North Africa",
+"Yemen People's Republic",                      "Middle East & North Africa",
 "Yugoslavia",                                   "Europe & Central Asia",
-"Zanzibar",                                     NA) %>% 
+"Zanzibar",                                     "Sub-Saharan Africa") %>% 
 mutate(country.name.en.regex = CountryToRegex(country.name.en)) %>%
-select(country.name.en.regex, region)
+select(country.name.en.regex, region) %>%
+drop_na
 
 ###########################
 #  Download from WDI API  #
@@ -100,7 +101,7 @@ get_world_bank_region = function() {
                  unique
 
     manual <- manual %>% 
-              filter(!country.name.en.regex %in% manual$country.name.en.regex)
+              filter(!country.name.en.regex %in% automatic$country.name.en.regex)
     
     out <- bind_rows(automatic, manual)
 

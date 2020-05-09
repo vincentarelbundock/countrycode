@@ -27,16 +27,3 @@ test_that('warn=FALSE does not give warnings', {
     expect_warning(iso2c_of('BLA'), NA)
     expect_warning(iso2c_of(c('BLA', 'USA')), NA)
 })
-
-allow_duplicates = c('ar5', 'continent', 'eu28', 'eurocontrol_pru',
-                     'eurocontrol_statfor', 'icao', 'icao.region', 'region') 
-cn = colnames(codelist)[!colnames(codelist) %in% allow_duplicates]
-for(code_name in cn){
-    code_list <- codelist[, code_name]
-    code_list <- na.omit(code_list)
-    dupes <- code_list[duplicated(code_list)]
-    dupes <- toString(dupes)
-    test_that(paste('there are zero duplicate', code_name, 'code values'), {
-        expect_equal(dupes, '')
-    })
-}

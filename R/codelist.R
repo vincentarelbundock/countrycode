@@ -54,7 +54,8 @@
 #'   \item iso.name.en: ISO English short name
 #'   \item iso.name.fr: ISO French short name
 #'   \item p4.name: Polity IV country name
-#'   \item region: Regions as defined in the World Bank Development Indicators
+#'   \item region: 7 Regions as defined in the World Bank Development Indicators
+#'   \item region23: 23 Regions as used to be in the World Bank Development Indicators (legacy)
 #'   \item un.name.ar: United Nations Arabic country name
 #'   \item un.name.en: United Nations English country name
 #'   \item un.name.es: United Nations Spanish country name

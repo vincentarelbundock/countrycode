@@ -2,6 +2,8 @@
 cs <- countrycode::codelist
 pan <- countrycode::codelist_panel
 
+dest <- c('year', 'ar5', 'continent', 'eu28', 'eurocontrol_pru',
+          'eurocontrol_statfor', 'icao', 'icao.region', 'region', 'region23')
 
 ##############
 #  codelist  #
@@ -42,8 +44,6 @@ test_that('codelist missing values', {
 })
 
 # duplicate
-dest <- c('ar5', 'continent', 'eu28', 'eurocontrol_pru', 'eurocontrol_statfor',
-          'icao', 'icao.region', 'region')
 for (i in colnames(cs)) {
     if (!i %in% dest) {
         test_that(paste0('codelist$', i, ' has no duplicates'), {
@@ -93,8 +93,6 @@ test_that('codelist missing values', {
 })
 
 # duplicate
-dest <- c('year', 'ar5', 'continent', 'eu28', 'eurocontrol_pru',
-          'eurocontrol_statfor', 'icao', 'icao.region', 'region')
 for (i in colnames(pan)) {
     if (!i %in% dest) {
         test_that(paste0('codelist$', i, ' has no duplicates'), {
