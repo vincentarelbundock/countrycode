@@ -2,72 +2,50 @@ setwd(here::here())
 source('dictionary/utilities.R')
 
 
+##################
+#  availability  #
+##################
+
+scrapers <- Sys.glob('dictionary/get_*.R')
+datasets <- Sys.glob('dictionary/data_*.csv')
+datasets <- datasets[datasets != 'dictionary/data_regex.csv']
+
+# missing scrapers and datasets
+tokens_datasets <- str_replace_all(datasets, '.*data_|.csv', '')
+tokens_scrapers <- str_replace_all(scrapers, '.*get_|.R', '')
+
+if (length(setdiff(tokens_scrapers, tokens_datasets)) > 0) {
+    msg <- paste(setdiff(tokens_scrapers, tokens_datasets), collapse = ', ')
+    msg <- paste('Missing datasets:', msg)
+    stop(msg)
+}
+
+if (length(setdiff(tokens_datasets, tokens_scrapers)) > 0) {
+    msg <- paste(setdiff(tokens_datasets, tokens_scrapers), collapse = ', ')
+    msg <- paste('Missing scrapers:', msg)
+    warning(msg)
+}
+
+
 ###############
 #  load data  #
 ###############
 
-from_backup <- c(
-    'cldr',
-    'dhs',
-    'ecb',
-    'eurostat',
-    'fao',
-    'fips',
-    'genc',
-    'gw',
-    'ioc',
-    'icao',
-    'iso', 
-    'un',
-    'un_names',
-    'world_bank',
-    'world_bank_api',
-    'world_bank_region',
-    'wvs',
-    'cow',
-    'polity4',
-    'small_countries',
-    'vdem'
-)
-
-from_source <- c(
-) 
-
-
-# 'unpd' web source is dead; moved to data_static.csv
-
-backup <- readRDS('dictionary/data_backup.rds')
-
-# sanity check: missing datasets
-sanity <- setdiff(from_backup, names(backup))
-if (length(sanity) > 0) { 
-    msg <- paste('The following data sources are not available in the backup file:', sanity)
-    stop(msg)
-}
-
 dat <- list()
+dat$regex <- read_csv('dictionary/data_regex.csv', col_types = cols(), progress = FALSE)
 
-dat[['static']] <- LoadSource('static')
-
-for (i in from_source) {
-    dat[[i]] <- LoadSource(i)
+message('Load:')
+for (i in seq_along(datasets)) {
+    message('  ', tokens_datasets[i])
+    tmp <- read_csv(datasets[i], col_types = cols(), progress = FALSE) %>%
+           mutate(country.name.en.regex = CountryToRegex(country)) %>%
+           select(-country)
+    SanityCheck(tmp)
+    dat[[tokens_datasets[i]]] <- tmp
 }
 
-for (i in from_backup) {
-    dat[[i]] <- backup[[i]]
-}
-
-
-###################
-#  sanity checks  #
-###################
-
-all(sapply(dat, SanityCheck))
-
-# overwrite backup
-for (i in from_source) {
-    backup[[i]] <- dat[[i]]
-}
+# Namibia iso2c is not missing
+dat$iso$iso2c[dat$iso$iso.name.en == 'Namibia'] <- 'NA'
 
 
 ###################
@@ -75,7 +53,8 @@ for (i in from_source) {
 ###################
 
 idx <- sapply(dat, function(x) !'year' %in% names(x))
-cs <- dat[idx] %>% reduce(left_join, by = 'country.name.en.regex')
+cs <- dat[idx] %>% 
+      reduce(left_join, by = 'country.name.en.regex')
 
 # sanity check
 SanityCheck(cs)
@@ -124,10 +103,11 @@ cs <- cs %>%
       select(-year)
 
 # english names with priority
-priority <- c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name', 'p4.name', 'vdem.name', 'country.name.en')
+priority <- c('cldr.name.en', 'iso.name.en', 'un.name.en', 'cow.name',
+              'p4.name', 'vdem.name', 'country.name.en')
 cs$country.name <-  NA
 for (i in priority) {
-    cs$country.name <- ifelse(is.na(cs$country.name), cs[, i], cs$country.name)
+    cs$country.name <- ifelse(is.na(cs$country.name), cs[[i]], cs$country.name)
 }
 cs$country.name.en <- cs$country.name
 cs$country.name <- NULL
@@ -144,23 +124,23 @@ pan <- pan %>%
 ###########
 
 idx <- c('country.name.en.regex', setdiff(colnames(cs), colnames(pan)))
+
 pan <- pan %>%
+       arrange(country.name.en, year) %>%
        select(country.name.en, year, order(names(.))) %>%
-       select(-matches('cldr|name$|iso.name|un.name')) %>%
-       arrange(country.name.en, year)
+       select(-matches('cldr|name$|iso.name|un.name'))
 
 idx1 <- sort(grep('cldr', colnames(cs), value = TRUE))
 idx2 <- sort(setdiff(colnames(cs), idx1))
 
-cs <- cs[, c(idx1, idx2)] %>%
+cs <- cs[, c(idx2, idx1)] %>%
       arrange(country.name.en)
 
 
-############
-#  sanity  #
-############
+##########
+#  utf8  #
+##########
 
-# Encoding: convert to UTF-8 if there are non-ASCII characters
 for (col in colnames(cs)[sapply(cs, class) == 'character']) {
     if (!all(na.omit(stringi::stri_enc_mark(cs[[col]])) == 'ASCII')) {
         cs[[col]] <- enc2utf8(cs[[col]])
@@ -173,9 +153,6 @@ for (col in colnames(pan)[sapply(pan, class) == 'character']) {
     }
 }
 
-SanityCheck(cs)
-SanityCheck(pan)
-
 
 ###########
 ##  save  #
@@ -183,10 +160,6 @@ SanityCheck(pan)
 
 codelist <- cs
 codelist_panel <- pan
-
-if (length(from_source) > 0) {
-    saveRDS(dat, 'dictionary/data_backup.rds', compress = 'xz', version = 2)
-}
 
 save(codelist, file = 'data/codelist.rda', compress = 'xz', version = 2)
 save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz', version = 2)

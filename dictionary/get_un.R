@@ -1,12 +1,11 @@
-get_un <- function() {
-    library(xml2)
-    library(rvest)
-    m49 <- read_html("https://unstats.un.org/unsd/methodology/m49/")
-    m49 <- html_nodes(m49, "#ENG_COUNTRIES table")
-    m49 <- html_table(m49)[[1]]
-    names(m49) <- c("country.name", "un", "iso3c")
-    m49 <- m49[m49$iso3c != "",]
-    m49$country.name.en.regex <- CountryToRegex(m49$country.name)
-    out <- m49[, c('country.name.en.regex', 'un')]
-    return(out)
-}
+source(here::here('dictionary/utilities.R'))
+
+m49 <- read_html("https://unstats.un.org/unsd/methodology/m49/") %>%
+       html_nodes("#ENG_COUNTRIES table") %>%
+       html_table() %>%
+       .[[1]] %>%
+       select(country = `Country or Area`,
+              un = `M49 code`) %>%
+       filter(country != 'Sark')
+
+m49 %>% write_csv('dictionary/data_un.csv')

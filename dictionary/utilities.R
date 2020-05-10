@@ -2,53 +2,37 @@
 #  setup  #
 ###########
 library(here)
+library(conflicted)
 library(janitor)
 library(readxl)
+library(xml2)
 library(rvest)
 library(RSelenium)
 library(checkmate)
 library(httr)
 library(jsonlite)
+library(WDI)
 library(zoo)
 library(countrycode)
 library(tidyverse)
 options(stringsAsFactors=FALSE)
 setwd(here::here())
+conflict_prefer('filter', 'dplyr')
+conflict_prefer('select', 'dplyr')
 
 #############################
 #  unique IDs with regexes  #
 #############################
-custom_dict = read.csv('dictionary/data_static.csv', na = '', stringsAsFactors = FALSE) %>% 
-              dplyr::select(country.name.en.regex, country.name.en.regex) 
+custom_dict <- read.csv('dictionary/data_regex.csv', na = '', stringsAsFactors = FALSE) %>% 
+               dplyr::select(country.name.en.regex, country.name.en.regex) 
 
-CountryToRegex = function(x, warn=TRUE) countrycode(x, 
-                                                    'country.name.en.regex', 
-                                                    'country.name.en.regex', 
-                                                    origin_regex = TRUE,
-                                                    custom_dict = custom_dict,
-                                                    warn=warn)
+CountryToRegex <- function(x, warn=TRUE) countrycode(x, 
+                                                     'country.name.en.regex', 
+                                                     'country.name.en.regex', 
+                                                     origin_regex = TRUE,
+                                                     custom_dict = custom_dict,
+                                                     warn=warn)
 
-###############################
-#  download from web sources  #
-###############################
-LoadSource = function(src = 'world_bank') {
-    # load get_function
-    script_name = paste0('dictionary/get_', src, '.R')
-    source(script_name) 
-    # execute get_function
-    function_name = paste0('get_', src)
-    out = try({
-              setTimeLimit(cpu = 120);
-              eval(parse(text = function_name))()
-              }, silent = TRUE)
-    # output as data.frame with meta-data attributes
-    if ('data.frame' %in% class(out)) {
-        out = data.frame(out)
-        attr(out, 'source') = src
-        attr(out, 'retrieved') = Sys.time()
-    }
-    return(out)
-}
 
 # Hack to artificially extend the temporal coverage of panel datasets using the
 # last available year

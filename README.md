@@ -245,4 +245,4 @@ Each ``get_source.R`` file must include a **single** function also named ``get_s
     - Please use the ``CountryToRegex`` function from ``utilities.R`` to produce that column.
 * No duplicate entries for a single country (if data is cross-sectional) or country-year (if data is panel). 
 
-If you feel a bit lazier (or don't have access to a solid online source), you can also merge your new country code manual in the ``dictionary_static.csv`` file located in the ``data`` folder.
+If you feel a bit lazier (or don't have access to a solid online source), submit a CSV file with one column of English country names and a second column of country codes.

@@ -20,8 +20,8 @@ test_that('codelist is a data.frame', {
 test_that('codelist has (roughly) correct dimensions', {
     expect_gt(nrow(cs), 250)
     expect_lt(nrow(cs), 300)
-    expect_gt(ncol(cs), 720)
-    expect_lt(ncol(cs), 740)
+    expect_gt(ncol(cs), 700)
+    expect_lt(ncol(cs), 750)
 })
 
 # columns
@@ -42,6 +42,15 @@ test_that('codelist missing values', {
         expect_false(all(is.na(cs[[i]])))
     }
 })
+
+cols <- setdiff(colnames(cs), c('dhs', 'eu28'))
+for (i in cols) {
+    msg <- paste(i, 'has less than 50% missing observations')
+    test_that(msg, {
+        expect_lt(mean(is.na(cs[[i]])), .5)
+    })
+}
+
 
 # duplicate
 for (i in colnames(cs)) {
@@ -91,6 +100,14 @@ test_that('codelist missing values', {
         expect_false(all(is.na(pan[[i]])))
     }
 })
+
+cols <- setdiff(colnames(pan), c('dhs', 'eu28'))
+for (i in cols) {
+    msg <- paste(i, 'has less than 50% missing observations')
+    test_that(msg, {
+        expect_lt(mean(is.na(pan[[i]])), .5)
+    })
+}
 
 # duplicate
 for (i in colnames(pan)) {

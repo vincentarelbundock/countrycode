@@ -1,30 +1,19 @@
-get_ecb = function() {
-    # European Central Bank 
-    # There are many bad country names in the ECB data, but these are excluded
-    # explicitly because they produce duplicates when matched by regex.
-    bad = c("Australian Oceania",
-            "Australia, Oceania and other territories",
-            "Central and South Africa countries",
-            "EU 12 (fixed composition) including West Germany",
-            "EU 12 (fixed composition) including West Germany as of 1 November 1993",
-            "Euro area countries except Germany, France, Italy and Spain",
-            "G20 (Argentina,Australia,Brazil,Canada,China,European Union,France,Germany,India,Indonesia,Italy,Japan,Mexico,Russia,Saudi Arabia,South Africa,South Korea,Turkey,United Kingdom,United States)",
-            "Gaza and Jericho",
-            "New Zealand Oceania",
-            "Residual for BOP and IIP step 3 ECB needs (J2-DK-GB-SE-4A-D8-CH-CA-US-JP-C4-7Z)",
-            "UNRWA (United Nations Relief and Works Agency for Palestine)",
-            "West Germany")
+source(here::here('dictionary/utilities.R'))
 
-    url <- 'http://a-sdw.ecb.europa.eu/datastructure.do?conceptMnemonic=REF_AREA&datasetinstanceid=122'
-    ecb <-
-      xml2::read_html(url) %>%
-      rvest::html_node('#codeListTable') %>%
-      rvest::html_table() %>%
-      dplyr::select(ecb = `Code`, ecb.name = `Code Description`) %>%
-      dplyr::mutate(ecb = dplyr::if_else(ecb.name == 'Namibia', 'NA', ecb), # Namibia != <NA>
-                    country.name.en.regex = CountryToRegex(ecb.name, warn=FALSE)) %>%
-      filter(!ecb.name %in% bad,
-             !is.na(country.name.en.regex))
+bad <- c("New Zealand Oceania", "Australia, Oceania and other territories", "Australian Oceania",
+         "Palestinian Territory, Occupied", "West Germany", "Gaza and Jericho",
+         "Central and South Africa countries",
+         "EU 12 (fixed composition) including West Germany as of 1 November 1993")
 
-    return(ecb)
-}
+url <- 'http://a-sdw.ecb.europa.eu/datastructure.do?conceptMnemonic=REF_AREA&datasetinstanceid=122'
+ecb <- xml2::read_html(url) %>%
+       rvest::html_node('#codeListTable') %>%
+       rvest::html_table() %>%
+       select(country = `Code Description`, ecb = `Code`) %>%
+       # There are many bad country names in the ECB data. These are excluded
+       # implicitly, but this is a hack and could potentially be improved. 
+       filter(!country %in% bad,
+              !is.na(CountryToRegex(country, warn = FALSE))) %>% 
+       mutate(ecb = if_else(country == 'Namibia', 'NA', ecb))
+
+ecb %>% write_csv('dictionary/data_ecb.csv')

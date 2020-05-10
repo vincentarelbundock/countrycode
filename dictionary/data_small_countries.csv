@@ -1,57 +1,3417 @@
-iso3c,country,start,end,event,source
-ABW,Aruba,1986,,Accord de séparation des Antilles néerlandaises et non du Pays-Bas,https://fr.wikipedia.org/wiki/Aruba#Histoire
-AIA,Anguilla,1982,,no info,https://fr.wikipedia.org/wiki/Anguilla#L.27autonomie
-ALA,Åland Islands,1920,,petition de la population locale,https://en.wikipedia.org/wiki/%C3%85land_Islands
-ANT,Netherlands Antilles,1954,2010,no info,https://en.wikipedia.org/wiki/Netherlands_Antilles#History
-ASM,American Samoa,1899,,"Accord entre grande puissance (USA, Allemagne et Nouvelle-Zélande)",https://fr.wikipedia.org/wiki/Samoa_am%C3%A9ricaines
-ATA,Antarctica,1959,,Gel des revendications de souverainetés nationales en 1959,https://fr.wikipedia.org/wiki/Antarctique#Politique
-ATF,French Southern Territories,1955,,Incorporation entre 1924 et 2007 de nouvelles îles à l'ensembles,https://fr.wikipedia.org/wiki/Terres_australes_et_antarctiques_fran%C3%A7aises
-BES,"Bonaire, Sint Eustatius and Saba",2010,,Nouveau statut des Antilles néerlandaises,https://fr.wikipedia.org/wiki/Pays-Bas_carib%C3%A9ens
-BLM,Saint Barthelemy,2007,,"Passe du statut de commune (statut acquis en 1946) à celui de département d'outre mer, se détachant de la guadeloupe",https://fr.wikipedia.org/wiki/Saint-Barth%C3%A9lemy_(Antilles_fran%C3%A7aises)
-BMU,Bermuda,1968,,"colonisation anglaise officialisée en 1684. L'archipel est devenu britannique en 1707 avec la création de la Grande-Bretagne, British Overseas Territory depuis 1968 (Though Bermuda has been classified as a self-governed colony since 1620, internal self-government was bolstered by the establishment of a formal constitution in 1968, and the introduction of universal adult suffrage)",https://en.wikipedia.org/wiki/History_of_Bermuda#Recent_history
-BVT,Bouvet Island,1927,,"Île non-habité, possession norvégienne par explorateurs, alpiniste et station météo",https://fr.wikipedia.org/wiki/%C3%8Ele_Bouvet
-CCK,Cocos (Keeling) Islands,1984,,Sous le controle australien depuis 1955,https://fr.wikipedia.org/wiki/%C3%8Eles_Cocos
-COK,Cook Islands,1965,,Indépendandance de la Nouvelle-Zélande,https://fr.wikipedia.org/wiki/%C3%8Eles_Cook
-CUW,Curacao,2010,,État autonome au sein du Royaume des Pays-Bas depuis la dissolution de la fédération des Antilles néerlandaises,https://fr.wikipedia.org/wiki/Cura%C3%A7ao
-CXR,Christmas Island,1958,,Devient australien après l'occupation Japonnaise,https://fr.wikipedia.org/wiki/%C3%8Ele_Christmas_(Australie)
-CYM,Cayman Islands,1962,,Devient colonie de la Couronne séparée de la Jamaique,https://fr.wikipedia.org/wiki/%C3%8Eles_Ca%C3%AFmans
-DMA,Dominica,1967,,Associated Statehood Act,https://en.wikipedia.org/wiki/Dominica
-ESH,Western Sahara,1976,,"Territoire non autonome selon l'ONU, cette ancienne colonie espagnole n'a toujours pas trouvé de statut définitif sur le plan juridique depuis le départ des Espagnols, en 1976",https://fr.wikipedia.org/wiki/Sahara_occidental
-FLK,Falkland Islands (Malvinas),2002,,"Britannique depuis 1770, territoire britannique d'outre-mer depuis 2002",https://en.wikipedia.org/wiki/Falkland_Islands#History
-FRO,Faroe Islands,1948,,no info,https://en.wikipedia.org/wiki/Faroe_Islands#History
-GGY,Guernsey,1946,,Dépendance de la Couronne britannique,https://en.wikipedia.org/wiki/Guernsey#20th_century
-GIB,Gibraltar,1969,,"Possession du Royaume-Uni depuis 1704, constitution en 1969, nouvelle constitution en 2006",https://en.wikipedia.org/wiki/Gibraltar#History
-GLP,Guadeloupe,1946,,Passe du statut de colonie à celui de département d'outre mer,https://fr.wikipedia.org/wiki/Guadeloupe#D.C3.A9partementalisation_et_r.C3.A9gionalisation
-GRL,Greenland,1979,,"Pays constitutif du Royaume de Danemark, Danemark a ceder une autonomie interne en 1979 avec d'avantage de pouvoir encore en 2009",https://fr.wikipedia.org/wiki/Groenland#Politique_et_administration
-GUF,French Guiana,1946,,Passe du statut de colonie à celui de département d'outre mer,https://fr.wikipedia.org/wiki/Guyane#Histoire
-GUM,Guam,1898,,"Territoire non incorporé organisé des États-Unis avec à sa tête un gouverneur élu, reconquit au Japonnais pendant WW2",https://fr.wikipedia.org/wiki/Guam
-HKG,Hong Kong,1997,,Transfert du gouvernement Anglais au Chinois,https://en.wikipedia.org/wiki/Hong_Kong#Handover_and_Special_Administrative_Region_status
-HMD,Heard Island and McDonald Islands,1947,,Transfert du gouvernement Anglais à celui Australien,https://en.wikipedia.org/wiki/Heard_Island_and_McDonald_Islands#History_2
-IMN,Isle of Man,1765,,"Propriété de la couronne Britannique, auparavant propriété de différentes familles aristocratiques anglaise",https://fr.wikipedia.org/wiki/%C3%8Ele_de_Man#P.C3.A9riode_britannique
-IOT,British Indian Ocean Territory,1965,,Rattache les territoires qui jusqu'à l'indépendance de Maurice lui étais attaché,https://fr.wikipedia.org/wiki/Territoire_britannique_de_l%27oc%C3%A9an_Indien
-JEY,Jersey,1946,,Dépendance de la Couronne britannique,https://fr.wikipedia.org/wiki/Jersey#XXe.C2.A0si.C3.A8cle
-MAC,Macao,1999,,Transfert du gouvernement Portuguais au Chinois,https://fr.wikipedia.org/wiki/Macao#D.C3.A9veloppement_du_Jeu_et_r.C3.A9trocession_.C3.A0_la_Chine
-MAF,Saint Martin (French part),1946,,Département d'outre-mer séparé de la Guadeloupe depuis (1946) et maintenant collectivité d'outre-mer française (2007),https://fr.wikipedia.org/wiki/Saint-Martin_(Antilles_fran%C3%A7aises)
-MNP,Northern Mariana Islands,1978,,Commonwealth within the United States,https://en.wikipedia.org/wiki/Northern_Mariana_Islands#Commonwealth
-MSR,Montserrat,1960,,"île des Antilles, dépendant du Royaume-Uni (intermitance de possésion jusqu'à 1783). En 1960, elle obtient l'autonomie politique alors qu'un ministre en chef assure les fonctions de chef du gouvernement Le Royaume-Uni a accordé aux habitants de Montserrat les droits de résidence dans le royaume en 1998 et la citoyenneté britannique en 2002",https://fr.wikipedia.org/wiki/Montserrat_(Antilles)
-MTQ,Martinique,1946,,Département français d'outre-mer,https://fr.wikipedia.org/wiki/Martinique#Histoire
-MYT,Mayotte,2011,,"Mayotte est devenu Français en 1841, À la suite du référendum local de 2009, Mayotte est devenue département et région d’outre-mer (DROM) à assemblée délibérante unique (le conseil général exerçant les compétences d’un conseil régional) en 2011",https://fr.wikipedia.org/wiki/Mayotte
-NCL,New Caledonia,1988,,"Français depuis 1843, a passer du statut de colonie à celui de département d'outre mer 1946 puis a celui de collectivité en 1988. Actuellement processus de réferendum d'indépendance",https://fr.wikipedia.org/wiki/Nouvelle-Cal%C3%A9donie#Histoire
-NFK,Norfolk Island,1979,,"Norfolk Island Act, accordant l’autonomie à l'île Norfolk puis près la crise de 2008, l’île obtient un effacement de ses dettes en échange d’une réintégration dans le territoire australien. Elle devient une région de la Nouvelle-Galles du Sud à partir du 1er juillet 2016. ",https://fr.wikipedia.org/wiki/%C3%8Ele_Norfolk
-NIU,Niue,1974,,Libre association avec la Nouvelle-Zélande (propre politique étrangère),https://fr.wikipedia.org/wiki/Niue
-PCN,Pitcairn,1981,,"British colony in 1838, now British overseas territory",https://fr.wikipedia.org/wiki/%C3%8Eles_Pitcairn
-PRI,Puerto Rico,1947,,U.S. granted Puerto Ricans the right to democratically elect their own governor,https://fr.wikipedia.org/wiki/Porto_Rico
-PSE,"Palestine, State of",1988,,Its independence was declared by the Palestine Liberation Organization (PLO) in Algiers as a government-in-exile,https://en.wikipedia.org/wiki/State_of_Palestine
-PYF,French Polynesia,1946,,Passe du statut de colonie à celui de département d'outre mer,https://fr.wikipedia.org/wiki/Polyn%C3%A9sie_fran%C3%A7aise#XXe_et_XXIe.C2.A0si.C3.A8cles
-REU,Reunion,1946,,Passe du statut de colonie à celui de département d'outre mer,https://fr.wikipedia.org/wiki/La_R%C3%A9union
-SGS,South Georgia and the South Sandwich Islands,1985,,"Avant était administré comme faisant partie des ""Falkland Islands Dependencies""",https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands
-SHN,"Saint Helena, Ascension and Tristan da Cunha",1981,,British Dependent Territories,"https://fr.wikipedia.org/wiki/Sainte-H%C3%A9l%C3%A8ne,_Ascension_et_Tristan_da_Cunha"
-SJM,Svalbard and Jan Mayen,1930,,"Dénomination statistique, regrouper par l'iso malgré le fait qu'elles sont administré séparément et sous des statut différent.",https://fr.wikipedia.org/wiki/Svalbard_et_Jan_Mayen
-SPM,Saint Pierre and Miquelon,1946,,"Passe en 1946 du satut de colonie a celui de territoire d'outre mer, puis à celui de département d'outre-mer (1976), puis collectivité territoriale à statut particulier(1985), c'est aujourd'hui une collectivité d'outre-mer (2007)",https://fr.wikipedia.org/wiki/Saint-Pierre-et-Miquelon#Histoire_r.C3.A9cente_et_int.C3.A9gration_.C3.A0_la_R.C3.A9publique_fran.C3.A7aise
-SXM,Sint Maarten (Dutch part),2010,,Territoire autonome au sein du Royaume des Pays-Bas depuis la dissolution de la fédération des Antilles néerlandaises,https://fr.wikipedia.org/wiki/Saint-Martin_(Royaume_des_Pays-Bas)#Histoire
-TCA,Turks and Caicos Islands,1973,,"1681 début de la souveraineté britaniique. Elles furent rattachées officiellement aux Bahamas jusqu'en 1848, puis à la Jamaïque jusqu'en 1962, puis de nouveau aux Bahamas jusqu'en 1973, date à laquelle elles devinrent un territoire britannique d'outre-mer à part entière",https://fr.wikipedia.org/wiki/%C3%8Eles_Turques-et-Ca%C3%AFques
-TKL,Tokelau,1949,,"passèrent sous protectorat britannique en 1877 (statut formalisé en 1889), transferé à la Nouvelle Zélande en 1925 (statut formalisé en 1948, ""When the British Nationality and New Zealand Citizenship Act 1948 came into effect on 1 January 1949, Tokelauans who were British subjects gained New Zealand citizenship – a status which they still hold""), de plus en plus d'autonomie de nos jours (Il existe désormais un corps législatif national et un conseil exécutif. Un pouvoir judiciaire local existe ainsi que des services publics)",https://en.wikipedia.org/wiki/Tokelau#History
-UMI,United States Minor Outlying Islands,1899,,"Annexés avec le Guano Islands Act (1856) dans le but d'y exploiter le guano. Mais prise de possésion entre 1859 et 1899 selon l'île. Regroupe neuf îles et atolls des États-Unis, Il ne s'agit pas d'un territoire des États-Unis mais d'un ensemble servant à regrouper ces îles par commodité et dans un but statistique.  Il s'agit de territoires non organisés, c'est-à-dire sans gouvernement local, et, à l'exception de l'atoll Palmyra, des territoires non incorporés, c'est-à-dire que la constitution des États-Unis n'y est pas forcément appliquée en totalité",https://fr.wikipedia.org/wiki/%C3%8Eles_mineures_%C3%A9loign%C3%A9es_des_%C3%89tats-Unis
-VGB,"Virgin Islands, British",1967,,The islands gained separate colony status in 1960 and became autonomous in 1967 (British Overseas Territories),https://en.wikipedia.org/wiki/British_Virgin_Islands#History
-VIR,"Virgin Islands, U.S.",1917,,"En 1917, ces territoires et ses 26 000 habitants d'alors passèrent sous contrôle des États-Unis contre la somme de 25 millions de dollars US. Aujourd'hui est un territoire organisé mais non incorporé des États-Unis",https://fr.wikipedia.org/wiki/%C3%8Eles_Vierges_des_%C3%89tats-Unis
-WLF,Wallis and Futuna,1961,,traité de protectorat (1887) puis territoire d'outre-mer (1961) puis collectivité d'outre mer 2003,https://fr.wikipedia.org/wiki/Wallis-et-Futuna#Histoire
+country,year
+Aruba,1986
+Aruba,1987
+Aruba,1988
+Aruba,1989
+Aruba,1990
+Aruba,1991
+Aruba,1992
+Aruba,1993
+Aruba,1994
+Aruba,1995
+Aruba,1996
+Aruba,1997
+Aruba,1998
+Aruba,1999
+Aruba,2000
+Aruba,2001
+Aruba,2002
+Aruba,2003
+Aruba,2004
+Aruba,2005
+Aruba,2006
+Aruba,2007
+Aruba,2008
+Aruba,2009
+Aruba,2010
+Aruba,2011
+Aruba,2012
+Aruba,2013
+Aruba,2014
+Aruba,2015
+Aruba,2016
+Aruba,2017
+Aruba,2018
+Aruba,2019
+Aruba,2020
+Anguilla,1982
+Anguilla,1983
+Anguilla,1984
+Anguilla,1985
+Anguilla,1986
+Anguilla,1987
+Anguilla,1988
+Anguilla,1989
+Anguilla,1990
+Anguilla,1991
+Anguilla,1992
+Anguilla,1993
+Anguilla,1994
+Anguilla,1995
+Anguilla,1996
+Anguilla,1997
+Anguilla,1998
+Anguilla,1999
+Anguilla,2000
+Anguilla,2001
+Anguilla,2002
+Anguilla,2003
+Anguilla,2004
+Anguilla,2005
+Anguilla,2006
+Anguilla,2007
+Anguilla,2008
+Anguilla,2009
+Anguilla,2010
+Anguilla,2011
+Anguilla,2012
+Anguilla,2013
+Anguilla,2014
+Anguilla,2015
+Anguilla,2016
+Anguilla,2017
+Anguilla,2018
+Anguilla,2019
+Anguilla,2020
+Åland Islands,1920
+Åland Islands,1921
+Åland Islands,1922
+Åland Islands,1923
+Åland Islands,1924
+Åland Islands,1925
+Åland Islands,1926
+Åland Islands,1927
+Åland Islands,1928
+Åland Islands,1929
+Åland Islands,1930
+Åland Islands,1931
+Åland Islands,1932
+Åland Islands,1933
+Åland Islands,1934
+Åland Islands,1935
+Åland Islands,1936
+Åland Islands,1937
+Åland Islands,1938
+Åland Islands,1939
+Åland Islands,1940
+Åland Islands,1941
+Åland Islands,1942
+Åland Islands,1943
+Åland Islands,1944
+Åland Islands,1945
+Åland Islands,1946
+Åland Islands,1947
+Åland Islands,1948
+Åland Islands,1949
+Åland Islands,1950
+Åland Islands,1951
+Åland Islands,1952
+Åland Islands,1953
+Åland Islands,1954
+Åland Islands,1955
+Åland Islands,1956
+Åland Islands,1957
+Åland Islands,1958
+Åland Islands,1959
+Åland Islands,1960
+Åland Islands,1961
+Åland Islands,1962
+Åland Islands,1963
+Åland Islands,1964
+Åland Islands,1965
+Åland Islands,1966
+Åland Islands,1967
+Åland Islands,1968
+Åland Islands,1969
+Åland Islands,1970
+Åland Islands,1971
+Åland Islands,1972
+Åland Islands,1973
+Åland Islands,1974
+Åland Islands,1975
+Åland Islands,1976
+Åland Islands,1977
+Åland Islands,1978
+Åland Islands,1979
+Åland Islands,1980
+Åland Islands,1981
+Åland Islands,1982
+Åland Islands,1983
+Åland Islands,1984
+Åland Islands,1985
+Åland Islands,1986
+Åland Islands,1987
+Åland Islands,1988
+Åland Islands,1989
+Åland Islands,1990
+Åland Islands,1991
+Åland Islands,1992
+Åland Islands,1993
+Åland Islands,1994
+Åland Islands,1995
+Åland Islands,1996
+Åland Islands,1997
+Åland Islands,1998
+Åland Islands,1999
+Åland Islands,2000
+Åland Islands,2001
+Åland Islands,2002
+Åland Islands,2003
+Åland Islands,2004
+Åland Islands,2005
+Åland Islands,2006
+Åland Islands,2007
+Åland Islands,2008
+Åland Islands,2009
+Åland Islands,2010
+Åland Islands,2011
+Åland Islands,2012
+Åland Islands,2013
+Åland Islands,2014
+Åland Islands,2015
+Åland Islands,2016
+Åland Islands,2017
+Åland Islands,2018
+Åland Islands,2019
+Åland Islands,2020
+Netherlands Antilles,1954
+Netherlands Antilles,1955
+Netherlands Antilles,1956
+Netherlands Antilles,1957
+Netherlands Antilles,1958
+Netherlands Antilles,1959
+Netherlands Antilles,1960
+Netherlands Antilles,1961
+Netherlands Antilles,1962
+Netherlands Antilles,1963
+Netherlands Antilles,1964
+Netherlands Antilles,1965
+Netherlands Antilles,1966
+Netherlands Antilles,1967
+Netherlands Antilles,1968
+Netherlands Antilles,1969
+Netherlands Antilles,1970
+Netherlands Antilles,1971
+Netherlands Antilles,1972
+Netherlands Antilles,1973
+Netherlands Antilles,1974
+Netherlands Antilles,1975
+Netherlands Antilles,1976
+Netherlands Antilles,1977
+Netherlands Antilles,1978
+Netherlands Antilles,1979
+Netherlands Antilles,1980
+Netherlands Antilles,1981
+Netherlands Antilles,1982
+Netherlands Antilles,1983
+Netherlands Antilles,1984
+Netherlands Antilles,1985
+Netherlands Antilles,1986
+Netherlands Antilles,1987
+Netherlands Antilles,1988
+Netherlands Antilles,1989
+Netherlands Antilles,1990
+Netherlands Antilles,1991
+Netherlands Antilles,1992
+Netherlands Antilles,1993
+Netherlands Antilles,1994
+Netherlands Antilles,1995
+Netherlands Antilles,1996
+Netherlands Antilles,1997
+Netherlands Antilles,1998
+Netherlands Antilles,1999
+Netherlands Antilles,2000
+Netherlands Antilles,2001
+Netherlands Antilles,2002
+Netherlands Antilles,2003
+Netherlands Antilles,2004
+Netherlands Antilles,2005
+Netherlands Antilles,2006
+Netherlands Antilles,2007
+Netherlands Antilles,2008
+Netherlands Antilles,2009
+Netherlands Antilles,2010
+American Samoa,1899
+American Samoa,1900
+American Samoa,1901
+American Samoa,1902
+American Samoa,1903
+American Samoa,1904
+American Samoa,1905
+American Samoa,1906
+American Samoa,1907
+American Samoa,1908
+American Samoa,1909
+American Samoa,1910
+American Samoa,1911
+American Samoa,1912
+American Samoa,1913
+American Samoa,1914
+American Samoa,1915
+American Samoa,1916
+American Samoa,1917
+American Samoa,1918
+American Samoa,1919
+American Samoa,1920
+American Samoa,1921
+American Samoa,1922
+American Samoa,1923
+American Samoa,1924
+American Samoa,1925
+American Samoa,1926
+American Samoa,1927
+American Samoa,1928
+American Samoa,1929
+American Samoa,1930
+American Samoa,1931
+American Samoa,1932
+American Samoa,1933
+American Samoa,1934
+American Samoa,1935
+American Samoa,1936
+American Samoa,1937
+American Samoa,1938
+American Samoa,1939
+American Samoa,1940
+American Samoa,1941
+American Samoa,1942
+American Samoa,1943
+American Samoa,1944
+American Samoa,1945
+American Samoa,1946
+American Samoa,1947
+American Samoa,1948
+American Samoa,1949
+American Samoa,1950
+American Samoa,1951
+American Samoa,1952
+American Samoa,1953
+American Samoa,1954
+American Samoa,1955
+American Samoa,1956
+American Samoa,1957
+American Samoa,1958
+American Samoa,1959
+American Samoa,1960
+American Samoa,1961
+American Samoa,1962
+American Samoa,1963
+American Samoa,1964
+American Samoa,1965
+American Samoa,1966
+American Samoa,1967
+American Samoa,1968
+American Samoa,1969
+American Samoa,1970
+American Samoa,1971
+American Samoa,1972
+American Samoa,1973
+American Samoa,1974
+American Samoa,1975
+American Samoa,1976
+American Samoa,1977
+American Samoa,1978
+American Samoa,1979
+American Samoa,1980
+American Samoa,1981
+American Samoa,1982
+American Samoa,1983
+American Samoa,1984
+American Samoa,1985
+American Samoa,1986
+American Samoa,1987
+American Samoa,1988
+American Samoa,1989
+American Samoa,1990
+American Samoa,1991
+American Samoa,1992
+American Samoa,1993
+American Samoa,1994
+American Samoa,1995
+American Samoa,1996
+American Samoa,1997
+American Samoa,1998
+American Samoa,1999
+American Samoa,2000
+American Samoa,2001
+American Samoa,2002
+American Samoa,2003
+American Samoa,2004
+American Samoa,2005
+American Samoa,2006
+American Samoa,2007
+American Samoa,2008
+American Samoa,2009
+American Samoa,2010
+American Samoa,2011
+American Samoa,2012
+American Samoa,2013
+American Samoa,2014
+American Samoa,2015
+American Samoa,2016
+American Samoa,2017
+American Samoa,2018
+American Samoa,2019
+American Samoa,2020
+Antarctica,1959
+Antarctica,1960
+Antarctica,1961
+Antarctica,1962
+Antarctica,1963
+Antarctica,1964
+Antarctica,1965
+Antarctica,1966
+Antarctica,1967
+Antarctica,1968
+Antarctica,1969
+Antarctica,1970
+Antarctica,1971
+Antarctica,1972
+Antarctica,1973
+Antarctica,1974
+Antarctica,1975
+Antarctica,1976
+Antarctica,1977
+Antarctica,1978
+Antarctica,1979
+Antarctica,1980
+Antarctica,1981
+Antarctica,1982
+Antarctica,1983
+Antarctica,1984
+Antarctica,1985
+Antarctica,1986
+Antarctica,1987
+Antarctica,1988
+Antarctica,1989
+Antarctica,1990
+Antarctica,1991
+Antarctica,1992
+Antarctica,1993
+Antarctica,1994
+Antarctica,1995
+Antarctica,1996
+Antarctica,1997
+Antarctica,1998
+Antarctica,1999
+Antarctica,2000
+Antarctica,2001
+Antarctica,2002
+Antarctica,2003
+Antarctica,2004
+Antarctica,2005
+Antarctica,2006
+Antarctica,2007
+Antarctica,2008
+Antarctica,2009
+Antarctica,2010
+Antarctica,2011
+Antarctica,2012
+Antarctica,2013
+Antarctica,2014
+Antarctica,2015
+Antarctica,2016
+Antarctica,2017
+Antarctica,2018
+Antarctica,2019
+Antarctica,2020
+French Southern Territories,1955
+French Southern Territories,1956
+French Southern Territories,1957
+French Southern Territories,1958
+French Southern Territories,1959
+French Southern Territories,1960
+French Southern Territories,1961
+French Southern Territories,1962
+French Southern Territories,1963
+French Southern Territories,1964
+French Southern Territories,1965
+French Southern Territories,1966
+French Southern Territories,1967
+French Southern Territories,1968
+French Southern Territories,1969
+French Southern Territories,1970
+French Southern Territories,1971
+French Southern Territories,1972
+French Southern Territories,1973
+French Southern Territories,1974
+French Southern Territories,1975
+French Southern Territories,1976
+French Southern Territories,1977
+French Southern Territories,1978
+French Southern Territories,1979
+French Southern Territories,1980
+French Southern Territories,1981
+French Southern Territories,1982
+French Southern Territories,1983
+French Southern Territories,1984
+French Southern Territories,1985
+French Southern Territories,1986
+French Southern Territories,1987
+French Southern Territories,1988
+French Southern Territories,1989
+French Southern Territories,1990
+French Southern Territories,1991
+French Southern Territories,1992
+French Southern Territories,1993
+French Southern Territories,1994
+French Southern Territories,1995
+French Southern Territories,1996
+French Southern Territories,1997
+French Southern Territories,1998
+French Southern Territories,1999
+French Southern Territories,2000
+French Southern Territories,2001
+French Southern Territories,2002
+French Southern Territories,2003
+French Southern Territories,2004
+French Southern Territories,2005
+French Southern Territories,2006
+French Southern Territories,2007
+French Southern Territories,2008
+French Southern Territories,2009
+French Southern Territories,2010
+French Southern Territories,2011
+French Southern Territories,2012
+French Southern Territories,2013
+French Southern Territories,2014
+French Southern Territories,2015
+French Southern Territories,2016
+French Southern Territories,2017
+French Southern Territories,2018
+French Southern Territories,2019
+French Southern Territories,2020
+"Bonaire, Sint Eustatius and Saba",2010
+"Bonaire, Sint Eustatius and Saba",2011
+"Bonaire, Sint Eustatius and Saba",2012
+"Bonaire, Sint Eustatius and Saba",2013
+"Bonaire, Sint Eustatius and Saba",2014
+"Bonaire, Sint Eustatius and Saba",2015
+"Bonaire, Sint Eustatius and Saba",2016
+"Bonaire, Sint Eustatius and Saba",2017
+"Bonaire, Sint Eustatius and Saba",2018
+"Bonaire, Sint Eustatius and Saba",2019
+"Bonaire, Sint Eustatius and Saba",2020
+Saint Barthelemy,2007
+Saint Barthelemy,2008
+Saint Barthelemy,2009
+Saint Barthelemy,2010
+Saint Barthelemy,2011
+Saint Barthelemy,2012
+Saint Barthelemy,2013
+Saint Barthelemy,2014
+Saint Barthelemy,2015
+Saint Barthelemy,2016
+Saint Barthelemy,2017
+Saint Barthelemy,2018
+Saint Barthelemy,2019
+Saint Barthelemy,2020
+Bermuda,1968
+Bermuda,1969
+Bermuda,1970
+Bermuda,1971
+Bermuda,1972
+Bermuda,1973
+Bermuda,1974
+Bermuda,1975
+Bermuda,1976
+Bermuda,1977
+Bermuda,1978
+Bermuda,1979
+Bermuda,1980
+Bermuda,1981
+Bermuda,1982
+Bermuda,1983
+Bermuda,1984
+Bermuda,1985
+Bermuda,1986
+Bermuda,1987
+Bermuda,1988
+Bermuda,1989
+Bermuda,1990
+Bermuda,1991
+Bermuda,1992
+Bermuda,1993
+Bermuda,1994
+Bermuda,1995
+Bermuda,1996
+Bermuda,1997
+Bermuda,1998
+Bermuda,1999
+Bermuda,2000
+Bermuda,2001
+Bermuda,2002
+Bermuda,2003
+Bermuda,2004
+Bermuda,2005
+Bermuda,2006
+Bermuda,2007
+Bermuda,2008
+Bermuda,2009
+Bermuda,2010
+Bermuda,2011
+Bermuda,2012
+Bermuda,2013
+Bermuda,2014
+Bermuda,2015
+Bermuda,2016
+Bermuda,2017
+Bermuda,2018
+Bermuda,2019
+Bermuda,2020
+Bouvet Island,1927
+Bouvet Island,1928
+Bouvet Island,1929
+Bouvet Island,1930
+Bouvet Island,1931
+Bouvet Island,1932
+Bouvet Island,1933
+Bouvet Island,1934
+Bouvet Island,1935
+Bouvet Island,1936
+Bouvet Island,1937
+Bouvet Island,1938
+Bouvet Island,1939
+Bouvet Island,1940
+Bouvet Island,1941
+Bouvet Island,1942
+Bouvet Island,1943
+Bouvet Island,1944
+Bouvet Island,1945
+Bouvet Island,1946
+Bouvet Island,1947
+Bouvet Island,1948
+Bouvet Island,1949
+Bouvet Island,1950
+Bouvet Island,1951
+Bouvet Island,1952
+Bouvet Island,1953
+Bouvet Island,1954
+Bouvet Island,1955
+Bouvet Island,1956
+Bouvet Island,1957
+Bouvet Island,1958
+Bouvet Island,1959
+Bouvet Island,1960
+Bouvet Island,1961
+Bouvet Island,1962
+Bouvet Island,1963
+Bouvet Island,1964
+Bouvet Island,1965
+Bouvet Island,1966
+Bouvet Island,1967
+Bouvet Island,1968
+Bouvet Island,1969
+Bouvet Island,1970
+Bouvet Island,1971
+Bouvet Island,1972
+Bouvet Island,1973
+Bouvet Island,1974
+Bouvet Island,1975
+Bouvet Island,1976
+Bouvet Island,1977
+Bouvet Island,1978
+Bouvet Island,1979
+Bouvet Island,1980
+Bouvet Island,1981
+Bouvet Island,1982
+Bouvet Island,1983
+Bouvet Island,1984
+Bouvet Island,1985
+Bouvet Island,1986
+Bouvet Island,1987
+Bouvet Island,1988
+Bouvet Island,1989
+Bouvet Island,1990
+Bouvet Island,1991
+Bouvet Island,1992
+Bouvet Island,1993
+Bouvet Island,1994
+Bouvet Island,1995
+Bouvet Island,1996
+Bouvet Island,1997
+Bouvet Island,1998
+Bouvet Island,1999
+Bouvet Island,2000
+Bouvet Island,2001
+Bouvet Island,2002
+Bouvet Island,2003
+Bouvet Island,2004
+Bouvet Island,2005
+Bouvet Island,2006
+Bouvet Island,2007
+Bouvet Island,2008
+Bouvet Island,2009
+Bouvet Island,2010
+Bouvet Island,2011
+Bouvet Island,2012
+Bouvet Island,2013
+Bouvet Island,2014
+Bouvet Island,2015
+Bouvet Island,2016
+Bouvet Island,2017
+Bouvet Island,2018
+Bouvet Island,2019
+Bouvet Island,2020
+Cocos (Keeling) Islands,1984
+Cocos (Keeling) Islands,1985
+Cocos (Keeling) Islands,1986
+Cocos (Keeling) Islands,1987
+Cocos (Keeling) Islands,1988
+Cocos (Keeling) Islands,1989
+Cocos (Keeling) Islands,1990
+Cocos (Keeling) Islands,1991
+Cocos (Keeling) Islands,1992
+Cocos (Keeling) Islands,1993
+Cocos (Keeling) Islands,1994
+Cocos (Keeling) Islands,1995
+Cocos (Keeling) Islands,1996
+Cocos (Keeling) Islands,1997
+Cocos (Keeling) Islands,1998
+Cocos (Keeling) Islands,1999
+Cocos (Keeling) Islands,2000
+Cocos (Keeling) Islands,2001
+Cocos (Keeling) Islands,2002
+Cocos (Keeling) Islands,2003
+Cocos (Keeling) Islands,2004
+Cocos (Keeling) Islands,2005
+Cocos (Keeling) Islands,2006
+Cocos (Keeling) Islands,2007
+Cocos (Keeling) Islands,2008
+Cocos (Keeling) Islands,2009
+Cocos (Keeling) Islands,2010
+Cocos (Keeling) Islands,2011
+Cocos (Keeling) Islands,2012
+Cocos (Keeling) Islands,2013
+Cocos (Keeling) Islands,2014
+Cocos (Keeling) Islands,2015
+Cocos (Keeling) Islands,2016
+Cocos (Keeling) Islands,2017
+Cocos (Keeling) Islands,2018
+Cocos (Keeling) Islands,2019
+Cocos (Keeling) Islands,2020
+Cook Islands,1965
+Cook Islands,1966
+Cook Islands,1967
+Cook Islands,1968
+Cook Islands,1969
+Cook Islands,1970
+Cook Islands,1971
+Cook Islands,1972
+Cook Islands,1973
+Cook Islands,1974
+Cook Islands,1975
+Cook Islands,1976
+Cook Islands,1977
+Cook Islands,1978
+Cook Islands,1979
+Cook Islands,1980
+Cook Islands,1981
+Cook Islands,1982
+Cook Islands,1983
+Cook Islands,1984
+Cook Islands,1985
+Cook Islands,1986
+Cook Islands,1987
+Cook Islands,1988
+Cook Islands,1989
+Cook Islands,1990
+Cook Islands,1991
+Cook Islands,1992
+Cook Islands,1993
+Cook Islands,1994
+Cook Islands,1995
+Cook Islands,1996
+Cook Islands,1997
+Cook Islands,1998
+Cook Islands,1999
+Cook Islands,2000
+Cook Islands,2001
+Cook Islands,2002
+Cook Islands,2003
+Cook Islands,2004
+Cook Islands,2005
+Cook Islands,2006
+Cook Islands,2007
+Cook Islands,2008
+Cook Islands,2009
+Cook Islands,2010
+Cook Islands,2011
+Cook Islands,2012
+Cook Islands,2013
+Cook Islands,2014
+Cook Islands,2015
+Cook Islands,2016
+Cook Islands,2017
+Cook Islands,2018
+Cook Islands,2019
+Cook Islands,2020
+Curacao,2010
+Curacao,2011
+Curacao,2012
+Curacao,2013
+Curacao,2014
+Curacao,2015
+Curacao,2016
+Curacao,2017
+Curacao,2018
+Curacao,2019
+Curacao,2020
+Christmas Island,1958
+Christmas Island,1959
+Christmas Island,1960
+Christmas Island,1961
+Christmas Island,1962
+Christmas Island,1963
+Christmas Island,1964
+Christmas Island,1965
+Christmas Island,1966
+Christmas Island,1967
+Christmas Island,1968
+Christmas Island,1969
+Christmas Island,1970
+Christmas Island,1971
+Christmas Island,1972
+Christmas Island,1973
+Christmas Island,1974
+Christmas Island,1975
+Christmas Island,1976
+Christmas Island,1977
+Christmas Island,1978
+Christmas Island,1979
+Christmas Island,1980
+Christmas Island,1981
+Christmas Island,1982
+Christmas Island,1983
+Christmas Island,1984
+Christmas Island,1985
+Christmas Island,1986
+Christmas Island,1987
+Christmas Island,1988
+Christmas Island,1989
+Christmas Island,1990
+Christmas Island,1991
+Christmas Island,1992
+Christmas Island,1993
+Christmas Island,1994
+Christmas Island,1995
+Christmas Island,1996
+Christmas Island,1997
+Christmas Island,1998
+Christmas Island,1999
+Christmas Island,2000
+Christmas Island,2001
+Christmas Island,2002
+Christmas Island,2003
+Christmas Island,2004
+Christmas Island,2005
+Christmas Island,2006
+Christmas Island,2007
+Christmas Island,2008
+Christmas Island,2009
+Christmas Island,2010
+Christmas Island,2011
+Christmas Island,2012
+Christmas Island,2013
+Christmas Island,2014
+Christmas Island,2015
+Christmas Island,2016
+Christmas Island,2017
+Christmas Island,2018
+Christmas Island,2019
+Christmas Island,2020
+Cayman Islands,1962
+Cayman Islands,1963
+Cayman Islands,1964
+Cayman Islands,1965
+Cayman Islands,1966
+Cayman Islands,1967
+Cayman Islands,1968
+Cayman Islands,1969
+Cayman Islands,1970
+Cayman Islands,1971
+Cayman Islands,1972
+Cayman Islands,1973
+Cayman Islands,1974
+Cayman Islands,1975
+Cayman Islands,1976
+Cayman Islands,1977
+Cayman Islands,1978
+Cayman Islands,1979
+Cayman Islands,1980
+Cayman Islands,1981
+Cayman Islands,1982
+Cayman Islands,1983
+Cayman Islands,1984
+Cayman Islands,1985
+Cayman Islands,1986
+Cayman Islands,1987
+Cayman Islands,1988
+Cayman Islands,1989
+Cayman Islands,1990
+Cayman Islands,1991
+Cayman Islands,1992
+Cayman Islands,1993
+Cayman Islands,1994
+Cayman Islands,1995
+Cayman Islands,1996
+Cayman Islands,1997
+Cayman Islands,1998
+Cayman Islands,1999
+Cayman Islands,2000
+Cayman Islands,2001
+Cayman Islands,2002
+Cayman Islands,2003
+Cayman Islands,2004
+Cayman Islands,2005
+Cayman Islands,2006
+Cayman Islands,2007
+Cayman Islands,2008
+Cayman Islands,2009
+Cayman Islands,2010
+Cayman Islands,2011
+Cayman Islands,2012
+Cayman Islands,2013
+Cayman Islands,2014
+Cayman Islands,2015
+Cayman Islands,2016
+Cayman Islands,2017
+Cayman Islands,2018
+Cayman Islands,2019
+Cayman Islands,2020
+Dominica,1967
+Dominica,1968
+Dominica,1969
+Dominica,1970
+Dominica,1971
+Dominica,1972
+Dominica,1973
+Dominica,1974
+Dominica,1975
+Dominica,1976
+Dominica,1977
+Dominica,1978
+Dominica,1979
+Dominica,1980
+Dominica,1981
+Dominica,1982
+Dominica,1983
+Dominica,1984
+Dominica,1985
+Dominica,1986
+Dominica,1987
+Dominica,1988
+Dominica,1989
+Dominica,1990
+Dominica,1991
+Dominica,1992
+Dominica,1993
+Dominica,1994
+Dominica,1995
+Dominica,1996
+Dominica,1997
+Dominica,1998
+Dominica,1999
+Dominica,2000
+Dominica,2001
+Dominica,2002
+Dominica,2003
+Dominica,2004
+Dominica,2005
+Dominica,2006
+Dominica,2007
+Dominica,2008
+Dominica,2009
+Dominica,2010
+Dominica,2011
+Dominica,2012
+Dominica,2013
+Dominica,2014
+Dominica,2015
+Dominica,2016
+Dominica,2017
+Dominica,2018
+Dominica,2019
+Dominica,2020
+Western Sahara,1976
+Western Sahara,1977
+Western Sahara,1978
+Western Sahara,1979
+Western Sahara,1980
+Western Sahara,1981
+Western Sahara,1982
+Western Sahara,1983
+Western Sahara,1984
+Western Sahara,1985
+Western Sahara,1986
+Western Sahara,1987
+Western Sahara,1988
+Western Sahara,1989
+Western Sahara,1990
+Western Sahara,1991
+Western Sahara,1992
+Western Sahara,1993
+Western Sahara,1994
+Western Sahara,1995
+Western Sahara,1996
+Western Sahara,1997
+Western Sahara,1998
+Western Sahara,1999
+Western Sahara,2000
+Western Sahara,2001
+Western Sahara,2002
+Western Sahara,2003
+Western Sahara,2004
+Western Sahara,2005
+Western Sahara,2006
+Western Sahara,2007
+Western Sahara,2008
+Western Sahara,2009
+Western Sahara,2010
+Western Sahara,2011
+Western Sahara,2012
+Western Sahara,2013
+Western Sahara,2014
+Western Sahara,2015
+Western Sahara,2016
+Western Sahara,2017
+Western Sahara,2018
+Western Sahara,2019
+Western Sahara,2020
+Falkland Islands (Malvinas),2002
+Falkland Islands (Malvinas),2003
+Falkland Islands (Malvinas),2004
+Falkland Islands (Malvinas),2005
+Falkland Islands (Malvinas),2006
+Falkland Islands (Malvinas),2007
+Falkland Islands (Malvinas),2008
+Falkland Islands (Malvinas),2009
+Falkland Islands (Malvinas),2010
+Falkland Islands (Malvinas),2011
+Falkland Islands (Malvinas),2012
+Falkland Islands (Malvinas),2013
+Falkland Islands (Malvinas),2014
+Falkland Islands (Malvinas),2015
+Falkland Islands (Malvinas),2016
+Falkland Islands (Malvinas),2017
+Falkland Islands (Malvinas),2018
+Falkland Islands (Malvinas),2019
+Falkland Islands (Malvinas),2020
+Faroe Islands,1948
+Faroe Islands,1949
+Faroe Islands,1950
+Faroe Islands,1951
+Faroe Islands,1952
+Faroe Islands,1953
+Faroe Islands,1954
+Faroe Islands,1955
+Faroe Islands,1956
+Faroe Islands,1957
+Faroe Islands,1958
+Faroe Islands,1959
+Faroe Islands,1960
+Faroe Islands,1961
+Faroe Islands,1962
+Faroe Islands,1963
+Faroe Islands,1964
+Faroe Islands,1965
+Faroe Islands,1966
+Faroe Islands,1967
+Faroe Islands,1968
+Faroe Islands,1969
+Faroe Islands,1970
+Faroe Islands,1971
+Faroe Islands,1972
+Faroe Islands,1973
+Faroe Islands,1974
+Faroe Islands,1975
+Faroe Islands,1976
+Faroe Islands,1977
+Faroe Islands,1978
+Faroe Islands,1979
+Faroe Islands,1980
+Faroe Islands,1981
+Faroe Islands,1982
+Faroe Islands,1983
+Faroe Islands,1984
+Faroe Islands,1985
+Faroe Islands,1986
+Faroe Islands,1987
+Faroe Islands,1988
+Faroe Islands,1989
+Faroe Islands,1990
+Faroe Islands,1991
+Faroe Islands,1992
+Faroe Islands,1993
+Faroe Islands,1994
+Faroe Islands,1995
+Faroe Islands,1996
+Faroe Islands,1997
+Faroe Islands,1998
+Faroe Islands,1999
+Faroe Islands,2000
+Faroe Islands,2001
+Faroe Islands,2002
+Faroe Islands,2003
+Faroe Islands,2004
+Faroe Islands,2005
+Faroe Islands,2006
+Faroe Islands,2007
+Faroe Islands,2008
+Faroe Islands,2009
+Faroe Islands,2010
+Faroe Islands,2011
+Faroe Islands,2012
+Faroe Islands,2013
+Faroe Islands,2014
+Faroe Islands,2015
+Faroe Islands,2016
+Faroe Islands,2017
+Faroe Islands,2018
+Faroe Islands,2019
+Faroe Islands,2020
+Guernsey,1946
+Guernsey,1947
+Guernsey,1948
+Guernsey,1949
+Guernsey,1950
+Guernsey,1951
+Guernsey,1952
+Guernsey,1953
+Guernsey,1954
+Guernsey,1955
+Guernsey,1956
+Guernsey,1957
+Guernsey,1958
+Guernsey,1959
+Guernsey,1960
+Guernsey,1961
+Guernsey,1962
+Guernsey,1963
+Guernsey,1964
+Guernsey,1965
+Guernsey,1966
+Guernsey,1967
+Guernsey,1968
+Guernsey,1969
+Guernsey,1970
+Guernsey,1971
+Guernsey,1972
+Guernsey,1973
+Guernsey,1974
+Guernsey,1975
+Guernsey,1976
+Guernsey,1977
+Guernsey,1978
+Guernsey,1979
+Guernsey,1980
+Guernsey,1981
+Guernsey,1982
+Guernsey,1983
+Guernsey,1984
+Guernsey,1985
+Guernsey,1986
+Guernsey,1987
+Guernsey,1988
+Guernsey,1989
+Guernsey,1990
+Guernsey,1991
+Guernsey,1992
+Guernsey,1993
+Guernsey,1994
+Guernsey,1995
+Guernsey,1996
+Guernsey,1997
+Guernsey,1998
+Guernsey,1999
+Guernsey,2000
+Guernsey,2001
+Guernsey,2002
+Guernsey,2003
+Guernsey,2004
+Guernsey,2005
+Guernsey,2006
+Guernsey,2007
+Guernsey,2008
+Guernsey,2009
+Guernsey,2010
+Guernsey,2011
+Guernsey,2012
+Guernsey,2013
+Guernsey,2014
+Guernsey,2015
+Guernsey,2016
+Guernsey,2017
+Guernsey,2018
+Guernsey,2019
+Guernsey,2020
+Gibraltar,1969
+Gibraltar,1970
+Gibraltar,1971
+Gibraltar,1972
+Gibraltar,1973
+Gibraltar,1974
+Gibraltar,1975
+Gibraltar,1976
+Gibraltar,1977
+Gibraltar,1978
+Gibraltar,1979
+Gibraltar,1980
+Gibraltar,1981
+Gibraltar,1982
+Gibraltar,1983
+Gibraltar,1984
+Gibraltar,1985
+Gibraltar,1986
+Gibraltar,1987
+Gibraltar,1988
+Gibraltar,1989
+Gibraltar,1990
+Gibraltar,1991
+Gibraltar,1992
+Gibraltar,1993
+Gibraltar,1994
+Gibraltar,1995
+Gibraltar,1996
+Gibraltar,1997
+Gibraltar,1998
+Gibraltar,1999
+Gibraltar,2000
+Gibraltar,2001
+Gibraltar,2002
+Gibraltar,2003
+Gibraltar,2004
+Gibraltar,2005
+Gibraltar,2006
+Gibraltar,2007
+Gibraltar,2008
+Gibraltar,2009
+Gibraltar,2010
+Gibraltar,2011
+Gibraltar,2012
+Gibraltar,2013
+Gibraltar,2014
+Gibraltar,2015
+Gibraltar,2016
+Gibraltar,2017
+Gibraltar,2018
+Gibraltar,2019
+Gibraltar,2020
+Guadeloupe,1946
+Guadeloupe,1947
+Guadeloupe,1948
+Guadeloupe,1949
+Guadeloupe,1950
+Guadeloupe,1951
+Guadeloupe,1952
+Guadeloupe,1953
+Guadeloupe,1954
+Guadeloupe,1955
+Guadeloupe,1956
+Guadeloupe,1957
+Guadeloupe,1958
+Guadeloupe,1959
+Guadeloupe,1960
+Guadeloupe,1961
+Guadeloupe,1962
+Guadeloupe,1963
+Guadeloupe,1964
+Guadeloupe,1965
+Guadeloupe,1966
+Guadeloupe,1967
+Guadeloupe,1968
+Guadeloupe,1969
+Guadeloupe,1970
+Guadeloupe,1971
+Guadeloupe,1972
+Guadeloupe,1973
+Guadeloupe,1974
+Guadeloupe,1975
+Guadeloupe,1976
+Guadeloupe,1977
+Guadeloupe,1978
+Guadeloupe,1979
+Guadeloupe,1980
+Guadeloupe,1981
+Guadeloupe,1982
+Guadeloupe,1983
+Guadeloupe,1984
+Guadeloupe,1985
+Guadeloupe,1986
+Guadeloupe,1987
+Guadeloupe,1988
+Guadeloupe,1989
+Guadeloupe,1990
+Guadeloupe,1991
+Guadeloupe,1992
+Guadeloupe,1993
+Guadeloupe,1994
+Guadeloupe,1995
+Guadeloupe,1996
+Guadeloupe,1997
+Guadeloupe,1998
+Guadeloupe,1999
+Guadeloupe,2000
+Guadeloupe,2001
+Guadeloupe,2002
+Guadeloupe,2003
+Guadeloupe,2004
+Guadeloupe,2005
+Guadeloupe,2006
+Guadeloupe,2007
+Guadeloupe,2008
+Guadeloupe,2009
+Guadeloupe,2010
+Guadeloupe,2011
+Guadeloupe,2012
+Guadeloupe,2013
+Guadeloupe,2014
+Guadeloupe,2015
+Guadeloupe,2016
+Guadeloupe,2017
+Guadeloupe,2018
+Guadeloupe,2019
+Guadeloupe,2020
+Greenland,1979
+Greenland,1980
+Greenland,1981
+Greenland,1982
+Greenland,1983
+Greenland,1984
+Greenland,1985
+Greenland,1986
+Greenland,1987
+Greenland,1988
+Greenland,1989
+Greenland,1990
+Greenland,1991
+Greenland,1992
+Greenland,1993
+Greenland,1994
+Greenland,1995
+Greenland,1996
+Greenland,1997
+Greenland,1998
+Greenland,1999
+Greenland,2000
+Greenland,2001
+Greenland,2002
+Greenland,2003
+Greenland,2004
+Greenland,2005
+Greenland,2006
+Greenland,2007
+Greenland,2008
+Greenland,2009
+Greenland,2010
+Greenland,2011
+Greenland,2012
+Greenland,2013
+Greenland,2014
+Greenland,2015
+Greenland,2016
+Greenland,2017
+Greenland,2018
+Greenland,2019
+Greenland,2020
+French Guiana,1946
+French Guiana,1947
+French Guiana,1948
+French Guiana,1949
+French Guiana,1950
+French Guiana,1951
+French Guiana,1952
+French Guiana,1953
+French Guiana,1954
+French Guiana,1955
+French Guiana,1956
+French Guiana,1957
+French Guiana,1958
+French Guiana,1959
+French Guiana,1960
+French Guiana,1961
+French Guiana,1962
+French Guiana,1963
+French Guiana,1964
+French Guiana,1965
+French Guiana,1966
+French Guiana,1967
+French Guiana,1968
+French Guiana,1969
+French Guiana,1970
+French Guiana,1971
+French Guiana,1972
+French Guiana,1973
+French Guiana,1974
+French Guiana,1975
+French Guiana,1976
+French Guiana,1977
+French Guiana,1978
+French Guiana,1979
+French Guiana,1980
+French Guiana,1981
+French Guiana,1982
+French Guiana,1983
+French Guiana,1984
+French Guiana,1985
+French Guiana,1986
+French Guiana,1987
+French Guiana,1988
+French Guiana,1989
+French Guiana,1990
+French Guiana,1991
+French Guiana,1992
+French Guiana,1993
+French Guiana,1994
+French Guiana,1995
+French Guiana,1996
+French Guiana,1997
+French Guiana,1998
+French Guiana,1999
+French Guiana,2000
+French Guiana,2001
+French Guiana,2002
+French Guiana,2003
+French Guiana,2004
+French Guiana,2005
+French Guiana,2006
+French Guiana,2007
+French Guiana,2008
+French Guiana,2009
+French Guiana,2010
+French Guiana,2011
+French Guiana,2012
+French Guiana,2013
+French Guiana,2014
+French Guiana,2015
+French Guiana,2016
+French Guiana,2017
+French Guiana,2018
+French Guiana,2019
+French Guiana,2020
+Guam,1898
+Guam,1899
+Guam,1900
+Guam,1901
+Guam,1902
+Guam,1903
+Guam,1904
+Guam,1905
+Guam,1906
+Guam,1907
+Guam,1908
+Guam,1909
+Guam,1910
+Guam,1911
+Guam,1912
+Guam,1913
+Guam,1914
+Guam,1915
+Guam,1916
+Guam,1917
+Guam,1918
+Guam,1919
+Guam,1920
+Guam,1921
+Guam,1922
+Guam,1923
+Guam,1924
+Guam,1925
+Guam,1926
+Guam,1927
+Guam,1928
+Guam,1929
+Guam,1930
+Guam,1931
+Guam,1932
+Guam,1933
+Guam,1934
+Guam,1935
+Guam,1936
+Guam,1937
+Guam,1938
+Guam,1939
+Guam,1940
+Guam,1941
+Guam,1942
+Guam,1943
+Guam,1944
+Guam,1945
+Guam,1946
+Guam,1947
+Guam,1948
+Guam,1949
+Guam,1950
+Guam,1951
+Guam,1952
+Guam,1953
+Guam,1954
+Guam,1955
+Guam,1956
+Guam,1957
+Guam,1958
+Guam,1959
+Guam,1960
+Guam,1961
+Guam,1962
+Guam,1963
+Guam,1964
+Guam,1965
+Guam,1966
+Guam,1967
+Guam,1968
+Guam,1969
+Guam,1970
+Guam,1971
+Guam,1972
+Guam,1973
+Guam,1974
+Guam,1975
+Guam,1976
+Guam,1977
+Guam,1978
+Guam,1979
+Guam,1980
+Guam,1981
+Guam,1982
+Guam,1983
+Guam,1984
+Guam,1985
+Guam,1986
+Guam,1987
+Guam,1988
+Guam,1989
+Guam,1990
+Guam,1991
+Guam,1992
+Guam,1993
+Guam,1994
+Guam,1995
+Guam,1996
+Guam,1997
+Guam,1998
+Guam,1999
+Guam,2000
+Guam,2001
+Guam,2002
+Guam,2003
+Guam,2004
+Guam,2005
+Guam,2006
+Guam,2007
+Guam,2008
+Guam,2009
+Guam,2010
+Guam,2011
+Guam,2012
+Guam,2013
+Guam,2014
+Guam,2015
+Guam,2016
+Guam,2017
+Guam,2018
+Guam,2019
+Guam,2020
+Hong Kong,1997
+Hong Kong,1998
+Hong Kong,1999
+Hong Kong,2000
+Hong Kong,2001
+Hong Kong,2002
+Hong Kong,2003
+Hong Kong,2004
+Hong Kong,2005
+Hong Kong,2006
+Hong Kong,2007
+Hong Kong,2008
+Hong Kong,2009
+Hong Kong,2010
+Hong Kong,2011
+Hong Kong,2012
+Hong Kong,2013
+Hong Kong,2014
+Hong Kong,2015
+Hong Kong,2016
+Hong Kong,2017
+Hong Kong,2018
+Hong Kong,2019
+Hong Kong,2020
+Heard Island and McDonald Islands,1947
+Heard Island and McDonald Islands,1948
+Heard Island and McDonald Islands,1949
+Heard Island and McDonald Islands,1950
+Heard Island and McDonald Islands,1951
+Heard Island and McDonald Islands,1952
+Heard Island and McDonald Islands,1953
+Heard Island and McDonald Islands,1954
+Heard Island and McDonald Islands,1955
+Heard Island and McDonald Islands,1956
+Heard Island and McDonald Islands,1957
+Heard Island and McDonald Islands,1958
+Heard Island and McDonald Islands,1959
+Heard Island and McDonald Islands,1960
+Heard Island and McDonald Islands,1961
+Heard Island and McDonald Islands,1962
+Heard Island and McDonald Islands,1963
+Heard Island and McDonald Islands,1964
+Heard Island and McDonald Islands,1965
+Heard Island and McDonald Islands,1966
+Heard Island and McDonald Islands,1967
+Heard Island and McDonald Islands,1968
+Heard Island and McDonald Islands,1969
+Heard Island and McDonald Islands,1970
+Heard Island and McDonald Islands,1971
+Heard Island and McDonald Islands,1972
+Heard Island and McDonald Islands,1973
+Heard Island and McDonald Islands,1974
+Heard Island and McDonald Islands,1975
+Heard Island and McDonald Islands,1976
+Heard Island and McDonald Islands,1977
+Heard Island and McDonald Islands,1978
+Heard Island and McDonald Islands,1979
+Heard Island and McDonald Islands,1980
+Heard Island and McDonald Islands,1981
+Heard Island and McDonald Islands,1982
+Heard Island and McDonald Islands,1983
+Heard Island and McDonald Islands,1984
+Heard Island and McDonald Islands,1985
+Heard Island and McDonald Islands,1986
+Heard Island and McDonald Islands,1987
+Heard Island and McDonald Islands,1988
+Heard Island and McDonald Islands,1989
+Heard Island and McDonald Islands,1990
+Heard Island and McDonald Islands,1991
+Heard Island and McDonald Islands,1992
+Heard Island and McDonald Islands,1993
+Heard Island and McDonald Islands,1994
+Heard Island and McDonald Islands,1995
+Heard Island and McDonald Islands,1996
+Heard Island and McDonald Islands,1997
+Heard Island and McDonald Islands,1998
+Heard Island and McDonald Islands,1999
+Heard Island and McDonald Islands,2000
+Heard Island and McDonald Islands,2001
+Heard Island and McDonald Islands,2002
+Heard Island and McDonald Islands,2003
+Heard Island and McDonald Islands,2004
+Heard Island and McDonald Islands,2005
+Heard Island and McDonald Islands,2006
+Heard Island and McDonald Islands,2007
+Heard Island and McDonald Islands,2008
+Heard Island and McDonald Islands,2009
+Heard Island and McDonald Islands,2010
+Heard Island and McDonald Islands,2011
+Heard Island and McDonald Islands,2012
+Heard Island and McDonald Islands,2013
+Heard Island and McDonald Islands,2014
+Heard Island and McDonald Islands,2015
+Heard Island and McDonald Islands,2016
+Heard Island and McDonald Islands,2017
+Heard Island and McDonald Islands,2018
+Heard Island and McDonald Islands,2019
+Heard Island and McDonald Islands,2020
+Isle of Man,1765
+Isle of Man,1766
+Isle of Man,1767
+Isle of Man,1768
+Isle of Man,1769
+Isle of Man,1770
+Isle of Man,1771
+Isle of Man,1772
+Isle of Man,1773
+Isle of Man,1774
+Isle of Man,1775
+Isle of Man,1776
+Isle of Man,1777
+Isle of Man,1778
+Isle of Man,1779
+Isle of Man,1780
+Isle of Man,1781
+Isle of Man,1782
+Isle of Man,1783
+Isle of Man,1784
+Isle of Man,1785
+Isle of Man,1786
+Isle of Man,1787
+Isle of Man,1788
+Isle of Man,1789
+Isle of Man,1790
+Isle of Man,1791
+Isle of Man,1792
+Isle of Man,1793
+Isle of Man,1794
+Isle of Man,1795
+Isle of Man,1796
+Isle of Man,1797
+Isle of Man,1798
+Isle of Man,1799
+Isle of Man,1800
+Isle of Man,1801
+Isle of Man,1802
+Isle of Man,1803
+Isle of Man,1804
+Isle of Man,1805
+Isle of Man,1806
+Isle of Man,1807
+Isle of Man,1808
+Isle of Man,1809
+Isle of Man,1810
+Isle of Man,1811
+Isle of Man,1812
+Isle of Man,1813
+Isle of Man,1814
+Isle of Man,1815
+Isle of Man,1816
+Isle of Man,1817
+Isle of Man,1818
+Isle of Man,1819
+Isle of Man,1820
+Isle of Man,1821
+Isle of Man,1822
+Isle of Man,1823
+Isle of Man,1824
+Isle of Man,1825
+Isle of Man,1826
+Isle of Man,1827
+Isle of Man,1828
+Isle of Man,1829
+Isle of Man,1830
+Isle of Man,1831
+Isle of Man,1832
+Isle of Man,1833
+Isle of Man,1834
+Isle of Man,1835
+Isle of Man,1836
+Isle of Man,1837
+Isle of Man,1838
+Isle of Man,1839
+Isle of Man,1840
+Isle of Man,1841
+Isle of Man,1842
+Isle of Man,1843
+Isle of Man,1844
+Isle of Man,1845
+Isle of Man,1846
+Isle of Man,1847
+Isle of Man,1848
+Isle of Man,1849
+Isle of Man,1850
+Isle of Man,1851
+Isle of Man,1852
+Isle of Man,1853
+Isle of Man,1854
+Isle of Man,1855
+Isle of Man,1856
+Isle of Man,1857
+Isle of Man,1858
+Isle of Man,1859
+Isle of Man,1860
+Isle of Man,1861
+Isle of Man,1862
+Isle of Man,1863
+Isle of Man,1864
+Isle of Man,1865
+Isle of Man,1866
+Isle of Man,1867
+Isle of Man,1868
+Isle of Man,1869
+Isle of Man,1870
+Isle of Man,1871
+Isle of Man,1872
+Isle of Man,1873
+Isle of Man,1874
+Isle of Man,1875
+Isle of Man,1876
+Isle of Man,1877
+Isle of Man,1878
+Isle of Man,1879
+Isle of Man,1880
+Isle of Man,1881
+Isle of Man,1882
+Isle of Man,1883
+Isle of Man,1884
+Isle of Man,1885
+Isle of Man,1886
+Isle of Man,1887
+Isle of Man,1888
+Isle of Man,1889
+Isle of Man,1890
+Isle of Man,1891
+Isle of Man,1892
+Isle of Man,1893
+Isle of Man,1894
+Isle of Man,1895
+Isle of Man,1896
+Isle of Man,1897
+Isle of Man,1898
+Isle of Man,1899
+Isle of Man,1900
+Isle of Man,1901
+Isle of Man,1902
+Isle of Man,1903
+Isle of Man,1904
+Isle of Man,1905
+Isle of Man,1906
+Isle of Man,1907
+Isle of Man,1908
+Isle of Man,1909
+Isle of Man,1910
+Isle of Man,1911
+Isle of Man,1912
+Isle of Man,1913
+Isle of Man,1914
+Isle of Man,1915
+Isle of Man,1916
+Isle of Man,1917
+Isle of Man,1918
+Isle of Man,1919
+Isle of Man,1920
+Isle of Man,1921
+Isle of Man,1922
+Isle of Man,1923
+Isle of Man,1924
+Isle of Man,1925
+Isle of Man,1926
+Isle of Man,1927
+Isle of Man,1928
+Isle of Man,1929
+Isle of Man,1930
+Isle of Man,1931
+Isle of Man,1932
+Isle of Man,1933
+Isle of Man,1934
+Isle of Man,1935
+Isle of Man,1936
+Isle of Man,1937
+Isle of Man,1938
+Isle of Man,1939
+Isle of Man,1940
+Isle of Man,1941
+Isle of Man,1942
+Isle of Man,1943
+Isle of Man,1944
+Isle of Man,1945
+Isle of Man,1946
+Isle of Man,1947
+Isle of Man,1948
+Isle of Man,1949
+Isle of Man,1950
+Isle of Man,1951
+Isle of Man,1952
+Isle of Man,1953
+Isle of Man,1954
+Isle of Man,1955
+Isle of Man,1956
+Isle of Man,1957
+Isle of Man,1958
+Isle of Man,1959
+Isle of Man,1960
+Isle of Man,1961
+Isle of Man,1962
+Isle of Man,1963
+Isle of Man,1964
+Isle of Man,1965
+Isle of Man,1966
+Isle of Man,1967
+Isle of Man,1968
+Isle of Man,1969
+Isle of Man,1970
+Isle of Man,1971
+Isle of Man,1972
+Isle of Man,1973
+Isle of Man,1974
+Isle of Man,1975
+Isle of Man,1976
+Isle of Man,1977
+Isle of Man,1978
+Isle of Man,1979
+Isle of Man,1980
+Isle of Man,1981
+Isle of Man,1982
+Isle of Man,1983
+Isle of Man,1984
+Isle of Man,1985
+Isle of Man,1986
+Isle of Man,1987
+Isle of Man,1988
+Isle of Man,1989
+Isle of Man,1990
+Isle of Man,1991
+Isle of Man,1992
+Isle of Man,1993
+Isle of Man,1994
+Isle of Man,1995
+Isle of Man,1996
+Isle of Man,1997
+Isle of Man,1998
+Isle of Man,1999
+Isle of Man,2000
+Isle of Man,2001
+Isle of Man,2002
+Isle of Man,2003
+Isle of Man,2004
+Isle of Man,2005
+Isle of Man,2006
+Isle of Man,2007
+Isle of Man,2008
+Isle of Man,2009
+Isle of Man,2010
+Isle of Man,2011
+Isle of Man,2012
+Isle of Man,2013
+Isle of Man,2014
+Isle of Man,2015
+Isle of Man,2016
+Isle of Man,2017
+Isle of Man,2018
+Isle of Man,2019
+Isle of Man,2020
+British Indian Ocean Territory,1965
+British Indian Ocean Territory,1966
+British Indian Ocean Territory,1967
+British Indian Ocean Territory,1968
+British Indian Ocean Territory,1969
+British Indian Ocean Territory,1970
+British Indian Ocean Territory,1971
+British Indian Ocean Territory,1972
+British Indian Ocean Territory,1973
+British Indian Ocean Territory,1974
+British Indian Ocean Territory,1975
+British Indian Ocean Territory,1976
+British Indian Ocean Territory,1977
+British Indian Ocean Territory,1978
+British Indian Ocean Territory,1979
+British Indian Ocean Territory,1980
+British Indian Ocean Territory,1981
+British Indian Ocean Territory,1982
+British Indian Ocean Territory,1983
+British Indian Ocean Territory,1984
+British Indian Ocean Territory,1985
+British Indian Ocean Territory,1986
+British Indian Ocean Territory,1987
+British Indian Ocean Territory,1988
+British Indian Ocean Territory,1989
+British Indian Ocean Territory,1990
+British Indian Ocean Territory,1991
+British Indian Ocean Territory,1992
+British Indian Ocean Territory,1993
+British Indian Ocean Territory,1994
+British Indian Ocean Territory,1995
+British Indian Ocean Territory,1996
+British Indian Ocean Territory,1997
+British Indian Ocean Territory,1998
+British Indian Ocean Territory,1999
+British Indian Ocean Territory,2000
+British Indian Ocean Territory,2001
+British Indian Ocean Territory,2002
+British Indian Ocean Territory,2003
+British Indian Ocean Territory,2004
+British Indian Ocean Territory,2005
+British Indian Ocean Territory,2006
+British Indian Ocean Territory,2007
+British Indian Ocean Territory,2008
+British Indian Ocean Territory,2009
+British Indian Ocean Territory,2010
+British Indian Ocean Territory,2011
+British Indian Ocean Territory,2012
+British Indian Ocean Territory,2013
+British Indian Ocean Territory,2014
+British Indian Ocean Territory,2015
+British Indian Ocean Territory,2016
+British Indian Ocean Territory,2017
+British Indian Ocean Territory,2018
+British Indian Ocean Territory,2019
+British Indian Ocean Territory,2020
+Jersey,1946
+Jersey,1947
+Jersey,1948
+Jersey,1949
+Jersey,1950
+Jersey,1951
+Jersey,1952
+Jersey,1953
+Jersey,1954
+Jersey,1955
+Jersey,1956
+Jersey,1957
+Jersey,1958
+Jersey,1959
+Jersey,1960
+Jersey,1961
+Jersey,1962
+Jersey,1963
+Jersey,1964
+Jersey,1965
+Jersey,1966
+Jersey,1967
+Jersey,1968
+Jersey,1969
+Jersey,1970
+Jersey,1971
+Jersey,1972
+Jersey,1973
+Jersey,1974
+Jersey,1975
+Jersey,1976
+Jersey,1977
+Jersey,1978
+Jersey,1979
+Jersey,1980
+Jersey,1981
+Jersey,1982
+Jersey,1983
+Jersey,1984
+Jersey,1985
+Jersey,1986
+Jersey,1987
+Jersey,1988
+Jersey,1989
+Jersey,1990
+Jersey,1991
+Jersey,1992
+Jersey,1993
+Jersey,1994
+Jersey,1995
+Jersey,1996
+Jersey,1997
+Jersey,1998
+Jersey,1999
+Jersey,2000
+Jersey,2001
+Jersey,2002
+Jersey,2003
+Jersey,2004
+Jersey,2005
+Jersey,2006
+Jersey,2007
+Jersey,2008
+Jersey,2009
+Jersey,2010
+Jersey,2011
+Jersey,2012
+Jersey,2013
+Jersey,2014
+Jersey,2015
+Jersey,2016
+Jersey,2017
+Jersey,2018
+Jersey,2019
+Jersey,2020
+Macao,1999
+Macao,2000
+Macao,2001
+Macao,2002
+Macao,2003
+Macao,2004
+Macao,2005
+Macao,2006
+Macao,2007
+Macao,2008
+Macao,2009
+Macao,2010
+Macao,2011
+Macao,2012
+Macao,2013
+Macao,2014
+Macao,2015
+Macao,2016
+Macao,2017
+Macao,2018
+Macao,2019
+Macao,2020
+Saint Martin (French part),1946
+Saint Martin (French part),1947
+Saint Martin (French part),1948
+Saint Martin (French part),1949
+Saint Martin (French part),1950
+Saint Martin (French part),1951
+Saint Martin (French part),1952
+Saint Martin (French part),1953
+Saint Martin (French part),1954
+Saint Martin (French part),1955
+Saint Martin (French part),1956
+Saint Martin (French part),1957
+Saint Martin (French part),1958
+Saint Martin (French part),1959
+Saint Martin (French part),1960
+Saint Martin (French part),1961
+Saint Martin (French part),1962
+Saint Martin (French part),1963
+Saint Martin (French part),1964
+Saint Martin (French part),1965
+Saint Martin (French part),1966
+Saint Martin (French part),1967
+Saint Martin (French part),1968
+Saint Martin (French part),1969
+Saint Martin (French part),1970
+Saint Martin (French part),1971
+Saint Martin (French part),1972
+Saint Martin (French part),1973
+Saint Martin (French part),1974
+Saint Martin (French part),1975
+Saint Martin (French part),1976
+Saint Martin (French part),1977
+Saint Martin (French part),1978
+Saint Martin (French part),1979
+Saint Martin (French part),1980
+Saint Martin (French part),1981
+Saint Martin (French part),1982
+Saint Martin (French part),1983
+Saint Martin (French part),1984
+Saint Martin (French part),1985
+Saint Martin (French part),1986
+Saint Martin (French part),1987
+Saint Martin (French part),1988
+Saint Martin (French part),1989
+Saint Martin (French part),1990
+Saint Martin (French part),1991
+Saint Martin (French part),1992
+Saint Martin (French part),1993
+Saint Martin (French part),1994
+Saint Martin (French part),1995
+Saint Martin (French part),1996
+Saint Martin (French part),1997
+Saint Martin (French part),1998
+Saint Martin (French part),1999
+Saint Martin (French part),2000
+Saint Martin (French part),2001
+Saint Martin (French part),2002
+Saint Martin (French part),2003
+Saint Martin (French part),2004
+Saint Martin (French part),2005
+Saint Martin (French part),2006
+Saint Martin (French part),2007
+Saint Martin (French part),2008
+Saint Martin (French part),2009
+Saint Martin (French part),2010
+Saint Martin (French part),2011
+Saint Martin (French part),2012
+Saint Martin (French part),2013
+Saint Martin (French part),2014
+Saint Martin (French part),2015
+Saint Martin (French part),2016
+Saint Martin (French part),2017
+Saint Martin (French part),2018
+Saint Martin (French part),2019
+Saint Martin (French part),2020
+Northern Mariana Islands,1978
+Northern Mariana Islands,1979
+Northern Mariana Islands,1980
+Northern Mariana Islands,1981
+Northern Mariana Islands,1982
+Northern Mariana Islands,1983
+Northern Mariana Islands,1984
+Northern Mariana Islands,1985
+Northern Mariana Islands,1986
+Northern Mariana Islands,1987
+Northern Mariana Islands,1988
+Northern Mariana Islands,1989
+Northern Mariana Islands,1990
+Northern Mariana Islands,1991
+Northern Mariana Islands,1992
+Northern Mariana Islands,1993
+Northern Mariana Islands,1994
+Northern Mariana Islands,1995
+Northern Mariana Islands,1996
+Northern Mariana Islands,1997
+Northern Mariana Islands,1998
+Northern Mariana Islands,1999
+Northern Mariana Islands,2000
+Northern Mariana Islands,2001
+Northern Mariana Islands,2002
+Northern Mariana Islands,2003
+Northern Mariana Islands,2004
+Northern Mariana Islands,2005
+Northern Mariana Islands,2006
+Northern Mariana Islands,2007
+Northern Mariana Islands,2008
+Northern Mariana Islands,2009
+Northern Mariana Islands,2010
+Northern Mariana Islands,2011
+Northern Mariana Islands,2012
+Northern Mariana Islands,2013
+Northern Mariana Islands,2014
+Northern Mariana Islands,2015
+Northern Mariana Islands,2016
+Northern Mariana Islands,2017
+Northern Mariana Islands,2018
+Northern Mariana Islands,2019
+Northern Mariana Islands,2020
+Montserrat,1960
+Montserrat,1961
+Montserrat,1962
+Montserrat,1963
+Montserrat,1964
+Montserrat,1965
+Montserrat,1966
+Montserrat,1967
+Montserrat,1968
+Montserrat,1969
+Montserrat,1970
+Montserrat,1971
+Montserrat,1972
+Montserrat,1973
+Montserrat,1974
+Montserrat,1975
+Montserrat,1976
+Montserrat,1977
+Montserrat,1978
+Montserrat,1979
+Montserrat,1980
+Montserrat,1981
+Montserrat,1982
+Montserrat,1983
+Montserrat,1984
+Montserrat,1985
+Montserrat,1986
+Montserrat,1987
+Montserrat,1988
+Montserrat,1989
+Montserrat,1990
+Montserrat,1991
+Montserrat,1992
+Montserrat,1993
+Montserrat,1994
+Montserrat,1995
+Montserrat,1996
+Montserrat,1997
+Montserrat,1998
+Montserrat,1999
+Montserrat,2000
+Montserrat,2001
+Montserrat,2002
+Montserrat,2003
+Montserrat,2004
+Montserrat,2005
+Montserrat,2006
+Montserrat,2007
+Montserrat,2008
+Montserrat,2009
+Montserrat,2010
+Montserrat,2011
+Montserrat,2012
+Montserrat,2013
+Montserrat,2014
+Montserrat,2015
+Montserrat,2016
+Montserrat,2017
+Montserrat,2018
+Montserrat,2019
+Montserrat,2020
+Martinique,1946
+Martinique,1947
+Martinique,1948
+Martinique,1949
+Martinique,1950
+Martinique,1951
+Martinique,1952
+Martinique,1953
+Martinique,1954
+Martinique,1955
+Martinique,1956
+Martinique,1957
+Martinique,1958
+Martinique,1959
+Martinique,1960
+Martinique,1961
+Martinique,1962
+Martinique,1963
+Martinique,1964
+Martinique,1965
+Martinique,1966
+Martinique,1967
+Martinique,1968
+Martinique,1969
+Martinique,1970
+Martinique,1971
+Martinique,1972
+Martinique,1973
+Martinique,1974
+Martinique,1975
+Martinique,1976
+Martinique,1977
+Martinique,1978
+Martinique,1979
+Martinique,1980
+Martinique,1981
+Martinique,1982
+Martinique,1983
+Martinique,1984
+Martinique,1985
+Martinique,1986
+Martinique,1987
+Martinique,1988
+Martinique,1989
+Martinique,1990
+Martinique,1991
+Martinique,1992
+Martinique,1993
+Martinique,1994
+Martinique,1995
+Martinique,1996
+Martinique,1997
+Martinique,1998
+Martinique,1999
+Martinique,2000
+Martinique,2001
+Martinique,2002
+Martinique,2003
+Martinique,2004
+Martinique,2005
+Martinique,2006
+Martinique,2007
+Martinique,2008
+Martinique,2009
+Martinique,2010
+Martinique,2011
+Martinique,2012
+Martinique,2013
+Martinique,2014
+Martinique,2015
+Martinique,2016
+Martinique,2017
+Martinique,2018
+Martinique,2019
+Martinique,2020
+Mayotte,2011
+Mayotte,2012
+Mayotte,2013
+Mayotte,2014
+Mayotte,2015
+Mayotte,2016
+Mayotte,2017
+Mayotte,2018
+Mayotte,2019
+Mayotte,2020
+New Caledonia,1988
+New Caledonia,1989
+New Caledonia,1990
+New Caledonia,1991
+New Caledonia,1992
+New Caledonia,1993
+New Caledonia,1994
+New Caledonia,1995
+New Caledonia,1996
+New Caledonia,1997
+New Caledonia,1998
+New Caledonia,1999
+New Caledonia,2000
+New Caledonia,2001
+New Caledonia,2002
+New Caledonia,2003
+New Caledonia,2004
+New Caledonia,2005
+New Caledonia,2006
+New Caledonia,2007
+New Caledonia,2008
+New Caledonia,2009
+New Caledonia,2010
+New Caledonia,2011
+New Caledonia,2012
+New Caledonia,2013
+New Caledonia,2014
+New Caledonia,2015
+New Caledonia,2016
+New Caledonia,2017
+New Caledonia,2018
+New Caledonia,2019
+New Caledonia,2020
+Norfolk Island,1979
+Norfolk Island,1980
+Norfolk Island,1981
+Norfolk Island,1982
+Norfolk Island,1983
+Norfolk Island,1984
+Norfolk Island,1985
+Norfolk Island,1986
+Norfolk Island,1987
+Norfolk Island,1988
+Norfolk Island,1989
+Norfolk Island,1990
+Norfolk Island,1991
+Norfolk Island,1992
+Norfolk Island,1993
+Norfolk Island,1994
+Norfolk Island,1995
+Norfolk Island,1996
+Norfolk Island,1997
+Norfolk Island,1998
+Norfolk Island,1999
+Norfolk Island,2000
+Norfolk Island,2001
+Norfolk Island,2002
+Norfolk Island,2003
+Norfolk Island,2004
+Norfolk Island,2005
+Norfolk Island,2006
+Norfolk Island,2007
+Norfolk Island,2008
+Norfolk Island,2009
+Norfolk Island,2010
+Norfolk Island,2011
+Norfolk Island,2012
+Norfolk Island,2013
+Norfolk Island,2014
+Norfolk Island,2015
+Norfolk Island,2016
+Norfolk Island,2017
+Norfolk Island,2018
+Norfolk Island,2019
+Norfolk Island,2020
+Niue,1974
+Niue,1975
+Niue,1976
+Niue,1977
+Niue,1978
+Niue,1979
+Niue,1980
+Niue,1981
+Niue,1982
+Niue,1983
+Niue,1984
+Niue,1985
+Niue,1986
+Niue,1987
+Niue,1988
+Niue,1989
+Niue,1990
+Niue,1991
+Niue,1992
+Niue,1993
+Niue,1994
+Niue,1995
+Niue,1996
+Niue,1997
+Niue,1998
+Niue,1999
+Niue,2000
+Niue,2001
+Niue,2002
+Niue,2003
+Niue,2004
+Niue,2005
+Niue,2006
+Niue,2007
+Niue,2008
+Niue,2009
+Niue,2010
+Niue,2011
+Niue,2012
+Niue,2013
+Niue,2014
+Niue,2015
+Niue,2016
+Niue,2017
+Niue,2018
+Niue,2019
+Niue,2020
+Pitcairn,1981
+Pitcairn,1982
+Pitcairn,1983
+Pitcairn,1984
+Pitcairn,1985
+Pitcairn,1986
+Pitcairn,1987
+Pitcairn,1988
+Pitcairn,1989
+Pitcairn,1990
+Pitcairn,1991
+Pitcairn,1992
+Pitcairn,1993
+Pitcairn,1994
+Pitcairn,1995
+Pitcairn,1996
+Pitcairn,1997
+Pitcairn,1998
+Pitcairn,1999
+Pitcairn,2000
+Pitcairn,2001
+Pitcairn,2002
+Pitcairn,2003
+Pitcairn,2004
+Pitcairn,2005
+Pitcairn,2006
+Pitcairn,2007
+Pitcairn,2008
+Pitcairn,2009
+Pitcairn,2010
+Pitcairn,2011
+Pitcairn,2012
+Pitcairn,2013
+Pitcairn,2014
+Pitcairn,2015
+Pitcairn,2016
+Pitcairn,2017
+Pitcairn,2018
+Pitcairn,2019
+Pitcairn,2020
+Puerto Rico,1947
+Puerto Rico,1948
+Puerto Rico,1949
+Puerto Rico,1950
+Puerto Rico,1951
+Puerto Rico,1952
+Puerto Rico,1953
+Puerto Rico,1954
+Puerto Rico,1955
+Puerto Rico,1956
+Puerto Rico,1957
+Puerto Rico,1958
+Puerto Rico,1959
+Puerto Rico,1960
+Puerto Rico,1961
+Puerto Rico,1962
+Puerto Rico,1963
+Puerto Rico,1964
+Puerto Rico,1965
+Puerto Rico,1966
+Puerto Rico,1967
+Puerto Rico,1968
+Puerto Rico,1969
+Puerto Rico,1970
+Puerto Rico,1971
+Puerto Rico,1972
+Puerto Rico,1973
+Puerto Rico,1974
+Puerto Rico,1975
+Puerto Rico,1976
+Puerto Rico,1977
+Puerto Rico,1978
+Puerto Rico,1979
+Puerto Rico,1980
+Puerto Rico,1981
+Puerto Rico,1982
+Puerto Rico,1983
+Puerto Rico,1984
+Puerto Rico,1985
+Puerto Rico,1986
+Puerto Rico,1987
+Puerto Rico,1988
+Puerto Rico,1989
+Puerto Rico,1990
+Puerto Rico,1991
+Puerto Rico,1992
+Puerto Rico,1993
+Puerto Rico,1994
+Puerto Rico,1995
+Puerto Rico,1996
+Puerto Rico,1997
+Puerto Rico,1998
+Puerto Rico,1999
+Puerto Rico,2000
+Puerto Rico,2001
+Puerto Rico,2002
+Puerto Rico,2003
+Puerto Rico,2004
+Puerto Rico,2005
+Puerto Rico,2006
+Puerto Rico,2007
+Puerto Rico,2008
+Puerto Rico,2009
+Puerto Rico,2010
+Puerto Rico,2011
+Puerto Rico,2012
+Puerto Rico,2013
+Puerto Rico,2014
+Puerto Rico,2015
+Puerto Rico,2016
+Puerto Rico,2017
+Puerto Rico,2018
+Puerto Rico,2019
+Puerto Rico,2020
+"Palestine, State of",1988
+"Palestine, State of",1989
+"Palestine, State of",1990
+"Palestine, State of",1991
+"Palestine, State of",1992
+"Palestine, State of",1993
+"Palestine, State of",1994
+"Palestine, State of",1995
+"Palestine, State of",1996
+"Palestine, State of",1997
+"Palestine, State of",1998
+"Palestine, State of",1999
+"Palestine, State of",2000
+"Palestine, State of",2001
+"Palestine, State of",2002
+"Palestine, State of",2003
+"Palestine, State of",2004
+"Palestine, State of",2005
+"Palestine, State of",2006
+"Palestine, State of",2007
+"Palestine, State of",2008
+"Palestine, State of",2009
+"Palestine, State of",2010
+"Palestine, State of",2011
+"Palestine, State of",2012
+"Palestine, State of",2013
+"Palestine, State of",2014
+"Palestine, State of",2015
+"Palestine, State of",2016
+"Palestine, State of",2017
+"Palestine, State of",2018
+"Palestine, State of",2019
+"Palestine, State of",2020
+French Polynesia,1946
+French Polynesia,1947
+French Polynesia,1948
+French Polynesia,1949
+French Polynesia,1950
+French Polynesia,1951
+French Polynesia,1952
+French Polynesia,1953
+French Polynesia,1954
+French Polynesia,1955
+French Polynesia,1956
+French Polynesia,1957
+French Polynesia,1958
+French Polynesia,1959
+French Polynesia,1960
+French Polynesia,1961
+French Polynesia,1962
+French Polynesia,1963
+French Polynesia,1964
+French Polynesia,1965
+French Polynesia,1966
+French Polynesia,1967
+French Polynesia,1968
+French Polynesia,1969
+French Polynesia,1970
+French Polynesia,1971
+French Polynesia,1972
+French Polynesia,1973
+French Polynesia,1974
+French Polynesia,1975
+French Polynesia,1976
+French Polynesia,1977
+French Polynesia,1978
+French Polynesia,1979
+French Polynesia,1980
+French Polynesia,1981
+French Polynesia,1982
+French Polynesia,1983
+French Polynesia,1984
+French Polynesia,1985
+French Polynesia,1986
+French Polynesia,1987
+French Polynesia,1988
+French Polynesia,1989
+French Polynesia,1990
+French Polynesia,1991
+French Polynesia,1992
+French Polynesia,1993
+French Polynesia,1994
+French Polynesia,1995
+French Polynesia,1996
+French Polynesia,1997
+French Polynesia,1998
+French Polynesia,1999
+French Polynesia,2000
+French Polynesia,2001
+French Polynesia,2002
+French Polynesia,2003
+French Polynesia,2004
+French Polynesia,2005
+French Polynesia,2006
+French Polynesia,2007
+French Polynesia,2008
+French Polynesia,2009
+French Polynesia,2010
+French Polynesia,2011
+French Polynesia,2012
+French Polynesia,2013
+French Polynesia,2014
+French Polynesia,2015
+French Polynesia,2016
+French Polynesia,2017
+French Polynesia,2018
+French Polynesia,2019
+French Polynesia,2020
+Reunion,1946
+Reunion,1947
+Reunion,1948
+Reunion,1949
+Reunion,1950
+Reunion,1951
+Reunion,1952
+Reunion,1953
+Reunion,1954
+Reunion,1955
+Reunion,1956
+Reunion,1957
+Reunion,1958
+Reunion,1959
+Reunion,1960
+Reunion,1961
+Reunion,1962
+Reunion,1963
+Reunion,1964
+Reunion,1965
+Reunion,1966
+Reunion,1967
+Reunion,1968
+Reunion,1969
+Reunion,1970
+Reunion,1971
+Reunion,1972
+Reunion,1973
+Reunion,1974
+Reunion,1975
+Reunion,1976
+Reunion,1977
+Reunion,1978
+Reunion,1979
+Reunion,1980
+Reunion,1981
+Reunion,1982
+Reunion,1983
+Reunion,1984
+Reunion,1985
+Reunion,1986
+Reunion,1987
+Reunion,1988
+Reunion,1989
+Reunion,1990
+Reunion,1991
+Reunion,1992
+Reunion,1993
+Reunion,1994
+Reunion,1995
+Reunion,1996
+Reunion,1997
+Reunion,1998
+Reunion,1999
+Reunion,2000
+Reunion,2001
+Reunion,2002
+Reunion,2003
+Reunion,2004
+Reunion,2005
+Reunion,2006
+Reunion,2007
+Reunion,2008
+Reunion,2009
+Reunion,2010
+Reunion,2011
+Reunion,2012
+Reunion,2013
+Reunion,2014
+Reunion,2015
+Reunion,2016
+Reunion,2017
+Reunion,2018
+Reunion,2019
+Reunion,2020
+South Georgia and the South Sandwich Islands,1985
+South Georgia and the South Sandwich Islands,1986
+South Georgia and the South Sandwich Islands,1987
+South Georgia and the South Sandwich Islands,1988
+South Georgia and the South Sandwich Islands,1989
+South Georgia and the South Sandwich Islands,1990
+South Georgia and the South Sandwich Islands,1991
+South Georgia and the South Sandwich Islands,1992
+South Georgia and the South Sandwich Islands,1993
+South Georgia and the South Sandwich Islands,1994
+South Georgia and the South Sandwich Islands,1995
+South Georgia and the South Sandwich Islands,1996
+South Georgia and the South Sandwich Islands,1997
+South Georgia and the South Sandwich Islands,1998
+South Georgia and the South Sandwich Islands,1999
+South Georgia and the South Sandwich Islands,2000
+South Georgia and the South Sandwich Islands,2001
+South Georgia and the South Sandwich Islands,2002
+South Georgia and the South Sandwich Islands,2003
+South Georgia and the South Sandwich Islands,2004
+South Georgia and the South Sandwich Islands,2005
+South Georgia and the South Sandwich Islands,2006
+South Georgia and the South Sandwich Islands,2007
+South Georgia and the South Sandwich Islands,2008
+South Georgia and the South Sandwich Islands,2009
+South Georgia and the South Sandwich Islands,2010
+South Georgia and the South Sandwich Islands,2011
+South Georgia and the South Sandwich Islands,2012
+South Georgia and the South Sandwich Islands,2013
+South Georgia and the South Sandwich Islands,2014
+South Georgia and the South Sandwich Islands,2015
+South Georgia and the South Sandwich Islands,2016
+South Georgia and the South Sandwich Islands,2017
+South Georgia and the South Sandwich Islands,2018
+South Georgia and the South Sandwich Islands,2019
+South Georgia and the South Sandwich Islands,2020
+"Saint Helena, Ascension and Tristan da Cunha",1981
+"Saint Helena, Ascension and Tristan da Cunha",1982
+"Saint Helena, Ascension and Tristan da Cunha",1983
+"Saint Helena, Ascension and Tristan da Cunha",1984
+"Saint Helena, Ascension and Tristan da Cunha",1985
+"Saint Helena, Ascension and Tristan da Cunha",1986
+"Saint Helena, Ascension and Tristan da Cunha",1987
+"Saint Helena, Ascension and Tristan da Cunha",1988
+"Saint Helena, Ascension and Tristan da Cunha",1989
+"Saint Helena, Ascension and Tristan da Cunha",1990
+"Saint Helena, Ascension and Tristan da Cunha",1991
+"Saint Helena, Ascension and Tristan da Cunha",1992
+"Saint Helena, Ascension and Tristan da Cunha",1993
+"Saint Helena, Ascension and Tristan da Cunha",1994
+"Saint Helena, Ascension and Tristan da Cunha",1995
+"Saint Helena, Ascension and Tristan da Cunha",1996
+"Saint Helena, Ascension and Tristan da Cunha",1997
+"Saint Helena, Ascension and Tristan da Cunha",1998
+"Saint Helena, Ascension and Tristan da Cunha",1999
+"Saint Helena, Ascension and Tristan da Cunha",2000
+"Saint Helena, Ascension and Tristan da Cunha",2001
+"Saint Helena, Ascension and Tristan da Cunha",2002
+"Saint Helena, Ascension and Tristan da Cunha",2003
+"Saint Helena, Ascension and Tristan da Cunha",2004
+"Saint Helena, Ascension and Tristan da Cunha",2005
+"Saint Helena, Ascension and Tristan da Cunha",2006
+"Saint Helena, Ascension and Tristan da Cunha",2007
+"Saint Helena, Ascension and Tristan da Cunha",2008
+"Saint Helena, Ascension and Tristan da Cunha",2009
+"Saint Helena, Ascension and Tristan da Cunha",2010
+"Saint Helena, Ascension and Tristan da Cunha",2011
+"Saint Helena, Ascension and Tristan da Cunha",2012
+"Saint Helena, Ascension and Tristan da Cunha",2013
+"Saint Helena, Ascension and Tristan da Cunha",2014
+"Saint Helena, Ascension and Tristan da Cunha",2015
+"Saint Helena, Ascension and Tristan da Cunha",2016
+"Saint Helena, Ascension and Tristan da Cunha",2017
+"Saint Helena, Ascension and Tristan da Cunha",2018
+"Saint Helena, Ascension and Tristan da Cunha",2019
+"Saint Helena, Ascension and Tristan da Cunha",2020
+Svalbard and Jan Mayen,1930
+Svalbard and Jan Mayen,1931
+Svalbard and Jan Mayen,1932
+Svalbard and Jan Mayen,1933
+Svalbard and Jan Mayen,1934
+Svalbard and Jan Mayen,1935
+Svalbard and Jan Mayen,1936
+Svalbard and Jan Mayen,1937
+Svalbard and Jan Mayen,1938
+Svalbard and Jan Mayen,1939
+Svalbard and Jan Mayen,1940
+Svalbard and Jan Mayen,1941
+Svalbard and Jan Mayen,1942
+Svalbard and Jan Mayen,1943
+Svalbard and Jan Mayen,1944
+Svalbard and Jan Mayen,1945
+Svalbard and Jan Mayen,1946
+Svalbard and Jan Mayen,1947
+Svalbard and Jan Mayen,1948
+Svalbard and Jan Mayen,1949
+Svalbard and Jan Mayen,1950
+Svalbard and Jan Mayen,1951
+Svalbard and Jan Mayen,1952
+Svalbard and Jan Mayen,1953
+Svalbard and Jan Mayen,1954
+Svalbard and Jan Mayen,1955
+Svalbard and Jan Mayen,1956
+Svalbard and Jan Mayen,1957
+Svalbard and Jan Mayen,1958
+Svalbard and Jan Mayen,1959
+Svalbard and Jan Mayen,1960
+Svalbard and Jan Mayen,1961
+Svalbard and Jan Mayen,1962
+Svalbard and Jan Mayen,1963
+Svalbard and Jan Mayen,1964
+Svalbard and Jan Mayen,1965
+Svalbard and Jan Mayen,1966
+Svalbard and Jan Mayen,1967
+Svalbard and Jan Mayen,1968
+Svalbard and Jan Mayen,1969
+Svalbard and Jan Mayen,1970
+Svalbard and Jan Mayen,1971
+Svalbard and Jan Mayen,1972
+Svalbard and Jan Mayen,1973
+Svalbard and Jan Mayen,1974
+Svalbard and Jan Mayen,1975
+Svalbard and Jan Mayen,1976
+Svalbard and Jan Mayen,1977
+Svalbard and Jan Mayen,1978
+Svalbard and Jan Mayen,1979
+Svalbard and Jan Mayen,1980
+Svalbard and Jan Mayen,1981
+Svalbard and Jan Mayen,1982
+Svalbard and Jan Mayen,1983
+Svalbard and Jan Mayen,1984
+Svalbard and Jan Mayen,1985
+Svalbard and Jan Mayen,1986
+Svalbard and Jan Mayen,1987
+Svalbard and Jan Mayen,1988
+Svalbard and Jan Mayen,1989
+Svalbard and Jan Mayen,1990
+Svalbard and Jan Mayen,1991
+Svalbard and Jan Mayen,1992
+Svalbard and Jan Mayen,1993
+Svalbard and Jan Mayen,1994
+Svalbard and Jan Mayen,1995
+Svalbard and Jan Mayen,1996
+Svalbard and Jan Mayen,1997
+Svalbard and Jan Mayen,1998
+Svalbard and Jan Mayen,1999
+Svalbard and Jan Mayen,2000
+Svalbard and Jan Mayen,2001
+Svalbard and Jan Mayen,2002
+Svalbard and Jan Mayen,2003
+Svalbard and Jan Mayen,2004
+Svalbard and Jan Mayen,2005
+Svalbard and Jan Mayen,2006
+Svalbard and Jan Mayen,2007
+Svalbard and Jan Mayen,2008
+Svalbard and Jan Mayen,2009
+Svalbard and Jan Mayen,2010
+Svalbard and Jan Mayen,2011
+Svalbard and Jan Mayen,2012
+Svalbard and Jan Mayen,2013
+Svalbard and Jan Mayen,2014
+Svalbard and Jan Mayen,2015
+Svalbard and Jan Mayen,2016
+Svalbard and Jan Mayen,2017
+Svalbard and Jan Mayen,2018
+Svalbard and Jan Mayen,2019
+Svalbard and Jan Mayen,2020
+Saint Pierre and Miquelon,1946
+Saint Pierre and Miquelon,1947
+Saint Pierre and Miquelon,1948
+Saint Pierre and Miquelon,1949
+Saint Pierre and Miquelon,1950
+Saint Pierre and Miquelon,1951
+Saint Pierre and Miquelon,1952
+Saint Pierre and Miquelon,1953
+Saint Pierre and Miquelon,1954
+Saint Pierre and Miquelon,1955
+Saint Pierre and Miquelon,1956
+Saint Pierre and Miquelon,1957
+Saint Pierre and Miquelon,1958
+Saint Pierre and Miquelon,1959
+Saint Pierre and Miquelon,1960
+Saint Pierre and Miquelon,1961
+Saint Pierre and Miquelon,1962
+Saint Pierre and Miquelon,1963
+Saint Pierre and Miquelon,1964
+Saint Pierre and Miquelon,1965
+Saint Pierre and Miquelon,1966
+Saint Pierre and Miquelon,1967
+Saint Pierre and Miquelon,1968
+Saint Pierre and Miquelon,1969
+Saint Pierre and Miquelon,1970
+Saint Pierre and Miquelon,1971
+Saint Pierre and Miquelon,1972
+Saint Pierre and Miquelon,1973
+Saint Pierre and Miquelon,1974
+Saint Pierre and Miquelon,1975
+Saint Pierre and Miquelon,1976
+Saint Pierre and Miquelon,1977
+Saint Pierre and Miquelon,1978
+Saint Pierre and Miquelon,1979
+Saint Pierre and Miquelon,1980
+Saint Pierre and Miquelon,1981
+Saint Pierre and Miquelon,1982
+Saint Pierre and Miquelon,1983
+Saint Pierre and Miquelon,1984
+Saint Pierre and Miquelon,1985
+Saint Pierre and Miquelon,1986
+Saint Pierre and Miquelon,1987
+Saint Pierre and Miquelon,1988
+Saint Pierre and Miquelon,1989
+Saint Pierre and Miquelon,1990
+Saint Pierre and Miquelon,1991
+Saint Pierre and Miquelon,1992
+Saint Pierre and Miquelon,1993
+Saint Pierre and Miquelon,1994
+Saint Pierre and Miquelon,1995
+Saint Pierre and Miquelon,1996
+Saint Pierre and Miquelon,1997
+Saint Pierre and Miquelon,1998
+Saint Pierre and Miquelon,1999
+Saint Pierre and Miquelon,2000
+Saint Pierre and Miquelon,2001
+Saint Pierre and Miquelon,2002
+Saint Pierre and Miquelon,2003
+Saint Pierre and Miquelon,2004
+Saint Pierre and Miquelon,2005
+Saint Pierre and Miquelon,2006
+Saint Pierre and Miquelon,2007
+Saint Pierre and Miquelon,2008
+Saint Pierre and Miquelon,2009
+Saint Pierre and Miquelon,2010
+Saint Pierre and Miquelon,2011
+Saint Pierre and Miquelon,2012
+Saint Pierre and Miquelon,2013
+Saint Pierre and Miquelon,2014
+Saint Pierre and Miquelon,2015
+Saint Pierre and Miquelon,2016
+Saint Pierre and Miquelon,2017
+Saint Pierre and Miquelon,2018
+Saint Pierre and Miquelon,2019
+Saint Pierre and Miquelon,2020
+Sint Maarten (Dutch part),2010
+Sint Maarten (Dutch part),2011
+Sint Maarten (Dutch part),2012
+Sint Maarten (Dutch part),2013
+Sint Maarten (Dutch part),2014
+Sint Maarten (Dutch part),2015
+Sint Maarten (Dutch part),2016
+Sint Maarten (Dutch part),2017
+Sint Maarten (Dutch part),2018
+Sint Maarten (Dutch part),2019
+Sint Maarten (Dutch part),2020
+Turks and Caicos Islands,1973
+Turks and Caicos Islands,1974
+Turks and Caicos Islands,1975
+Turks and Caicos Islands,1976
+Turks and Caicos Islands,1977
+Turks and Caicos Islands,1978
+Turks and Caicos Islands,1979
+Turks and Caicos Islands,1980
+Turks and Caicos Islands,1981
+Turks and Caicos Islands,1982
+Turks and Caicos Islands,1983
+Turks and Caicos Islands,1984
+Turks and Caicos Islands,1985
+Turks and Caicos Islands,1986
+Turks and Caicos Islands,1987
+Turks and Caicos Islands,1988
+Turks and Caicos Islands,1989
+Turks and Caicos Islands,1990
+Turks and Caicos Islands,1991
+Turks and Caicos Islands,1992
+Turks and Caicos Islands,1993
+Turks and Caicos Islands,1994
+Turks and Caicos Islands,1995
+Turks and Caicos Islands,1996
+Turks and Caicos Islands,1997
+Turks and Caicos Islands,1998
+Turks and Caicos Islands,1999
+Turks and Caicos Islands,2000
+Turks and Caicos Islands,2001
+Turks and Caicos Islands,2002
+Turks and Caicos Islands,2003
+Turks and Caicos Islands,2004
+Turks and Caicos Islands,2005
+Turks and Caicos Islands,2006
+Turks and Caicos Islands,2007
+Turks and Caicos Islands,2008
+Turks and Caicos Islands,2009
+Turks and Caicos Islands,2010
+Turks and Caicos Islands,2011
+Turks and Caicos Islands,2012
+Turks and Caicos Islands,2013
+Turks and Caicos Islands,2014
+Turks and Caicos Islands,2015
+Turks and Caicos Islands,2016
+Turks and Caicos Islands,2017
+Turks and Caicos Islands,2018
+Turks and Caicos Islands,2019
+Turks and Caicos Islands,2020
+Tokelau,1949
+Tokelau,1950
+Tokelau,1951
+Tokelau,1952
+Tokelau,1953
+Tokelau,1954
+Tokelau,1955
+Tokelau,1956
+Tokelau,1957
+Tokelau,1958
+Tokelau,1959
+Tokelau,1960
+Tokelau,1961
+Tokelau,1962
+Tokelau,1963
+Tokelau,1964
+Tokelau,1965
+Tokelau,1966
+Tokelau,1967
+Tokelau,1968
+Tokelau,1969
+Tokelau,1970
+Tokelau,1971
+Tokelau,1972
+Tokelau,1973
+Tokelau,1974
+Tokelau,1975
+Tokelau,1976
+Tokelau,1977
+Tokelau,1978
+Tokelau,1979
+Tokelau,1980
+Tokelau,1981
+Tokelau,1982
+Tokelau,1983
+Tokelau,1984
+Tokelau,1985
+Tokelau,1986
+Tokelau,1987
+Tokelau,1988
+Tokelau,1989
+Tokelau,1990
+Tokelau,1991
+Tokelau,1992
+Tokelau,1993
+Tokelau,1994
+Tokelau,1995
+Tokelau,1996
+Tokelau,1997
+Tokelau,1998
+Tokelau,1999
+Tokelau,2000
+Tokelau,2001
+Tokelau,2002
+Tokelau,2003
+Tokelau,2004
+Tokelau,2005
+Tokelau,2006
+Tokelau,2007
+Tokelau,2008
+Tokelau,2009
+Tokelau,2010
+Tokelau,2011
+Tokelau,2012
+Tokelau,2013
+Tokelau,2014
+Tokelau,2015
+Tokelau,2016
+Tokelau,2017
+Tokelau,2018
+Tokelau,2019
+Tokelau,2020
+United States Minor Outlying Islands,1899
+United States Minor Outlying Islands,1900
+United States Minor Outlying Islands,1901
+United States Minor Outlying Islands,1902
+United States Minor Outlying Islands,1903
+United States Minor Outlying Islands,1904
+United States Minor Outlying Islands,1905
+United States Minor Outlying Islands,1906
+United States Minor Outlying Islands,1907
+United States Minor Outlying Islands,1908
+United States Minor Outlying Islands,1909
+United States Minor Outlying Islands,1910
+United States Minor Outlying Islands,1911
+United States Minor Outlying Islands,1912
+United States Minor Outlying Islands,1913
+United States Minor Outlying Islands,1914
+United States Minor Outlying Islands,1915
+United States Minor Outlying Islands,1916
+United States Minor Outlying Islands,1917
+United States Minor Outlying Islands,1918
+United States Minor Outlying Islands,1919
+United States Minor Outlying Islands,1920
+United States Minor Outlying Islands,1921
+United States Minor Outlying Islands,1922
+United States Minor Outlying Islands,1923
+United States Minor Outlying Islands,1924
+United States Minor Outlying Islands,1925
+United States Minor Outlying Islands,1926
+United States Minor Outlying Islands,1927
+United States Minor Outlying Islands,1928
+United States Minor Outlying Islands,1929
+United States Minor Outlying Islands,1930
+United States Minor Outlying Islands,1931
+United States Minor Outlying Islands,1932
+United States Minor Outlying Islands,1933
+United States Minor Outlying Islands,1934
+United States Minor Outlying Islands,1935
+United States Minor Outlying Islands,1936
+United States Minor Outlying Islands,1937
+United States Minor Outlying Islands,1938
+United States Minor Outlying Islands,1939
+United States Minor Outlying Islands,1940
+United States Minor Outlying Islands,1941
+United States Minor Outlying Islands,1942
+United States Minor Outlying Islands,1943
+United States Minor Outlying Islands,1944
+United States Minor Outlying Islands,1945
+United States Minor Outlying Islands,1946
+United States Minor Outlying Islands,1947
+United States Minor Outlying Islands,1948
+United States Minor Outlying Islands,1949
+United States Minor Outlying Islands,1950
+United States Minor Outlying Islands,1951
+United States Minor Outlying Islands,1952
+United States Minor Outlying Islands,1953
+United States Minor Outlying Islands,1954
+United States Minor Outlying Islands,1955
+United States Minor Outlying Islands,1956
+United States Minor Outlying Islands,1957
+United States Minor Outlying Islands,1958
+United States Minor Outlying Islands,1959
+United States Minor Outlying Islands,1960
+United States Minor Outlying Islands,1961
+United States Minor Outlying Islands,1962
+United States Minor Outlying Islands,1963
+United States Minor Outlying Islands,1964
+United States Minor Outlying Islands,1965
+United States Minor Outlying Islands,1966
+United States Minor Outlying Islands,1967
+United States Minor Outlying Islands,1968
+United States Minor Outlying Islands,1969
+United States Minor Outlying Islands,1970
+United States Minor Outlying Islands,1971
+United States Minor Outlying Islands,1972
+United States Minor Outlying Islands,1973
+United States Minor Outlying Islands,1974
+United States Minor Outlying Islands,1975
+United States Minor Outlying Islands,1976
+United States Minor Outlying Islands,1977
+United States Minor Outlying Islands,1978
+United States Minor Outlying Islands,1979
+United States Minor Outlying Islands,1980
+United States Minor Outlying Islands,1981
+United States Minor Outlying Islands,1982
+United States Minor Outlying Islands,1983
+United States Minor Outlying Islands,1984
+United States Minor Outlying Islands,1985
+United States Minor Outlying Islands,1986
+United States Minor Outlying Islands,1987
+United States Minor Outlying Islands,1988
+United States Minor Outlying Islands,1989
+United States Minor Outlying Islands,1990
+United States Minor Outlying Islands,1991
+United States Minor Outlying Islands,1992
+United States Minor Outlying Islands,1993
+United States Minor Outlying Islands,1994
+United States Minor Outlying Islands,1995
+United States Minor Outlying Islands,1996
+United States Minor Outlying Islands,1997
+United States Minor Outlying Islands,1998
+United States Minor Outlying Islands,1999
+United States Minor Outlying Islands,2000
+United States Minor Outlying Islands,2001
+United States Minor Outlying Islands,2002
+United States Minor Outlying Islands,2003
+United States Minor Outlying Islands,2004
+United States Minor Outlying Islands,2005
+United States Minor Outlying Islands,2006
+United States Minor Outlying Islands,2007
+United States Minor Outlying Islands,2008
+United States Minor Outlying Islands,2009
+United States Minor Outlying Islands,2010
+United States Minor Outlying Islands,2011
+United States Minor Outlying Islands,2012
+United States Minor Outlying Islands,2013
+United States Minor Outlying Islands,2014
+United States Minor Outlying Islands,2015
+United States Minor Outlying Islands,2016
+United States Minor Outlying Islands,2017
+United States Minor Outlying Islands,2018
+United States Minor Outlying Islands,2019
+United States Minor Outlying Islands,2020
+"Virgin Islands, British",1967
+"Virgin Islands, British",1968
+"Virgin Islands, British",1969
+"Virgin Islands, British",1970
+"Virgin Islands, British",1971
+"Virgin Islands, British",1972
+"Virgin Islands, British",1973
+"Virgin Islands, British",1974
+"Virgin Islands, British",1975
+"Virgin Islands, British",1976
+"Virgin Islands, British",1977
+"Virgin Islands, British",1978
+"Virgin Islands, British",1979
+"Virgin Islands, British",1980
+"Virgin Islands, British",1981
+"Virgin Islands, British",1982
+"Virgin Islands, British",1983
+"Virgin Islands, British",1984
+"Virgin Islands, British",1985
+"Virgin Islands, British",1986
+"Virgin Islands, British",1987
+"Virgin Islands, British",1988
+"Virgin Islands, British",1989
+"Virgin Islands, British",1990
+"Virgin Islands, British",1991
+"Virgin Islands, British",1992
+"Virgin Islands, British",1993
+"Virgin Islands, British",1994
+"Virgin Islands, British",1995
+"Virgin Islands, British",1996
+"Virgin Islands, British",1997
+"Virgin Islands, British",1998
+"Virgin Islands, British",1999
+"Virgin Islands, British",2000
+"Virgin Islands, British",2001
+"Virgin Islands, British",2002
+"Virgin Islands, British",2003
+"Virgin Islands, British",2004
+"Virgin Islands, British",2005
+"Virgin Islands, British",2006
+"Virgin Islands, British",2007
+"Virgin Islands, British",2008
+"Virgin Islands, British",2009
+"Virgin Islands, British",2010
+"Virgin Islands, British",2011
+"Virgin Islands, British",2012
+"Virgin Islands, British",2013
+"Virgin Islands, British",2014
+"Virgin Islands, British",2015
+"Virgin Islands, British",2016
+"Virgin Islands, British",2017
+"Virgin Islands, British",2018
+"Virgin Islands, British",2019
+"Virgin Islands, British",2020
+"Virgin Islands, U.S.",1917
+"Virgin Islands, U.S.",1918
+"Virgin Islands, U.S.",1919
+"Virgin Islands, U.S.",1920
+"Virgin Islands, U.S.",1921
+"Virgin Islands, U.S.",1922
+"Virgin Islands, U.S.",1923
+"Virgin Islands, U.S.",1924
+"Virgin Islands, U.S.",1925
+"Virgin Islands, U.S.",1926
+"Virgin Islands, U.S.",1927
+"Virgin Islands, U.S.",1928
+"Virgin Islands, U.S.",1929
+"Virgin Islands, U.S.",1930
+"Virgin Islands, U.S.",1931
+"Virgin Islands, U.S.",1932
+"Virgin Islands, U.S.",1933
+"Virgin Islands, U.S.",1934
+"Virgin Islands, U.S.",1935
+"Virgin Islands, U.S.",1936
+"Virgin Islands, U.S.",1937
+"Virgin Islands, U.S.",1938
+"Virgin Islands, U.S.",1939
+"Virgin Islands, U.S.",1940
+"Virgin Islands, U.S.",1941
+"Virgin Islands, U.S.",1942
+"Virgin Islands, U.S.",1943
+"Virgin Islands, U.S.",1944
+"Virgin Islands, U.S.",1945
+"Virgin Islands, U.S.",1946
+"Virgin Islands, U.S.",1947
+"Virgin Islands, U.S.",1948
+"Virgin Islands, U.S.",1949
+"Virgin Islands, U.S.",1950
+"Virgin Islands, U.S.",1951
+"Virgin Islands, U.S.",1952
+"Virgin Islands, U.S.",1953
+"Virgin Islands, U.S.",1954
+"Virgin Islands, U.S.",1955
+"Virgin Islands, U.S.",1956
+"Virgin Islands, U.S.",1957
+"Virgin Islands, U.S.",1958
+"Virgin Islands, U.S.",1959
+"Virgin Islands, U.S.",1960
+"Virgin Islands, U.S.",1961
+"Virgin Islands, U.S.",1962
+"Virgin Islands, U.S.",1963
+"Virgin Islands, U.S.",1964
+"Virgin Islands, U.S.",1965
+"Virgin Islands, U.S.",1966
+"Virgin Islands, U.S.",1967
+"Virgin Islands, U.S.",1968
+"Virgin Islands, U.S.",1969
+"Virgin Islands, U.S.",1970
+"Virgin Islands, U.S.",1971
+"Virgin Islands, U.S.",1972
+"Virgin Islands, U.S.",1973
+"Virgin Islands, U.S.",1974
+"Virgin Islands, U.S.",1975
+"Virgin Islands, U.S.",1976
+"Virgin Islands, U.S.",1977
+"Virgin Islands, U.S.",1978
+"Virgin Islands, U.S.",1979
+"Virgin Islands, U.S.",1980
+"Virgin Islands, U.S.",1981
+"Virgin Islands, U.S.",1982
+"Virgin Islands, U.S.",1983
+"Virgin Islands, U.S.",1984
+"Virgin Islands, U.S.",1985
+"Virgin Islands, U.S.",1986
+"Virgin Islands, U.S.",1987
+"Virgin Islands, U.S.",1988
+"Virgin Islands, U.S.",1989
+"Virgin Islands, U.S.",1990
+"Virgin Islands, U.S.",1991
+"Virgin Islands, U.S.",1992
+"Virgin Islands, U.S.",1993
+"Virgin Islands, U.S.",1994
+"Virgin Islands, U.S.",1995
+"Virgin Islands, U.S.",1996
+"Virgin Islands, U.S.",1997
+"Virgin Islands, U.S.",1998
+"Virgin Islands, U.S.",1999
+"Virgin Islands, U.S.",2000
+"Virgin Islands, U.S.",2001
+"Virgin Islands, U.S.",2002
+"Virgin Islands, U.S.",2003
+"Virgin Islands, U.S.",2004
+"Virgin Islands, U.S.",2005
+"Virgin Islands, U.S.",2006
+"Virgin Islands, U.S.",2007
+"Virgin Islands, U.S.",2008
+"Virgin Islands, U.S.",2009
+"Virgin Islands, U.S.",2010
+"Virgin Islands, U.S.",2011
+"Virgin Islands, U.S.",2012
+"Virgin Islands, U.S.",2013
+"Virgin Islands, U.S.",2014
+"Virgin Islands, U.S.",2015
+"Virgin Islands, U.S.",2016
+"Virgin Islands, U.S.",2017
+"Virgin Islands, U.S.",2018
+"Virgin Islands, U.S.",2019
+"Virgin Islands, U.S.",2020
+Wallis and Futuna,1961
+Wallis and Futuna,1962
+Wallis and Futuna,1963
+Wallis and Futuna,1964
+Wallis and Futuna,1965
+Wallis and Futuna,1966
+Wallis and Futuna,1967
+Wallis and Futuna,1968
+Wallis and Futuna,1969
+Wallis and Futuna,1970
+Wallis and Futuna,1971
+Wallis and Futuna,1972
+Wallis and Futuna,1973
+Wallis and Futuna,1974
+Wallis and Futuna,1975
+Wallis and Futuna,1976
+Wallis and Futuna,1977
+Wallis and Futuna,1978
+Wallis and Futuna,1979
+Wallis and Futuna,1980
+Wallis and Futuna,1981
+Wallis and Futuna,1982
+Wallis and Futuna,1983
+Wallis and Futuna,1984
+Wallis and Futuna,1985
+Wallis and Futuna,1986
+Wallis and Futuna,1987
+Wallis and Futuna,1988
+Wallis and Futuna,1989
+Wallis and Futuna,1990
+Wallis and Futuna,1991
+Wallis and Futuna,1992
+Wallis and Futuna,1993
+Wallis and Futuna,1994
+Wallis and Futuna,1995
+Wallis and Futuna,1996
+Wallis and Futuna,1997
+Wallis and Futuna,1998
+Wallis and Futuna,1999
+Wallis and Futuna,2000
+Wallis and Futuna,2001
+Wallis and Futuna,2002
+Wallis and Futuna,2003
+Wallis and Futuna,2004
+Wallis and Futuna,2005
+Wallis and Futuna,2006
+Wallis and Futuna,2007
+Wallis and Futuna,2008
+Wallis and Futuna,2009
+Wallis and Futuna,2010
+Wallis and Futuna,2011
+Wallis and Futuna,2012
+Wallis and Futuna,2013
+Wallis and Futuna,2014
+Wallis and Futuna,2015
+Wallis and Futuna,2016
+Wallis and Futuna,2017
+Wallis and Futuna,2018
+Wallis and Futuna,2019
+Wallis and Futuna,2020

@@ -39,18 +39,11 @@
 #'              (AR5) and for the Reference Concentration Pathways (RCP)
 #'   \item continent: Continent as defined in the World Bank Development Indicators
 #'   \item cow.name: Correlates of War country name
-#'   \item ecb.name: European Central Bank country name
 #'   \item eurocontrol_pru:  European Organisation for the Safety of Air Navigation
 #'   \item eurocontrol_statfor:  European Organisation for the Safety of Air Navigation
-#'   \item eurostat.name:  Eurostat country name
 #'   \item eu28: Member states of the European Union (as of December 2015),
 #'               without special territories
-#'   \item fao.name: Food and Agriculture Organization of the United Nations country name
-#'   \item fips.name: FIPS 10-4 Country name
-#'   \item genc.name: Geopolitical Entities, Names and Codes standard country names
-#'   \item icao.name: International Civil Aviation Organization country name
 #'   \item icao.region: International Civil Aviation Organization region
-#'   \item ioc.name: International Olympic Committee country name
 #'   \item iso.name.en: ISO English short name
 #'   \item iso.name.fr: ISO French short name
 #'   \item p4.name: Polity IV country name
@@ -62,9 +55,8 @@
 #'   \item un.name.fr: United Nations French country name
 #'   \item un.name.ru: United Nations Russian country name
 #'   \item un.name.zh: United Nations Chinese country name
-#'   \item unpd.name: United Nations Procurement Division country name
 #'   \item wvs.name: World Values Survey numeric code country name
-#'   \item cldr.*: 622 country name variants from the UNICODE CLDR project.
+#'   \item cldr.*: 600+ country name variants from the UNICODE CLDR project.
 #'   Inspect the `countrycode::cldr_examples` data.frame for a full list of
 #'   available country names and examples.
 #' }

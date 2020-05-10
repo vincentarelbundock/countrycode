@@ -1,8 +1,11 @@
-library(WDI)
+source(here::here('dictionary/utilities.R'))
 
-####################
-#  manual regions  #
-####################
+automatic <- WDI(country = "all", start = 2016, end = 2016, extra = TRUE) %>%
+             filter(region != 'Aggregates') %>%
+             select(country, region) %>%
+             drop_na %>% 
+             unique
+
 # "East Asia & Pacific"
 # "Europe & Central Asia"
 # "Latin America & Caribbean"
@@ -12,7 +15,7 @@ library(WDI)
 # "Sub-Saharan Africa"
 # manual changes 
 manual <- tribble(
-~country.name.en,                               ~region,
+~country,                               ~region,
 "Åland Islands",                                "Europe & Central Asia",
 "Anguilla",                                     "Latin America & Caribbean",
 "Antarctica",                                   NA,
@@ -85,26 +88,15 @@ manual <- tribble(
 "Yemen People's Republic",                      "Middle East & North Africa",
 "Yugoslavia",                                   "Europe & Central Asia",
 "Zanzibar",                                     "Sub-Saharan Africa") %>% 
-mutate(country.name.en.regex = CountryToRegex(country.name.en)) %>%
-select(country.name.en.regex, region) %>%
 drop_na
 
-###########################
-#  Download from WDI API  #
-###########################
-get_world_bank_region = function() {
 
-    automatic <- WDI(country = "all", start = 2016, end = 2016, extra = TRUE) %>%
-                 mutate(country.name.en.regex = CountryToRegex(country)) %>%
-                 select(country.name.en.regex, region) %>%
-                 drop_na %>% 
-                 unique
 
-    manual <- manual %>% 
-              filter(!country.name.en.regex %in% automatic$country.name.en.regex)
-    
-    out <- bind_rows(automatic, manual)
+a <- CountryToRegex(automatic$country)
+b <- CountryToRegex(manual$country)
+manual <- manual[!b %in% a,]
 
-    return(out)
+out <- bind_rows(automatic, manual)
 
-}
+out %>%  write_csv('dictionary/data_world_bank_region.csv')
+

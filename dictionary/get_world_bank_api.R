@@ -1,18 +1,11 @@
-get_world_bank_api = function() {
-    # Download
-    tmp <- tempfile(fileext = '.json')
-    url <- 'http://api.worldbank.org/en/countries/?format=json&per_page=2000'
-    download.file(url, tmp, quiet = TRUE)
+source(here::here('dictionary/utilities.R'))
 
-    # Clean
-    bad = c('Channel Islands', 
-            'Virgin Islands (U.S.)')
-    wb_api <- 
-        jsonlite::fromJSON(tmp, flatten = T)[[2]] %>%
-        dplyr::filter(region.value != 'Aggregates',
-                      !name %in% bad) %>%
-        dplyr::select(wb_api2c = iso2Code, wb_api3c = id, wb_api.name = name) %>%
-        dplyr::mutate(country.name.en.regex = CountryToRegex(wb_api.name))
+tmp <- tempfile(fileext = '.json')
+url <- 'http://api.worldbank.org/en/countries/?format=json&per_page=2000'
+download.file(url, tmp, quiet = TRUE)
 
-    return(wb_api)
-}
+wb_api <- fromJSON(tmp, flatten = T)[[2]] %>%
+          filter(region.value != 'Aggregates') %>%
+          select(country = name, wb_api2c = iso2Code, wb_api3c = id)
+
+wb_api %>% write_csv('dictionary/data_world_bank_api.csv')

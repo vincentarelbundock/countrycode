@@ -1,230 +1,197 @@
-icao.region,icao.name
-"AFI","Angola"
-"AFI","Ascension Island (United Kingdom)"
-"AFI","Benin"
-"AFI","Botswana"
-"AFI","British Indian Ocean Territory (United Kingdom)"
-"AFI","Burkina Faso"
-"AFI","Burundi"
-"AFI","Cameroon"
-"AFI","Cape Verde"
-"AFI","Central African Republic"
-"AFI","Chad"
-"AFI","Comoros"
-"AFI","Congo"
-"AFI","Côte d'Ivoire"
-"AFI","Democratic Republic of the Congo"
-"AFI","Djibouti"
-"AFI","Equatorial Guinea"
-"AFI","Eritrea"
-"AFI","Ethiopia"
-"AFI","Gabon"
-"AFI","Gambia"
-"AFI","Ghana"
-"AFI","Guinea"
-"AFI","Guinea-Bissau"
-"AFI","Kenya"
-"AFI","Lesotho"
-"AFI","Liberia"
-"AFI","Madagascar"
-"AFI","Malawi"
-"AFI","Mali"
-"AFI","Mauritania"
-"AFI","Mauritius"
-"AFI","Mozambique"
-"AFI","Namibia"
-"AFI","Niger"
-"AFI","Nigeria"
-"AFI","Réunion (France)"
-"AFI","Rwanda"
-"AFI","Sao Tome and Principe"
-"AFI","Senegal"
-"AFI","Seychelles"
-"AFI","Sierra Leone"
-"AFI","Somalia"
-"AFI","South Africa"
-"AFI","Swaziland"
-"AFI","Togo"
-"AFI","Uganda"
-"AFI","United Republic of Tanzania"
-"AFI","Western Sahara"
-"AFI","Zambia"
-"AFI","Zimbabwe"
-"ASIAPAC","Afghanistan"
-"NAM|ASIAPAC","United States"
-"ASIAPAC","American Samoa (United States)"
-"ASIAPAC","Australia"
-"ASIAPAC","Bangladesh"
-"ASIAPAC","Bhutan"
-"ASIAPAC","Brunei Darussalam"
-"ASIAPAC","Cambodia"
-"ASIAPAC","China"
-"ASIAPAC","Cook Islands"
-"ASIAPAC","Democratic People's Republic of Korea"
-"ASIAPAC","Fiji"
-"ASIAPAC","French Polynesia (France)"
-"ASIAPAC","Hawaii (United States)"
-"ASIAPAC","Hong Kong, China (China)"
-"ASIAPAC","India"
-"ASIAPAC","Indonesia"
-"ASIAPAC","Japan"
-"ASIAPAC","Johnston Island (United States)"
-"ASIAPAC","Kiribati"
-"ASIAPAC","Lao People's Democratic Republic"
-"ASIAPAC","Line Islands (United States)"
-"ASIAPAC","Macao, China (China)"
-"ASIAPAC","Malaysia"
-"ASIAPAC","Maldives"
-"ASIAPAC","Marshall Islands"
-"ASIAPAC","Micronesia (Federated States of)"
-"ASIAPAC","Mongolia"
-"ASIAPAC","Myanmar"
-"ASIAPAC","Nauru"
-"ASIAPAC","Nepal"
-"ASIAPAC","New Caledonia (France)"
-"ASIAPAC","New Zealand"
-"ASIAPAC","Niue (New Zealand)"
-"ASIAPAC","Northern Mariana Islands (United States)"
-"ASIAPAC","Pakistan"
-"ASIAPAC","Palau"
-"ASIAPAC","Papua New Guinea"
-"ASIAPAC","Philippines"
-"ASIAPAC","Republic of Korea"
-"ASIAPAC","Samoa"
-"ASIAPAC","Singapore"
-"ASIAPAC","Solomon Islands"
-"ASIAPAC","Sri Lanka"
-"ASIAPAC","Thailand"
-"ASIAPAC","Timor-Leste"
-"ASIAPAC","Tonga"
-"ASIAPAC","Tuvalu"
-"ASIAPAC","Vanuatu"
-"ASIAPAC","Viet Nam"
-"ASIAPAC","Wake Island (United States)"
-"CARSAM","Anguilla (United Kingdom)"
-"CARSAM","Antigua and Barbuda"
-"CARSAM","Argentina"
-"CARSAM","Aruba (Netherlands)"
-"CARSAM","Bahamas"
-"CARSAM","Barbados"
-"CARSAM","Belize"
-"CARSAM","Bolivia"
-"CARSAM","Bonaire (Netherlands)"
-"CARSAM","Brazil"
-"CARSAM","British Virgin Islands (United Kingdom)"
-"CARSAM","Cayman Islands (United Kingdom)"
-"CARSAM","Chile"
-"CARSAM","Colombia"
-"CARSAM","Costa Rica"
-"CARSAM","Cuba"
-"CARSAM","Curaçao (Netherlands)"
-"CARSAM","Dominica"
-"CARSAM","Dominican Republic"
-"CARSAM","Ecuador"
-"CARSAM","El Salvador"
-"CARSAM","Falkland Islands (Malvinas) (United Kingdom)"
-"CARSAM","French Antilles (France)"
-"CARSAM","French Guiana (France)"
-"CARSAM","Grenada"
-"CARSAM","Guatemala"
-"CARSAM","Guyana"
-"CARSAM","Haiti"
-"CARSAM","Honduras"
-"CARSAM","Jamaica"
-"CARSAM","Mexico"
-"CARSAM","Montserrat (United Kingdom)"
-"CARSAM","Nicaragua"
-"CARSAM","Panama"
-"CARSAM","Paraguay"
-"CARSAM","Peru"
-"CARSAM","Puerto Rico (United States)"
-"CARSAM","Saba (Netherlands)"
-"CARSAM","Saint Kitts and Nevis"
-"CARSAM","Saint Lucia"
-"CARSAM","Saint Vincent and the Grenadines"
-"CARSAM","Sint Eustatius (Netherlands)"
-"CARSAM","Sint Maarten (Netherlands)"
-"CARSAM","Suriname"
-"CARSAM","Trinidad and Tobago"
-"CARSAM","Turks and Caicos Islands (United Kingdom)"
-"CARSAM","Uruguay"
-"CARSAM","Venezuela (Bolivarian Republic of)"
-"CARSAM","Virgin Islands (United States)"
-"EUR","Albania"
-"EUR","Algeria"
-"EUR","Areas Under The Control Of The Palestinian Authority"
-"EUR","Armenia"
-"EUR","Austria"
-"EUR","Azerbaijan"
-"EUR","Belarus"
-"EUR","Belgium"
-"EUR","Bosnia and Herzegovina"
-"EUR","Bulgaria"
-"EUR","Canary Islands (Spain)"
-"EUR","Croatia"
-"EUR","Cyprus"
-"EUR","Czech Republic"
-"EUR","Denmark"
-"EUR","Estonia"
-"EUR","Finland"
-"EUR","France"
-"EUR","Georgia"
-"EUR","Germany"
-"EUR","Gibraltar (United Kingdom)"
-"EUR","Greece"
-"EUR","Hungary"
-"EUR","Ireland"
-"EUR","Israel"
-"EUR","Italy"
-"EUR","Kazakhstan"
-"EUR","Kyrgyzstan"
-"EUR","Latvia"
-"EUR","Lithuania"
-"EUR","Luxembourg"
-"EUR","Malta"
-"EUR","Monaco"
-"EUR","Montenegro"
-"EUR","Morocco"
-"EUR","Netherlands"
-"EUR","Norway"
-"EUR","Poland"
-"EUR","Portugal (Madeira and Azores) (PORTUGAL)"
-"EUR","Republic of Moldova"
-"EUR","Romania"
-"EUR","Russian Federation"
-"EUR","Saint-Pierre-et-Miquelon (France)"
-"EUR","Serbia"
-"EUR","Slovakia"
-"EUR","Slovenia"
-"EUR","Spain"
-"EUR","Sweden"
-"EUR","Switzerland"
-"EUR","Tajikistan"
-"EUR","The Former Yugoslav Republic of Macedonia"
-"EUR","Tunisia"
-"EUR","Turkey"
-"EUR","Turkmenistan"
-"EUR","Ukraine"
-"EUR","United Kingdom"
-"EUR","Uzbekistan"
-"MID","Bahrain"
-"MID","Egypt"
-"MID","Iran (Islamic Republic of)"
-"MID","Iraq"
-"MID","Jordan"
-"MID","Kuwait"
-"MID","Lebanon"
-"MID","Libya"
-"MID","Oman"
-"MID","Qatar"
-"MID","Saudi Arabia"
-"MID","South Sudan"
-"MID","Sudan"
-"MID","Syrian Arab Republic"
-"MID","United Arab Emirates"
-"MID","Yemen"
-"NAM","Canada"
-"NAT","Bermuda (United Kingdom)"
-"NAT","Greenland (Denmark)"
-"NAT","Iceland"
-"NAT","United Nations Interim Administration Mission in Kosovo (UNMIK)"
+icao.region,country
+AFI,Angola
+AFI,Benin
+AFI,Botswana
+AFI,Burkina Faso
+AFI,Burundi
+AFI,Cameroon
+AFI,Cape Verde
+AFI,Central African Republic
+AFI,Chad
+AFI,Comoros
+AFI,Congo
+AFI,Côte d'Ivoire
+AFI,Democratic Republic of the Congo
+AFI,Djibouti
+AFI,Equatorial Guinea
+AFI,Eritrea
+AFI,Ethiopia
+AFI,Gabon
+AFI,Gambia
+AFI,Ghana
+AFI,Guinea
+AFI,Guinea-Bissau
+AFI,Kenya
+AFI,Lesotho
+AFI,Liberia
+AFI,Madagascar
+AFI,Malawi
+AFI,Mali
+AFI,Mauritania
+AFI,Mauritius
+AFI,Mozambique
+AFI,Namibia
+AFI,Niger
+AFI,Nigeria
+AFI,Rwanda
+AFI,Sao Tome and Principe
+AFI,Senegal
+AFI,Seychelles
+AFI,Sierra Leone
+AFI,Somalia
+AFI,South Africa
+AFI,Swaziland
+AFI,Togo
+AFI,Uganda
+AFI,United Republic of Tanzania
+AFI,Western Sahara
+AFI,Zambia
+AFI,Zimbabwe
+ASIAPAC,Afghanistan
+NAM|ASIAPAC,United States
+ASIAPAC,Australia
+ASIAPAC,Bangladesh
+ASIAPAC,Bhutan
+ASIAPAC,Brunei Darussalam
+ASIAPAC,Cambodia
+ASIAPAC,China
+ASIAPAC,Cook Islands
+ASIAPAC,Democratic People's Republic of Korea
+ASIAPAC,Fiji
+ASIAPAC,"Hong Kong, China (China)"
+ASIAPAC,India
+ASIAPAC,Indonesia
+ASIAPAC,Japan
+ASIAPAC,Kiribati
+ASIAPAC,Lao People's Democratic Republic
+ASIAPAC,"Macao, China (China)"
+ASIAPAC,Malaysia
+ASIAPAC,Maldives
+ASIAPAC,Marshall Islands
+ASIAPAC,Micronesia (Federated States of)
+ASIAPAC,Mongolia
+ASIAPAC,Myanmar
+ASIAPAC,Nauru
+ASIAPAC,Nepal
+ASIAPAC,New Zealand
+ASIAPAC,Pakistan
+ASIAPAC,Palau
+ASIAPAC,Papua New Guinea
+ASIAPAC,Philippines
+ASIAPAC,Republic of Korea
+ASIAPAC,Samoa
+ASIAPAC,Singapore
+ASIAPAC,Solomon Islands
+ASIAPAC,Sri Lanka
+ASIAPAC,Thailand
+ASIAPAC,Timor-Leste
+ASIAPAC,Tonga
+ASIAPAC,Tuvalu
+ASIAPAC,Vanuatu
+ASIAPAC,Viet Nam
+CARSAM,Antigua and Barbuda
+CARSAM,Argentina
+CARSAM,Bahamas
+CARSAM,Barbados
+CARSAM,Belize
+CARSAM,Bolivia
+CARSAM,Brazil
+CARSAM,Chile
+CARSAM,Colombia
+CARSAM,Costa Rica
+CARSAM,Cuba
+CARSAM,Dominica
+CARSAM,Dominican Republic
+CARSAM,Ecuador
+CARSAM,El Salvador
+CARSAM,Grenada
+CARSAM,Guatemala
+CARSAM,Guyana
+CARSAM,Haiti
+CARSAM,Honduras
+CARSAM,Jamaica
+CARSAM,Mexico
+CARSAM,Nicaragua
+CARSAM,Panama
+CARSAM,Paraguay
+CARSAM,Peru
+CARSAM,Saint Kitts and Nevis
+CARSAM,Saint Lucia
+CARSAM,Saint Vincent and the Grenadines
+CARSAM,Suriname
+CARSAM,Trinidad and Tobago
+CARSAM,Uruguay
+CARSAM,Venezuela (Bolivarian Republic of)
+EUR,Albania
+EUR,Algeria
+EUR,Areas Under The Control Of The Palestinian Authority
+EUR,Armenia
+EUR,Austria
+EUR,Azerbaijan
+EUR,Belarus
+EUR,Belgium
+EUR,Bosnia and Herzegovina
+EUR,Bulgaria
+EUR,Croatia
+EUR,Cyprus
+EUR,Czech Republic
+EUR,Denmark
+EUR,Estonia
+EUR,Finland
+EUR,France
+EUR,Georgia
+EUR,Germany
+EUR,Greece
+EUR,Hungary
+EUR,Ireland
+EUR,Israel
+EUR,Italy
+EUR,Kazakhstan
+EUR,Kyrgyzstan
+EUR,Latvia
+EUR,Lithuania
+EUR,Luxembourg
+EUR,Malta
+EUR,Monaco
+EUR,Montenegro
+EUR,Morocco
+EUR,Netherlands
+EUR,Norway
+EUR,Poland
+EUR,Portugal (Madeira and Azores) (PORTUGAL)
+EUR,Republic of Moldova
+EUR,Romania
+EUR,Russian Federation
+EUR,Serbia
+EUR,Slovakia
+EUR,Slovenia
+EUR,Spain
+EUR,Sweden
+EUR,Switzerland
+EUR,Tajikistan
+EUR,The Former Yugoslav Republic of Macedonia
+EUR,Tunisia
+EUR,Turkey
+EUR,Turkmenistan
+EUR,Ukraine
+EUR,United Kingdom
+EUR,Uzbekistan
+MID,Bahrain
+MID,Egypt
+MID,Iran (Islamic Republic of)
+MID,Iraq
+MID,Jordan
+MID,Kuwait
+MID,Lebanon
+MID,Libya
+MID,Oman
+MID,Qatar
+MID,Saudi Arabia
+MID,South Sudan
+MID,Sudan
+MID,Syrian Arab Republic
+MID,United Arab Emirates
+MID,Yemen
+NAM,Canada
+NAT,Iceland
+NAT,United Nations Interim Administration Mission in Kosovo (UNMIK)
