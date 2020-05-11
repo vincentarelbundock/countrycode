@@ -47,6 +47,7 @@ To get an up-to-date list of supported country codes, install the package and ty
 * Global Administrative Unit Layers (GAUL)
 * Geopolitical Entities, Names and Codes (GENC)
 * Continent and region identifiers.
+* Unicode symbols (flags)
 
 ## Installation
 
@@ -155,6 +156,28 @@ iso3c cowcodes var1 isocodes var2        country
 5   USA      USA  241      840   85  UNITED STATES
 ```
 
+# Unicode flags
+
+`countrycode` can convert country names and codes to unicode flags. For example, we can use the `gt` package to draw a table with countries and their corresponding flags:
+
+```r
+library(gt)
+library(countrycode)
+
+Countries <- c('Canada', 'Germany', 'Thailand', 'Algeria', 'Eritrea')
+Flags <- countrycode(Countries, 'country.name', 'unicode.symbol')
+dat <- data.frame(Countries, Flags)
+gt(dat)
+```
+
+Which produces this file: 
+
+![](https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/flag_table.png)
+
+Note that embedding unicode characters in `R` graphics is possible, but it can be tricky. If your output looks like `\U0001f1e6\U0001f1f6`, then you could try feeding it to this function: `utf8::utf8_print()`. That should cover a lot of cases without dipping into the complexity of graphics devices. As a rule of thumb, if your output looks like `□□□□` (boxes), things tend to get more complicated. In that case, you'll have to think about different output devices, file viewers, and/or file formats (e.g., 'SVG' or 'HTML').
+
+Since inserting unicode symbols into `R` graphics is not a `countrycode`-specific issue, we won't be able to offer any more support than this. Good luck!
+
 # Custom country codes dictionaries
 
 Since version 0.19, countrycode accepts user supplied dictionaries via the ``custom_dict`` argument. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
@@ -230,6 +253,7 @@ Use the `nomatch` argument to specify the value that `countrycode` inserts where
 > countrycode(c('Canada', 'Fake country'), origin = 'country.name', destination = 'iso3c', nomatch = 'BAD')
 > [1] "CAN" "BAD"
 ```
+
 
 # Contributions
 
