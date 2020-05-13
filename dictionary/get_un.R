@@ -11,10 +11,10 @@ m49 <- read_html(url) %>%
               un = `M49 Code`,
               un.region.name = `Region Name`,
               un.region.code = `Region Code`,
-              un.subregion.name = `Sub-region Name`,
-              un.subregion.code = `Sub-region Code`,
-              un.intermediateregion.name = `Intermediate Region Name`,
-              un.intermediateregion.code = `Intermediate Region Code`) %>%
+              un.regionsub.name = `Sub-region Name`,
+              un.regionsub.code = `Sub-region Code`,
+              un.regionintermediate.name = `Intermediate Region Name`,
+              un.regionintermediate.code = `Intermediate Region Code`) %>%
        filter(country != 'Sark')
 
 m49 %>% write_csv('dictionary/data_un.csv')

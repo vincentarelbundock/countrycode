@@ -1,4 +1,4 @@
-country,un,un.region.name,un.region.code,un.subregion.name,un.subregion.code,un.intermediateregion.name,un.intermediateregion.code
+country,un,un.region.name,un.region.code,un.regionsub.name,un.regionsub.code,un.regionintermediate.name,un.regionintermediate.code
 Algeria,12,Africa,2,Northern Africa,15,,NA
 Egypt,818,Africa,2,Northern Africa,15,,NA
 Libya,434,Africa,2,Northern Africa,15,,NA

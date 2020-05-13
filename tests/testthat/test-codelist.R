@@ -4,8 +4,8 @@ pan <- countrycode::codelist_panel
 
 dest <- c('year', 'ar5', 'continent', 'eu28', 'eurocontrol_pru',
           'eurocontrol_statfor', 'icao', 'icao.region', 'region', 'region23',
-          'un.region.name', 'un.region.code', 'un.subregion.name', 'un.subregion.code',
-          'un.intermediateregion.name', 'un.intermediateregion.code')
+          'un.region.name', 'un.region.code', 'un.regionsub.name', 'un.regionsub.code',
+          'un.regionintermediate.name', 'un.regionintermediate.code')
 
 ##############
 #  codelist  #
@@ -45,8 +45,8 @@ test_that('codelist missing values', {
     }
 })
 
-cols <- setdiff(colnames(cs), c('dhs', 'eu28', 'un.intermediateregion.name',
-                                'un.intermediateregion.code'))
+cols <- setdiff(colnames(cs), c('dhs', 'eu28', 'un.regionintermediate.name',
+                                'un.regionintermediate.code'))
 for (i in cols) {
     msg <- paste(i, 'has less than 50% missing observations')
     test_that(msg, {
@@ -104,8 +104,8 @@ test_that('codelist missing values', {
     }
 })
 
-cols <- setdiff(colnames(pan), c('dhs', 'eu28', 'un.intermediateregion.name',
-                                 'un.intermediateregion.code'))
+cols <- setdiff(colnames(pan), c('dhs', 'eu28', 'un.regionintermediate.name',
+                                 'un.regionintermediate.code'))
 for (i in cols) {
     msg <- paste(i, 'has less than 50% missing observations')
     test_that(msg, {
