@@ -65,6 +65,12 @@ Destination only:
   \item un.name.fr: United Nations French country name
   \item un.name.ru: United Nations Russian country name
   \item un.name.zh: United Nations Chinese country name
+  \item un.region.name: United Nations region name
+  \item un.region.code: United Nations region code
+  \item un.regionintermediate.name: United Nations intermediate region name
+  \item un.regionintermediate.code: United Nations intermediate region code
+  \item un.regionsub.name: United Nations sub-region name
+  \item un.regionsub.code: United Nations sub-region code
   \item wvs.name: World Values Survey numeric code country name
   \item cldr.*: 600+ country name variants from the UNICODE CLDR project.
   Inspect the `countrycode::cldr_examples` data.frame for a full list of
