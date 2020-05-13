@@ -10,57 +10,84 @@ If you use `countrycode` in your research, we would be very grateful if you coul
 
 [![Travis-CI Build Status](https://travis-ci.org/vincentarelbundock/countrycode.svg?branch=master)](https://travis-ci.org/vincentarelbundock/countrycode)
 
-## Contributions
+# Table of Contents
 
-Want to contribute? Great! Scroll all the way down for details.
+* [Why `countrycode`?](https://github.com/vincentarelbundock/countrycode#why-countrycode) 
+* [Installation](https://github.com/vincentarelbundock/countrycode#installation) 
+* [Supported codes](https://github.com/vincentarelbundock/countrycode#why-countrycode) 
+* [Examples](https://github.com/vincentarelbundock/countrycode#examples) 
+    - [Convert of a single name or code](https://github.com/vincentarelbundock/countrycode#convert-a-single-name-or-code) 
+    - [Vectors and data.frames](https://github.com/vincentarelbundock/countrycode#vectors-and-data.frames) 
+    - [Flags](https://github.com/vincentarelbundock/countrycode#flags) 
+    - [Country names in 600+ different languages and formats](https://github.com/vincentarelbundock/countrycode#country-names-in-600-different-languages-and-formats) 
+* [Custom dictionaries and American states](https://github.com/vincentarelbundock/countrycode#custom-dictionaries-and-american-states) 
+* [Extra arguments](https://github.com/vincentarelbundock/countrycode#extra-arguments)
+    - [`nomatch`: Fill in missing codes manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually) 
+    - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
+    - [`warn`: Silence warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings) 
+* [Contributions](https://github.com/vincentarelbundock/countrycode#contributions) 
 
-## The Problem
+# Why `countrycode`?
+
+### The Problem
 
 Different data sources use different coding schemes to represent countries (e.g. CoW or ISO). This poses two main problems: (1) some of these coding schemes are less than intuitive, and (2) merging these data requires converting from one coding scheme to another, or from long country names to a coding scheme.
 
-## The Solution
+### The Solution
 
 The `countrycode` function can convert to and from 40+ different country coding schemes, and to 600+ variants of country names in different languages and formats. It uses regular expressions to convert long country names (e.g. Sri Lanka) into any of those coding schemes or country names. It can create new variables with various regional groupings.
 
-## Supported country codes
+# Installation
+
+From the R console, type: 
+
+```r
+install.packages("countrycode")``
+```
+
+To install the latest development version, you can use the `remotes` package:
+
+```r
+library(remotes)
+install_github('vincentarelbundock/countrycode')
+```
+
+# Supported codes
 
 To get an up-to-date list of supported country codes, install the package and type `?codelist`. These include:
 
 * 600+ variants of country names in different languages and formats.
+* AR5
+* Continent and region identifiers.
 * Correlates of War (numeric and character)
-* Gleditsch & Ward (numeric and character)
-* ISO (2/3-character and numeric)
-* United Nations
-* International Monetary Fund
-* World Bank
-* Polity IV
-* Varieties of Democracy
 * European Central Bank
 * Euro-control (aviation)
 * Eurostat
-* Food and Agriculture Organization of the United Nations
-* International Olympic Committee
-* International Civil Aviation Organization
-* United Nations Procurement Division
-* AR5
 * Federal Information Processing Standard (FIPS)
+* Food and Agriculture Organization of the United Nations
 * Global Administrative Unit Layers (GAUL)
 * Geopolitical Entities, Names and Codes (GENC)
-* Continent and region identifiers.
+* Gleditsch & Ward (numeric and character)
+* International Civil Aviation Organization
+* International Monetary Fund
+* International Olympic Committee
+* ISO (2/3-character and numeric)
+* Polity IV
+* United Nations
+* United Nations Procurement Division
+* Varieties of Democracy
+* World Bank
+* World Values Survey
 * Unicode symbols (flags)
-
-## Installation
-
-From the R console, type ``install.packages("countrycode")``
 
 # Examples
 
-## Simple
+## Convert a single name or code
 
 Load library:
 
 ```R
-> library(countrycode)
+library(countrycode)
 ```
 
 Convert single country codes:
@@ -77,30 +104,6 @@ countrycode('Albania', origin = 'country.name', destination = 'iso3c')
 # German to Arabic
 countrycode(c('Algerien', 'Albanien'), origin = 'country.name.de', destination = 'un.name.ar') 
 [1] "الجزائر" "ألبانيا"
-```
-
-## Unicode CLDR names
-
-The Unicode organisation hosts the CLDR project, which publishes many variants of country names. For each language/culture locale, there is a full set of names, plus possible 'alt-short' or 'alt-variant' variations of specific country names.
-
-```
-> countrycode('United States of America', origin = 'country.name', destination = 'cldr.name.en')
-> [1] "United States"
-> countrycode('United States of America', origin = 'country.name', destination = 'cldr.short.en')
-> [1] "US"
-```
-
-To see a full list of country name variants available, inspect this data.frame:
-
-```
-> head(countrycode::cldr_examples)
-             Code                    Example
-1    cldr.name.af   Franse Suidelike Gebiede
-2   cldr.name.agq                         TF
-3    cldr.name.ak                         TF
-4    cldr.name.am           የፈረንሳይ ደቡባዊ ግዛቶች
-5    cldr.name.ar الأقاليم الجنوبية الفرنسية
-6 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية
 ```
 
 ## Convert a vector of country codes
@@ -156,7 +159,7 @@ iso3c cowcodes var1 isocodes var2        country
 5   USA      USA  241      840   85  UNITED STATES
 ```
 
-# Unicode flags
+## Flags
 
 `countrycode` can convert country names and codes to unicode flags. For example, we can use the `gt` package to draw a table with countries and their corresponding flags:
 
@@ -178,7 +181,32 @@ Note that embedding unicode characters in `R` graphics is possible, but it can b
 
 Since inserting unicode symbols into `R` graphics is not a `countrycode`-specific issue, we won't be able to offer any more support than this. Good luck!
 
-# Custom country codes dictionaries
+## Country names in 600+ different languages and formats
+
+The Unicode organisation hosts the CLDR project, which publishes many variants of country names. For each language/culture locale, there is a full set of names, plus possible 'alt-short' or 'alt-variant' variations of specific country names.
+
+```
+> countrycode('United States of America', origin = 'country.name', destination = 'cldr.name.en')
+> [1] "United States"
+> countrycode('United States of America', origin = 'country.name', destination = 'cldr.short.en')
+> [1] "US"
+```
+
+To see a full list of country name variants available, inspect this data.frame:
+
+```
+> head(countrycode::cldr_examples)
+             Code                    Example
+1    cldr.name.af   Franse Suidelike Gebiede
+2   cldr.name.agq                         TF
+3    cldr.name.ak                         TF
+4    cldr.name.am           የፈረንሳይ ደቡባዊ ግዛቶች
+5    cldr.name.ar الأقاليم الجنوبية الفرنسية
+6 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية
+```
+
+
+# Custom dictionaries and American states
 
 Since version 0.19, countrycode accepts user supplied dictionaries via the ``custom_dict`` argument. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
 
@@ -205,7 +233,20 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 
 Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::codelist`` or ``countrycode::codelist_panel`` to gain access to all other codes. 
 
-# Custom country match vector
+# Extra arguments
+
+## `nomatch`: Fill in missing codes manually
+
+Use the `nomatch` argument to specify the value that `countrycode` inserts where no match was found:
+
+```r
+> countrycode(c('DZA', 'USA', '???'), origin = 'iso3c', destination = 'country.name', nomatch = 'BAD CODE')
+> [1] "Algeria"       "United States" "BAD CODE"  
+> countrycode(c('Canada', 'Fake country'), origin = 'country.name', destination = 'iso3c', nomatch = 'BAD')
+> [1] "CAN" "BAD"
+```
+
+## `custom_match`: Override default values
 
 Since version 0.19, `countrycode` accepts a user supplied named vector of custom 
 matches via the `custom_match` argument. Any match pairs in the `custom_match` 
@@ -241,32 +282,25 @@ custom_match <- c(EL = 'Greece', UK = 'United Kingdom')
 countrycode(df$geo, origin = 'iso2c', destination = 'country.name', custom_match = custom_match)
 ```
 
-# Extra arguments
+## `warn`: Silence warnings
 
 Use `warn = TRUE` to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
 
-Use the `nomatch` argument to specify the value that `countrycode` inserts where no match was found:
-
-```r
-> countrycode(c('DZA', 'USA', '???'), origin = 'iso3c', destination = 'country.name', nomatch = 'BAD CODE')
-> [1] "Algeria"       "United States" "BAD CODE"  
-> countrycode(c('Canada', 'Fake country'), origin = 'country.name', destination = 'iso3c', nomatch = 'BAD')
-> [1] "CAN" "BAD"
-```
-
-
 # Contributions
 
-The best way to contribute is to add a ``get_*`` function that downloads country codes from an official sources and formats the data.
+## Adding a new code
 
-Each data source must be associated with a script called ``get_source.R`` in the ``dictionary`` folder. For instance, ``get_world_bank.R`` or ``get_fao.R``.
+New country codes are created by two files:
 
-Each ``get_source.R`` file must include a **single** function also named ``get_source``. That function downloads the original data and cleans it. It returns:
+1. `dictionary/get_*.R` is an `R` script which can scrape the code from an original online source (e.g., `get_world_bank.R`). This scripts only side effect is that it writes a CSV file to the `dictionary` folder.
+2. `dictionary/data_*.csv` is a CSV file with 1 column called `country`, which includes the English country name, and 1 column with named after the code (e.g., `iso3c`, `un.name.en`, `continent`).
 
- A data.frame or tibble
+After creating those two files, you should:
 
-* One column must be called ``regex`` and use countrycode regexes as unique identifiers.
-    - Please use the ``CountryToRegex`` function from ``utilities.R`` to produce that column.
-* No duplicate entries for a single country (if data is cross-sectional) or country-year (if data is panel). 
+* Run `dictionary/build.R`
+* If the code is a valid origin code (i.e., no two countries share the same code), add it to the `valid_origin` vector in `R/countrycode.R`
+* Add the new code name to the documentation in `R/codelist.R`
+* Build the documentation using the devtools package: `devtools::document()`
+* Add a bullet point to `NEWS.md` file.
 
-If you feel a bit lazier (or don't have access to a solid online source), submit a CSV file with one column of English country names and a second column of country codes.
+If you need help with any of these steps, or if you just want to submit a CSV file, feel free to open an issue on Github or write an email to Vincent. I'll be happy to help you out!
