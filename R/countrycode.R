@@ -19,11 +19,11 @@
 #' countrycode tries to use the origin vector to fill-in missing values in the
 #' destination vector. nomatch must be either NULL, of length 1, or of the same
 #' length as sourcevar.
-#' @param custom_dict A data frame which supplies custom country codes.
-#' Variables correspond to country codes, observations must refer to unique
-#' countries.  When countrycode uses a user-supplied dictionary, no sanity
-#' checks are conducted. The data frame format must resemble
-#' countrycode::codelist.
+#' @param custom_dict A data frame which supplies a new dictionary to replace
+#' the built-in country code dictionary. Each column contains a different code
+#' and must include no duplicates. The data frame format should resemble
+#' `countrycode::codelist`.  Warning: when `custom_dict` is used, no sanity
+#' checks are conducted. 
 #' @param custom_match A named vector which supplies custom origin and
 #' destination matches that will supercede any matching default result. The name
 #' of each element will be used as the origin code, and the value of each
@@ -52,10 +52,24 @@
 #' @examples
 #' # ISO to Correlates of War
 #' countrycode(c('USA', 'DZA'), origin = 'iso3c', destination = 'cown')
+#'
 #' # English to ISO
 #' countrycode('Albania', origin = 'country.name', destination = 'iso3c')
+#'
 #' # German to French
 #' countrycode('Albanien', origin = 'country.name.de', destination = 'iso.name.fr')
+#'
+#' # Using custom_match to supercede default codes
+#' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c')
+#' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c', custom_match = c('Algeria' = 'ALG'))
+#'
+#' \dontrun{
+#' # Using `custom_dict` to convert US States names
+#' cd <- 'https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/us_states.csv'
+#' cd <- read.csv(cd)
+#' countrycode(c('AL', 'AK'), 'abbreviation', 'state', custom_dict = cd)
+#' countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state', custom_dict = cd, origin_regex = TRUE)
+#' }
 countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
                         custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
 

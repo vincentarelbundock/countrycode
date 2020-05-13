@@ -20,7 +20,7 @@ If you use `countrycode` in your research, we would be very grateful if you coul
     - [Vectors and data.frames](https://github.com/vincentarelbundock/countrycode#vectors-and-data.frames) 
     - [Flags](https://github.com/vincentarelbundock/countrycode#flags) 
     - [Country names in 600+ different languages and formats](https://github.com/vincentarelbundock/countrycode#country-names-in-600-different-languages-and-formats) 
-* [Custom dictionaries and American states](https://github.com/vincentarelbundock/countrycode#custom-dictionaries-and-american-states) 
+* [`custom_dict`: Custom dictionaries and American states](https://github.com/vincentarelbundock/countrycode#custom_dict-custom-dictionaries-and-american-states) 
 * [Extra arguments](https://github.com/vincentarelbundock/countrycode#extra-arguments)
     - [`nomatch`: Fill in missing codes manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually) 
     - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
@@ -205,10 +205,9 @@ To see a full list of country name variants available, inspect this data.frame:
 6 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية
 ```
 
+# `custom_dict`: Custom dictionaries and American states
 
-# Custom dictionaries and American states
-
-Since version 0.19, countrycode accepts user supplied dictionaries via the ``custom_dict`` argument. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
+Since version 0.19, countrycode accepts user-supplied dictionaries via the ``custom_dict`` argument. These dictionaries will override the built-in country code dictionary. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
 
 Load the library and download the custom dictionary data.frame:
 

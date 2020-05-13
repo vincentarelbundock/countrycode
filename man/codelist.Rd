@@ -37,6 +37,7 @@ Origin and Destination:
   \item p4n: Polity IV numeric country code
   \item p4c: Polity IV character country code
   \item un: United Nations M49 numeric codes
+  \item unicode.symbol: Region subtag (often displayed as emoji flag)
   \item unpd: United Nations Procurement Division
   \item vdem: Varieties of Democracy (V-Dem version 8, April 2018)
   \item wb: World Bank (very similar but not identical to iso3c)
