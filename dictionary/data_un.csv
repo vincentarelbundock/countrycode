@@ -1,249 +1,249 @@
-country,un
-Afghanistan,4
-Åland Islands,248
-Albania,8
-Algeria,12
-American Samoa,16
-Andorra,20
-Angola,24
-Anguilla,660
-Antarctica,10
-Antigua and Barbuda,28
-Argentina,32
-Armenia,51
-Aruba,533
-Australia,36
-Austria,40
-Azerbaijan,31
-Bahamas,44
-Bahrain,48
-Bangladesh,50
-Barbados,52
-Belarus,112
-Belgium,56
-Belize,84
-Benin,204
-Bermuda,60
-Bhutan,64
-Bolivia (Plurinational State of),68
-"Bonaire, Sint Eustatius and Saba",535
-Bosnia and Herzegovina,70
-Botswana,72
-Bouvet Island,74
-Brazil,76
-British Indian Ocean Territory,86
-British Virgin Islands,92
-Brunei Darussalam,96
-Bulgaria,100
-Burkina Faso,854
-Burundi,108
-Cabo Verde,132
-Cambodia,116
-Cameroon,120
-Canada,124
-Cayman Islands,136
-Central African Republic,140
-Chad,148
-Chile,152
-China,156
-"China, Hong Kong Special Administrative Region",344
-"China, Macao Special Administrative Region",446
-Christmas Island,162
-Cocos (Keeling) Islands,166
-Colombia,170
-Comoros,174
-Congo,178
-Cook Islands,184
-Costa Rica,188
-Côte d’Ivoire,384
-Croatia,191
-Cuba,192
-Curaçao,531
-Cyprus,196
-Czechia,203
-Democratic People's Republic of Korea,408
-Democratic Republic of the Congo,180
-Denmark,208
-Djibouti,262
-Dominica,212
-Dominican Republic,214
-Ecuador,218
-Egypt,818
-El Salvador,222
-Equatorial Guinea,226
-Eritrea,232
-Estonia,233
-Eswatini,748
-Ethiopia,231
-Falkland Islands (Malvinas),238
-Faroe Islands,234
-Fiji,242
-Finland,246
-France,250
-French Guiana,254
-French Polynesia,258
-French Southern Territories,260
-Gabon,266
-Gambia,270
-Georgia,268
-Germany,276
-Ghana,288
-Gibraltar,292
-Greece,300
-Greenland,304
-Grenada,308
-Guadeloupe,312
-Guam,316
-Guatemala,320
-Guernsey,831
-Guinea,324
-Guinea-Bissau,624
-Guyana,328
-Haiti,332
-Heard Island and McDonald Islands,334
-Holy See,336
-Honduras,340
-Hungary,348
-Iceland,352
-India,356
-Indonesia,360
-Iran (Islamic Republic of),364
-Iraq,368
-Ireland,372
-Isle of Man,833
-Israel,376
-Italy,380
-Jamaica,388
-Japan,392
-Jersey,832
-Jordan,400
-Kazakhstan,398
-Kenya,404
-Kiribati,296
-Kuwait,414
-Kyrgyzstan,417
-Lao People's Democratic Republic,418
-Latvia,428
-Lebanon,422
-Lesotho,426
-Liberia,430
-Libya,434
-Liechtenstein,438
-Lithuania,440
-Luxembourg,442
-Madagascar,450
-Malawi,454
-Malaysia,458
-Maldives,462
-Mali,466
-Malta,470
-Marshall Islands,584
-Martinique,474
-Mauritania,478
-Mauritius,480
-Mayotte,175
-Mexico,484
-Micronesia (Federated States of),583
-Monaco,492
-Mongolia,496
-Montenegro,499
-Montserrat,500
-Morocco,504
-Mozambique,508
-Myanmar,104
-Namibia,516
-Nauru,520
-Nepal,524
-Netherlands,528
-New Caledonia,540
-New Zealand,554
-Nicaragua,558
-Niger,562
-Nigeria,566
-Niue,570
-Norfolk Island,574
-North Macedonia,807
-Northern Mariana Islands,580
-Norway,578
-Oman,512
-Pakistan,586
-Palau,585
-Panama,591
-Papua New Guinea,598
-Paraguay,600
-Peru,604
-Philippines,608
-Pitcairn,612
-Poland,616
-Portugal,620
-Puerto Rico,630
-Qatar,634
-Republic of Korea,410
-Republic of Moldova,498
-Réunion,638
-Romania,642
-Russian Federation,643
-Rwanda,646
-Saint Barthélemy,652
-Saint Helena,654
-Saint Kitts and Nevis,659
-Saint Lucia,662
-Saint Martin (French Part),663
-Saint Pierre and Miquelon,666
-Saint Vincent and the Grenadines,670
-Samoa,882
-San Marino,674
-Sao Tome and Principe,678
-Saudi Arabia,682
-Senegal,686
-Serbia,688
-Seychelles,690
-Sierra Leone,694
-Singapore,702
-Sint Maarten (Dutch part),534
-Slovakia,703
-Slovenia,705
-Solomon Islands,90
-Somalia,706
-South Africa,710
-South Georgia and the South Sandwich Islands,239
-South Sudan,728
-Spain,724
-Sri Lanka,144
-State of Palestine,275
-Sudan,729
-Suriname,740
-Svalbard and Jan Mayen Islands,744
-Sweden,752
-Switzerland,756
-Syrian Arab Republic,760
-Tajikistan,762
-Thailand,764
-Timor-Leste,626
-Togo,768
-Tokelau,772
-Tonga,776
-Trinidad and Tobago,780
-Tunisia,788
-Turkey,792
-Turkmenistan,795
-Turks and Caicos Islands,796
-Tuvalu,798
-Uganda,800
-Ukraine,804
-United Arab Emirates,784
-United Kingdom of Great Britain and Northern Ireland,826
-United Republic of Tanzania,834
-United States Minor Outlying Islands,581
-United States of America,840
-United States Virgin Islands,850
-Uruguay,858
-Uzbekistan,860
-Vanuatu,548
-Venezuela (Bolivarian Republic of),862
-Viet Nam,704
-Wallis and Futuna Islands,876
-Western Sahara,732
-Yemen,887
-Zambia,894
-Zimbabwe,716
+country,un,un.region.name,un.region.code,un.subregion.name,un.subregion.code,un.intermediateregion.name,un.intermediateregion.code
+Algeria,12,Africa,2,Northern Africa,15,,NA
+Egypt,818,Africa,2,Northern Africa,15,,NA
+Libya,434,Africa,2,Northern Africa,15,,NA
+Morocco,504,Africa,2,Northern Africa,15,,NA
+Sudan,729,Africa,2,Northern Africa,15,,NA
+Tunisia,788,Africa,2,Northern Africa,15,,NA
+Western Sahara,732,Africa,2,Northern Africa,15,,NA
+British Indian Ocean Territory,86,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Burundi,108,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Comoros,174,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Djibouti,262,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Eritrea,232,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Ethiopia,231,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+French Southern Territories,260,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Kenya,404,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Madagascar,450,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Malawi,454,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Mauritius,480,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Mayotte,175,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Mozambique,508,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Réunion,638,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Rwanda,646,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Seychelles,690,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Somalia,706,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+South Sudan,728,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Uganda,800,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+United Republic of Tanzania,834,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Zambia,894,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Zimbabwe,716,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
+Angola,24,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Cameroon,120,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Central African Republic,140,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Chad,148,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Congo,178,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Democratic Republic of the Congo,180,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Equatorial Guinea,226,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Gabon,266,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Sao Tome and Principe,678,Africa,2,Sub-Saharan Africa,202,Middle Africa,17
+Botswana,72,Africa,2,Sub-Saharan Africa,202,Southern Africa,18
+Eswatini,748,Africa,2,Sub-Saharan Africa,202,Southern Africa,18
+Lesotho,426,Africa,2,Sub-Saharan Africa,202,Southern Africa,18
+Namibia,516,Africa,2,Sub-Saharan Africa,202,Southern Africa,18
+South Africa,710,Africa,2,Sub-Saharan Africa,202,Southern Africa,18
+Benin,204,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Burkina Faso,854,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Cabo Verde,132,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Côte d’Ivoire,384,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Gambia,270,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Ghana,288,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Guinea,324,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Guinea-Bissau,624,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Liberia,430,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Mali,466,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Mauritania,478,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Niger,562,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Nigeria,566,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Saint Helena,654,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Senegal,686,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Sierra Leone,694,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Togo,768,Africa,2,Sub-Saharan Africa,202,Western Africa,11
+Anguilla,660,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Antigua and Barbuda,28,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Aruba,533,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Bahamas,44,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Barbados,52,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+"Bonaire, Sint Eustatius and Saba",535,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+British Virgin Islands,92,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Cayman Islands,136,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Cuba,192,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Curaçao,531,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Dominica,212,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Dominican Republic,214,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Grenada,308,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Guadeloupe,312,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Haiti,332,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Jamaica,388,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Martinique,474,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Montserrat,500,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Puerto Rico,630,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Saint Barthélemy,652,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Saint Kitts and Nevis,659,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Saint Lucia,662,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Saint Martin (French Part),663,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Saint Vincent and the Grenadines,670,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Sint Maarten (Dutch part),534,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Trinidad and Tobago,780,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Turks and Caicos Islands,796,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+United States Virgin Islands,850,Americas,19,Latin America and the Caribbean,419,Caribbean,29
+Belize,84,Americas,19,Latin America and the Caribbean,419,Central America,13
+Costa Rica,188,Americas,19,Latin America and the Caribbean,419,Central America,13
+El Salvador,222,Americas,19,Latin America and the Caribbean,419,Central America,13
+Guatemala,320,Americas,19,Latin America and the Caribbean,419,Central America,13
+Honduras,340,Americas,19,Latin America and the Caribbean,419,Central America,13
+Mexico,484,Americas,19,Latin America and the Caribbean,419,Central America,13
+Nicaragua,558,Americas,19,Latin America and the Caribbean,419,Central America,13
+Panama,591,Americas,19,Latin America and the Caribbean,419,Central America,13
+Argentina,32,Americas,19,Latin America and the Caribbean,419,South America,5
+Bolivia (Plurinational State of),68,Americas,19,Latin America and the Caribbean,419,South America,5
+Bouvet Island,74,Americas,19,Latin America and the Caribbean,419,South America,5
+Brazil,76,Americas,19,Latin America and the Caribbean,419,South America,5
+Chile,152,Americas,19,Latin America and the Caribbean,419,South America,5
+Colombia,170,Americas,19,Latin America and the Caribbean,419,South America,5
+Ecuador,218,Americas,19,Latin America and the Caribbean,419,South America,5
+Falkland Islands (Malvinas),238,Americas,19,Latin America and the Caribbean,419,South America,5
+French Guiana,254,Americas,19,Latin America and the Caribbean,419,South America,5
+Guyana,328,Americas,19,Latin America and the Caribbean,419,South America,5
+Paraguay,600,Americas,19,Latin America and the Caribbean,419,South America,5
+Peru,604,Americas,19,Latin America and the Caribbean,419,South America,5
+South Georgia and the South Sandwich Islands,239,Americas,19,Latin America and the Caribbean,419,South America,5
+Suriname,740,Americas,19,Latin America and the Caribbean,419,South America,5
+Uruguay,858,Americas,19,Latin America and the Caribbean,419,South America,5
+Venezuela (Bolivarian Republic of),862,Americas,19,Latin America and the Caribbean,419,South America,5
+Bermuda,60,Americas,19,Northern America,21,,NA
+Canada,124,Americas,19,Northern America,21,,NA
+Greenland,304,Americas,19,Northern America,21,,NA
+Saint Pierre and Miquelon,666,Americas,19,Northern America,21,,NA
+United States of America,840,Americas,19,Northern America,21,,NA
+Antarctica,10,,NA,,NA,,NA
+Kazakhstan,398,Asia,142,Central Asia,143,,NA
+Kyrgyzstan,417,Asia,142,Central Asia,143,,NA
+Tajikistan,762,Asia,142,Central Asia,143,,NA
+Turkmenistan,795,Asia,142,Central Asia,143,,NA
+Uzbekistan,860,Asia,142,Central Asia,143,,NA
+China,156,Asia,142,Eastern Asia,30,,NA
+"China, Hong Kong Special Administrative Region",344,Asia,142,Eastern Asia,30,,NA
+"China, Macao Special Administrative Region",446,Asia,142,Eastern Asia,30,,NA
+Democratic People's Republic of Korea,408,Asia,142,Eastern Asia,30,,NA
+Japan,392,Asia,142,Eastern Asia,30,,NA
+Mongolia,496,Asia,142,Eastern Asia,30,,NA
+Republic of Korea,410,Asia,142,Eastern Asia,30,,NA
+Brunei Darussalam,96,Asia,142,South-eastern Asia,35,,NA
+Cambodia,116,Asia,142,South-eastern Asia,35,,NA
+Indonesia,360,Asia,142,South-eastern Asia,35,,NA
+Lao People's Democratic Republic,418,Asia,142,South-eastern Asia,35,,NA
+Malaysia,458,Asia,142,South-eastern Asia,35,,NA
+Myanmar,104,Asia,142,South-eastern Asia,35,,NA
+Philippines,608,Asia,142,South-eastern Asia,35,,NA
+Singapore,702,Asia,142,South-eastern Asia,35,,NA
+Thailand,764,Asia,142,South-eastern Asia,35,,NA
+Timor-Leste,626,Asia,142,South-eastern Asia,35,,NA
+Viet Nam,704,Asia,142,South-eastern Asia,35,,NA
+Afghanistan,4,Asia,142,Southern Asia,34,,NA
+Bangladesh,50,Asia,142,Southern Asia,34,,NA
+Bhutan,64,Asia,142,Southern Asia,34,,NA
+India,356,Asia,142,Southern Asia,34,,NA
+Iran (Islamic Republic of),364,Asia,142,Southern Asia,34,,NA
+Maldives,462,Asia,142,Southern Asia,34,,NA
+Nepal,524,Asia,142,Southern Asia,34,,NA
+Pakistan,586,Asia,142,Southern Asia,34,,NA
+Sri Lanka,144,Asia,142,Southern Asia,34,,NA
+Armenia,51,Asia,142,Western Asia,145,,NA
+Azerbaijan,31,Asia,142,Western Asia,145,,NA
+Bahrain,48,Asia,142,Western Asia,145,,NA
+Cyprus,196,Asia,142,Western Asia,145,,NA
+Georgia,268,Asia,142,Western Asia,145,,NA
+Iraq,368,Asia,142,Western Asia,145,,NA
+Israel,376,Asia,142,Western Asia,145,,NA
+Jordan,400,Asia,142,Western Asia,145,,NA
+Kuwait,414,Asia,142,Western Asia,145,,NA
+Lebanon,422,Asia,142,Western Asia,145,,NA
+Oman,512,Asia,142,Western Asia,145,,NA
+Qatar,634,Asia,142,Western Asia,145,,NA
+Saudi Arabia,682,Asia,142,Western Asia,145,,NA
+State of Palestine,275,Asia,142,Western Asia,145,,NA
+Syrian Arab Republic,760,Asia,142,Western Asia,145,,NA
+Turkey,792,Asia,142,Western Asia,145,,NA
+United Arab Emirates,784,Asia,142,Western Asia,145,,NA
+Yemen,887,Asia,142,Western Asia,145,,NA
+Belarus,112,Europe,150,Eastern Europe,151,,NA
+Bulgaria,100,Europe,150,Eastern Europe,151,,NA
+Czechia,203,Europe,150,Eastern Europe,151,,NA
+Hungary,348,Europe,150,Eastern Europe,151,,NA
+Poland,616,Europe,150,Eastern Europe,151,,NA
+Republic of Moldova,498,Europe,150,Eastern Europe,151,,NA
+Romania,642,Europe,150,Eastern Europe,151,,NA
+Russian Federation,643,Europe,150,Eastern Europe,151,,NA
+Slovakia,703,Europe,150,Eastern Europe,151,,NA
+Ukraine,804,Europe,150,Eastern Europe,151,,NA
+Åland Islands,248,Europe,150,Northern Europe,154,,NA
+Guernsey,831,Europe,150,Northern Europe,154,Channel Islands,830
+Jersey,832,Europe,150,Northern Europe,154,Channel Islands,830
+Denmark,208,Europe,150,Northern Europe,154,,NA
+Estonia,233,Europe,150,Northern Europe,154,,NA
+Faroe Islands,234,Europe,150,Northern Europe,154,,NA
+Finland,246,Europe,150,Northern Europe,154,,NA
+Iceland,352,Europe,150,Northern Europe,154,,NA
+Ireland,372,Europe,150,Northern Europe,154,,NA
+Isle of Man,833,Europe,150,Northern Europe,154,,NA
+Latvia,428,Europe,150,Northern Europe,154,,NA
+Lithuania,440,Europe,150,Northern Europe,154,,NA
+Norway,578,Europe,150,Northern Europe,154,,NA
+Svalbard and Jan Mayen Islands,744,Europe,150,Northern Europe,154,,NA
+Sweden,752,Europe,150,Northern Europe,154,,NA
+United Kingdom of Great Britain and Northern Ireland,826,Europe,150,Northern Europe,154,,NA
+Albania,8,Europe,150,Southern Europe,39,,NA
+Andorra,20,Europe,150,Southern Europe,39,,NA
+Bosnia and Herzegovina,70,Europe,150,Southern Europe,39,,NA
+Croatia,191,Europe,150,Southern Europe,39,,NA
+Gibraltar,292,Europe,150,Southern Europe,39,,NA
+Greece,300,Europe,150,Southern Europe,39,,NA
+Holy See,336,Europe,150,Southern Europe,39,,NA
+Italy,380,Europe,150,Southern Europe,39,,NA
+Malta,470,Europe,150,Southern Europe,39,,NA
+Montenegro,499,Europe,150,Southern Europe,39,,NA
+North Macedonia,807,Europe,150,Southern Europe,39,,NA
+Portugal,620,Europe,150,Southern Europe,39,,NA
+San Marino,674,Europe,150,Southern Europe,39,,NA
+Serbia,688,Europe,150,Southern Europe,39,,NA
+Slovenia,705,Europe,150,Southern Europe,39,,NA
+Spain,724,Europe,150,Southern Europe,39,,NA
+Austria,40,Europe,150,Western Europe,155,,NA
+Belgium,56,Europe,150,Western Europe,155,,NA
+France,250,Europe,150,Western Europe,155,,NA
+Germany,276,Europe,150,Western Europe,155,,NA
+Liechtenstein,438,Europe,150,Western Europe,155,,NA
+Luxembourg,442,Europe,150,Western Europe,155,,NA
+Monaco,492,Europe,150,Western Europe,155,,NA
+Netherlands,528,Europe,150,Western Europe,155,,NA
+Switzerland,756,Europe,150,Western Europe,155,,NA
+Australia,36,Oceania,9,Australia and New Zealand,53,,NA
+Christmas Island,162,Oceania,9,Australia and New Zealand,53,,NA
+Cocos (Keeling) Islands,166,Oceania,9,Australia and New Zealand,53,,NA
+Heard Island and McDonald Islands,334,Oceania,9,Australia and New Zealand,53,,NA
+New Zealand,554,Oceania,9,Australia and New Zealand,53,,NA
+Norfolk Island,574,Oceania,9,Australia and New Zealand,53,,NA
+Fiji,242,Oceania,9,Melanesia,54,,NA
+New Caledonia,540,Oceania,9,Melanesia,54,,NA
+Papua New Guinea,598,Oceania,9,Melanesia,54,,NA
+Solomon Islands,90,Oceania,9,Melanesia,54,,NA
+Vanuatu,548,Oceania,9,Melanesia,54,,NA
+Guam,316,Oceania,9,Micronesia,57,,NA
+Kiribati,296,Oceania,9,Micronesia,57,,NA
+Marshall Islands,584,Oceania,9,Micronesia,57,,NA
+Micronesia (Federated States of),583,Oceania,9,Micronesia,57,,NA
+Nauru,520,Oceania,9,Micronesia,57,,NA
+Northern Mariana Islands,580,Oceania,9,Micronesia,57,,NA
+Palau,585,Oceania,9,Micronesia,57,,NA
+United States Minor Outlying Islands,581,Oceania,9,Micronesia,57,,NA
+American Samoa,16,Oceania,9,Polynesia,61,,NA
+Cook Islands,184,Oceania,9,Polynesia,61,,NA
+French Polynesia,258,Oceania,9,Polynesia,61,,NA
+Niue,570,Oceania,9,Polynesia,61,,NA
+Pitcairn,612,Oceania,9,Polynesia,61,,NA
+Samoa,882,Oceania,9,Polynesia,61,,NA
+Tokelau,772,Oceania,9,Polynesia,61,,NA
+Tonga,776,Oceania,9,Polynesia,61,,NA
+Tuvalu,798,Oceania,9,Polynesia,61,,NA
+Wallis and Futuna Islands,876,Oceania,9,Polynesia,61,,NA
