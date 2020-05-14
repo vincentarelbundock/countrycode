@@ -195,6 +195,14 @@ test_that('South Africa', {
     #expect_equal(iso3c_of('S. Africa'), 'ZAF')
 })
 
+test_that('Aland Islands', {
+    expect_equal(iso3c_of('Aland Islands'), 'ALA')
+    expect_equal(iso3c_of('aland islands'), 'ALA')
+    expect_equal(iso3c_of('Åland Islands'), 'ALA')
+    expect_equal(iso3c_of('åland islands'), 'ALA')
+    expect_equal(iso3c_of('New Zealand'), 'NZL')
+})
+
 test_that('some weird cases are matched', {
     expect_equal(iso3c_of('France, Martinique'), 'MTQ')
     expect_equal(iso3c_of('Martinique, France'), 'MTQ')

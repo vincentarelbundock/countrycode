@@ -1,6 +1,6 @@
 country.name.en,country.name.en.regex,country.name.de,country.name.de.regex
 Afghanistan,afghan,Afghanistan,afghan
-Aland Islands,åland,Aland Islands,åland
+Aland Islands,^[å|a]land,Aland Islands,åland
 Albania,albania,Albanien,albanien
 Algeria,algeria,Algerien,algerien
 American Samoa,^(?=.*americ).*samoa,Amerikanisch-Samoa,^(?=.*amerik).*samoa
