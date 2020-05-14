@@ -2,6 +2,7 @@ cran-comments.md
 data/backup.rds
 data/dictionary_static.csv
 data/extra
+data/custom_dictionaries
 README.md
 LICENSE*
 joss

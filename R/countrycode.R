@@ -65,7 +65,7 @@
 #'
 #' \dontrun{
 #' # Using `custom_dict` to convert US States names
-#' cd <- 'https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/us_states.csv'
+#' cd <- 'https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/us_states.csv'
 #' cd <- read.csv(cd)
 #' countrycode(c('AL', 'AK'), 'abbreviation', 'state', custom_dict = cd)
 #' countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state', custom_dict = cd, origin_regex = TRUE)

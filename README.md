@@ -175,7 +175,7 @@ gt(dat)
 
 Which produces this file: 
 
-![](https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/flag_table.png)
+![](https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/flag_table.png)
 
 Note that embedding unicode characters in `R` graphics is possible, but it can be tricky. If your output looks like `\U0001f1e6\U0001f1f6`, then you could try feeding it to this function: `utf8::utf8_print()`. That should cover a lot of cases without dipping into the complexity of graphics devices. As a rule of thumb, if your output looks like `□□□□` (boxes), things tend to get more complicated. In that case, you'll have to think about different output devices, file viewers, and/or file formats (e.g., 'SVG' or 'HTML').
 
@@ -215,7 +215,7 @@ Load the library and download the custom dictionary data.frame:
 
 ```
 library(countrycode)
-url = "https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/extra/us_states.csv"
+url = "https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/us_states.csv"
 state_dict = read.csv(url, stringsAsFactors=FALSE)
 ```
 
@@ -307,11 +307,11 @@ If you need help with any of these steps, or if you just want to submit a CSV fi
 
 ## Custom dictionaries
 
-The `countrycode` repository holds several custom dictionaries: https://github.com/vincentarelbundock/countrycode/tree/master/data/extra
+The `countrycode` repository holds several custom dictionaries: https://github.com/vincentarelbundock/countrycode/tree/master/data/custom_dictionaries
 
 To add your own custom dictionary, please make sure that:
 
-1. You save a comma-separated CSV file that looks something like data/extra/us_states.csv
+1. You save a comma-separated CSV file that looks something like data/custom_dictionaries/us_states.csv
 2. The custom dictionary has a unique purpose (not overlapping with existing custom dictionaries)
 3. It uses UTF-8 encoding and conforms to RFC 4180 CSV standard (e.g. comma-delimited, etc.). 
     - `R` commands to produce such a file are shown below.
