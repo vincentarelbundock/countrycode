@@ -1,0 +1,35 @@
+#' Guess the code/name of a vector
+#'
+#' Users sometimes do not know what kind of code or field their data contain.
+#' This function tries to guess by comparing the similarity between a
+#' user-supplied vector and all the codes included in the `countrycode`
+#' dictionary.
+#'
+#' @param codes a vector of country codes or country names
+#' @param min_similarity the function returns all field names where over than
+#' `min_similarity`% of codes are shared between the supplied vector and the
+#' `countrycode` dictionary.
+#'
+#' @export
+#' @examples
+#' # Guess ISO codes
+#' guess_field(c('DZA', 'CAN', 'DEU'))
+#'
+#' # Guess country names
+#' guess_field(c('Guinea','Iran','Russia','North Korea',rep('Ivory Coast',50),'Scotland'))
+guess_field <- function(codes, min_similarity = 80) {
+  x <- unique(codes)
+  
+  match_percentage <-
+    sapply(countrycode::codelist, function(code) {
+      sum(x %in% code) / length(x) * 100
+    })
+  
+  match_percentage <- match_percentage[match_percentage >= min_similarity]
+  
+  match_percentage <- match_percentage[order(match_percentage, decreasing = TRUE)]
+  
+  data.frame(code = names(match_percentage), 
+             percent_of_unique_matched = match_percentage,
+             stringsAsFactors = FALSE)
+}

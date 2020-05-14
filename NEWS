@@ -5,6 +5,8 @@ Version 1.1.4 (????-??-??)
 * Added region23 with the old, more granular regions
 * Added unicode.symbol, which converts to emoji flags
 * Added UN region codes and names
+* New `guess_field` function
+* Improved various regexes
 
 Version 1.1.3 (2020-05-07)
 --------------------------
