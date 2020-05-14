@@ -9,6 +9,13 @@ test_that('nomatch argument works correctly', {
     expect_error(countrycode(origin, 'cowc', 'iso3c', warn = FALSE, nomatch = c('a', 'b')))
 })
 
+test_that('nomatch: numeric and character output types',{
+    # numeric are coerced to character. is this desirable?
+    expect_equal(countrycode('XXX', 'country.name', 'cowc', nomatch = 0), '0')
+    expect_equal(countrycode('XXX', 'country.name', 'cown', nomatch = 0), 0)
+    expect_warning(countrycode('XXX', 'country.name', 'cown', nomatch = 'Bad'))
+})
+
 test_that('nomatch argument works correctly when sourcevar is a factor', {
     # nomatch vector of length 1 that is the same class as the destination code
     # vector should replace all non-match elements with the nomatch value
