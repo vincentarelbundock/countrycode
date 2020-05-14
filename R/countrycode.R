@@ -168,6 +168,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         # match levels of sourcefctr
         matches <-
           sapply(c(levels(sourcefctr), NA), function(x) { # add NA so there's at least one item
+            x <- trimws(x)
             matchidx <- sapply(dict[[origin]], function(y) grepl(y, x, perl = TRUE, ignore.case = TRUE))
             dict[matchidx, destination]
           })
