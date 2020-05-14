@@ -304,3 +304,29 @@ After creating those two files, you should:
 * Add a bullet point to `NEWS.md` file.
 
 If you need help with any of these steps, or if you just want to submit a CSV file, feel free to open an issue on Github or write an email to Vincent. I'll be happy to help you out!
+
+## Custom dictionaries
+
+The `countrycode` repository holds several custom dictionaries: https://github.com/vincentarelbundock/countrycode/tree/master/data/extra
+
+To add your own custom dictionary, please make sure that:
+
+1. You save a comma-separated CSV file that looks something like data/extra/us_states.csv
+2. The custom dictionary has a unique purpose (not overlapping with existing custom dictionaries)
+3. It uses UTF-8 encoding and conforms to RFC 4180 CSV standard (e.g. comma-delimited, etc.). 
+    - `R` commands to produce such a file are shown below.
+4. <NA>/blank fields are blank, not the string 'NA' (not RFC 4180, but important here because of Namibia)
+5. It has concise, sensible, valid (in the R data frame sense) column header names
+
+Using base write.csv:
+
+```r
+write.csv(custom_dict, 'custom_dict.csv', quote = TRUE, na = '', 
+          row.names = FALSE, qmethod = 'double', fileEncoding = 'UTF-8')
+```
+
+Using `readr`:
+
+```r
+readr::write_csv(custom_dict, 'custom_dict.csv', na = '')
+```
