@@ -204,3 +204,8 @@ test_that('Northern Ireland is not Ireland', {
     expect_equal(no_warn_iso3c_of('Northern Ireland'), NA_character_)
     expect_equal(iso3c_of('Ireland'), 'IRL')
 })
+
+test_that('leading and trailing whitespace does not interfere', {
+    expect_equal(cowc_of(' Republic of Vietnam'), 'RVN')
+    expect_equal(cowc_of('\tUnited States'), 'USA')
+})
