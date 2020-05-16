@@ -164,3 +164,6 @@ codelist_panel <- pan
 save(codelist, file = 'data/codelist.rda', compress = 'xz', version = 2)
 save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz', version = 2)
 
+write_csv(codelist, 'dictionary/codelist.csv', na = '')
+write_csv(codelist_panel, 'dictionary/codelist_panel.csv', na = '')
+
