@@ -23,7 +23,7 @@
 #' the built-in country code dictionary. Each column contains a different code
 #' and must include no duplicates. The data frame format should resemble
 #' `countrycode::codelist`.  Warning: when `custom_dict` is used, no sanity
-#' checks are conducted. 
+#' checks are conducted.
 #' @param custom_match A named vector which supplies custom origin and
 #' destination matches that will supercede any matching default result. The name
 #' of each element will be used as the origin code, and the value of each
@@ -99,7 +99,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     } else {
         dictionary = countrycode::codelist
         # Modify this manually when adding codes
-        valid_origin = c("country.name", "country.name.de", "cowc", "cown", "dhs",
+        valid_origin = c("cctld", "country.name", "country.name.de", "cowc", "cown", "dhs",
                          "ecb", "eurostat", "fao", "fips", "gaul", "genc2c",
                          "genc3c", "genc3n", "gwc", "gwn", "imf", "ioc", "iso2c", "iso3c",
                          "iso3n", "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unpd",
