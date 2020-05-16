@@ -164,3 +164,10 @@ codelist_panel <- pan
 save(codelist, file = 'data/codelist.rda', compress = 'xz', version = 2)
 save(codelist_panel, file = 'data/codelist_panel.rda', compress = 'xz', version = 2)
 
+# These uncompressed files are better for seeing diffs in version control
+codelist_without_cldr <- codelist %>% select(-starts_with('cldr'))
+codelist_panel_without_cldr <- codelist_panel %>% select(-starts_with('cldr'))
+
+write_csv(codelist_without_cldr, 'dictionary/codelist_without_cldr.csv', na = '')
+write_csv(codelist_panel_without_cldr, 'dictionary/codelist_panel_without_cldr.csv', na = '')
+
