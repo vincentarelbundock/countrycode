@@ -14,6 +14,7 @@ A data frame used internally by the \code{countrycode()} function. `countrycode`
 Origin and Destination:
 
 \itemize{
+  \item ccTLD: IANA country code top-level domain
   \item country.name: country name (English)
   \item country.name.de: country name (German)
   \item cowc: Correlates of War character
