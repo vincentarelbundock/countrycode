@@ -4,8 +4,9 @@ warnings_are_errors: false
 language: r
 r:
   - oldrel
-cache: packages
-r_binary_packages:
+  - release
+  - devel
+r_packages:
   - devtools
   - roxygen2
   - testthat
