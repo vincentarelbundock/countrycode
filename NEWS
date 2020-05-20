@@ -6,6 +6,7 @@ Version 1.1.4 (????-??-??)
 * Added unicode.symbol, which converts to emoji flags
 * Added UN region codes and names
 * Added IANA ccTLD codes
+* Added ISO 4217 currency name, alpha, and numeric codes
 * New `guess_field` function
 * Improved various regexes
 
