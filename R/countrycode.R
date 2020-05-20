@@ -99,10 +99,10 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     } else {
         dictionary = countrycode::codelist
         # Modify this manually when adding codes
-        valid_origin = c("cctld", "country.name", "country.name.de", "cowc", "cown", "currency", "dhs",
+        valid_origin = c("cctld", "country.name", "country.name.de", "cowc", "cown", "dhs",
                          "ecb", "eurostat", "fao", "fips", "gaul", "genc2c",
                          "genc3c", "genc3n", "gwc", "gwn", "imf", "ioc", "iso2c", "iso3c",
-                         "iso3n", "iso4217c", "iso4217n", "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unpd",
+                         "iso3n", "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unpd",
                          "vdem", "wb", "wb_api2c", "wb_api3c", "wvs",
                          "country.name.en.regex", "country.name.de.regex")
         valid_destination <- colnames(dictionary)
