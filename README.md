@@ -293,7 +293,7 @@ Use `warn = TRUE` to print out a list of source elements for which no match was 
 New country codes are created by two files:
 
 1. `dictionary/get_*.R` is an `R` script which can scrape the code from an original online source (e.g., `get_world_bank.R`). This scripts only side effect is that it writes a CSV file to the `dictionary` folder.
-2. `dictionary/data_*.csv` is a CSV file with 1 column called `country`, which includes the English country name, and 1 column with named after the code (e.g., `iso3c`, `un.name.en`, `continent`).
+2. `dictionary/data_*.csv` is a CSV file with 1 column called `country`, which includes the English country name, and 1 or more columns named after the codes you want to add (e.g., `iso3c`, `un.name.en`, `continent`).
 
 After creating those two files, you should:
 

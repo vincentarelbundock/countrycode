@@ -8,6 +8,7 @@ library(readxl)
 library(xml2)
 library(rvest)
 library(RSelenium)
+library(assertr) # probably want to choose between checkmate and this
 library(checkmate)
 library(httr)
 library(jsonlite)

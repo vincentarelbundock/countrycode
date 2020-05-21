@@ -1,0 +1,16 @@
+context('Destination-only codes')
+
+test_that('Destination-only codes raise errors when used as origin', {
+    f <- function(code) countrycode('x', origin = code, destination = 'iso3c')
+    expect_error(f('currency'))
+    expect_error(f('iso4217c'))
+    expect_error(f('iso4217n'))
+    expect_error(f('ar5'))
+    expect_error(f('continent'))
+    expect_error(f('cow.name'))
+    expect_error(f('eu28'))
+    expect_error(f('iso.name.en'))
+    expect_error(f('cow.name'))
+    expect_error(f('un.region.name'))
+    expect_error(f('cldr.name.en'))
+})

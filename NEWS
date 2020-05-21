@@ -4,6 +4,7 @@ Version 1.1.4 (????-??-??)
 * Bug in dict build inserted NA in region variable (Thanks to M. Pascariu)
 * Added region23 with the old, more granular regions
 * Added unicode.symbol, which converts to emoji flags
+* Added ISO 4217 currency name, alpha, and numeric codes
 * Added UN region codes and names
 * Added IANA ccTLD codes
 * New `guess_field` function

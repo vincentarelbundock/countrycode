@@ -50,6 +50,7 @@ Destination only:
              (AR5) and for the Reference Concentration Pathways (RCP)
   \item continent: Continent as defined in the World Bank Development Indicators
   \item cow.name: Correlates of War country name
+  \item currency: ISO 4217 currency name
   \item eurocontrol_pru:  European Organisation for the Safety of Air Navigation
   \item eurocontrol_statfor:  European Organisation for the Safety of Air Navigation
   \item eu28: Member states of the European Union (as of December 2015),
@@ -57,6 +58,8 @@ Destination only:
   \item icao.region: International Civil Aviation Organization region
   \item iso.name.en: ISO English short name
   \item iso.name.fr: ISO French short name
+  \item iso4217c: ISO 4217 currency alphabetic code
+  \item iso4217n: ISO 4217 currency numeric code
   \item p4.name: Polity IV country name
   \item region: 7 Regions as defined in the World Bank Development Indicators
   \item region23: 23 Regions as used to be in the World Bank Development Indicators (legacy)

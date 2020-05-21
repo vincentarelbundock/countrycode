@@ -61,14 +61,18 @@
 #'
 #' # Using custom_match to supercede default codes
 #' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c')
-#' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c', custom_match = c('Algeria' = 'ALG'))
+#' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
+#'             custom_match = c('Algeria' = 'ALG'))
 #'
 #' \dontrun{
-#' # Using `custom_dict` to convert US States names
-#' cd <- 'https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/us_states.csv'
+#' # Using `custom_dict` to convert US States names. This dictionary is
+#' hosted on github. We use a shortened URL to load it.
+#' cd <- 'https://bit.ly/2ToSrFv'
 #' cd <- read.csv(cd)
-#' countrycode(c('AL', 'AK'), 'abbreviation', 'state', custom_dict = cd)
-#' countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state', custom_dict = cd, origin_regex = TRUE)
+#' countrycode(c('AL', 'AK'), 'abbreviation', 'state', 
+#'             custom_dict = cd)
+#' countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
+#'             custom_dict = cd, origin_regex = TRUE)
 #' }
 countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
                         custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {

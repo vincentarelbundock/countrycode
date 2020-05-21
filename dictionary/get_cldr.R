@@ -86,7 +86,7 @@ k = cldr %>%
 k = k[2:nrow(k),]
 row.names(k) = NULL
 cldr_examples = k
-save(cldr_examples, file = 'data/cldr_examples.rda')
+save(cldr_examples, file = 'data/cldr_examples.rda', compress='xz', version=2)
 
 
 ##########
