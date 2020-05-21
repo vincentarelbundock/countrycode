@@ -21,7 +21,8 @@ If you use `countrycode` in your research, we would be very grateful if you coul
     - [Flags](https://github.com/vincentarelbundock/countrycode#flags) 
     - [Country names in 600+ different languages and formats](https://github.com/vincentarelbundock/countrycode#country-names-in-600-different-languages-and-formats) 
 * [Extra](https://github.com/vincentarelbundock/countrycode#extra)
-    - [`custom_dict`: Custom dictionaries and American states](https://github.com/vincentarelbundock/countrycode#custom_dict-custom-dictionaries-and-american-states) 
+    - [`custom_dict`: American states](https://github.com/vincentarelbundock/countrycode#custom_dict-american-states) 
+    - [`custom_dict`: the `ISOcodes` package](https://github.com/vincentarelbundock/countrycode#custom_dict-the-isocodes-package)
     - [`nomatch`: Fill in missing codes manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually) 
     - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
     - [`warn`: Silence warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings) 
@@ -207,7 +208,7 @@ To see a full list of country name variants available, inspect this data.frame:
 
 # Extra
 
-## `custom_dict`: Custom dictionaries and American states
+## `custom_dict`: American states
 
 Since version 0.19, countrycode accepts user-supplied dictionaries via the ``custom_dict`` argument. These dictionaries will override the built-in country code dictionary. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
 
@@ -234,6 +235,33 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 
 Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::codelist`` or ``countrycode::codelist_panel`` to gain access to all other codes. 
 
+## `custom_dict`: the `ISOcodes` package
+
+`countrycode` already supports ISO4217 (currencies) and ISO3166 (country codes). The `ISOcodes` package supplies other codes, including ISO15924 (language writing systems), ISO639 (languages), and ISO8859 (computer character encodings). Users can convert those codes using `countrycode`'s `custom_dict` argument.
+
+For example, the `ISOcodes::ISO_639_2` dataframe includes 4 columns: `Alpha_3_B`, `Alpha_3_T`, `Alpha_2`, and `Name`. We can convert language names like this:
+
+```r
+> countrycode('abk', 'Alpha_3_B', 'Name', custom_dict = ISOcodes::ISO_639_2)
+[1] "Abkhazian"
+```
+
+The `ISOcodes::ISO_8859` dataset is a 3-dimensional array where the second dimension represents the character encoding. We take the subset of `ISO_8859_1` codes and convert the dict to a dataframe for use in `countrycode`'s `custom_dict` argument:
+
+```r
+library(ISOcodes)
+dict <- ISOcodes::ISO_8859[, 'ISO_8859_1', ]
+dict <- data.frame(dict)
+```
+
+The resulting dataframe has 3 columns: `Code`, `Name`, `Character`. We convert the code `0x00fd` like this:
+
+```r
+> countrycode("0x00fd", "Code", "Name", custom_dict = dict)
+[1] "LATIN SMALL LETTER Y WITH ACUTE"
+> countrycode("0x00fd", "Code", "Character", custom_dict = dict)
+[1] "ý"
+```
 
 ## `nomatch`: Fill in missing codes manually
 
