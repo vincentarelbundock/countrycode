@@ -1,28 +1,76 @@
 variations <- list(
-  "United States" = c(
-    "U.S.A.", 
-    "United States", 
-    "USA"
-  ), 
-  "United Kingdom" = c(
-    "United Kingdom",
-    "The United Kingdom",
-    "United Kingdom of Great Britain",
-    "United Kingdom of Great Britain and Northern Ireland"
-  ), 
+  "Åland Islands" = c(
+    "Aland Islands",
+    "aland islands",
+    "Åland Islands",
+    "åland islands"
+  ),
+
+  "China" = c(
+    "People's Republic of China",
+    "China, People's Republic",
+    "China"
+  ),
+
+  "Hong Kong SAR China" = c(
+    "Hong Kong, China",
+    "Hong Kong"
+  ),
+
+  "Macao SAR China" = c(
+    "Macau, China",
+    "Macao, China",
+    "Macau",
+    "Macao"
+  ),
+    
+  "Taiwan" = c(
+    x = "Republic of China",
+    x = "Taiwan, Province of China",
+    x = "Taiwan"
+  ),
+
+  "Congo - Brazzaville" = c(
+    "republic of congo",
+    "republic of the congo",
+    "congo, republic of the",
+    "congo, republic",
+    "congo, rep.",
+    "congo-brazzaville",
+    "french congo"
+  ),
+
+  "Congo - Kinshasa" = c(
+    "democratic republic of the congo",
+    "congo, democratic republic of the",
+    "dem rep of the congo",
+    "the democratic republic of congo",
+    "congo, dem. rep.",
+    "dr congo",
+    "drc",
+    "droc",
+    "rdc",
+    "congo-kinshasa",
+    "congo-zaire",
+    "zaire",
+    "belgian congo",
+    "republic of the congo-léopoldville",
+    "congo free state",
+    "D.R. Congo",
+    "DR Congo",
+    "Democratic Republic of Congo"
+  ),
+ 
   "Ireland" = c(
     "Republic of Ireland",
     "Ireland"
-  ), 
-  "South Korea" = c(
-    "Korea, Republic of",
-    "Korea, Rep. of",
-    "Korea, South",
-    "Korea South",
-    "Republic of Korea",
-    "Rep. of Korea",
-    "South Korea"
-  ), 
+  ),
+
+  "Martinique" = c(
+    "France, Martinique",
+    "Martinique, France"
+  ),
+
   "North Korea" = c(
     "Democratic People's Republic of Korea",
     "DPRK",
@@ -36,12 +84,50 @@ variations <- list(
     "Korea, Democratic People's Republic",
     "Korea (the Democratic People's Republic of)",
     "North Korea"
-  ), 
-  "Congo - Kinshasa" = c(
-    "D.R. Congo",
-    "DR Congo",
-    "Democratic Republic of Congo"
-  ), 
+  ),
+
+  "North Macedonia" = c(
+    "fyrom"
+  ),
+
+  "South Africa" = c(
+    "South Africa",
+    "South-Africa"
+  ),
+ 
+  "South Korea" = c(
+    "Korea, Republic of",
+    "Korea, Rep. of",
+    "Korea, South",
+    "Korea South",
+    "Republic of Korea",
+    "Rep. of Korea",
+    "South Korea"
+  ),
+
+
+  "United Arab Emirates" = c(
+    "emirates",
+    "united arab em.",
+    "uae",
+    "u.a.e."
+  ),
+
+  "United Kingdom" = c(
+    "u.k.",
+    "United Kingdom",
+    "The United Kingdom",
+    "United Kingdom of Great Britain",
+    "United Kingdom of Great Britain and Northern Ireland"
+  ),
+ 
+  "United States" = c(
+    "u.s.",
+    "U.S.A.", 
+    "United States", 
+    "USA"
+  ),
+ 
   "United States Minor Outlying Islands (the)" = c(
     "United States Minor Outlying Islands",
     "US Minor Outlying Islands",
@@ -50,7 +136,8 @@ variations <- list(
     "Minor Outlying Islands U.S.",
     "Minor Outlying Islands, US",
     "Minor Outlying Islands, U.S."
-  ), 
+  ),
+ 
   "U.S. Virgin Islands" = c(
     "United States Virgin Islands",
     "US Virgin Islands",
@@ -63,5 +150,25 @@ variations <- list(
     "Virgin Islands U.S.",
     "Virgin Islands (U.S.)",
     "Virgin Islands (US)"
+  ),
+
+  "Yemen" = c(
+    "yemen",
+    "republic of yemen"
+  ),
+
+  "Yemen Arab Republic" = c(
+    'yemen arab republic',
+    'north yemen',
+    'yemen (sana\'a)'
+  ),
+
+  "Yemen People's Republic" = c(
+    'yemen people\'s republic',
+    'people\'s democratic republic of yemen',
+    'south yemen',
+    'democratic yemen',
+    'yemen (aden)'
   )
+
 )
