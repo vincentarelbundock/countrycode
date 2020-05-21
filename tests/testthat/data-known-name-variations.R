@@ -42,7 +42,7 @@ variations <- list(
     "DR Congo",
     "Democratic Republic of Congo"
   ), 
-  "United States Minor Outlying Islands" = c(
+  "United States Minor Outlying Islands (the)" = c(
     "United States Minor Outlying Islands",
     "US Minor Outlying Islands",
     "U.S. Minor Outlying Islands",
@@ -55,9 +55,13 @@ variations <- list(
     "United States Virgin Islands",
     "US Virgin Islands",
     "U.S. Virgin Islands",
+    "Virgin Islands, US",
+    "Virgin Islands, U.S.",
+    "Virgin Islands, (U.S.)",
+    "Virgin Islands, (US)",
     "Virgin Islands US",
     "Virgin Islands U.S.",
-    "Virgin Islands, US",
-    "Virgin Islands, U.S."
+    "Virgin Islands (U.S.)",
+    "Virgin Islands (US)"
   )
 )
