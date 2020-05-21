@@ -6,7 +6,7 @@ cowc_of <- function(name) countrycode(name, 'country.name', 'cowc', warn = TRUE)
 no_warn_cowc_of <- function(name) countrycode(name, 'country.name', 'cowc', warn = FALSE)
 
 test_that('accented characters are properly matched', {
-    #expect_equal(iso3c_of('\u00C5land Islands'), 'ALA')
+    expect_equal(iso3c_of('\u00C5land Islands'), 'ALA')
     expect_equal(iso3c_of('Saint Barth\u00E9lemy'), 'BLM')
     expect_equal(iso3c_of('C\u00F4te d\'Ivoire'), 'CIV')
     expect_equal(iso3c_of('Cura\u00E7ao'), 'CUW')

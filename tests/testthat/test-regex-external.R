@@ -7,7 +7,7 @@ test_that('a variety of country names yield correct iso3c codes', {
     expect_equal(iso3c_of('Afghanistan'), 'AFG')
     expect_equal(iso3c_of('Angola'), 'AGO')
     expect_equal(iso3c_of('Anguilla'), 'AIA')
-    #expect_equal(iso3c_of('åland Islands'), 'ALA')
+    expect_equal(iso3c_of('åland Islands'), 'ALA')
     expect_equal(iso3c_of('Albania'), 'ALB')
     expect_equal(iso3c_of('Andorra'), 'AND')
     expect_equal(iso3c_of('United Arab Emirates'), 'ARE')
