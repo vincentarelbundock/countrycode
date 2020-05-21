@@ -19,5 +19,7 @@ Date: ????-??-??
 Depends:
     R (>= 2.10)
 Suggests:
-    testthat (>= 0.5)
+    testthat,
+    tibble,
+    utf8
 RoxygenNote: 7.1.0

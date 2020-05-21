@@ -26,6 +26,7 @@ If you use `countrycode` in your research, we would be very grateful if you coul
     - [`nomatch`: Fill in missing codes manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually) 
     - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
     - [`warn`: Silence warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings) 
+* [`countryname`: Convert country names from any language](https://github.com/vincentarelbundock/countrycode#countryname-convert-country-names-from-any-language)
 * [Contributions](https://github.com/vincentarelbundock/countrycode#contributions) 
 
 # Why `countrycode`?
@@ -313,6 +314,21 @@ countrycode(df$geo, origin = 'iso2c', destination = 'country.name', custom_match
 ## `warn`: Silence warnings
 
 Use `warn = TRUE` to print out a list of source elements for which no match was found. When the source vector are long country names that need to be matched using regular expressions, there is always a risk that multiple regex will match a given string. When this is the case, `countrycode` assigns a value arbitrarily, but the `warn` argument allows the user to print a list of all strings that were matched many times.
+
+# `countryname`: Convert country names from any language
+
+The function `countryname` tries to convert country names from any language. For example:
+
+```r
+> library(countrycode)
+> x <- c('ジンバブエ', 'Afeganistãu',  'Barbadas', 'Sverige', 'UK',  
++        'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar')
+> countryname(x)
+[1] "Zimbabwe" "Afghanistan" "Barbados" "Sweden" "UK" 
+    "South Georgia & South Sandwich Islands"
+> countryname(x, 'iso3c')
+[1] "ZWE" "AFG" "BRB" "SWE" "GBR" "SGS"
+```
 
 # Contributions
 

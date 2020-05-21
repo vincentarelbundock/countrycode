@@ -6,19 +6,25 @@
 #' extracted from the Unicode Common Locale Data Repository. Second, it applies
 #' `countrycode`'s English regexes to try to match the remaining cases.
 #'
+#' Note that the function works with non-ASCII characters. Please see the
+#' Github page for examples. 
+#'
 #' @param sourcevar Vector which contains the codes or country names to be
 #' converted (character or factor)
 #' @param destination Coding scheme of destination (string such as "iso3c"
 #' enclosed in quotes ""): type `?codelist` for a list of
 #' available codes.
+#' @param warn Prints unique elements from sourcevar for which no match was found
 #'
 #' @export
 #' @aliases countryname
 #' @examples
-#' x <- c('ジンバブエ', 'Afeganistãu',  'Barbadas', 'Sverige', 'UK',
-#'        'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar')
+#' \dontrun{
+#' x <- c('Afaganisitani', 'Barbadas', 'Sverige', 'UK')
 #' countryname(x)
 #' countryname(x, destination = 'iso3c')
+#' }
+#'
 countryname <- function(sourcevar, destination = 'cldr.short.en', warn = FALSE) {
     
     out <- countrycode(sourcevar = sourcevar,
