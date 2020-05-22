@@ -6,21 +6,22 @@ If you use `countrycode` in your research, we would be very grateful if you coul
 
 > Arel-Bundock, Vincent, Nils Enevoldsen, and CJ Yetman, (2018). countrycode: An R package to convert country names and country codes. Journal of Open Source Software, 3(28), 848, https://doi.org/10.21105/joss.00848
 
+<!-- badges: start -->
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
-
 [![Travis-CI Build Status](https://travis-ci.org/vincentarelbundock/countrycode.svg?branch=master)](https://travis-ci.org/vincentarelbundock/countrycode)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/vincentarelbundock/countrycode?branch=master&svg=true)](https://ci.appveyor.com/project/vincentarelbundock/countrycode)
+<!-- badges: end -->
 
 # Table of Contents
 
 * [Why `countrycode`?](https://github.com/vincentarelbundock/countrycode#why-countrycode) 
 * [Installation](https://github.com/vincentarelbundock/countrycode#installation) 
 * [Supported codes](https://github.com/vincentarelbundock/countrycode#why-countrycode) 
-* [Examples](https://github.com/vincentarelbundock/countrycode#examples) 
+* [`countrycode`](https://github.com/vincentarelbundock/countrycode#countrycode) 
     - [Convert of a single name or code](https://github.com/vincentarelbundock/countrycode#convert-a-single-name-or-code) 
     - [Vectors and data.frames](https://github.com/vincentarelbundock/countrycode#vectors-and-data.frames) 
     - [Flags](https://github.com/vincentarelbundock/countrycode#flags) 
     - [Country names in 600+ different languages and formats](https://github.com/vincentarelbundock/countrycode#country-names-in-600-different-languages-and-formats) 
-* [Extra](https://github.com/vincentarelbundock/countrycode#extra)
     - [`custom_dict`: American states](https://github.com/vincentarelbundock/countrycode#custom_dict-american-states) 
     - [`custom_dict`: the `ISOcodes` package](https://github.com/vincentarelbundock/countrycode#custom_dict-the-isocodes-package)
     - [`nomatch`: Fill in missing codes manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually) 
@@ -82,7 +83,7 @@ To get an up-to-date list of supported country codes, install the package and ty
 * World Values Survey
 * Unicode symbols (flags)
 
-# Examples
+# `countrycode`
 
 ## Convert a single name or code
 
@@ -206,8 +207,6 @@ To see a full list of country name variants available, inspect this data.frame:
 5    cldr.name.ar الأقاليم الجنوبية الفرنسية
 6 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية
 ```
-
-# Extra
 
 ## `custom_dict`: American states
 

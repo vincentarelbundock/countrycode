@@ -13,3 +13,4 @@ revdep*
 ^\.Rproj\.user$
 .here
 ^CRAN-RELEASE$
+^appveyor\.yml$

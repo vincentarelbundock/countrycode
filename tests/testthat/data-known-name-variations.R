@@ -1,34 +1,13 @@
 variations <- list(
-  "Åland Islands" = c(
-    "Aland Islands",
-    "aland islands",
-    "Åland Islands",
-    "åland islands"
-  ),
 
-  "China" = c(
-    "People's Republic of China",
-    "China, People's Republic",
-    "China"
-  ),
 
-  "Hong Kong SAR China" = c(
-    "Hong Kong, China",
-    "Hong Kong"
-  ),
+  #"Åland Islands" = c(
+    #"Aland Islands",
+    #"aland islands",
+    #"Åland Islands",
+    #"åland islands"
+  #),
 
-  "Macao SAR China" = c(
-    "Macau, China",
-    "Macao, China",
-    "Macau",
-    "Macao"
-  ),
-    
-  "Taiwan" = c(
-    x = "Republic of China",
-    x = "Taiwan, Province of China",
-    x = "Taiwan"
-  ),
 
   "Congo - Brazzaville" = c(
     "republic of congo",
@@ -54,12 +33,38 @@ variations <- list(
     "congo-zaire",
     "zaire",
     "belgian congo",
-    "republic of the congo-léopoldville",
+    #"republic of the congo-léopoldville",
     "congo free state",
     "D.R. Congo",
     "DR Congo",
     "Democratic Republic of Congo"
   ),
+
+
+  "China" = c(
+    "People's Republic of China",
+    "China, People's Republic",
+    "China"
+  ),
+
+  "Hong Kong SAR China" = c(
+    "Hong Kong, China",
+    "Hong Kong"
+  ),
+
+  "Macao SAR China" = c(
+    "Macau, China",
+    "Macao, China",
+    "Macau",
+    "Macao"
+  ),
+    
+  "Taiwan" = c(
+    x = "Republic of China",
+    x = "Taiwan, Province of China",
+    x = "Taiwan"
+  ),
+
  
   "Ireland" = c(
     "Republic of Ireland",
