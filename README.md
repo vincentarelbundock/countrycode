@@ -1,16 +1,16 @@
 # countrycode <img src="https://user-images.githubusercontent.com/987057/82851555-2934d000-9ece-11ea-9d33-42fd9e708a38.png" align="right" alt="" width="120" />
 
-`countrycode` standardizes country names, converts them into ~40 different coding schemes, and assigns region descriptors. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
-
-If you use `countrycode` in your research, we would be very grateful if you could cite our paper:
-
-> Arel-Bundock, Vincent, Nils Enevoldsen, and CJ Yetman, (2018). countrycode: An R package to convert country names and country codes. Journal of Open Source Software, 3(28), 848, https://doi.org/10.21105/joss.00848
-
 <!-- badges: start -->
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
 [![Travis-CI Build Status](https://travis-ci.org/vincentarelbundock/countrycode.svg?branch=master)](https://travis-ci.org/vincentarelbundock/countrycode)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/vincentarelbundock/countrycode?branch=master&svg=true)](https://ci.appveyor.com/project/vincentarelbundock/countrycode)
 <!-- badges: end -->
+
+`countrycode` standardizes country names, converts them into ~40 different coding schemes, and assigns region descriptors. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
+
+If you use `countrycode` in your research, we would be very grateful if you could cite our paper:
+
+> Arel-Bundock, Vincent, Nils Enevoldsen, and CJ Yetman, (2018). countrycode: An R package to convert country names and country codes. Journal of Open Source Software, 3(28), 848, https://doi.org/10.21105/joss.00848
 
 # Table of Contents
 
