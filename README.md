@@ -1,4 +1,4 @@
-# R: countrycode
+# countrycode <img src="https://user-images.githubusercontent.com/987057/82851555-2934d000-9ece-11ea-9d33-42fd9e708a38.png" align="right" alt="" width="120" />
 
 `countrycode` standardizes country names, converts them into ~40 different coding schemes, and assigns region descriptors. Scroll down for more details or visit the [countrycode CRAN page](http://cran.r-project.org/web/packages/countrycode/index.html)
 
