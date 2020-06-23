@@ -14,3 +14,6 @@ revdep*
 .here
 ^CRAN-RELEASE$
 ^appveyor\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

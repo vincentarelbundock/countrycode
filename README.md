@@ -179,7 +179,7 @@ gt(dat)
 
 Which produces this file: 
 
-![](https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/flag_table.png)
+![](https://user-images.githubusercontent.com/987057/85434007-5cad5d80-b553-11ea-8a19-47c21965013d.png)
 
 Note that embedding unicode characters in `R` graphics is possible, but it can be tricky. If your output looks like `\U0001f1e6\U0001f1f6`, then you could try feeding it to this function: `utf8::utf8_print()`. That should cover a lot of cases without dipping into the complexity of graphics devices. As a rule of thumb, if your output looks like `□□□□` (boxes), things tend to get more complicated. In that case, you'll have to think about different output devices, file viewers, and/or file formats (e.g., 'SVG' or 'HTML').
 

@@ -1,5 +1,6 @@
-Version 1.2.0 (????-??-??)
---------------------------
+# countrycode 1.2.0.9000
+
+# countrycode 1.2.0
 
 * New 'countryname' function converts country names from any language (thanks to @davidsjoberg)
 * New `guess_field` function guesses which code a vector uses
@@ -11,18 +12,15 @@ Version 1.2.0 (????-??-??)
 * Added IANA ccTLD codes
 * Improved various regexes
 
-Version 1.1.3 (2020-05-07)
---------------------------
+# countrycode 1.1.3 
 
 * Added Demographic and Health Surveys (thanks to @mcooper)
 
-Version 1.1.2 (2020-04-22)
---------------------------
+# countrycode 1.1.2 
 
 * Updated World Bank regions with manual additions
 
-Version 1.1.1 (2020-02-08)
---------------------------
+# countrycode 1.1.1 
 
 * Bug: Typo prevented users for using "p4n" as origin code
 * Fixed bad icao.region codes (Thanks to @espinielli)
@@ -30,8 +28,7 @@ Version 1.1.1 (2020-02-08)
 * Added SOM to wb code (Thanks to Fabian Besche)
 * Added Vietnam to codelist_panel
 
-Version 1.1.0 (2018-10-26)
---------------------------
+# countrycode 1.1.0 
 
 * Gleditsch and Ward codes (Thanks to Altaf Ali)
 * V-Dem 8 country codes (panel and cross-section)
@@ -40,8 +37,7 @@ Version 1.1.0 (2018-10-26)
 * Scraping function for UN M49 codes. (Thanks to @cjyetman and @emilBeBri)
 * `nomatch = NULL` now works as expected when sourcvar is a factor (#192 thanks to @jhuovari for reporting)
 
-Version 1.00.0 (2018-02-08)
----------------------------
+# countrycode 1.0.0 
 
 * Huge thanks to @cjyetman for his incredible work on this major release!
 * Country-Year (panel) conversion dictionary
@@ -50,8 +46,7 @@ Version 1.00.0 (2018-02-08)
 * Russia eurocontrol region fix
 * CLRD country names
 
-Version 0.19.1 (2017-02-06)
----------------------------
+# countrycode 0.19.1 
 
 * Move to Semantic Versioning 2.0.0
   http://semver.org/#semantic-versioning-specification-semver
@@ -60,8 +55,7 @@ Version 0.19.1 (2017-02-06)
 * Removed lookbehind from Ireland regex for javascript compatibility (request by plotly)
 * Added nomatch argument
 
-Version 0.19 (2017-02-06)
--------------------------
+# countrycode 0.19 
 
 New features
 
@@ -98,15 +92,13 @@ Misc:
 * Better docs, examples, and README
 * Taiwan FAO code is 214 (Thanks to Matthieu Stigler)
 
-Version 0.18 (2014-12-17)
--------------------------
+# countrycode 0.18 
 
 * Nils Enevoldsen did wonderful work refactoring most of the regex in the dictionary.
 * Nils also added a bunch of tests. Thanks!
 * Added Tokelau
 
-Version 0.17 (2014-07-15)
--------------------------
+# countrycode 0.17 
 
 * Added International Olympic Committee codes (Thanks to Devon Meunier)
 * Bug: fips04 -> fips104 (Thanks to Florian Hollenbach)
@@ -116,13 +108,11 @@ Version 0.17 (2014-07-15)
 * Regex fix to work better with Database of Political Insitutions (Thanks to Christopher Gandrud)
 * Avoids confusion with Eq Guinea (Thanks to Christopher Gandrud)
 
-Version 0.16 (2013-08-20)
--------------------------
+# countrycode 0.16 
 
 * Bug: NA cowc -> ABW (Thanks to Jon Mellon)
 
-Version 0.15 (2013-07-21)
--------------------------
+# countrycode 0.15 
 
 * Regex fixes
     - Guinea
@@ -135,49 +125,41 @@ Version 0.15 (2013-07-21)
     - Korea Somalia
     - Oman
 
-Version 0.14 (2013-05-30)
--------------------------
+# countrycode 0.14 
 
 * sint maarten typo
 
-Version 0.13 (2013-03-19)
--------------------------
+# countrycode 0.13 
 
 * add sint maartin & curacao (thanks johnb30)
 
-Version 0.12 (2013-03-08)
--------------------------
+# countrycode 0.12 
 
 * Missing wb codes filled-in using iso3c
 * Added South Sudan
 * Thanks to Rod Alence!
 
-Version 0.11 (2013-02-12)
--------------------------
+# countrycode 0.11 
 
 * Vietnam cown
 * Regexes:
     - Dominica / Dominican Republic
     - New Zealand / Aland
 
-Version 0.10 (2013-01-20)
--------------------------
+# countrycode 0.10 
 
 * De-duplicate Sudan
 * Niger vs. Nigeria regex
 
-Version 0.9 (2012-12-26)
-------------------------
+# countrycode 0.9 
 
 * Fixed regexes: Mali, Korea, Oman, Dominica
 
-Version 0.8 (2012-06-26)
-------------------------
+# countrycode 0.8 
 
 * Added World Bank (wb) country codes. Very similar, but slightly different from iso3c.
 
-Version 0.7 (2012-06-01)
-------------------------
+# countrycode 0.7
 
 * Removed useless functions countrycode.nomatch and countryframe
 * Fixed 2 Congo-related problems

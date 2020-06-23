@@ -50,6 +50,8 @@
 #' @export
 #' @aliases countrycode
 #' @examples
+#' library(countrycode)
+#'
 #' # ISO to Correlates of War
 #' countrycode(c('USA', 'DZA'), origin = 'iso3c', destination = 'cown')
 #'
