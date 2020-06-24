@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Convert Country Names and Country Codes • countrycode</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/readable/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -52,7 +52,14 @@
   <a href="news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/vincentarelbundock/countrycode/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -120,7 +127,7 @@
 <h1 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h1>
 <p>From the R console, type:</p>
-<div class="sourceCode" id="cb1"><pre class="r">install.packages("countrycode")``</pre></div>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"countrycode"</span>)</pre></div>
 <p>To install the latest development version, you can use the <code>remotes</code> package:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">remotes</span>)
 <span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">'vincentarelbundock/countrycode'</span>)</pre></div>
@@ -395,6 +402,10 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=countrycode">https://​cloud.r-project.org/​package=countrycode</a>
 </li>
+<li>Browse source code at <br><a href="https://github.com/vincentarelbundock/countrycode/">https://​github.com/​vincentarelbundock/​countrycode/​</a>
+</li>
+<li>Report a bug at <br><a href="https://github.com/vincentarelbundock/countrycode/issues">https://​github.com/​vincentarelbundock/​countrycode/​issues</a>
+</li>
 </ul>
 </div>
 <div class="license">
@@ -423,6 +434,7 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 <li><a href="https://doi.org/10.21105/joss.00848"><img src="http://joss.theoj.org/papers/10.21105/joss.00848/status.svg" alt="DOI"></a></li>
 <li><a href="https://travis-ci.org/vincentarelbundock/countrycode"><img src="https://travis-ci.org/vincentarelbundock/countrycode.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://ci.appveyor.com/project/vincentarelbundock/countrycode"><img src="https://ci.appveyor.com/api/projects/status/github/vincentarelbundock/countrycode?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://github.com/vincentarelbundock/countrycode/actions"><img src="https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 </ul>
 </div>
 </div>
