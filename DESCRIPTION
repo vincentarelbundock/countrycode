@@ -15,6 +15,7 @@ Description: Standardize country names, convert them into one of
     assign region descriptors.
 Version: 1.2.0
 URL: https://vincentarelbundock.github.io/countrycode
+BugReports: https://github.com/vincentarelbundock/countrycode/issues
 Date: 2020-05-22
 Depends:
     R (>= 2.10)
