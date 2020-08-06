@@ -66,7 +66,7 @@ To get an up-to-date list of supported country codes, install the package and ty
 * Continent and region identifiers.
 * Correlates of War (numeric and character)
 * European Central Bank
-* Euro-control (aviation)
+* [EUROCONTROL](https://www.eurocontrol.int) - The European Organisation for the Safety of Air Navigation
 * Eurostat
 * Federal Information Processing Standard (FIPS)
 * Food and Agriculture Organization of the United Nations
