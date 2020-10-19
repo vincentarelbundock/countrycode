@@ -1,5 +1,7 @@
 # countrycode 1.2.0.9000
 
+* regex improvements
+
 # countrycode 1.2.0
 
 * New 'countryname' function converts country names from any language (thanks to @davidsjoberg)

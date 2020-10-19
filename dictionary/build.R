@@ -13,6 +13,7 @@ datasets <- datasets[datasets != 'dictionary/data_regex.csv']
 # missing scrapers and datasets
 tokens_datasets <- str_replace_all(datasets, '.*data_|.csv', '')
 tokens_scrapers <- str_replace_all(scrapers, '.*get_|.R', '')
+tokens_scrapers <- setdiff(tokens_scrapers, "countryname_dict")
 
 if (length(setdiff(tokens_scrapers, tokens_datasets)) > 0) {
     msg <- paste(setdiff(tokens_scrapers, tokens_datasets), collapse = ', ')

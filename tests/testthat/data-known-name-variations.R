@@ -79,6 +79,7 @@ variations <- list(
   "North Korea" = c(
     "Democratic People's Republic of Korea",
     "DPRK",
+    "Korea, Dem. Rep.",
     "DPR Korea",
     "D.P.R. Korea",
     "D.P.R Korea",

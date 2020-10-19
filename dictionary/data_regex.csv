@@ -64,7 +64,7 @@ Curacao,^(?!.*bonaire).*\bcura(c|ç)ao,Curacao,^(?!.*bonaire).*\bcura(c|ç)ao
 Cyprus,cyprus,Zypern,zypern
 Czech Republic,^(?=.*rep).*czech|czechia|bohemia,Tschechische Republik,^(?!.*slowak)tschechi.*
 Czechoslovakia,czechoslovakia,Tschechoslowakei,tschechoslowakei|^csr$
-Democratic People's Republic of Korea,dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*peo.*rep.*)|(d.p.r|dpr|north|dem.*peo.*rep.*).+korea,"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk
+Democratic People's Republic of Korea,dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*rep.*)|(d.p.r|dpr|north|dem.*rep.*).+korea,"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk
 Democratic Republic of the Congo,\bdem.*congo|congo.*\bdem|congo.*\bd[\.]?r|\bd[\.]?r.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Demokratische Republik Kongo,\bdem.*kongo|kongo.*\bdem|kongo.*\bdr|\bdr.*kongo|belgien.?kongo|kongo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc
 Denmark,denmark,Dänemark,d(a|ae|ä)nemark
 Djibouti,djibouti,Dschibuti,dschibuti
@@ -199,7 +199,7 @@ Portugal,portugal,Portugal,portugal
 Prussia,prussia,NA,NA
 Puerto Rico,puerto.?rico,Puerto Rico,puerto.?rico
 Qatar,qatar,Katar,(q|k)atar
-Republic of Korea,^(?!.*d.*p.*r)(?!.*democrat)(?!.*people)(?!.*north).*\bkorea(?!.*d.*p.*r),"Korea, Republik von",^(?!.*demokrat)(?!.*volk)(?!.*nord).*korea
+Republic of Korea,^(?!.*d.*p.*r)(?!.*democrat)(?!.*dem.*rep)(?!.*people)(?!.*north).*\bkorea(?!.*d.*p.*r)(?!.*dem.*rep),"Korea, Republik von",^(?!.*demokrat)(?!.*volk)(?!.*nord).*korea
 Republic of Moldova,moldov|b(a|e)ssarabia,Republik Moldau,moldau|moldov|b(a|e)ssarabia
 Reunion,r(e|é)union,Reunion,r(e|é)union
 Romania,r(o|u|ou)mania,Rumänien,rum(a|ä)nien
