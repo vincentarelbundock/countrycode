@@ -1,27 +1,27 @@
-fso.number,abbreviation,canton.name,canton.name.regex,canton.name.de,canton.name.fr,canton.name.it,canton.name.rm
-1,ZH,Zürich,(Z|T)(u|ü)ri(ch|go|tg),Zürich,Zurich,Zurigo,Turitg
-2,BE,Bern,Bern(e|a)?,Bern,Berne,Berna,Berna
-3,LU,Luzern,Lu(z|c)ern(e|a)?,Luzern,Lucerne,Lucerna,Lucerna
-4,UR,Uri,Uri,Uri,Uri,Uri,Uri
-5,SZ,Schwyz,Schwyz|Svi(tto|z),Schwyz,Svitto,Svitto,Sviz
-6,OW,Obwalden,Ob(w|v)ald((e|o)n?)?|Sursilvania,Obwalden,Obwald,Obvaldo,Sursilvania
-7,NW,Nidwalden,Nid(w|v)ald((e|o)n?)?|Sutsilvania,Nidwalden,Nidwald,Nidvaldo,Sutsilvania
-8,GL,Glarus,Glar(i|o|u)(s|na),Glarus,Glaris,Glarona,Glaruna
-9,ZG,Zug,Z(u|ou)go?,Zug,Zoug,Zugo,Zug
-10,FR,Fribourg,Fre?ib(ou|u)rgo?,Freiburg,Fribourg,Friburgo,Friburg
-11,SO,Solothurn,Sol(oth?urn|eure|etta),Solothurn,Soleure,Soletta,Soloturn
-12,BS,Basel-Stadt,B(a|â)(sel|silea|le)(\W|-)(Stadt|Ville|Cit+(a|à)d?),Basel-Stadt,Bâle-Ville,Basilea Città,Basilea-Citad
-13,BL,Basel-Landschaft,B(a|â)(sel|silea|le)(\W|-)(Landschaft|Ch?ampagn(a|e)),Basel-Landschaft,Bâle-Campagne,Basilea Campagna,Basilea-Champagna
-14,SH,Schaffhausen,Sc(h|i)affh?(a|o)?us(a|e)n?,Schaffhausen,Schaffhouse,Sciaffusa,Schaffusa
-15,AR,Appenzell Ausserrhoden,Appenzello?\W(Ausserrhoden|Rhodes-Extérieures|Esterno|Dadora),Appenzell Ausserrhoden,Appenzell Rhodes-Extérieures,Appenzello Esterno,Appenzell Dadora
-16,AI,Appenzell Innerrhoden,Appenzello?\W(Innerrhoden|Rhodes-Intérieures|Interno|Dadens),Appenzell Innerrhoden,Appenzell Rhodes-Intérieures,Appenzello Interno,Appenzell Dadens
-17,SG,St. Gallen,(S(t|k)\.|Saint|Sankt|S(a|o)n)(\W|-)Ga(ll(en|o)?|gl),St. Gallen,Saint-Gall,San Gallo,Son Gagl
-18,GR,Grischun,Gr(aubünden|isons|igioni|ischun),Graubünden,Grisons,Grigioni,Grischun
-19,AG,Aargau,Aa?rg(au|ou)(ia|ie)?,Aargau,Argovie,Argovia,Argovia
-20,TG,Thurgau,Th?urg(au|ov)(ia|ie)?,Thurgau,Thurgovie,Turgovia,Turgovia
-21,TI,Ticino,T(essin|icino),Tessin,Tessin,Ticino,Tessin
-22,VD,Vaud,Vau?d|Waadt,Waadt,Vaud,Vaud,Vad
-23,VS,Valais,(V|W)al+(e|i|ai)se?,Wallis,Valais,Vallese,Vallais
-24,NE,Neuchâtel,Neuchâtel|Neuenburg|Neocastello,Neuenburg,Neuchâtel,Neocastello,Neuchâtel
-25,GE,Genève,Genf|G(e|i)n(e|è)vr?(a|e),Genf,Genève,Ginevra,Genevra
-26,JU,Jura,(J|G)i?ura,Jura,Jura,Giura,Giura
+﻿fso.number,iso,abbreviation,canton.name,canton.name.regex,canton.name.de,canton.name.fr,canton.name.it,canton.name.rm
+1,CH-ZH,ZH,Zürich,(Z|T)(u|ü)ri(ch|go|tg),Zürich,Zurich,Zurigo,Turitg
+2,CH-BE,BE,Bern,Bern(e|a)?,Bern,Berne,Berna,Berna
+3,CH-LU,LU,Luzern,Lu(z|c)ern(e|a)?,Luzern,Lucerne,Lucerna,Lucerna
+4,CH-UR,UR,Uri,Uri,Uri,Uri,Uri,Uri
+5,CH-SZ,SZ,Schwyz,Schwyt?z|Svi(tto|z),Schwyz,Schwytz,Svitto,Sviz
+6,CH-OW,OW,Obwalden,Ob(w|v)ald((e|o)n?)?|Sursilvania,Obwalden,Obwald,Obvaldo,Sursilvania
+7,CH-NW,NW,Nidwalden,Nid(w|v)ald((e|o)n?)?|Sutsilvania,Nidwalden,Nidwald,Nidvaldo,Sutsilvania
+8,CH-GL,GL,Glarus,Glar(i|o|u)(s|na),Glarus,Glaris,Glarona,Glaruna
+9,CH-ZG,ZG,Zug,Z(u|ou)go?,Zug,Zoug,Zugo,Zug
+10,CH-FR,FR,Fribourg,Fre?ib(ou|u)rgo?,Freiburg,Fribourg,Friburgo,Friburg
+11,CH-SO,SO,Solothurn,Sol(oth?urn|eure|etta),Solothurn,Soleure,Soletta,Soloturn
+12,CH-BS,BS,Basel-Stadt,B(a|â)(sel|silea|le)(\W|-)(Stadt|Ville|Cit+(a|à)d?),Basel-Stadt,Bâle-Ville,Basilea Città,Basilea-Citad
+13,CH-BL,BL,Basel-Landschaft,B(a|â)(sel|silea|le)(\W|-)(Landschaft|Ch?ampagn(a|e)),Basel-Landschaft,Bâle-Campagne,Basilea Campagna,Basilea-Champagna
+14,CH-SH,SH,Schaffhausen,Sc(h|i)affh?(a|o)?us(a|e)n?,Schaffhausen,Schaffhouse,Sciaffusa,Schaffusa
+15,CH-AR,AR,Appenzell Ausserrhoden,Appenzello?\W(Ausserrhoden|Rhodes-Extérieures|Esterno|Dadora),Appenzell Ausserrhoden,Appenzell Rhodes-Extérieures,Appenzello Esterno,Appenzell Dadora
+16,CH-AI,AI,Appenzell Innerrhoden,Appenzello?\W(Innerrhoden|Rhodes-Intérieures|Interno|Dadens),Appenzell Innerrhoden,Appenzell Rhodes-Intérieures,Appenzello Interno,Appenzell Dadens
+17,CH-SG,SG,St. Gallen,(S(t|k)(\.|-)|Saint|Sankt|S(a|o)n)(\W|-)Ga(ll(en|o)?|gl),St. Gallen,Saint-Gall,San Gallo,Son Gagl
+18,CH-GR,GR,Grischun,Gr(aub(ü|ue)nden|isons|igioni|ischun),Graubünden,Grisons,Grigioni,Grischun
+19,CH-AG,AG,Aargau,Aa?rg(au|ou)(ia|ie)?,Aargau,Argovie,Argovia,Argovia
+20,CH-TG,TG,Thurgau,Th?urg(au|ov)(ia|ie)?,Thurgau,Thurgovie,Turgovia,Turgovia
+21,CH-TI,TI,Ticino,T(essin|icino),Tessin,Tessin,Ticino,Tessin
+22,CH-VD,VD,Vaud,Vau?d|Waadt,Waadt,Vaud,Vaud,Vad
+23,CH-VS,VS,Valais,(V|W)al+(e|i|ai)se?,Wallis,Valais,Vallese,Vallais
+24,CH-NE,NE,Neuchâtel,Neuch(â|a)tel|Neuenburg|Neocastello,Neuenburg,Neuchâtel,Neocastello,Neuchâtel
+25,CH-GE,GE,Genève,Genf|G(e|i)n(e|è)vr?(a|e),Genf,Genève,Ginevra,Genevra
+26,CH-JU,JU,Jura,(J|G)i?ura,Jura,Jura,Giura,Giura
