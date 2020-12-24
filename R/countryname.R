@@ -25,7 +25,7 @@
 #' countryname(x, destination = 'iso3c')
 #' }
 #'
-countryname <- function(sourcevar, destination = 'cldr.short.en', warn = FALSE) {
+countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
     
     out <- countrycode(sourcevar = sourcevar,
                        origin = 'country.name.alt',

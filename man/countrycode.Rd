@@ -74,6 +74,8 @@ by one row in any given year. From there, it is just a matter of using `R`'s
 `merge` function to combine different datasets which use different codes.
 }
 \examples{
+library(countrycode)
+
 # ISO to Correlates of War
 countrycode(c('USA', 'DZA'), origin = 'iso3c', destination = 'cown')
 

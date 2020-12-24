@@ -1,6 +1,7 @@
 # countrycode 1.2.0.9000
 
 * regex improvements
+* countryname(warn=TRUE) by default
 
 # countrycode 1.2.0
 

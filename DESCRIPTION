@@ -23,4 +23,4 @@ Suggests:
     testthat,
     tibble,
     utf8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1

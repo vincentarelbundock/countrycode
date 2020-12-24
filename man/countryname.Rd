@@ -4,7 +4,7 @@
 \alias{countryname}
 \title{Convert country names in any language to another name or code}
 \usage{
-countryname(sourcevar, destination = "cldr.short.en", warn = FALSE)
+countryname(sourcevar, destination = "cldr.short.en", warn = TRUE)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be
