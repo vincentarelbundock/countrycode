@@ -2,7 +2,6 @@
 
 <!-- badges: start -->
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
-[![Travis-CI Build Status](https://travis-ci.org/vincentarelbundock/countrycode.svg?branch=master)](https://travis-ci.org/vincentarelbundock/countrycode)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/vincentarelbundock/countrycode?branch=master&svg=true)](https://ci.appveyor.com/project/vincentarelbundock/countrycode)
 [![R build status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/countrycode)
