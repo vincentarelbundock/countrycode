@@ -2,6 +2,7 @@
 
 * regex improvements
 * countryname(warn=TRUE) by default
+* better class checks
 
 # countrycode 1.2.0
 

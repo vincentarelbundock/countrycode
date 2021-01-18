@@ -143,7 +143,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         stop('Destination code not supported by countrycode or present in the user-supplied custom_dict.')
     }
 
-    if(class(dictionary) != 'data.frame'){
+    if(!inherits(dictionary, "data.frame")) {
         stop("Dictionary must be a data frame or tibble with codes as columns.")
     }
 
@@ -161,7 +161,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
 
     # Case-insensitive matching
     if(is.null(custom_dict)){ # only for built-in dictionary
-        if((class(origin_vector) == 'character') & !grepl('country', origin)){
+        if(inherits(origin_vector, 'character') & !grepl('country', origin)){
             origin_vector = toupper(origin_vector)
         }
     }
