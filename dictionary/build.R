@@ -48,13 +48,22 @@ for (i in seq_along(datasets)) {
 # Namibia iso2c is not missing
 dat$iso$iso2c[dat$iso$iso.name.en == 'Namibia'] <- 'NA'
 
+# Namibia eurostat is not missing
+dat$eurostat$eurostat[dat$eurostat$country.name.en.regex == 'namibia'] <- 'NA'
+
+# Namibia genc2c is not missing
+dat$genc$genc2c[dat$genc$genc3c == 'NAM'] <- 'NA'
+
+# Namibia wb_api2c is not missing
+dat$world_bank_api$wb_api2c[dat$world_bank_api$wb_api3c == 'NAM'] <- 'NA'
+
 
 ###################
 #  cross-section  #
 ###################
 
 idx <- sapply(dat, function(x) !'year' %in% names(x))
-cs <- dat[idx] %>% 
+cs <- dat[idx] %>%
       reduce(left_join, by = 'country.name.en.regex')
 
 # sanity check
@@ -90,7 +99,7 @@ pan <- pan[idx,]
 tmp <- pan %>%
        arrange(country.name.en.regex, year) %>%
        group_by(country.name.en.regex) %>%
-       mutate_at(vars(-group_cols()), na.locf, na.rm = FALSE) %>% 
+       mutate_at(vars(-group_cols()), na.locf, na.rm = FALSE) %>%
        filter(year == max(year)) %>%
        # arbitrary choices
        mutate(p4n = ifelse(p4.name == 'Prussia', NA, p4n),
@@ -99,7 +108,7 @@ tmp <- pan %>%
               p4c = ifelse(p4.name == 'Serbia and Montenegro', NA, p4c),
               vdem = ifelse(vdem.name == 'Czechoslovakia', NA, vdem))
 
-cs <- cs %>% 
+cs <- cs %>%
       left_join(tmp, by = 'country.name.en.regex') %>%
       select(-year)
 
@@ -115,7 +124,7 @@ cs$country.name <- NULL
 
 # merge cs into pan
 idx <- c('country.name.en.regex', setdiff(colnames(cs), colnames(pan)))
-pan <- pan %>% 
+pan <- pan %>%
        left_join(cs[, idx], by = 'country.name.en.regex') %>%
        select(-matches('name$|cldr'))
 
