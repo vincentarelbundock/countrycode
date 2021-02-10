@@ -3,7 +3,7 @@
 * regex improvements
 * countryname(warn=TRUE) by default
 * better class checks
-* Fixed codes for Namibia: eurostat, genc2c, wb_api2c
+* Fixed codes for Namibia: eurostat, genc2c, wb_api2c, ecb
 
 # countrycode 1.2.0
 

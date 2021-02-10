@@ -57,6 +57,8 @@ dat$genc$genc2c[dat$genc$genc3c == 'NAM'] <- 'NA'
 # Namibia wb_api2c is not missing
 dat$world_bank_api$wb_api2c[dat$world_bank_api$wb_api3c == 'NAM'] <- 'NA'
 
+# Namibia ecb is not missing
+dat$ecb$ecb[dat$ecb$country.name.en.regex == 'namibia'] <- 'NA'
 
 ###################
 #  cross-section  #
