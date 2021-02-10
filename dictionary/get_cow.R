@@ -19,5 +19,5 @@ out <- full_join(codes, panel, by = c('ccode', 'stateabb')) %>%
        filter((year != 1990) | (cowc != 'GFR')) %>% # Germany vs. West Germany
        unique # duplicates in original files
 
-out %>% write_csv('dictionary/data_cow.csv')
+out %>% write_csv('dictionary/data_cow.csv', na = "")
 

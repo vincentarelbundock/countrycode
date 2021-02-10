@@ -38,7 +38,7 @@ dat$regex <- read_csv('dictionary/data_regex.csv', col_types = cols(), progress 
 message('Load:')
 for (i in seq_along(datasets)) {
     message('  ', tokens_datasets[i])
-    tmp <- read_csv(datasets[i], col_types = cols(), progress = FALSE) %>%
+    tmp <- read_csv(datasets[i], col_types = cols(), na = "", progress = FALSE) %>%
            mutate(country.name.en.regex = CountryToRegex(country)) %>%
            select(-country)
     SanityCheck(tmp)

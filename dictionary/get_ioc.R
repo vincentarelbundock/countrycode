@@ -19,4 +19,4 @@ ioc = data.frame(country, ioc) %>%
              country = ifelse(country == 'Éthiopie', 'Ethiopia', country),
              country = ifelse(country == 'Dominique', 'Dominica', country))
 
-ioc %>% write_csv('dictionary/data_ioc.csv')
+ioc %>% write_csv('dictionary/data_ioc.csv', na = "")

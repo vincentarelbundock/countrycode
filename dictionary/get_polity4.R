@@ -22,4 +22,4 @@ p4 <- read_excel(tmpxls) %>%
              (year != 1945) | (p4c != 'GFR'), # Germany vs. West Germany
              (year != 1990) | (p4c != 'GFR')) # Germany vs. West Germany
 
-p4 %>% write_csv('dictionary/data_polity4.csv')
+p4 %>% write_csv('dictionary/data_polity4.csv', na = "")

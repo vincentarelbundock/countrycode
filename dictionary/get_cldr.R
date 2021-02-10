@@ -94,4 +94,4 @@ save(cldr_examples, file = 'data/cldr_examples.rda', compress='xz', version=2)
 ##########
 
 cldr %>% mutate(country = cldr.name.en) %>%
-         write_csv('dictionary/data_cldr.csv')
+         write_csv('dictionary/data_cldr.csv', na = "")

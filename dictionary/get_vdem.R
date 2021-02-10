@@ -15,4 +15,4 @@ vdem <- readRDS('dictionary/data_raw/data_vdem_v8_april2018.rds') %>%
                (year != 1948) | (country_name != 'Palestine/Gaza')) %>%
         select(country = country_name, vdem.name = country_name, vdem = country_id, year)
 
-vdem %>% write_csv('dictionary/data_vdem.csv')
+vdem %>% write_csv('dictionary/data_vdem.csv', na = "")

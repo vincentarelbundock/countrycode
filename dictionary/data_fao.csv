@@ -71,12 +71,12 @@ Indonesia,101,116
 Austria,11,18
 Puerto Rico,177,200
 Réunion,182,206
-Saint Barthélemy,NA,NA
+Saint Barthélemy,,
 "Saint Helena, Ascension and Tristan da Cunha",187,207
-Saint-Martin (French Part),NA,NA
+Saint-Martin (French Part),,
 Saint Pierre and Miquelon,190,210
-Sint Maarten (Dutch Part),NA,NA
-South Georgia and the South Sandwich Islands,NA,228
+Sint Maarten (Dutch Part),,
+South Georgia and the South Sandwich Islands,,228
 Svalbard and Jan Mayen Islands,260,234
 Turks and Caicos Islands,224,251
 United States Virgin Islands,240,258
@@ -157,18 +157,18 @@ New Zealand,156,179
 Saint Lucia,189,209
 Saint Vincent and the Grenadines,191,211
 Spain,203,229
-Åland Islands,NA,NA
+Åland Islands,,
 American Samoa,5,5
 Anguilla,258,9
 Antarctica,30,10
 Aruba,22,14
 Cocos (Keeling) Islands,43,56
-Curaçao,NA,NA
+Curaçao,,
 Greenland,85,98
 Guadeloupe,87,100
-Guernsey,NA,104
-Heard and McDonald Islands,NA,109
-US Minor Outlying Islands,NA,NA
+Guernsey,,104
+Heard and McDonald Islands,,109
+US Minor Outlying Islands,,
 Togo,217,243
 Tonga,219,245
 the United Arab Emirates,225,255
@@ -186,8 +186,8 @@ Lebanon,121,141
 Lesotho,122,142
 Latvia,119,140
 Tokelau,218,244
-"Bonaire, Sint Eustatius and Saba",NA,NA
-Bouvet Island,NA,36
+"Bonaire, Sint Eustatius and Saba",,
+Bouvet Island,,36
 the Syrian Arab Republic,212,238
 Tunisia,222,248
 Turkey,223,249
@@ -228,7 +228,7 @@ Wallis and Futuna Islands,243,266
 Western Sahara,205,268
 Bermuda,17,30
 Vanuatu,155,262
-Taiwan Province of China,214,NA
+Taiwan Province of China,214,
 Tajikistan,208,239
 Thailand,216,240
 Trinidad and Tobago,220,246

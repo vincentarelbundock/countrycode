@@ -3,7 +3,7 @@ source(here::here('dictionary/utilities.R'))
 tmp = tempfile()
 url = 'http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?sort=1&file=dic%2Fen%2Fgeo.dic'
 download.file(url, tmp, quiet = TRUE)
-eurostat = readr::read_tsv(tmp, col_names = F, col_types = cols())
+eurostat = readr::read_tsv(tmp, col_names = F, col_types = cols(), na = "")
 
 bad_code = c('EU', 'EA')
 bad_name = c("Clipperton (FR)", 
@@ -25,4 +25,4 @@ eurostat = eurostat %>%
                          country = ifelse(country == 'China including Hong Kong', 'China', country)) %>%  # regex issue
            dplyr::arrange(eurostat)
 
-eurostat %>% write_csv('dictionary/data_eurostat.csv')
+eurostat %>% write_csv('dictionary/data_eurostat.csv', na = "")

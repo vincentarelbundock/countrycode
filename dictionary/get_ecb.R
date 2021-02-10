@@ -16,4 +16,4 @@ ecb <- xml2::read_html(url) %>%
               !is.na(CountryToRegex(country, warn = FALSE))) %>% 
        mutate(ecb = if_else(country == 'Namibia', 'NA', ecb))
 
-ecb %>% write_csv('dictionary/data_ecb.csv')
+ecb %>% write_csv('dictionary/data_ecb.csv', na = "")

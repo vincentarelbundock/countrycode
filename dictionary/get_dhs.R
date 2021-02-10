@@ -5,4 +5,4 @@ dhs <- jsonlite::fromJSON(url)[['Data']] %>%
        select(country = CountryName, dhs = DHS_CountryCode) %>%
        filter(dhs != 'OS')
 
-dhs %>% write_csv('dictionary/data_dhs.csv')
+dhs %>% write_csv('dictionary/data_dhs.csv', na = "")

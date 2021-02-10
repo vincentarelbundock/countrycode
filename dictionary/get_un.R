@@ -17,4 +17,4 @@ m49 <- read_html(url) %>%
               un.regionintermediate.code = `Intermediate Region Code`) %>%
        filter(country != 'Sark')
 
-m49 %>% write_csv('dictionary/data_un.csv')
+m49 %>% write_csv('dictionary/data_un.csv', na = "")

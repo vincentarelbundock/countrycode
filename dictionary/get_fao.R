@@ -1,3 +1,5 @@
+source(here::here("dictionary/utilities.R"))
+
 url <- 'http://www.fao.org/fileadmin/user_upload/countryprofiles/Excel/AllTerritoriesValidCurrentYear.xlsx'
 tmp_xlsx <- tempfile(fileext = '.xlsx')
 download.file(url, tmp_xlsx, quiet = TRUE)
@@ -30,4 +32,4 @@ fao <- readxl::read_excel(tmp_xlsx) %>%
 
 unlink(tmp_xlsx)
 
-fao %>% write_csv('dictionary/data_fao.csv')
+fao %>% write_csv('dictionary/data_fao.csv', na = "")

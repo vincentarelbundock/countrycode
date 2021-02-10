@@ -84,4 +84,4 @@ unicode.symbol %>%
            `+`(127462) %>% # Decimal 127462 (Hex 1F1E6) is the Unicode codepoint for 'REGIONAL INDICATOR SYMBOL LETTER A'
            intToUtf8) %>%
   dplyr::select(c('unicode.symbol','country')) %>%
-  write_csv('dictionary/data_unicode_symbol.csv')
+  write_csv('dictionary/data_unicode_symbol.csv', na = "")

@@ -21,4 +21,4 @@ gw <- gw %>%
              country = replace(country, gwc == "RVN", "Vietnam")) %>%
       select(country, gwn, gwc)
  
-gw %>% write_csv('dictionary/data_gw.csv')
+gw %>% write_csv('dictionary/data_gw.csv', na = "")

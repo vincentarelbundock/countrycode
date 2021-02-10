@@ -29,5 +29,5 @@ wvs <- readr::read_delim(cntrytxt, delim = ':', col_names = F) %>%
        rename(country = X2, wvs = X1) %>%
        filter(!country %in% bad)
 
-wvs %>% write_csv('dictionary/data_wvs.csv')
+wvs %>% write_csv('dictionary/data_wvs.csv', na = "")
 

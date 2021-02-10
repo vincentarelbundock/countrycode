@@ -14,4 +14,4 @@ wb <- read_excel(filename, skip = 6, col_names = letters[1:9]) %>%
       filter(!country %in% not_countries,
              !is.na(wb)) 
 
-wb %>% write_csv('dictionary/data_world_bank.csv')
+wb %>% write_csv('dictionary/data_world_bank.csv', na = "")

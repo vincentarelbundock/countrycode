@@ -33,4 +33,4 @@ un <- c('en', 'fr', 'es', 'ru', 'zh', 'ar') %>%
              # misspelled in original source
              un.name.es = ifelse(un.name.es == 'Trinidad yTobago', 'Trinidad y Tobago', un.name.es))
 
-un %>% write_csv('dictionary/data_un_names.csv')
+un %>% write_csv('dictionary/data_un_names.csv', na = "")

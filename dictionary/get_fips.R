@@ -16,4 +16,4 @@ out <- readxl::read_excel(filename, sheet = 'TABLE 1', skip = 2) %>%
        select(fips = Code, country = Name) %>%
        filter(!country %in% bad)
 
-out %>% write_csv('dictionary/data_fips.csv')
+out %>% write_csv('dictionary/data_fips.csv', na = "")

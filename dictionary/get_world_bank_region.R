@@ -98,5 +98,5 @@ manual <- manual[!b %in% a,]
 
 out <- bind_rows(automatic, manual)
 
-out %>%  write_csv('dictionary/data_world_bank_region.csv')
+out %>%  write_csv('dictionary/data_world_bank_region.csv', na = "")
 
