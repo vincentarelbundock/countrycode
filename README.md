@@ -374,3 +374,74 @@ Using `readr`:
 ```r
 readr::write_csv(custom_dict, 'custom_dict.csv', na = '')
 ```
+
+## Custom dictionary attributes
+
+When using custom dictionaries, it is often useful to give "meta" information to `countrycode` so that it knows how to use certain codes. To do this, we can set attributes of the dictionary. In this example, we download a dictionary of US state codes. Then, we identify a column of regular expressions using the `origin_regex` attribute, and we identify the valid origin codes using the `origin_valid` attribute.
+
+```r
+state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
+state_dict <- read.csv(state_dict)
+
+attr(state_dict, "origin_regex") <- "state.regex"
+attr(state_dict, "origin_valid") <- c("state.regex", "abbreviation")
+
+countrycode("Alabama", "state.regex", "abbreviation", custom_dict = state_dict)
+> [1] "AL"
+ 
+countrycode("AL", "abbreviation", "state", custom_dict = state_dict)
+> [1] "Alabama"
+ 
+countrycode("Alabama", "state", "abbreviation", custom_dict = state_dict)
+> Error in countrycode("Alabama", "state", "abbreviation", custom_dict = state_dict) : 
+>  Origin code not supported by countrycode or present in the user-supplied custom_dict.
+```
+
+
+## Default dictionary and arguments
+
+The `countrycode_factory` function allows you to create alternative functions with different default arguments and/or dictionaries. For example, we can create:
+
+* `name_to_iso3c` function that sets new defaults for the `origin` and `destination` arguments, and automatically converts country names to iso3c
+* `statecode` function to convert US state codes using a custom dictionary by default, that we download from the internet.
+
+
+```r
+#################################
+#  new function: name_to_iso3c  #
+#################################
+
+# Custom defaults
+name_to_iso3c <- countrycode_factory(
+    origin = "country.name", destination = "iso3c")
+
+name_to_iso3c(c("Algeria", "Canada"))
+#> [1] "DZA" "CAN"
+
+#############################
+#  new function: statecode  #
+#############################
+
+# Download dictionary
+state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
+state_dict <- read.csv(state_dict)
+
+# Identify regular expression origin codes
+attr(state_dict, "origin_regex") <- "state.regex"
+
+# Set default values for the custom conversion function
+statecode <- countrycode_factory(
+  origin = "state.regex",
+  destination = "abbreviation",
+  custom_dict = state_dict)
+
+# Voilà!
+x <- c("Alabama", "New Mexico")
+statecode(x, "state.regex", "abbreviation")
+#> [1] "AL" "NM"
+
+x <- c("AL", "NM", "VT")
+statecode(x, "abbreviation", "state")
+#> [1] "Alabama"    "New Mexico" "Vermont"
+```
+

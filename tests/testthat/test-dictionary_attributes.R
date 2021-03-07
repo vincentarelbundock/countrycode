@@ -1,6 +1,3 @@
-
-pkgload::load_all()
-
 question <- c("Aroba", "Canuda")
 answer <- c("Aruba", "Canada")
 
