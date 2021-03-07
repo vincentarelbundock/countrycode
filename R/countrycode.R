@@ -28,9 +28,11 @@
 #' destination matches that will supercede any matching default result. The name
 #' of each element will be used as the origin code, and the value of each
 #' element will be used as the destination code.
-#' @param origin_regex Logical: When using a custom dictionary, if TRUE then the
-#' origin codes will be matched as regex, if FALSE they will be matched exactly.
-#' When using the default dictionary (dictionary = NULL), origin_regex will be ignored.
+#' @param origin_regex NULL or Logical: When using a custom dictionary, if TRUE
+#' then the origin codes will be matched as regex, if FALSE they will be
+#' matched exactly. When NULL, `countrycode` will behave as TRUE if the origin
+#' name is in the `custom_dictionary`'s `origin_regex` attribute, and FALSE
+#' otherwise. See examples section below.
 #' @keywords countrycode
 #' @note For a complete description of available country codes and languages,
 #' please read the documentation for the \code{codelist} conversion
@@ -77,41 +79,56 @@
 #'             custom_dict = cd, origin_regex = TRUE)
 #' }
 countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
-                        custom_dict = NULL, custom_match = NULL, origin_regex = FALSE) {
+                        custom_dict = NULL, custom_match = NULL, origin_regex = NULL) {
 
-    # Regex naming scheme
-    if (is.null(custom_dict)) { # only for default dictionary
-        # English regex is default
+    # default dictionary
+    if (is.null(custom_dict)) {
+        dictionary <- countrycode::codelist
+        attr(dictionary, "origin_valid") <- c(
+          "cctld", "country.name", "country.name.de", "cowc", "cown", "dhs",
+          "ecb", "eurostat", "fao", "fips", "gaul", "genc2c", "genc3c",
+          "genc3n", "gwc", "gwn", "imf", "ioc", "iso2c", "iso3c", "iso3n",
+          "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unpd", "vdem", "wb",
+          "wb_api2c", "wb_api3c", "wvs", "country.name.en.regex",
+          "country.name.de.regex")
+        attr(dictionary, "origin_regex") <- c("country.name.de.regex",
+                                              "country.name.en.regex")
+    } else {
+        dictionary <- custom_dict
+    }
+
+    # default country names (only for default dictionary)
+    if (is.null(custom_dict)) { 
         if (origin == 'country.name') {
             origin <- 'country.name.en'
+        }
+        if (origin %in% c('country.name.en', 'country.name.de')) {
+            origin <- paste0(origin, '.regex')
         }
         if (destination == 'country.name') {
             destination <- 'country.name.en'
         }
-        # .regex extension in dictionary colnames
-        if (origin %in% c('country.name.en', 'country.name.de')) {
-            origin <- paste0(origin, '.regex')
-            origin_regex <- TRUE
+    }
+
+    # dictionary attributes
+    if (is.null(attr(dictionary, "origin_valid"))) {
+        origin_valid <- colnames(dictionary)
+    } else {
+        origin_valid <- attr(dictionary, "origin_valid")
+    }
+
+    if (is.null(attr(dictionary, "destination_valid"))) {
+        destination_valid <- colnames(dictionary)
+    } else {
+        destination_valid <- attr(dictionary, "destination_valid")
+    }
+
+    if (is.null(origin_regex)) { # user can override
+        if (!is.null(attr(dictionary, "origin_regex"))) {
+            origin_regex <- origin %in% attr(dictionary, "origin_regex")
         } else {
             origin_regex <- FALSE
         }
-    }
-
-    # Set conversion dictionary
-    if (!is.null(custom_dict)) {
-        dictionary <- custom_dict
-        valid_origin <- colnames(dictionary)
-        valid_destination <- colnames(dictionary)
-    } else {
-        dictionary = countrycode::codelist
-        # Modify this manually when adding codes
-        valid_origin = c("cctld", "country.name", "country.name.de", "cowc", "cown", "dhs",
-                         "ecb", "eurostat", "fao", "fips", "gaul", "genc2c",
-                         "genc3c", "genc3n", "gwc", "gwn", "imf", "ioc", "iso2c", "iso3c",
-                         "iso3n", "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unpd",
-                         "vdem", "wb", "wb_api2c", "wb_api3c", "wvs",
-                         "country.name.en.regex", "country.name.de.regex")
-        valid_destination <- colnames(dictionary)
     }
 
     # Allow tibbles as conversion dictionary
@@ -135,11 +152,11 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         stop('nomatch needs to be NULL, or of length 1 or ', length(sourcevar), '.')
     }
 
-    if (!origin %in% valid_origin) {
+    if (!origin %in% origin_valid) {
         stop('Origin code not supported by countrycode or present in the user-supplied custom_dict.')
     }
 
-    if (!destination %in% valid_destination) {
+    if (!destination %in% destination_valid) {
         stop('Destination code not supported by countrycode or present in the user-supplied custom_dict.')
     }
 

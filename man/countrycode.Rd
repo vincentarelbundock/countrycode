@@ -12,7 +12,7 @@ countrycode(
   nomatch = NA,
   custom_dict = NULL,
   custom_match = NULL,
-  origin_regex = FALSE
+  origin_regex = NULL
 )
 }
 \arguments{
@@ -46,9 +46,11 @@ destination matches that will supercede any matching default result. The name
 of each element will be used as the origin code, and the value of each
 element will be used as the destination code.}
 
-\item{origin_regex}{Logical: When using a custom dictionary, if TRUE then the
-origin codes will be matched as regex, if FALSE they will be matched exactly.
-When using the default dictionary (dictionary = NULL), origin_regex will be ignored.}
+\item{origin_regex}{NULL or Logical: When using a custom dictionary, if TRUE
+then the origin codes will be matched as regex, if FALSE they will be
+matched exactly. When NULL, `countrycode` will behave as TRUE if the origin
+name is in the `custom_dictionary`'s `origin_regex` attribute, and FALSE
+otherwise. See examples section below.}
 }
 \description{
 Converts long country names into one of many different coding schemes.
