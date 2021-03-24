@@ -7,7 +7,7 @@
 #' `countrycode`'s English regexes to try to match the remaining cases.
 #'
 #' Note that the function works with non-ASCII characters. Please see the
-#' Github page for examples. 
+#' Github page for examples.
 #'
 #' @param sourcevar Vector which contains the codes or country names to be
 #' converted (character or factor)
@@ -26,26 +26,26 @@
 #' }
 #'
 countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
-    
+
     out <- countrycode(sourcevar = sourcevar,
                        origin = 'country.name.alt',
                        destination = 'country.name.en',
                        custom_dict = countryname_dict,
                        warn = FALSE)
-    
+
     idx <- is.na(out)
-    out[idx] <- countrycode(sourcevar = sourcevar[idx], 
-                            origin = 'country.name.en', 
-                            destination = 'country.name.en', 
+    out[idx] <- countrycode(sourcevar = sourcevar[idx],
+                            origin = 'country.name.en',
+                            destination = 'country.name.en',
                             warn = warn)
-    
+
     if (destination != 'country.name.en') {
       out <- countrycode(sourcevar = out,
-                         origin = 'country.name.en', 
+                         origin = 'country.name.en',
                          destination = destination,
                          custom_dict = codelist,
                          warn = warn)
     }
-    
+
     return(out)
 }

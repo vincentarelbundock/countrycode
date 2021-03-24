@@ -95,7 +95,7 @@ countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
 hosted on github. We use a shortened URL to load it.
 cd <- 'https://bit.ly/2ToSrFv'
 cd <- read.csv(cd)
-countrycode(c('AL', 'AK'), 'abbreviation', 'state', 
+countrycode(c('AL', 'AK'), 'abbreviation', 'state',
             custom_dict = cd)
 countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
             custom_dict = cd, origin_regex = TRUE)
