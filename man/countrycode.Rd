@@ -23,7 +23,7 @@ converted (character or factor)}
 quotes ""): type "?codelist" for a list of available codes.}
 
 \item{destination}{Coding scheme of destination (string such as "iso3c"
-enclosed in quotes ""): type `?codelist` for a list of
+enclosed in quotes ""): type \code{?codelist} for a list of
 available codes.}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
@@ -38,7 +38,7 @@ length as sourcevar.}
 \item{custom_dict}{A data frame which supplies a new dictionary to replace
 the built-in country code dictionary. Each column contains a different code
 and must include no duplicates. The data frame format should resemble
-`countrycode::codelist`.  Warning: when `custom_dict` is used, no sanity
+\code{countrycode::codelist}.  Warning: when \code{custom_dict} is used, no sanity
 checks are conducted.}
 
 \item{custom_match}{A named vector which supplies custom origin and
@@ -66,12 +66,12 @@ converting codes. For instance, some countries like Vietnam or Serbia go
 through political transitions that justify changing codes over time. This
 can pose problems when using codes from organizations like CoW or Polity IV,
 which produce codes in country-year format. Instead of converting codes
-using the `countrycode` function, we recommend that users use the
-``countrycode::codelist_panel`` data.frame as a base into which they can
+using the \code{countrycode} function, we recommend that users use the
+\code{countrycode::codelist_panel} data.frame as a base into which they can
 merge their other data. This data.frame includes most relevant code, and is
 already "reconciled" to ensure that each political unit is only represented
-by one row in any given year. From there, it is just a matter of using `R`'s
-`merge` function to combine different datasets which use different codes.
+by one row in any given year. From there, it is just a matter of using \code{R}'s
+\code{merge} function to combine different datasets which use different codes.
 }
 \examples{
 library(countrycode)

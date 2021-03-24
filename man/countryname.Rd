@@ -11,17 +11,17 @@ countryname(sourcevar, destination = "cldr.short.en", warn = TRUE)
 converted (character or factor)}
 
 \item{destination}{Coding scheme of destination (string such as "iso3c"
-enclosed in quotes ""): type `?codelist` for a list of
+enclosed in quotes ""): type \code{?codelist} for a list of
 available codes.}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 }
 \description{
 Converts long country names in any language to one of many different country
-code schemes or country names. `countryname` does 2 passes on the data.
+code schemes or country names. \code{countryname} does 2 passes on the data.
 First, it tries to detect variations of country names in many languages
 extracted from the Unicode Common Locale Data Repository. Second, it applies
-`countrycode`'s English regexes to try to match the remaining cases.
+\code{countrycode}'s English regexes to try to match the remaining cases.
 }
 \details{
 Note that the function works with non-ASCII characters. Please see the
