@@ -12,8 +12,8 @@ cldr_examples
 }
 \description{
 \itemize{
-  \item Code: CLDR code
-  \item Example: French Southern Territories in different languages
+\item Code: CLDR code
+\item Example: French Southern Territories in different languages
 }
 }
 \keyword{datasets}

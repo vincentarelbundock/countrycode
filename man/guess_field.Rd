@@ -10,13 +10,13 @@ guess_field(codes, min_similarity = 80)
 \item{codes}{a vector of country codes or country names}
 
 \item{min_similarity}{the function returns all field names where over than
-`min_similarity`% of codes are shared between the supplied vector and the
-`countrycode` dictionary.}
+\code{min_similarity}\% of codes are shared between the supplied vector and the
+\code{countrycode} dictionary.}
 }
 \description{
 Users sometimes do not know what kind of code or field their data contain.
 This function tries to guess by comparing the similarity between a
-user-supplied vector and all the codes included in the `countrycode`
+user-supplied vector and all the codes included in the \code{countrycode}
 dictionary.
 }
 \examples{

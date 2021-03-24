@@ -1,26 +1,38 @@
-Package: countrycode
-License: GPL-3
-Title: Convert Country Names and Country Codes
-LazyData: yes
 Type: Package
-LazyLoad: yes
-Encoding: UTF-8
-Authors@R: c(
-    person("Vincent", "Arel-Bundock", email = "vincent.arel-bundock@umontreal.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-2042-7063")),
-    person("CJ", "Yetman", email = "cj@cjyetman.com", role = "ctb", comment = c(ORCID = "0000-0001-5099-9500")),
-    person("Nils", "Enevoldsen", email = "nils@wlonk.com", role = "ctb", comment = c(ORCID = "0000-0001-7195-4117"))
-    )
-Description: Standardize country names, convert them into one of
-    40 different coding schemes, convert between coding schemes, and
-    assign region descriptors.
+Package: countrycode
+Title: Convert Country Names and Country Codes
 Version: 1.2.0
+Date: 2020-05-22
+Authors@R: 
+    c(person(given = "Vincent",
+             family = "Arel-Bundock",
+             role = c("aut", "cre"),
+             email = "vincent.arel-bundock@umontreal.ca",
+             comment = c(ORCID = "0000-0003-2042-7063")),
+      person(given = "CJ",
+             family = "Yetman",
+             role = "ctb",
+             email = "cj@cjyetman.com",
+             comment = c(ORCID = "0000-0001-5099-9500")),
+      person(given = "Nils",
+             family = "Enevoldsen",
+             role = "ctb",
+             email = "nils@wlonk.com",
+             comment = c(ORCID = "0000-0001-7195-4117")))
+Description: Standardize country names, convert them into one of 40
+    different coding schemes, convert between coding schemes, and assign
+    region descriptors.
+License: GPL-3
 URL: https://vincentarelbundock.github.io/countrycode
 BugReports: https://github.com/vincentarelbundock/countrycode/issues
-Date: 2020-05-22
 Depends:
     R (>= 2.10)
 Suggests:
     testthat,
     tibble,
     utf8
-RoxygenNote: 7.1.1
+Encoding: UTF-8
+LazyData: yes
+LazyLoad: yes
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9001
