@@ -115,7 +115,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     # Allow tibbles as conversion dictionary
-    if('tbl_df' %in% class(dictionary)){ # allow tibble
+    if ('tbl_df' %in% class(dictionary)) { # allow tibble
         dictionary <- as.data.frame(dictionary)
     }
 
@@ -143,16 +143,16 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         stop('Destination code not supported by countrycode or present in the user-supplied custom_dict.')
     }
 
-    if(!inherits(dictionary, "data.frame")) {
+    if (!inherits(dictionary, "data.frame")) {
         stop("Dictionary must be a data frame or tibble with codes as columns.")
     }
 
-    if(!destination %in% colnames(dictionary)){
+    if (!destination %in% colnames(dictionary)) {
         stop("Destination code must correpond to a column name in the dictionary data frame.")
     }
 
     dups = any(duplicated(stats::na.omit(dictionary[, origin])))
-    if(dups){
+    if (dups) {
         stop("Countrycode cannot accept dictionaries with duplicated origin codes")
     }
 
@@ -160,8 +160,8 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     origin_vector <- sourcevar
 
     # Case-insensitive matching
-    if(is.null(custom_dict)){ # only for built-in dictionary
-        if(inherits(origin_vector, 'character') & !grepl('country', origin)){
+    if (is.null(custom_dict)) { # only for built-in dictionary
+        if (inherits(origin_vector, 'character') & !grepl('country', origin)) {
             origin_vector = toupper(origin_vector)
         }
     }
@@ -233,7 +233,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         } else if (class(sourcevar)[1] == "factor" & class(destination_vector)[1] == "character") {
             destination_vector[idx] <- as.character(sourcevar[idx])
         } else {
-            warning("The origin and destination codes are not of the same
+            warning("The `origin` and `destination` codes are not of the same
                     class. Filling-in bad matches with NA instead.")
         }
     } else if ((length(nomatch) == 1) & is.na(nomatch)) { # NA
@@ -247,17 +247,17 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     # Warnings
-    if(warn){
+    if (warn) {
         badmatch <- sort(unique(origin_vector[is.na(destination_vector)]))
         badmatch <- badmatch[!badmatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
-        if(length(badmatch) > 0){
-            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n")
+        if (length(badmatch) > 0) {
+            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse = ", "), "\n")
         }
-        if(origin_regex){
-           if(length(destination_list) > 0){
-               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
+        if (origin_regex) {
+           if (length(destination_list) > 0) {
+               destination_list <- lapply(destination_list, function(k) paste(k, collapse = ','))
                destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n")
+               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse = "; "), "\n")
            }
         }
     }
