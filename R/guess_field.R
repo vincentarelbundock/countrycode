@@ -28,7 +28,7 @@ guess_field <- function(codes, min_similarity = 80) {
   x <- unique(codes)
 
   match_percentage <-
-    sapply(countrycode::codelist, function(code) {
+    sapply(codelist, function(code) {
       sum(x %in% code) / length(x) * 100
     })
 

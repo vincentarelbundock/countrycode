@@ -11,11 +11,11 @@ clean_string <- function(x) {
 
 ambiguous <- c('the Holy Land', 'Nigeri', 'Virgin Islands', 'Виргин аралдары',
                'Виргинийн гӀайренаш', 'Виргинские о-ва', "ﻞﺗﻮﻧی", 'Iberia',
-               'Indien', 'Thule', 'Micronesia', 'Saint Martin') %>% 
+               'Indien', 'Thule', 'Micronesia', 'Saint Martin') %>%
              clean_string
 
 # countrycode::codelist reshape
-dat <- countrycode::codelist %>% 
+dat <- codelist %>%
        select(countryname = country.name.en, matches('name')) %>%
        select(-matches('region|regex')) %>%
        pivot_longer(-countryname, values_to = 'alternative') %>%
@@ -25,7 +25,7 @@ dat <- countrycode::codelist %>%
        mutate(countryname = countrycode(countryname, 'country.name', 'country.name.en')) %>%
        filter(nchar(alternative) > 4,
               !alternative %in% ambiguous,
-              !countryname %in% ambiguous, 
+              !countryname %in% ambiguous,
               !duplicated(alternative), # "لتونی"matches both Latvia and Lithuania!?!
               (countryname != 'North Korea') | (alternative != 'Corée'),
               (countryname != 'North Korea') | (alternative != 'Korea'),
