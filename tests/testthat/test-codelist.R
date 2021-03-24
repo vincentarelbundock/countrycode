@@ -1,6 +1,6 @@
 
-cs <- countrycode::codelist
-pan <- countrycode::codelist_panel
+cs <- codelist
+pan <- codelist_panel
 
 dest <- c('year', 'ar5', 'continent', 'currency', 'eu28', 'eurocontrol_pru',
           'eurocontrol_statfor', 'icao', 'icao.region', 'iso4217c',

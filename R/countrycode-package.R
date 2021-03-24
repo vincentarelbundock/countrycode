@@ -20,3 +20,9 @@
 #' @docType package
 #' @keywords package
 NULL
+
+# Avoid `R CMD check` notes about "undefined" global objects
+utils::globalVariables(names = c("cldr_examples",
+                                 "codelist",
+                                 "codelist_panel",
+                                 "countryname_dict"))

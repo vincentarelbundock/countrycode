@@ -15,7 +15,7 @@ ambiguous <- c('the Holy Land', 'Nigeri', 'Virgin Islands', 'Виргин ара
              clean_string
 
 # countrycode::codelist reshape
-dat <- countrycode::codelist %>% 
+dat <- codelist %>%
        select(countryname = country.name.en, matches('name')) %>%
        select(-matches('region|regex')) %>%
        pivot_longer(-countryname, values_to = 'alternative') %>%

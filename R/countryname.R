@@ -30,7 +30,7 @@ countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
     out <- countrycode(sourcevar = sourcevar,
                        origin = 'country.name.alt',
                        destination = 'country.name.en',
-                       custom_dict = countrycode::countryname_dict,
+                       custom_dict = countryname_dict,
                        warn = FALSE)
     
     idx <- is.na(out)
@@ -43,7 +43,7 @@ countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
       out <- countrycode(sourcevar = out,
                          origin = 'country.name.en', 
                          destination = destination,
-                         custom_dict = countrycode::codelist, 
+                         custom_dict = codelist,
                          warn = warn)
     }
     
