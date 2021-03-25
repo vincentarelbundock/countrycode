@@ -2,20 +2,46 @@
 % Please edit documentation in R/countrycode_factory.R
 \name{countrycode_factory}
 \alias{countrycode_factory}
-\title{create new `countrycode` functions with alternative dictionaries and
+\title{create new \code{countrycode} functions with alternative dictionaries and
 defaults}
 \usage{
 countrycode_factory(
-  origin = "iso3c",
-  destination = "country.name",
-  warn = FALSE,
-  nomatch = NA,
+  origin = NULL,
+  destination = NULL,
+  warn = NULL,
+  nomatch = NULL,
   custom_dict = NULL,
-  custom_match = NULL,
-  origin_regex = NULL
+  custom_match = NULL
 )
 }
+\arguments{
+\item{origin}{Coding scheme of origin (string such as \code{"iso3c"}). See
+\code{\link{codelist}} for a list of available codes.}
+
+\item{destination}{Coding scheme of destination (string such as \code{"iso3c"}). See
+\code{\link{codelist}} for a list of available codes.}
+
+\item{warn}{Prints unique elements from sourcevar for which no match was found}
+
+\item{nomatch}{When countrycode fails to find a match for the code of
+origin, it fills-in the destination vector with \code{nomatch}. The default
+behavior is to fill non-matching codes with \code{NA}. If \code{nomatch = NULL},
+countrycode tries to use the origin vector to fill-in missing values in the
+destination vector. \code{nomatch} must be either \code{NULL}, of length 1, or of the same
+length as \code{sourcevar}.}
+
+\item{custom_dict}{A data frame which supplies a new dictionary to replace
+the built-in country code dictionary. Each column contains a different code
+and must include no duplicates. The data frame format should resemble
+\code{\link{codelist}}. Warning: when \code{custom_dict} is used, no sanity
+checks are conducted.}
+
+\item{custom_match}{A named vector which supplies custom origin and
+destination matches that will supercede any matching default result. The name
+of each element will be used as the origin code, and the value of each
+element will be used as the destination code.}
+}
 \description{
-create new `countrycode` functions with alternative dictionaries and
+create new \code{countrycode} functions with alternative dictionaries and
 defaults
 }

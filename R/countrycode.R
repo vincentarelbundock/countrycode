@@ -44,11 +44,12 @@
 #'   destination matches that will supercede any matching default result. The name
 #'   of each element will be used as the origin code, and the value of each
 #'   element will be used as the destination code.
-#' @param origin_regex NULL or Logical: When using a custom dictionary, if TRUE
-#' then the origin codes will be matched as regex, if FALSE they will be
-#' matched exactly. When NULL, `countrycode` will behave as TRUE if the origin
-#' name is in the `custom_dictionary`'s `origin_regex` attribute, and FALSE
-#' otherwise. See examples section below.
+#' @param origin_regex NULL or Logical: When using a custom
+#'   dictionary, if TRUE then the origin codes will be matched as
+#'   regex, if FALSE they will be matched exactly. When NULL,
+#'   `countrycode` will behave as TRUE if the origin name is in the
+#'   `custom_dictionary`'s `origin_regex` attribute, and FALSE
+#'   otherwise. See examples section below.
 #' @keywords countrycode
 #'
 #' @export
@@ -154,20 +155,21 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         stop('nomatch needs to be NULL, or of length 1 or ', length(sourcevar), '.')
     }
 
-    if (!origin %in% origin_valid) {
-        stop('Origin code not supported by countrycode or present in the user-supplied custom_dict.')
+    if (!is.character(origin) ||
+        length(origin) != 1 ||
+        !origin %in% origin_valid) {
+        stop(sprintf("The `origin` argument must be a string of length 1 equal to one of these values: %s.",
+                     paste(origin_valid, collapse = ", ")))
     }
 
-    if (!destination %in% destination_valid) {
-        stop('Destination code not supported by countrycode or present in the user-supplied custom_dict.')
+    if (!is.character(destination) ||
+        length(destination) != 1 ||
+        !destination %in% destination_valid) {
+        stop("The `destination` argument must be a string of length 1 equal to one of the column names in the conversion directory (by default: `codelist`).")
     }
 
     if(!inherits(dictionary, "data.frame")) {
-        stop("Dictionary must be a data frame or tibble with codes as columns.")
-    }
-
-    if(!destination %in% colnames(dictionary)){
-        stop("Destination code must correpond to a column name in the dictionary data frame.")
+        stop("The `dictionary` argument must be a data frame or tibble with codes as columns.")
     }
 
     dups = any(duplicated(stats::na.omit(dictionary[, origin])))

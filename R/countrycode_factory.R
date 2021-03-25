@@ -1,6 +1,7 @@
 #' create new `countrycode` functions with alternative dictionaries and
 #' defaults
 #' 
+#' @inheritParams countrycode
 #' @export
 countrycode_factory <- function(
   origin = NULL,
