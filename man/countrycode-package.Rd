@@ -19,8 +19,9 @@ Type ?codelist to get a list of available origin and destination
 codes.
 }
 \references{
-\url{http://arelbundock.com}
-    \url{https://github.com/vincentarelbundock/countrycode}
+\preformatted{\url{http://arelbundock.com}
+\url{https://github.com/vincentarelbundock/countrycode}
+}
 }
 \author{
 Vincent Arel-Bundock \email{vincent.arel-bundock@umontreal.ca}

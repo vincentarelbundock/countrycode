@@ -4,12 +4,12 @@
 \name{countryname_dict}
 \alias{countryname_dict}
 \title{A dataframe of alternative country names in many languages. Used internally by
-the `countryname` function.}
+the \code{countryname} function.}
 \format{
 dataframe
 }
 \description{
 A dataframe of alternative country names in many languages. Used internally by
-the `countryname` function.
+the \code{countryname} function.
 }
 \keyword{datasets}

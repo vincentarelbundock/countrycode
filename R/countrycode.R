@@ -5,49 +5,51 @@
 #' scheme to the official short English country name. Creates a new variable
 #' with the name of the continent or region to which each country belongs.
 #'
+#' @note
+#' For a complete description of available country codes and languages,
+#' please see the documentation for the [`codelist`][codelist] conversion
+#' dictionary.
+#'
+#' Panel data (i.e., country-year) can pose particular problems when
+#' converting codes. For instance, some countries like Vietnam or Serbia go
+#' through political transitions that justify changing codes over time. This
+#' can pose problems when using codes from organizations like CoW or Polity IV,
+#' which produce codes in country-year format. Instead of converting codes
+#' using `countrycode()`, we recommend that users use the
+#' [`codelist_panel`][codelist_panel] data.frame as a base into which they can
+#' merge their other data. This data.frame includes most relevant code, and is
+#' already "reconciled" to ensure that each political unit is only represented
+#' by one row in any given year. From there, it is just a matter of using [merge()]
+#' to combine different datasets which use different codes.
+#'
 #' @param sourcevar Vector which contains the codes or country names to be
-#' converted (character or factor)
-#' @param origin Coding scheme of origin (string such as "iso3c" enclosed in
-#' quotes ""): type "?codelist" for a list of available codes.
-#' @param destination Coding scheme of destination (string such as "iso3c"
-#' enclosed in quotes ""): type `?codelist` for a list of
-#' available codes.
+#'   converted (character or factor)
+#' @param origin Coding scheme of origin (string such as `"iso3c"`). See
+#'   [`codelist`][codelist] for a list of available codes.
+#' @param destination Coding scheme of destination (string such as `"iso3c"`). See
+#'   [`codelist`][codelist] for a list of available codes.
 #' @param warn Prints unique elements from sourcevar for which no match was found
 #' @param nomatch When countrycode fails to find a match for the code of
-#' origin, it fills-in the destination vector with nomatch. The default
-#' behavior is to fill non-matching codes with NA. If nomatch = NULL,
-#' countrycode tries to use the origin vector to fill-in missing values in the
-#' destination vector. nomatch must be either NULL, of length 1, or of the same
-#' length as sourcevar.
+#'   origin, it fills-in the destination vector with `nomatch`. The default
+#'   behavior is to fill non-matching codes with `NA`. If `nomatch = NULL`,
+#'   countrycode tries to use the origin vector to fill-in missing values in the
+#'   destination vector. `nomatch` must be either `NULL`, of length 1, or of the same
+#'   length as `sourcevar`.
 #' @param custom_dict A data frame which supplies a new dictionary to replace
-#' the built-in country code dictionary. Each column contains a different code
-#' and must include no duplicates. The data frame format should resemble
-#' `countrycode::codelist`.  Warning: when `custom_dict` is used, no sanity
-#' checks are conducted.
+#'   the built-in country code dictionary. Each column contains a different code
+#'   and must include no duplicates. The data frame format should resemble
+#'   [`codelist`][codelist]. Warning: when `custom_dict` is used, no sanity
+#'   checks are conducted.
 #' @param custom_match A named vector which supplies custom origin and
-#' destination matches that will supercede any matching default result. The name
-#' of each element will be used as the origin code, and the value of each
-#' element will be used as the destination code.
+#'   destination matches that will supercede any matching default result. The name
+#'   of each element will be used as the origin code, and the value of each
+#'   element will be used as the destination code.
 #' @param origin_regex NULL or Logical: When using a custom dictionary, if TRUE
 #' then the origin codes will be matched as regex, if FALSE they will be
 #' matched exactly. When NULL, `countrycode` will behave as TRUE if the origin
 #' name is in the `custom_dictionary`'s `origin_regex` attribute, and FALSE
 #' otherwise. See examples section below.
 #' @keywords countrycode
-#' @note For a complete description of available country codes and languages,
-#' please read the documentation for the \code{codelist} conversion
-#' dictionary.  Type: \code{?codelist}.
-#' @note Panel data (i.e., country-year) can pose particular problems when
-#' converting codes. For instance, some countries like Vietnam or Serbia go
-#' through political transitions that justify changing codes over time. This
-#' can pose problems when using codes from organizations like CoW or Polity IV,
-#' which produce codes in country-year format. Instead of converting codes
-#' using the `countrycode` function, we recommend that users use the
-#' ``countrycode::codelist_panel`` data.frame as a base into which they can
-#' merge their other data. This data.frame includes most relevant code, and is
-#' already "reconciled" to ensure that each political unit is only represented
-#' by one row in any given year. From there, it is just a matter of using `R`'s
-#' `merge` function to combine different datasets which use different codes.
 #'
 #' @export
 #' @aliases countrycode
@@ -73,7 +75,7 @@
 #' hosted on github. We use a shortened URL to load it.
 #' cd <- 'https://bit.ly/2ToSrFv'
 #' cd <- read.csv(cd)
-#' countrycode(c('AL', 'AK'), 'abbreviation', 'state', 
+#' countrycode(c('AL', 'AK'), 'abbreviation', 'state',
 #'             custom_dict = cd)
 #' countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
 #'             custom_dict = cd, origin_regex = TRUE)
