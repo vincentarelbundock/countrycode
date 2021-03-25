@@ -70,13 +70,11 @@ can be used to convert US states to abbreviations or long names.
    destination = "abbreviation",
    custom_dict = state_dict)
 
- # VoilÃ !
+ # Convert
  x <- c("Alabama", "New Mexico")
- expect_equal(c("AL", "NM"), statecode(x, "state.regex", "abbreviation"))
+ statecode(x, "state.regex", "abbreviation")
 
  x <- c("AL", "NM", "VT")
- expect_equal(c("Alabama", "New Mexico", "Vermont"),
-              statecode(x, "abbreviation", "state"))
-
+ statecode(x, "abbreviation", "state")
 }
 }
