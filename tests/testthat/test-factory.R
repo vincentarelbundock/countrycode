@@ -8,7 +8,7 @@ test_that("new function: name_to_iso3c", {
 test_that("statecode", {
   # Download dictionary
   state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
-  state_dict <- read.csv(state_dict)
+  state_dict <- read.csv(state_dict, stringsAsFactors = FALSE)
 
   # Identify regular expression origin codes
   attr(state_dict, "origin_regex") <- "state.regex"
