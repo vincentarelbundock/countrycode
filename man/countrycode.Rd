@@ -34,11 +34,18 @@ countrycode tries to use the origin vector to fill-in missing values in the
 destination vector. \code{nomatch} must be either \code{NULL}, of length 1, or of the same
 length as \code{sourcevar}.}
 
-\item{custom_dict}{A data frame which supplies a new dictionary to replace
-the built-in country code dictionary. Each column contains a different code
-and must include no duplicates. The data frame format should resemble
-\code{\link{codelist}}. Warning: when \code{custom_dict} is used, no sanity
-checks are conducted.}
+\item{custom_dict}{A data frame which supplies a new dictionary to
+replace the built-in country code dictionary. Each column
+contains a different code and must include no duplicates. The
+data frame format should resemble \code{\link{codelist}}. Users
+can pre-assign attributes to this custom dictionary to affect
+behavior (see Examples section):
+\itemize{
+\item "origin.regex" attribute: a character vector with the names
+of columns containing regular expressions.
+\item "origin.valid" attribute: a character vector with the names
+of columns that are accepted as valid origin codes.
+}}
 
 \item{custom_match}{A named vector which supplies custom origin and
 destination matches that will supercede any matching default result. The name
@@ -93,14 +100,16 @@ countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
             custom_match = c('Algeria' = 'ALG'))
 
 \dontrun{
-# Using `custom_dict` to convert US States names. This dictionary is
-hosted on github. We use a shortened URL to load it.
-cd <- 'https://bit.ly/2ToSrFv'
-cd <- read.csv(cd)
-countrycode(c('AL', 'AK'), 'abbreviation', 'state',
-            custom_dict = cd)
-countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
-            custom_dict = cd, origin_regex = TRUE)
+ # Download the dictionary of US states from Github
+ state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
+ state_dict <- read.csv(state_dict)
+
+ # The "state.regex" column includes regular expressions, so we set an attribute.
+ attr(state_dict, "origin_regex") <- "state.regex"
+ countrycode(c('AL', 'AK'), 'abbreviation', 'state',
+             custom_dict = state_dict)
+ countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
+             custom_dict = state_dict)
 }
 }
 \keyword{countrycode}

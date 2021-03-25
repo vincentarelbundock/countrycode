@@ -2,8 +2,8 @@
 % Please edit documentation in R/countrycode_factory.R
 \name{countrycode_factory}
 \alias{countrycode_factory}
-\title{create new \code{countrycode} functions with alternative dictionaries and
-defaults}
+\title{Create new conversion functions with alternative dictionaries
+and/or defaults arguments.}
 \usage{
 countrycode_factory(
   origin = NULL,
@@ -30,11 +30,18 @@ countrycode tries to use the origin vector to fill-in missing values in the
 destination vector. \code{nomatch} must be either \code{NULL}, of length 1, or of the same
 length as \code{sourcevar}.}
 
-\item{custom_dict}{A data frame which supplies a new dictionary to replace
-the built-in country code dictionary. Each column contains a different code
-and must include no duplicates. The data frame format should resemble
-\code{\link{codelist}}. Warning: when \code{custom_dict} is used, no sanity
-checks are conducted.}
+\item{custom_dict}{A data frame which supplies a new dictionary to
+replace the built-in country code dictionary. Each column
+contains a different code and must include no duplicates. The
+data frame format should resemble \code{\link{codelist}}. Users
+can pre-assign attributes to this custom dictionary to affect
+behavior (see Examples section):
+\itemize{
+\item "origin.regex" attribute: a character vector with the names
+of columns containing regular expressions.
+\item "origin.valid" attribute: a character vector with the names
+of columns that are accepted as valid origin codes.
+}}
 
 \item{custom_match}{A named vector which supplies custom origin and
 destination matches that will supercede any matching default result. The name
@@ -42,6 +49,34 @@ of each element will be used as the origin code, and the value of each
 element will be used as the destination code.}
 }
 \description{
-create new \code{countrycode} functions with alternative dictionaries and
-defaults
+This function can be used to set new default arguments for the
+\code{countrycode} functions, or to create alternative functions using
+your own conversion dictionary. The Examples section shows how to
+use \code{countrycode_factory} to create a \code{statecode} function which
+can be used to convert US states to abbreviations or long names.
+}
+\examples{
+\dontrun{
+ # Download the dictionary of US states from Github
+ state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
+ state_dict <- read.csv(state_dict)
+
+ # The "state.regex" column includes regular expressions, so we set an attribute.
+ attr(state_dict, "origin_regex") <- "state.regex"
+
+ # Set default values for the custom conversion function
+ statecode <- countrycode_factory(
+   origin = "state.regex",
+   destination = "abbreviation",
+   custom_dict = state_dict)
+
+ # VoilÃ !
+ x <- c("Alabama", "New Mexico")
+ expect_equal(c("AL", "NM"), statecode(x, "state.regex", "abbreviation"))
+
+ x <- c("AL", "NM", "VT")
+ expect_equal(c("Alabama", "New Mexico", "Vermont"),
+              statecode(x, "abbreviation", "state"))
+
+}
 }
