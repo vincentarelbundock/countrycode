@@ -14,12 +14,13 @@ countrycode_factory <- function(
   out = countrycode
 
   # change defaults
-  if(!is.null(origin)) formals(out)$origin <- origin
-  if(!is.null(destination)) formals(out)$destination <- destination
-  if(!is.null(warn)) formals(out)$warn <- warn
-  if(!is.null(nomatch)) formals(out)$nomatch <- nomatch
-  if(!is.null(custom_dict)) formals(out)$custom_dict <- custom_dict
-  if (!is.null(custom_match)) formals(out)$custom_match <- custom_match
+  args <- formals()
+
+  for (name in names(args)) {
+    if(!is.null(args[[name]])) {
+        formals(out)[[name]] <- args[[name]]
+    }
+  }
 
   # return function
   out
