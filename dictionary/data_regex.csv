@@ -272,8 +272,8 @@ Uruguay,uruguay,Uruguay,uruguay
 Uzbekistan,uzbek,Usbekistan,usbek
 Vanuatu,vanuatu|new.?hebrides,Vanuatu,vanuatu|neue.?hebriden
 "Venezuela, Bolivarian Republic of",venezuela,Venezuela,venezuela
-Viet Nam,^(?!south)(?!republic).*viet.?nam(?!.*south)|socialist.republic.of.viet.?nam|north.viet.?nam|viet.?nam.north,Vietnam,^(?!.*republik).*viet.?nam|^(?=.*sozialist).*viet.?nam
-Republic of Vietnam,(?!social).*republic.of.viet.?nam|south.viet.?nam|viet.?nam.south,NA,ASIA
+Viet Nam,^(?!south)(?!republic).*viet.?nam(?!.*south)|democratic.republic.of.vietnam|socialist.republic.of.viet.?nam|north.viet.?nam|viet.?nam.north,Vietnam,^(?!.*republik).*viet.?nam|^(?=.*sozialist).*viet.?nam
+Republic of Vietnam,^republic.of.viet.?nam|south.viet.?nam|viet.?nam.south,NA,ASIA
 "Virgin Islands, British",^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin,Britische Jungferninseln,brit.*jungferninseln
 "Virgin Islands, U.S.",^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,"Virgin Islands, U.S.",^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin
 Wallis and Futuna,futuna|wallis,Wallis und Futuna,futuna|wallis
