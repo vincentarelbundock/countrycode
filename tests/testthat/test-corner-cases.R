@@ -15,5 +15,9 @@ test_that("Viet Nam variations", {
   expect_equal("DRV", countrycode("Democratic Republic of VietNam", "country.name", "cowc"))
   expect_equal("DRV", countrycode("Democratic Republic of Viet Nam", "country.name", "cowc"))
   expect_equal("DRV", countrycode("North Viet Nam", "country.name", "cowc"))
-  })
+
+  expect_equal(35, countrycode("Republic of VietNam", "country.name", "vdem"))
+  expect_equal(34, countrycode("Democratic Republic of Viet Nam", "country.name", "vdem"))
+  expect_equal(34, countrycode("VietNam", "country.name", "vdem"))
+})
 
