@@ -77,7 +77,7 @@
 #' conversion dictionary, this forces us to make arbitrary choices with respect
 #' to some entities (e.g., Western Germany, Vietnam, Serbia). `countrycode`
 #' includes a reconciled dataset in panel format:
-#' `countrycode::countrycode_panel`. Instead of converting code, we recommend
+#' `countrycode::codelist_panel`. Instead of converting code, we recommend
 #' that users dealing with panel data "left-merge" their data into this panel
 #' dictionary.
 #'
