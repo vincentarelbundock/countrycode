@@ -54,7 +54,7 @@ Christmas Island,christmas,Weihnachtsinsel,weihnachtsinsel
 Cocos (Keeling) Islands,\bcocos|keeling,Kokosinseln (Keelinginseln),\bkokos|keeling
 Colombia,colombia,Kolumbien,kolumbien
 Comoros,comoro,Komoren,komoren
-Congo,^(?!.*\bdem)(?!.*\bd[\.]?r)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Kongo,^(?!.*\bdem)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bkongo
+Congo,^(?!.*\bd.m)(?!.*\bd[\.]?r)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Kongo,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bkongo
 Cook Islands,\bcook,Cookinseln,\bcook
 Costa Rica,costa.?rica,Costa Rica,costa.?rica
 Côte D'Ivoire,ivoire|ivory,Elfenbeinküste,elfenbein|ivoire|ivory
@@ -65,7 +65,7 @@ Cyprus,cyprus,Zypern,zypern
 Czech Republic,^(?=.*rep).*czech|czechia|bohemia,Tschechische Republik,^(?!.*slowak)tschechi.*
 Czechoslovakia,czechoslovakia,Tschechoslowakei,tschechoslowakei|^csr$
 Democratic People's Republic of Korea,dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*rep.*)|(d.p.r|dpr|north|dem.*rep.*).+korea,"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk
-Democratic Republic of the Congo,\bdem.*congo|congo.*\bdem|congo.*\bd[\.]?r|\bd[\.]?r.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Demokratische Republik Kongo,\bdem.*kongo|kongo.*\bdem|kongo.*\bdr|\bdr.*kongo|belgien.?kongo|kongo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc
+Democratic Republic of the Congo,\bd.m.*congo|congo.*\bd.m|congo.*\bd[\.]?r|\bd[\.]?r.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Demokratische Republik Kongo,\bdem.*kongo|kongo.*\bdem|kongo.*\bdr|\bdr.*kongo|belgien.?kongo|kongo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc
 Denmark,denmark,Dänemark,d(a|ae|ä)nemark
 Djibouti,djibouti,Dschibuti,dschibuti
 Dominica,dominica(?!n),Dominica,dominica(?!n)

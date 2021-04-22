@@ -6,6 +6,7 @@
 * Vietnam: better regex and support for vdem
 * Namibia fixes: eurostat, genc2c, wb_api2c, ecb
 * Various regex improvements
+* Congo French disambiguation
 
 # countrycode 1.2.0
 
