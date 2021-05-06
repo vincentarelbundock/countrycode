@@ -21,7 +21,6 @@ variations <- list(
 
   "Congo - Kinshasa" = c(
     "democratic republic of the congo",
-    "rép. démocratique du congo",
     "congo, democratic republic of the",
     "dem rep of the congo",
     "the democratic republic of congo",
@@ -34,11 +33,13 @@ variations <- list(
     "congo-zaire",
     "zaire",
     "belgian congo",
-    #"republic of the congo-léopoldville",
     "congo free state",
     "D.R. Congo",
     "DR Congo",
     "Democratic Republic of Congo"
+    # accented regexes do not work on Windows. They are not officially supported anyway
+    #"republic of the congo-léopoldville",
+    # "rép. démocratique du congo",
   ),
 
 
