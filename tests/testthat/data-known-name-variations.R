@@ -21,6 +21,7 @@ variations <- list(
 
   "Congo - Kinshasa" = c(
     "democratic republic of the congo",
+    "rép. démocratique du congo",
     "congo, democratic republic of the",
     "dem rep of the congo",
     "the democratic republic of congo",

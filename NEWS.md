@@ -1,11 +1,13 @@
 # countrycode 1.2.0.9000
 
 * new function: countrycode_factory
-* fixed codes for Namibia: eurostat, genc2c, wb_api2c, ecb
-* regex improvements
 * countryname(warn=TRUE) by default
 * better class checks
 * countryname defaults to `country.name.en` for missing country names (nomatch=NULL)
+* Vietnam: better regex and support for vdem
+* Namibia fixes: eurostat, genc2c, wb_api2c, ecb
+* Various regex improvements
+* Congo French disambiguation
 
 # countrycode 1.2.0
 
