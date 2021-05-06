@@ -1,5 +1,10 @@
 context('countryname function')
 
+test_that('reported bugs', {
+  expect_identical(countryname("Federated States of Micronesia"),
+                   "Micronesia (Federated States of)")
+})
+
 test_that('output types', {
 
     expect_identical(countryname('ジンバブエ'), 'Zimbabwe')

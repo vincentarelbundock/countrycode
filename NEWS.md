@@ -5,6 +5,7 @@
 * regex improvements
 * countryname(warn=TRUE) by default
 * better class checks
+* countryname defaults to `country.name.en` for missing country names (nomatch=NULL)
 
 # countrycode 1.2.0
 

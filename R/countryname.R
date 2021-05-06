@@ -44,6 +44,8 @@ countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
                          origin = 'country.name.en', 
                          destination = destination,
                          custom_dict = countrycode::codelist, 
+                         # this is the second round, so we can use the origin vector for NAs
+                         nomatch = NULL,
                          warn = warn)
     }
     
