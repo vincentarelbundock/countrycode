@@ -5,80 +5,82 @@
 \alias{codelist}
 \title{Country Code Translation Data Frame (Cross-Sectional)}
 \format{
-data frame with codes as columns
+A data frame with codes as columns.
 }
 \description{
-A data frame used internally by the \code{countrycode()} function. \code{countrycode} can use any valid code as destination, but only some codes can be used as origin.
+A data frame used internally by the \code{\link[=countrycode]{countrycode()}} function. \code{countrycode} can use any valid code as destination, but only some codes can be used as origin.
 }
 \details{
-Origin and Destination:
-
+\subsection{Origin and Destination}{
 \itemize{
-\item ccTLD: IANA country code top-level domain
-\item country.name: country name (English)
-\item country.name.de: country name (German)
-\item cowc: Correlates of War character
-\item cown: Correlates of War numeric
-\item dhs: Demographic and Health Surveys Program
-\item ecb: European Central Bank
-\item eurostat:  Eurostat
-\item fao: Food and Agriculture Organization of the United Nations numerical code
-\item fips: FIPS 10-4 (Federal Information Processing Standard)
-\item gaul: Global Administrative Unit Layers
-\item genc2c: GENC 2-letter code
-\item genc3c: GENC 3-letter code
-\item genc3n: GENC numeric code
-\item gwc: Gleditsch & Ward character
-\item gwn: Gleditsch & Ward numeric
-\item imf: International Monetary Fund
-\item ioc: International Olympic Committee
-\item iso2c: ISO-2 character
-\item iso3c: ISO-3 character
-\item iso3n: ISO-3 numeric
-\item p4n: Polity IV numeric country code
-\item p4c: Polity IV character country code
-\item un: United Nations M49 numeric codes
-\item unicode.symbol: Region subtag (often displayed as emoji flag)
-\item unpd: United Nations Procurement Division
-\item vdem: Varieties of Democracy (V-Dem version 8, April 2018)
-\item wb: World Bank (very similar but not identical to iso3c)
-\item wvs: World Values Survey numeric code
+\item \code{ccTLD}: IANA country code top-level domain
+\item \code{country.name}: country name (English)
+\item \code{country.name.de}: country name (German)
+\item \code{cowc}: Correlates of War character
+\item \code{cown}: Correlates of War numeric
+\item \code{dhs}: Demographic and Health Surveys Program
+\item \code{ecb}: European Central Bank
+\item \code{eurostat}:  Eurostat
+\item \code{fao}: Food and Agriculture Organization of the United Nations numerical code
+\item \code{fips}: FIPS 10-4 (Federal Information Processing Standard)
+\item \code{gaul}: Global Administrative Unit Layers
+\item \code{genc2c}: GENC 2-letter code
+\item \code{genc3c}: GENC 3-letter code
+\item \code{genc3n}: GENC numeric code
+\item \code{gwc}: Gleditsch & Ward character
+\item \code{gwn}: Gleditsch & Ward numeric
+\item \code{imf}: International Monetary Fund
+\item \code{ioc}: International Olympic Committee
+\item \code{iso2c}: ISO-2 character
+\item \code{iso3c}: ISO-3 character
+\item \code{iso3n}: ISO-3 numeric
+\item \code{p4n}: Polity IV numeric country code
+\item \code{p4c}: Polity IV character country code
+\item \code{un}: United Nations M49 numeric codes
+\item \code{unicode.symbol}: Region subtag (often displayed as emoji flag)
+\item \code{unpd}: United Nations Procurement Division
+\item \code{vdem}: Varieties of Democracy (V-Dem version 8, April 2018)
+\item \code{wb}: World Bank (very similar but not identical to iso3c)
+\item \code{wvs}: World Values Survey numeric code
 }
-Destination only:
+}
+
+\subsection{Destination only}{
 \itemize{
-\item ar5: IPCC's regional mapping used both in the Fifth Assessment Report
+\item \code{ar5}: IPCC's regional mapping used both in the Fifth Assessment Report
 (AR5) and for the Reference Concentration Pathways (RCP)
-\item continent: Continent as defined in the World Bank Development Indicators
-\item cow.name: Correlates of War country name
-\item currency: ISO 4217 currency name
-\item eurocontrol_pru:  European Organisation for the Safety of Air Navigation
-\item eurocontrol_statfor:  European Organisation for the Safety of Air Navigation
-\item eu28: Member states of the European Union (as of December 2015),
+\item \code{continent}: Continent as defined in the World Bank Development Indicators
+\item \code{cow.name}: Correlates of War country name
+\item \code{currency}: ISO 4217 currency name
+\item \code{eurocontrol_pru}:  European Organisation for the Safety of Air Navigation
+\item \code{eurocontrol_statfor}:  European Organisation for the Safety of Air Navigation
+\item \code{eu28}: Member states of the European Union (as of December 2015),
 without special territories
-\item icao.region: International Civil Aviation Organization region
-\item iso.name.en: ISO English short name
-\item iso.name.fr: ISO French short name
-\item iso4217c: ISO 4217 currency alphabetic code
-\item iso4217n: ISO 4217 currency numeric code
-\item p4.name: Polity IV country name
-\item region: 7 Regions as defined in the World Bank Development Indicators
-\item region23: 23 Regions as used to be in the World Bank Development Indicators (legacy)
-\item un.name.ar: United Nations Arabic country name
-\item un.name.en: United Nations English country name
-\item un.name.es: United Nations Spanish country name
-\item un.name.fr: United Nations French country name
-\item un.name.ru: United Nations Russian country name
-\item un.name.zh: United Nations Chinese country name
-\item un.region.name: United Nations region name
-\item un.region.code: United Nations region code
-\item un.regionintermediate.name: United Nations intermediate region name
-\item un.regionintermediate.code: United Nations intermediate region code
-\item un.regionsub.name: United Nations sub-region name
-\item un.regionsub.code: United Nations sub-region code
-\item wvs.name: World Values Survey numeric code country name
-\item cldr.*: 600+ country name variants from the UNICODE CLDR project.
-Inspect the \code{countrycode::cldr_examples} data.frame for a full list of
+\item \code{icao.region}: International Civil Aviation Organization region
+\item \code{iso.name.en}: ISO English short name
+\item \code{iso.name.fr}: ISO French short name
+\item \code{iso4217c}: ISO 4217 currency alphabetic code
+\item \code{iso4217n}: ISO 4217 currency numeric code
+\item \code{p4.name}: Polity IV country name
+\item \code{region}: 7 Regions as defined in the World Bank Development Indicators
+\item \code{region23}: 23 Regions as used to be in the World Bank Development Indicators (legacy)
+\item \code{un.name.ar}: United Nations Arabic country name
+\item \code{un.name.en}: United Nations English country name
+\item \code{un.name.es}: United Nations Spanish country name
+\item \code{un.name.fr}: United Nations French country name
+\item \code{un.name.ru}: United Nations Russian country name
+\item \code{un.name.zh}: United Nations Chinese country name
+\item \code{un.region.name}: United Nations region name
+\item \code{un.region.code}: United Nations region code
+\item \code{un.regionintermediate.name}: United Nations intermediate region name
+\item \code{un.regionintermediate.code}: United Nations intermediate region code
+\item \code{un.regionsub.name}: United Nations sub-region name
+\item \code{un.regionsub.code}: United Nations sub-region code
+\item \code{wvs.name}: World Values Survey numeric code country name
+\item \verb{cldr.*}: 600+ country name variants from the UNICODE CLDR project.
+Inspect the \code{\link[=cldr_examples]{cldr_examples}} data.frame for a full list of
 available country names and examples.
+}
 }
 }
 \note{
@@ -87,8 +89,8 @@ country year format. Some countries go through political transitions that
 justify changing codes over time. When building a purely cross-sectional
 conversion dictionary, this forces us to make arbitrary choices with respect
 to some entities (e.g., Western Germany, Vietnam, Serbia). \code{countrycode}
-includes a reconciled dataset in panel format:
-\code{countrycode::countrycode_panel}. Instead of converting code, we recommend
+includes a reconciled dataset in panel format,
+\code{\link[=codelist_panel]{codelist_panel}}. Instead of converting code, we recommend
 that users dealing with panel data "left-merge" their data into this panel
 dictionary.
 }
