@@ -1,6 +1,7 @@
 # countrycode 1.2.0.9000
 
 * new function: countrycode_factory
+* destination argument accepts a vector of strings and tries one after the other
 * countryname(warn=TRUE) by default
 * better class checks
 * countryname defaults to `country.name.en` for missing country names (nomatch=NULL)

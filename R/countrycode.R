@@ -117,9 +117,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
         if (origin %in% c('country.name.en', 'country.name.de')) {
             origin <- paste0(origin, '.regex')
         }
-        if (destination == 'country.name') {
-            destination <- 'country.name.en'
-        }
+        destination[destination == "country.name"] <- 'country.name.en'
     }
 
     # dictionary attributes
@@ -172,9 +170,8 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     if (!is.character(destination) ||
-        length(destination) != 1 ||
-        !destination %in% destination_valid) {
-        stop("The `destination` argument must be a string of length 1 equal to one of the column names in the conversion directory (by default: `codelist`).")
+        !all(destination %in% destination_valid)) {
+        stop("The `destination` argument must be a string or a vector of strings where each element is equal to one of the column names in the conversion directory (by default: `codelist`).")
     }
 
     if(!inherits(dictionary, "data.frame")) {
@@ -195,6 +192,45 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
             origin_vector = toupper(origin_vector)
         }
     }
+
+    out <- rep(NA, length(sourcevar))
+    for (dest in destination) {
+        idx <- is.na(out)
+        out[idx] <- countrycode_convert(
+            ## user-supplied arguments
+            sourcevar = sourcevar[idx],
+            origin = origin,
+            destination = dest,
+            warn = warn,
+            nomatch = nomatch,
+            custom_dict = custom_dict,
+            custom_match = custom_match,
+            origin_regex = origin_regex,
+            ## countrycode-supplied arguments
+            origin_vector = origin_vector,
+            dictionary = dictionary)
+    }
+
+    return(out)
+}
+                        
+
+#' internal function called by `countrycode()`
+#'
+#' @internal
+countrycode_convert <- function(# user-supplied arguments
+                                sourcevar,
+                                origin,
+                                destination,
+                                warn,
+                                nomatch,
+                                custom_dict,
+                                custom_match,
+                                origin_regex,
+                                # countrycode-supplied arguments
+                                origin_vector,
+                                dictionary
+                                ) {
 
     # Convert
     if (origin_regex) { # regex codes
