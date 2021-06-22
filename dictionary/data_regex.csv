@@ -82,7 +82,7 @@ Faroe Islands,faroe|faeroe,Färöer Inseln,f(a|ä)r(o|ö|oe)er
 Fiji,fiji,Fidschi,fiji|fidschi
 Finland,finland,Finnland,finnland
 France,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,Frankreich,frankreich|französische.?republik
-French Guiana,^(?=.*french).*guiana,Französisch-Guayana,französisch.?guayana
+French Guiana,french.?gu(y|i)ana,Französisch-Guayana,französisch.?guayana
 French Polynesia,french.?polynesia|tahiti,Französisch Polynesien,französisch.?polynesien|tahiti
 French Southern Territories,french.?southern,Französische Südgebiete,französische.?südgebiete
 Gabon,gabon,Gabun,gabun
@@ -101,7 +101,7 @@ Guatemala,guatemala,Guatemala,guatemala
 Guernsey,guernsey,Guernsey,guernsey
 Guinea,^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea,Guinea,^(?!.*Äquatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea
 Guinea Bissau,bissau|^(?=.*portu).*guinea,Guinea-Bissau,bissau|^(?=.*portu).*guinea
-Guyana,guyana|british.?guiana,Guyana,gu(y|i)ana|britisch.?gua(y|i)ana
+Guyana,^gu(y|i)ana|british.?gu(y|i)ana,Guyana,gu(y|i)ana|britisch.?gua(y|i)ana
 Haiti,haiti,Haiti,haiti
 Hamburg,hamburg,NA,NA
 Hanover,hanover,Hannover,hannover
@@ -237,7 +237,7 @@ South Sudan,\bs\w*.?sudan,Südsudan,^s(ü|u)d.?sudan
 Spain,spain,Spanien,spanien
 Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon
 Sudan,^(?!.*\bs(?!u)).*sudan,Sudan,^(?!süd).?sudan
-Suriname,surinam|dutch.?guiana,Surinam,surinam|niederl(a|ä)ndisch.?gua(y|i)ana
+Suriname,surinam|dutch.?gu(y|i)ana,Surinam,surinam|niederl(a|ä)ndisch.?gua(y|i)ana
 Svalbard and Jan Mayen,svalbard,Svalbard und Jan Mayen,svalbard
 Swaziland,swaziland|eswatini,Swasiland,swasiland|eswatini
 Sweden,sweden,Schweden,schweden

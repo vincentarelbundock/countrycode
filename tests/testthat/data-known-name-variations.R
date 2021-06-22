@@ -8,6 +8,18 @@ variations <- list(
     #"åland islands"
   #),
 
+  "Suriname" = c(
+    "Dutch Guyana",
+    "Dutch Guiana"
+  ),
+  "French Guiana" = c(
+    "French Guiana",
+    "French Guyana"
+  ),
+  "Guyana" = c(
+    "British Guiana",
+    "British Guyana"
+  ),
 
   "Congo - Brazzaville" = c(
     "republic of congo",
