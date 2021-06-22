@@ -199,22 +199,22 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
 
     out <- rep(NA, length(sourcevar))
     for (dest in destination) {
-        idx <- is.na(out)
-        out[idx] <- countrycode_convert(
-            ## user-supplied arguments
-            sourcevar = sourcevar[idx],
-            origin = origin,
-            destination = dest,
-            warn = warn,
-            nomatch = nomatch,
-            custom_dict = custom_dict,
-            custom_match = custom_match,
-            origin_regex = origin_regex,
-            ## countrycode-supplied arguments
-            origin_vector = origin_vector,
-            dictionary = dictionary)
+        out <- ifelse(is.na(out),
+                      countrycode_convert(
+                          ## user-supplied arguments
+                          sourcevar = sourcevar,
+                          origin = origin,
+                          destination = dest,
+                          warn = warn,
+                          nomatch = nomatch,
+                          custom_dict = custom_dict,
+                          custom_match = custom_match,
+                          origin_regex = origin_regex,
+                          ## countrycode-supplied arguments
+                          origin_vector = origin_vector,
+                          dictionary = dictionary),
+                      out)
     }
-
     return(out)
 }
                         
