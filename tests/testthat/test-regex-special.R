@@ -14,6 +14,11 @@ test_that('names that should return NA', {
 })
 
 
+test_that("Guyana", {
+    expect_equal(no_warn_iso3c_of("Guiana"), NA_character_) # Guiana is ambiguous in English
+})
+
+
 test_that('accented characters are properly matched', {
     expect_equal(iso3c_of('\u00C5land Islands'), 'ALA')
     expect_equal(iso3c_of('Saint Barth\u00E9lemy'), 'BLM')

@@ -101,7 +101,7 @@ Guatemala,guatemala,Guatemala,guatemala
 Guernsey,guernsey,Guernsey,guernsey
 Guinea,^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea,Guinea,^(?!.*Äquatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea
 Guinea Bissau,bissau|^(?=.*portu).*guinea,Guinea-Bissau,bissau|^(?=.*portu).*guinea
-Guyana,^gu(y|i)ana|british.?gu(y|i)ana,Guyana,gu(y|i)ana|britisch.?gua(y|i)ana
+Guyana,^guyana|british.?gu(y|i)ana,Guyana,gu(y|i)ana|britisch.?gua(y|i)ana
 Haiti,haiti,Haiti,haiti
 Hamburg,hamburg,NA,NA
 Hanover,hanover,Hannover,hannover
