@@ -15,11 +15,15 @@ countrycode_factory(
 )
 }
 \arguments{
-\item{origin}{Coding scheme of origin (string such as \code{"iso3c"}). See
+\item{origin}{A string which identifies the coding scheme of origin (e.g., \code{"iso3c"}). See
 \code{\link{codelist}} for a list of available codes.}
 
-\item{destination}{Coding scheme of destination (string such as \code{"iso3c"}). See
-\code{\link{codelist}} for a list of available codes.}
+\item{destination}{A string or vector of strings which identify the coding
+scheme of destination (e.g., \code{"iso3c"} or \code{c("cowc", "iso3c")}). See
+\code{\link{codelist}} for a list of available codes. When users supply a
+vector of destination codes, they are used sequentially to fill in
+missing values not covered by the previous destination code in the
+vector.}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 

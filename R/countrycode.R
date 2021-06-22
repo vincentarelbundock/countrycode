@@ -24,10 +24,14 @@
 #'
 #' @param sourcevar Vector which contains the codes or country names to be
 #'   converted (character or factor)
-#' @param origin Coding scheme of origin (string such as `"iso3c"`). See
+#' @param origin A string which identifies the coding scheme of origin (e.g., `"iso3c"`). See
 #'   [`codelist`][codelist] for a list of available codes.
-#' @param destination Coding scheme of destination (string such as `"iso3c"`). See
-#'   [`codelist`][codelist] for a list of available codes.
+#' @param destination A string or vector of strings which identify the coding
+#'   scheme of destination (e.g., `"iso3c"` or `c("cowc", "iso3c")`). See
+#'   [`codelist`][codelist] for a list of available codes. When users supply a
+#'   vector of destination codes, they are used sequentially to fill in
+#'   missing values not covered by the previous destination code in the
+#'   vector.
 #' @param warn Prints unique elements from sourcevar for which no match was found
 #' @param nomatch When countrycode fails to find a match for the code of
 #'   origin, it fills-in the destination vector with `nomatch`. The default
@@ -217,7 +221,8 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
 
 #' internal function called by `countrycode()`
 #'
-#' @internal
+#' @keywords internal
+#' @noRd
 countrycode_convert <- function(# user-supplied arguments
                                 sourcevar,
                                 origin,
