@@ -25,10 +25,12 @@ If you use `countrycode` in your research, we would be very grateful if you coul
     - [Country names in 600+ different languages and formats](https://github.com/vincentarelbundock/countrycode#country-names-in-600-different-languages-and-formats) 
     - [`custom_dict`: American states](https://github.com/vincentarelbundock/countrycode#custom_dict-american-states) 
     - [`custom_dict`: the `ISOcodes` package](https://github.com/vincentarelbundock/countrycode#custom_dict-the-isocodes-package)
+    - [`destination`: Fallback codes](https://github.com/vincentarelbundock/countrycode#destination-fallback-codes)
     - [`nomatch`: Fill in missing codes manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually) 
     - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
     - [`warn`: Silence warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings) 
 * [`countryname`: Convert country names from any language](https://github.com/vincentarelbundock/countrycode#countryname-convert-country-names-from-any-language)
+* [`countrycode_factory`: Custom conversion functions and "crosswalks"](https://github.com/vincentarelbundock/countrycode#countrycode_factory-custom-conversion-functions-and-crosswalks)
 * [Contributions](https://github.com/vincentarelbundock/countrycode#contributions) 
 
 # Why `countrycode`?
@@ -264,6 +266,27 @@ The resulting dataframe has 3 columns: `Code`, `Name`, `Character`. We convert t
 [1] "ý"
 ```
 
+## `destination`: Fallback codes
+
+Some destination codes not cover all the relevant countries. For example, "SRB" is included in the `iso3c` code but *not* in the `cowc` code. Some users may want to use `cowc` but to fill in missing entries with `iso3c` codes. We can do this by feeding a vector of code names to the `destination` argument. `countrycode` will then try one after the other.
+
+For example,
+
+```r
+x <- c("Algeria", "Serbia")
+
+countrycode(x, "country.name", "cowc")
+#> Warning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: Serbia
+#> [1] "ALG" NA
+
+countrycode(x, "country.name", "iso3c")
+#> [1] "DZA" "SRB"
+
+countrycode(x, "country.name", c("cowc", "iso3c"))
+#> Warning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: Serbia
+#> [1] "ALG" "SRB"
+```
+
 ## `nomatch`: Fill in missing codes manually
 
 Use the `nomatch` argument to specify the value that `countrycode` inserts where no match was found:
@@ -328,6 +351,52 @@ The function `countryname` tries to convert country names from any language. For
     "South Georgia & South Sandwich Islands"
 > countryname(x, 'iso3c')
 [1] "ZWE" "AFG" "BRB" "SWE" "GBR" "SGS"
+```
+
+# `countrycode_factory`: Custom conversion functions and "crosswalks"
+
+The `countrycode_factory` function allows you to create alternative functions with different default arguments and/or dictionaries. For example, we can create:
+
+* `name_to_iso3c` function that sets new defaults for the `origin` and `destination` arguments, and automatically converts country names to iso3c
+* `statecode` function to convert US state codes using a custom dictionary by default, that we download from the internet.
+
+```r
+#################################
+#  new function: name_to_iso3c  #
+#################################
+
+# Custom defaults
+name_to_iso3c <- countrycode_factory(
+    origin = "country.name", destination = "iso3c")
+
+name_to_iso3c(c("Algeria", "Canada"))
+#> [1] "DZA" "CAN"
+
+#############################
+#  new function: statecode  #
+#############################
+
+# Download dictionary
+state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
+state_dict <- read.csv(state_dict)
+
+# Identify regular expression origin codes
+attr(state_dict, "origin_regex") <- "state.regex"
+
+# Set default values for the custom conversion function
+statecode <- countrycode_factory(
+  origin = "state.regex",
+  destination = "abbreviation",
+  custom_dict = state_dict)
+
+# Voilà!
+x <- c("Alabama", "New Mexico")
+statecode(x, "state.regex", "abbreviation")
+#> [1] "AL" "NM"
+
+x <- c("AL", "NM", "VT")
+statecode(x, "abbreviation", "state")
+#> [1] "Alabama"    "New Mexico" "Vermont"
 ```
 
 # Contributions
@@ -398,50 +467,4 @@ countrycode("Alabama", "state", "abbreviation", custom_dict = state_dict)
 ```
 
 
-## Default dictionary and arguments
-
-The `countrycode_factory` function allows you to create alternative functions with different default arguments and/or dictionaries. For example, we can create:
-
-* `name_to_iso3c` function that sets new defaults for the `origin` and `destination` arguments, and automatically converts country names to iso3c
-* `statecode` function to convert US state codes using a custom dictionary by default, that we download from the internet.
-
-
-```r
-#################################
-#  new function: name_to_iso3c  #
-#################################
-
-# Custom defaults
-name_to_iso3c <- countrycode_factory(
-    origin = "country.name", destination = "iso3c")
-
-name_to_iso3c(c("Algeria", "Canada"))
-#> [1] "DZA" "CAN"
-
-#############################
-#  new function: statecode  #
-#############################
-
-# Download dictionary
-state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
-state_dict <- read.csv(state_dict)
-
-# Identify regular expression origin codes
-attr(state_dict, "origin_regex") <- "state.regex"
-
-# Set default values for the custom conversion function
-statecode <- countrycode_factory(
-  origin = "state.regex",
-  destination = "abbreviation",
-  custom_dict = state_dict)
-
-# Voilà!
-x <- c("Alabama", "New Mexico")
-statecode(x, "state.regex", "abbreviation")
-#> [1] "AL" "NM"
-
-x <- c("AL", "NM", "VT")
-statecode(x, "abbreviation", "state")
-#> [1] "Alabama"    "New Mexico" "Vermont"
-```
 
