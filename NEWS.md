@@ -1,6 +1,5 @@
-# countrycode 1.2.0.9000
+# countrycode 1.3.0
 
-* new function: countrycode_factory
 * destination argument accepts a vector of strings and tries one after the other
 * countryname(warn=TRUE) by default
 * better class checks

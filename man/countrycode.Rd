@@ -105,7 +105,7 @@ countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
 
 \dontrun{
  # Download the dictionary of US states from Github
- state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"
+ state_dict <- "https://bit.ly/2ToSrFv"
  state_dict <- read.csv(state_dict)
 
  # The "state.regex" column includes regular expressions, so we set an attribute.

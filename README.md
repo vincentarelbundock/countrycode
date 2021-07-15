@@ -30,7 +30,6 @@ If you use `countrycode` in your research, we would be very grateful if you coul
     - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
     - [`warn`: Silence warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings) 
 * [`countryname`: Convert country names from any language](https://github.com/vincentarelbundock/countrycode#countryname-convert-country-names-from-any-language)
-* [`countrycode_factory`: Custom conversion functions and "crosswalks"](https://github.com/vincentarelbundock/countrycode#countrycode_factory-custom-conversion-functions-and-crosswalks)
 * [Contributions](https://github.com/vincentarelbundock/countrycode#contributions) 
 
 # Why `countrycode`?
@@ -353,9 +352,9 @@ The function `countryname` tries to convert country names from any language. For
 [1] "ZWE" "AFG" "BRB" "SWE" "GBR" "SGS"
 ```
 
-# `countrycode_factory`: Custom conversion functions and "crosswalks"
+# Custom conversion functions and "crosswalks"
 
-The `countrycode_factory` function allows you to create alternative functions with different default arguments and/or dictionaries. For example, we can create:
+It is easy to to create alternative functions with different default arguments and/or dictionaries. For example, we can create:
 
 * `name_to_iso3c` function that sets new defaults for the `origin` and `destination` arguments, and automatically converts country names to iso3c
 * `statecode` function to convert US state codes using a custom dictionary by default, that we download from the internet.
@@ -366,8 +365,12 @@ The `countrycode_factory` function allows you to create alternative functions wi
 #################################
 
 # Custom defaults
-name_to_iso3c <- countrycode_factory(
-    origin = "country.name", destination = "iso3c")
+name_to_iso3c <- function(sourcevar,
+                          origin = "country.name",
+                          destination = "iso3c",
+                          ...) {
+  countrycode(sourcevar, origin = origin, destination = destination, ...)
+}
 
 name_to_iso3c(c("Algeria", "Canada"))
 #> [1] "DZA" "CAN"
@@ -383,11 +386,18 @@ state_dict <- read.csv(state_dict)
 # Identify regular expression origin codes
 attr(state_dict, "origin_regex") <- "state.regex"
 
-# Set default values for the custom conversion function
-statecode <- countrycode_factory(
-  origin = "state.regex",
-  destination = "abbreviation",
-  custom_dict = state_dict)
+# Define a custom conversion function
+statecode <- function(sourcevar,
+                      origin = "state.regex",
+                      destination = "abbreviation",
+                      custom_dict = state_dict,
+                      ...) {
+    countrycode(sourcevar,
+                origin = origin,
+                destination = destination,
+                custom_dict = custom_dict,
+                ...)
+}
 
 # Voilà!
 x <- c("Alabama", "New Mexico")
