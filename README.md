@@ -30,6 +30,7 @@ If you use `countrycode` in your research, we would be very grateful if you coul
     - [`custom_match`: Override default values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values) 
     - [`warn`: Silence warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings) 
 * [`countryname`: Convert country names from any language](https://github.com/vincentarelbundock/countrycode#countryname-convert-country-names-from-any-language)
+* [Custom conversion functions and "crosswalks"](https://github.com/vincentarelbundock/countrycode#custom-conversion-functions-and-crosswalks)
 * [Contributions](https://github.com/vincentarelbundock/countrycode#contributions) 
 
 # Why `countrycode`?
