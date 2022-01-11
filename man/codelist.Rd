@@ -38,6 +38,7 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \item \code{p4c}: Polity IV character country code
 \item \code{un}: United Nations M49 numeric codes
 \item \code{unicode.symbol}: Region subtag (often displayed as emoji flag)
+\item \code{unhcr}: United Nations High Commissioner for Refugees
 \item \code{unpd}: United Nations Procurement Division
 \item \code{vdem}: Varieties of Democracy (V-Dem version 8, April 2018)
 \item \code{wb}: World Bank (very similar but not identical to iso3c)
@@ -47,6 +48,9 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 
 \subsection{Destination only}{
 \itemize{
+\item \verb{cldr.*}: 600+ country name variants from the UNICODE CLDR project (e.g., "cldr.short.en").
+Inspect the \code{\link[=cldr_examples]{cldr_examples}} data.frame for a full list of
+available country names and examples.
 \item \code{ar5}: IPCC's regional mapping used both in the Fifth Assessment Report
 (AR5) and for the Reference Concentration Pathways (RCP)
 \item \code{continent}: Continent as defined in the World Bank Development Indicators
@@ -77,9 +81,6 @@ without special territories
 \item \code{un.regionsub.name}: United Nations sub-region name
 \item \code{un.regionsub.code}: United Nations sub-region code
 \item \code{wvs.name}: World Values Survey numeric code country name
-\item \verb{cldr.*}: 600+ country name variants from the UNICODE CLDR project.
-Inspect the \code{\link[=cldr_examples]{cldr_examples}} data.frame for a full list of
-available country names and examples.
 }
 }
 }

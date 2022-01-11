@@ -29,6 +29,7 @@
 #' - `p4c`: Polity IV character country code
 #' - `un`: United Nations M49 numeric codes
 #' - `unicode.symbol`: Region subtag (often displayed as emoji flag)
+#' - `unhcr`: United Nations High Commissioner for Refugees
 #' - `unpd`: United Nations Procurement Division
 #' - `vdem`: Varieties of Democracy (V-Dem version 8, April 2018)
 #' - `wb`: World Bank (very similar but not identical to iso3c)
@@ -36,6 +37,9 @@
 #'
 #' ## Destination only
 #'
+#' - `cldr.*`: 600+ country name variants from the UNICODE CLDR project (e.g., "cldr.short.en").
+#'   Inspect the [`cldr_examples`][countrycode::cldr_examples] data.frame for a full list of
+#'   available country names and examples.
 #' - `ar5`: IPCC's regional mapping used both in the Fifth Assessment Report
 #'              (AR5) and for the Reference Concentration Pathways (RCP)
 #' - `continent`: Continent as defined in the World Bank Development Indicators
@@ -66,9 +70,6 @@
 #' - `un.regionsub.name`: United Nations sub-region name
 #' - `un.regionsub.code`: United Nations sub-region code
 #' - `wvs.name`: World Values Survey numeric code country name
-#' - `cldr.*`: 600+ country name variants from the UNICODE CLDR project.
-#'   Inspect the [`cldr_examples`][countrycode::cldr_examples] data.frame for a full list of
-#'   available country names and examples.
 #'
 #' @note The Correlates of War (cow) and Polity 4 (p4) project produce codes in
 #' country year format. Some countries go through political transitions that

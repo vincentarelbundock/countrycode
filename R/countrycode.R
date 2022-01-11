@@ -104,8 +104,8 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
           "cctld", "country.name", "country.name.de", "cowc", "cown", "dhs",
           "ecb", "eurostat", "fao", "fips", "gaul", "genc2c", "genc3c",
           "genc3n", "gwc", "gwn", "imf", "ioc", "iso2c", "iso3c", "iso3n",
-          "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unpd", "vdem", "wb",
-          "wb_api2c", "wb_api3c", "wvs", "country.name.en.regex",
+          "p4c", "p4n", "un", "un_m49", "unicode.symbol", "unhcr", "unpd", "vdem", 
+          "wb", "wb_api2c", "wb_api3c", "wvs", "country.name.en.regex",
           "country.name.de.regex")
         attr(dictionary, "origin_regex") <- c("country.name.de.regex",
                                               "country.name.en.regex")
