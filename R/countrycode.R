@@ -192,7 +192,8 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
 
     # Case-insensitive matching
     if(is.null(custom_dict)){ # only for built-in dictionary
-        if(inherits(origin_vector, 'character') & !grepl('country', origin)){
+        # unicode.symbol breaks uppercase on Windows R-devel 2022-02-02; rejected by CRAN
+        if(inherits(origin_vector, 'character') & !grepl('country|unicode.symbol', origin)){
             origin_vector = toupper(origin_vector)
         }
     }
