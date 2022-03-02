@@ -11,7 +11,7 @@
 #' the function works with non-ASCII characters. Please see the Github page for
 #' examples.
 #'
-#' @param sourcevar Vector which contains the codes or country names to ce
+#' @param sourcevar Vector which contains the codes or country names to be
 #' converted (character or factor)
 #' @param destination Coding scheme of destination (string such as "iso3c"
 #' enclosed in quotes ""): type `?codelist` for a list of
