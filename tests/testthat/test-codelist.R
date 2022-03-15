@@ -73,12 +73,12 @@ for (i in colnames(cs)) {
 context('codelist_panel')
 
 # class
-test_that('codelist is a data.frame', {
+test_that('codelist_panel is a data.frame', {
     expect_true(inherits(pan, 'data.frame'))
 })
 
 # dimensions
-test_that('codelist has (roughly) correct dimensions', {
+test_that('codelist_panel has (roughly) correct dimensions', {
     expect_gt(nrow(pan), 25000)
     expect_lt(nrow(pan), 30000)
     expect_gt(ncol(pan), 40)
@@ -88,13 +88,13 @@ test_that('codelist has (roughly) correct dimensions', {
 # columns
 cols <- c('country.name.en.regex', 'country.name.en', 'year', 'iso3c', 'cowc', 'p4c', 'vdem')
 for (i in cols) {
-    test_that(paste('codelist includes', i), {
+    test_that(paste('codelist_panel includes', i), {
         expect_true(i %in% colnames(pan))
     })
 }
 
 # missing
-test_that('codelist missing values', {
+test_that('codelist_panel missing values', {
     expect_false(any(is.na(pan$country.name.en.regex)))
     expect_false(any(is.na(pan$country.name.en)))
     expect_false(any(is.na(pan$year)))
@@ -117,7 +117,7 @@ for (i in cols) {
 # duplicate
 for (i in colnames(pan)) {
     if (!i %in% dest) {
-        test_that(paste0('codelist$', i, ' has no duplicates'), {
+        test_that(paste0('codelist_panel$', i, ' has no duplicates'), {
             idx <- pan[, c(i, 'year')]
             idx <- na.omit(idx)
             idx <- paste(idx[[1]], idx[[2]])

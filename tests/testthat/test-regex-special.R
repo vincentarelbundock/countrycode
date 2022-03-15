@@ -31,9 +31,6 @@ test_that('accented characters are properly matched', {
 
 test_that('some official country names are properly matched', {
     expect_equal(iso3c_of('democratic people\'s republic of korea'), 'PRK')
-    expect_equal(iso3c_of('DPR Korea'), 'PRK')
-    expect_equal(iso3c_of('Korea, DPR'), 'PRK')
-    expect_equal(iso3c_of('Speech by the Governor of the Bank of Korea'), 'KOR')
     expect_equal(iso3c_of('republic of guinea'), 'GIN')
     expect_equal(iso3c_of('hellenic republic'), 'GRC')
     expect_equal(iso3c_of('united mexican states'), 'MEX')
