@@ -7,7 +7,7 @@
 countryname(sourcevar, destination = "cldr.short.en", warn = TRUE)
 }
 \arguments{
-\item{sourcevar}{Vector which contains the codes or country names to ce
+\item{sourcevar}{Vector which contains the codes or country names to be
 converted (character or factor)}
 
 \item{destination}{Coding scheme of destination (string such as "iso3c"
