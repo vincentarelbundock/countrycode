@@ -23,8 +23,8 @@ test_that('codelist is a data.frame', {
 test_that('codelist has (roughly) correct dimensions', {
     expect_gt(nrow(cs), 250)
     expect_lt(nrow(cs), 300)
-    expect_gt(ncol(cs), 700)
-    expect_lt(ncol(cs), 750)
+    expect_gt(ncol(cs), 600)
+    expect_lt(ncol(cs), 650)
 })
 
 # columns
