@@ -15,9 +15,9 @@ dig_deeper <-
     country.name[unmatched] <-
       sapply(unmatched, function(i) {
         read_html(paste0(url, '/', sub('^\\.', '', .data$Domain[i]), '.html')) %>%
-          html_node(xpath = '//*[(@id = "main_right")]/h2[2]/preceding-sibling::text()[1]') %>%
+          html_node(xpath = '//*[@id="body"]/article/main/comment()[1]') %>%
           html_text() %>%
-          trimws()
+          str_match('(?<=designated for ).*(?=\\))')
       })
 
     # standardize country names to default countrycode$country.name
