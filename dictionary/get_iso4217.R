@@ -17,6 +17,7 @@ read_excel(tmpxls, skip = 3) %>%
   filter(!(country == "Namibia" & Currency == "Rand")) %>%
   filter(!(country == "Panama" & Currency == "US Dollar")) %>%
   filter(!(country == "Uruguay" & Currency == "Unidad Previsional")) %>%
+  filter(!(country == "Venezuela" & `Alphabetic Code` == "VES")) %>%
   mutate(`Numeric Code` = as.numeric(`Numeric Code`)) %>%
   select(country, currency = Currency, iso4217c = `Alphabetic Code`,
          iso4217n = `Numeric Code`) %>%

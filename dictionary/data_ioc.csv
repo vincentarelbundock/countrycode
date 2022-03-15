@@ -51,10 +51,11 @@ Cyprus,CYP
 Czech Republic,CZE
 Democratic People's Republic of Korea,PRK
 Democratic Republic of the Congo,COD
+Democratic Republic of Timor-Leste,TLS
 Denmark,DEN
 Djibouti,DJI
-Dominican Republic,DOM
 Dominica,DMA
+Dominican Republic,DOM
 Ecuador,ECU
 Egypt,EGY
 El Salvador,ESA
@@ -134,7 +135,6 @@ New Zealand,NZL
 Nicaragua,NCA
 Niger,NIG
 Nigeria,NGR
-North Macedonia,MKD
 Norway,NOR
 Oman,OMA
 Pakistan,PAK
@@ -152,12 +152,13 @@ Puerto Rico,PUR
 Qatar,QAT
 Republic of Korea,KOR
 Republic of Moldova,MDA
+Republic of North Macedonia,MKD
 Romania,ROU
 Russian Federation,RUS
 Rwanda,RWA
 Saint Kitts and Nevis,SKN
 Saint Lucia,LCA
-Samoa (until 1996 Western Samoa),SAM
+Samoa,SAM
 San Marino,SMR
 Sao Tome and Principe,STP
 Saudi Arabia,KSA
@@ -182,7 +183,6 @@ Switzerland,SUI
 Syrian Arab Republic,SYR
 Tajikistan,TJK
 Thailand,THA
-Timor-Leste,TLS
 Togo,TOG
 Tonga,TGA
 Trinidad and Tobago,TTO
@@ -201,6 +201,7 @@ Vanuatu,VAN
 Venezuela,VEN
 Vietnam,VIE
 "Virgin Islands, British",IVB
+"Virgin Islands, US",ISV
 Yemen,YEM
 Zambia,ZAM
 Zimbabwe,ZIM
