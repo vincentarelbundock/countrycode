@@ -1,22 +1,22 @@
 source(here::here('dictionary/utilities.R'))
 
-url = 'https://www.olympic.org/national-olympic-committees'
-doc = url %>% xml2::read_html(.)
-country = doc %>% 
-          rvest::html_nodes('div.box > a') %>% 
-          rvest::html_text(.) %>% 
-          trimws
+url = 'https://stillmed.olympics.com/media/Document%20Library/OlympicOrg/Documents/National-Olympic-Committees/List-of-National-Olympic-Committees-in-IOC-Protocol-Order.pdf'
 
-ioc = doc %>% 
-      rvest::html_nodes('div.box > a > div > div')  %>% 
-      rvest::html_attr('class') %>%
-      gsub('flag90 ', '', .) %>%
-      toupper 
+# Notes as of 2022-03-17:
+# This document is linked from https://olympics.com/ioc/documents/olympic-movement/list-of-nocs
+# Despite a description that it is from 2013-02-14, the PDF was actually authored on 2019-05-27.
+# The earlier date must be incorrect, since the South Sudan NOC didn't exist.
 
-ioc = data.frame(country, ioc) %>%
-      filter(country != 'Virgin Islands, US') %>%
-      mutate(country = ifelse(country == 'Brésil', 'Brazil', country),
-             country = ifelse(country == 'Éthiopie', 'Ethiopia', country),
-             country = ifelse(country == 'Dominique', 'Dominica', country))
+ioc = url %>%
+  pdftools::pdf_text() %>%
+  str_split('\n\n') %>%
+  purrr::flatten_chr() %>%
+  str_extract('[A-Z]{3}\\s+.+?(?=\\s{2})') %>%
+  str_squish() %>%
+  as_tibble() %>%
+  separate(value, c('ioc','country'), extra = "merge") %>%
+  filter(!ioc %in% c(NA,"NOC","IOA","IOP","EOR")) %>%
+  relocate(country) %>%
+  arrange(country)
 
 ioc %>% write_csv('dictionary/data_ioc.csv', na = "")
