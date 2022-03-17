@@ -7,15 +7,16 @@ source(here::here('dictionary/utilities.R'))
 
 # Scrape UNGEGN official country names
 get_names <- function(language){
-    selector <- 'div.collapsed.member-state-row > div.pull-left.flip > span'
-    url <- paste0('http://www.un.org/', language, '/member-states/')
+    selector <- 'div.country > div.card-body > h2'
+    url <- paste0('https://www.un.org/', language, '/about-us/member-states')
     doc <- url %>% xml2::read_html(.)
     countries <- doc %>%
-                 rvest::html_nodes(selector) %>% 
-                 rvest::html_text(.)
-    selector <- 'div.collapsed.member-state-row > div.pull-left.flip > div > div'
-    flags <- doc %>% 
-             rvest::html_nodes(selector) %>%
+                 rvest::html_elements(selector) %>%
+                 rvest::html_text(.) %>%
+                 str_squish()
+    selector <- 'div.country > div.card-body > div.flag-container > div.flags'
+    flags <- doc %>%
+             rvest::html_elements(selector) %>%
              rvest::html_attr('class') %>%
              gsub('.*flags-', '', .)
     out <- data.frame(toupper(flags), countries)
@@ -23,14 +24,35 @@ get_names <- function(language){
     return(out)
 }
 
-un <- c('en', 'fr', 'es', 'ru', 'zh', 'ar') %>%
+get_names_alt <- function(language){
+  selector <- 'div.memberstatelist > div.panel-group > div.panel > div.collapse > div.panel-body > table > tbody > tr > td:nth-child(2)'
+  url <- paste0('https://www.un.org/', language, '/about-us/member-states')
+  doc <- url %>% xml2::read_html(.)
+  countries <- doc %>%
+               rvest::html_elements(selector) %>%
+               rvest::html_text(.) %>%
+               str_squish()
+  selector <- 'div.memberstatelist > div.panel-group > div.panel > div.collapse > div.panel-body > table > tbody > tr > td:nth-child(1) > div.flag-container > div.flags'
+  flags <- doc %>%
+           rvest::html_elements(selector) %>%
+           rvest::html_attr('class') %>%
+           gsub('.*flags-', '', .)
+  out <- data.frame(toupper(flags), countries)
+  colnames(out) <- c('iso2c', language)
+  return(out)
+}
+
+un_alt <- get_names_alt('ar')
+
+un <- c('en', 'fr', 'es', 'ru', 'zh') %>%
       map(get_names) %>%
       reduce(full_join, by = 'iso2c') %>%
+      full_join(un_alt, by = 'iso2c') %>%
       mutate_at(vars(2:ncol(.)), .funs = list(~ str_replace(., '\\*$', ''))) %>%
       select(-iso2c) %>%
       setNames(paste0('un.name.', names(.))) %>%
       mutate(country = un.name.en,
-             # misspelled in original source
-             un.name.es = ifelse(un.name.es == 'Trinidad yTobago', 'Trinidad y Tobago', un.name.es))
+             # missing in original source
+             un.name.ar = ifelse(is.na(un.name.ar) & un.name.en == "Costa Rica", 'كوستاريكا', un.name.ar))
 
 un %>% write_csv('dictionary/data_un_names.csv', na = "")
