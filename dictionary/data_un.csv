@@ -1,11 +1,11 @@
 country,un,un.region.name,un.region.code,un.regionsub.name,un.regionsub.code,un.regionintermediate.name,un.regionintermediate.code
-Algeria,12,Africa,2,Northern Africa,15,,NA
-Egypt,818,Africa,2,Northern Africa,15,,NA
-Libya,434,Africa,2,Northern Africa,15,,NA
-Morocco,504,Africa,2,Northern Africa,15,,NA
-Sudan,729,Africa,2,Northern Africa,15,,NA
-Tunisia,788,Africa,2,Northern Africa,15,,NA
-Western Sahara,732,Africa,2,Northern Africa,15,,NA
+Algeria,12,Africa,2,Northern Africa,15,"",
+Egypt,818,Africa,2,Northern Africa,15,"",
+Libya,434,Africa,2,Northern Africa,15,"",
+Morocco,504,Africa,2,Northern Africa,15,"",
+Sudan,729,Africa,2,Northern Africa,15,"",
+Tunisia,788,Africa,2,Northern Africa,15,"",
+Western Sahara,732,Africa,2,Northern Africa,15,"",
 British Indian Ocean Territory,86,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
 Burundi,108,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
 Comoros,174,Africa,2,Sub-Saharan Africa,202,Eastern Africa,14
@@ -111,139 +111,139 @@ South Georgia and the South Sandwich Islands,239,Americas,19,Latin America and t
 Suriname,740,Americas,19,Latin America and the Caribbean,419,South America,5
 Uruguay,858,Americas,19,Latin America and the Caribbean,419,South America,5
 Venezuela (Bolivarian Republic of),862,Americas,19,Latin America and the Caribbean,419,South America,5
-Bermuda,60,Americas,19,Northern America,21,,NA
-Canada,124,Americas,19,Northern America,21,,NA
-Greenland,304,Americas,19,Northern America,21,,NA
-Saint Pierre and Miquelon,666,Americas,19,Northern America,21,,NA
-United States of America,840,Americas,19,Northern America,21,,NA
-Antarctica,10,,NA,,NA,,NA
-Kazakhstan,398,Asia,142,Central Asia,143,,NA
-Kyrgyzstan,417,Asia,142,Central Asia,143,,NA
-Tajikistan,762,Asia,142,Central Asia,143,,NA
-Turkmenistan,795,Asia,142,Central Asia,143,,NA
-Uzbekistan,860,Asia,142,Central Asia,143,,NA
-China,156,Asia,142,Eastern Asia,30,,NA
-"China, Hong Kong Special Administrative Region",344,Asia,142,Eastern Asia,30,,NA
-"China, Macao Special Administrative Region",446,Asia,142,Eastern Asia,30,,NA
-Democratic People's Republic of Korea,408,Asia,142,Eastern Asia,30,,NA
-Japan,392,Asia,142,Eastern Asia,30,,NA
-Mongolia,496,Asia,142,Eastern Asia,30,,NA
-Republic of Korea,410,Asia,142,Eastern Asia,30,,NA
-Brunei Darussalam,96,Asia,142,South-eastern Asia,35,,NA
-Cambodia,116,Asia,142,South-eastern Asia,35,,NA
-Indonesia,360,Asia,142,South-eastern Asia,35,,NA
-Lao People's Democratic Republic,418,Asia,142,South-eastern Asia,35,,NA
-Malaysia,458,Asia,142,South-eastern Asia,35,,NA
-Myanmar,104,Asia,142,South-eastern Asia,35,,NA
-Philippines,608,Asia,142,South-eastern Asia,35,,NA
-Singapore,702,Asia,142,South-eastern Asia,35,,NA
-Thailand,764,Asia,142,South-eastern Asia,35,,NA
-Timor-Leste,626,Asia,142,South-eastern Asia,35,,NA
-Viet Nam,704,Asia,142,South-eastern Asia,35,,NA
-Afghanistan,4,Asia,142,Southern Asia,34,,NA
-Bangladesh,50,Asia,142,Southern Asia,34,,NA
-Bhutan,64,Asia,142,Southern Asia,34,,NA
-India,356,Asia,142,Southern Asia,34,,NA
-Iran (Islamic Republic of),364,Asia,142,Southern Asia,34,,NA
-Maldives,462,Asia,142,Southern Asia,34,,NA
-Nepal,524,Asia,142,Southern Asia,34,,NA
-Pakistan,586,Asia,142,Southern Asia,34,,NA
-Sri Lanka,144,Asia,142,Southern Asia,34,,NA
-Armenia,51,Asia,142,Western Asia,145,,NA
-Azerbaijan,31,Asia,142,Western Asia,145,,NA
-Bahrain,48,Asia,142,Western Asia,145,,NA
-Cyprus,196,Asia,142,Western Asia,145,,NA
-Georgia,268,Asia,142,Western Asia,145,,NA
-Iraq,368,Asia,142,Western Asia,145,,NA
-Israel,376,Asia,142,Western Asia,145,,NA
-Jordan,400,Asia,142,Western Asia,145,,NA
-Kuwait,414,Asia,142,Western Asia,145,,NA
-Lebanon,422,Asia,142,Western Asia,145,,NA
-Oman,512,Asia,142,Western Asia,145,,NA
-Qatar,634,Asia,142,Western Asia,145,,NA
-Saudi Arabia,682,Asia,142,Western Asia,145,,NA
-State of Palestine,275,Asia,142,Western Asia,145,,NA
-Syrian Arab Republic,760,Asia,142,Western Asia,145,,NA
-Turkey,792,Asia,142,Western Asia,145,,NA
-United Arab Emirates,784,Asia,142,Western Asia,145,,NA
-Yemen,887,Asia,142,Western Asia,145,,NA
-Belarus,112,Europe,150,Eastern Europe,151,,NA
-Bulgaria,100,Europe,150,Eastern Europe,151,,NA
-Czechia,203,Europe,150,Eastern Europe,151,,NA
-Hungary,348,Europe,150,Eastern Europe,151,,NA
-Poland,616,Europe,150,Eastern Europe,151,,NA
-Republic of Moldova,498,Europe,150,Eastern Europe,151,,NA
-Romania,642,Europe,150,Eastern Europe,151,,NA
-Russian Federation,643,Europe,150,Eastern Europe,151,,NA
-Slovakia,703,Europe,150,Eastern Europe,151,,NA
-Ukraine,804,Europe,150,Eastern Europe,151,,NA
-Åland Islands,248,Europe,150,Northern Europe,154,,NA
+Bermuda,60,Americas,19,Northern America,21,"",
+Canada,124,Americas,19,Northern America,21,"",
+Greenland,304,Americas,19,Northern America,21,"",
+Saint Pierre and Miquelon,666,Americas,19,Northern America,21,"",
+United States of America,840,Americas,19,Northern America,21,"",
+Antarctica,10,"",,"",,"",
+Kazakhstan,398,Asia,142,Central Asia,143,"",
+Kyrgyzstan,417,Asia,142,Central Asia,143,"",
+Tajikistan,762,Asia,142,Central Asia,143,"",
+Turkmenistan,795,Asia,142,Central Asia,143,"",
+Uzbekistan,860,Asia,142,Central Asia,143,"",
+China,156,Asia,142,Eastern Asia,30,"",
+"China, Hong Kong Special Administrative Region",344,Asia,142,Eastern Asia,30,"",
+"China, Macao Special Administrative Region",446,Asia,142,Eastern Asia,30,"",
+Democratic People's Republic of Korea,408,Asia,142,Eastern Asia,30,"",
+Japan,392,Asia,142,Eastern Asia,30,"",
+Mongolia,496,Asia,142,Eastern Asia,30,"",
+Republic of Korea,410,Asia,142,Eastern Asia,30,"",
+Brunei Darussalam,96,Asia,142,South-eastern Asia,35,"",
+Cambodia,116,Asia,142,South-eastern Asia,35,"",
+Indonesia,360,Asia,142,South-eastern Asia,35,"",
+Lao People's Democratic Republic,418,Asia,142,South-eastern Asia,35,"",
+Malaysia,458,Asia,142,South-eastern Asia,35,"",
+Myanmar,104,Asia,142,South-eastern Asia,35,"",
+Philippines,608,Asia,142,South-eastern Asia,35,"",
+Singapore,702,Asia,142,South-eastern Asia,35,"",
+Thailand,764,Asia,142,South-eastern Asia,35,"",
+Timor-Leste,626,Asia,142,South-eastern Asia,35,"",
+Viet Nam,704,Asia,142,South-eastern Asia,35,"",
+Afghanistan,4,Asia,142,Southern Asia,34,"",
+Bangladesh,50,Asia,142,Southern Asia,34,"",
+Bhutan,64,Asia,142,Southern Asia,34,"",
+India,356,Asia,142,Southern Asia,34,"",
+Iran (Islamic Republic of),364,Asia,142,Southern Asia,34,"",
+Maldives,462,Asia,142,Southern Asia,34,"",
+Nepal,524,Asia,142,Southern Asia,34,"",
+Pakistan,586,Asia,142,Southern Asia,34,"",
+Sri Lanka,144,Asia,142,Southern Asia,34,"",
+Armenia,51,Asia,142,Western Asia,145,"",
+Azerbaijan,31,Asia,142,Western Asia,145,"",
+Bahrain,48,Asia,142,Western Asia,145,"",
+Cyprus,196,Asia,142,Western Asia,145,"",
+Georgia,268,Asia,142,Western Asia,145,"",
+Iraq,368,Asia,142,Western Asia,145,"",
+Israel,376,Asia,142,Western Asia,145,"",
+Jordan,400,Asia,142,Western Asia,145,"",
+Kuwait,414,Asia,142,Western Asia,145,"",
+Lebanon,422,Asia,142,Western Asia,145,"",
+Oman,512,Asia,142,Western Asia,145,"",
+Qatar,634,Asia,142,Western Asia,145,"",
+Saudi Arabia,682,Asia,142,Western Asia,145,"",
+State of Palestine,275,Asia,142,Western Asia,145,"",
+Syrian Arab Republic,760,Asia,142,Western Asia,145,"",
+Turkey,792,Asia,142,Western Asia,145,"",
+United Arab Emirates,784,Asia,142,Western Asia,145,"",
+Yemen,887,Asia,142,Western Asia,145,"",
+Belarus,112,Europe,150,Eastern Europe,151,"",
+Bulgaria,100,Europe,150,Eastern Europe,151,"",
+Czechia,203,Europe,150,Eastern Europe,151,"",
+Hungary,348,Europe,150,Eastern Europe,151,"",
+Poland,616,Europe,150,Eastern Europe,151,"",
+Republic of Moldova,498,Europe,150,Eastern Europe,151,"",
+Romania,642,Europe,150,Eastern Europe,151,"",
+Russian Federation,643,Europe,150,Eastern Europe,151,"",
+Slovakia,703,Europe,150,Eastern Europe,151,"",
+Ukraine,804,Europe,150,Eastern Europe,151,"",
+Åland Islands,248,Europe,150,Northern Europe,154,"",
 Guernsey,831,Europe,150,Northern Europe,154,Channel Islands,830
 Jersey,832,Europe,150,Northern Europe,154,Channel Islands,830
-Denmark,208,Europe,150,Northern Europe,154,,NA
-Estonia,233,Europe,150,Northern Europe,154,,NA
-Faroe Islands,234,Europe,150,Northern Europe,154,,NA
-Finland,246,Europe,150,Northern Europe,154,,NA
-Iceland,352,Europe,150,Northern Europe,154,,NA
-Ireland,372,Europe,150,Northern Europe,154,,NA
-Isle of Man,833,Europe,150,Northern Europe,154,,NA
-Latvia,428,Europe,150,Northern Europe,154,,NA
-Lithuania,440,Europe,150,Northern Europe,154,,NA
-Norway,578,Europe,150,Northern Europe,154,,NA
-Svalbard and Jan Mayen Islands,744,Europe,150,Northern Europe,154,,NA
-Sweden,752,Europe,150,Northern Europe,154,,NA
-United Kingdom of Great Britain and Northern Ireland,826,Europe,150,Northern Europe,154,,NA
-Albania,8,Europe,150,Southern Europe,39,,NA
-Andorra,20,Europe,150,Southern Europe,39,,NA
-Bosnia and Herzegovina,70,Europe,150,Southern Europe,39,,NA
-Croatia,191,Europe,150,Southern Europe,39,,NA
-Gibraltar,292,Europe,150,Southern Europe,39,,NA
-Greece,300,Europe,150,Southern Europe,39,,NA
-Holy See,336,Europe,150,Southern Europe,39,,NA
-Italy,380,Europe,150,Southern Europe,39,,NA
-Malta,470,Europe,150,Southern Europe,39,,NA
-Montenegro,499,Europe,150,Southern Europe,39,,NA
-North Macedonia,807,Europe,150,Southern Europe,39,,NA
-Portugal,620,Europe,150,Southern Europe,39,,NA
-San Marino,674,Europe,150,Southern Europe,39,,NA
-Serbia,688,Europe,150,Southern Europe,39,,NA
-Slovenia,705,Europe,150,Southern Europe,39,,NA
-Spain,724,Europe,150,Southern Europe,39,,NA
-Austria,40,Europe,150,Western Europe,155,,NA
-Belgium,56,Europe,150,Western Europe,155,,NA
-France,250,Europe,150,Western Europe,155,,NA
-Germany,276,Europe,150,Western Europe,155,,NA
-Liechtenstein,438,Europe,150,Western Europe,155,,NA
-Luxembourg,442,Europe,150,Western Europe,155,,NA
-Monaco,492,Europe,150,Western Europe,155,,NA
-Netherlands,528,Europe,150,Western Europe,155,,NA
-Switzerland,756,Europe,150,Western Europe,155,,NA
-Australia,36,Oceania,9,Australia and New Zealand,53,,NA
-Christmas Island,162,Oceania,9,Australia and New Zealand,53,,NA
-Cocos (Keeling) Islands,166,Oceania,9,Australia and New Zealand,53,,NA
-Heard Island and McDonald Islands,334,Oceania,9,Australia and New Zealand,53,,NA
-New Zealand,554,Oceania,9,Australia and New Zealand,53,,NA
-Norfolk Island,574,Oceania,9,Australia and New Zealand,53,,NA
-Fiji,242,Oceania,9,Melanesia,54,,NA
-New Caledonia,540,Oceania,9,Melanesia,54,,NA
-Papua New Guinea,598,Oceania,9,Melanesia,54,,NA
-Solomon Islands,90,Oceania,9,Melanesia,54,,NA
-Vanuatu,548,Oceania,9,Melanesia,54,,NA
-Guam,316,Oceania,9,Micronesia,57,,NA
-Kiribati,296,Oceania,9,Micronesia,57,,NA
-Marshall Islands,584,Oceania,9,Micronesia,57,,NA
-Micronesia (Federated States of),583,Oceania,9,Micronesia,57,,NA
-Nauru,520,Oceania,9,Micronesia,57,,NA
-Northern Mariana Islands,580,Oceania,9,Micronesia,57,,NA
-Palau,585,Oceania,9,Micronesia,57,,NA
-United States Minor Outlying Islands,581,Oceania,9,Micronesia,57,,NA
-American Samoa,16,Oceania,9,Polynesia,61,,NA
-Cook Islands,184,Oceania,9,Polynesia,61,,NA
-French Polynesia,258,Oceania,9,Polynesia,61,,NA
-Niue,570,Oceania,9,Polynesia,61,,NA
-Pitcairn,612,Oceania,9,Polynesia,61,,NA
-Samoa,882,Oceania,9,Polynesia,61,,NA
-Tokelau,772,Oceania,9,Polynesia,61,,NA
-Tonga,776,Oceania,9,Polynesia,61,,NA
-Tuvalu,798,Oceania,9,Polynesia,61,,NA
-Wallis and Futuna Islands,876,Oceania,9,Polynesia,61,,NA
+Denmark,208,Europe,150,Northern Europe,154,"",
+Estonia,233,Europe,150,Northern Europe,154,"",
+Faroe Islands,234,Europe,150,Northern Europe,154,"",
+Finland,246,Europe,150,Northern Europe,154,"",
+Iceland,352,Europe,150,Northern Europe,154,"",
+Ireland,372,Europe,150,Northern Europe,154,"",
+Isle of Man,833,Europe,150,Northern Europe,154,"",
+Latvia,428,Europe,150,Northern Europe,154,"",
+Lithuania,440,Europe,150,Northern Europe,154,"",
+Norway,578,Europe,150,Northern Europe,154,"",
+Svalbard and Jan Mayen Islands,744,Europe,150,Northern Europe,154,"",
+Sweden,752,Europe,150,Northern Europe,154,"",
+United Kingdom of Great Britain and Northern Ireland,826,Europe,150,Northern Europe,154,"",
+Albania,8,Europe,150,Southern Europe,39,"",
+Andorra,20,Europe,150,Southern Europe,39,"",
+Bosnia and Herzegovina,70,Europe,150,Southern Europe,39,"",
+Croatia,191,Europe,150,Southern Europe,39,"",
+Gibraltar,292,Europe,150,Southern Europe,39,"",
+Greece,300,Europe,150,Southern Europe,39,"",
+Holy See,336,Europe,150,Southern Europe,39,"",
+Italy,380,Europe,150,Southern Europe,39,"",
+Malta,470,Europe,150,Southern Europe,39,"",
+Montenegro,499,Europe,150,Southern Europe,39,"",
+North Macedonia,807,Europe,150,Southern Europe,39,"",
+Portugal,620,Europe,150,Southern Europe,39,"",
+San Marino,674,Europe,150,Southern Europe,39,"",
+Serbia,688,Europe,150,Southern Europe,39,"",
+Slovenia,705,Europe,150,Southern Europe,39,"",
+Spain,724,Europe,150,Southern Europe,39,"",
+Austria,40,Europe,150,Western Europe,155,"",
+Belgium,56,Europe,150,Western Europe,155,"",
+France,250,Europe,150,Western Europe,155,"",
+Germany,276,Europe,150,Western Europe,155,"",
+Liechtenstein,438,Europe,150,Western Europe,155,"",
+Luxembourg,442,Europe,150,Western Europe,155,"",
+Monaco,492,Europe,150,Western Europe,155,"",
+Netherlands,528,Europe,150,Western Europe,155,"",
+Switzerland,756,Europe,150,Western Europe,155,"",
+Australia,36,Oceania,9,Australia and New Zealand,53,"",
+Christmas Island,162,Oceania,9,Australia and New Zealand,53,"",
+Cocos (Keeling) Islands,166,Oceania,9,Australia and New Zealand,53,"",
+Heard Island and McDonald Islands,334,Oceania,9,Australia and New Zealand,53,"",
+New Zealand,554,Oceania,9,Australia and New Zealand,53,"",
+Norfolk Island,574,Oceania,9,Australia and New Zealand,53,"",
+Fiji,242,Oceania,9,Melanesia,54,"",
+New Caledonia,540,Oceania,9,Melanesia,54,"",
+Papua New Guinea,598,Oceania,9,Melanesia,54,"",
+Solomon Islands,90,Oceania,9,Melanesia,54,"",
+Vanuatu,548,Oceania,9,Melanesia,54,"",
+Guam,316,Oceania,9,Micronesia,57,"",
+Kiribati,296,Oceania,9,Micronesia,57,"",
+Marshall Islands,584,Oceania,9,Micronesia,57,"",
+Micronesia (Federated States of),583,Oceania,9,Micronesia,57,"",
+Nauru,520,Oceania,9,Micronesia,57,"",
+Northern Mariana Islands,580,Oceania,9,Micronesia,57,"",
+Palau,585,Oceania,9,Micronesia,57,"",
+United States Minor Outlying Islands,581,Oceania,9,Micronesia,57,"",
+American Samoa,16,Oceania,9,Polynesia,61,"",
+Cook Islands,184,Oceania,9,Polynesia,61,"",
+French Polynesia,258,Oceania,9,Polynesia,61,"",
+Niue,570,Oceania,9,Polynesia,61,"",
+Pitcairn,612,Oceania,9,Polynesia,61,"",
+Samoa,882,Oceania,9,Polynesia,61,"",
+Tokelau,772,Oceania,9,Polynesia,61,"",
+Tonga,776,Oceania,9,Polynesia,61,"",
+Tuvalu,798,Oceania,9,Polynesia,61,"",
+Wallis and Futuna Islands,876,Oceania,9,Polynesia,61,"",
