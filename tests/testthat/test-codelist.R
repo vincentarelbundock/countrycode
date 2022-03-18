@@ -65,6 +65,13 @@ for (i in colnames(cs)) {
     }
 }
 
+# literal NAs
+test_that('codelist has no literal "NA"s (except Namibia)', {
+  cs_no_namibia <- subset(cs, country.name.en != 'Namibia')
+  for (i in colnames(cs_no_namibia)) {
+      expect_false(any(cs_no_namibia[[!!i]] == 'NA', na.rm = TRUE))
+  }
+})
 
 ###########
 #  panel  #
@@ -126,3 +133,10 @@ for (i in colnames(pan)) {
     }
 }
 
+# literal NAs
+test_that('codelist_panel has no literal "NA"s (except Namibia)', {
+  pan_no_namibia <- subset(pan, country.name.en != 'Namibia')
+  for (i in colnames(pan_no_namibia)) {
+    expect_false(any(pan_no_namibia[[!!i]] == 'NA', na.rm = TRUE))
+  }
+})
