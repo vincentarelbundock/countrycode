@@ -72,14 +72,14 @@ variations <- list(
     "Macau",
     "Macao"
   ),
-    
+
   "Taiwan" = c(
     x = "Republic of China",
     x = "Taiwan, Province of China",
     x = "Taiwan"
   ),
 
- 
+
   "Ireland" = c(
     "Republic of Ireland",
     "Ireland"
@@ -99,6 +99,8 @@ variations <- list(
     "D.P.R Korea",
     "Korea DPR",
     "Korea D.P.R.",
+    "Korea, DPR",
+    "Korea, D.P.R.",
     "Korea, North",
     "Korea North",
     "Korea, Democratic People's Republic",
@@ -114,7 +116,7 @@ variations <- list(
     "South Africa",
     "South-Africa"
   ),
- 
+
   "South Korea" = c(
     "Korea, Republic of",
     "Korea, Rep. of",
@@ -140,14 +142,14 @@ variations <- list(
     "United Kingdom of Great Britain",
     "United Kingdom of Great Britain and Northern Ireland"
   ),
- 
+
   "United States" = c(
     "u.s.",
-    "U.S.A.", 
-    "United States", 
+    "U.S.A.",
+    "United States",
     "USA"
   ),
- 
+
   "United States Minor Outlying Islands (the)" = c(
     "United States Minor Outlying Islands",
     "US Minor Outlying Islands",
@@ -157,7 +159,7 @@ variations <- list(
     "Minor Outlying Islands, US",
     "Minor Outlying Islands, U.S."
   ),
- 
+
   "U.S. Virgin Islands" = c(
     "United States Virgin Islands",
     "US Virgin Islands",
