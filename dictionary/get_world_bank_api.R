@@ -1,7 +1,7 @@
 source(here::here('dictionary/utilities.R'))
 
 tmp <- tempfile(fileext = '.json')
-url <- 'http://api.worldbank.org/en/countries/?format=json&per_page=2000'
+url <- 'http://api.worldbank.org/V2/en/countries/?format=json&per_page=2000'
 download.file(url, tmp, quiet = TRUE)
 
 wb_api <- fromJSON(tmp, flatten = T)[[2]] %>%

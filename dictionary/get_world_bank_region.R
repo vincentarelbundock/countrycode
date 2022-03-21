@@ -3,17 +3,17 @@ source(here::here('dictionary/utilities.R'))
 automatic <- WDI(country = "all", start = 2016, end = 2016, extra = TRUE) %>%
              filter(region != 'Aggregates') %>%
              select(country, region) %>%
-             drop_na %>% 
+             drop_na %>%
              unique
 
 # "East Asia & Pacific"
 # "Europe & Central Asia"
 # "Latin America & Caribbean"
-# "Middle East & North Africa" 
+# "Middle East & North Africa"
 # "North America"
 # "South Asia"
 # "Sub-Saharan Africa"
-# manual changes 
+# manual changes
 manual <- tribble(
 ~country,                               ~region,
 "Åland Islands",                                "Europe & Central Asia",
@@ -72,7 +72,6 @@ manual <- tribble(
 "South Georgia and the South Sandwich Islands", "East Asia & Pacific",
 "Svalbard and Jan Mayen",                       NA,
 "Taiwan, Province of China",                    "East Asia & Pacific",
-"The former Yugoslav Republic of Macedonia",    "Europe & Central Asia",
 "Tokelau",                                      "East Asia & Pacific",
 "Tuscany",                                      "Europe & Central Asia",
 "Two Sicilies",                                 "Europe & Central Asia",
@@ -87,7 +86,7 @@ manual <- tribble(
 "Yemen Arab Republic",                          "Middle East & North Africa",
 "Yemen People's Republic",                      "Middle East & North Africa",
 "Yugoslavia",                                   "Europe & Central Asia",
-"Zanzibar",                                     "Sub-Saharan Africa") %>% 
+"Zanzibar",                                     "Sub-Saharan Africa") %>%
 drop_na
 
 

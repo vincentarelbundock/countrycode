@@ -13,6 +13,7 @@ library(checkmate)
 library(httr)
 library(jsonlite)
 library(WDI)
+library(pdftools)
 library(zoo)
 library(utf8)
 library(countrycode)
@@ -25,12 +26,12 @@ conflict_prefer('select', 'dplyr')
 #############################
 #  unique IDs with regexes  #
 #############################
-custom_dict <- read.csv('dictionary/data_regex.csv', na = '', stringsAsFactors = FALSE) %>% 
-               dplyr::select(country.name.en.regex, country.name.en.regex) 
+custom_dict <- read.csv('dictionary/data_regex.csv', na = '', stringsAsFactors = FALSE) %>%
+               dplyr::select(country.name.en.regex, country.name.en.regex)
 
-CountryToRegex <- function(x, warn=TRUE) countrycode(x, 
-                                                     'country.name.en.regex', 
-                                                     'country.name.en.regex', 
+CountryToRegex <- function(x, warn=TRUE) countrycode(x,
+                                                     'country.name.en.regex',
+                                                     'country.name.en.regex',
                                                      origin_regex = TRUE,
                                                      custom_dict = custom_dict,
                                                      warn=warn)
@@ -40,7 +41,7 @@ CountryToRegex <- function(x, warn=TRUE) countrycode(x,
 # last available year
 ExtendCoverage = function(dat, last_year = 2020) {
     out = dat
-    tmp = dat %>% 
+    tmp = dat %>%
           dplyr::filter(year == max(year))
     for (y in base::setdiff(2000:last_year, dat$year)) {
         tmp$year = y
@@ -75,7 +76,7 @@ SanityCheck <- function(dataset) {
 
     # duplicate indices
     if ('year' %in% colnames(dataset)) { # panel
-        idx <- paste(dataset[['country.name.en.regex']], dataset[['year']]) 
+        idx <- paste(dataset[['country.name.en.regex']], dataset[['year']])
         checkmate::assert_true(anyDuplicated(idx) == 0)
     } else { # cross-section
         checkmate::assert_true(anyDuplicated(dataset[['country.name.en.regex']]) == 0)
