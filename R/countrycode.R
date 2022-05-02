@@ -156,10 +156,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     if (!mode(sourcevar) %in% c('character', 'numeric')) {
-        stop('sourcevar must be a character or numeric vector. This error often
-             arises when users pass a tibble (e.g., from dplyr) instead of a
-             column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2]
-                                              vs. my_tbl[[2]])')
+        stop('sourcevar must be a character or numeric vector. This error often arises when users pass a tibble (e.g., from dplyr) instead of a column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2] vs. my_tbl[[2]]). This can also happen when `sourcevar` is entirely composed of `NA`, which `R` treats as entries of class logical.')
     }
 
     if (!is.null(nomatch) & (length(nomatch) != 1) & (length(nomatch) != length(sourcevar))) {
