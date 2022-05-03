@@ -1,7 +1,7 @@
 # country code 1.3.1.9000
 
-* Detect French country names using regular expressions: `origin = "country.name.fr"`
-* Detect Italian country names using regular expressions: `origin = "country.name.it"`
+* Detect French country names using regular expressions: `origin = "country.name.fr"` (Thanks to Samuel Meichtry)
+* Detect Italian country names using regular expressions: `origin = "country.name.it"` (Thanks to Samuel Meichtry)
 
 # countrycode 1.3.1
 
