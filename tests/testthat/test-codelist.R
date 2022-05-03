@@ -89,7 +89,7 @@ test_that('codelist_panel has (roughly) correct dimensions', {
     expect_gt(nrow(pan), 25000)
     expect_lt(nrow(pan), 30000)
     expect_gt(ncol(pan), 40)
-    expect_lt(ncol(pan), 50)
+    expect_lt(ncol(pan), 55)
 })
 
 # columns

@@ -17,3 +17,15 @@ test_that('iso3c-to-country.name-to-iso3c is internally consistent', {
         }
     }
 })
+
+test_that("Italian regex vs. CLDR", {
+    x <- countrycode(codelist$cldr.name.it, "country.name.it", "cldr.name.it")
+    expect_equal(x, codelist$cldr.name.it)
+})
+
+test_that("French regex vs. CLDR", {
+    x <- countrycode(codelist$cldr.name.fr, "country.name.fr", "cldr.name.fr")
+    expect_equal(x, codelist$cldr.name.fr)
+})
+
+

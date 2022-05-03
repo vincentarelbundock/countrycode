@@ -1,3 +1,8 @@
+# country code 1.3.1.9000
+
+* Detect French country names using regular expressions: `origin = "country.name.fr"`
+* Detect Italian country names using regular expressions: `origin = "country.name.it"`
+
 # countrycode 1.3.1
 
 * New code: unhcr

@@ -7,6 +7,8 @@
 #' - `ccTLD`: IANA country code top-level domain
 #' - `country.name`: country name (English)
 #' - `country.name.de`: country name (German)
+#' - `country.name.fr`: country name (French)
+#' - `country.name.it`: country name (Italian)
 #' - `cowc`: Correlates of War character
 #' - `cown`: Correlates of War numeric
 #' - `dhs`: Demographic and Health Surveys Program

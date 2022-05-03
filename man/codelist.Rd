@@ -16,6 +16,8 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \item \code{ccTLD}: IANA country code top-level domain
 \item \code{country.name}: country name (English)
 \item \code{country.name.de}: country name (German)
+\item \code{country.name.fr}: country name (French)
+\item \code{country.name.it}: country name (Italian)
 \item \code{cowc}: Correlates of War character
 \item \code{cown}: Correlates of War numeric
 \item \code{dhs}: Demographic and Health Surveys Program

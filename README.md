@@ -107,9 +107,12 @@ countrycode('DZA', origin = 'iso3c', destination = 'cown')
 countrycode('Albania', origin = 'country.name', destination = 'iso3c') 
 [1] "ALB"
 
-# German to Arabic
+# German or Italian to Arabic
 countrycode(c('Algerien', 'Albanien'), origin = 'country.name.de', destination = 'un.name.ar') 
 [1] "الجزائر" "ألبانيا"
+
+countrycode(c('Moldavia', 'Stati Uniti'), origin = 'country.name.it', destination = 'un.name.ar') 
+[1] "ﺞﻤﻫﻭﺮﻳﺓ ﻡﻮﻟﺩﻮﻓﺍ"            "ﺎﻟﻭﻼﻳﺎﺗ ﺎﻠﻤﺘﺣﺩﺓ ﺍﻸﻣﺮﻴﻜﻳﺓ"
 ```
 
 ## Convert a vector of country codes
