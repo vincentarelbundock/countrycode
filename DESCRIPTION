@@ -17,7 +17,12 @@ Authors@R:
              family = "Enevoldsen",
              role = "ctb",
              email = "nils@wlonk.com",
-             comment = c(ORCID = "0000-0001-7195-4117")))
+             comment = c(ORCID = "0000-0001-7195-4117")),
+      person(given = "Samuel",
+             family = "Meichtry",
+             role = "ctb",
+             email = "samuel.meichtry@bj.admin.ch",
+             comment = c(ORCID = "0000-0003-2165-791X")))
 Description: Standardize country names, convert them into one of 40
     different coding schemes, convert between coding schemes, and assign
     region descriptors.
