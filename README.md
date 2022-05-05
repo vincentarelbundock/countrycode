@@ -1,4 +1,4 @@
-# countrycode <img src="https://user-images.githubusercontent.com/987057/82852778-d5c48100-9ed1-11ea-9f09-748bfbd87861.png" align="right" alt="" width="120" />
+# countrycode <img src="https://user-images.githubusercontent.com/987057/167015313-2224678c-d7b7-43a2-ba56-0b659522050a.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
