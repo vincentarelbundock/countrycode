@@ -6,12 +6,12 @@ test_that('reported bugs', {
 })
 
 test_that('output types', {
-
     expect_identical(countryname('ジンバブエ'), 'Zimbabwe')
     expect_identical(countryname('ジンバブエ', 'country.name.de'), 'Simbabwe')
     expect_identical(countryname('ジンバブエ', 'iso3c'), 'ZWE')
     expect_identical(countryname('ジンバブエ', 'cown'), 552)
-
+    # issue 309: irrelevant warning with numeric destination
+    expect_warning(countryname('ジンバブエ', 'cown'), NA)
 })
 
 test_that('input: character ', {

@@ -42,12 +42,17 @@ countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
                             warn = warn)
     
     if (destination != 'country.name.en') {
+      # Issue 309: in the second pass we can use the origin vector for NAs, but only if origin and destination are of the same type.
+      if (identical(class(out), class(countrycode::codelist[[destination]]))) {
+          nm <- NULL
+      } else {
+          nm <- NA
+      }
       out <- countrycode(sourcevar = out,
                          origin = 'country.name.en', 
                          destination = destination,
                          custom_dict = countrycode::codelist, 
-                         # this is the second round, so we can use the origin vector for NAs
-                         nomatch = NULL,
+                         nomatch = nm,
                          warn = warn)
     }
     
