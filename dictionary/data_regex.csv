@@ -253,7 +253,7 @@ Tokelau,tokelau,Tokelau,tokelau,Tokelau,tok(e|é)l(au|aou|ova),Tokelau,tokela(u|
 Tonga,tonga,Tonga,tonga,Tonga,tonga,Tonga,tonga
 Trinidad und Tobago,trinidad|tobago,Trinidad and Tobago,trinidad|tobago,Trinité-et-Tobago,trinidad|tobago,Trinidad e Tobago,trinidad|tobago
 Tunesien,tunesien,Tunisia,tunisia,Tunisie,tunisie,Tunisia,tunisi(a|no|na)
-Türkei,türkei,Turkey,turkey,Turquie,^(?!.*île)^(?!.*ile).*(turquie|turc|turque),Turchia,turchia|turc(o|a)
+Türkei,türkei,Turkey,turkey|t(ü|u)rkiye,Turquie,^(?!.*île)^(?!.*ile).*(turquie|turc|turque|t(ü|u)rkiye),Turchia,turchia|turc(o|a)
 Turkmenistan,turkmen,Turkmenistan,turkmen,Turkménistan,turkm(e|é)nistan,Turkmenistan,turkmen
 Turks- und Caicosinseln,turks,Turks and Caicos Islands,turks,Îles Turques-et-Caïques,turks|(i|î)le.*(turque|caïques|caiques),Isole Turks e Caicos,turks
 Toskana,toskana,Tuscany,tuscany,,toscan(e|a),,toscan(a|o)|tuscany

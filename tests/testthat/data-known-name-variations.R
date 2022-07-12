@@ -127,6 +127,10 @@ variations <- list(
     "South Korea"
   ),
 
+  "Turkey" = c(
+    "Turkey",
+    "Türkiye"
+  ),
 
   "United Arab Emirates" = c(
     "emirates",
