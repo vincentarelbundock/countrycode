@@ -19,7 +19,7 @@ Aserbaidschan,aserbaidsch,Azerbaijan,azerbaijan,Azerbaïdjan,azerba(ï|i)djan,Az
 Baden,baden,Baden,baden,,baden,,baden
 Bahamas,bahamas,Bahamas,bahamas,Bahamas,baham(as|ien),Bahamas,bahamas|bahamian
 Bahrain,bahrain,Bahrain,bahrain,Bahreïn,bahre(i|ï)n,Bahrein,bahrein
-Bangladesch,bangladesch|^(?=.*ost).*paki?stan,Bangladesh,bangladesh|^(?=.*east).*paki?stan,Bangladesh,bangladesh|bangladais|^(?=.*ost).*paki?stan,Bangladesh,bangladesh
+Bangladesch,bangladesc?h|^(?=.*ost).*paki?stan,Bangladesh,bangladesh|^(?=.*east).*paki?stan,Bangladesh,bangladesh|bangladais|^(?=.*ost).*paki?stan,Bangladesh,bangladesh
 Barbados,barbados,Barbados,barbados,Barbade,barbad(e|ien),Barbados,barbados|barbadian
 Bayern,bayern,Bavaria,bavaria,,bavi(e|è)re|bavar(ia|ois),,baviera|bavaria
 Weißrussland,wei(ss|ß)russland|belarus|byelo,Belarus,belarus|byelo,Biélorussie,b(e|é)larus|bi(e|é)loruss,Bielorussia,belarus|byelo|biel(o|a)?russ
@@ -169,8 +169,8 @@ Namibia,namibia,Namibia,namibia,Namibie,namibie,Namibia,namibia
 Nassau,nassau,Nassau,nassau,,nassau,,nassau
 Nauru,nauru|naoero|nauruisch,Nauru,nauru,Nauru,nauru|naoero,Nauru,nauru|naoero
 Nepal,nepal,Nepal,nepal,Népal,n(é|e)pal,Nepal,nepal
-Niederlande,niederlande,Netherlands,^(?!.*\bant)(?!.*\bcarib).*netherlands,Pays-Bas,pays-bas(?!.*carib)|^(?!.*martin).*n(é|e)erlandais,Paesi Bassi,paesi.?bassi|neerland
-Niederländische Antillen,niederl(a|ä)ndische.?antillen,Netherlands Antilles,netherlands.antil|dutch.antil,,antille.*(néerlandais|neerlandais|hollandais),,antille.?olandesi
+Niederlande,^(?!\bkarib).*niederland(?!.*\bant)|holland,Netherlands,^(?!.*\bant)(?!.*\bcarib).*netherlands|holland,Pays-Bas,pays-bas(?!.*carib)|^(!.*martin).*n(é|e)erlandais|holland,Paesi Bassi,paesi.?bassi(?!.*\bcarib)|neerland|^(?!\bcarai)(?!\bant).*oland(a|ia|esi)
+Niederländische Antillen,niederl(a|ä)ndische.?antillen|antillen.*nieder,Netherlands Antilles,netherlands.antil|dutch.antil,,antille.*(néerlandais|neerlandais|hollandais)|pays.bas.carib,,antille.?olandesi
 Neukaledonien,neu.?kaledonien,New Caledonia,new.?caledonia,Nouvelle-Calédonie,nouvelle.*cal(é|e)donie,Nuova Caledonia,nuova.*caledonia|kanaky|nouvelle.*cal(é|e)donie
 Neuseeland,neuseeland,New Zealand,new.?zealand,Nouvelle-Zélande,nouvelle.*z(e|é)lande,Nuova Zelanda,nuova.?zelanda|neozelandes
 Nicaragua,nicaragua,Nicaragua,nicaragua,Nicaragua,nicaragua,Nicaragua,nicaragua
@@ -232,7 +232,7 @@ Salomon-Inseln,salomon,Solomon Islands,solomon,Îles Salomon,salomon,Isole Salom
 Somalia,somalia,Somalia,somalia,Somalie,somali(e)?,Somalia,somalia
 Somaliland,somaliland,Somaliland,somaliland,,somaliland,,somaliland
 Südafrika,\bs(ü|u)d*.?afrika,South Africa,south.africa|s\\..?africa,Afrique du Sud,afrique.*sud,Sudafrica,sudafrica
-Südgeorgien und die Südlichen Sandwichinseln,"",South Georgia and the South Sandwich Islands,south.?georgia|sandwich,Géorgie du Sud et îles Sandwich du Sud,g(e|é)org.*sud.*sandwich,Georgia del Sud e Sandwich australi,georgia.*sud.*sandwich
+Südgeorgien und die Südlichen Sandwichinseln,sandwichinseln,South Georgia and the South Sandwich Islands,south.?georgia|sandwich,Géorgie du Sud et îles Sandwich du Sud,g(e|é)org.*sud.*sandwich,Georgia del Sud e Sandwich australi,georgia.*sud.*sandwich
 Südsudan,^s(ü|u)d.?sudan,South Sudan,\bs\w*.?sudan,Soudan du Sud,soudan.*sud,Sud Sudan,sudan.*sud|sud.*sudan
 Spanien,spanien,Spain,spain,Espagne,espagn(e|o),Spagna,spagn(a|olo|ola)
 Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon
@@ -246,14 +246,14 @@ Syrische Arabische Republik,syrien|syrisch,Syrian Arab Republic,syria,Syrie,syri
 Taiwan,taiwan|taipei|formosa,"Taiwan, Province of China",taiwan|taipei|formosa|^(?!.*peo)(?=.*rep).*china,Taïwan,ta(i|ï)wan|taipei|formosa,Taiwan,taiwan|taipei|formosa
 Tadschikistan,tadschikistan,Tajikistan,tajik,Tadjikistan,tadjik,Tagikistan,tagikistan|tagic(o|a)
 Thailand,thailand|\bsiam,Thailand,thailand|\bsiam,Thaïlande,tha(i|ï)lande,Thailandia,thailand|\bsiam
-Mazedonien,mazedonien|fyrom,The former Yugoslav Republic of Macedonia,macedonia|fyrom,Macédoine du Nord,mac(é|e)doine.*nord,Macedonia del Nord,macedonia.*nord
+Nordmazedonien,mazedonien|fyrom,The former Yugoslav Republic of Macedonia,macedonia|fyrom,Macédoine du Nord,mac(é|e)do(ine|ni)|fyrom,Macedonia del Nord,macedoni|fyrom
 Timor-Leste,^(?=.*leste).*timor|^(?=.*ost).*timor|^(?=.*portu).*timor,Timor-Leste,^(?=.*leste).*timor|^(?=.*east).*timor,Timor oriental,^(?=.*leste).*timor|^(?=.*ost).*timor|timor.*orient|^(?=.*portu).*timor,Timor Est,^(?=.*est).*timor|^(?=.*oriental).*timor|^(?=.*port).*timor
 Togo,togo,Togo,togo,Togo,togo,Togo,togo
 Tokelau,tokelau,Tokelau,tokelau,Tokelau,tok(e|é)l(au|aou|ova),Tokelau,tokela(u|o)
 Tonga,tonga,Tonga,tonga,Tonga,tonga,Tonga,tonga
 Trinidad und Tobago,trinidad|tobago,Trinidad and Tobago,trinidad|tobago,Trinité-et-Tobago,trinidad|tobago,Trinidad e Tobago,trinidad|tobago
 Tunesien,tunesien,Tunisia,tunisia,Tunisie,tunisie,Tunisia,tunisi(a|no|na)
-Türkei,türkei,Turkey,turkey|t(ü|u)rkiye,Turquie,^(?!.*île)^(?!.*ile).*(turquie|turc|turque|t(ü|u)rkiye),Turchia,turchia|turc(o|a)
+Türkei,türkei,Turkey,turkey|t(ü|u)rkiye,Turquie,^(?!.*île)^(?!.*ile).*(turquie|turc|turque|t(ü|u)rkiye),Turchia,turchia|turc(o|a)|t(uü)rkiye
 Turkmenistan,turkmen,Turkmenistan,turkmen,Turkménistan,turkm(e|é)nistan,Turkmenistan,turkmen
 Turks- und Caicosinseln,turks,Turks and Caicos Islands,turks,Îles Turques-et-Caïques,turks|(i|î)le.*(turque|caïques|caiques),Isole Turks e Caicos,turks
 Toskana,toskana,Tuscany,tuscany,,toscan(e|a),,toscan(a|o)|tuscany

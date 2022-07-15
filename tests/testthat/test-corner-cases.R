@@ -21,3 +21,53 @@ test_that("Viet Nam variations", {
   expect_equal(34, countrycode("VietNam", "country.name", "vdem"))
 })
 
+test_that("bangladesh", {
+    expect_equal(
+        countrycode("Bangladesh", "country.name.de", "iso3c"),
+        "BGD")
+    expect_equal(
+        countrycode("Bangladesch", "country.name.de", "iso3c"),
+        "BGD")
+})
+
+test_that("netherlands", {
+    expect_equal(
+        countrycode("Holland", "country.name", "country.name"),
+        "Netherlands")
+    expect_equal(
+        countrycode("Hollande", "country.name.fr", "country.name"),
+        "Netherlands")
+    expect_equal(
+        countrycode("Niederländische Antillen", "country.name.de", "country.name.en"),
+        "Netherlands Antilles")
+    expect_equal(
+        countrycode("Karibische Niederlande", "country.name.de", "country.name.en"),
+        "Caribbean Netherlands")
+    expect_equal(
+        countrycode("Caraibi olandesi", "country.name.it", "country.name.en"),
+        "Caribbean Netherlands")
+})
+
+
+test_that("macedonia", {
+    expect_equal(
+        countrycode("Macédoine du Nord", "country.name.fr", "country.name.en"),
+        "North Macedonia")
+    expect_equal(
+        countrycode("FYROM", "country.name.fr", "country.name.en"),
+        "North Macedonia")
+})
+
+
+
+test_that("misc", {
+    expect_equal(
+        countrycode("Sint Maarten", "country.name.de", "iso3c"),
+        "SXM")
+    expect_equal(
+        countrycode("Aruba", "country.name.de", "iso3c"),
+        "ABW")
+    expect_equal(
+        countrycode("Curaçao", "country.name.de", "iso3c"),
+        "CUW")
+})

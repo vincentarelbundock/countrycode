@@ -1,4 +1,8 @@
-# country code 1.4.0
+# countrycode 1.4.1
+
+* Improved Turkiye regex
+
+# countrycode 1.4.0
 
 * Detect French country names using regular expressions: `origin = "country.name.fr"` (Thanks to Samuel Meichtry)
 * Detect Italian country names using regular expressions: `origin = "country.name.it"` (Thanks to Samuel Meichtry)
