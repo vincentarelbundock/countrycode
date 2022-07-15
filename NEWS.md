@@ -1,6 +1,6 @@
 # countrycode 1.4.1
 
-* Improved Turkiye regex
+* Many regex improvements
 
 # countrycode 1.4.0
 
