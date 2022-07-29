@@ -144,10 +144,12 @@ un <- c('en', 'fr', 'es', 'ru', 'zh') %>%
              un.name.ar = ifelse(un.name.ar == 'تيمور- ليشتي',
                                  'تيمور-ليشتي',
                                  un.name.ar),
-             # Trinidad and Tobago
-             un.name.es = ifelse(un.name.es == 'Trinidad y Tabago',
-                                 'Trinidad y Tobago',
-                                 un.name.es),
+
+             # See discussion: https://github.com/vincentarelbundock/countrycode/issues/299
+             # # Trinidad and Tobago
+             # un.name.es = ifelse(un.name.es == 'Trinidad y Tabago',
+             #                     'Trinidad y Tobago',
+             #                     un.name.es),
              # United Kingdom
              un.name.fr = ifelse(un.name.fr == 'Royaume-Uni de Grande-Bretagne et d\'Irlande du Nord',
                                  'Royaume-Uni de Grande-Bretagne et d’Irlande du Nord',
