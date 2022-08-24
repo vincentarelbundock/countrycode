@@ -1,5 +1,10 @@
 context('Corner cases')
 
+test_that("UN spanish name is Trinidad y Tabago: Issue #299", {
+    expect_equal(countrycode("Trinidad and Tobago", "country.name", "un.name.es"), "Trinidad y Tabago")
+})
+
+
 test_that('Namibia iso2c is not converted to NA', {
     expect_equal('NA', countrycode("Namibia", 'country.name', 'iso2c'))
     expect_equal('NA', countrycode("Namibia", 'country.name', 'genc2c'))
