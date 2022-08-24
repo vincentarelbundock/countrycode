@@ -5,6 +5,11 @@ test_that("UN spanish name is Trinidad y Tabago: Issue #299", {
 })
 
 
+test_that("Issue #244", {
+    expect_equal(countrycode('.de', 'cctld', 'country.name'), "Germany")
+})
+
+
 test_that('Namibia iso2c is not converted to NA', {
     expect_equal('NA', countrycode("Namibia", 'country.name', 'iso2c'))
     expect_equal('NA', countrycode("Namibia", 'country.name', 'genc2c'))

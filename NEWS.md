@@ -1,6 +1,7 @@
-# countrycode 1.4.1
+# countrycode 1.4.0.9000
 
 * Many regex improvements
+* Several minor bug fixes
 
 # countrycode 1.4.0
 

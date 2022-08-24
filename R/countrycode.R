@@ -237,6 +237,7 @@ countrycode_convert <- function(# user-supplied arguments
                                 dictionary
                                 ) {
 
+
     # Convert
     if (origin_regex) { # regex codes
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
@@ -284,10 +285,15 @@ countrycode_convert <- function(# user-supplied arguments
         }
 
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
+
         sourcefctr <- factor(origin_vector)
 
         # match levels of sourcefctr
-        matchidxs <- match(levels(sourcefctr), dict[[origin]])
+        if (identical(origin, "cctld")) {
+          matchidxs <- match(levels(sourcefctr), toupper(dict[[origin]]))
+        } else {
+          matchidxs <- match(levels(sourcefctr), dict[[origin]])
+        }
         matches <- dict[[destination]][matchidxs]
 
         # replace with custom matches if set

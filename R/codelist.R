@@ -4,7 +4,7 @@
 #'
 #' ## Origin and Destination
 #'
-#' - `ccTLD`: IANA country code top-level domain
+#' - `cctld`: IANA country code top-level domain
 #' - `country.name`: country name (English)
 #' - `country.name.de`: country name (German)
 #' - `country.name.fr`: country name (French)
