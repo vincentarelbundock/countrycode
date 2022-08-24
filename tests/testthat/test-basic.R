@@ -27,3 +27,8 @@ test_that('warn=FALSE does not give warnings', {
     expect_warning(iso2c_of('BLA'), NA)
     expect_warning(iso2c_of(c('BLA', 'USA')), NA)
 })
+
+
+test_that("Issue #272", {
+    expect_error(countrycode("2", "cown", "country.name"), regexp = "must be numeric")
+})

@@ -276,6 +276,13 @@ countrycode_convert <- function(# user-supplied arguments
         destination_vector <- unname(matches[as.numeric(sourcefctr)])
 
     } else { # non-regex codes
+
+        # sanity check
+        if (is.character(origin_vector) && is.numeric(dictionary[[origin]])) {
+            msg <- sprintf("To convert a `%s` code, `sourcevar` must be numeric.", origin)
+            stop(msg, call. = FALSE)
+        }
+
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
         sourcefctr <- factor(origin_vector)
 
