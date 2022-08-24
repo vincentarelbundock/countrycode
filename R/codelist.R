@@ -27,6 +27,8 @@
 #' - `iso2c`: ISO-2 character
 #' - `iso3c`: ISO-3 character
 #' - `iso3n`: ISO-3 numeric
+#' - `p5n`: Polity V numeric country code
+#' - `p5c`: Polity V character country code
 #' - `p4n`: Polity IV numeric country code
 #' - `p4c`: Polity IV character country code
 #' - `un`: United Nations M49 numeric codes

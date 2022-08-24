@@ -91,13 +91,17 @@ tmp <- pan %>%
        arrange(country.name.en.regex, year) %>%
        group_by(country.name.en.regex) %>%
        mutate_at(vars(-group_cols()), na.locf, na.rm = FALSE) %>% 
-       filter(year == max(year)) %>%
+       filter(year %in% max(year)) %>%
        # arbitrary choices
-       mutate(p4n = ifelse(p4.name == 'Prussia', NA, p4n),
-              p4c = ifelse(p4.name == 'Prussia', NA, p4c),
-              p4n = ifelse(p4.name == 'Serbia and Montenegro', NA, p4n),
-              p4c = ifelse(p4.name == 'Serbia and Montenegro', NA, p4c),
-              vdem = ifelse(vdem.name == 'Czechoslovakia', NA, vdem))
+       mutate(p5n = ifelse(p4.name %in% 'Prussia', NA, p5n),
+              p5c = ifelse(p4.name %in% 'Prussia', NA, p5c),
+              p5n = ifelse(p4.name %in% 'Serbia and Montenegro', NA, p5n),
+              p5c = ifelse(p4.name %in% 'Serbia and Montenegro', NA, p5c),
+              p4n = ifelse(p4.name %in% 'Prussia', NA, p4n),
+              p4c = ifelse(p4.name %in% 'Prussia', NA, p4c),
+              p4n = ifelse(p4.name %in% 'Serbia and Montenegro', NA, p4n),
+              p4c = ifelse(p4.name %in% 'Serbia and Montenegro', NA, p4c),
+              vdem = ifelse(vdem.name %in% 'Czechoslovakia', NA, vdem))
 
 cs <- cs %>% 
       left_join(tmp, by = 'country.name.en.regex') %>%
