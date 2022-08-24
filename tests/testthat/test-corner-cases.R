@@ -1,5 +1,17 @@
 context('Corner cases')
 
+
+test_that("Issue #258", {
+    expect_equal(
+        codelist_panel[codelist_panel$country.name.en == "Germany" & codelist_panel$year == 1900,]$gwn,
+        255,
+        ignore_attr = TRUE)
+    expect_equal(
+        codelist_panel[grepl("Korea", codelist_panel$country.name.en) & codelist_panel$year == 1900,]$gwn,
+        730)
+})
+
+
 test_that("UN spanish name is Trinidad y Tabago: Issue #299", {
     expect_equal(countrycode("Trinidad and Tobago", "country.name", "un.name.es"), "Trinidad y Tabago")
 })
@@ -81,3 +93,4 @@ test_that("misc", {
         countrycode("Curaçao", "country.name.de", "iso3c"),
         "CUW")
 })
+

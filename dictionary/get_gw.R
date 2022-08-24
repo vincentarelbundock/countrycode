@@ -9,16 +9,28 @@ gw <- readr::read_tsv(url,
                                        country = readr::col_character(),
                                        birth = readr::col_date(format = "%d:%m:%Y"),
                                        death = readr::col_date(format = "%d:%m:%Y")))
- 
+
+
+# gw |> filter(country %like% "Korea")
+
 gw <- gw %>%
-      filter(!gwc %in% c("TBT", "DRV"),
-             death > as.Date("1945-09-02")) %>%
-      group_by(gwn) %>%
-      slice(which.max(death)) %>%
-      ungroup() %>%
-      mutate(country = replace(country, gwc == "CDI", "Cote d'Ivoire"),
-             country = replace(country, gwc == "PRK", "North Korea"),
-             country = replace(country, gwc == "RVN", "Vietnam")) %>%
-      select(country, gwn, gwc)
- 
+    # pre-processing to avoid regex ambiguity
+    mutate(
+        country = gsub(" \\(Prussia\\)", "", country),
+        country = gsub(" \\(Annam.*", "", country)
+    ) %>%
+    # ambiguous or not covered
+    filter(!gwc %in% c("TBT", "DRV", "HSD", "HSE", "WRT", "UPC", "TRA")) %>% 
+    mutate(idx = 1:n()) |>
+    group_by(idx) |>
+    mutate(panel = list(year(birth):year(death))) %>%
+    ungroup() |>
+    unnest(panel) |> 
+    select(-idx, -birth, -death) |>
+    rename(year = panel) |>
+    # arbitrary
+    filter((year != 1830) | (gwc != 'COL')) |> # Gran Colombia vs. Colombia
+    mutate(country = utf8::utf8_encode(country))
+
 gw %>% write_csv('dictionary/data_gw.csv', na = "")
+

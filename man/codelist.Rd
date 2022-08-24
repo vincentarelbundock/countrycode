@@ -36,6 +36,8 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \item \code{iso2c}: ISO-2 character
 \item \code{iso3c}: ISO-3 character
 \item \code{iso3n}: ISO-3 numeric
+\item \code{p5n}: Polity V numeric country code
+\item \code{p5c}: Polity V character country code
 \item \code{p4n}: Polity IV numeric country code
 \item \code{p4c}: Polity IV character country code
 \item \code{un}: United Nations M49 numeric codes

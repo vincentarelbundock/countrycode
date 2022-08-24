@@ -35,12 +35,14 @@ if (length(setdiff(tokens_datasets, tokens_scrapers)) > 0) {
 dat <- list()
 dat$regex <- read_csv('dictionary/data_regex.csv', col_types = cols(), progress = FALSE)
 
-message('Load:')
+message("Load:")
 for (i in seq_along(datasets)) {
-    message('  ', tokens_datasets[i])
+    message("  ", tokens_datasets[i])
     tmp <- read_csv(datasets[i], col_types = cols(), na = "", progress = FALSE) %>%
-           mutate(country.name.en.regex = CountryToRegex(country)) %>%
-           select(-country)
+        mutate(
+            country = utf8::utf8_encode(country),
+            country.name.en.regex = CountryToRegex(country)) %>%
+        select(-country)
     SanityCheck(tmp)
     dat[[tokens_datasets[i]]] <- tmp
 }

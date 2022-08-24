@@ -246,7 +246,7 @@ countrycode_convert <- function(# user-supplied arguments
         # match levels of sourcefctr
         matches <-
           sapply(c(levels(sourcefctr), NA), function(x) { # add NA so there's at least one item
-            x <- trimws(x)
+            x <- tryCatch(trimws(x), error = function(e) x) # sometimes an error is triggered by encoding issues
             matchidx <- sapply(dict[[origin]], function(y) grepl(y, x, perl = TRUE, ignore.case = TRUE))
             dict[matchidx, destination]
           })
