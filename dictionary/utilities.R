@@ -41,7 +41,7 @@ CountryToRegex <- function(x, warn=TRUE) countrycode(x,
 
 # Hack to artificially extend the temporal coverage of panel datasets using the
 # last available year
-ExtendCoverage = function(dat, last_year = 2020) {
+ExtendCoverage = function(dat, last_year = as.numeric(format(Sys.Date(), "%Y"))) {
     out = dat
     tmp = dat %>%
           dplyr::filter(year == max(year))
