@@ -12,16 +12,29 @@
 ## exiobase <-
 ##   data %>%
 ##   mutate(
+##     Name = case_match(
+##       Name,
+##       "Heard and mc donald islands" ~ "Heard and mcdonald islands",
+##       .default = Name
+##     ),
 ##     country = countrycode(.data$Name,
 ##                           origin = "country.name",
 ##                           destination = "country.name",
 ##                           warn = FALSE)
-##   ) %>%
+##   )
+
+## # Check missing countries
+## exiobase %>%
+##   filter(is.na(country)) %>%
+##   select(Name)
+
+## exiobase <-
+##   exiobase %>%
 ##   filter(!is.na(country)) %>%
 ##   select(
 ##     country,
-##     exiobase_code = "DESIRE code",
-##     exiobase_num = "DESIRE Number"
+##     exiobase_code = `DESIRE code`,
+##     exiobase_num = `DESIRE Number`
 ##   )
 
 ## write_csv(
