@@ -1,0 +1,247 @@
+country,exiobase_code,exiobase_num
+Afghanistan,WA,45
+Albania,WE,47
+Algeria,WF,48
+American Samoa,WA,45
+Andorra,WE,47
+Angola,WF,48
+Anguilla,WL,46
+Antarctica,WA,45
+Antigua & Barbuda,WL,46
+Argentina,WL,46
+Armenia,WA,45
+Aruba,WL,46
+Australia,AU,38
+Austria,AT,1
+Azerbaijan,WA,45
+Bahamas,WL,46
+Bahrain,WM,49
+Bangladesh,WA,45
+Barbados,WL,46
+Belarus,WE,47
+Belgium,BE,2
+Belize,WL,46
+Benin,WF,48
+Bermuda,WL,46
+Bhutan,WA,45
+Bolivia,WL,46
+Caribbean Netherlands,WL,46
+Bosnia & Herzegovina,WE,47
+Botswana,WF,48
+Bouvet Island,WA,45
+Brazil,BR,34
+British Indian Ocean Territory,WA,45
+Brunei,WA,45
+Bulgaria,BG,3
+Burkina Faso,WF,48
+Burundi,WF,48
+Cambodia,WA,45
+Cameroon,WF,48
+Canada,CA,32
+Cape Verde,WF,48
+Cayman Islands,WL,46
+Central African Republic,WF,48
+Chad,WF,48
+Channel Islands,WE,47
+Chile,WL,46
+China,CN,31
+Christmas Island,WA,45
+Cocos (Keeling) Islands,WA,45
+Colombia,WL,46
+Comoros,WF,48
+Congo - Kinshasa,WF,48
+Congo - Brazzaville,WF,48
+Cook Islands,WA,45
+Costa Rica,WL,46
+Côte d’Ivoire,WF,48
+Croatia,HR,13
+Cuba,WL,46
+Curaçao,WL,46
+Cyprus,CY,4
+Czechia,CZ,5
+Denmark,DK,7
+Djibouti,WF,48
+Dominica,WL,46
+Dominican Republic,WL,46
+Ecuador,WL,46
+Egypt,WM,49
+El Salvador,WL,46
+Equatorial Guinea,WF,48
+Eritrea,WF,48
+Estonia,EE,8
+Ethiopia,WF,48
+Faroe Islands,WE,47
+Falkland Islands,WL,46
+Fiji,WA,45
+Finland,FI,10
+France,FR,11
+French Guiana,WL,46
+French Polynesia,WA,45
+Gabon,WF,48
+Gambia,WF,48
+Georgia,WA,45
+Germany,DE,6
+Ghana,WF,48
+Gibraltar,WE,47
+Greece,GR,12
+Greenland,WL,46
+Grenada,WL,46
+Guadeloupe,WL,46
+Guam,WA,45
+Guatemala,WL,46
+Guinea,WF,48
+Guinea-Bissau,WF,48
+Guyana,WL,46
+Haiti,WL,46
+Honduras,WL,46
+Hong Kong SAR China,WA,45
+Hungary,HU,14
+Iceland,WE,47
+India,IN,35
+Indonesia,ID,43
+Iran,WM,49
+Iraq,WM,49
+Ireland,IE,15
+Isle of Man,WE,47
+Israel,WM,49
+Italy,IT,16
+Jamaica,WL,46
+Japan,JP,30
+Jordan,WM,49
+Kazakhstan,WA,45
+Kenya,WF,48
+Kiribati,WA,45
+North Korea,WA,45
+Kosovo,WE,47
+Kuwait,WM,49
+Kyrgyzstan,WA,45
+Laos,WA,45
+Latvia,LV,19
+Lebanon,WM,49
+Lesotho,WF,48
+Liberia,WF,48
+Libya,WF,48
+Liechtenstein,WE,47
+Lithuania,LT,17
+Luxembourg,LU,18
+Macao SAR China,WA,45
+North Macedonia,WE,47
+Madagascar,WF,48
+Malawi,WF,48
+Malaysia,WA,45
+Maldives,WA,45
+Mali,WF,48
+Malta,MT,20
+Marshall Islands,WA,45
+Martinique,WL,46
+Mauritania,WF,48
+Mauritius,WF,48
+Mayotte,WF,48
+Mexico,MX,36
+Micronesia (Federated States of),WA,45
+Moldova,WE,47
+Monaco,WE,47
+Mongolia,WA,45
+Montenegro,WE,47
+Montserrat,WL,46
+Morocco,WF,48
+Mozambique,WF,48
+Myanmar (Burma),WA,45
+Namibia,WF,48
+Nauru,WA,45
+Nepal,WA,45
+Netherlands,NL,21
+Netherlands Antilles,WL,46
+New Caledonia,WA,45
+New Zealand,WA,45
+Nicaragua,WL,46
+Niger,WF,48
+Nigeria,WF,48
+Niue,WA,45
+Norfolk Island,WA,45
+Northern Mariana Islands,WA,45
+Norway,NO,42
+Oman,WM,49
+Pakistan,WA,45
+Palau,WA,45
+Palestinian Territories,WM,49
+Panama,WL,46
+Papua New Guinea,WA,45
+Paraguay,WL,46
+Peru,WL,46
+Philippines,WA,45
+Pitcairn Islands,WA,45
+Poland,PL,22
+Portugal,PT,23
+Puerto Rico,WL,46
+Qatar,WM,49
+Réunion,WF,48
+Romania,RO,24
+Russia,RU,37
+Rwanda,WF,48
+Samoa,WA,45
+San Marino,WE,47
+São Tomé & Príncipe,WF,48
+Saudi Arabia,WM,49
+Senegal,WF,48
+Serbia,WE,47
+Seychelles,WF,48
+Sierra Leone,WF,48
+Singapore,WA,45
+Sint Maarten,WL,46
+Slovakia,SK,27
+Slovenia,SI,26
+Solomon Islands,WA,45
+Somalia,WF,48
+South Africa,ZA,44
+South Georgia & South Sandwich Islands,WA,45
+South Korea,KR,33
+South Sudan,WF,48
+Spain,ES,9
+Sri Lanka,WA,45
+St. Helena,WF,48
+St. Kitts & Nevis,WL,46
+St. Lucia,WL,46
+St. Pierre & Miquelon,WL,46
+St. Vincent & Grenadines,WL,46
+Sudan,WF,48
+Suriname,WL,46
+Svalbard & Jan Mayen,WE,47
+Eswatini,WF,48
+Sweden,SE,25
+Switzerland,CH,39
+Syria,WM,49
+Taiwan,TW,41
+Tajikistan,WA,45
+Tanzania,WF,48
+Thailand,WA,45
+Timor-Leste,WA,45
+Togo,WF,48
+Tokelau,WA,45
+Tonga,WA,45
+Trinidad & Tobago,WL,46
+Tunisia,WF,48
+Turkey,TR,40
+Turkmenistan,WA,45
+Turks & Caicos Islands,WL,46
+Tuvalu,WA,45
+Uganda,WF,48
+Ukraine,WE,47
+United Arab Emirates,WM,49
+United Kingdom,GB,28
+United States,US,29
+United States Minor Outlying Islands (the),WA,45
+Uruguay,WL,46
+Uzbekistan,WA,45
+Vanuatu,WA,45
+Vatican City,WE,47
+Venezuela,WL,46
+Vietnam,WA,45
+British Virgin Islands,WL,46
+U.S. Virgin Islands,WL,46
+Wallis & Futuna,WA,45
+Western Sahara,WF,48
+Yemen,WM,49
+Zambia,WF,48
+Zanzibar,WF,48
+Zimbabwe,WF,48
