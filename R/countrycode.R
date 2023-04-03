@@ -318,7 +318,7 @@ countrycode_convert <- function(# user-supplied arguments
             destination_vector[idx] <- as.character(sourcevar[idx])
         } else {
             warning("The origin and destination codes are not of the same
-                    class. Filling-in bad matches with NA instead.")
+                    class. Filling-in bad matches with NA instead.", call. = FALSE)
         }
     } else if ((length(nomatch) == 1) & is.na(nomatch)) { # NA
     } else if ((length(nomatch) == 1) & sane_nomatch) { # single replacement
@@ -327,7 +327,7 @@ countrycode_convert <- function(# user-supplied arguments
         destination_vector[idx] <- nomatch[idx]
     } else {
         warning("The argument `nomatch` must be NULL, NA, or of the same class
-                as the destination vector. Filling-in bad matches with NA instead.")
+                as the destination vector. Filling-in bad matches with NA instead.", call. = FALSE)
     }
 
     # Warnings
@@ -335,13 +335,13 @@ countrycode_convert <- function(# user-supplied arguments
         badmatch <- sort(unique(origin_vector[is.na(destination_vector)]))
         badmatch <- badmatch[!badmatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
         if(length(badmatch) > 0){
-            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n")
+            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n", call. = FALSE)
         }
         if(origin_regex){
            if(length(destination_list) > 0){
                destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
                destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n")
+               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n", call. = FALSE)
            }
         }
     }

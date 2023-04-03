@@ -1,7 +1,7 @@
 Type: Package
 Package: countrycode
 Title: Convert Country Names and Country Codes
-Version: 1.4.1
+Version: 1.4.1.9000
 Authors@R: 
     c(person(given = "Vincent",
              family = "Arel-Bundock",
