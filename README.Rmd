@@ -154,7 +154,7 @@ df3
 
 `countrycode` can convert country names and codes to unicode flags. For example, we can use the `gt` package to draw a table with countries and their corresponding flags:
 
-```{r}
+```r
 library(gt)
 library(countrycode)
 
@@ -164,9 +164,7 @@ dat <- data.frame(Countries, Flags)
 gt(dat)
 ```
 
-Which produces this file: 
-
-![](https://user-images.githubusercontent.com/987057/85434007-5cad5d80-b553-11ea-8a19-47c21965013d.png)
+![gt_flags](https://github.com/vincentarelbundock/countrycode/assets/987057/c0c29aa3-0aab-4274-af80-1ae3efc89203)
 
 Note that embedding unicode characters in `R` graphics is possible, but it can be tricky. If your output looks like `\U0001f1e6\U0001f1f6`, then you could try feeding it to this function: `utf8::utf8_print()`. That should cover a lot of cases without dipping into the complexity of graphics devices. As a rule of thumb, if your output looks like `□□□□` (boxes), things tend to get more complicated. In that case, you'll have to think about different output devices, file viewers, and/or file formats (e.g., 'SVG' or 'HTML').
 
@@ -291,7 +289,8 @@ library(eurostat)
 library(countrycode)
 df <- eurostat::get_eurostat("nama_10_lp_ulc")
 custom_match <- c(EL = 'Greece', UK = 'United Kingdom')
-countrycode(df$geo, origin = 'iso2c', destination = 'country.name', custom_match = custom_match)
+countrycode(df$geo, origin = 'iso2c', destination = 'country.name', custom_match = custom_match) |>
+    head()
 ```
 
 ## `warn`: Silence warnings
