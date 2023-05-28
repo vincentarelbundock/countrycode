@@ -1,26 +1,29 @@
 ###########
 #  setup  #
 ###########
-library(here)
-library(conflicted)
-library(janitor)
-library(readxl)
-library(utf8)
-library(xml2)
-library(rvest)
-library(RSelenium)
-library(assertr) # probably want to choose between checkmate and this
-library(checkmate)
-library(httr)
-library(jsonlite)
-library(lubridate)
-library(WDI)
-library(pdftools)
-library(zoo)
-library(utf8)
-library(countrycode)
-library(tidyverse)
-options(stringsAsFactors=FALSE)
+pkgs <- c(
+  "here",
+  "conflicted",
+  "janitor",
+  "readxl",
+  "utf8",
+  "xml2",
+  "rvest",
+  "RSelenium",
+  "assertr",
+  "checkmate",
+  "httr",
+  "jsonlite",
+  "lubridate",
+  "WDI",
+  "pdftools",
+  "zoo",
+  "countrycode",
+  "tidyverse"
+)
+sapply(pkgs, require, quiet = TRUE)
+
+options(stringsAsFactors = FALSE)
 setwd(here::here())
 conflict_prefer('filter', 'dplyr')
 conflict_prefer('select', 'dplyr')

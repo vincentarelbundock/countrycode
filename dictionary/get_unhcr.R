@@ -21,6 +21,7 @@ unhcr <-
          unhcr.region = case_when(country == "Kosovo" ~ "Europe",
                                   country == "South Georgia and the South Sandwich Islands" ~ "Europe",
                                   country == "Tibetan" ~ "Asia and the Pacific",
-                                  .default = unhcr.region))
+                                  .default = unhcr.region)) |>
+  arrange(country)
 
 unhcr |> write_csv("dictionary/data_unhcr.csv", na = "")
