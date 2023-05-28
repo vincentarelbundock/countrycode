@@ -1,229 +1,232 @@
-"country","unhcr"
-"Afghanistan","AFG"
-"Albania","ALB"
-"Algeria","ALG"
-"Andorra","AND"
-"Angola","ANG"
-"Anguilla","AIA"
-"Antarctica","ATA"
-"Antigua and Barbuda","ANT"
-"Argentina","ARG"
-"Armenia","ARM"
-"Aruba (K. of the Netherland)","ABW"
-"Australia","AUL"
-"Austria","AUS"
-"Azerbaijan","AZE"
-"Bahamas","BHS"
-"Bahrain","BAH"
-"Bangladesh","BGD"
-"Barbados","BAR"
-"Belarus","BLR"
-"Belgium","BEL"
-"Belize","BZE"
-"Benin","BEN"
-"Bermuda (GBR)","BER"
-"Bhutan","BHU"
-"Plurinational State of Bolivia","BOL"
-"Bonaire Saint Eustatius and Saba (NLD)","BES"
-"Bosnia and Herzegovina","BSN"
-"Botswana","BOT"
-"Brazil","BRA"
-"British Virgin Islands (GBR)","BVI"
-"Brunei Darussalam","BRU"
-"Bulgaria","BUL"
-"Burkina Faso","BKF"
-"Burundi","BDI"
-"Cape Verde","CVI"
-"Cambodia","CAM"
-"Cameroon","CMR"
-"Canada","CAN"
-"Cayman Islands","CAY"
-"Central African Republic","CAR"
-"Rep. of Chad","CHD"
-"Chile","CHL"
-"China","CHI"
-"Hong Kong (CHN)","HKG"
-"Macao (CHN)","MAC"
-"Colombia","COL"
-"Comoros","COI"
-"Republic of the Congo","COB"
-"Cook Islands","COK"
-"Costa Rica","COS"
-"Côte d'Ivoire","ICO"
-"Croatia","HRV"
-"Cuba","CUB"
-"Curaçao (K. of the Netherland)","CUW"
-"Cyprus","CYP"
-"Czech Republic","CZE"
-"Democratic People's Rep. of Korea","KRN"
-"Democratic Republic of the Congo","COD"
-"Denmark","DEN"
-"Djibouti","DJB"
-"Dominica","DMA"
-"Dominican Republic","DOM"
-"Ecuador","ECU"
-"Egypt","ARE"
-"El Salvador","SAL"
-"Equatorial Guinea","EGU"
-"Eritrea","ERT"
-"Estonia","EST"
-"Eswatini","SWA"
-"Ethiopia","ETH"
-"Falkland Islands (Malvinas)","FLK"
-"Faeroe Islands (DNK)","FRO"
-"Fiji","FIJ"
-"Finland","FIN"
-"France","FRA"
-"French Guiana (FRA)","FGU"
-"French Polynesia (FRA)","FPO"
-"French Southern and Antarctic Territories (FRA)","ATF"
-"Gabon","GAB"
-"Gambia","GAM"
-"Georgia","GEO"
-"Germany","GFR"
-"Ghana","GHA"
-"Greece","GRE"
-"Greenland (DNK)","GRL"
-"Grenada","GRN"
-"Guadeloupe (FRA)","GLP"
-"Guatemala","GUA"
-"Guinea","GUI"
-"Guinea-Bissau","GNB"
-"Guyana","GUY"
-"Haiti","HAI"
-"Holy See","VAT"
-"Honduras","HON"
-"Hungary","HUN"
-"Iceland","ICE"
-"India","IND"
-"Indonesia","INS"
-"Islamic Republic of Iran","IRN"
-"Iraq","IRQ"
-"Ireland","IRE"
-"Israel","ISR"
-"Italy","ITA"
-"Jamaica","JAM"
-"Japan","JPN"
-"Jordan","JOR"
-"Kazakhstan","KAZ"
-"Kenya","KEN"
-"Kiribati","KIR"
-"Kosovo","KOS"
-"Kuwait","KUW"
-"Kyrgyzstan","KGZ"
-"Lao People's Democratic Republic","LAO"
-"Latvia","LVA"
-"Lebanon","LEB"
-"Lesotho","LES"
-"Liberia","LBR"
-"Libya","LBY"
-"Liechtenstein","LIE"
-"Lithuania","LTU"
-"Luxembourg","LUX"
-"Madagascar","MAD"
-"Malawi","MLW"
-"Malaysia","MLS"
-"Maldives","MDV"
-"Mali","MLI"
-"Malta","MTA"
-"Marshall Islands","MHL"
-"Martinique (FRA)","MAR"
-"Mauritania","MAU"
-"Mauritius","MTS"
-"Mexico","MEX"
-"Federated States of Micronesia","FSM"
-"Monaco","MCO"
-"Mongolia","MNG"
-"Montenegro","MNE"
-"Montserrat","MSR"
-"Morocco","MOR"
-"Mozambique","MOZ"
-"Myanmar","MYA"
-"Namibia","NAM"
-"Nauru","NRU"
-"Nepal","NEP"
-"Netherlands","NET"
-"French New Caledonia (FRA)","FNC"
-"New Zealand","NZL"
-"Nicaragua","NIC"
-"Niger","NGR"
-"Nigeria","NIG"
-"Niue","NIU"
-"North Macedonia","MCD"
-"Northern Mariana Islands","MNP"
-"Norway","NOR"
-"Oman","OMN"
-"Pakistan","PAK"
-"Palau","PLW"
-"Panama","PAN"
-"Papua New Guinea","PNG"
-"Paraguay","PAR"
-"Peru","PER"
-"Philippines","PHI"
-"Poland","POL"
-"Portugal","POR"
-"Puerto Rico","PUE"
-"Qatar","QAT"
-"Republic of Korea","KOR"
-"Republic of Moldova","MDA"
-"Reunion (FRA)","REU"
-"Romania","ROM"
-"Russian Federation","RUS"
-"Rwanda","RWA"
-"Saint Kitts and Nevis","STK"
-"Saint Lucia","LCA"
-"Saint Martin (FRA)","MAF"
-"Saint Vincent and the Grenadines","VCT"
-"Samoa","WES"
-"San Marino","SMA"
-"Sao Tome and Principe","STP"
-"Saudi Arabia","SAU"
-"Senegal","SEN"
-"Serbia*","SRB"
-"Seychelles","SEY"
-"Sierra Leone","SLE"
-"Singapore","SIN"
-"Sint Maarten (K. of the Netherland)","SXM"
-"Slovakia","SVK"
-"Slovenia","SVN"
-"Solomon Islands","SOL"
-"Somalia","SOM"
-"South Africa","RSA"
-"South Georgia and the South Sandwich Islands (GBR)","SGS"
-"South Sudan","SSD"
-"Spain","SPA"
-"Sri Lanka","LKA"
-"State of Palestine","GAZ"
-"Sudan","SUD"
-"Suriname","SUR"
-"Svalbard and Jan Mayen Islands (NOR)","SJM"
-"Sweden","SWE"
-"Switzerland","SWI"
-"Syrian Arab Republic","SYR"
-"Tajikistan","TJK"
-"Thailand","THA"
-"Timor-Leste","TMP"
-"Togo","TOG"
-"Tonga","TON"
-"Trinidad and Tobago","TRT"
-"Tunisia","TUN"
-"Turkey","TUR"
-"Turkmenistan","TKM"
-"Turks and Caicos Islands (GBR)","TCI"
-"Tuvalu","TUV"
-"Uganda","UGA"
-"Ukraine","UKR"
-"United Arab Emirates","UAE"
-"United Kingdom of Great Britain and Northern Ireland","GBR"
-"United Republic of Tanzania","TAN"
-"United States of America","USA"
-"Uruguay","URU"
-"Uzbekistan","UZB"
-"Vanuatu","VAN"
-"Bolivarian Republic of Venezuela","VEN"
-"Viet Nam","SRV"
-"Western Sahara","WSH"
-"Yemen","YEM"
-"Zambia","ZAM"
-"Zimbabwe","ZIM"
-"Taiwan (CHN)","TWN"
+country,unhcr,unhcr.region
+Afghanistan,AFG,Asia and the Pacific
+Albania,ALB,Europe
+Algeria,ALG,Middle East and North Africa
+Andorra,AND,Europe
+Angola,ANG,Southern Africa
+Anguilla,AIA,The Americas
+Antigua and Barbuda,ANT,The Americas
+Argentina,ARG,The Americas
+Armenia,ARM,Europe
+Aruba,ABW,The Americas
+Australia,AUL,Asia and the Pacific
+Austria,AUS,Europe
+Azerbaijan,AZE,Europe
+Bahamas,BHS,The Americas
+Bahrain,BAH,Middle East and North Africa
+Bangladesh,BGD,Asia and the Pacific
+Barbados,BAR,The Americas
+Belarus,BLR,Europe
+Belgium,BEL,Europe
+Belize,BZE,The Americas
+Benin,BEN,West and Central Africa
+Bermuda,BER,The Americas
+Bhutan,BHU,Asia and the Pacific
+Bolivia (Plurinational State of),BOL,The Americas
+"Bonaire, Saint Eustatius and Saba",BES,The Americas
+Bosnia and Herzegovina,BSN,Europe
+Botswana,BOT,Southern Africa
+Bouvet Island,BVT,Europe
+Brazil,BRA,The Americas
+British Virgin Islands,BVI,The Americas
+Brunei Darussalam,BRU,Asia and the Pacific
+Bulgaria,BUL,Europe
+Burkina Faso,BKF,West and Central Africa
+Burundi,BDI,East and Horn of Africa
+Cabo Verde,CVI,West and Central Africa
+Cambodia,CAM,Asia and the Pacific
+Cameroon,CMR,West and Central Africa
+Canada,CAN,The Americas
+Cayman Islands,CAY,The Americas
+Central African Rep.,CAR,West and Central Africa
+Chad,CHD,West and Central Africa
+Chile,CHL,The Americas
+China,CHI,Asia and the Pacific
+"China, Hong Kong SAR",HKG,Asia and the Pacific
+"China, Macao SAR",MAC,Asia and the Pacific
+Colombia,COL,The Americas
+Comoros,COI,Southern Africa
+Congo,COB,Southern Africa
+Cook Islands,COK,Asia and the Pacific
+Costa Rica,COS,The Americas
+Cote d'Ivoire,ICO,West and Central Africa
+Croatia,HRV,Europe
+Cuba,CUB,The Americas
+Curacao ,CUW,The Americas
+Cyprus,CYP,Europe
+Czechia,CZE,Europe
+Dem. People's Rep. of Korea,KRN,Asia and the Pacific
+Dem. Rep. of the Congo,COD,Southern Africa
+Denmark,DEN,Europe
+Djibouti,DJB,East and Horn of Africa
+Dominica,DMA,The Americas
+Dominican Rep.,DOM,The Americas
+Ecuador,ECU,The Americas
+Egypt,ARE,Middle East and North Africa
+El Salvador,SAL,The Americas
+Equatorial Guinea,EGU,West and Central Africa
+Eritrea,ERT,East and Horn of Africa
+Estonia,EST,Europe
+Eswatini,SWA,Southern Africa
+Ethiopia,ETH,East and Horn of Africa
+Faeroe Islands,FRO,Europe
+Fiji,FIJ,Asia and the Pacific
+Finland,FIN,Europe
+France,FRA,Europe
+French Guiana,FGU,The Americas
+French Polynesia,FPO,Asia and the Pacific
+Gabon,GAB,West and Central Africa
+Gambia,GAM,West and Central Africa
+Georgia,GEO,Europe
+Germany,GFR,Europe
+Ghana,GHA,West and Central Africa
+Gibraltar,GIB,Europe
+Greece,GRE,Europe
+Greenland,GRL,Europe
+Grenada,GRN,The Americas
+Guadeloupe,GLP,The Americas
+Guam,GUM,Asia and the Pacific
+Guatemala,GUA,The Americas
+Guinea,GUI,West and Central Africa
+Guinea-Bissau,GNB,West and Central Africa
+Guyana,GUY,The Americas
+Haiti,HAI,The Americas
+Holy See,VAT,Europe
+Honduras,HON,The Americas
+Hungary,HUN,Europe
+Iceland,ICE,Europe
+India,IND,Asia and the Pacific
+Indonesia,INS,Asia and the Pacific
+Iran (Islamic Rep. of),IRN,Asia and the Pacific
+Iraq,IRQ,Middle East and North Africa
+Ireland,IRE,Europe
+Israel,ISR,Middle East and North Africa
+Italy,ITA,Europe
+Jamaica,JAM,The Americas
+Japan,JPN,Asia and the Pacific
+Jordan,JOR,Middle East and North Africa
+Kazakhstan,KAZ,Asia and the Pacific
+Kenya,KEN,East and Horn of Africa
+Kiribati,KIR,Asia and the Pacific
+Kosovo,KOS,Europe
+Kuwait,KUW,Middle East and North Africa
+Kyrgyzstan,KGZ,Asia and the Pacific
+Lao People's Dem. Rep.,LAO,Asia and the Pacific
+Latvia,LVA,Europe
+Lebanon,LEB,Middle East and North Africa
+Lesotho,LES,Southern Africa
+Liberia,LBR,West and Central Africa
+Libya,LBY,Middle East and North Africa
+Liechtenstein,LIE,Europe
+Lithuania,LTU,Europe
+Luxembourg,LUX,Europe
+Madagascar,MAD,Southern Africa
+Malawi,MLW,Southern Africa
+Malaysia,MLS,Asia and the Pacific
+Maldives,MDV,Southern Africa
+Mali,MLI,West and Central Africa
+Malta,MTA,Europe
+Marshall Islands,MHL,Asia and the Pacific
+Martinique,MAR,The Americas
+Mauritania,MAU,Middle East and North Africa
+Mauritius,MTS,Southern Africa
+Mexico,MEX,The Americas
+Micronesia (Federated States of),FSM,Asia and the Pacific
+Monaco,MCO,Europe
+Mongolia,MNG,Asia and the Pacific
+Montenegro,MNE,Europe
+Montserrat,MSR,The Americas
+Morocco,MOR,Middle East and North Africa
+Mozambique,MOZ,Southern Africa
+Myanmar,MYA,Asia and the Pacific
+Namibia,NAM,Southern Africa
+Nauru,NRU,Asia and the Pacific
+Nepal,NEP,Asia and the Pacific
+Netherlands,NET,Europe
+New Caledonia,FNC,Asia and the Pacific
+New Zealand,NZL,Asia and the Pacific
+Nicaragua,NIC,The Americas
+Niger,NGR,West and Central Africa
+Nigeria,NIG,West and Central Africa
+Niue,NIU,Asia and the Pacific
+North Macedonia,MCD,Europe
+Northern Mariana Islands,MNP,Asia and the Pacific
+Norway,NOR,Europe
+Oman,OMN,Middle East and North Africa
+Pakistan,PAK,Asia and the Pacific
+Palau,PLW,Asia and the Pacific
+Panama,PAN,The Americas
+Papua New Guinea,PNG,Asia and the Pacific
+Paraguay,PAR,The Americas
+Peru,PER,The Americas
+Philippines,PHI,Asia and the Pacific
+Poland,POL,Europe
+Portugal,POR,Europe
+Puerto Rico,PUE,The Americas
+Qatar,QAT,Middle East and North Africa
+Rep. of Korea,KOR,Asia and the Pacific
+Rep. of Moldova,MDA,Europe
+Reunion,REU,East and Horn of Africa
+Romania,ROM,Europe
+Russian Federation,RUS,Europe
+Rwanda,RWA,East and Horn of Africa
+Saint Kitts and Nevis,STK,The Americas
+Saint Lucia,LCA,The Americas
+Saint Vincent and the Grenadines,VCT,The Americas
+Saint-Martin (French part),MAF,The Americas
+Saint-Pierre-et-Miquelon,SPM,The Americas
+Samoa,WES,Asia and the Pacific
+San Marino,SMA,Europe
+Sao Tome and Principe,STP,West and Central Africa
+Saudi Arabia,SAU,Middle East and North Africa
+Senegal,SEN,West and Central Africa
+Serbia,SRB,Europe
+Seychelles,SEY,Southern Africa
+Sierra Leone,SLE,West and Central Africa
+Singapore,SIN,Asia and the Pacific
+Sint Maarten (Dutch part),SXM,The Americas
+Slovakia,SVK,Europe
+Slovenia,SVN,Europe
+Solomon Islands,SOL,Asia and the Pacific
+Somalia,SOM,East and Horn of Africa
+South Africa,RSA,Southern Africa
+South Georgia and the South Sandwich Islands,SGS,Europe
+South Sudan,SSD,East and Horn of Africa
+Spain,SPA,Europe
+Sri Lanka,LKA,Asia and the Pacific
+State of Palestine,GAZ,Middle East and North Africa
+Stateless,STA,
+Sudan,SUD,East and Horn of Africa
+Suriname,SUR,The Americas
+Svalbard and Jan Mayen,SJM,Europe
+Sweden,SWE,Europe
+Switzerland,SWI,Europe
+Syrian Arab Rep.,SYR,Middle East and North Africa
+Tajikistan,TJK,Asia and the Pacific
+Thailand,THA,Asia and the Pacific
+Tibetan,TIB,Asia and the Pacific
+Timor-Leste,TMP,Asia and the Pacific
+Togo,TOG,West and Central Africa
+Tonga,TON,Asia and the Pacific
+Trinidad and Tobago,TRT,The Americas
+Tunisia,TUN,Middle East and North Africa
+Turkmenistan,TKM,Asia and the Pacific
+Turks and Caicos Islands,TCI,The Americas
+Tuvalu,TUV,Asia and the Pacific
+Türkiye,TUR,Europe
+Uganda,UGA,East and Horn of Africa
+Ukraine,UKR,Europe
+United Arab Emirates,UAE,Middle East and North Africa
+United Kingdom of Great Britain and Northern Ireland,GBR,Europe
+United Rep. of Tanzania,TAN,East and Horn of Africa
+United States of America,USA,The Americas
+Unknown ,UKN,
+Uruguay,URU,The Americas
+Uzbekistan,UZB,Asia and the Pacific
+Vanuatu,VAN,Asia and the Pacific
+Venezuela (Bolivarian Republic of),VEN,The Americas
+Viet Nam,SRV,Asia and the Pacific
+Western Sahara,WSH,Middle East and North Africa
+Yemen,YEM,Middle East and North Africa
+Zambia,ZAM,Southern Africa
+Zimbabwe,ZIM,Southern Africa

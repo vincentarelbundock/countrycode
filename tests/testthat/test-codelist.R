@@ -6,7 +6,7 @@ dest <- c('year', 'ar5', 'continent', 'currency', 'eu28', 'eurocontrol_pru',
           'eurocontrol_statfor', 'icao', 'icao.region', 'iso4217c',
           'iso4217n','region', 'region23', 'un.region.name', 'un.region.code',
           'un.regionsub.name', 'un.regionsub.code',
-          'un.regionintermediate.name', 'un.regionintermediate.code')
+          'un.regionintermediate.name', 'un.regionintermediate.code', 'unhcr.region')
 
 ##############
 #  codelist  #
