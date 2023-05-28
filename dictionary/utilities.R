@@ -21,7 +21,7 @@ pkgs <- c(
   "countrycode",
   "tidyverse"
 )
-sapply(pkgs, require, quiet = TRUE)
+sapply(pkgs, require, character.only = TRUE, quiet = TRUE)
 
 options(stringsAsFactors = FALSE)
 setwd(here::here())
