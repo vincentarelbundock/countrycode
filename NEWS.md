@@ -1,6 +1,7 @@
 # countrycode 1.4.0.9000
 
-* New codes: Polity V "p5c", "p5n", "unhcr_region"
+* New codes: Polity V "p5c", "p5n"
+* New code "unhcr_region". Thanks to @galalH for code contribution #329
 * Many regex improvements
 * Several minor bug fixes
 
