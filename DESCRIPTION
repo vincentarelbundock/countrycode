@@ -1,7 +1,7 @@
 Type: Package
 Package: countrycode
 Title: Convert Country Names and Country Codes
-Version: 1.4.1.9001
+Version: 1.4.1.9002
 Authors@R: 
     c(person(given = "Vincent",
              family = "Arel-Bundock",
@@ -39,4 +39,4 @@ Encoding: UTF-8
 LazyData: yes
 LazyLoad: yes
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.2.3.9000
