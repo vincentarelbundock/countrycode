@@ -1,3 +1,5 @@
+
+
 #' Get Custom Dictionaries
 #' 
 #' Download a custom dictionary to use in the `custom_dict` argument of `countrycode()`
@@ -16,7 +18,7 @@
 #' cm <- get_dictionary("us_states")
 #' countrycode::countrycode(sourcevar = "USA", origin = "iso2c", destination = "iso3c", custom_dict = cm)
 #' }
-dictionary <- function(dictionary = NULL) {
+get_dictionary <- function(dictionary = NULL) {
     valid <- sort(c("global_burden_of_disease", "ch_cantons", "us_states", "exiobase3", "gtap10"))
     if (is.null(dictionary)) {
         message(sprintf("Available dictionaries: %s", paste(valid, collapse = ", ")))

@@ -2,4 +2,5 @@
 
 export(countrycode)
 export(countryname)
+export(get_dictionary)
 export(guess_field)
