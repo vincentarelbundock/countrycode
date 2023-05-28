@@ -1,5 +1,7 @@
 # countrycode 1.4.0.9000
 
+* New `get_dictionary()` function to download custom cross-walks:
+  - US States, Swiss Cantons, Global Burden of Disease, ExioBase, GTAP.
 * New codes: Polity V "p5c", "p5n"
 * New code "unhcr_region". Thanks to @galalH for code contribution #329
 * Many regex improvements
