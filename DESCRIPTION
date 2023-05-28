@@ -32,6 +32,8 @@ BugReports: https://github.com/vincentarelbundock/countrycode/issues
 Depends:
     R (>= 2.10)
 Suggests:
+    gt,
+    eurostat,
     testthat,
     tibble,
     utf8
