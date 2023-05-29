@@ -188,7 +188,7 @@ head(countrycode::cldr_examples)
 
 ## Custom dictionaries and cross-walks: `get_dictionary()` and `custom_dict`
 
-The `custom_dict` argument accepts data frame which can be used as custom dictionaries to create "crosswalks" between arbitrary entities (non-countries). The `countrycode` repository on Github hosts several custom dictionaries. You can obtain the current list by calling:
+The `custom_dict` argument accepts data frame which can be used as custom dictionaries to create "crosswalks" between arbitrary entities (non-countries). You can create your own dictionaries (see examples below) or use one of the dictionaries already hosted on the `countrycode` Github repository. The current list of available dictionaries can be seen by calling:
 
 ```{r}
 get_dictionary()

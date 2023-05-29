@@ -189,22 +189,22 @@ df1
 ```
 
     ##   cowcodes var1
-    ## 1      ALG  206
-    ## 2      ALB  219
-    ## 3      UKG  100
-    ## 4      CAN  179
-    ## 5      USA  191
+    ## 1      ALG  341
+    ## 2      ALB    9
+    ## 3      UKG  203
+    ## 4      CAN  490
+    ## 5      USA   37
 
 ``` r
 df2
 ```
 
     ##   isocodes var2
-    ## 1       12  315
-    ## 2        8    9
-    ## 3      826  437
-    ## 4      124  470
-    ## 5      840  175
+    ## 1       12  262
+    ## 2        8  456
+    ## 3      826   25
+    ## 4      124  144
+    ## 5      840  283
 
 Create a common variable with the iso3c code in each data frame, merge
 the data, and create a country identifier:
@@ -218,11 +218,11 @@ df3
 ```
 
     ##   iso3c cowcodes var1 isocodes var2        country
-    ## 1   ALB      ALB  219        8    9        Albania
-    ## 2   CAN      CAN  179      124  470         Canada
-    ## 3   DZA      ALG  206       12  315        Algeria
-    ## 4   GBR      UKG  100      826  437 United Kingdom
-    ## 5   USA      USA  191      840  175  United States
+    ## 1   ALB      ALB    9        8  456        Albania
+    ## 2   CAN      CAN  490      124  144         Canada
+    ## 3   DZA      ALG  341       12  262        Algeria
+    ## 4   GBR      UKG  203      826   25 United Kingdom
+    ## 5   USA      USA   37      840  283  United States
 
 ## Flags
 
@@ -293,8 +293,10 @@ head(countrycode::cldr_examples)
 
 The `custom_dict` argument accepts data frame which can be used as
 custom dictionaries to create “crosswalks” between arbitrary entities
-(non-countries). The `countrycode` repository on Github hosts several
-custom dictionaries. You can obtain the current list by calling:
+(non-countries). You can create your own dictionaries (see examples
+below) or use one of the dictionaries already hosted on the
+`countrycode` Github repository. The current list of available
+dictionaries can be seen by calling:
 
 ``` r
 get_dictionary()
