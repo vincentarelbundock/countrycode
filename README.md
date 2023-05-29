@@ -28,35 +28,33 @@ you could cite our paper:
 # Table of Contents
 
   - [Why
-    `countrycode`?](https://github.com/vincentarelbundock/countrycode#why-countrycode)
-  - [Installation](https://github.com/vincentarelbundock/countrycode#installation)
+    `countrycode`?](https://vincentarelbundock.github.io/countrycode#why-countrycode)
+  - [Installation](https://vincentarelbundock.github.io/countrycode#installation)
   - [Supported
-    codes](https://github.com/vincentarelbundock/countrycode#why-countrycode)
-  - [`countrycode`](https://github.com/vincentarelbundock/countrycode#countrycode)
+    codes](https://vincentarelbundock.github.io/countrycode#why-countrycode)
+  - [`countrycode`](https://vincentarelbundock.github.io/countrycode#countrycode)
       - [Convert of a single name or
-        code](https://github.com/vincentarelbundock/countrycode#convert-a-single-name-or-code)
+        code](https://vincentarelbundock.github.io/countrycode#convert-a-single-name-or-code)
       - [Vectors and
-        data.frames](https://github.com/vincentarelbundock/countrycode#vectors-and-data.frames)
-      - [Flags](https://github.com/vincentarelbundock/countrycode#flags)
+        data.frames](https://vincentarelbundock.github.io/countrycode#vectors-and-data.frames)
+      - [Flags](https://vincentarelbundock.github.io/countrycode#flags)
       - [Country names in 600+ different languages and
-        formats](https://github.com/vincentarelbundock/countrycode#country-names-in-600-different-languages-and-formats)
-      - [`custom_dict`: American
-        states](https://github.com/vincentarelbundock/countrycode#custom_dict-american-states)
-      - [`custom_dict`: the `ISOcodes`
-        package](https://github.com/vincentarelbundock/countrycode#custom_dict-the-isocodes-package)
+        formats](https://vincentarelbundock.github.io/countrycode#country-names-in-600-different-languages-and-formats)
+      - [`custom_dict` and `get_dictionary()`: Custom dictionaries and
+        cross-walks](https://vincentarelbundock.github.io/countrycode/#custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict)
       - [`destination`: Fallback
-        codes](https://github.com/vincentarelbundock/countrycode#destination-fallback-codes)
+        codes](https://vincentarelbundock.github.io/countrycode#destination-fallback-codes)
       - [`nomatch`: Fill in missing codes
-        manually](https://github.com/vincentarelbundock/countrycode#nomatch-fill-in-missing-codes-manually)
+        manually](https://vincentarelbundock.github.io/countrycode#nomatch-fill-in-missing-codes-manually)
       - [`custom_match`: Override default
-        values](https://github.com/vincentarelbundock/countrycode#custom_match-override-default-values)
+        values](https://vincentarelbundock.github.io/countrycode#custom_match-override-default-values)
       - [`warn`: Silence
-        warnings](https://github.com/vincentarelbundock/countrycode#warn-silence-warnings)
+        warnings](https://vincentarelbundock.github.io/countrycode#warn-silence-warnings)
   - [`countryname`: Convert country names from any
-    language](https://github.com/vincentarelbundock/countrycode#countryname-convert-country-names-from-any-language)
+    language](https://vincentarelbundock.github.io/countrycode#countryname-convert-country-names-from-any-language)
   - [Custom conversion functions and
-    “crosswalks”](https://github.com/vincentarelbundock/countrycode#custom-conversion-functions-and-crosswalks)
-  - [Contributions](https://github.com/vincentarelbundock/countrycode#contributions)
+    “crosswalks”](https://vincentarelbundock.github.io/countrycode#custom-conversion-functions-and-crosswalks)
+  - [Contributions](https://vincentarelbundock.github.io/countrycode#contributions)
 
 # Why `countrycode`?
 
@@ -189,22 +187,22 @@ df1
 ```
 
     ##   cowcodes var1
-    ## 1      ALG  341
-    ## 2      ALB    9
-    ## 3      UKG  203
-    ## 4      CAN  490
-    ## 5      USA   37
+    ## 1      ALG   22
+    ## 2      ALB  159
+    ## 3      UKG  100
+    ## 4      CAN  447
+    ## 5      USA  373
 
 ``` r
 df2
 ```
 
     ##   isocodes var2
-    ## 1       12  262
-    ## 2        8  456
-    ## 3      826   25
-    ## 4      124  144
-    ## 5      840  283
+    ## 1       12   15
+    ## 2        8  207
+    ## 3      826  111
+    ## 4      124  418
+    ## 5      840  331
 
 Create a common variable with the iso3c code in each data frame, merge
 the data, and create a country identifier:
@@ -218,11 +216,11 @@ df3
 ```
 
     ##   iso3c cowcodes var1 isocodes var2        country
-    ## 1   ALB      ALB    9        8  456        Albania
-    ## 2   CAN      CAN  490      124  144         Canada
-    ## 3   DZA      ALG  341       12  262        Algeria
-    ## 4   GBR      UKG  203      826   25 United Kingdom
-    ## 5   USA      USA   37      840  283  United States
+    ## 1   ALB      ALB  159        8  207        Albania
+    ## 2   CAN      CAN  447      124  418         Canada
+    ## 3   DZA      ALG   22       12   15        Algeria
+    ## 4   GBR      UKG  100      826  111 United Kingdom
+    ## 5   USA      USA  373      840  331  United States
 
 ## Flags
 
