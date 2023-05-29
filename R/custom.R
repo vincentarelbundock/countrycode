@@ -1,5 +1,3 @@
-
-
 #' Get Custom Dictionaries
 #' 
 #' Download a custom dictionary to use in the `custom_dict` argument of `countrycode()`
@@ -27,7 +25,7 @@ get_dictionary <- function(dictionary = NULL) {
     if (isTRUE(is.character(dictionary) && length(dictionary) == 1 && dictionary %in% valid)) {
         url <- sprintf("https://github.com/vincentarelbundock/countrycode/raw/main/data/custom_dictionaries/data_%s.rds", dictionary)
         tmp <- tempfile()
-        download.file(url, tmp)
+        utils::download.file(url, tmp)
         out <- readRDS(tmp)
         unlink(tmp)
         return(out)
