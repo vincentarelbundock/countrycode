@@ -2,7 +2,6 @@
 #' 
 #' Download a custom dictionary to use in the `custom_dict` argument of `countrycode()`
 #'
-#' @export
 #' @param dictionary A character string that specifies the dictionary to be
 #' retrieved. It must be one of "global_burden_of_disease", "ch_cantons",
 #' "us_states", "exiobase3", "gtap10". If NULL, the function will print the list
@@ -16,6 +15,7 @@
 #' cd <- get_dictionary("us_states")
 #' countrycode::countrycode(c("MO", "MN"), origin = "state.abb", "state.name", custom_dict = cd)
 #' }
+#' @export
 get_dictionary <- function(dictionary = NULL) {
     valid <- sort(c("global_burden_of_disease", "ch_cantons", "us_states", "exiobase3", "gtap10"))
     if (is.null(dictionary)) {
