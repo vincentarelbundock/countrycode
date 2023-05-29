@@ -76,8 +76,8 @@ If an invalid dictionary or no dictionary is specified, the function will stop a
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="va">cm</span> <span class="op">&lt;-</span> <span class="fu">get_dictionary</span><span class="op">(</span><span class="st">"us_states"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">countrycode</span><span class="fu">::</span><span class="fu"><a href="countrycode.html">countrycode</a></span><span class="op">(</span>sourcevar <span class="op">=</span> <span class="st">"USA"</span>, origin <span class="op">=</span> <span class="st">"iso2c"</span>, destination <span class="op">=</span> <span class="st">"iso3c"</span>, custom_dict <span class="op">=</span> <span class="va">cm</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cd</span> <span class="op">&lt;-</span> <span class="fu">get_dictionary</span><span class="op">(</span><span class="st">"us_states"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">countrycode</span><span class="fu">::</span><span class="fu"><a href="countrycode.html">countrycode</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MO"</span>, <span class="st">"MN"</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">"state.abb"</span>, <span class="st">"state.name"</span>, custom_dict <span class="op">=</span> <span class="va">cd</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
