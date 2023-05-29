@@ -21,7 +21,7 @@ Download a custom dictionary to use in the \code{custom_dict} argument of \code{
 }
 \examples{
 \dontrun{
-cm <- get_dictionary("us_states")
-countrycode::countrycode(sourcevar = "USA", origin = "iso2c", destination = "iso3c", custom_dict = cm)
+cd <- get_dictionary("us_states")
+countrycode::countrycode(c("MO", "MN"), origin = "state.abb", "state.name", custom_dict = cd)
 }
 }

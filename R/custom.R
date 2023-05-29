@@ -15,8 +15,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' cm <- get_dictionary("us_states")
-#' countrycode::countrycode(sourcevar = "USA", origin = "iso2c", destination = "iso3c", custom_dict = cm)
+#' cd <- get_dictionary("us_states")
+#' countrycode::countrycode(c("MO", "MN"), origin = "state.abb", "state.name", custom_dict = cd)
 #' }
 get_dictionary <- function(dictionary = NULL) {
     valid <- sort(c("global_burden_of_disease", "ch_cantons", "us_states", "exiobase3", "gtap10"))
