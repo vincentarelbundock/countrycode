@@ -186,33 +186,38 @@ To see a full list of country name variants available, inspect this data.frame:
 head(countrycode::cldr_examples)
 ```
 
-## `custom_dict`: American states
+## Custom dictionaries and cross-walks: `get_dictionary()` and `custom_dict`
 
-Since version 0.19, countrycode accepts user-supplied dictionaries via the ``custom_dict`` argument. These dictionaries will override the built-in country code dictionary. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.
-
-Load the library and download the custom dictionary data.frame:
+The `custom_dict` argument accepts data frame which can be used as custom dictionaries to create "crosswalks" between arbitrary entities (non-countries). The `countrycode` repository on Github hosts several custom dictionaries. You can obtain the current list by calling:
 
 ```{r}
-library(countrycode)
-url = "https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/data_us_states.csv"
-state_dict = read.csv(url, stringsAsFactors=FALSE)
+get_dictionary()
 ```
 
-Convert:
+You can download a dictionary and see available fields with:
+
+```{r, message = FALSE}
+cd <- get_dictionary("us_states")
+head(cd)
+```
+
+Now we can use the dictionary for conversions:
 
 ```{r}
-countrycode('State of Alabama', 
-            origin = 'state', 
-            destination = 'abbreviation', 
-            custom_dict = state_dict,
-            origin_regex = TRUE)
+st <- c("Arkansas", "Quebec", "Tennessee")
+countrycode(st, "state.regex", "state.abb", custom_dict = cd)
 
-countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dict)
+countrycode(c("MN", "MA", "MO"), "state.abb", "state.name", custom_dict = cd)
 ```
 
-Note that if you use a custom dictionary with **country** codes, you could easily merge it into the ``countrycode::codelist`` or ``countrycode::codelist_panel`` to gain access to all other codes. 
+Here's an example with the GTAP dataset:
 
-## `custom_dict`: the `ISOcodes` package
+```{r, message = FALSE}
+cd <- get_dictionary("gtap10")
+countrycode("Christmas Island", "country.name.en.regex", "gtap.cha", custom_dict = cd)
+```
+
+### `custom_dict`: the `ISOcodes` package
 
 `countrycode` already supports ISO4217 (currencies) and ISO3166 (country codes). The `ISOcodes` package supplies other codes, including ISO15924 (language writing systems), ISO639 (languages), and ISO8859 (computer character encodings). Users can convert those codes using `countrycode`'s `custom_dict` argument.
 
@@ -311,7 +316,7 @@ countryname(x)
 countryname(x, 'iso3c')
 ```
 
-# Custom conversion functions and "crosswalks"
+# Custom conversion functions
 
 It is easy to to create alternative functions with different default arguments and/or dictionaries. For example, we can create:
 

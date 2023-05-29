@@ -25,8 +25,10 @@ get_dictionary <- function(dictionary = NULL) {
         return(invisible(NULL))
     }
     if (isTRUE(is.character(dictionary) && length(dictionary) == 1 && dictionary %in% valid)) {
-        url <- sprintf("https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/%s.csv", dictionary)
-        out <- readRDS(url)
+        url <- sprintf("https://github.com/vincentarelbundock/countrycode/raw/main/data/custom_dictionaries/data_%s.rds", dictionary)
+        tmp <- tempfile()
+        download.file(url, tmp)
+        out <- readRDS(tmp)
         return(out)
     } else {
         stop("dictionary must be a character vector of length 1 and one of: ", paste(valid, collapse = ", "))
