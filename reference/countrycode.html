@@ -20,7 +20,7 @@ with the name of the continent or region to which each country belongs."><!-- ma
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">countrycode</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.1.9002</span>
       </span>
     </div>
 
@@ -59,16 +59,16 @@ with the name of the continent or region to which each country belongs.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">countrycode</span><span class="op">(</span>
-  <span class="va">sourcevar</span>,
-  <span class="va">origin</span>,
-  <span class="va">destination</span>,
-  warn <span class="op">=</span> <span class="cn">TRUE</span>,
-  nomatch <span class="op">=</span> <span class="cn">NA</span>,
-  custom_dict <span class="op">=</span> <span class="cn">NULL</span>,
-  custom_match <span class="op">=</span> <span class="cn">NULL</span>,
-  origin_regex <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">countrycode</span><span class="op">(</span></span>
+<span>  <span class="va">sourcevar</span>,</span>
+<span>  <span class="va">origin</span>,</span>
+<span>  <span class="va">destination</span>,</span>
+<span>  warn <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  nomatch <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  custom_dict <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  custom_match <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  origin_regex <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -76,9 +76,13 @@ with the name of the continent or region to which each country belongs.</p>
     <dl><dt>sourcevar</dt>
 <dd><p>Vector which contains the codes or country names to be
 converted (character or factor)</p></dd>
+
+
 <dt>origin</dt>
 <dd><p>A string which identifies the coding scheme of origin (e.g., <code>"iso3c"</code>). See
 <code><a href="codelist.html">codelist</a></code> for a list of available codes.</p></dd>
+
+
 <dt>destination</dt>
 <dd><p>A string or vector of strings which identify the coding
 scheme of destination (e.g., <code>"iso3c"</code> or <code>c("cowc", "iso3c")</code>). See
@@ -86,8 +90,12 @@ scheme of destination (e.g., <code>"iso3c"</code> or <code>c("cowc", "iso3c")</c
 vector of destination codes, they are used sequentially to fill in
 missing values not covered by the previous destination code in the
 vector.</p></dd>
+
+
 <dt>warn</dt>
 <dd><p>Prints unique elements from sourcevar for which no match was found</p></dd>
+
+
 <dt>nomatch</dt>
 <dd><p>When countrycode fails to find a match for the code of
 origin, it fills-in the destination vector with <code>nomatch</code>. The default
@@ -95,6 +103,8 @@ behavior is to fill non-matching codes with <code>NA</code>. If <code>nomatch = 
 countrycode tries to use the origin vector to fill-in missing values in the
 destination vector. <code>nomatch</code> must be either <code>NULL</code>, of length 1, or of the same
 length as <code>sourcevar</code>.</p></dd>
+
+
 <dt>custom_dict</dt>
 <dd><p>A data frame which supplies a new dictionary to
 replace the built-in country code dictionary. Each column
@@ -106,11 +116,15 @@ of columns containing regular expressions.</p></li>
 <li><p>"origin.valid" attribute: a character vector with the names
 of columns that are accepted as valid origin codes.</p></li>
 </ul></dd>
+
+
 <dt>custom_match</dt>
 <dd><p>A named vector which supplies custom origin and
 destination matches that will supercede any matching default result. The name
 of each element will be used as the origin code, and the value of each
 element will be used as the destination code.</p></dd>
+
+
 <dt>origin_regex</dt>
 <dd><p>NULL or Logical: When using a custom
 dictionary, if TRUE then the origin codes will be matched as
@@ -118,6 +132,7 @@ regex, if FALSE they will be matched exactly. When NULL,
 <code>countrycode</code> will behave as TRUE if the origin name is in the
 <code>custom_dictionary</code>'s <code>origin_regex</code> attribute, and FALSE
 otherwise. See examples section below.</p></dd>
+
 </dl></div>
     <div id="note">
     <h2>Note</h2>
@@ -139,39 +154,39 @@ to combine different datasets which use different codes.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># ISO to Correlates of War</span></span>
-<span class="r-in"><span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'USA'</span>, <span class="st">'DZA'</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">'iso3c'</span>, destination <span class="op">=</span> <span class="st">'cown'</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># ISO to Correlates of War</span></span></span>
+<span class="r-in"><span><span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'USA'</span>, <span class="st">'DZA'</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">'iso3c'</span>, destination <span class="op">=</span> <span class="st">'cown'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1]   2 615</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># English to ISO</span></span>
-<span class="r-in"><span class="fu">countrycode</span><span class="op">(</span><span class="st">'Albania'</span>, origin <span class="op">=</span> <span class="st">'country.name'</span>, destination <span class="op">=</span> <span class="st">'iso3c'</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># English to ISO</span></span></span>
+<span class="r-in"><span><span class="fu">countrycode</span><span class="op">(</span><span class="st">'Albania'</span>, origin <span class="op">=</span> <span class="st">'country.name'</span>, destination <span class="op">=</span> <span class="st">'iso3c'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "ALB"</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># German to French</span></span>
-<span class="r-in"><span class="fu">countrycode</span><span class="op">(</span><span class="st">'Albanien'</span>, origin <span class="op">=</span> <span class="st">'country.name.de'</span>, destination <span class="op">=</span> <span class="st">'iso.name.fr'</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># German to French</span></span></span>
+<span class="r-in"><span><span class="fu">countrycode</span><span class="op">(</span><span class="st">'Albanien'</span>, origin <span class="op">=</span> <span class="st">'country.name.de'</span>, destination <span class="op">=</span> <span class="st">'iso.name.fr'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Albanie (l')"</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Using custom_match to supercede default codes</span></span>
-<span class="r-in"><span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'United States'</span>, <span class="st">'Algeria'</span><span class="op">)</span>, <span class="st">'country.name'</span>, <span class="st">'iso3c'</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Using custom_match to supercede default codes</span></span></span>
+<span class="r-in"><span><span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'United States'</span>, <span class="st">'Algeria'</span><span class="op">)</span>, <span class="st">'country.name'</span>, <span class="st">'iso3c'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "USA" "DZA"</span>
-<span class="r-in"><span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'United States'</span>, <span class="st">'Algeria'</span><span class="op">)</span>, <span class="st">'country.name'</span>, <span class="st">'iso3c'</span>,</span>
-<span class="r-in">            custom_match <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Algeria'</span> <span class="op">=</span> <span class="st">'ALG'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'United States'</span>, <span class="st">'Algeria'</span><span class="op">)</span>, <span class="st">'country.name'</span>, <span class="st">'iso3c'</span>,</span></span>
+<span class="r-in"><span>            custom_match <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Algeria'</span> <span class="op">=</span> <span class="st">'ALG'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "USA" "ALG"</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"> <span class="co"># Download the dictionary of US states from Github</span></span>
-<span class="r-in"> <span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="st">"https://bit.ly/2ToSrFv"</span></span>
-<span class="r-in"> <span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">state_dict</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"> <span class="co"># The "state.regex" column includes regular expressions, so we set an attribute.</span></span>
-<span class="r-in"> <span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">state_dict</span>, <span class="st">"origin_regex"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"state.regex"</span></span>
-<span class="r-in"> <span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'AL'</span>, <span class="st">'AK'</span><span class="op">)</span>, <span class="st">'abbreviation'</span>, <span class="st">'state'</span>,</span>
-<span class="r-in">             custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span>
-<span class="r-in"> <span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Alabama'</span>, <span class="st">'North Dakota'</span><span class="op">)</span>, <span class="st">'state.regex'</span>, <span class="st">'state'</span>,</span>
-<span class="r-in">             custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span> <span class="co"># Download the dictionary of US states from Github</span></span></span>
+<span class="r-in"><span> <span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="st">"https://bit.ly/2ToSrFv"</span></span></span>
+<span class="r-in"><span> <span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">state_dict</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span> <span class="co"># The "state.regex" column includes regular expressions, so we set an attribute.</span></span></span>
+<span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">state_dict</span>, <span class="st">"origin_regex"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"state.regex"</span></span></span>
+<span class="r-in"><span> <span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'AL'</span>, <span class="st">'AK'</span><span class="op">)</span>, <span class="st">'abbreviation'</span>, <span class="st">'state'</span>,</span></span>
+<span class="r-in"><span>             custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span></span>
+<span class="r-in"><span> <span class="fu">countrycode</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Alabama'</span>, <span class="st">'North Dakota'</span><span class="op">)</span>, <span class="st">'state.regex'</span>, <span class="st">'state'</span>,</span></span>
+<span class="r-in"><span>             custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -186,7 +201,7 @@ to combine different datasets which use different codes.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

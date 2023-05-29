@@ -20,7 +20,7 @@ dictionary."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">countrycode</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.1.9002</span>
       </span>
     </div>
 
@@ -59,31 +59,34 @@ dictionary.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">guess_field</span><span class="op">(</span><span class="va">codes</span>, min_similarity <span class="op">=</span> <span class="fl">80</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">guess_field</span><span class="op">(</span><span class="va">codes</span>, min_similarity <span class="op">=</span> <span class="fl">80</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>codes</dt>
 <dd><p>a vector of country codes or country names</p></dd>
+
+
 <dt>min_similarity</dt>
 <dd><p>the function returns all field names where over than
 <code>min_similarity</code>% of codes are shared between the supplied vector and the
 <code>countrycode</code> dictionary.</p></dd>
+
 </dl></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Guess ISO codes</span></span>
-<span class="r-in"><span class="fu">guess_field</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'DZA'</span>, <span class="st">'CAN'</span>, <span class="st">'DEU'</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Guess ISO codes</span></span></span>
+<span class="r-in"><span><span class="fu">guess_field</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'DZA'</span>, <span class="st">'CAN'</span>, <span class="st">'DEU'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              code percent_of_unique_matched</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> genc3c     genc3c                       100</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> iso3c       iso3c                       100</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> wb             wb                       100</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> wb_api3c wb_api3c                       100</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Guess country names</span></span>
-<span class="r-in"><span class="fu">guess_field</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Guinea'</span>,<span class="st">'Iran'</span>,<span class="st">'Russia'</span>,<span class="st">'North Korea'</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">'Ivory Coast'</span>,<span class="fl">50</span><span class="op">)</span>,<span class="st">'Scotland'</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Guess country names</span></span></span>
+<span class="r-in"><span><span class="fu">guess_field</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Guinea'</span>,<span class="st">'Iran'</span>,<span class="st">'Russia'</span>,<span class="st">'North Korea'</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">'Ivory Coast'</span>,<span class="fl">50</span><span class="op">)</span>,<span class="st">'Scotland'</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                    code percent_of_unique_matched</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> cow.name                       cow.name                  83.33333</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> vdem.name                     vdem.name                  83.33333</span>
@@ -105,7 +108,7 @@ dictionary.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

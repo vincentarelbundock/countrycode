@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">countrycode</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.1.9002</span>
       </span>
     </div>
 
@@ -121,11 +121,11 @@
 </h1>
 <p>From the R console, type:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"countrycode"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"countrycode"</span><span class="op">)</span></span></code></pre></div>
 <p>To install the latest development version, you can use the <code>remotes</code> package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span>
-<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'vincentarelbundock/countrycode'</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'vincentarelbundock/countrycode'</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="supported-codes">Supported codes<a class="anchor" aria-label="anchor" href="#supported-codes"></a>
@@ -167,77 +167,84 @@
 </h2>
 <p>Load library:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span></code></pre></div>
 <p>Convert single country codes:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co"># ISO to Correlates of War</span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="kw">countrycode</span>(<span class="st">'DZA'</span>, <span class="dt">origin =</span> <span class="st">'iso3c'</span>, <span class="dt">destination =</span> <span class="st">'cown'</span>) </a>
-<a class="sourceLine" id="cb4-3" title="3">[<span class="dv">1</span>]   <span class="dv">615</span></a>
-<a class="sourceLine" id="cb4-4" title="4"></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="co"># English to ISO</span></a>
-<a class="sourceLine" id="cb4-6" title="6"><span class="kw">countrycode</span>(<span class="st">'Albania'</span>, <span class="dt">origin =</span> <span class="st">'country.name'</span>, <span class="dt">destination =</span> <span class="st">'iso3c'</span>) </a>
-<a class="sourceLine" id="cb4-7" title="7">[<span class="dv">1</span>] <span class="st">"ALB"</span></a>
-<a class="sourceLine" id="cb4-8" title="8"></a>
-<a class="sourceLine" id="cb4-9" title="9"><span class="co"># German or Italian to Arabic</span></a>
-<a class="sourceLine" id="cb4-10" title="10"><span class="kw">countrycode</span>(<span class="kw">c</span>(<span class="st">'Algerien'</span>, <span class="st">'Albanien'</span>), <span class="dt">origin =</span> <span class="st">'country.name.de'</span>, <span class="dt">destination =</span> <span class="st">'un.name.ar'</span>) </a>
-<a class="sourceLine" id="cb4-11" title="11">[<span class="dv">1</span>] <span class="st">"الجزائر"</span> <span class="st">"ألبانيا"</span></a>
-<a class="sourceLine" id="cb4-12" title="12"></a>
-<a class="sourceLine" id="cb4-13" title="13"><span class="kw">countrycode</span>(<span class="kw">c</span>(<span class="st">'Moldavia'</span>, <span class="st">'Stati Uniti'</span>), <span class="dt">origin =</span> <span class="st">'country.name.it'</span>, <span class="dt">destination =</span> <span class="st">'un.name.ar'</span>) </a>
-<a class="sourceLine" id="cb4-14" title="14">[<span class="dv">1</span>] <span class="st">"ﺞﻤﻫﻭﺮﻳﺓ ﻡﻮﻟﺩﻮﻓﺍ"</span>            <span class="st">"ﺎﻟﻭﻼﻳﺎﺗ ﺎﻠﻤﺘﺣﺩﺓ ﺍﻸﻣﺮﻴﻜﻳﺓ"</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># ISO to Correlates of War</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">'DZA'</span>, origin <span class="op">=</span> <span class="st">'iso3c'</span>, destination <span class="op">=</span> <span class="st">'cown'</span><span class="op">)</span> </span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co">## [1] 615</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># English to ISO</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">'Albania'</span>, origin <span class="op">=</span> <span class="st">'country.name'</span>, destination <span class="op">=</span> <span class="st">'iso3c'</span><span class="op">)</span> </span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co">## [1] "ALB"</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># German or Italian to Arabic</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Algerien'</span>, <span class="st">'Albanien'</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">'country.name.de'</span>, destination <span class="op">=</span> <span class="st">'un.name.ar'</span><span class="op">)</span> </span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="co">## [1] "الجزائر" "ألبانيا"</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Moldavia'</span>, <span class="st">'Stati Uniti'</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">'country.name.it'</span>, destination <span class="op">=</span> <span class="st">'un.name.ar'</span><span class="op">)</span> </span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="co">## [1] "جمهورية مولدوفا"            "الولايات المتحدة الأمريكية"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="convert-a-vector-of-country-codes">Convert a vector of country codes<a class="anchor" aria-label="anchor" href="#convert-a-vector-of-country-codes"></a>
 </h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="op">&gt;</span><span class="st"> </span>cowcodes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"ALG"</span>, <span class="st">"ALB"</span>, <span class="st">"UKG"</span>, <span class="st">"CAN"</span>, <span class="st">"USA"</span>)</a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countrycode</span>(cowcodes, <span class="dt">origin =</span> <span class="st">"cowc"</span>, <span class="dt">destination =</span> <span class="st">"iso3c"</span>)</a>
-<a class="sourceLine" id="cb5-3" title="3">[<span class="dv">1</span>] <span class="st">"DZA"</span> <span class="st">"ALB"</span> <span class="st">"GBR"</span> <span class="st">"CAN"</span> <span class="st">"USA"</span></a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cowcodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ALG"</span>, <span class="st">"ALB"</span>, <span class="st">"UKG"</span>, <span class="st">"CAN"</span>, <span class="st">"USA"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">cowcodes</span>, origin <span class="op">=</span> <span class="st">"cowc"</span>, destination <span class="op">=</span> <span class="st">"iso3c"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="co">## [1] "DZA" "ALB" "GBR" "CAN" "USA"</span></span></code></pre></div>
 <p>Generate vectors and 2 data frames without a common id (i.e. can’t merge the 2 df):</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="op">&gt;</span><span class="st"> </span>isocodes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">8</span>,<span class="dv">826</span>,<span class="dv">124</span>,<span class="dv">840</span>)</a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="op">&gt;</span><span class="st"> </span>var1     &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">500</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="op">&gt;</span><span class="st"> </span>var2     &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">500</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="op">&gt;</span><span class="st"> </span>df1      &lt;-<span class="st"> </span><span class="kw">data.frame</span>(cowcodes,var1)</a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="op">&gt;</span><span class="st"> </span>df2      &lt;-<span class="st"> </span><span class="kw">data.frame</span>(isocodes,var2)</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">isocodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">12</span>,<span class="fl">8</span>,<span class="fl">826</span>,<span class="fl">124</span>,<span class="fl">840</span><span class="op">)</span></span>
+<span><span class="va">var1</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">500</span>,<span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">var2</span>     <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">500</span>,<span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">df1</span>      <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">cowcodes</span>,<span class="va">var1</span><span class="op">)</span></span>
+<span><span class="va">df2</span>      <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">isocodes</span>,<span class="va">var2</span><span class="op">)</span></span></code></pre></div>
 <p>Inspect the data:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;</span><span class="st"> </span>df1</a>
-<a class="sourceLine" id="cb7-2" title="2">cowcodes var1</a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="dv">1</span>      ALG   <span class="dv">71</span></a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="dv">2</span>      ALB  <span class="dv">427</span></a>
-<a class="sourceLine" id="cb7-5" title="5"><span class="dv">3</span>      UKG  <span class="dv">180</span></a>
-<a class="sourceLine" id="cb7-6" title="6"><span class="dv">4</span>      CAN   <span class="dv">21</span></a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="dv">5</span>      USA  <span class="dv">383</span></a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="op">&gt;</span><span class="st"> </span>df2</a>
-<a class="sourceLine" id="cb7-9" title="9">isocodes var2</a>
-<a class="sourceLine" id="cb7-10" title="10"><span class="dv">1</span>       <span class="dv">12</span>  <span class="dv">238</span></a>
-<a class="sourceLine" id="cb7-11" title="11"><span class="dv">2</span>        <span class="dv">8</span>  <span class="dv">329</span></a>
-<a class="sourceLine" id="cb7-12" title="12"><span class="dv">3</span>      <span class="dv">826</span>  <span class="dv">463</span></a>
-<a class="sourceLine" id="cb7-13" title="13"><span class="dv">4</span>      <span class="dv">124</span>  <span class="dv">437</span></a>
-<a class="sourceLine" id="cb7-14" title="14"><span class="dv">5</span>      <span class="dv">840</span>   <span class="dv">26</span></a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df1</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="co">##   cowcodes var1</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="co">## 1      ALG  341</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a><span class="co">## 2      ALB    9</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a><span class="co">## 3      UKG  203</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a><span class="co">## 4      CAN  490</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a><span class="co">## 5      USA   37</span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df2</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="co">##   isocodes var2</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a><span class="co">## 1       12  262</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a><span class="co">## 2        8  456</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a><span class="co">## 3      826   25</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true"></a><span class="co">## 4      124  144</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true"></a><span class="co">## 5      840  283</span></span></code></pre></div>
 <p>Create a common variable with the iso3c code in each data frame, merge the data, and create a country identifier:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;</span><span class="st"> </span>df1<span class="op">$</span>iso3c   &lt;-<span class="st"> </span><span class="kw">countrycode</span>(df1<span class="op">$</span>cowcodes, <span class="dt">origin =</span> <span class="st">"cowc"</span>, <span class="dt">destination =</span> <span class="st">"iso3c"</span>)</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="op">&gt;</span><span class="st"> </span>df2<span class="op">$</span>iso3c   &lt;-<span class="st"> </span><span class="kw">countrycode</span>(df2<span class="op">$</span>isocodes, <span class="dt">origin =</span> <span class="st">"iso3n"</span>, <span class="dt">destination =</span> <span class="st">"iso3c"</span>)</a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="op">&gt;</span><span class="st"> </span>df3         &lt;-<span class="st"> </span><span class="kw">merge</span>(df1,df2,<span class="dt">id=</span><span class="st">"iso3c"</span>)</a>
-<a class="sourceLine" id="cb8-4" title="4"><span class="op">&gt;</span><span class="st"> </span>df3<span class="op">$</span>country &lt;-<span class="st"> </span><span class="kw">countrycode</span>(df3<span class="op">$</span>iso3c, <span class="dt">origin =</span> <span class="st">"iso3c"</span>, <span class="dt">destination =</span> <span class="st">"country.name"</span>)</a>
-<a class="sourceLine" id="cb8-5" title="5"><span class="op">&gt;</span><span class="st"> </span>df3</a>
-<a class="sourceLine" id="cb8-6" title="6">iso3c cowcodes var1 isocodes var2        country</a>
-<a class="sourceLine" id="cb8-7" title="7"><span class="dv">1</span>   ALB      ALB  <span class="dv">113</span>        <span class="dv">8</span>  <span class="dv">245</span>        ALBANIA</a>
-<a class="sourceLine" id="cb8-8" title="8"><span class="dv">2</span>   CAN      CAN  <span class="dv">373</span>      <span class="dv">124</span>  <span class="dv">197</span>         CANADA</a>
-<a class="sourceLine" id="cb8-9" title="9"><span class="dv">3</span>   DZA      ALG  <span class="dv">254</span>       <span class="dv">12</span>  <span class="dv">295</span>        ALGERIA</a>
-<a class="sourceLine" id="cb8-10" title="10"><span class="dv">4</span>   GBR      UKG  <span class="dv">351</span>      <span class="dv">826</span>   <span class="dv">57</span> UNITED KINGDOM</a>
-<a class="sourceLine" id="cb8-11" title="11"><span class="dv">5</span>   USA      USA  <span class="dv">241</span>      <span class="dv">840</span>   <span class="dv">85</span>  UNITED STATES</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df1</span><span class="op">$</span><span class="va">iso3c</span>   <span class="op">&lt;-</span> <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">df1</span><span class="op">$</span><span class="va">cowcodes</span>, origin <span class="op">=</span> <span class="st">"cowc"</span>, destination <span class="op">=</span> <span class="st">"iso3c"</span><span class="op">)</span></span>
+<span><span class="va">df2</span><span class="op">$</span><span class="va">iso3c</span>   <span class="op">&lt;-</span> <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">df2</span><span class="op">$</span><span class="va">isocodes</span>, origin <span class="op">=</span> <span class="st">"iso3n"</span>, destination <span class="op">=</span> <span class="st">"iso3c"</span><span class="op">)</span></span>
+<span><span class="va">df3</span>         <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge</a></span><span class="op">(</span><span class="va">df1</span>,<span class="va">df2</span>,id<span class="op">=</span><span class="st">"iso3c"</span><span class="op">)</span></span>
+<span><span class="va">df3</span><span class="op">$</span><span class="va">country</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">df3</span><span class="op">$</span><span class="va">iso3c</span>, origin <span class="op">=</span> <span class="st">"iso3c"</span>, destination <span class="op">=</span> <span class="st">"country.name"</span><span class="op">)</span></span>
+<span><span class="va">df3</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="co">##   iso3c cowcodes var1 isocodes var2        country</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="co">## 1   ALB      ALB    9        8  456        Albania</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="co">## 2   CAN      CAN  490      124  144         Canada</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a><span class="co">## 3   DZA      ALG  341       12  262        Algeria</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a><span class="co">## 4   GBR      UKG  203      826   25 United Kingdom</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true"></a><span class="co">## 5   USA      USA   37      840  283  United States</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="flags">Flags<a class="anchor" aria-label="anchor" href="#flags"></a>
 </h2>
 <p><code>countrycode</code> can convert country names and codes to unicode flags. For example, we can use the <code>gt</code> package to draw a table with countries and their corresponding flags:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/" class="external-link">gt</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span>
-
-<span class="va">Countries</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Canada'</span>, <span class="st">'Germany'</span>, <span class="st">'Thailand'</span>, <span class="st">'Algeria'</span>, <span class="st">'Eritrea'</span><span class="op">)</span>
-<span class="va">Flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">Countries</span>, <span class="st">'country.name'</span>, <span class="st">'unicode.symbol'</span><span class="op">)</span>
-<span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">Countries</span>, <span class="va">Flags</span><span class="op">)</span>
-<span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></code></pre></div>
-<p>Which produces this file:</p>
-<p><img src="https://user-images.githubusercontent.com/987057/85434007-5cad5d80-b553-11ea-8a19-47c21965013d.png"></p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/" class="external-link">gt</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">Countries</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Canada'</span>, <span class="st">'Germany'</span>, <span class="st">'Thailand'</span>, <span class="st">'Algeria'</span>, <span class="st">'Eritrea'</span><span class="op">)</span></span>
+<span><span class="va">Flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">Countries</span>, <span class="st">'country.name'</span>, <span class="st">'unicode.symbol'</span><span class="op">)</span></span>
+<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">Countries</span>, <span class="va">Flags</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<img src="https://github.com/vincentarelbundock/countrycode/assets/987057/c0c29aa3-0aab-4274-af80-1ae3efc89203" alt=""><p class="caption">gt_flags</p>
+</div>
 <p>Note that embedding unicode characters in <code>R</code> graphics is possible, but it can be tricky. If your output looks like <code>\U0001f1e6\U0001f1f6</code>, then you could try feeding it to this function: <code><a href="https://ptrckprry.com/r-utf8/reference/utf8_print.html" class="external-link">utf8::utf8_print()</a></code>. That should cover a lot of cases without dipping into the complexity of graphics devices. As a rule of thumb, if your output looks like <code>□□□□</code> (boxes), things tend to get more complicated. In that case, you’ll have to think about different output devices, file viewers, and/or file formats (e.g., ‘SVG’ or ‘HTML’).</p>
 <p>Since inserting unicode symbols into <code>R</code> graphics is not a <code>countrycode</code>-specific issue, we won’t be able to offer any more support than this. Good luck!</p>
 </div>
@@ -245,58 +252,79 @@
 <h2 id="country-names-in-600-different-languages-and-formats">Country names in 600+ different languages and formats<a class="anchor" aria-label="anchor" href="#country-names-in-600-different-languages-and-formats"></a>
 </h2>
 <p>The Unicode organisation hosts the CLDR project, which publishes many variants of country names. For each language/culture locale, there is a full set of names, plus possible ‘alt-short’ or ‘alt-variant’ variations of specific country names.</p>
-<pre><code>&gt; countrycode('United States of America', origin = 'country.name', destination = 'cldr.name.en')
-&gt; [1] "United States"
-&gt; countrycode('United States of America', origin = 'country.name', destination = 'cldr.short.en')
-&gt; [1] "US"</code></pre>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">'United States of America'</span>, origin <span class="op">=</span> <span class="st">'country.name'</span>, destination <span class="op">=</span> <span class="st">'cldr.name.en'</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="co">## [1] "United States"</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">'United States of America'</span>, origin <span class="op">=</span> <span class="st">'country.name'</span>, destination <span class="op">=</span> <span class="st">'cldr.short.en'</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a><span class="co">## [1] "US"</span></span></code></pre></div>
 <p>To see a full list of country name variants available, inspect this data.frame:</p>
-<pre><code>&gt; head(countrycode::cldr_examples)
-             Code                    Example
-1    cldr.name.af   Franse Suidelike Gebiede
-2   cldr.name.agq                         TF
-3    cldr.name.ak                         TF
-4    cldr.name.am           የፈረንሳይ ደቡባዊ ግዛቶች
-5    cldr.name.ar الأقاليم الجنوبية الفرنسية
-6 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية</code></pre>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">countrycode</span><span class="fu">::</span><span class="va"><a href="reference/cldr_examples.html">cldr_examples</a></span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a><span class="co">##              Code                    Example</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a><span class="co">## 1   cldr.name.agq                         TF</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a><span class="co">## 2    cldr.name.ak                         TF</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a><span class="co">## 3    cldr.name.am           የፈረንሳይ ደቡባዊ ግዛቶች</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true"></a><span class="co">## 4    cldr.name.ar الأقاليم الجنوبية الفرنسية</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true"></a><span class="co">## 5 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true"></a><span class="co">## 6 cldr.name.ar_sa الأقاليم الجنوبية الفرنسية</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="custom_dict-american-states">
-<code>custom_dict</code>: American states<a class="anchor" aria-label="anchor" href="#custom_dict-american-states"></a>
+<h2 id="custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict">Custom dictionaries and cross-walks: <code>get_dictionary()</code> and <code>custom_dict</code>
+<a class="anchor" aria-label="anchor" href="#custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict"></a>
 </h2>
-<p>Since version 0.19, countrycode accepts user-supplied dictionaries via the <code>custom_dict</code> argument. These dictionaries will override the built-in country code dictionary. For example, the countrycode Github repository includes a dictionary of regexes and abbreviations to work with US state names.</p>
-<p>Load the library and download the custom dictionary data.frame:</p>
-<pre><code><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span>
-<span class="va">url</span> <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/vincentarelbundock/countrycode/master/data/custom_dictionaries/us_states.csv"</span>
-<span class="va">state_dict</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">url</span>, stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></code></pre>
-<p>Convert:</p>
-<pre><code>countrycode('State of Alabama', 
-            origin = 'state', 
-            destination = 'abbreviation', 
-            custom_dict = state_dict,
-            origin_regex = TRUE)
-[1] "AL"
-countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dict)
-[1] "Michigan" "Ohio"     NA        </code></pre>
-<p>Note that if you use a custom dictionary with <strong>country</strong> codes, you could easily merge it into the <code><a href="reference/codelist.html">countrycode::codelist</a></code> or <code><a href="reference/codelist_panel.html">countrycode::codelist_panel</a></code> to gain access to all other codes.</p>
-</div>
-<div class="section level2">
-<h2 id="custom_dict-the-isocodes-package">
+<p>The <code>custom_dict</code> argument accepts data frame which can be used as custom dictionaries to create “crosswalks” between arbitrary entities (non-countries). You can create your own dictionaries (see examples below) or use one of the dictionaries already hosted on the <code>countrycode</code> Github repository. The current list of available dictionaries can be seen by calling:</p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/get_dictionary.html">get_dictionary</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true"></a><span class="co">## Available dictionaries: ch_cantons, exiobase3, global_burden_of_disease, gtap10, us_states</span></span></code></pre></div>
+<p>You can download a dictionary and see available fields with:</p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cd</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_dictionary.html">get_dictionary</a></span><span class="op">(</span><span class="st">"us_states"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cd</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a><span class="co">##   state.name state.abb    state.regex</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true"></a><span class="co">## 1    Alabama        AL    .*alabama.*</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true"></a><span class="co">## 2     Alaska        AK     .*alaska.*</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true"></a><span class="co">## 3    Arizona        AZ    .*arizona.*</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true"></a><span class="co">## 4   Arkansas        AR   .*arkansas.*</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true"></a><span class="co">## 5 California        CA .*california.*</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true"></a><span class="co">## 6   Colorado        CO   .*colorado.*</span></span></code></pre></div>
+<p>Now we can use the dictionary for conversions:</p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">st</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Arkansas"</span>, <span class="st">"Quebec"</span>, <span class="st">"Tennessee"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">st</span>, <span class="st">"state.regex"</span>, <span class="st">"state.abb"</span>, custom_dict <span class="op">=</span> <span class="va">cd</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true"></a><span class="co">## Warning: Some values were not matched unambiguously: Quebec</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true"></a><span class="co">## [1] "AR" NA   "TN"</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MN"</span>, <span class="st">"MA"</span>, <span class="st">"MO"</span><span class="op">)</span>, <span class="st">"state.abb"</span>, <span class="st">"state.name"</span>, custom_dict <span class="op">=</span> <span class="va">cd</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true"></a><span class="co">## [1] "Minnesota"     "Massachusetts" "Missouri"</span></span></code></pre></div>
+<p>Here’s an example with the GTAP dataset:</p>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cd</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_dictionary.html">get_dictionary</a></span><span class="op">(</span><span class="st">"gtap10"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">"Christmas Island"</span>, <span class="st">"country.name.en.regex"</span>, <span class="st">"gtap.cha"</span>, custom_dict <span class="op">=</span> <span class="va">cd</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true"></a><span class="co">## [1] "AUS"</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="custom_dict-the-isocodes-package">
 <code>custom_dict</code>: the <code>ISOcodes</code> package<a class="anchor" aria-label="anchor" href="#custom_dict-the-isocodes-package"></a>
-</h2>
+</h3>
 <p><code>countrycode</code> already supports ISO4217 (currencies) and ISO3166 (country codes). The <code>ISOcodes</code> package supplies other codes, including ISO15924 (language writing systems), ISO639 (languages), and ISO8859 (computer character encodings). Users can convert those codes using <code>countrycode</code>’s <code>custom_dict</code> argument.</p>
-<p>For example, the <code>ISOcodes::ISO_639_2</code> dataframe includes 4 columns: <code>Alpha_3_B</code>, <code>Alpha_3_T</code>, <code>Alpha_2</code>, and <code>Name</code>. We can convert language names like this:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countrycode</span>(<span class="st">'abk'</span>, <span class="st">'Alpha_3_B'</span>, <span class="st">'Name'</span>, <span class="dt">custom_dict =</span> ISOcodes<span class="op">::</span>ISO_<span class="dv">639</span>_<span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb14-2" title="2">[<span class="dv">1</span>] <span class="st">"Abkhazian"</span></a></code></pre></div>
-<p>The <code>ISOcodes::ISO_8859</code> dataset is a 3-dimensional array where the second dimension represents the character encoding. We take the subset of <code>ISO_8859_1</code> codes and convert the dict to a dataframe for use in <code>countrycode</code>’s <code>custom_dict</code> argument:</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ISOcodes</span><span class="op">)</span>
-<span class="va">dict</span> <span class="op">&lt;-</span> <span class="fu">ISOcodes</span><span class="fu">::</span><span class="va">ISO_8859</span><span class="op">[</span>, <span class="st">'ISO_8859_1'</span>, <span class="op">]</span>
-<span class="va">dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">dict</span><span class="op">)</span></code></pre></div>
+<p>For example, the <code><a href="https://rdrr.io/pkg/ISOcodes/man/ISO_639.html" class="external-link">ISOcodes::ISO_639_2</a></code> dataframe includes 4 columns: <code>Alpha_3_B</code>, <code>Alpha_3_T</code>, <code>Alpha_2</code>, and <code>Name</code>. We can convert language names like this:</p>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">'abk'</span>, <span class="st">'Alpha_3_B'</span>, <span class="st">'Name'</span>, custom_dict <span class="op">=</span> <span class="fu">ISOcodes</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/ISOcodes/man/ISO_639.html" class="external-link">ISO_639_2</a></span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true"></a><span class="co">## [1] "Abkhazian"</span></span></code></pre></div>
+<p>The <code><a href="https://rdrr.io/pkg/ISOcodes/man/ISO_8859.html" class="external-link">ISOcodes::ISO_8859</a></code> dataset is a 3-dimensional array where the second dimension represents the character encoding. We take the subset of <code>ISO_8859_1</code> codes and convert the dict to a dataframe for use in <code>countrycode</code>’s <code>custom_dict</code> argument:</p>
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ISOcodes</span><span class="op">)</span></span>
+<span><span class="va">dict</span> <span class="op">&lt;-</span> <span class="fu">ISOcodes</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/ISOcodes/man/ISO_8859.html" class="external-link">ISO_8859</a></span><span class="op">[</span>, <span class="st">'ISO_8859_1'</span>, <span class="op">]</span></span>
+<span><span class="va">dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">dict</span><span class="op">)</span></span></code></pre></div>
 <p>The resulting dataframe has 3 columns: <code>Code</code>, <code>Name</code>, <code>Character</code>. We convert the code <code>0x00fd</code> like this:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countrycode</span>(<span class="st">"0x00fd"</span>, <span class="st">"Code"</span>, <span class="st">"Name"</span>, <span class="dt">custom_dict =</span> dict)</a>
-<a class="sourceLine" id="cb16-2" title="2">[<span class="dv">1</span>] <span class="st">"LATIN SMALL LETTER Y WITH ACUTE"</span></a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countrycode</span>(<span class="st">"0x00fd"</span>, <span class="st">"Code"</span>, <span class="st">"Character"</span>, <span class="dt">custom_dict =</span> dict)</a>
-<a class="sourceLine" id="cb16-4" title="4">[<span class="dv">1</span>] <span class="st">"ý"</span></a></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">"0x00fd"</span>, <span class="st">"Code"</span>, <span class="st">"Name"</span>, custom_dict <span class="op">=</span> <span class="va">dict</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true"></a><span class="co">## [1] "LATIN SMALL LETTER Y WITH ACUTE"</span></span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">"0x00fd"</span>, <span class="st">"Code"</span>, <span class="st">"Character"</span>, custom_dict <span class="op">=</span> <span class="va">dict</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true"></a><span class="co">## [1] "ý"</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="destination-fallback-codes">
@@ -304,52 +332,61 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 </h2>
 <p>Some destination codes not cover all the relevant countries. For example, “SRB” is included in the <code>iso3c</code> code but <em>not</em> in the <code>cowc</code> code. Some users may want to use <code>cowc</code> but to fill in missing entries with <code>iso3c</code> codes. We can do this by feeding a vector of code names to the <code>destination</code> argument. <code>countrycode</code> will then try one after the other.</p>
 <p>For example,</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Algeria"</span>, <span class="st">"Serbia"</span><span class="op">)</span>
-
-<span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"country.name"</span>, <span class="st">"cowc"</span><span class="op">)</span>
-<span class="co">#&gt; Warning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: Serbia</span>
-<span class="co">#&gt; [1] "ALG" NA</span>
-
-<span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"country.name"</span>, <span class="st">"iso3c"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "DZA" "SRB"</span>
-
-<span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"country.name"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cowc"</span>, <span class="st">"iso3c"</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; Warning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: Serbia</span>
-<span class="co">#&gt; [1] "ALG" "SRB"</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Algeria"</span>, <span class="st">"Serbia"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"country.name"</span>, <span class="st">"cowc"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true"></a><span class="co">## Warning: Some values were not matched unambiguously: Serbia</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true"></a><span class="co">## [1] "ALG" NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"country.name"</span>, <span class="st">"iso3c"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true"></a><span class="co">## [1] "DZA" "SRB"</span></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"country.name"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cowc"</span>, <span class="st">"iso3c"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true"></a><span class="co">## Warning: Some values were not matched unambiguously: Serbia</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true"></a><span class="co">## [1] "ALG" "SRB"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="nomatch-fill-in-missing-codes-manually">
 <code>nomatch</code>: Fill in missing codes manually<a class="anchor" aria-label="anchor" href="#nomatch-fill-in-missing-codes-manually"></a>
 </h2>
 <p>Use the <code>nomatch</code> argument to specify the value that <code>countrycode</code> inserts where no match was found:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countrycode</span>(<span class="kw">c</span>(<span class="st">'DZA'</span>, <span class="st">'USA'</span>, <span class="st">'???'</span>), <span class="dt">origin =</span> <span class="st">'iso3c'</span>, <span class="dt">destination =</span> <span class="st">'country.name'</span>, <span class="dt">nomatch =</span> <span class="st">'BAD CODE'</span>)</a>
-<a class="sourceLine" id="cb18-2" title="2"><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"Algeria"</span>       <span class="st">"United States"</span> <span class="st">"BAD CODE"</span>  </a>
-<a class="sourceLine" id="cb18-3" title="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countrycode</span>(<span class="kw">c</span>(<span class="st">'Canada'</span>, <span class="st">'Fake country'</span>), <span class="dt">origin =</span> <span class="st">'country.name'</span>, <span class="dt">destination =</span> <span class="st">'iso3c'</span>, <span class="dt">nomatch =</span> <span class="st">'BAD'</span>)</a>
-<a class="sourceLine" id="cb18-4" title="4"><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"CAN"</span> <span class="st">"BAD"</span></a></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'DZA'</span>, <span class="st">'USA'</span>, <span class="st">'???'</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">'iso3c'</span>, destination <span class="op">=</span> <span class="st">'country.name'</span>, nomatch <span class="op">=</span> <span class="st">'BAD CODE'</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true"></a><span class="co">## [1] "Algeria"       "United States" "BAD CODE"</span></span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Canada'</span>, <span class="st">'Fake country'</span><span class="op">)</span>, origin <span class="op">=</span> <span class="st">'country.name'</span>, destination <span class="op">=</span> <span class="st">'iso3c'</span>, nomatch <span class="op">=</span> <span class="st">'BAD'</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true"></a><span class="co">## [1] "CAN" "BAD"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="custom_match-override-default-values">
 <code>custom_match</code>: Override default values<a class="anchor" aria-label="anchor" href="#custom_match-override-default-values"></a>
 </h2>
-<p>Since version 0.19, <code>countrycode</code> accepts a user supplied named vector of custom matches via the <code>custom_match</code> argument. Any match pairs in the <code>custom_match</code> vector will supercede the default results of the command. This allows the user to convert to an available country code and make minor post-edits all at once. The names of the named vector are used as the origin code, and the values of the named vector are used as the destination code.</p>
+<p><code>countrycode</code> accepts a user supplied named vector of custom matches via the <code>custom_match</code> argument. Any match pairs in the <code>custom_match</code> vector will supercede the default results of the command. This allows the user to convert to an available country code and make minor post-edits all at once. The names of the named vector are used as the origin code, and the values of the named vector are used as the destination code.</p>
 <p>For example, Eurostat uses a modified version of iso2c, with Greece (EL instead of GR) and the UK (UK instead of GB) being the only differences. Getting a proper result converting to Eurostat is easy to achieve using the <code>iso2c</code> destination and the new <code>custom_match</code> argument. (Note: since version 0.19, <code>countrycode</code> also includes a <code>eurostat</code> origin/destination code, so while this is a good example, doing so for Eurostat is not necessary)</p>
-<p>example: convert from country name to Eurostat code</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span>
-<span class="va">country_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Greece'</span>, <span class="st">'United Kingdom'</span>, <span class="st">'Germany'</span>, <span class="st">'France'</span><span class="op">)</span>
-<span class="va">custom_match</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Greece <span class="op">=</span> <span class="st">'EL'</span>, `United Kingdom` <span class="op">=</span> <span class="st">'UK'</span><span class="op">)</span>
-<span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">country_names</span>, 
-            origin <span class="op">=</span> <span class="st">'country.name'</span>, 
-            destination <span class="op">=</span> <span class="st">'iso2c'</span>, 
-            custom_match <span class="op">=</span> <span class="va">custom_match</span><span class="op">)</span></code></pre></div>
-<p>example: convert from Eurostat code to country name</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ropengov.github.io/eurostat/" class="external-link">eurostat</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">eurostat</span><span class="fu">::</span><span class="fu">get_eurostat</span><span class="op">(</span><span class="st">"nama_10_lp_ulc"</span><span class="op">)</span>
-<span class="va">custom_match</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>EL <span class="op">=</span> <span class="st">'Greece'</span>, UK <span class="op">=</span> <span class="st">'United Kingdom'</span><span class="op">)</span>
-<span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">geo</span>, origin <span class="op">=</span> <span class="st">'iso2c'</span>, destination <span class="op">=</span> <span class="st">'country.name'</span>, custom_match <span class="op">=</span> <span class="va">custom_match</span><span class="op">)</span></code></pre></div>
+<p>Example: convert from country name to Eurostat code</p>
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span>
+<span><span class="va">country_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Greece'</span>, <span class="st">'United Kingdom'</span>, <span class="st">'Germany'</span>, <span class="st">'France'</span><span class="op">)</span></span>
+<span><span class="va">custom_match</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Greece <span class="op">=</span> <span class="st">'EL'</span>, `United Kingdom` <span class="op">=</span> <span class="st">'UK'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">country_names</span>, </span>
+<span>            origin <span class="op">=</span> <span class="st">'country.name'</span>, </span>
+<span>            destination <span class="op">=</span> <span class="st">'iso2c'</span>, </span>
+<span>            custom_match <span class="op">=</span> <span class="va">custom_match</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true"></a><span class="co">## [1] "EL" "UK" "DE" "FR"</span></span></code></pre></div>
+<p>Example: convert from Eurostat code to country name</p>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ropengov.github.io/eurostat/" class="external-link">eurostat</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">eurostat</span><span class="fu">::</span><span class="fu"><a href="https://ropengov.github.io/eurostat/reference/get_eurostat.html" class="external-link">get_eurostat</a></span><span class="op">(</span><span class="st">"nama_10_lp_ulc"</span><span class="op">)</span></span>
+<span><span class="va">custom_match</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>EL <span class="op">=</span> <span class="st">'Greece'</span>, UK <span class="op">=</span> <span class="st">'United Kingdom'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">geo</span>, origin <span class="op">=</span> <span class="st">'iso2c'</span>, destination <span class="op">=</span> <span class="st">'country.name'</span>, custom_match <span class="op">=</span> <span class="va">custom_match</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true"></a><span class="co">## Warning: Some values were not matched unambiguously: EA, EA12, EA19, EA20, EU15, EU27_2020, EU28, XK</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true"></a><span class="co">## [1] "Austria"  "Belgium"  "Bulgaria" "Cyprus"   "Czechia"  "Germany"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="warn-silence-warnings">
@@ -363,17 +400,24 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 <code>countryname</code>: Convert country names from any language<a class="anchor" aria-label="anchor" href="#countryname-convert-country-names-from-any-language"></a>
 </h1>
 <p>The function <code>countryname</code> tries to convert country names from any language. For example:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(countrycode)</a>
-<a class="sourceLine" id="cb21-2" title="2"><span class="op">&gt;</span><span class="st"> </span>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">'ジンバブエ'</span>, <span class="st">'Afeganistãu'</span>,  <span class="st">'Barbadas'</span>, <span class="st">'Sverige'</span>, <span class="st">'UK'</span>,  </a>
-<a class="sourceLine" id="cb21-3" title="3"><span class="op">+</span><span class="st">        'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar'</span>)</a>
-<a class="sourceLine" id="cb21-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countryname</span>(x)</a>
-<a class="sourceLine" id="cb21-5" title="5">[<span class="dv">1</span>] <span class="st">"Zimbabwe"</span> <span class="st">"Afghanistan"</span> <span class="st">"Barbados"</span> <span class="st">"Sweden"</span> <span class="st">"UK"</span> </a>
-<a class="sourceLine" id="cb21-6" title="6">    <span class="st">"South Georgia &amp; South Sandwich Islands"</span></a>
-<a class="sourceLine" id="cb21-7" title="7"><span class="op">&gt;</span><span class="st"> </span><span class="kw">countryname</span>(x, <span class="st">'iso3c'</span>)</a>
-<a class="sourceLine" id="cb21-8" title="8">[<span class="dv">1</span>] <span class="st">"ZWE"</span> <span class="st">"AFG"</span> <span class="st">"BRB"</span> <span class="st">"SWE"</span> <span class="st">"GBR"</span> <span class="st">"SGS"</span></a></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/" class="external-link">countrycode</a></span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'ジンバブエ'</span>, <span class="st">'Afeganistãu'</span>,  <span class="st">'Barbadas'</span>, <span class="st">'Sverige'</span>, <span class="st">'UK'</span>,  </span>
+<span>       <span class="st">'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/countryname.html">countryname</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true"></a><span class="co">## [1] "Zimbabwe"                              </span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true"></a><span class="co">## [2] "Afghanistan"                           </span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true"></a><span class="co">## [3] "Barbados"                              </span></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true"></a><span class="co">## [4] "Sweden"                                </span></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true"></a><span class="co">## [5] "UK"                                    </span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true"></a><span class="co">## [6] "South Georgia &amp; South Sandwich Islands"</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countryname.html">countryname</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">'iso3c'</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true"></a><span class="co">## [1] "ZWE" "AFG" "BRB" "SWE" "GBR" "SGS"</span></span></code></pre></div>
 </div>
 <div class="section level1">
-<h1 id="custom-conversion-functions-and-crosswalks">Custom conversion functions and “crosswalks”<a class="anchor" aria-label="anchor" href="#custom-conversion-functions-and-crosswalks"></a>
+<h1 id="custom-conversion-functions">Custom conversion functions<a class="anchor" aria-label="anchor" href="#custom-conversion-functions"></a>
 </h1>
 <p>It is easy to to create alternative functions with different default arguments and/or dictionaries. For example, we can create:</p>
 <ul>
@@ -382,54 +426,54 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 <li>
 <code>statecode</code> function to convert US state codes using a custom dictionary by default, that we download from the internet.</li>
 </ul>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">#################################</span>
-<span class="co">#  new function: name_to_iso3c  #</span>
-<span class="co">#################################</span>
-
-<span class="co"># Custom defaults</span>
-<span class="va">name_to_iso3c</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">sourcevar</span>,
-                          <span class="va">origin</span> <span class="op">=</span> <span class="st">"country.name"</span>,
-                          <span class="va">destination</span> <span class="op">=</span> <span class="st">"iso3c"</span>,
-                          <span class="va">...</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">sourcevar</span>, origin <span class="op">=</span> <span class="va">origin</span>, destination <span class="op">=</span> <span class="va">destination</span>, <span class="va">...</span><span class="op">)</span>
-<span class="op">}</span>
-
-<span class="fu">name_to_iso3c</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Algeria"</span>, <span class="st">"Canada"</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; [1] "DZA" "CAN"</span>
-
-<span class="co">#############################</span>
-<span class="co">#  new function: statecode  #</span>
-<span class="co">#############################</span>
-
-<span class="co"># Download dictionary</span>
-<span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"</span>
-<span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">state_dict</span><span class="op">)</span>
-
-<span class="co"># Identify regular expression origin codes</span>
-<span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">state_dict</span>, <span class="st">"origin_regex"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"state.regex"</span>
-
-<span class="co"># Define a custom conversion function</span>
-<span class="va">statecode</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">sourcevar</span>,
-                      <span class="va">origin</span> <span class="op">=</span> <span class="st">"state.regex"</span>,
-                      <span class="va">destination</span> <span class="op">=</span> <span class="st">"abbreviation"</span>,
-                      <span class="va">custom_dict</span> <span class="op">=</span> <span class="va">state_dict</span>,
-                      <span class="va">...</span><span class="op">)</span> <span class="op">{</span>
-    <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">sourcevar</span>,
-                origin <span class="op">=</span> <span class="va">origin</span>,
-                destination <span class="op">=</span> <span class="va">destination</span>,
-                custom_dict <span class="op">=</span> <span class="va">custom_dict</span>,
-                <span class="va">...</span><span class="op">)</span>
-<span class="op">}</span>
-
-<span class="co"># Voilà!</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Alabama"</span>, <span class="st">"New Mexico"</span><span class="op">)</span>
-<span class="fu">statecode</span><span class="op">(</span><span class="va">x</span>, <span class="st">"state.regex"</span>, <span class="st">"abbreviation"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "AL" "NM"</span>
-
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AL"</span>, <span class="st">"NM"</span>, <span class="st">"VT"</span><span class="op">)</span>
-<span class="fu">statecode</span><span class="op">(</span><span class="va">x</span>, <span class="st">"abbreviation"</span>, <span class="st">"state"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Alabama"    "New Mexico" "Vermont"</span></code></pre></div>
+<!-- end list --><div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#################################</span></span>
+<span><span class="co">#  new function: name_to_iso3c  #</span></span>
+<span><span class="co">#################################</span></span>
+<span></span>
+<span><span class="co"># Custom defaults</span></span>
+<span><span class="va">name_to_iso3c</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">sourcevar</span>,</span>
+<span>                          <span class="va">origin</span> <span class="op">=</span> <span class="st">"country.name"</span>,</span>
+<span>                          <span class="va">destination</span> <span class="op">=</span> <span class="st">"iso3c"</span>,</span>
+<span>                          <span class="va">...</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">sourcevar</span>, origin <span class="op">=</span> <span class="va">origin</span>, destination <span class="op">=</span> <span class="va">destination</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu">name_to_iso3c</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Algeria"</span>, <span class="st">"Canada"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true"></a><span class="co">## [1] "DZA" "CAN"</span></span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#############################</span></span>
+<span><span class="co">#  new function: statecode  #</span></span>
+<span><span class="co">#############################</span></span>
+<span></span>
+<span><span class="co"># Download dictionary</span></span>
+<span><span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"</span></span>
+<span><span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">state_dict</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Identify regular expression origin codes</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">state_dict</span>, <span class="st">"origin_regex"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"state.regex"</span></span>
+<span></span>
+<span><span class="co"># Define a custom conversion function</span></span>
+<span><span class="va">statecode</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">sourcevar</span>,</span>
+<span>                      <span class="va">origin</span> <span class="op">=</span> <span class="st">"state.regex"</span>,</span>
+<span>                      <span class="va">destination</span> <span class="op">=</span> <span class="st">"abbreviation"</span>,</span>
+<span>                      <span class="va">custom_dict</span> <span class="op">=</span> <span class="va">state_dict</span>,</span>
+<span>                      <span class="va">...</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">sourcevar</span>,</span>
+<span>                origin <span class="op">=</span> <span class="va">origin</span>,</span>
+<span>                destination <span class="op">=</span> <span class="va">destination</span>,</span>
+<span>                custom_dict <span class="op">=</span> <span class="va">custom_dict</span>,</span>
+<span>                <span class="va">...</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Voilà!</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Alabama"</span>, <span class="st">"New Mexico"</span><span class="op">)</span></span>
+<span><span class="fu">statecode</span><span class="op">(</span><span class="va">x</span>, <span class="st">"state.regex"</span>, <span class="st">"abbreviation"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true"></a><span class="co">## [1] "AL" "NM"</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AL"</span>, <span class="st">"NM"</span>, <span class="st">"VT"</span><span class="op">)</span></span>
+<span><span class="fu">statecode</span><span class="op">(</span><span class="va">x</span>, <span class="st">"abbreviation"</span>, <span class="st">"state"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true"></a><span class="co">## [1] "Alabama"    "New Mexico" "Vermont"</span></span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="contributions">Contributions<a class="anchor" aria-label="anchor" href="#contributions"></a>
@@ -473,32 +517,32 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 <li>It has concise, sensible, valid (in the R data frame sense) column header names</li>
 </ol>
 <p>Using base write.csv:</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">custom_dict</span>, <span class="st">'custom_dict.csv'</span>, quote <span class="op">=</span> <span class="cn">TRUE</span>, na <span class="op">=</span> <span class="st">''</span>, 
-          row.names <span class="op">=</span> <span class="cn">FALSE</span>, qmethod <span class="op">=</span> <span class="st">'double'</span>, fileEncoding <span class="op">=</span> <span class="st">'UTF-8'</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">custom_dict</span>, <span class="st">'custom_dict.csv'</span>, quote <span class="op">=</span> <span class="cn">TRUE</span>, na <span class="op">=</span> <span class="st">''</span>, </span>
+<span>          row.names <span class="op">=</span> <span class="cn">FALSE</span>, qmethod <span class="op">=</span> <span class="st">'double'</span>, fileEncoding <span class="op">=</span> <span class="st">'UTF-8'</span><span class="op">)</span></span></code></pre></div>
 <p>Using <code>readr</code>:</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html" class="external-link">write_csv</a></span><span class="op">(</span><span class="va">custom_dict</span>, <span class="st">'custom_dict.csv'</span>, na <span class="op">=</span> <span class="st">''</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html" class="external-link">write_csv</a></span><span class="op">(</span><span class="va">custom_dict</span>, <span class="st">'custom_dict.csv'</span>, na <span class="op">=</span> <span class="st">''</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="custom-dictionary-attributes">Custom dictionary attributes<a class="anchor" aria-label="anchor" href="#custom-dictionary-attributes"></a>
 </h2>
 <p>When using custom dictionaries, it is often useful to give “meta” information to <code>countrycode</code> so that it knows how to use certain codes. To do this, we can set attributes of the dictionary. In this example, we download a dictionary of US state codes. Then, we identify a column of regular expressions using the <code>origin_regex</code> attribute, and we identify the valid origin codes using the <code>origin_valid</code> attribute.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">state_dict &lt;-<span class="st"> "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/us_states.csv"</span></a>
-<a class="sourceLine" id="cb25-2" title="2">state_dict &lt;-<span class="st"> </span><span class="kw">read.csv</span>(state_dict)</a>
-<a class="sourceLine" id="cb25-3" title="3"></a>
-<a class="sourceLine" id="cb25-4" title="4"><span class="kw">attr</span>(state_dict, <span class="st">"origin_regex"</span>) &lt;-<span class="st"> "state.regex"</span></a>
-<a class="sourceLine" id="cb25-5" title="5"><span class="kw">attr</span>(state_dict, <span class="st">"origin_valid"</span>) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"state.regex"</span>, <span class="st">"abbreviation"</span>)</a>
-<a class="sourceLine" id="cb25-6" title="6"></a>
-<a class="sourceLine" id="cb25-7" title="7"><span class="kw">countrycode</span>(<span class="st">"Alabama"</span>, <span class="st">"state.regex"</span>, <span class="st">"abbreviation"</span>, <span class="dt">custom_dict =</span> state_dict)</a>
-<a class="sourceLine" id="cb25-8" title="8"><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"AL"</span></a>
-<a class="sourceLine" id="cb25-9" title="9"> </a>
-<a class="sourceLine" id="cb25-10" title="10"><span class="kw">countrycode</span>(<span class="st">"AL"</span>, <span class="st">"abbreviation"</span>, <span class="st">"state"</span>, <span class="dt">custom_dict =</span> state_dict)</a>
-<a class="sourceLine" id="cb25-11" title="11"><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"Alabama"</span></a>
-<a class="sourceLine" id="cb25-12" title="12"> </a>
-<a class="sourceLine" id="cb25-13" title="13"><span class="kw">countrycode</span>(<span class="st">"Alabama"</span>, <span class="st">"state"</span>, <span class="st">"abbreviation"</span>, <span class="dt">custom_dict =</span> state_dict)</a>
-<a class="sourceLine" id="cb25-14" title="14"><span class="op">&gt;</span><span class="st"> </span>Error <span class="cf">in</span> <span class="kw">countrycode</span>(<span class="st">"Alabama"</span>, <span class="st">"state"</span>, <span class="st">"abbreviation"</span>, <span class="dt">custom_dict =</span> state_dict) <span class="op">:</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb25-15" title="15"><span class="er">&gt;</span><span class="st">  </span>Origin code not supported by countrycode or present <span class="cf">in</span> the user<span class="op">-</span>supplied custom_dict.</a></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"</span></span>
+<span><span class="va">state_dict</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">state_dict</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">state_dict</span>, <span class="st">"origin_regex"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"state.regex"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">state_dict</span>, <span class="st">"origin_valid"</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"state.regex"</span>, <span class="st">"abbreviation"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">"Alabama"</span>, <span class="st">"state.regex"</span>, <span class="st">"abbreviation"</span>, custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true"></a><span class="co">## [1] "AL"</span></span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">"AL"</span>, <span class="st">"abbreviation"</span>, <span class="st">"state"</span>, custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true"></a><span class="co">## [1] "Alabama"</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="st">"Alabama"</span>, <span class="st">"state"</span>, <span class="st">"abbreviation"</span>, custom_dict <span class="op">=</span> <span class="va">state_dict</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true"></a><span class="co">## Error in countrycode("Alabama", "state", "abbreviation", custom_dict = state_dict): The `origin` argument must be a string of length 1 equal to one of these values: state.regex, abbreviation.</span></span></code></pre></div>
 </div>
 </div>
 
@@ -557,7 +601,7 @@ countrycode(c('MI', 'OH', 'Bad'), 'abbreviation', 'state', custom_dict=state_dic
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
