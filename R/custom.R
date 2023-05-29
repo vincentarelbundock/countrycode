@@ -29,6 +29,7 @@ get_dictionary <- function(dictionary = NULL) {
         tmp <- tempfile()
         download.file(url, tmp)
         out <- readRDS(tmp)
+        unlink(tmp)
         return(out)
     } else {
         stop("dictionary must be a character vector of length 1 and one of: ", paste(valid, collapse = ", "))
