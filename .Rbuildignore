@@ -6,7 +6,7 @@ data/custom_dictionaries
 README.md
 LICENSE*
 joss
-dictionary
+^dictionary
 .lintr
 revdep*
 .travis.yml
