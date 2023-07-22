@@ -1,3 +1,8 @@
+# countrycode 1.5.0.9000
+
+* `countryname` gets the `nomatch` argument.
+* `countryname` returns NA when the code does not support a given country. (Issue #336)
+
 # countrycode 1.5.0
 
 * `get_dictionary()` function to download custom dictionaries (cross-walks):

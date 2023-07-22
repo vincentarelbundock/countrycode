@@ -17,7 +17,7 @@
 #' enclosed in quotes ""): type `?codelist` for a list of
 #' available codes.
 #' @param warn Prints unique elements from sourcevar for which no match was found
-#'
+#' @inheritParams countrycode
 #' @export
 #' @aliases countryname
 #' @examples
@@ -27,7 +27,7 @@
 #' countryname(x, destination = 'iso3c')
 #' }
 #'
-countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
+countryname <- function(sourcevar, destination = 'country.name.en', nomatch = NA, warn = TRUE) {
     
     out <- countrycode(sourcevar = sourcevar,
                        origin = 'country.name.alt',
@@ -39,20 +39,16 @@ countryname <- function(sourcevar, destination = 'cldr.short.en', warn = TRUE) {
     out[idx] <- countrycode(sourcevar = sourcevar[idx], 
                             origin = 'country.name.en', 
                             destination = 'country.name.en', 
+                            nomatch = nomatch,
                             warn = warn)
     
     if (destination != 'country.name.en') {
-      # Issue 309: in the second pass we can use the origin vector for NAs, but only if origin and destination are of the same type.
-      if (identical(class(out), class(countrycode::codelist[[destination]]))) {
-          nm <- NULL
-      } else {
-          nm <- NA
-      }
+      # Issue 309: in the second pass we can use the origin vector for NAs, but only if origin and destination are of the same type and origin is a country name, not a code.
       out <- countrycode(sourcevar = out,
                          origin = 'country.name.en', 
                          destination = destination,
-                         custom_dict = countrycode::codelist, 
-                         nomatch = nm,
+                        #  custom_dict = countrycode::codelist, 
+                         nomatch = nomatch,
                          warn = warn)
     }
     

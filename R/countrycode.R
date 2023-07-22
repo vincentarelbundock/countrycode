@@ -80,6 +80,11 @@
 #' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c')
 #' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
 #'             custom_match = c('Algeria' = 'ALG'))
+#' 
+#' x <- c("canada", "antarctica")
+#' countryname(x)
+#' countryname(x, destination = "cowc", warn = FALSE)
+#' countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
 #'
 #' \dontrun{
 #'  # Download the dictionary of US states from Github
@@ -320,8 +325,8 @@ countrycode_convert <- function(# user-supplied arguments
             warning("The origin and destination codes are not of the same
                     class. Filling-in bad matches with NA instead.", call. = FALSE)
         }
-    } else if ((length(nomatch) == 1) & is.na(nomatch)) { # NA
-    } else if ((length(nomatch) == 1) & sane_nomatch) { # single replacement
+    } else if ((length(nomatch) == 1) && is.na(nomatch)) { # NA
+    } else if ((length(nomatch) == 1) && sane_nomatch) { # single replacement
         destination_vector[idx] <- nomatch
     } else if ((length(nomatch) == length(sourcevar)) & sane_sourcevar) { # vector replacement
         destination_vector[idx] <- nomatch[idx]

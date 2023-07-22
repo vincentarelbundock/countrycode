@@ -4,7 +4,12 @@
 \alias{countryname}
 \title{Convert country names in any language to another name or code}
 \usage{
-countryname(sourcevar, destination = "cldr.short.en", warn = TRUE)
+countryname(
+  sourcevar,
+  destination = "country.name.en",
+  nomatch = NA,
+  warn = TRUE
+)
 }
 \arguments{
 \item{sourcevar}{Vector which contains the codes or country names to be
@@ -13,6 +18,13 @@ converted (character or factor)}
 \item{destination}{Coding scheme of destination (string such as "iso3c"
 enclosed in quotes ""): type \code{?codelist} for a list of
 available codes.}
+
+\item{nomatch}{When countrycode fails to find a match for the code of
+origin, it fills-in the destination vector with \code{nomatch}. The default
+behavior is to fill non-matching codes with \code{NA}. If \code{nomatch = NULL},
+countrycode tries to use the origin vector to fill-in missing values in the
+destination vector. \code{nomatch} must be either \code{NULL}, of length 1, or of the same
+length as \code{sourcevar}.}
 
 \item{warn}{Prints unique elements from sourcevar for which no match was found}
 }

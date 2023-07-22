@@ -103,6 +103,11 @@ countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c')
 countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
             custom_match = c('Algeria' = 'ALG'))
 
+x <- c("canada", "antarctica")
+countryname(x)
+countryname(x, destination = "cowc", warn = FALSE)
+countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
+
 \dontrun{
  # Download the dictionary of US states from Github
  state_dict <- "https://bit.ly/2ToSrFv"
