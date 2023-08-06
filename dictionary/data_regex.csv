@@ -122,7 +122,7 @@ Irak,\birak|mesopotamia,Iraq,\biraq|mesopotamia,Irak,irak(ien)?,Iraq,iraq|irache
 Irland,irland,Ireland,^(?!.*north).*\bireland,Irlande,irlande|irlandais,Irlanda,irland
 Isle of Man,^(?=.*isle).*\bman|^man.*insel,Isle of Man,^(?=.*isle).*\bman,Île de Man,^(?=.*ile).*\bman|^(?=.*île).*(de|of).*\bman|\biom\b,Isola di Man,^(?=.*isle).*\bman|^(?=.*isola).*\bman|\biom\b
 Israel,israel,Israel,israel,Israël,isra(e|ë)l(ien)?,Israele,israel
-Italien,italien,Italy,italy,Italie,itali(e|ien),Italia,italia(no)?
+Italien,italien|italienische.?.?republi,Italy,italy|italian.?republic,Italie,itali(e|ien),Italia,italia(no)?
 Jamaika,jamaika,Jamaica,jamaica,Jamaïque,jama(i|ï)que,Giamaica,giamaica
 Japan,japan,Japan,japan,Japon,japon,Giappone,giappone
 Jersey,jersey,Jersey,jersey,Jersey,jersey,Jersey,jersey
