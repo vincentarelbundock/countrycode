@@ -85,6 +85,10 @@ variations <- list(
     "Ireland"
   ),
 
+  "Italy" = c(
+    "Italian Republic"
+  ),
+
   "Martinique" = c(
     "France, Martinique",
     "Martinique, France"

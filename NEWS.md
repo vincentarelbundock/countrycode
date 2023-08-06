@@ -2,6 +2,7 @@
 
 * `countryname` gets the `nomatch` argument.
 * `countryname` returns NA when the code does not support a given country. (Issue #336)
+* Improved regex for Italy
 
 # countrycode 1.5.0
 
