@@ -269,6 +269,9 @@ countrycode_convert <- function(# user-supplied arguments
         # sometimes an error is triggered by encoding issues
         choices <- tryCatch(trimws(choices), error = function(e) choices)
 
+        # Apply all regexes on all inputs. This gives a matrix where rows
+        # are the inputs and columns are the regexes.
+        # For each row, the `TRUE` values indicate the matches.
         matchidx <- sapply(dict[[origin]], grepl, x = choices,
                            perl = TRUE, ignore.case = TRUE)
         if (all(is.na(choices))) {
