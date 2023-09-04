@@ -80,7 +80,7 @@
 #' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c')
 #' countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
 #'             custom_match = c('Algeria' = 'ALG'))
-#' 
+#'
 #' x <- c("canada", "antarctica")
 #' countryname(x)
 #' countryname(x, destination = "cowc", warn = FALSE)
@@ -90,7 +90,7 @@
 #'  # Download the dictionary of US states from Github
 #'  state_dict <- "https://bit.ly/2ToSrFv"
 #'  state_dict <- read.csv(state_dict)
-#' 
+#'
 #'  # The "state.regex" column includes regular expressions, so we set an attribute.
 #'  attr(state_dict, "origin_regex") <- "state.regex"
 #
@@ -121,7 +121,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
 
     # default country names (only for default dictionary)
-    if (is.null(custom_dict)) { 
+    if (is.null(custom_dict)) {
         if (origin == 'country.name') {
             origin <- 'country.name.en'
         }
@@ -222,7 +222,7 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     }
     return(out)
 }
-                        
+
 
 #' internal function called by `countrycode()`
 #'
@@ -249,12 +249,51 @@ countrycode_convert <- function(# user-supplied arguments
         sourcefctr <- factor(origin_vector)
 
         # match levels of sourcefctr
-        matches <-
-          sapply(c(levels(sourcefctr), NA), function(x) { # add NA so there's at least one item
-            x <- tryCatch(trimws(x), error = function(e) x) # sometimes an error is triggered by encoding issues
-            matchidx <- sapply(dict[[origin]], function(y) grepl(y, x, perl = TRUE, ignore.case = TRUE))
-            dict[matchidx, destination]
-          })
+        # matches <-
+        #   sapply(c(levels(sourcefctr), NA), function(x) { # add NA so there's at least one item
+        #     x <- tryCatch(trimws(x), error = function(e) x) # sometimes an error is triggered by encoding issues
+        #     matchidx <- sapply(dict[[origin]], function(y) grepl(y, x, perl = TRUE, ignore.case = TRUE))
+        #     dict[matchidx, destination]
+        #   })
+
+
+
+        regexes <- append_unique_id(dict[[origin]])
+        regexes <- paste0("(?", regexes, ")")
+
+        regex_chunks <- chunk(regexes, 5)
+
+        # add NA so there's at least one item
+        matches <- sapply(c(levels(sourcefctr), NA), function(x) {
+                matchidx <- list()
+
+
+                for (i in seq_along(regex_chunks)) {
+
+
+                    tmp <- paste(regex_chunks[[i]], collapse = "|")
+                    out <- gregexpr(tmp, x, perl = TRUE, ignore.case = TRUE)[[1]]
+
+                    starts <- attr(out, "capture.start")
+                    matches <- starts[, nchar(dimnames(starts)[[2]]) > 0, drop = FALSE]
+                    if (length(matches) == 0) {
+                        matchidx[[i]] <- NULL
+                        next
+                    }
+                    matches <- which(colSums(matches) > 0)
+                    if (i > 1 && length(matches) > 0) {
+                        matches <- matches + sum(sapply(regex_chunks[1:(i-1)], length))
+                    }
+                    matchidx[[i]] <- matches
+
+                }
+
+                matchidx <- unlist(matchidx)
+                dict[matchidx, destination]
+            })
+
+
+
 
         # fill elements that have zero matches with the appropriate NA
         matches[sapply(matches, length) == 0] <- `class<-`(NA, class(dict[[destination]]))
