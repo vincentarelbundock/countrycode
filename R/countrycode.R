@@ -204,37 +204,21 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
 
     out <- rep(NA, length(sourcevar))
     for (dest in destination) {
-        if (length(destination) == 1) {
-            out <- countrycode_convert(
-                ## user-supplied arguments
-                sourcevar = sourcevar,
-                origin = origin,
-                destination = dest,
-                warn = warn,
-                nomatch = nomatch,
-                custom_dict = custom_dict,
-                custom_match = custom_match,
-                origin_regex = origin_regex,
-                ## countrycode-supplied arguments
-                origin_vector = origin_vector,
-                dictionary = dictionary)
-        } else {
-            out <- ifelse(is.na(out),
-                          countrycode_convert(
-                              ## user-supplied arguments
-                              sourcevar = sourcevar,
-                              origin = origin,
-                              destination = dest,
-                              warn = warn,
-                              nomatch = nomatch,
-                              custom_dict = custom_dict,
-                              custom_match = custom_match,
-                              origin_regex = origin_regex,
-                              ## countrycode-supplied arguments
-                              origin_vector = origin_vector,
-                              dictionary = dictionary),
-                          out)
-        }
+        out <- ifelse(is.na(out),
+                      countrycode_convert(
+                          ## user-supplied arguments
+                          sourcevar = sourcevar,
+                          origin = origin,
+                          destination = dest,
+                          warn = warn,
+                          nomatch = nomatch,
+                          custom_dict = custom_dict,
+                          custom_match = custom_match,
+                          origin_regex = origin_regex,
+                          ## countrycode-supplied arguments
+                          origin_vector = origin_vector,
+                          dictionary = dictionary),
+                      out)
     }
     return(out)
 }
@@ -264,68 +248,20 @@ countrycode_convert <- function(# user-supplied arguments
         dict <- stats::na.omit(dictionary[, c(origin, destination)])
         sourcefctr <- factor(origin_vector)
 
-        # add a unique id to each regex, and split the regexes in several smaller
-        # vectors to avoid a C-level bug in gregexpr() (cf. explanation below)
-        regexes <- append_unique_id(dict[[origin]])
-        regexes <- paste0("(?", regexes, ")")
-        regex_chunks <- chunk(regexes, 5)
+        # possibilities (add NA so there's at least one item)
+        choices <- c(levels(sourcefctr), NA)
+        # sometimes an error is triggered by encoding issues
+        choices <- tryCatch(trimws(choices), error = function(e) choices)
 
-        # match levels of sourcefctr
-        matches <- sapply(
-            c(levels(sourcefctr), NA), # add NA so there's at least one item
-            function(x) {
-                matchidx <- list()
-
-                # sometimes an error is triggered by encoding issues
-                x <- tryCatch(trimws(x), error = function(e) x)
-
-                # Logic:
-                # - take multiple regexes: c("france", "spain", "\\bmali\\b")
-                # - collapse them into a single regex with one group per original
-                #   regex: "((france)|(spain)|(\\bmali\\b))"
-                # - run gregexpr() and extract the groups that have a match
-                #
-                # --> this is equivalent but much faster than running grepl() on
-                #     each regex separately
-                #
-                # Trick:
-                # Some regexes already contain some groups, e.g "^(?=.*rep).*czech".
-                # To avoid counting these "subgroups" when we extract the capture
-                # groups from gregexpr(), we give each original regex a random
-                # id.
-                #
-                # Therefore, the final regex passed to gregexpr() is something
-                # like:
-                #
-                # "(?<feffs>(france)|(?<dazz>spain)|(?<gjzld>\\bmali\\b))"
-                #
-                # We can then use these IDs to only keep the groups that
-                # correspond to the full regexes, and we discard the "subgroups"
-                #
-                # More explanations: https://stackoverflow.com/questions/77036362
-
-                for (i in seq_along(regex_chunks)) {
-
-                    tmp <- paste(regex_chunks[[i]], collapse = "|")
-                    out <- gregexpr(tmp, x, perl = TRUE, ignore.case = TRUE)[[1]]
-
-                    starts <- attr(out, "capture.start")
-                    matches <- starts[, nchar(dimnames(starts)[[2]]) > 0, drop = FALSE]
-                    if (length(matches) == 0) {
-                        matchidx[[i]] <- NULL
-                        next
-                    }
-                    matches <- which(colSums(matches) > 0)
-                    if (i > 1 && length(matches) > 0) {
-                        matches <- matches + sum(sapply(regex_chunks[1:(i-1)], length))
-                    }
-                    matchidx[[i]] <- matches
-
-                }
-
-                matchidx <- unlist(matchidx)
-                dict[matchidx, destination]
-            })
+        matchidx <- sapply(dict[[origin]], grepl, x = choices,
+                           perl = TRUE, ignore.case = TRUE)
+        if (all(is.na(choices))) {
+            matches <- vector("list", length = length(choices))
+        } else {
+            out <- apply(matchidx, 1, which, simplify = FALSE)
+            names(out) <- choices
+            matches <- lapply(out, function(x) dict[x, destination])
+        }
 
 
         # fill elements that have zero matches with the appropriate NA
