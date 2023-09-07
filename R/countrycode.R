@@ -201,9 +201,9 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
             # only apply toupper() on unique values and match after.
             # much faster than applying toupper() on the whole vector
             # when vector is very large
-            uniques = unique(origin_vector)
-            uppercase = toupper(uniques)
-            origin_vector = unname(uppercase[match(origin_vector, uniques)])
+            uniques <- unique(origin_vector)
+            uppercase <- toupper(uniques)
+            origin_vector <- unname(uppercase[match(origin_vector, uniques)])
         }
     }
 
