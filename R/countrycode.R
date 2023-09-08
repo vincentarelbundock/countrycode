@@ -198,7 +198,12 @@ countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = N
     if(is.null(custom_dict)){ # only for built-in dictionary
         # unicode.symbol breaks uppercase on Windows R-devel 2022-02-02; rejected by CRAN
         if(inherits(origin_vector, 'character') & !grepl('country|unicode.symbol', origin)){
-            origin_vector = toupper(origin_vector)
+            # only apply toupper() on unique values and match after.
+            # much faster than applying toupper() on the whole vector
+            # when vector is very large
+            uniques <- unique(origin_vector)
+            uppercase <- toupper(uniques)
+            origin_vector <- unname(uppercase[match(origin_vector, uniques)])
         }
     }
 
