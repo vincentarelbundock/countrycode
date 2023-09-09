@@ -3,6 +3,7 @@ source(here::here('dictionary/utilities.R'))
 url <- "http://ksgleditsch.com/data/iisystem.dat"
 
 gw <- readr::read_tsv(url,
+                      locale = locale(encoding = "windows-1252"),
                       col_names = c("gwn", "gwc", "country", "birth", "death"),
                       col_types = cols(gwn = readr::col_integer(),
                                        gwc = readr::col_character(),
@@ -20,12 +21,12 @@ gw <- gw %>%
         country = gsub(" \\(Annam.*", "", country)
     ) %>%
     # ambiguous or not covered
-    filter(!gwc %in% c("TBT", "DRV", "HSD", "HSE", "WRT", "UPC", "TRA")) %>% 
+    filter(!gwc %in% c("TBT", "DRV", "HSD", "HSE", "WRT", "UPC", "TRA")) %>%
     mutate(idx = 1:n()) |>
     group_by(idx) |>
     mutate(panel = list(year(birth):year(death))) %>%
     ungroup() |>
-    unnest(panel) |> 
+    unnest(panel) |>
     select(-idx, -birth, -death) |>
     rename(year = panel) |>
     # arbitrary
