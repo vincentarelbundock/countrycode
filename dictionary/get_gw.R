@@ -21,12 +21,12 @@ gw <- gw %>%
         country = gsub(" \\(Annam.*", "", country)
     ) %>%
     # ambiguous or not covered
-    filter(!gwc %in% c("TBT", "DRV", "HSD", "HSE", "WRT", "UPC", "TRA")) %>%
+    filter(!gwc %in% c("TBT", "DRV", "HSD", "HSE", "WRT", "UPC", "TRA")) %>% 
     mutate(idx = 1:n()) |>
     group_by(idx) |>
     mutate(panel = list(year(birth):year(death))) %>%
     ungroup() |>
-    unnest(panel) |>
+    unnest(panel) |> 
     select(-idx, -birth, -death) |>
     rename(year = panel) |>
     # arbitrary
