@@ -1,8 +1,8 @@
 source(here::here('dictionary/utilities.R'))
 
-url <- 'http://geonames.nga.mil/gns/html/Docs/GEOPOLITICAL_CODES.xls'
+url <- 'https://web.archive.org/web/20161214044235/http://geonames.nga.mil/gns/html/Docs/GEOPOLITICAL_CODES.xls'
 filename <- tempfile(fileext = '.xls')
-httr::GET(url, write_disk(filename, overwrite=TRUE))
+download.file(url, filename, method = "curl")
 
 bad <- c('AKROTIRI SOVEREIGN BASE AREA', 'ASHMORE AND CARTIER ISLANDS', 'BAKER ISLAND',
          'CLIPPERTON ISLAND', 'CORAL SEA ISLANDS', 'DHEKELIA SOVEREIGN BASE AREA',
