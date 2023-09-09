@@ -14,6 +14,7 @@ wb <- read_excel(filename, sheet = "List of economies") %>%
       filter(
         !country %in% not_countries,
         !is.na(wb)
-      )
+      ) %>%
+      arrange(country)
 
 wb %>% write_csv('dictionary/data_world_bank.csv', na = "")
