@@ -6,6 +6,8 @@ It is easy to to create alternative functions with different default arguments a
 * `statecode` function to convert US state codes using a custom dictionary by default, that we download from the internet.
 
 ```{r, error = TRUE, message = FALSE}
+library(countrycode)
+
 #################################
 #  new function: name_to_iso3c  #
 #################################

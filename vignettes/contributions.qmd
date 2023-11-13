@@ -48,6 +48,8 @@ readr::write_csv(custom_dict, 'custom_dict.csv', na = '')
 When using custom dictionaries, it is often useful to give "meta" information to `countrycode` so that it knows how to use certain codes. To do this, we can set attributes of the dictionary. In this example, we download a dictionary of US state codes. Then, we identify a column of regular expressions using the `origin_regex` attribute, and we identify the valid origin codes using the `origin_valid` attribute.
 
 ```{r, error = TRUE, message = FALSE}
+library(countrycode)
+
 state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"
 state_dict <- read.csv(state_dict)
 
