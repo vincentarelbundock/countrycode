@@ -1,0 +1,17 @@
+* [Home](/)
+* [Changelog](NEWS.md)
+* Articles
+  - [Contributions](articles/contributions.md)
+  - [Country codes](articles/countrycode.md)
+  - [Country names](articles/countryname.md)
+  - [Custom conversion functions](articles/custom.md)
+* Reference
+  - [cldr_examples](man/cldr_examples)
+  - [codelist_panel](man/codelist_panel)
+  - [codelist](man/codelist)
+  - [countrycode-package](man/countrycode-package)
+  - [countrycode](man/countrycode)
+  - [countryname_dict](man/countryname_dict)
+  - [countryname](man/countryname)
+  - [get_dictionary](man/get_dictionary)
+  - [guess_field](man/guess_field)
