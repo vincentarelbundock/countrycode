@@ -1,5 +1,4 @@
-countrycode
-================
+# countrycode
 
 <img src="https://user-images.githubusercontent.com/987057/167296405-e7798ac8-03e7-444e-acaf-d99fc42d1c9e.png" align="right" alt="" width="120" />
 
@@ -12,6 +11,7 @@ status](https://ci.appveyor.com/api/projects/status/github/vincentarelbundock/co
 status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
 ![CRAN
 downloads](http://cranlogs.r-pkg.org/badges/grand-total/countrycode)
+
 <!-- badges: end -->
 
 `countrycode` standardizes country names, converts them into ~40
@@ -25,11 +25,11 @@ you could cite our paper:
 > Arel-Bundock, Vincent, Nils Enevoldsen, and CJ Yetman, (2018).
 > countrycode: An R package to convert country names and country codes.
 > Journal of Open Source Software, 3(28), 848,
-> <https://doi.org/10.21105/joss.00848>
+> [https://doi.org/10.21105/joss.00848](https://doi.org/10.21105/joss.00848)
 
-# Why `countrycode`?
+## Why `countrycode`?
 
-## The Problem
+### The Problem
 
 Different data sources use different coding schemes to represent
 countries (e.g. CoW or ISO). This poses two main problems: (1) some of
@@ -37,7 +37,7 @@ these coding schemes are less than intuitive, and (2) merging these data
 requires converting from one coding scheme to another, or from long
 country names to a coding scheme.
 
-## The Solution
+### The Solution
 
 The `countrycode` function can convert to and from 40+ different country
 coding schemes, and to 600+ variants of country names in different
@@ -46,23 +46,23 @@ country names (e.g. Sri Lanka) into any of those coding schemes or
 country names. It can create new variables with various regional
 groupings.
 
-# Installation
+## Installation
 
 From the R console, type:
 
-``` r
+```r
 install.packages("countrycode")
 ```
 
 To install the latest development version, you can use the `remotes`
 package:
 
-``` r
+```r
 library(remotes)
 install_github('vincentarelbundock/countrycode')
 ```
 
-# Supported codes
+## Supported codes
 
 To get an up-to-date list of supported country codes, install the
 package and type `?codelist`. These include:
@@ -79,7 +79,7 @@ package and type `?codelist`. These include:
 - Food and Agriculture Organization of the United Nations
 - Global Administrative Unit Layers (GAUL)
 - Geopolitical Entities, Names and Codes (GENC)
-- Gleditsch & Ward (numeric and character)
+- Gleditsch \& Ward (numeric and character)
 - International Civil Aviation Organization
 - International Monetary Fund
 - International Olympic Committee
@@ -91,3 +91,4 @@ package and type `?codelist`. These include:
 - World Bank
 - World Values Survey
 - Unicode symbols (flags)
+

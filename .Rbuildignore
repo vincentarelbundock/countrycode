@@ -20,3 +20,5 @@ revdep*
 ^pkgdown$
 ^\.github$
 README.Rmd
+^altdoc$
+^docs$

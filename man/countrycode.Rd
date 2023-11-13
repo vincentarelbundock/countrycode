@@ -110,7 +110,8 @@ countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
 
 \dontrun{
  # Download the dictionary of US states from Github
- state_dict <- "https://bit.ly/2ToSrFv"
+
+ state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"
  state_dict <- read.csv(state_dict)
 
  # The "state.regex" column includes regular expressions, so we set an attribute.
