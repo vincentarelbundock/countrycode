@@ -1,7 +1,9 @@
 # countrycode 1.5.0.9000
 
+- Important speed-up for detection of country names using regular expressions (Thanks to Etienne Bacher).
 - `countryname` gets the `nomatch` argument.
 - `countryname` returns NA when the code does not support a given country. (Issue [#336](https://github.com/vincentarelbundock/countrycode/issues/336))
+- Improved regex for Italy
 
 ## countrycode 1.5.0
 

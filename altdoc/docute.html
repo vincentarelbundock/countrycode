@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>$ALTDOC_PACKAGE_NAME</title>
+    <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+    <!-- Reduce space between sections and subsections -->
+     <style>
+      .page-content h2 {
+        margin-top: 2em;
+      }
+      .page-content.has-page-title>h2:first-child {
+        margin-top: 2em;
+      }
+      .page-content h3 {
+        margin-top: 2em;
+      }
+      .page-content.has-page-title>h3:first-child {
+        margin-top: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="docute"></div>
+    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <script>
+      new Docute({
+        target: '#docute',
+        title: '$ALTDOC_PACKAGE_NAME',
+        highlight: ['r'],
+        darkThemeToggler: true,
+        nav: [
+					{title: 'Home', link: '/' },
+					{title: 'GitHub', link: '$ALTDOC_PACKAGE_URL_GITHUB' },
+				],
+				sidebar: [
+					{title: 'Home', link: '/'},
+					{title: 'Changelog', link: '$ALTDOC_NEWS'},
+          $ALTDOC_VIGNETTE_BLOCK
+          $ALTDOC_MAN_BLOCK
+					{title: 'Code of Conduct', link: '$ALTDOC_CODE_OF_CONDUCT'},
+					{title: 'License', link: '$ALTDOC_LICENSE'}
+				],
+        footer: "<a href='$ALTDOC_PACKAGE_URL'> <code> $ALTDOC_PACKAGE_NAME </code> v. $ALTDOC_PACKAGE_VERSION </a> | Documentation made with <a href='https://altdoc.etiennebacher.com/'> <code> altdoc </code> v. $ALTDOC_VERSION</a>"
+      })
+    </script>
+  </body>
+</html>
