@@ -8,9 +8,10 @@
 <!-- badges: start -->
 
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
+<a href = "https://vincentarelbundock.github.io/countrycode" target = "_blank"><img src="https://img.shields.io/static/v1?label=Website&message=Visit&color=blue"></a>
 [![R build
 status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
-[![Downloads](https://cranlogs.r-pkg.org/badges/ggplot2.png)](https://cran.rstudio.com/web/packages/countrycode/index.html)
+[![](https://cranlogs.r-pkg.org/badges/countrycode.png)](https://cran.r-project.org/package=countrycode)
 <!-- badges: end -->
 
 `countrycode` standardizes country names, converts them into ~40
