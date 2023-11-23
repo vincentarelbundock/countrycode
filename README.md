@@ -11,7 +11,8 @@
 <a href = "https://vincentarelbundock.github.io/countrycode" target = "_blank"><img src="https://img.shields.io/static/v1?label=Website&message=Visit&color=blue"></a>
 [![R build
 status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
-[![](https://cranlogs.r-pkg.org/badges/countrycode.png)](https://cran.r-project.org/package=countrycode)
+![CRAN
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/countrycode.png)
 <!-- badges: end -->
 
 `countrycode` standardizes country names, converts them into ~40
