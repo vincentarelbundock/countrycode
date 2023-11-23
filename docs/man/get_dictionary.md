@@ -43,5 +43,3 @@ library(countrycode)
 cd <- get_dictionary("us_states")
 countrycode::countrycode(c("MO", "MN"), origin = "state.abb", "state.name", custom_dict = cd)
 ```
-
-    [1] "Missouri"  "Minnesota"

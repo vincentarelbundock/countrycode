@@ -1,0 +1,18 @@
+* [Home](/)
+* Vignettes: 
+  - [Country codes](vignettes/countrycode.md)
+  - [Country names](vignettes/countryname.md)
+  - [Custom conversion functions](vignettes/custom.md)
+  - [Contributions](vignettes/contributions.md)
+* Functions and dictionaries: 
+  - [countrycode](man/countrycode)
+  - [countryname](man/countryname)
+  - [get_dictionary](man/get_dictionary)
+  - [guess_field](man/guess_field)
+  - [cldr_examples](man/cldr_examples)
+  - [codelist_panel](man/codelist_panel)
+  - [codelist](man/codelist)
+  - [countryname_dict](man/countryname_dict)
+* [News](NEWS.md)
+* [License](LICENSE.md)
+* [Citation](CITATION.md)

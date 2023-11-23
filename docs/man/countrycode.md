@@ -164,58 +164,24 @@ library(countrycode)
 
 # ISO to Correlates of War
 countrycode(c('USA', 'DZA'), origin = 'iso3c', destination = 'cown')
-```
 
-    [1]   2 615
-
-``` r
 # English to ISO
 countrycode('Albania', origin = 'country.name', destination = 'iso3c')
-```
 
-    [1] "ALB"
-
-``` r
 # German to French
 countrycode('Albanien', origin = 'country.name.de', destination = 'iso.name.fr')
-```
 
-    [1] "Albanie (l')"
-
-``` r
 # Using custom_match to supercede default codes
 countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c')
-```
-
-    [1] "USA" "DZA"
-
-``` r
 countrycode(c('United States', 'Algeria'), 'country.name', 'iso3c',
             custom_match = c('Algeria' = 'ALG'))
-```
 
-    [1] "USA" "ALG"
-
-``` r
 x <- c("canada", "antarctica")
 countryname(x)
-```
-
-    [1] "Canada"     "Antarctica"
-
-``` r
 countryname(x, destination = "cowc", warn = FALSE)
-```
-
-    [1] "CAN" NA   
-
-``` r
 countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
-```
 
-    [1] "CAN"        "antarctica"
-
-``` r
+ library(countrycode)
  # Download the dictionary of US states from Github
 
  state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"
@@ -225,13 +191,6 @@ countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
  attr(state_dict, "origin_regex") <- "state.regex"
  countrycode(c('AL', 'AK'), 'abbreviation', 'state',
              custom_dict = state_dict)
-```
-
-    [1] "Alabama" "Alaska" 
-
-``` r
  countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
              custom_dict = state_dict)
 ```
-
-    [1] "Alabama"      "North Dakota"

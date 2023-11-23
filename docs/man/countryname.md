@@ -79,12 +79,5 @@ library(countrycode)
 
 x <- c('Afaganisitani', 'Barbadas', 'Sverige', 'UK')
 countryname(x)
-```
-
-    [1] "Afghanistan"    "Barbados"       "Sweden"         "United Kingdom"
-
-``` r
 countryname(x, destination = 'iso3c')
 ```
-
-    [1] "AFG" "BRB" "SWE" "GBR"

@@ -109,6 +109,7 @@ countryname(x, destination = "cowc", warn = FALSE)
 countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
 
 \dontrun{
+ library(countrycode)
  # Download the dictionary of US states from Github
 
  state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"

@@ -1,17 +1,16 @@
-# countrycode
 
-<img src="https://user-images.githubusercontent.com/987057/167296405-e7798ac8-03e7-444e-acaf-d99fc42d1c9e.png" align="right" alt="" width="120" />
+<p align="center">
+<img src="https://user-images.githubusercontent.com/987057/167296405-e7798ac8-03e7-444e-acaf-d99fc42d1c9e.png" align="right" alt="" width="125" />
+</p>
+
+<br>
 
 <!-- badges: start -->
 
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/vincentarelbundock/countrycode?branch=master&svg=true)](https://ci.appveyor.com/project/vincentarelbundock/countrycode)
 [![R build
 status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
-![CRAN
-downloads](http://cranlogs.r-pkg.org/badges/grand-total/countrycode)
-
+[![Downloads](https://cranlogs.r-pkg.org/badges/ggplot2.png)](https://cran.rstudio.com/web/packages/countrycode/index.html)
 <!-- badges: end -->
 
 `countrycode` standardizes country names, converts them into ~40
@@ -25,7 +24,7 @@ you could cite our paper:
 > Arel-Bundock, Vincent, Nils Enevoldsen, and CJ Yetman, (2018).
 > countrycode: An R package to convert country names and country codes.
 > Journal of Open Source Software, 3(28), 848,
-> [https://doi.org/10.21105/joss.00848](https://doi.org/10.21105/joss.00848)
+> https://doi.org/10.21105/joss.00848
 
 ## Why `countrycode`?
 
@@ -50,14 +49,14 @@ groupings.
 
 From the R console, type:
 
-```r
+``` r
 install.packages("countrycode")
 ```
 
 To install the latest development version, you can use the `remotes`
 package:
 
-```r
+``` r
 library(remotes)
 install_github('vincentarelbundock/countrycode')
 ```
@@ -67,28 +66,27 @@ install_github('vincentarelbundock/countrycode')
 To get an up-to-date list of supported country codes, install the
 package and type `?codelist`. These include:
 
-- 600+ variants of country names in different languages and formats.
-- AR5
-- Continent and region identifiers.
-- Correlates of War (numeric and character)
-- European Central Bank
-- [EUROCONTROL](https://www.eurocontrol.int) - The European Organisation
-  for the Safety of Air Navigation
-- Eurostat
-- Federal Information Processing Standard (FIPS)
-- Food and Agriculture Organization of the United Nations
-- Global Administrative Unit Layers (GAUL)
-- Geopolitical Entities, Names and Codes (GENC)
-- Gleditsch \& Ward (numeric and character)
-- International Civil Aviation Organization
-- International Monetary Fund
-- International Olympic Committee
-- ISO (2/3-character and numeric)
-- Polity IV
-- United Nations
-- United Nations Procurement Division
-- Varieties of Democracy
-- World Bank
-- World Values Survey
-- Unicode symbols (flags)
-
+-   600+ variants of country names in different languages and formats.
+-   AR5
+-   Continent and region identifiers.
+-   Correlates of War (numeric and character)
+-   European Central Bank
+-   [EUROCONTROL](https://www.eurocontrol.int) - The European
+    Organisation for the Safety of Air Navigation
+-   Eurostat
+-   Federal Information Processing Standard (FIPS)
+-   Food and Agriculture Organization of the United Nations
+-   Global Administrative Unit Layers (GAUL)
+-   Geopolitical Entities, Names and Codes (GENC)
+-   Gleditsch & Ward (numeric and character)
+-   International Civil Aviation Organization
+-   International Monetary Fund
+-   International Olympic Committee
+-   ISO (2/3-character and numeric)
+-   Polity IV
+-   United Nations
+-   United Nations Procurement Division
+-   Varieties of Democracy
+-   World Bank
+-   World Values Survey
+-   Unicode symbols (flags)
