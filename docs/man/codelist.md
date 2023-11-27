@@ -198,10 +198,9 @@ Destination only
 <ul>
 <li>
 
-<code style="white-space: pre;">⁠cldr.\*⁠</code>: 600+ country name
-variants from the UNICODE CLDR project (e.g., "cldr.short.en"). Inspect
-the <code>cldr_examples</code> data.frame for a full list of available
-country names and examples.
+`cldr.*`: 600+ country name variants from the UNICODE CLDR project
+(e.g., "cldr.short.en"). Inspect the <code>cldr_examples</code>
+data.frame for a full list of available country names and examples.
 
 </li>
 <li>

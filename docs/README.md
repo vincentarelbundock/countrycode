@@ -1,4 +1,10 @@
 
+``` r
+with(mtcars, plot(mpg, hp))
+```
+
+![](README.markdown_strict_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/987057/167296405-e7798ac8-03e7-444e-acaf-d99fc42d1c9e.png" align="right" alt="" width="125" />
 </p>
