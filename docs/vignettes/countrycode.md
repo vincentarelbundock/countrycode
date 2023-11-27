@@ -65,22 +65,22 @@ df1
 ```
 
       cowcodes var1
-    1      ALG   92
-    2      ALB  484
-    3      UKG  449
-    4      CAN  305
-    5      USA  316
+    1      ALG  174
+    2      ALB  164
+    3      UKG   82
+    4      CAN   12
+    5      USA  340
 
 ``` r
 df2
 ```
 
       isocodes var2
-    1       12  491
-    2        8  122
-    3      826  225
-    4      124  223
-    5      840  363
+    1       12  290
+    2        8  339
+    3      826  366
+    4      124  330
+    5      840  105
 
 Create a common variable with the iso3c code in each data frame, merge
 the data, and create a country identifier:
@@ -94,11 +94,11 @@ df3
 ```
 
       iso3c cowcodes var1 isocodes var2        country
-    1   ALB      ALB  484        8  122        Albania
-    2   CAN      CAN  305      124  223         Canada
-    3   DZA      ALG   92       12  491        Algeria
-    4   GBR      UKG  449      826  225 United Kingdom
-    5   USA      USA  316      840  363  United States
+    1   ALB      ALB  164        8  339        Albania
+    2   CAN      CAN   12      124  330         Canada
+    3   DZA      ALG  174       12  290        Algeria
+    4   GBR      UKG   82      826  366 United Kingdom
+    5   USA      USA  340      840  105  United States
 
 ## Flags
 
