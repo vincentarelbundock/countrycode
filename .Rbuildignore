@@ -22,4 +22,4 @@ revdep*
 README.Rmd
 ^altdoc$
 ^docs$
-^vignettes/$
+^vignettes/
