@@ -3,6 +3,7 @@ source(here::here('dictionary/utilities.R'))
 url <- "http://ksgleditsch.com/data/iisystem.dat"
 
 gw <- readr::read_tsv(url,
+                      locale = locale(encoding = "windows-1252"),
                       col_names = c("gwn", "gwc", "country", "birth", "death"),
                       col_types = cols(gwn = readr::col_integer(),
                                        gwc = readr::col_character(),
