@@ -1,7 +1,7 @@
 source(here::here("dictionary/utilities.R"))
 
 # Check https://geonames.nga.mil/gns/html/countrycodes.html quarterly for the latest XLSX url
-url <- 'http://geonames.nga.mil/gns/html/docs/GENC_ED3U12_GEC_XWALK.xlsx'
+url <- 'https://geonames.nga.mil/geonames/GNSSearch/GNSDocs/xlsdocs/GENC_ED3U17_GEC_XWALK.xlsx'
 
 # Uses DoD Root CA 3, which I don't have in my root certificate store
 httr::set_config(config(ssl_verifypeer = 0L))
