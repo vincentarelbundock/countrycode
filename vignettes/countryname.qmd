@@ -1,0 +1,19 @@
+---
+format:
+  md:
+    prefer_html: true
+default-image-extension: ""
+---
+# Country names
+
+The function `countryname` tries to convert country names from any language. For example:
+
+```{r}
+library(countrycode)
+x <- c('ジンバブエ', 'Afeganistãu',  'Barbadas', 'Sverige', 'UK',  
+       'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar')
+
+countryname(x)
+
+countryname(x, 'iso3c')
+```

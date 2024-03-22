@@ -12,8 +12,8 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'countrycode',
-      repo: 'https://github.com/vincentarelbundock/countrycode',
+      name: '$ALTDOC_PACKAGE_NAME',
+      repo: '$ALTDOC_PACKAGE_URL_GITHUB',
       loadSidebar: true,
       subMaxLevel: 2,
       search: {
@@ -28,7 +28,7 @@
       },
       plugins: [
         function(hook) {
-          var footer = ["<a href='https://vincentarelbundock.github.io/countrycode/'> <code> countrycode </code> v. 1.6.0 </a> | Documentation made with <a href='https://altdoc.etiennebacher.com/'> <code> altdoc </code> v. 0.3.0</a>"].join('');
+          var footer = ["<a href='$ALTDOC_PACKAGE_URL'> <code> $ALTDOC_PACKAGE_NAME </code> v. $ALTDOC_PACKAGE_VERSION </a> | Documentation made with <a href='https://altdoc.etiennebacher.com/'> <code> altdoc </code> v. $ALTDOC_VERSION</a>"].join('');
 
           hook.afterEach(function(html) {
             return html + footer;
