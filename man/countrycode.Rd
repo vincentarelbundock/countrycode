@@ -108,19 +108,5 @@ countryname(x)
 countryname(x, destination = "cowc", warn = FALSE)
 countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
 
-\dontrun{
- library(countrycode)
- # Download the dictionary of US states from Github
-
- state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/data/custom_dictionaries/data_us_states.csv"
- state_dict <- read.csv(state_dict)
-
- # The "state.regex" column includes regular expressions, so we set an attribute.
- attr(state_dict, "origin_regex") <- "state.regex"
- countrycode(c('AL', 'AK'), 'abbreviation', 'state',
-             custom_dict = state_dict)
- countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
-             custom_dict = state_dict)
-}
 }
 \keyword{countrycode}
