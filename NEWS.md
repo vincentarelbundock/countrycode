@@ -7,7 +7,7 @@
 * `countryname` returns NA when the code does not support a given country. (Issue [#336](https://github.com/vincentarelbundock/countrycode/issues/336))
 * Improved regex for Italy
 * `eurocontrol_statfor` updated: ESRA->ECAC to account for redistribution: https://www.eurocontrol.int/sites/default/files/2020-11/eurocontrol-forecast-2020-2024-region-definition.pdf Thanks to [@sthonnard](https://github.com/sthonnard) for contribution [#352](https://github.com/vincentarelbundock/countrycode/issues/352).
-* Antarctica now has a "continent" value. Thanks to [@geryan](https://github.com/geryan) for report [#353](https://github.com/vincentarelbundock/countrycode/issues/353).k
+* Antarctica now has a "continent" value. Thanks to [@geryan](https://github.com/geryan) for report [#353](https://github.com/vincentarelbundock/countrycode/issues/353).
 
 ## countrycode 1.5.0
 
