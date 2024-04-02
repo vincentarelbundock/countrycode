@@ -269,7 +269,13 @@ countrycode_convert <- function(# user-supplied arguments
         if (all(is.na(choices))) {
             matches <- vector("list", length = length(choices))
         } else {
-            out <- apply(matchidx, 1, which, simplify = FALSE)
+            # Issue reported to Vincent by email
+            # simplify=FALSE was introduced in R 4.1.0. we want coverage before
+            # out <- try(apply(matchidx, 1, which, simplify = FALSE))
+            out <- apply(matchidx, 1, which)
+            if (length(out) == 0) {
+                out <- rep(list(NULL), nrow(matchidx))
+            }
             names(out) <- choices
             matches <- lapply(out, function(x) dict[x, destination])
         }
