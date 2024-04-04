@@ -66,22 +66,22 @@ df1
 ```
 
       cowcodes var1
-    1      ALG  371
-    2      ALB  252
-    3      UKG  411
-    4      CAN  412
-    5      USA  423
+    1      ALG   81
+    2      ALB   52
+    3      UKG  177
+    4      CAN  132
+    5      USA  432
 
 ``` r
 df2
 ```
 
       isocodes var2
-    1       12  267
-    2        8   99
-    3      826  253
-    4      124   54
-    5      840   45
+    1       12   82
+    2        8  269
+    3      826   40
+    4      124   10
+    5      840  238
 
 Create a common variable with the iso3c code in each data frame, merge
 the data, and create a country identifier:
@@ -95,11 +95,11 @@ df3
 ```
 
       iso3c cowcodes var1 isocodes var2        country
-    1   ALB      ALB  252        8   99        Albania
-    2   CAN      CAN  412      124   54         Canada
-    3   DZA      ALG  371       12  267        Algeria
-    4   GBR      UKG  411      826  253 United Kingdom
-    5   USA      USA  423      840   45  United States
+    1   ALB      ALB   52        8  269        Albania
+    2   CAN      CAN  132      124   10         Canada
+    3   DZA      ALG   81       12   82        Algeria
+    4   GBR      UKG  177      826   40 United Kingdom
+    5   USA      USA  432      840  238  United States
 
 ## Flags
 
@@ -363,7 +363,7 @@ library(countrycode)
 df <- eurostat::get_eurostat("nama_10_lp_ulc")
 ```
 
-    Table nama_10_lp_ulc cached at /tmp/RtmpUKm7TM/eurostat/23aa0feaaac3510de7a1aed5e411ff1d.rds
+    Table nama_10_lp_ulc cached at /tmp/RtmpXlN36I/eurostat/e01ff93cc27e3b104a78cc1fe65bef94.rds
 
 ``` r
 custom_match <- c(EL = 'Greece', UK = 'United Kingdom')
