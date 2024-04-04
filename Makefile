@@ -20,5 +20,5 @@ test: install ## test
 
 website: install ## render vignettes and website
 	Rscript -e "altdoc::render_docs(verbose = TRUE)"
-	rm -rf _quarto
-	rm -rf ~/Downloads/countrycode_website && cp -r docs ~/Downloads/countrycode_website
+	# rm -rf _quarto
+	# rm -rf ~/Downloads/countrycode_website && cp -r docs ~/Downloads/countrycode_website
