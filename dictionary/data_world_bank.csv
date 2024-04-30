@@ -46,12 +46,12 @@ Comoros,COM
 "Congo, Dem. Rep.",COD
 "Congo, Rep.",COG
 Costa Rica,CRI
-Côte d'Ivoire,CIV
 Croatia,HRV
 Cuba,CUB
 Curaçao,CUW
 Cyprus,CYP
 Czech Republic,CZE
+Côte d’Ivoire,CIV
 Denmark,DNK
 Djibouti,DJI
 Dominica,DMA
@@ -164,7 +164,6 @@ Russian Federation,RUS
 Rwanda,RWA
 Samoa,WSM
 San Marino,SMR
-São Tomé and Principe,STP
 Saudi Arabia,SAU
 Senegal,SEN
 Serbia,SRB
@@ -189,6 +188,7 @@ Suriname,SUR
 Sweden,SWE
 Switzerland,CHE
 Syrian Arab Republic,SYR
+São Tomé and Príncipe,STP
 "Taiwan, China",TWN
 Tajikistan,TJK
 Tanzania,TZA
@@ -198,10 +198,10 @@ Togo,TGO
 Tonga,TON
 Trinidad and Tobago,TTO
 Tunisia,TUN
-Turkey,TUR
 Turkmenistan,TKM
 Turks and Caicos Islands,TCA
 Tuvalu,TUV
+Türkiye,TUR
 Uganda,UGA
 Ukraine,UKR
 United Arab Emirates,ARE
