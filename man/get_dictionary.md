@@ -19,7 +19,7 @@ argument of <code>countrycode()</code>
 <table>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_dictionary_:_dictionary">dictionary</code>
+<code id="dictionary">dictionary</code>
 </td>
 <td>
 A character string that specifies the dictionary to be retrieved. It
@@ -39,7 +39,7 @@ specified, the function will stop and throw an error message.
 ## Examples
 
 ``` r
-library(countrycode)
+library("countrycode")
 
 cd <- get_dictionary("us_states")
 countrycode::countrycode(c("MO", "MN"), origin = "state.abb", "state.name", custom_dict = cd)

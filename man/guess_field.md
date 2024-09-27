@@ -21,7 +21,7 @@ between a user-supplied vector and all the codes included in the
 <table>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="guess_field_:_codes">codes</code>
+<code id="codes">codes</code>
 </td>
 <td>
 a vector of country codes or country names
@@ -29,7 +29,7 @@ a vector of country codes or country names
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="guess_field_:_min_similarity">min_similarity</code>
+<code id="min_similarity">min_similarity</code>
 </td>
 <td>
 the function returns all field names where over than
@@ -42,7 +42,7 @@ vector and the <code>countrycode</code> dictionary.
 ## Examples
 
 ``` r
-library(countrycode)
+library("countrycode")
 
 # Guess ISO codes
 guess_field(c('DZA', 'CAN', 'DEU'))

@@ -31,7 +31,7 @@ belongs.
 <table>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_sourcevar">sourcevar</code>
+<code id="sourcevar">sourcevar</code>
 </td>
 <td>
 Vector which contains the codes or country names to be converted
@@ -40,7 +40,7 @@ Vector which contains the codes or country names to be converted
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_origin">origin</code>
+<code id="origin">origin</code>
 </td>
 <td>
 A string which identifies the coding scheme of origin (e.g.,
@@ -50,7 +50,7 @@ codes.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_destination">destination</code>
+<code id="destination">destination</code>
 </td>
 <td>
 A string or vector of strings which identify the coding scheme of
@@ -63,7 +63,7 @@ destination code in the vector.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_warn">warn</code>
+<code id="warn">warn</code>
 </td>
 <td>
 Prints unique elements from sourcevar for which no match was found
@@ -71,7 +71,7 @@ Prints unique elements from sourcevar for which no match was found
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_nomatch">nomatch</code>
+<code id="nomatch">nomatch</code>
 </td>
 <td>
 When countrycode fails to find a match for the code of origin, it
@@ -85,7 +85,7 @@ of the same length as <code>sourcevar</code>.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_custom_dict">custom_dict</code>
+<code id="custom_dict">custom_dict</code>
 </td>
 <td>
 
@@ -113,7 +113,7 @@ that are accepted as valid origin codes.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_custom_match">custom_match</code>
+<code id="custom_match">custom_match</code>
 </td>
 <td>
 A named vector which supplies custom origin and destination matches that
@@ -124,7 +124,7 @@ used as the destination code.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countrycode_:_origin_regex">origin_regex</code>
+<code id="origin_regex">origin_regex</code>
 </td>
 <td>
 NULL or Logical: When using a custom dictionary, if TRUE then the origin
@@ -159,7 +159,7 @@ datasets which use different codes.
 ## Examples
 
 ``` r
-library(countrycode)
+library("countrycode")
 
 library(countrycode)
 

@@ -33,7 +33,7 @@ characters. Please see the Github page for examples.
 <table>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countryname_:_sourcevar">sourcevar</code>
+<code id="sourcevar">sourcevar</code>
 </td>
 <td>
 Vector which contains the codes or country names to be converted
@@ -42,7 +42,7 @@ Vector which contains the codes or country names to be converted
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countryname_:_destination">destination</code>
+<code id="destination">destination</code>
 </td>
 <td>
 Coding scheme of destination (string such as "iso3c" enclosed in quotes
@@ -51,7 +51,7 @@ Coding scheme of destination (string such as "iso3c" enclosed in quotes
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countryname_:_nomatch">nomatch</code>
+<code id="nomatch">nomatch</code>
 </td>
 <td>
 When countrycode fails to find a match for the code of origin, it
@@ -65,7 +65,7 @@ of the same length as <code>sourcevar</code>.
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="countryname_:_warn">warn</code>
+<code id="warn">warn</code>
 </td>
 <td>
 Prints unique elements from sourcevar for which no match was found
@@ -76,7 +76,7 @@ Prints unique elements from sourcevar for which no match was found
 ## Examples
 
 ``` r
-library(countrycode)
+library("countrycode")
 
 x <- c('Afaganisitani', 'Barbadas', 'Sverige', 'UK')
 countryname(x)
