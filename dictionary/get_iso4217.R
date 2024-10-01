@@ -1,6 +1,6 @@
 source(here::here('dictionary/utilities.R'))
 
-url <- 'https://www.currency-iso.org/dam/downloads/lists/list_one.xls'
+url <- 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xls'
 download.file(url, tmpxls <- tempfile(fileext = '.xls'), quiet = TRUE)
 
 read_excel(tmpxls, skip = 3) %>%
@@ -18,6 +18,7 @@ read_excel(tmpxls, skip = 3) %>%
   filter(!(country == "Panama" & Currency == "US Dollar")) %>%
   filter(!(country == "Uruguay" & Currency == "Unidad Previsional")) %>%
   filter(!(country == "Venezuela" & `Alphabetic Code` == "VES")) %>%
+  filter(!(country == "Sierra Leone" & `Alphabetic Code` == "SLL")) %>%
   mutate(`Numeric Code` = as.numeric(`Numeric Code`)) %>%
   select(country, currency = Currency, iso4217c = `Alphabetic Code`,
          iso4217n = `Numeric Code`) %>%
