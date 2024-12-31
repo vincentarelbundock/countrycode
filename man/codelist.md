@@ -111,7 +111,9 @@ Nations numerical code
 </li>
 <li>
 
-<code>imf</code>: International Monetary Fund
+<code>imf</code>: International Monetary Fund (Warning: The IMF
+generally uses ISO codes. These codes are WEO-related, but may be
+inconsistently used in the wild.)
 
 </li>
 <li>
