@@ -14,7 +14,7 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \subsection{Origin and Destination}{
 \itemize{
 \item \code{cctld}: IANA country code top-level domain
-\item \code{country.name}: country name (English)
+\item \code{country.name.en}: country name (English)
 \item \code{country.name.de}: country name (German)
 \item \code{country.name.fr}: country name (French)
 \item \code{country.name.it}: country name (Italian)
