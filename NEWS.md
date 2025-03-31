@@ -1,6 +1,6 @@
 # News
 
-## development
+## countrycode 1.6.1
 
 * The `simplify` argument in `apply` was introduced in R 4.1.0. We used it, which broke usage of countrycode on older versions of R.
 * `genc` code improvements.
