@@ -25,7 +25,7 @@ Origin and Destination
 </li>
 <li>
 
-<code>country.name</code>: country name (English)
+<code>country.name.en</code>: country name (English)
 
 </li>
 <li>
