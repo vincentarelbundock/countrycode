@@ -3,17 +3,17 @@ AD,Andorra
 AE,United Arab Emirates
 AF,Afghanistan
 AG,Antigua and Barbuda
-AI,Anguilla (UK)
+AI,Anguilla
 AL,Albania
 AM,Armenia
-AN,Former Netherlands Antilles
+AN,Netherlands Antilles
 AO,Angola
 AQ,Antarctica
 AR,Argentina
-AS,American Samoa (US)
+AS,American Samoa
 AT,Austria
 AU,Australia
-AW,Aruba (NL)
+AW,Aruba
 AZ,Azerbaijan
 BA,Bosnia and Herzegovina
 BB,Barbados
@@ -24,26 +24,26 @@ BG,Bulgaria
 BH,Bahrain
 BI,Burundi
 BJ,Benin
-BL,Saint-Barthélemy (FR)
-BM,Bermuda (UK)
+BL,Saint Barthélemy
+BM,Bermuda
 BN,Brunei Darussalam
 BO,Bolivia
 BQ,"Bonaire, Saint Eustatius and Saba"
 BR,Brazil
 BS,Bahamas
 BT,Bhutan
-BV,Bouvet Island (NO)
+BV,Bouvet Island
 BW,Botswana
 BY,Belarus
 BZ,Belize
 CA,Canada
-CC,Cocos (Keeling) Islands (AU)
+CC,Cocos (Keeling) Islands
 CD,Democratic Republic of the Congo
 CF,Central African Republic
 CG,Congo
 CH,Switzerland
-CI,Côte d'Ivoire
-CK,Cook Islands (NZ)
+CI,Côte d’Ivoire
+CK,Cook Islands
 CL,Chile
 CM,Cameroon
 CN,China
@@ -52,10 +52,10 @@ CR,Costa Rica
 CU,Cuba
 CV,Cabo Verde
 CW,Curaçao
-CX,Christmas Island (AU)
+CX,Christmas Island
 CY,Cyprus
 CZ,Czechia
-DE,Germany (until 1990 former territory of the FRG)
+DE,Germany
 DJ,Djibouti
 DK,Denmark
 DM,Dominica
@@ -71,27 +71,27 @@ ES,Spain
 ET,Ethiopia
 FI,Finland
 FJ,Fiji
-FK,Falkland Islands (UK)
+FK,Falkland Islands
 FM,Federated States of Micronesia
-FO,Faroes (DK)
+FO,Faroes
 FR,France
 GA,Gabon
 GD,Grenada
 GE,Georgia
 GG,Guernsey
 GH,Ghana
-GI,Gibraltar (UK)
-GL,Greenland (DK)
+GI,Gibraltar
+GL,Greenland
 GM,"Gambia, The"
 GN,Guinea
 GQ,Equatorial Guinea
-GS,South Georgia and the South Sandwich Islands (UK)
+GS,South Georgia and the South Sandwich Islands
 GT,Guatemala
-GU,Guam (US)
+GU,Guam
 GW,Guinea-Bissau
 GY,Guyana
 HK,Hong Kong
-HM,Heard Island and McDonald Islands (AU)
+HM,Heard Island and McDonald Islands
 HN,Honduras
 HR,Croatia
 HT,Haiti
@@ -101,7 +101,7 @@ IE,Ireland
 IL,Israel
 IM,Isle of Man
 IN,India
-IO,British Indian Ocean Territory (UK)
+IO,British Indian Ocean Territory
 IQ,Iraq
 IR,Iran
 IS,Iceland
@@ -119,7 +119,7 @@ KN,Saint Kitts and Nevis
 KP,North Korea
 KR,South Korea
 KW,Kuwait
-KY,Cayman Islands (UK)
+KY,Cayman Islands
 KZ,Kazakhstan
 LA,Laos
 LB,Lebanon
@@ -144,9 +144,9 @@ ML,Mali
 MM,Myanmar/Burma
 MN,Mongolia
 MO,Macao
-MP,Northern Mariana Islands (US)
+MP,Northern Mariana Islands
 MR,Mauritania
-MS,Montserrat (UK)
+MS,Montserrat
 MT,Malta
 MU,Mauritius
 MV,Maldives
@@ -155,29 +155,29 @@ MX,Mexico
 MY,Malaysia
 MZ,Mozambique
 NA,Namibia
-NC,New Caledonia (FR)
+NC,New Caledonia
 NE,Niger
-NF,Norfolk Island (AU)
+NF,Norfolk Island
 NG,Nigeria
 NI,Nicaragua
 NL,Netherlands
 NO,Norway
 NP,Nepal
 NR,Nauru
-NU,Niue (NZ)
+NU,Niue
 NZ,New Zealand
 OM,Oman
 PA,Panama
 PE,Peru
-PF,French Polynesia (FR)
+PF,French Polynesia
 PG,Papua New Guinea
 PH,Philippines
 PK,Pakistan
 PL,Poland
-PM,Saint Pierre and Miquelon (FR)
-PN,Pitcairn Islands (UK)
-PR,Puerto Rico (US)
-PS,Palestine
+PM,Saint Pierre and Miquelon
+PN,Pitcairn Islands
+PR,Puerto Rico
+PS,Palestine*
 PT,Portugal
 PW,Palau
 PY,Paraguay
@@ -192,9 +192,9 @@ SC,Seychelles
 SD,Sudan
 SE,Sweden
 SG,Singapore
-SH,"Saint Helena, Ascension and Tristan da Cunha (UK)"
+SH,"Saint Helena, Ascension and Tristan da Cunha"
 SI,Slovenia
-SJ,Svalbard and Jan Mayen (NO)
+SJ,Svalbard and Jan Mayen
 SK,Slovakia
 SL,Sierra Leone
 SM,San Marino
@@ -207,18 +207,18 @@ SV,El Salvador
 SX,Sint Maarten
 SY,Syria
 SZ,Eswatini
-TC,Turks and Caicos Islands (UK)
+TC,Turks and Caicos Islands
 TD,Chad
-TF,French Southern and Antarctic Lands (FR)
+TF,French Southern and Antarctic Lands
 TG,Togo
 TH,Thailand
 TJ,Tajikistan
-TK,Tokelau (NZ)
+TK,Tokelau
 TL,Timor-Leste
 TM,Turkmenistan
 TN,Tunisia
 TO,Tonga
-TR,Turkey
+TR,Türkiye
 TT,Trinidad and Tobago
 TV,Tuvalu
 TW,Taiwan
@@ -226,20 +226,20 @@ TZ,Tanzania
 UA,Ukraine
 UG,Uganda
 UK,United Kingdom
-UM,United States Minor Outlying Islands (US)
+UM,United States Minor Outlying Islands
 US,United States
 UY,Uruguay
 UZ,Uzbekistan
-VA,Holy See (the)/Vatican City State
+VA,Holy See
 VC,Saint Vincent and the Grenadines
 VE,Venezuela
-VG,British Virgin Islands (UK)
-VI,US Virgin Islands (US)
-VN,Vietnam
+VG,British Virgin Islands
+VI,US Virgin Islands
+VN,Viet Nam
 VU,Vanuatu
-WF,Wallis and Futuna (FR)
+WF,Wallis and Futuna
 WS,Samoa
-XK,Kosovo (under United Nations Security Council Resolution 1244/99)
+XK,Kosovo*
 YE,Yemen
 YT,Mayotte (FR - part of EU as of 01.01.2014)
 ZA,South Africa
