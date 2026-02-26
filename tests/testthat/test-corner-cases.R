@@ -94,3 +94,65 @@ test_that("misc", {
         "CUW")
 })
 
+
+# Issue #364: custom_match should suppress duplicate-match warnings
+test_that("custom_match suppresses duplicate-match warning (AC1)", {
+    expect_no_warning(
+        countrycode(
+            c("china_hong_kong_sar", "china_macao_sar"),
+            "country.name", "iso3c",
+            custom_match = c(
+                "china_hong_kong_sar" = "HKG",
+                "china_macao_sar" = "MAC"
+            )
+        )
+    )
+})
+
+test_that("custom_match returns correct values for HK/Macau (AC1)", {
+    expect_equal(
+        suppressWarnings(countrycode(
+            c("china_hong_kong_sar", "china_macao_sar"),
+            "country.name", "iso3c",
+            custom_match = c(
+                "china_hong_kong_sar" = "HKG",
+                "china_macao_sar" = "MAC"
+            )
+        )),
+        c("HKG", "MAC")
+    )
+})
+
+test_that("without custom_match HK/Macau still warn (AC2)", {
+    expect_warning(
+        countrycode(c("china_hong_kong_sar", "china_macao_sar"), "country.name", "iso3c"),
+        "matched more than once"
+    )
+})
+
+test_that("partial custom_match warns only for non-overridden value (AC3)", {
+    w <- tryCatch(
+        countrycode(
+            c("china_hong_kong_sar", "china_macao_sar"),
+            "country.name", "iso3c",
+            custom_match = c("china_hong_kong_sar" = "HKG")
+        ),
+        warning = function(w) w
+    )
+    expect_match(conditionMessage(w), "china_macao_sar")
+    expect_false(grepl("china_hong_kong_sar", conditionMessage(w)))
+})
+
+test_that("non-ambiguous custom_match produces no warnings (AC4)", {
+    expect_no_warning(
+        countrycode(
+            c("republic_of_korea", "isle_of_man"),
+            "country.name", "iso3c",
+            custom_match = c(
+                "republic_of_korea" = "KOR",
+                "isle_of_man" = "IMN"
+            )
+        )
+    )
+})
+
