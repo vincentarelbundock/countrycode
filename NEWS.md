@@ -1,8 +1,9 @@
 # News
 
-## countrycode 1.6.2
+## development
 
 * `custom_match` now suppresses ambiguity and duplicate-match warnings for overridden values. Thanks to @victorhartman and @NilsEnevoldsen for the report and analysis (Issue #364).
+* Update many dictionaries to the latest versions from publishing organizations. Thanks to @NilsEnevoldsen.
 
 ## countrycode 1.6.1
 
