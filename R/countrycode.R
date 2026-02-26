@@ -54,7 +54,10 @@
 #' @param custom_match A named vector which supplies custom origin and
 #'   destination matches that will supercede any matching default result. The name
 #'   of each element will be used as the origin code, and the value of each
-#'   element will be used as the destination code.
+#'   element will be used as the destination code. Values supplied via
+#'   `custom_match` supersede ambiguous or duplicate matches and will not
+#'   trigger the corresponding ambiguity/duplicate-match warnings for those
+#'   values.
 #' @param origin_regex NULL or Logical: When using a custom
 #'   dictionary, if TRUE then the origin codes will be matched as
 #'   regex, if FALSE they will be matched exactly. When NULL,
@@ -369,9 +372,14 @@ countrycode_convert <- function(# user-supplied arguments
         }
         if(origin_regex){
            if(length(destination_list) > 0){
-               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
-               destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n", call. = FALSE)
+               if (!is.null(custom_match)) {
+                   destination_list <- destination_list[!names(destination_list) %in% names(custom_match)]
+               }
+               if (length(destination_list) > 0) {
+                   destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
+                   destination_list <- sort(unique(do.call('c', destination_list)))
+                   warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n", call. = FALSE)
+               }
            }
         }
     }
