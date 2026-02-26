@@ -119,7 +119,7 @@ Indien,indien(?!.*ocea),India,india(?!.*ocea),Inde,^(?!.*brit)^(?!.*ocea).*ind(?
 Indonesien,indonesien,Indonesia,indonesia,Indonésie,indon[ée]si(?:e|ien),Indonesia,indonesia
 Iran,\biran|persia,Iran (Islamic Republic of),\biran|persia,Iran,\biran(?:ien)?|persia,Iran,\biran|persia
 Irak,\birak|mesopotamia,Iraq,\biraq|mesopotamia,Irak,irak(?:ien)?,Iraq,iraq|irachen
-Irland,irland,Ireland,^(?!.*north).*\bireland,Irlande,irlande|irlandais,Irlanda,irland
+Irland,irland,Ireland,^(?!.*north)(?!n\.?\s+ireland)(?!.*ireland[^a-zA-Z]*n\.?(?!\w)).*\bireland,Irlande,irlande|irlandais,Irlanda,irland
 Isle of Man,^(?=.*isle).*\bman|^man.*insel,Isle of Man,^(?=.*isle).*\bman,Île de Man,^(?=.*ile).*\bman|^(?=.*île).*(?:de|of).*\bman|\biom\b,Isola di Man,^(?=.*isle).*\bman|^(?=.*isola).*\bman|\biom\b
 Israel,israel,Israel,israel,Israël,isra[eë]l(?:ien)?,Israele,israel
 Italien,italien|italienische.?.?republi,Italy,italy|italian.?republic,Italie,itali(?:e|ien),Italia,italia(?:no)?
@@ -266,7 +266,7 @@ Uganda,uganda,Uganda,uganda,Ouganda,ouganda,Uganda,ugand(?:a|ese|esa)
 Ukraine,ukrain,Ukraine,ukrain,Ukraine,ukrain,Ucraina,ucrain[ao]
 Vereinigte Arabische Emirate,arabische.?emirate,United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Émirats arabes unis,[ée]mirats.*arabes|\bu\.?a\.?e\.?\b,Emirati Arabi Uniti,emirati.?arabi.?uniti|\bu\.?a\.?e\.?\b
 Vereinigte Arabische Republik,arabische.?republik,United Arab Republic,united.arab.republic,,r[eé]pu.*arab.*unie,,repubb.*arab.*unita
-Großbritannien,gro(?:ss|ß)britannien|britanien|vereinigtes.?k[öo]nigreich|^u\.?k\.?$,United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$,Royaume-Uni,grande-bretagne|royaume.*uni,Regno Unito,gran.*bretagna|regno.*unito|irlanda.*nord
+Großbritannien,gro(?:ss|ß)britannien|britanien|vereinigtes.?k[öo]nigreich|^u\.?k\.?$,United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$|north.*ireland|ireland.*north|\bn\.?\s+ireland|ireland[^a-zA-Z]*n\.?(?!\w),Royaume-Uni,grande-bretagne|royaume.*uni,Regno Unito,gran.*bretagna|regno.*unito|irlanda.*nord
 Vereinigte Provinz CA,united.province.ca|vereinigte.provinz.ca,United Province CA,united.province.ca,,united.province.ca|province.unie.*ca,,united.province.ca|provincia.unita.ca
 Tansania,tan[sz]ania,United Republic of Tanzania,tanzania,Tanzanie,tanzanie,Tanzania,tanzania
 United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,Mineures éloignées des États-Unis (les),minor.?outlying.?is|[îi]les.*mineures.*[ée]tats-unis,,minor.?outlying.?is|isole.*minori.*esterne.*stati.*uniti

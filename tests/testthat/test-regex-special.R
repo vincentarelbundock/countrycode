@@ -165,9 +165,24 @@ test_that('Micronesia is not Federated States of Micronesia', {
 })
 
 
-test_that('Northern Ireland is not Ireland', {
-    expect_equal(no_warn_iso3c_of('Northern Ireland'), NA_character_)
+test_that('Northern Ireland is not Ireland (Issue #313)', {
+    # Republic of Ireland
     expect_equal(iso3c_of('Ireland'), 'IRL')
+
+    # Abbreviated and reordered Northern Ireland forms -> United Kingdom
+    expect_equal(iso3c_of('Northern Ireland'), 'GBR')
+    expect_equal(iso3c_of('North Ireland'), 'GBR')
+    expect_equal(iso3c_of('N Ireland'), 'GBR')
+    expect_equal(iso3c_of('N. Ireland'), 'GBR')
+    expect_equal(iso3c_of('Ireland (Northern)'), 'GBR')
+    expect_equal(iso3c_of('Ireland (North)'), 'GBR')
+    expect_equal(iso3c_of('Ireland (N)'), 'GBR')
+    expect_equal(iso3c_of('Ireland (N.)'), 'GBR')
+    expect_equal(iso3c_of('Ireland, Northern'), 'GBR')
+    expect_equal(iso3c_of('Ireland, North'), 'GBR')
+    expect_equal(iso3c_of('Ireland, N.'), 'GBR')
+    expect_equal(iso3c_of('Ireland, N'), 'GBR')
+    expect_equal(iso3c_of('in the north of Ireland'), 'GBR')
 })
 
 
