@@ -186,6 +186,29 @@ test_that('Northern Ireland is not Ireland (Issue #313)', {
 })
 
 
+test_that('East and West Germany are disambiguated', {
+    # Basic Germany forms map to modern Germany / FRG
+    expect_equal(iso3c_of('Germany'), 'DEU')
+    expect_equal(cowc_of('Germany'), 'GMY')
+    expect_equal(iso3c_of('Federal Republic of Germany'), 'DEU')
+    expect_equal(cowc_of('Federal Republic of Germany'), 'GMY')
+
+    # Historical East Germany (GDR) is identified by explicit east + germany forms
+    expect_equal(cowc_of('East Germany'), 'GDR')
+    expect_equal(cowc_of('Germany East'), 'GDR')
+
+    # West Germany maps to Germany / FRG depending on destination code
+    expect_equal(iso3c_of('West Germany'), 'DEU')
+    expect_equal(iso3c_of('Germany West'), 'DEU')
+    expect_equal(cowc_of('West Germany'), 'GMY')
+    expect_equal(cowc_of('Germany West'), 'GMY')
+
+    # Word boundaries avoid treating regional labels as the former GDR
+    expect_equal(iso3c_of('Eastern Germany'), 'DEU')
+    expect_equal(cowc_of('Eastern Germany'), 'GMY')
+})
+
+
 test_that('leading and trailing whitespace does not interfere', {
     expect_equal(cowc_of(' Republic of Vietnam'), 'RVN')
     expect_equal(cowc_of('\tUnited States'), 'USA')

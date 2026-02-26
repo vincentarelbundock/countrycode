@@ -88,8 +88,8 @@ Französische Südgebiete,französische.?süd.*gebiete,French Southern Territori
 Gabun,gabun,Gabon,gabon,Gabon,gab[uo]n,Gabon,gabon
 Gambia,gambia,Gambia (Islamic Republic of the),gambia,Gambie,gambi(?:e|ien),Gambia,gambia
 Georgien,^(?!.*süd).*georgien,Georgia,^(?!.*south).*georgia,Géorgie,^(?!.*sud).*g[ée]orgi(?:e|ien),Georgia,^(?!.*sud).*georgia
-Deutsche Demokratische Republik,deutsche.?demokratische.?republik|ostdeutschland|\bddr\b,German Democratic Republic,german.?democratic.?rep|democratic.?rep.*germany|east.germany|germany.*east,,r[eé]p.*d[eé]mocart.*allemand,,repubb.*democrat.*tedesc[ao]
-Deutschland,^(?!.*ost).*deutschland|^(?=.*\bbundesrepublik).*deutschland,Germany,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,Allemagne,allemagne|allemand,Germania,germania|tedesco
+Deutsche Demokratische Republik,deutsche.?demokratische.?republik|ostdeutschland|\bddr\b,German Democratic Republic,german.?democratic.?rep|democratic.?rep.*germany|\beast\b.*\bgermany\b|\bgermany\b.*\beast\b,,r[eé]p.*d[eé]mocart.*allemand,,repubb.*democrat.*tedesc[ao]
+Deutschland,^(?!.*ost).*deutschland|^(?=.*\bbundesrepublik).*deutschland,Germany,^(?!.*\beast\b).*\bgermany\b|^(?=.*\bfed.*\brep).*german,Allemagne,allemagne|allemand,Germania,germania|tedesco
 Ghana,ghana|gold.?küste,Ghana,ghana|gold.?coast,Ghana,^ghana|c[oô]te.?or|\bghan[eé]e,Ghana,^ghan[aei]|costa.*oro|gold.*coast
 Gibraltar,gibraltar,Gibraltar,gibraltar,Gibraltar,gibraltar,Gibilterra,gibilterra|gibraltar
 Griechenland,griechenland|hellenic|hellas,Greece,greece|hellenic|hellas,Grèce,\bgr[eè]ce|rép.*hell[eé]nique,Grecia,grecia|ellenico

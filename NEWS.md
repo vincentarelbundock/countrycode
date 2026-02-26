@@ -7,6 +7,7 @@
 * `TÜRKİYE` (dotted capital İ) now matches Turkey. Thanks to @cjyetman and @NilsEnevoldsen for report #347.
 * Update many dictionaries to the latest versions from publishing organizations. Thanks to @NilsEnevoldsen.
 * Improve Ireland regular expressions and add tests. Issue #313.
+* Improve Germany / East Germany regular expressions and add tests. Issue #313.
 
 ## countrycode 1.6.1
 
@@ -218,6 +219,5 @@ Misc:
 * Moved documentation to roxygen2
 * Fixed Trinidad Tobago regex
 * Added UN and FAO country codes
-
 
 
