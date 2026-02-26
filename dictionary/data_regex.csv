@@ -156,7 +156,7 @@ Mauritius,mauritius,Mauritius,mauritius,Maurice,maurice|mauritius,Mauritius,maur
 Mayotte,\bmayotte,Mayotte,\bmayotte,Mayotte,\bmayotte,Mayotte,\bma(i|y)ott(a|e)
 Mecklenburg-Schwerin,mecklenbur.*schwerin,Mecklenburg Schwerin,mecklenbur.*schwerin,,mecklenbour.*schwerin,,meclembur.*schwerin
 Mexiko,\bmexik,Mexico,\bmexic,Mexique,mexique|mexicain,Messico,messic(o|a)
-Mikronesien,mikronesien,Micronesia (Federated States of),fed.*micronesia|micronesia.*fed,Micronésie (États fédérés de),micron(é|e)sie,,micronesia
+Mikronesien,f(ö|oe)der.*mikronesien|mikronesien.*f(ö|oe)der|\bf\.?\s*s\.?\s+mikronesien,Micronesia (Federated States of),fed.*micronesia|micronesia.*fed|\bf\.?\s*s\.?\s+micronesia,Micronésie (États fédérés de),f(é|e)d.*micron(é|e)sie|micron(é|e)sie.*f(é|e)d|\bf\.?\s*s\.?\s+micron(é|e)sie,,stati.*feder.*micronesia|micronesia.*stati.*feder|\bf\.?\s*s\.?\s+micronesia
 Modena,modena|muden|mutina,Modena,modena,,mod(è|e)n(a|e),,moden(a|e)
 Monaco,monaco,Monaco,monaco,Monaco,monaco|mon(é|e)gasque,Monaco,monaco|moegasc
 Mongolei,mongolei,Mongolia,mongolia,Mongolie,mongol(ie)?,Mongolia,mongol(ia|o|a)

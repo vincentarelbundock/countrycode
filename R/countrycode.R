@@ -368,7 +368,10 @@ countrycode_convert <- function(# user-supplied arguments
         badmatch <- sort(unique(origin_vector[is.na(destination_vector)]))
         badmatch <- badmatch[!badmatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
         if(length(badmatch) > 0){
-            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n", call. = FALSE)
+            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "),
+                    "\nTo fix unmatched values, please use the `custom_match` argument. ",
+                    "If you think the default matching rules should be improved, please file an issue at ",
+                    "https://github.com/vincentarelbundock/countrycode/issues\n", call. = FALSE)
         }
         if(origin_regex){
            if(length(destination_list) > 0){

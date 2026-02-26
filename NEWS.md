@@ -3,6 +3,7 @@
 ## countrycode 1.6.2
 
 * `custom_match` now suppresses ambiguity and duplicate-match warnings for overridden values. Thanks to @victorhartman and @NilsEnevoldsen for the report and analysis (Issue #364).
+* Bare "Micronesia" (and its French, German, and Italian equivalents) no longer matches the Federated States of Micronesia (FSM), removing a cross-language inconsistency. Common unambiguous variants—full formal names and FS/F.S. abbreviation prefixes—continue to map to FSM. The no-match warning now also points to the `custom_match` argument and the issue tracker. Thanks to @mattkerlogue, @stefgehrig, @cjyetman, and @NilsEnevoldsen for the discussion (Issue #354).
 
 ## countrycode 1.6.1
 
