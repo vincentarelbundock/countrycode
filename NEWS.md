@@ -4,6 +4,7 @@
 
 * `custom_match` now suppresses ambiguity and duplicate-match warnings for overridden values. Thanks to [@victorhartman](https://github.com/victorhartman) and [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) for the report and analysis (Issue [#364](https://github.com/vincentarelbundock/countrycode/issues/364)).
 * Stricter Micronesia regular expressions. Thanks to [@mattkerlogue](https://github.com/mattkerlogue), [@stefgehrig](https://github.com/stefgehrig), [@cjyetman](https://github.com/cjyetman), [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) for discussion in Issue [#354](https://github.com/vincentarelbundock/countrycode/issues/354).
+* `TÜRKİYE` (dotted capital İ) now matches Turkey. Thanks to [@cjyetman](https://github.com/cjyetman) and [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) for report [#347](https://github.com/vincentarelbundock/countrycode/issues/347).
 * Update many dictionaries to the latest versions from publishing organizations. Thanks to [@NilsEnevoldsen](https://github.com/NilsEnevoldsen).
 
 ## countrycode 1.6.1
