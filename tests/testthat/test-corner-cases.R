@@ -156,3 +156,10 @@ test_that("non-ambiguous custom_match produces no warnings (AC4)", {
     )
 })
 
+
+test_that("Turkey regex matches dotted capital \u0130 spelling", {
+    x <- c("Turkey", "Turkiye", "T\u00fcrkiye", "T\u00dcRK\u0130YE")
+    out <- countrycode(x, "country.name", "country.name", warn = FALSE)
+    expect_equal(out, rep("Turkey", length(x)))
+})
+
