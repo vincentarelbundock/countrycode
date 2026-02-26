@@ -66,22 +66,22 @@ df1
 ```
 
       cowcodes var1
-    1      ALG  433
-    2      ALB  111
-    3      UKG  276
-    4      CAN  238
-    5      USA   14
+    1      ALG  239
+    2      ALB   94
+    3      UKG   81
+    4      CAN  192
+    5      USA  151
 
 ``` r
 df2
 ```
 
       isocodes var2
-    1       12  365
-    2        8  116
-    3      826  119
-    4      124  161
-    5      840  293
+    1       12  297
+    2        8  117
+    3      826  327
+    4      124  222
+    5      840  376
 
 Create a common variable with the iso3c code in each data frame, merge
 the data, and create a country identifier:
@@ -95,11 +95,11 @@ df3
 ```
 
       iso3c cowcodes var1 isocodes var2        country
-    1   ALB      ALB  111        8  116        Albania
-    2   CAN      CAN  238      124  161         Canada
-    3   DZA      ALG  433       12  365        Algeria
-    4   GBR      UKG  276      826  119 United Kingdom
-    5   USA      USA   14      840  293  United States
+    1   ALB      ALB   94        8  117        Albania
+    2   CAN      CAN  192      124  222         Canada
+    3   DZA      ALG  239       12  297        Algeria
+    4   GBR      UKG   81      826  327 United Kingdom
+    5   USA      USA  151      840  376  United States
 
 ## Flags
 
@@ -209,6 +209,7 @@ countrycode(st, "state.regex", "state.abb", custom_dict = cd)
 ```
 
     Warning: Some values were not matched unambiguously: Quebec
+    To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
 
     [1] "AR" NA   "TN"
 
@@ -289,6 +290,7 @@ countrycode(x, "country.name", "cowc")
 ```
 
     Warning: Some values were not matched unambiguously: Serbia
+    To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
 
     [1] "ALG" NA   
 
@@ -303,6 +305,7 @@ countrycode(x, "country.name", c("cowc", "iso3c"))
 ```
 
     Warning: Some values were not matched unambiguously: Serbia
+    To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
 
     [1] "ALG" "SRB"
 
@@ -363,7 +366,7 @@ library(countrycode)
 df <- eurostat::get_eurostat("nama_10_lp_ulc")
 ```
 
-    Table nama_10_lp_ulc cached at /tmp/RtmpONIAja/eurostat/970d1b8a228cc961e5a37b03f6f45c40.rds
+    Table nama_10_lp_ulc cached at /tmp/RtmpYFvW32/eurostat/970d1b8a228cc961e5a37b03f6f45c40.rds
 
 ``` r
 custom_match <- c(EL = 'Greece', UK = 'United Kingdom')
@@ -372,6 +375,7 @@ countrycode(df$geo, origin = 'iso2c', destination = 'country.name', custom_match
 ```
 
     Warning: Some values were not matched unambiguously: EA, EA12, EA19, EA20, EA21, EU27_2020, XK
+    To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
 
     [1] "Austria" "Austria" "Austria" "Austria" "Austria" "Austria"
 
