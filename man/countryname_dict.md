@@ -1,7 +1,6 @@
 
 
-A dataframe of alternative country names in many languages. Used
-internally by the <code>countryname</code> function.
+# A dataframe of alternative country names in many languages. Used internally by the <code>countryname</code> function.
 
 ## Description
 

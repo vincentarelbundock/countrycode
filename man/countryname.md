@@ -30,9 +30,9 @@ characters. Please see the Github page for examples.
 
 ## Arguments
 
-<table>
+<table role="presentation">
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="sourcevar">sourcevar</code>
 </td>
 <td>
@@ -41,7 +41,7 @@ Vector which contains the codes or country names to be converted
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="destination">destination</code>
 </td>
 <td>
@@ -50,7 +50,7 @@ Coding scheme of destination (string such as "iso3c" enclosed in quotes
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="nomatch">nomatch</code>
 </td>
 <td>
@@ -64,7 +64,7 @@ of the same length as <code>sourcevar</code>.
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="warn">warn</code>
 </td>
 <td>

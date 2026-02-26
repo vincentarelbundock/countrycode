@@ -94,4 +94,5 @@ countrycode("AL", "abbreviation", "state", custom_dict = state_dict)
 countrycode("Alabama", "state", "abbreviation", custom_dict = state_dict)
 ```
 
-    Error in countrycode("Alabama", "state", "abbreviation", custom_dict = state_dict): The `origin` argument must be a string of length 1 equal to one of these values: state.regex, abbreviation.
+    Error in `countrycode()`:
+    ! The `origin` argument must be a string of length 1 equal to one of these values: state.regex, abbreviation.

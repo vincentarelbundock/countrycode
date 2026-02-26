@@ -28,9 +28,9 @@ belongs.
 
 ## Arguments
 
-<table>
+<table role="presentation">
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="sourcevar">sourcevar</code>
 </td>
 <td>
@@ -39,7 +39,7 @@ Vector which contains the codes or country names to be converted
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="origin">origin</code>
 </td>
 <td>
@@ -49,7 +49,7 @@ codes.
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="destination">destination</code>
 </td>
 <td>
@@ -62,7 +62,7 @@ destination code in the vector.
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="warn">warn</code>
 </td>
 <td>
@@ -70,7 +70,7 @@ Prints unique elements from sourcevar for which no match was found
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="nomatch">nomatch</code>
 </td>
 <td>
@@ -84,7 +84,7 @@ of the same length as <code>sourcevar</code>.
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="custom_dict">custom_dict</code>
 </td>
 <td>
@@ -112,7 +112,7 @@ that are accepted as valid origin codes.
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="custom_match">custom_match</code>
 </td>
 <td>
@@ -123,7 +123,7 @@ used as the destination code.
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="origin_regex">origin_regex</code>
 </td>
 <td>

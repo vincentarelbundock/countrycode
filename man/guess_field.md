@@ -18,9 +18,9 @@ between a user-supplied vector and all the codes included in the
 
 ## Arguments
 
-<table>
+<table role="presentation">
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="codes">codes</code>
 </td>
 <td>
@@ -28,7 +28,7 @@ a vector of country codes or country names
 </td>
 </tr>
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="min_similarity">min_similarity</code>
 </td>
 <td>

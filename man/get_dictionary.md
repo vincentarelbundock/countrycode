@@ -16,9 +16,9 @@ argument of <code>countrycode()</code>
 
 ## Arguments
 
-<table>
+<table role="presentation">
 <tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<td style="white-space: collapse; font-family: monospace; vertical-align: top">
 <code id="dictionary">dictionary</code>
 </td>
 <td>
