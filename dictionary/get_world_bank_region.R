@@ -2,6 +2,7 @@ source(here::here('dictionary/utilities.R'))
 
 automatic <- WDI(country = "all", start = 2016, end = 2016, extra = TRUE) %>%
              filter(region != 'Aggregates') %>%
+             arrange(iso2c) %>%
              select(country, region) %>%
              drop_na %>%
              unique
@@ -68,6 +69,7 @@ manual <- tribble(
 "Saxe-Weimar-Eisenach",                         "Europe & Central Asia",
 "Saxony",                                       "Europe & Central Asia",
 "Serbia and Montenegro",                        "Europe & Central Asia",
+"Somalia",                                      "Sub-Saharan Africa",
 "Somaliland",                                   "Sub-Saharan Africa",
 "South Georgia and the South Sandwich Islands", "East Asia & Pacific",
 "Svalbard and Jan Mayen",                       NA,

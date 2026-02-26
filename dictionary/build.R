@@ -56,7 +56,7 @@ dat$iso$iso2c[dat$iso$iso.name.en == 'Namibia'] <- 'NA'
 ###################
 
 idx <- sapply(dat, function(x) !'year' %in% names(x))
-cs <- dat[idx] %>% 
+cs <- dat[idx] %>%
       reduce(left_join, by = 'country.name.en.regex')
 
 # sanity check
@@ -92,7 +92,7 @@ pan <- pan[idx,]
 tmp <- pan %>%
        arrange(country.name.en.regex, year) %>%
        group_by(country.name.en.regex) %>%
-       mutate_at(vars(-group_cols()), na.locf, na.rm = FALSE) %>% 
+       mutate_at(vars(-group_cols()), zoo::na.locf, na.rm = FALSE) %>%
        filter(year %in% max(year)) %>%
        # arbitrary choices
        mutate(p5n = ifelse(p4.name %in% 'Prussia', NA, p5n),
@@ -105,7 +105,7 @@ tmp <- pan %>%
               p4c = ifelse(p4.name %in% 'Serbia and Montenegro', NA, p4c),
               vdem = ifelse(vdem.name %in% 'Czechoslovakia', NA, vdem))
 
-cs <- cs %>% 
+cs <- cs %>%
       left_join(tmp, by = 'country.name.en.regex') %>%
       select(-year)
 
@@ -121,7 +121,7 @@ cs$country.name <- NULL
 
 # merge cs into pan
 idx <- c('country.name.en.regex', setdiff(colnames(cs), colnames(pan)))
-pan <- pan %>% 
+pan <- pan %>%
        left_join(cs[, idx], by = 'country.name.en.regex') %>%
        select(-matches('name$|cldr'))
 
