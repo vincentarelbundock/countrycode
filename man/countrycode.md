@@ -2,7 +2,7 @@
 
 # Convert Country Codes
 
-[**Source code**](https://github.com/vincentarelbundock/countrycode/tree/main/R/countrycode.R#L89)
+[**Source code**](https://github.com/vincentarelbundock/countrycode/tree/main/R/countrycode.R#L92)
 
 ## Description
 
@@ -119,7 +119,10 @@ that are accepted as valid origin codes.
 A named vector which supplies custom origin and destination matches that
 will supercede any matching default result. The name of each element
 will be used as the origin code, and the value of each element will be
-used as the destination code.
+used as the destination code. Values supplied via
+<code>custom_match</code> supersede ambiguous or duplicate matches and
+will not trigger the corresponding ambiguity/duplicate-match warnings
+for those values.
 </td>
 </tr>
 <tr>
