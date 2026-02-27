@@ -158,6 +158,11 @@ inconsistently used in the wild.)
 </li>
 <li>
 
+<code>telephone</code>: ITU-T E.164 country codes for telecommunication
+
+</li>
+<li>
+
 <code>un</code>: United Nations M49 numeric codes
 
 </li>
