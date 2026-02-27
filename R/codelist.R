@@ -5,7 +5,7 @@
 #' ## Origin and Destination
 #'
 #' - `cctld`: IANA country code top-level domain
-#' - `country.name`: country name (English)
+#' - `country.name.en`: country name (English)
 #' - `country.name.de`: country name (German)
 #' - `country.name.fr`: country name (French)
 #' - `country.name.it`: country name (Italian)
@@ -22,7 +22,7 @@
 #' - `genc3n`: GENC numeric code
 #' - `gwc`: Gleditsch & Ward character
 #' - `gwn`: Gleditsch & Ward numeric
-#' - `imf`: International Monetary Fund
+#' - `imf`: International Monetary Fund (Warning: The IMF generally uses ISO codes. These codes are WEO-related, but may be inconsistently used in the wild.)
 #' - `ioc`: International Olympic Committee
 #' - `iso2c`: ISO-2 character
 #' - `iso3c`: ISO-3 character

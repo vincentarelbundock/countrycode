@@ -10,7 +10,7 @@ Armenia,Arménie,Armenia,Армения,亚美尼亚,أرمينيا,Armenia
 Australia,Australie,Australia,Австралия,澳大利亚,أستراليا,Australia
 Austria,Autriche,Austria,Австрия,奥地利,النمسا,Austria
 Azerbaijan,Azerbaïdjan,Azerbaiyán,Азербайджан,阿塞拜疆,أذربيجان,Azerbaijan
-Bahamas,Bahamas,Bahamas,Багамские Острова,巴哈马,جزر البهاما,Bahamas
+Bahamas (The),Bahamas (les),Bahamas (Las),Багамские Острова,巴哈马,جزر البهاما,Bahamas (The)
 Bahrain,Bahreïn,Bahrein,Бахрейн,巴林,البحرين,Bahrain
 Bangladesh,Bangladesh,Bangladesh,Бангладеш,孟加拉国,بنغلاديش,Bangladesh
 Barbados,Barbade,Barbados,Барбадос,巴巴多斯,بربادوس,Barbados
@@ -34,7 +34,7 @@ Canada,Canada,Canadá,Канада,加拿大,كندا,Canada
 Central African Republic,République centrafricaine,República Centroafricana,Центральноафриканская Республика,中非共和国,جمهورية أفريقيا الوسطى,Central African Republic
 Chad,Tchad,Chad,Чад,乍得,تشاد,Chad
 Chile,Chili,Chile,Чили,智利,شيلي,Chile
-China,Chine,China,Китай,中国,الصين,China
+China (the People's Republic of),Chine,China,Китай,中国,الصين,China (the People's Republic of)
 Colombia,Colombie,Colombia,Колумбия,哥伦比亚,كولومبيا,Colombia
 Comoros,Comores,Comoras,Коморские Острова,科摩罗,جزر القمر,Comoros
 Congo,Congo,Congo,Конго,刚果,الكونغو,Congo
@@ -43,13 +43,13 @@ Côte d’Ivoire,Côte d’Ivoire,Côte d’Ivoire,Кот-д’Ивуар,科特
 Croatia,Croatie,Croacia,Хорватия,克罗地亚,كرواتيا,Croatia
 Cuba,Cuba,Cuba,Куба,古巴,كوبا,Cuba
 Cyprus,Chypre,Chipre,Кипр,塞浦路斯,قبرص,Cyprus
-Czechia,Tchéquie,Chequia,Чеxия,捷克,تشيكيا,Czechia
+Czechia,Tchéquie,Chequia,Чехия,捷克,تشيكيا,Czechia
 Democratic People’s Republic of Korea,République populaire démocratique de Corée,República Popular Democrática de Corea,Корейская Народно-Демократическая Республика,朝鲜民主主义人民共和国,جمهورية كوريا الشعبية الديمقراطية,Democratic People’s Republic of Korea
 Democratic Republic of the Congo,République démocratique du Congo,República Democrática del Congo,Демократическая Республика Конго,刚果民主共和国,جمهورية الكونغو الديمقراطية,Democratic Republic of the Congo
 Denmark,Danemark,Dinamarca,Дания,丹麦,الدانمرك,Denmark
 Djibouti,Djibouti,Djibouti,Джибути,吉布提,جيبوتي,Djibouti
 Dominica,Dominique,Dominica,Доминика,多米尼克,دومينيكا,Dominica
-Dominican Republic,République dominicaine,República Dominicana,Доминиканская Республика,多米尼加,الجمهورية الدومينيكية,Dominican Republic
+Dominican Republic,République dominicaine,República Dominicana,Доминиканская Республика,多米尼加共和国,الجمهورية الدومينيكية,Dominican Republic
 Ecuador,Équateur,Ecuador,Эквадор,厄瓜多尔,إكوادور,Ecuador
 Egypt,Égypte,Egipto,Египет,埃及,مصر,Egypt
 El Salvador,El Salvador,El Salvador,Сальвадор,萨尔瓦多,السلفادور,El Salvador
@@ -120,7 +120,7 @@ Myanmar,Myanmar,Myanmar,Мьянма,缅甸,ميانمار,Myanmar
 Namibia,Namibie,Namibia,Намибия,纳米比亚,ناميبيا,Namibia
 Nauru,Nauru,Nauru,Науру,瑙鲁,ناورو,Nauru
 Nepal,Népal,Nepal,Непал,尼泊尔,نيبال,Nepal
-Netherlands,Pays-Bas,Países Bajos,Нидерланды,荷兰,هولندا,Netherlands
+Netherlands (Kingdom of the),Pays-Bas (Royaume des),Países Bajos (Reino de los),Нидерланды (Королевство),荷兰王国,مملكة هولندا,Netherlands (Kingdom of the)
 New Zealand,Nouvelle-Zélande,Nueva Zelandia,Новая Зеландия,新西兰,نيوزيلندا,New Zealand
 Nicaragua,Nicaragua,Nicaragua,Никарагуа,尼加拉瓜,نيكاراغوا,Nicaragua
 Niger,Niger,Níger,Нигер,尼日尔,النيجر,Niger
@@ -131,7 +131,7 @@ Oman,Oman,Omán,Оман,阿曼,عمان,Oman
 Pakistan,Pakistan,Pakistán,Пакистан,巴基斯坦,باكستان,Pakistan
 Palau,Palaos,Palau,Палау,帕劳,بالاو,Palau
 Panama,Panama,Panamá,Панама,巴拿马,بنما,Panama
-Papua New Guinea,Papouasie-Nouvelle-Guinée,Papua Nueva Guinea,Папуа-Новая Гвинея,巴布亚新几内亚,بابوا غينيا الجديدة,Papua New Guinea
+Papua New Guinea,Papouasie-Nouvelle-Guinée,Papua Nueva Guinea,Папуа — Новая Гвинея,巴布亚新几内亚,بابوا غينيا الجديدة,Papua New Guinea
 Paraguay,Paraguay,Paraguay,Парагвай,巴拉圭,باراغواي,Paraguay
 Peru,Pérou,Perú,Перу,秘鲁,بيرو,Peru
 Philippines,Philippines,Filipinas,Филиппины,菲律宾,الفلبين,Philippines
@@ -140,7 +140,7 @@ Portugal,Portugal,Portugal,Португалия,葡萄牙,البرتغال,Portu
 Qatar,Qatar,Qatar,Катар,卡塔尔,قطر,Qatar
 Republic of Korea,République de Corée,República de Corea,Республика Корея,大韩民国,جمهورية كوريا,Republic of Korea
 Republic of Moldova,République de Moldova,República de Moldova,Республика Молдова,摩尔多瓦共和国,جمهورية مولدوفا,Republic of Moldova
-Romania,Roumanie,Rumania,Румыния,罗马尼亚,رومانيا,Romania
+Romania,Roumanie,Rumanía,Румыния,罗马尼亚,رومانيا,Romania
 Russian Federation,Fédération de Russie,Federación de Rusia,Российская Федерация,俄罗斯联邦,الاتحاد الروسي,Russian Federation
 Rwanda,Rwanda,Rwanda,Руанда,卢旺达,رواندا,Rwanda
 Saint Kitts and Nevis,Saint-Kitts-et-Nevis,Saint Kitts y Nevis,Сент-Китс и Невис,圣基茨和尼维斯,سانت كيتس ونيفس,Saint Kitts and Nevis

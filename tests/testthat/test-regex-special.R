@@ -135,16 +135,77 @@ test_that('some old and colonial names are matched', {
 
 
 test_that('Micronesia is not Federated States of Micronesia', {
+    # bare ambiguous label → NA in all language origins, and warn is emitted
+    expect_warning(iso3c_of('Micronesia'), regexp = 'not matched')
     expect_equal(no_warn_iso3c_of('Micronesia'), NA_character_)
+    expect_equal(countrycode('Mikronesien', 'country.name.de', 'iso3c', warn = FALSE), NA_character_)
+    expect_equal(countrycode('Micron\u00e9sie', 'country.name.fr', 'iso3c', warn = FALSE), NA_character_)
+    expect_equal(countrycode('Micronesia', 'country.name.it', 'iso3c', warn = FALSE), NA_character_)
+    # unambiguous full English names → FSM
     expect_equal(iso3c_of('Federated States of Micronesia'), 'FSM')
     expect_equal(iso3c_of('Micronesia, Federated States of'), 'FSM')
     expect_equal(iso3c_of('Micronesia (Federated States of)'), 'FSM')
+    # FS abbreviation forms (EN origin) → FSM
+    expect_equal(iso3c_of('FS Micronesia'), 'FSM')
+    expect_equal(iso3c_of('F.S. Micronesia'), 'FSM')
+    expect_equal(iso3c_of('F S Micronesia'), 'FSM')
+    # German: qualified forms → FSM, FS abbreviation → FSM
+    expect_equal(countrycode('F\u00f6derierte Staaten von Mikronesien', 'country.name.de', 'iso3c'), 'FSM')
+    expect_equal(countrycode('Mikronesien (F\u00f6derierte Staaten von)', 'country.name.de', 'iso3c'), 'FSM')
+    expect_equal(countrycode('FS Mikronesien', 'country.name.de', 'iso3c'), 'FSM')
+    expect_equal(countrycode('F.S. Mikronesien', 'country.name.de', 'iso3c'), 'FSM')
+    # French: qualified forms → FSM, FS abbreviation → FSM
+    expect_equal(countrycode('Micron\u00e9sie (\u00c9tats f\u00e9d\u00e9r\u00e9s de)', 'country.name.fr', 'iso3c'), 'FSM')
+    expect_equal(countrycode('\u00c9tats f\u00e9d\u00e9r\u00e9s de Micron\u00e9sie', 'country.name.fr', 'iso3c'), 'FSM')
+    expect_equal(countrycode('FS Micron\u00e9sie', 'country.name.fr', 'iso3c'), 'FSM')
+    # Italian: qualified forms → FSM, FS abbreviation → FSM
+    expect_equal(countrycode('Stati Federati di Micronesia', 'country.name.it', 'iso3c'), 'FSM')
+    expect_equal(countrycode('Micronesia (Stati Federati di)', 'country.name.it', 'iso3c'), 'FSM')
+    expect_equal(countrycode('FS Micronesia', 'country.name.it', 'iso3c'), 'FSM')
 })
 
 
-test_that('Northern Ireland is not Ireland', {
-    expect_equal(no_warn_iso3c_of('Northern Ireland'), NA_character_)
+test_that('Northern Ireland is not Ireland (Issue #313)', {
+    # Republic of Ireland
     expect_equal(iso3c_of('Ireland'), 'IRL')
+
+    # Abbreviated and reordered Northern Ireland forms -> United Kingdom
+    expect_equal(iso3c_of('Northern Ireland'), 'GBR')
+    expect_equal(iso3c_of('North Ireland'), 'GBR')
+    expect_equal(iso3c_of('N Ireland'), 'GBR')
+    expect_equal(iso3c_of('N. Ireland'), 'GBR')
+    expect_equal(iso3c_of('Ireland (Northern)'), 'GBR')
+    expect_equal(iso3c_of('Ireland (North)'), 'GBR')
+    expect_equal(iso3c_of('Ireland (N)'), 'GBR')
+    expect_equal(iso3c_of('Ireland (N.)'), 'GBR')
+    expect_equal(iso3c_of('Ireland, Northern'), 'GBR')
+    expect_equal(iso3c_of('Ireland, North'), 'GBR')
+    expect_equal(iso3c_of('Ireland, N.'), 'GBR')
+    expect_equal(iso3c_of('Ireland, N'), 'GBR')
+    expect_equal(iso3c_of('in the north of Ireland'), 'GBR')
+})
+
+
+test_that('East and West Germany are disambiguated', {
+    # Basic Germany forms map to modern Germany / FRG
+    expect_equal(iso3c_of('Germany'), 'DEU')
+    expect_equal(cowc_of('Germany'), 'GMY')
+    expect_equal(iso3c_of('Federal Republic of Germany'), 'DEU')
+    expect_equal(cowc_of('Federal Republic of Germany'), 'GMY')
+
+    # Historical East Germany (GDR) is identified by explicit east + germany forms
+    expect_equal(cowc_of('East Germany'), 'GDR')
+    expect_equal(cowc_of('Germany East'), 'GDR')
+
+    # West Germany maps to Germany / FRG depending on destination code
+    expect_equal(iso3c_of('West Germany'), 'DEU')
+    expect_equal(iso3c_of('Germany West'), 'DEU')
+    expect_equal(cowc_of('West Germany'), 'GMY')
+    expect_equal(cowc_of('Germany West'), 'GMY')
+
+    # Word boundaries avoid treating regional labels as the former GDR
+    expect_equal(iso3c_of('Eastern Germany'), 'DEU')
+    expect_equal(cowc_of('Eastern Germany'), 'GMY')
 })
 
 

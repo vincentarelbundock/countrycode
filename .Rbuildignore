@@ -20,3 +20,9 @@ revdep*
 ^pkgdown$
 ^\.github$
 README.Rmd
+^altdoc$
+^docs$
+^docs/$
+^vignettes/
+Makefile
+^_quarto$

@@ -48,7 +48,7 @@ Cuba,CU,CUB
 Curacao,CW,CUW
 Cayman Islands,KY,CYM
 Cyprus,CY,CYP
-Czech Republic,CZ,CZE
+Czechia,CZ,CZE
 Germany,DE,DEU
 Djibouti,DJ,DJI
 Dominica,DM,DMA
@@ -156,7 +156,7 @@ Philippines,PH,PHL
 Palau,PW,PLW
 Papua New Guinea,PG,PNG
 Poland,PL,POL
-Puerto Rico,PR,PRI
+Puerto Rico (US),PR,PRI
 "Korea, Dem. People's Rep.",KP,PRK
 Portugal,PT,PRT
 Paraguay,PY,PRY
@@ -174,7 +174,7 @@ Solomon Islands,SB,SLB
 Sierra Leone,SL,SLE
 El Salvador,SV,SLV
 San Marino,SM,SMR
-Somalia,SO,SOM
+"Somalia, Fed. Rep.",SO,SOM
 Serbia,RS,SRB
 South Sudan,SS,SSD
 Sao Tome and Principe,ST,STP
@@ -198,7 +198,6 @@ Trinidad and Tobago,TT,TTO
 Tunisia,TN,TUN
 Turkiye,TR,TUR
 Tuvalu,TV,TUV
-"Taiwan, China",TW,TWN
 Tanzania,TZ,TZA
 Uganda,UG,UGA
 Ukraine,UA,UKR
@@ -209,7 +208,7 @@ St. Vincent and the Grenadines,VC,VCT
 "Venezuela, RB",VE,VEN
 British Virgin Islands,VG,VGB
 Virgin Islands (U.S.),VI,VIR
-Vietnam,VN,VNM
+Viet Nam,VN,VNM
 Vanuatu,VU,VUT
 Samoa,WS,WSM
 Kosovo,XK,XKX

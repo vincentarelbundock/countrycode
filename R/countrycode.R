@@ -54,7 +54,10 @@
 #' @param custom_match A named vector which supplies custom origin and
 #'   destination matches that will supercede any matching default result. The name
 #'   of each element will be used as the origin code, and the value of each
-#'   element will be used as the destination code.
+#'   element will be used as the destination code. Values supplied via
+#'   `custom_match` supersede ambiguous or duplicate matches and will not
+#'   trigger the corresponding ambiguity/duplicate-match warnings for those
+#'   values.
 #' @param origin_regex NULL or Logical: When using a custom
 #'   dictionary, if TRUE then the origin codes will be matched as
 #'   regex, if FALSE they will be matched exactly. When NULL,
@@ -86,19 +89,6 @@
 #' countryname(x, destination = "cowc", warn = FALSE)
 #' countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
 #'
-#' \dontrun{
-#'  # Download the dictionary of US states from Github
-#'  state_dict <- "https://bit.ly/2ToSrFv"
-#'  state_dict <- read.csv(state_dict)
-#'
-#'  # The "state.regex" column includes regular expressions, so we set an attribute.
-#'  attr(state_dict, "origin_regex") <- "state.regex"
-#
-#'  countrycode(c('AL', 'AK'), 'abbreviation', 'state',
-#'              custom_dict = state_dict)
-#'  countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
-#'              custom_dict = state_dict)
-#' }
 countrycode <- function(sourcevar, origin, destination, warn = TRUE, nomatch = NA,
                         custom_dict = NULL, custom_match = NULL, origin_regex = NULL) {
 
@@ -282,7 +272,13 @@ countrycode_convert <- function(# user-supplied arguments
         if (all(is.na(choices))) {
             matches <- vector("list", length = length(choices))
         } else {
-            out <- apply(matchidx, 1, which, simplify = FALSE)
+            # Issue reported to Vincent by email
+            # simplify=FALSE was introduced in R 4.1.0. we want coverage before
+            # out <- try(apply(matchidx, 1, which, simplify = FALSE))
+            out <- apply(matchidx, 1, which)
+            if (length(out) == 0) {
+                out <- rep(list(NULL), nrow(matchidx))
+            }
             names(out) <- choices
             matches <- lapply(out, function(x) dict[x, destination])
         }
@@ -372,13 +368,21 @@ countrycode_convert <- function(# user-supplied arguments
         badmatch <- sort(unique(origin_vector[is.na(destination_vector)]))
         badmatch <- badmatch[!badmatch %in% names(custom_match)]  # do not report <NA>'s that were set explicitly by custom_match
         if(length(badmatch) > 0){
-            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "), "\n", call. = FALSE)
+            warning("Some values were not matched unambiguously: ", paste(badmatch, collapse=", "),
+                    "\nTo fix unmatched values, please use the `custom_match` argument. ",
+                    "If you think the default matching rules should be improved, please file an issue at ",
+                    "https://github.com/vincentarelbundock/countrycode/issues\n", call. = FALSE)
         }
         if(origin_regex){
            if(length(destination_list) > 0){
-               destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
-               destination_list <- sort(unique(do.call('c', destination_list)))
-               warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n", call. = FALSE)
+               if (!is.null(custom_match)) {
+                   destination_list <- destination_list[!names(destination_list) %in% names(custom_match)]
+               }
+               if (length(destination_list) > 0) {
+                   destination_list <- lapply(destination_list, function(k) paste(k, collapse=','))
+                   destination_list <- sort(unique(do.call('c', destination_list)))
+                   warning("Some strings were matched more than once, and therefore set to <NA> in the result: ", paste(destination_list, collapse="; "), "\n", call. = FALSE)
+               }
            }
         }
     }

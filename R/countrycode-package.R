@@ -17,6 +17,6 @@
 #' @references
 #'     \url{http://arelbundock.com}
 #'     \url{https://github.com/vincentarelbundock/countrycode}
-#' @docType package
-#' @keywords package
-NULL
+#' @noRd
+#' @keywords internal
+"_PACKAGE"

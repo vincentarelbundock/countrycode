@@ -14,7 +14,7 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \subsection{Origin and Destination}{
 \itemize{
 \item \code{cctld}: IANA country code top-level domain
-\item \code{country.name}: country name (English)
+\item \code{country.name.en}: country name (English)
 \item \code{country.name.de}: country name (German)
 \item \code{country.name.fr}: country name (French)
 \item \code{country.name.it}: country name (Italian)
@@ -31,7 +31,7 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \item \code{genc3n}: GENC numeric code
 \item \code{gwc}: Gleditsch & Ward character
 \item \code{gwn}: Gleditsch & Ward numeric
-\item \code{imf}: International Monetary Fund
+\item \code{imf}: International Monetary Fund (Warning: The IMF generally uses ISO codes. These codes are WEO-related, but may be inconsistently used in the wild.)
 \item \code{ioc}: International Olympic Committee
 \item \code{iso2c}: ISO-2 character
 \item \code{iso3c}: ISO-3 character

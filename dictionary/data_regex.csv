@@ -1,292 +1,292 @@
 country.name.de,country.name.de.regex,country.name.en,country.name.en.regex,country.name.fr,country.name.fr.regex,country.name.it,country.name.it.regex
 Afghanistan,afghan,Afghanistan,afghan,Afghanistan,afghan,Afghanistan,afghan
-Ålandinseln,(a|å)land,Aland Islands,^[å|a]land,Îles Åland,(a|å)land,Isole Åland,(a|å)land
+Ålandinseln,[aå]land,Aland Islands,^[åa]land,Îles Åland,[aå]land,Isole Åland,[aå]land
 Albanien,albanien,Albania,albania,Albanie,albanie,Albania,albania
-Algerien,algerien,Algeria,algeria,Algérie,alg(e|é)rie,Algeria,algeria
-Amerikanisch-Samoa,^(?=.*amerik).*samoa,American Samoa,^(?=.*americ).*samoa,Samoa américaines,samoa.*(améric|americ),Samoa americane,samoa.*americ
-Andorra,andorra,Andorra,andorra,Andorre,andorr(e|an),Andorra,andorra
+Algerien,algerien,Algeria,algeria,Algérie,alg[eé]rie,Algeria,algeria
+Amerikanisch-Samoa,^(?=.*amerik).*samoa,American Samoa,^(?=.*americ).*samoa,Samoa américaines,samoa.*(?:améric|americ),Samoa americane,samoa.*americ
+Andorra,andorra,Andorra,andorra,Andorre,andorr(?:e|an),Andorra,andorra
 Angola,angola,Angola,angola,Angola,angola,Angola,angola
 Anguilla,anguill?a,Anguilla,anguill?a,Anguilla,anguill?a,Anguilla,anguill?a
-Antarktis,^(?!.*franz).*antarktis,Antarctica,antarctica,Antarctique,^(?!.*fran).*antarcti(q|c),Antartide,antarcti(q|c)(?!.*france)|antarti(c|de)(?!.*france)
-Antigua und Barbuda,antigua,Antigua and Barbuda,antigua,Antigua-et-Barbuda,antigua(.*barbuda)?,Antigua e Barbuda,antigua(.*barbuda)?
+Antarktis,^(?!.*franz).*antarktis,Antarctica,antarctica,Antarctique,^(?!.*fran).*antarcti[qc],Antartide,antarcti[qc](?!.*france)|antarti(?:c|de)(?!.*france)
+Antigua und Barbuda,antigua,Antigua and Barbuda,antigua,Antigua-et-Barbuda,antigua(?:.*barbuda)?,Antigua e Barbuda,antigua(?:.*barbuda)?
 Argentinien,argentin,Argentina,argentin,Argentine,argentin,Argentina,argentin
-Armenien,armenien,Armenia,armenia,Arménie,arm(e|é)nie,Armenia,armenia
+Armenien,armenien,Armenia,armenia,Arménie,arm[eé]nie,Armenia,armenia
 Aruba,^(?!.*bonaire).*\baruba,Aruba,^(?!.*bonaire).*\baruba,Aruba,^(?!.*bonaire).*\baruba,Aruba,^(?!.*bonaire).*\baruba
 Australien,australien,Australia,australia,Australie,australie,Australia,australia
-Österreich,^(?!.*ungarn).*(ö|o)sterreich,Austria,^(?!.*hungary).*austria|\baustri.*\bemp,Autriche,autrich(e|ien),Austria,austria
-Österreich-Ungarn,(ö|o)sterreich-ungarn,Austria-Hungary,austria-hungary,,autriche-hongrin|austro-hongrois,,austra.ungheria
-Aserbaidschan,aserbaidsch,Azerbaijan,azerbaijan,Azerbaïdjan,azerba(ï|i)djan,Azerbaigian,azerbaigian|azero
+Österreich,^(?!.*ungarn).*[öo]sterreich,Austria,^(?!.*hungary).*austria|\baustri.*\bemp,Autriche,autrich(?:e|ien),Austria,austria
+Österreich-Ungarn,[öo]sterreich-ungarn,Austria-Hungary,austria-hungary,,autriche-hongrin|austro-hongrois,,austra.ungheria
+Aserbaidschan,aserbaidsch,Azerbaijan,azerbaijan,Azerbaïdjan,azerba[ïi]djan,Azerbaigian,azerbaigian|azero
 Baden,baden,Baden,baden,,baden,,baden
-Bahamas,bahamas,Bahamas,bahamas,Bahamas,baham(as|ien),Bahamas,bahamas|bahamian
-Bahrain,bahrain,Bahrain,bahrain,Bahreïn,bahre(i|ï)n,Bahrein,bahrein
+Bahamas,bahamas,Bahamas,bahamas,Bahamas,baham(?:as|ien),Bahamas,bahamas|bahamian
+Bahrain,bahrain,Bahrain,bahrain,Bahreïn,bahre[iï]n,Bahrein,bahrein
 Bangladesch,bangladesc?h|^(?=.*ost).*paki?stan,Bangladesh,bangladesh|^(?=.*east).*paki?stan,Bangladesh,bangladesh|bangladais|^(?=.*ost).*paki?stan,Bangladesh,bangladesh
-Barbados,barbados,Barbados,barbados,Barbade,barbad(e|ien),Barbados,barbados|barbadian
-Bayern,bayern,Bavaria,bavaria,,bavi(e|è)re|bavar(ia|ois),,baviera|bavaria
-Weißrussland,wei(ss|ß)russland|belarus|byelo,Belarus,belarus|byelo,Biélorussie,b(e|é)larus|bi(e|é)loruss,Bielorussia,belarus|byelo|biel(o|a)?russ
+Barbados,barbados,Barbados,barbados,Barbade,barbad(?:e|ien),Barbados,barbados|barbadian
+Bayern,bayern,Bavaria,bavaria,,bavi[eè]re|bavar(?:ia|ois),,baviera|bavaria
+Weißrussland,wei(?:ss|ß)russland|belarus|byelo,Belarus,belarus|byelo,Biélorussie,b[eé]larus|bi[eé]loruss,Bielorussia,belarus|byelo|biel[oa]?russ
 Belgien,^(?!.*luxem).*belgien,Belgium,^(?!.*luxem).*belgium,Belgique,belgique|belge,Belgio,belgio|belga
 Belize,belize|^(?=.*british).*honduras,Belize,belize|^(?=.*british).*honduras,Belize,belize|^(?=.*british).*honduras,Belize,belize|^(?=.*british).*honduras|belizean
-Benin,benin|dahome,Benin,benin|dahome,Bénin,b(e|é)nin|dahome,Benin,benin|dahome
-Bermuda,bermuda,Bermuda,bermuda,Bermudes,bermud(a|e),Bermuda,bermud(a|e)
+Benin,benin|dahome,Benin,benin|dahome,Bénin,b[eé]nin|dahome,Benin,benin|dahome
+Bermuda,bermuda,Bermuda,bermuda,Bermudes,bermud[ae],Bermuda,bermud[ae]
 Bhutan,bhutan,Bhutan,bhutan,Bhoutan,bhoutan,Bhutan,bhutan
 Bolivien,bolivien,Bolivia (Plurinational State of),bolivia,Bolivie,bolivie,Bolivia,bolivia
-"Bonaire, Sint Eustatius und Saba",^(?=.*bonaire).*eustatius|^(?=.*karib).*niederlande|\bbes.?inseln,"Bonaire, Sint Eustatius and Saba",^(?=.*bonaire).*eustatius|^(?=.*carib).*netherlands|\bbes.?islands,Pays-Bas caribéens,^(?=.*bonaire).*eustach|pays.*bas.*carib|cara.be.*n(é|e)rlandais|(î|i)les.bes,Caraibi olandesi,^(?=.*bonaire).*eustatius|paes.*bass.*caraib|(isole)?.*caraib.*olandesi|isole.bes|hulanda.karibe
-Bosnien und Herzegowina,herzegowina|bosnien,Bosnia and Herzegovina,herzegovina|bosnia,Bosnie-Herzégovine,bosnie.*herz(e|é)govine,Bosnia ed Erzegovina,bosnia.*erzegovina
-Botswana,bots(w|u)ana|bechuana,Botswana,botswana|bechuana,Botswana,bots(w|u)ana|bechuana,Botswana,bots(w|u)ana|bechuana|botswano
+"Bonaire, Sint Eustatius und Saba",^(?=.*bonaire).*eustatius|^(?=.*karib).*niederlande|\bbes.?inseln,"Bonaire, Sint Eustatius and Saba",^(?=.*bonaire).*eustatius|^(?=.*carib).*netherlands|\bbes.?islands,Pays-Bas caribéens,^(?=.*bonaire).*eustach|pays.*bas.*carib|cara.be.*n[ée]rlandais|[îi]les.bes,Caraibi olandesi,^(?=.*bonaire).*eustatius|paes.*bass.*caraib|(?:isole)?.*caraib.*olandesi|isole.bes|hulanda.karibe
+Bosnien und Herzegowina,herzegowina|bosnien,Bosnia and Herzegovina,herzegovina|bosnia,Bosnie-Herzégovine,bosnie.*herz[eé]govine,Bosnia ed Erzegovina,bosnia.*erzegovina
+Botswana,bots[wu]ana|bechuana,Botswana,botswana|bechuana,Botswana,bots[wu]ana|bechuana,Botswana,bots[wu]ana|bechuana|botswano
 Bouvetinsel,bouvet,Bouvet Island,bouvet,Île Bouvet,bouvet,Isola Bouvet,bouvet
-Brasilien,brasil,Brazil,brazil,Brésil,br(e|é)sil,Brasile,brasil
-Britisches Territorium im Indischen Ozean,britisches.territorium.*indisch.*ozean,British Indian Ocean Territory,british.?indian.?ocean,Territoire britannique de l’océan Indien,territ.*brit.*oc(é|e)an.*indien,Territorio britannico dell’Oceano Indiano,territ.*brit.*ocean.*indiano
-Brunei Darussalam,brunei,Brunei Darussalam,brunei,Brunéi Darussalam,brun(e|é)i(.*darussalam)?,Brunei,brunei
+Brasilien,brasil,Brazil,brazil,Brésil,br[eé]sil,Brasile,brasil
+Britisches Territorium im Indischen Ozean,britisches.territorium.*indisch.*ozean,British Indian Ocean Territory,british.?indian.?ocean,Territoire britannique de l’océan Indien,territ.*brit.*oc[ée]an.*indien,Territorio britannico dell’Oceano Indiano,territ.*brit.*ocean.*indiano
+Brunei Darussalam,brunei,Brunei Darussalam,brunei,Brunéi Darussalam,brun[eé]i(?:.*darussalam)?,Brunei,brunei
 Braunschweig,brunswick|braunschweig,Brunswick,brunswick,,brunswick,,brunswick
-Bulgarien,bulgarien,Bulgaria,bulgaria,Bulgarie,bulgar(i)?e,Bulgaria,bulgaria|bulgaro
+Bulgarien,bulgarien,Bulgaria,bulgaria,Bulgarie,bulgari?e,Bulgaria,bulgaria|bulgaro
 Burkina Faso,burkina|\bfaso|upper.?volta,Burkina Faso,burkina|\bfaso|upper.?volta,Burkina Faso,burkina|\bfaso|upper.?volta,Burkina Faso,burkina|\bfaso|upper.?volta
-Burundi,burundi,Burundi,burundi,Burundi,burund(i|ais),Burundi,burund(i|ese)
-Cabo Verde,verde,Cabo Verde,verde,Cap-Vert,(gabo.*)?verde|(cap)?.*vert,Capo Verde,(cabo.*)?verde
-Kambodscha,kambodscha|kampuchea|khmer,Cambodia,cambodia|kampuchea|khmer,Cambodge,cambodg(e|ien),Cambogia,cambogia
+Burundi,burundi,Burundi,burundi,Burundi,burund(?:i|ais),Burundi,burund(?:i|ese)
+Cabo Verde,verde,Cabo Verde,verde,Cap-Vert,(?:gabo.*)?verde|(?:cap)?.*vert,Capo Verde,(?:cabo.*)?verde
+Kambodscha,kambodscha|kampuchea|khmer,Cambodia,cambodia|kampuchea|khmer,Cambodge,cambodg(?:e|ien),Cambogia,cambogia
 Kamerun,kamerun,Cameroon,cameroon,Cameroun,cameroun,Camerun,camerun
-Kanada,kanada,Canada,canada,Canada,canad(a|ien),Canada,canad(a|e)
-Kaimaninseln,kaiman|cayman,Cayman Islands,cayman,Îles Caïmans,ca(i|ï|y)man,Isole Cayman,cayman
+Kanada,kanada,Canada,canada,Canada,canad(?:a|ien),Canada,canad[ae]
+Kaimaninseln,kaiman|cayman,Cayman Islands,cayman,Îles Caïmans,ca[iïy]man,Isole Cayman,cayman
 Zentralafrikanische Republik,\bzentralafrikanische.rep,Central African Republic,\bcentral.african.rep,République centrafricaine,centrafricaine,Repubblica Centrafricana,centrafricana
 Tschad,\btschad,Chad,\bchad,Tchad,tchad,Ciad,ciad
-Kanalinseln,kanalinsel|normannisch.*insel,Channel Islands,\bchannel.islands,,(î|i)les.*(manche|anglo.normand),,isole.*del.*canale|canale.manica
+Kanalinseln,kanalinsel|normannisch.*insel,Channel Islands,\bchannel.islands,,[îi]les.*(?:manche|anglo.normand),,isole.*del.*canale|canale.manica
 Chile,\bchile,Chile,\bchile,Chili,chili,Cile,cile
 China,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*Volksrepublik).*china,China,^(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|^(?=.*peo)(?=.*rep).*china,Chine,chine|chinois(?!.*\bhong)(?!.*\bmac),Cina,cina|cinese(?!.*\bhong)(?!.*\bmac)
-Weihnachtsinsel,weihnacht|christmas,Christmas Island,christmas,Île Christmas,christmas|no(ë|e)l,Isola Christmas,christmas|natale
+Weihnachtsinsel,weihnacht|christmas,Christmas Island,christmas,Île Christmas,christmas|no[ëe]l,Isola Christmas,christmas|natale
 Kokosinseln (Keelinginseln),\bkokos|keeling,Cocos (Keeling) Islands,\bcocos|keeling,Îles Cocos,cocos|keeling,Isole Cocos (Keeling),cocos|keeling|cocco
-Kolumbien,kolumbien,Colombia,colombia,Colombie,colombi(e|ien),Colombia,colombia
+Kolumbien,kolumbien,Colombia,colombia,Colombie,colombi(?:e|ien),Colombia,colombia
 Komoren,komoren,Comoros,comoro,Comores,comores|comorien,Comore,comore
 Kongo,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bkongo,Congo,^(?!.*\bd.m)(?!.*\bd[\.]?r)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Congo-Brazzaville,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Congo-Brazzaville,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo
 Cookinseln,\bcook,Cook Islands,\bcook,Îles Cook,\bcook,Isole Cook,\bcook
-Costa Rica,costa.?rica,Costa Rica,costa.?rica,Costa Rica,costa.?ric(a|ien),Costa Rica,costa.?rica
+Costa Rica,costa.?rica,Costa Rica,costa.?rica,Costa Rica,costa.?ric(?:a|ien),Costa Rica,costa.?rica
 Kroatien,kroatien,Croatia,croatia,Croatie,croatie|croate,Croazia,croazia|croato
-Kuba,\bkuba,Cuba,\bcuba,Cuba,\bcuba(in)?,Cuba,cuba
-Curaçao,^(?!.*bonaire).*\bcura(c|ç)ao,Curacao,^(?!.*bonaire).*\bcura(c|ç)ao,Curaçao,^(?!.*bonaire).*\bcura(c|ç)ao,Curaçao,^(?!.*bonaire).*\bcura(c|ç)ao
+Kuba,\bkuba,Cuba,\bcuba,Cuba,\bcuba(?:in)?,Cuba,cuba
+Curaçao,^(?!.*bonaire).*\bcura[cç]ao,Curacao,^(?!.*bonaire).*\bcura[cç]ao,Curaçao,^(?!.*bonaire).*\bcura[cç]ao,Curaçao,^(?!.*bonaire).*\bcura[cç]ao
 Zypern,zypern,Cyprus,cyprus,Chypre,chypre|chypriote,Cipro,cipro
-Tschechische Republik,^(?!.*slowak)tschechi.*,Czech Republic,^(?=.*rep).*czech|czechia|bohemia,Tchéquie,tch(e|é)quie,Cechia,cechia|cec(o|a)
-Tschechoslowakei,tschechoslowakei|^csr$,Czechoslovakia,czechoslovakia,,tch(é|e)coslovaqu,,cecoslovacchia
+Tschechische Republik,^(?!.*slowak)tschechi.*,Czech Republic,^(?=.*rep).*czech|czechia|bohemia,Tchéquie,tch[eé]quie,Cechia,cechia|cec[oa]
+Tschechoslowakei,tschechoslowakei|^csr$,Czechoslovakia,czechoslovakia,,tch[ée]coslovaqu,,cecoslovacchia
 Elfenbeinküste,elfenbein|ivoire|ivory|ivorisch,Côte D'Ivoire,ivoire|ivory,Côte d’Ivoire,elfenbein|ivoire|ivory|ivoirien,Costa d’Avorio,ivoire|avorio
-"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk,Democratic People's Republic of Korea,korea.*people|dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*rep.*)|(d.p.r|dpr|north|dem.*rep.*).+korea,Corée du Nord,^(?=.*d(e|é)mocrat).*cor(e|é)e|^(?=.*popu).*cor(e|é)e|^(?=.*nord).*cor(e|é)e|dprk|cor(e|é)e.*nord|\brpdc\b,Corea del Nord,corea.*nord|(?=.*popo).*corea|\bdprk\b
+"Korea, Demokratische Volksrepublik",^(?=.*demokrat).*korea|^(?=.*Volk).*korea|^(?=.*nord).*korea|dprk,Democratic People's Republic of Korea,korea.*people|dprk|d.p.r.k|korea.+(?:d.p.r|dpr|north|dem.*rep.*)|(?:d.p.r|dpr|north|dem.*rep.*).+korea,Corée du Nord,^(?=.*d[eé]mocrat).*cor[eé]e|^(?=.*popu).*cor[eé]e|^(?=.*nord).*cor[eé]e|dprk|cor[eé]e.*nord|\brpdc\b,Corea del Nord,corea.*nord|(?=.*popo).*corea|\bdprk\b
 Demokratische Republik Kongo,\bdem.*kongo|kongo.*\bdem|kongo.*\bdr|\bdr.*kongo|belgien.?kongo|kongo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Democratic Republic of the Congo,\bd.m.*congo|congo.*\bd.m|congo.*\bd[\.]?r|\bd[\.]?r.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Congo-Kinshasa,\bdem.*congo|kongo.*\bdem|congo.*\bdr|\bdr.*congo|belgien.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc,Congo - Kinshasa,\bdem.*congo|kongo.*\bdem|congo.*\bdr|\bdr.*congo|belgien.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc
-Dänemark,d(a|ae|ä)nemark,Denmark,denmark,Danemark,danemark|danois,Danimarca,danimarca|danese
-Dschibuti,dschibuti,Djibouti,djibouti,Djibouti,d(sch|j)ib(o)?uti|djiboutien,Gibuti,gibuti
+Dänemark,d(?:a|ae|ä)nemark,Denmark,denmark,Danemark,danemark|danois,Danimarca,danimarca|danese
+Dschibuti,dschibuti,Djibouti,djibouti,Djibouti,d(?:sch|j)ibo?uti|djiboutien,Gibuti,gibuti
 Dominica,dominica(?!n),Dominica,dominica(?!n),Dominique,dominique|dominiquais,Dominica,dominica(?!n)
-Dominikanische Republik,dominikanische,Dominican Republic,dominican.rep,République dominicaine,dominica(?!n)|dominicain,Repubblica Dominicana,(repubblica.*)?dominicana
-Ecuador,ecuador,Ecuador,ecuador,Équateur,(é|e)quateur|(é|e)quatorien,Ecuador,ecuador
-Ägypten,(ä|a)gypten,Egypt,egypt,Égypte,(é|e)gypt(e|ien),Egitto,egitto|egizian
-El Salvador,el.?salvador,El Salvador,el.?salvador,Salvador,(el.*)?salvador|salvadorien,El Salvador,el.?salvador|salvadoregn
-Äquatorialguinea,(a|ä)quatorialguinea|^(?=.*span).*guinea,Equatorial Guinea,guine.*eq|eq.*guine|^(?=.*span).*guinea,Guinée équatoriale,guin(é|e)e.*(é|e)quatoriale,Guinea Equatoriale,^(?!.*portu)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea.*equatorial
-Eritrea,eritrea,Eritrea,eritrea,Érythrée,(é|e)rythr(é|e)e,Eritrea,eritre(a|o)
-Estland,estland,Estonia,estonia,Estonie,estoni(e|ien),Estonia,eston(ia|e)
-Äthiopien,.?th(i|)opien|abyssinia,Ethiopia,ethiopia|abyssinia,Éthiopie,(é|e)thiopi(e|ien),Etiopia,etiopi(a|co|ca)
+Dominikanische Republik,dominikanische,Dominican Republic,dominican.rep,République dominicaine,dominica(?!n)|dominicain,Repubblica Dominicana,(?:repubblica.*)?dominicana
+Ecuador,ecuador,Ecuador,ecuador,Équateur,[ée]quateur|[ée]quatorien,Ecuador,ecuador
+Ägypten,[äa]gypten,Egypt,egypt,Égypte,[ée]gypt(?:e|ien),Egitto,egitto|egizian
+El Salvador,el.?salvador,El Salvador,el.?salvador,Salvador,(?:el.*)?salvador|salvadorien,El Salvador,el.?salvador|salvadoregn
+Äquatorialguinea,[aä]quatorialguinea|^(?=.*span).*guinea,Equatorial Guinea,guine.*eq|eq.*guine|^(?=.*span).*guinea,Guinée équatoriale,guin[ée]e.*[ée]quatoriale,Guinea Equatoriale,^(?!.*portu)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea.*equatorial
+Eritrea,eritrea,Eritrea,eritrea,Érythrée,[ée]rythr[ée]e,Eritrea,eritre[ao]
+Estland,estland,Estonia,estonia,Estonie,estoni(?:e|ien),Estonia,eston(?:ia|e)
+Äthiopien,.?thi?opien|abyssinia,Ethiopia,ethiopia|abyssinia,Éthiopie,[ée]thiopi(?:e|ien),Etiopia,etiopi(?:a|co|ca)
 Falklandinseln (Malvinas),falkland|malvinas,Falkland Islands (Malvinas),falkland|malvinas,Îles Malouines,falkland|malvinas|malouines,Isole Falkland,falkland|malvinas
-Färöer Inseln,f(a|ä)r(o|ö|oe)er|fær.?Øer,Faroe Islands,faroe|faeroe,Îles Féroé,f(e|é)ro(e|é)|fae?roe|fær.?Øer,Isole Fær Øer,isole.*(fae?roe|fær.?Øer)
+Färöer Inseln,f[aä]r(?:o|ö|oe)er|fær.?Øer,Faroe Islands,faroe|faeroe,Îles Féroé,f[eé]ro[eé]|fae?roe|fær.?Øer,Isole Fær Øer,isole.*(?:fae?roe|fær.?Øer)
 Fidschi,fiji|fidschi,Fiji,fiji,Fidji,fidji,Figi,figi
-Finnland,finnland,Finland,finland,Finlande,finn?land,Finlandia,finland(ia|ese|esa)
-Frankreich,frankreich|französische.?republik,France,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,France,france|r(é|e)p.*française,Francia,^(?!gu)^(?!pol).*franc(ia|ese|esa)
-Französisch-Guayana,französisch.?(guayana|guiana),French Guiana,french.?gu(y|i)ana,Guyane française,gu(i|y)ane.?fran(c|ç)ais,Guyana francese,gu(y|i)ana.?francese
-Französisch Polynesien,französisch.?polynesien|tahiti,French Polynesia,french.?polynesia|tahiti,Polynésie française,polyn.*fran(c|ç)ais|tahiti,Polinesia francese,polinesia.?francese|tahiti
-Französische Südgebiete,französische.?süd.*gebiete,French Southern Territories,french.?southern,Terres australes françaises,terr.*austral.*fran(c|ç)ais|terr.*franc.*sud|terr.*sud.*fran,Terre australi francesi,terr.*(austral|meridion).*frances|terr*francesi.*sud
-Gabun,gabun,Gabon,gabon,Gabon,gab(u|o)n,Gabon,gabon
-Gambia,gambia,Gambia (Islamic Republic of the),gambia,Gambie,gambi(e|ien),Gambia,gambia
-Georgien,^(?!.*süd).*georgien,Georgia,^(?!.*south).*georgia,Géorgie,^(?!.*sud).*g(é|e)orgi(e|ien),Georgia,^(?!.*sud).*georgia
-Deutsche Demokratische Republik,deutsche.?demokratische.?republik|ostdeutschland|\bddr\b,German Democratic Republic,german.?democratic.?rep|democratic.?rep.*germany|east.germany|germany.*east,,r(e|é)p.*d(e|é)mocart.*allemand,,repubb.*democrat.*tedesc(a|o)
-Deutschland,^(?!.*ost).*deutschland|^(?=.*\bbundesrepublik).*deutschland,Germany,^(?!.*east).*germany|^(?=.*\bfed.*\brep).*german,Allemagne,allemagne|allemand,Germania,germania|tedesco
-Ghana,ghana|gold.?küste,Ghana,ghana|gold.?coast,Ghana,^ghana|c(o|ô)te.?or|\bghan(e|é)e,Ghana,^ghan(a|e|i)|costa.*oro|gold.*coast
+Finnland,finnland,Finland,finland,Finlande,finn?land,Finlandia,finland(?:ia|ese|esa)
+Frankreich,frankreich|französische.?republik,France,^(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul,France,france|r[ée]p.*française,Francia,^(?!gu)^(?!pol).*franc(?:ia|ese|esa)
+Französisch-Guayana,französisch.?(?:guayana|guiana),French Guiana,french.?gu[yi]ana,Guyane française,gu[iy]ane.?fran[cç]ais,Guyana francese,gu[yi]ana.?francese
+Französisch Polynesien,französisch.?polynesien|tahiti,French Polynesia,french.?polynesia|tahiti,Polynésie française,polyn.*fran[cç]ais|tahiti,Polinesia francese,polinesia.?francese|tahiti
+Französische Südgebiete,französische.?süd.*gebiete,French Southern Territories,french.?southern,Terres australes françaises,terr.*austral.*fran[cç]ais|terr.*franc.*sud|terr.*sud.*fran,Terre australi francesi,terr.*(?:austral|meridion).*frances|terr*francesi.*sud
+Gabun,gabun,Gabon,gabon,Gabon,gab[uo]n,Gabon,gabon
+Gambia,gambia,Gambia (Islamic Republic of the),gambia,Gambie,gambi(?:e|ien),Gambia,gambia
+Georgien,^(?!.*süd).*georgien,Georgia,^(?!.*south).*georgia,Géorgie,^(?!.*sud).*g[ée]orgi(?:e|ien),Georgia,^(?!.*sud).*georgia
+Deutsche Demokratische Republik,deutsche.?demokratische.?republik|ostdeutschland|\bddr\b,German Democratic Republic,german.?democratic.?rep|democratic.?rep.*germany|\beast\b.*\bgermany\b|\bgermany\b.*\beast\b,,r[eé]p.*d[eé]mocart.*allemand,,repubb.*democrat.*tedesc[ao]
+Deutschland,^(?!.*ost).*deutschland|^(?=.*\bbundesrepublik).*deutschland,Germany,^(?!.*\beast\b).*\bgermany\b|^(?=.*\bfed.*\brep).*german,Allemagne,allemagne|allemand,Germania,germania|tedesco
+Ghana,ghana|gold.?küste,Ghana,ghana|gold.?coast,Ghana,^ghana|c[oô]te.?or|\bghan[eé]e,Ghana,^ghan[aei]|costa.*oro|gold.*coast
 Gibraltar,gibraltar,Gibraltar,gibraltar,Gibraltar,gibraltar,Gibilterra,gibilterra|gibraltar
-Griechenland,griechenland|hellenic|hellas,Greece,greece|hellenic|hellas,Grèce,\bgr(e|è)ce|rép.*hell(e|é)nique,Grecia,grecia|ellenico
-Grönland,gr(o|ö)nland,Greenland,greenland,Groenland,gro(e|ë)nland|greenland,Groenlandia,groenlandia|greenland
-Grenada,grenada,Grenada,grenada,Grenade,grenade,Grenada,grenad(a|ino|ina)
+Griechenland,griechenland|hellenic|hellas,Greece,greece|hellenic|hellas,Grèce,\bgr[eè]ce|rép.*hell[eé]nique,Grecia,grecia|ellenico
+Grönland,gr[oö]nland,Greenland,greenland,Groenland,gro[eë]nland|greenland,Groenlandia,groenlandia|greenland
+Grenada,grenada,Grenada,grenada,Grenade,grenade,Grenada,grenad(?:a|ino|ina)
 Guadeloupe,guadeloupe,Guadeloupe,guadeloupe,Guadeloupe,guadeloupe,Guadalupa,guadeloup|guadalup
 Guam,\bguam,Guam,\bguam,Guam,\bguam,Guam,\bguam
-Guatemala,guatemala,Guatemala,guatemala,Guatemala,guatemala|guat(e|é)malt(e|è)que,Guatemala,guatemal(a|tec)
+Guatemala,guatemala,Guatemala,guatemala,Guatemala,guatemala|guat[eé]malt[eè]que,Guatemala,guatemal(?:a|tec)
 Guernsey,guernsey,Guernsey,guernsey,Guernesey,guern.?sey,Guernsey,guernsey
-Guinea,^(?!.*Äquatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea,Guinea,^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea,Guinée,^(?!.*équatorial)(?!.*espa)(?!.*bissau)(?!.*portu)(?!.*nouvel).*guin(é|e)e,Guinea,^(?!.*equatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*nuova).*guinea
+Guinea,^(?!.*Äquatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*neu).*guinea,Guinea,^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea,Guinée,^(?!.*équatorial)(?!.*espa)(?!.*bissau)(?!.*portu)(?!.*nouvel).*guin[ée]e,Guinea,^(?!.*equatorial)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*nuova).*guinea
 Guinea-Bissau,bissau|^(?=.*portu).*guinea,Guinea Bissau,bissau|^(?=.*portu).*guinea,Guinée-Bissau,bissau|^(?=.*portu).*guinea,Guinea-Bissau,bissau|^(?=.*portu).*guinea
-Guyana,^(?!.*franz).*gu(y|i)ana|britisch.?gua(y|i)ana,Guyana,^guyana|british.?gu(y|i)ana,Guyana,^(?!.*fran).*gu(y|i)ana|britisch.?gua(y|i)ana,Guyana,^(?!.*franc).*gu(y|i)ana|britisch.?gua(y|i)ana|guianese
-Haiti,haiti,Haiti,haiti,Haïti,ha(i|ï)ti(en)?,Haiti,haiti
+Guyana,^(?!.*franz).*gu[yi]ana|britisch.?gua[yi]ana,Guyana,^guyana|british.?gu[yi]ana,Guyana,^(?!.*fran).*gu[yi]ana|britisch.?gua[yi]ana,Guyana,^(?!.*franc).*gu[yi]ana|britisch.?gua[yi]ana|guianese
+Haiti,haiti,Haiti,haiti,Haïti,ha[iï]ti(?:en)?,Haiti,haiti
 Hamburg,hamburg,Hamburg,hamburg,,hamburg|hambourg,,amburg
 Hannover,hannover,Hanover,hanover,,hannover,,hannover
 Heard und McDonaldinseln,heard.*ma?cdonald,Heard Island and McDonald Islands,heard.*mcdonald,Îles Heard et McDonald,heard.*ma?cdonald,Isole Heard e McDonald,heard.*ma?cdonald
-Kurfürstentum Hessen,kurf(ü|u)rsten.*hessen|kurhessen,Hesse Electoral,hesse.*lectoral,,(é|e)lectorat.*hesse,,elettorato.*assia
-Großherzogtum Hessen,gro(ß|ss)herzog.*hessen,Hesse Grand Ducal,hess.*gran.*ducal,,grand.*duch.*hesse,,granducato.*assia
+Kurfürstentum Hessen,kurf[üu]rsten.*hessen|kurhessen,Hesse Electoral,hesse.*lectoral,,[ée]lectorat.*hesse,,elettorato.*assia
+Großherzogtum Hessen,gro(?:ß|ss)herzog.*hessen,Hesse Grand Ducal,hess.*gran.*ducal,,grand.*duch.*hesse,,granducato.*assia
 Hessen-Darmstadt,hesse.darmstadt,Hesse-Darmstadt,hesse.darmstadt,,hesse.darmstadt,,hesse.darmstadt
 Hessen-Kassel,hesse.kassel,Hesse-Kassel,hesse.kassel,,hesse.kassel,,hesse.kassel
-Vatikanstaat,vatikan|heilig.*stuhl,Holy See (Vatican City State),holy.?see|vatican|papal.?st,État de la Cité du Vatican,vati(k|c)an,Città del Vaticano,santa.?sede|vaticano
+Vatikanstaat,vatikan|heilig.*stuhl,Holy See (Vatican City State),holy.?see|vatican|papal.?st,État de la Cité du Vatican,vati[kc]an,Città del Vaticano,santa.?sede|vaticano
 Honduras,^(?!.*brit).*honduras,Honduras,^(?!.*brit).*honduras,Honduras,^(?!.*brit).*honduras|hondurien,Honduras,^(?!.*brit).*honduras|honduregn
 Hongkong,hong.?kong,Hong Kong,hong.?kong,R.A.S. chinoise de Hong Kong,hong.?kong,RAS di Hong Kong,hong.?kong
-Ungarn,^(?!.*(ö|o)sterreich).*ungarn,Hungary,^(?!.*austr).*hungary,Hongrie,hongrie|hongrois,Ungheria,ungher(ia|ese|esa)
+Ungarn,^(?!.*[öo]sterreich).*ungarn,Hungary,^(?!.*austr).*hungary,Hongrie,hongrie|hongrois,Ungheria,ungher(?:ia|ese|esa)
 Island,^island,Iceland,iceland,Islande,islande|islandais,Islanda,^island
-Indien,indien(?!.*ocea),India,india(?!.*ocea),Inde,^(?!.*brit)^(?!.*ocea).*ind(e|ien),India,^(?!.*brit)^(?!.*ocea).*india
-Indonesien,indonesien,Indonesia,indonesia,Indonésie,indon(é|e)si(e|ien),Indonesia,indonesia
-Iran,\biran|persia,Iran (Islamic Republic of),\biran|persia,Iran,\biran(ien)?|persia,Iran,\biran|persia
-Irak,\birak|mesopotamia,Iraq,\biraq|mesopotamia,Irak,irak(ien)?,Iraq,iraq|irachen
-Irland,irland,Ireland,^(?!.*north).*\bireland,Irlande,irlande|irlandais,Irlanda,irland
-Isle of Man,^(?=.*isle).*\bman|^man.*insel,Isle of Man,^(?=.*isle).*\bman,Île de Man,^(?=.*ile).*\bman|^(?=.*île).*(de|of).*\bman|\biom\b,Isola di Man,^(?=.*isle).*\bman|^(?=.*isola).*\bman|\biom\b
-Israel,israel,Israel,israel,Israël,isra(e|ë)l(ien)?,Israele,israel
-Italien,italien|italienische.?.?republi,Italy,italy|italian.?republic,Italie,itali(e|ien),Italia,italia(no)?
-Jamaika,jamaika,Jamaica,jamaica,Jamaïque,jama(i|ï)que,Giamaica,giamaica
+Indien,indien(?!.*ocea),India,india(?!.*ocea),Inde,^(?!.*brit)^(?!.*ocea).*ind(?:e|ien),India,^(?!.*brit)^(?!.*ocea).*india
+Indonesien,indonesien,Indonesia,indonesia,Indonésie,indon[ée]si(?:e|ien),Indonesia,indonesia
+Iran,\biran|persia,Iran (Islamic Republic of),\biran|persia,Iran,\biran(?:ien)?|persia,Iran,\biran|persia
+Irak,\birak|mesopotamia,Iraq,\biraq|mesopotamia,Irak,irak(?:ien)?,Iraq,iraq|irachen
+Irland,irland,Ireland,^(?!.*north)(?!n\.?\s+ireland)(?!.*ireland[^a-zA-Z]*n\.?(?!\w)).*\bireland,Irlande,irlande|irlandais,Irlanda,irland
+Isle of Man,^(?=.*isle).*\bman|^man.*insel,Isle of Man,^(?=.*isle).*\bman,Île de Man,^(?=.*ile).*\bman|^(?=.*île).*(?:de|of).*\bman|\biom\b,Isola di Man,^(?=.*isle).*\bman|^(?=.*isola).*\bman|\biom\b
+Israel,israel,Israel,israel,Israël,isra[eë]l(?:ien)?,Israele,israel
+Italien,italien|italienische.?.?republi,Italy,italy|italian.?republic,Italie,itali(?:e|ien),Italia,italia(?:no)?
+Jamaika,jamaika,Jamaica,jamaica,Jamaïque,jama[iï]que,Giamaica,giamaica
 Japan,japan,Japan,japan,Japon,japon,Giappone,giappone
 Jersey,jersey,Jersey,jersey,Jersey,jersey,Jersey,jersey
 Jordanien,jordan,Jordan,jordan,Jordanie,jordan,Giordania,giordania
-Kasachstan,ka(s|z)a(ch|k),Kazakhstan,kazak,Kazakhstan,ka(s|z)a(ch|k),Kazakistan,ka(s|z)a(ch|k)
-Kenia,kenia|britisch.?ost.?afrika|protektorat.?ostafrika,Kenya,kenya|british.?east.?africa|east.?africa.?prot,Kenya,k(e|é)n(i|y)a|afric.*(est|orient).*britan|protectora.*afri.*(est|orient)|keniot,Kenya,ken(i|y)a|africa.*orient.*(britan|inglese)|protettora.*africa.*orient|keniot
+Kasachstan,ka[sz]a(?:ch|k),Kazakhstan,kazak,Kazakhstan,ka[sz]a(?:ch|k),Kazakistan,ka[sz]a(?:ch|k)
+Kenia,kenia|britisch.?ost.?afrika|protektorat.?ostafrika,Kenya,kenya|british.?east.?africa|east.?africa.?prot,Kenya,k[eé]n[iy]a|afric.*(?:est|orient).*britan|protectora.*afri.*(?:est|orient)|keniot,Kenya,ken[iy]a|africa.*orient.*(?:britan|inglese)|protettora.*africa.*orient|keniot
 Kiribati,kiribati,Kiribati,kiribati,Kiribati,kiribati,Kiribati,kiribati
-Kosovo,kosovo|\bunmik\b,Kosovo,kosovo,Kosovo,kosov(o|var)|\bminuk\b,Kosovo,kosov(o|aro|ara)|cossovo|\bunmik\b
-Kuwait,kuwait,Kuwait,kuwait,Koweït,kowe(i|ï)t,Kuwait,kuwait
+Kosovo,kosovo|\bunmik\b,Kosovo,kosovo,Kosovo,kosov(?:o|var)|\bminuk\b,Kosovo,kosov(?:o|aro|ara)|cossovo|\bunmik\b
+Kuwait,kuwait,Kuwait,kuwait,Koweït,kowe[iï]t,Kuwait,kuwait
 Kirgisistan,kirgisistan|kirghiz,Kyrgyzstan,kyrgyz|kirghiz,Kirghizistan,kirgisistan|kirghiz,Kirghizistan,kirgisistan|kirghiz|kirghiso
-Demokratische Volksrepublik Laos,\blaos?\b,Lao People's Democratic Republic,\blaos?\b,Laos,\blaos?\b|laotien,Laos,\blaos?\b|laotian(o|a)
-Lettland,lettland,Latvia,latvia,Lettonie,letton(ie)?,Lettonia,letton(ia|e)
-Libanon,libanon,Lebanon,lebanon,Liban,liban,Libano,liban(o|ese|esa)
+Demokratische Volksrepublik Laos,\blaos?\b,Lao People's Democratic Republic,\blaos?\b,Laos,\blaos?\b|laotien,Laos,\blaos?\b|laotian[oa]
+Lettland,lettland,Latvia,latvia,Lettonie,letton(?:ie)?,Lettonia,letton(?:ia|e)
+Libanon,libanon,Lebanon,lebanon,Liban,liban,Libano,liban(?:o|ese|esa)
 Lesotho,lesotho|basuto,Lesotho,lesotho|basuto,Lesotho,lesotho|basuto,Lesotho,lesotho|basuto
-Liberia,liberia,Liberia,liberia,Libéria,lib(é|e)ri(a|ien),Liberia,liberia
-Libyen,libyen,Libya,libya,Libye,libye,Libia,libia|libic(o|a)
+Liberia,liberia,Liberia,liberia,Libéria,lib[ée]ri(?:a|ien),Liberia,liberia
+Libyen,libyen,Libya,libya,Libye,libye,Libia,libia|libic[oa]
 Liechtenstein,liechtenstein,Liechtenstein,liechtenstein,Liechtenstein,liechtenstein,Liechtenstein,liechtenstein
-Litauen,litauen,Lithuania,lithuania,Lituanie,lituanie(n)?,Lituania,lituan(ia|o|a)
-Luxemburg,^(?!.*belg).*luxem,Luxembourg,^(?!.*belg).*luxem,Luxembourg,luxembourg,Lussemburgo,lussemburg(o|hese|hesa)
-Macao,maca(o|u),Macao,maca(o|u),R.A.S. chinoise de Macao,maca(o|u),RAS di Macao,maca(o|u)
-Madagaskar,madagaskar|malagasy,Madagascar,madagascar|malagasy,Madagascar,madagas(c|k)ar|malagasy|malgache,Madagascar,madagascar|malgasci
+Litauen,litauen,Lithuania,lithuania,Lituanie,lituanien?,Lituania,lituan(?:ia|o|a)
+Luxemburg,^(?!.*belg).*luxem,Luxembourg,^(?!.*belg).*luxem,Luxembourg,luxembourg,Lussemburgo,lussemburg(?:o|hese|hesa)
+Macao,maca[ou],Macao,maca[ou],R.A.S. chinoise de Macao,maca[ou],RAS di Macao,maca[ou]
+Madagaskar,madagaskar|malagasy,Madagascar,madagascar|malagasy,Madagascar,madagas[ck]ar|malagasy|malgache,Madagascar,madagascar|malgasci
 Malawi,malawi|nyasa,Malawi,malawi|nyasa,Malawi,malawi|nyasa,Malawi,malawi|nyasa
 Malaysia,malaysia,Malaysia,malaysia,Malaisie,malaisie,Malaysia,malaysia
-Malediven,malediven,Maldives,maldive,Maldives,male?dive(s|n),Maldive,maldive
-Mali,\bmali\b,Mali,\bmali\b,Mali,\bmali\b,Mali,\bmali\b|malian(o|a)
-Malta,\bmalta,Malta,\bmalta,Malte,malte|maltais,Malta,\bmalta|maltes(e|a|i)
+Malediven,malediven,Maldives,maldive,Maldives,male?dive[sn],Maldive,maldive
+Mali,\bmali\b,Mali,\bmali\b,Mali,\bmali\b,Mali,\bmali\b|malian[oa]
+Malta,\bmalta,Malta,\bmalta,Malte,malte|maltais,Malta,\bmalta|maltes[eai]
 Marshallinseln,marshall,Marshall Islands,marshall,Îles Marshall,marshall,Isole Marshall,marshall
 Martinique,martinique,Martinique,martinique,Martinique,martinique,Martinica,martinica
-Mauretanien,mauretanien,Mauritania,mauritania,Mauritanie,mauritanie,Mauritania,mauritan(ia|o|a)
-Mauritius,mauritius,Mauritius,mauritius,Maurice,maurice|mauritius,Mauritius,maurizi(o|a)|mauritius
-Mayotte,\bmayotte,Mayotte,\bmayotte,Mayotte,\bmayotte,Mayotte,\bma(i|y)ott(a|e)
+Mauretanien,mauretanien,Mauritania,mauritania,Mauritanie,mauritanie,Mauritania,mauritan(?:ia|o|a)
+Mauritius,mauritius,Mauritius,mauritius,Maurice,maurice|mauritius,Mauritius,maurizi[oa]|mauritius
+Mayotte,\bmayotte,Mayotte,\bmayotte,Mayotte,\bmayotte,Mayotte,\bma[iy]ott[ae]
 Mecklenburg-Schwerin,mecklenbur.*schwerin,Mecklenburg Schwerin,mecklenbur.*schwerin,,mecklenbour.*schwerin,,meclembur.*schwerin
-Mexiko,\bmexik,Mexico,\bmexic,Mexique,mexique|mexicain,Messico,messic(o|a)
-Mikronesien,mikronesien,Micronesia (Federated States of),fed.*micronesia|micronesia.*fed,Micronésie (États fédérés de),micron(é|e)sie,,micronesia
-Modena,modena|muden|mutina,Modena,modena,,mod(è|e)n(a|e),,moden(a|e)
-Monaco,monaco,Monaco,monaco,Monaco,monaco|mon(é|e)gasque,Monaco,monaco|moegasc
-Mongolei,mongolei,Mongolia,mongolia,Mongolie,mongol(ie)?,Mongolia,mongol(ia|o|a)
-Montenegro,^(?!.*serbien).*montenegro,Montenegro,^(?!.*serbia).*montenegro,Monténégro,mont(é|e)n(é|e)gro,Montenegro,^(?!.*serbia).*montenegro
+Mexiko,\bmexik,Mexico,\bmexic,Mexique,mexique|mexicain,Messico,messic[oa]
+Mikronesien,f(?:ö|oe)der.*mikronesien|mikronesien.*f(?:ö|oe)der|\bf\.?\s*s\.?\s+mikronesien,Micronesia (Federated States of),fed.*micronesia|micronesia.*fed|\bf\.?\s*s\.?\s+micronesia,Micronésie (États fédérés de),f[ée]d.*micron[ée]sie|micron[ée]sie.*f[ée]d|\bf\.?\s*s\.?\s+micron[ée]sie,,stati.*feder.*micronesia|micronesia.*stati.*feder|\bf\.?\s*s\.?\s+micronesia
+Modena,modena|muden|mutina,Modena,modena,,mod[èe]n[ae],,moden[ae]
+Monaco,monaco,Monaco,monaco,Monaco,monaco|mon[ée]gasque,Monaco,monaco|moegasc
+Mongolei,mongolei,Mongolia,mongolia,Mongolie,mongol(?:ie)?,Mongolia,mongol(?:ia|o|a)
+Montenegro,^(?!.*serbien).*montenegro,Montenegro,^(?!.*serbia).*montenegro,Monténégro,mont[ée]n[ée]gro,Montenegro,^(?!.*serbia).*montenegro
 Montserrat,montserrat,Montserrat,montserrat,Montserrat,montserrat,Montserrat,montserrat
 Marokko,marokko|\bmaroc,Morocco,morocco|\bmaroc,Maroc,marokko|\bmaroc,Marocco,marokko|\bmaroc|marocchin
-Mosambik,mosambik,Mozambique,mozambique,Mozambique,mo(z|s)ambi(k|que|cain),Mozambico,mozambic(o|a)
+Mosambik,mosambik,Mozambique,mozambique,Mozambique,mo[zs]ambi(?:k|que|cain),Mozambico,mozambic[oa]
 Myanmar,myanmar|burma,Myanmar,myanmar|burma,Myanmar (Birmanie),myanmar|burma,Myanmar (Birmania),myanmar|burma
 Namibia,namibia,Namibia,namibia,Namibie,namibie,Namibia,namibia
 Nassau,nassau,Nassau,nassau,,nassau,,nassau
 Nauru,nauru|naoero|nauruisch,Nauru,nauru,Nauru,nauru|naoero,Nauru,nauru|naoero
-Nepal,nepal,Nepal,nepal,Népal,n(é|e)pal,Nepal,nepal
-Niederlande,^(?!\bkarib).*niederland(?!.*\bant)|holland,Netherlands,^(?!.*\bant)(?!.*\bcarib).*netherlands|holland,Pays-Bas,pays-bas(?!.*carib)|^(!.*martin).*n(é|e)erlandais|holland,Paesi Bassi,paesi.?bassi(?!.*\bcarib)|neerland|^(?!\bcarai)(?!\bant).*oland(a|ia|esi)
-Niederländische Antillen,niederl(a|ä)ndische.?antillen|antillen.*nieder,Netherlands Antilles,netherlands.antil|dutch.antil,,antille.*(néerlandais|neerlandais|hollandais)|pays.bas.carib,,antille.?olandesi
-Neukaledonien,neu.?kaledonien,New Caledonia,new.?caledonia,Nouvelle-Calédonie,nouvelle.*cal(é|e)donie,Nuova Caledonia,nuova.*caledonia|kanaky|nouvelle.*cal(é|e)donie
-Neuseeland,neuseeland,New Zealand,new.?zealand,Nouvelle-Zélande,nouvelle.*z(e|é)lande,Nuova Zelanda,nuova.?zelanda|neozelandes
+Nepal,nepal,Nepal,nepal,Népal,n[ée]pal,Nepal,nepal
+Niederlande,^(?!\bkarib).*niederland(?!.*\bant)|holland,Netherlands,^(?!.*\bant)(?!.*\bcarib).*netherlands|holland,Pays-Bas,pays-bas(?!.*carib)|^(?:!.*martin).*n[ée]erlandais|holland,Paesi Bassi,paesi.?bassi(?!.*\bcarib)|neerland|^(?!\bcarai)(?!\bant).*oland(?:a|ia|esi)
+Niederländische Antillen,niederl[aä]ndische.?antillen|antillen.*nieder,Netherlands Antilles,netherlands.antil|dutch.antil,,antille.*(?:néerlandais|neerlandais|hollandais)|pays.bas.carib,,antille.?olandesi
+Neukaledonien,neu.?kaledonien,New Caledonia,new.?caledonia,Nouvelle-Calédonie,nouvelle.*cal[ée]donie,Nuova Caledonia,nuova.*caledonia|kanaky|nouvelle.*cal[ée]donie
+Neuseeland,neuseeland,New Zealand,new.?zealand,Nouvelle-Zélande,nouvelle.*z[eé]lande,Nuova Zelanda,nuova.?zelanda|neozelandes
 Nicaragua,nicaragua,Nicaragua,nicaragua,Nicaragua,nicaragua,Nicaragua,nicaragua
 Niger,\bniger(?!ia),Niger,\bniger(?!ia),Niger,\bniger(?!ia)|nigérien,Niger,\bniger(?!ia)|nigerino
-Nigeria,nigeria,Nigeria,nigeria,Nigéria,\bnig(é|e)ria|nigérian,Nigeria,nigeria|nigeriano
-Niue,niue,Niue,niue,Niue,niu(e|é)|niou(e|é),Niue,niue
+Nigeria,nigeria,Nigeria,nigeria,Nigéria,\bnig[ée]ria|nigérian,Nigeria,nigeria|nigeriano
+Niue,niue,Niue,niue,Niue,niu[eé]|niou[eé],Niue,niue
 Norfolk-Insel,norfolk,Norfolk Island,norfolk,Île Norfolk,norfolk,Isola Norfolk,norfolk
 Nördliche Marianen,marianen,Northern Mariana Islands,mariana,Îles Mariannes du Nord,marianne,Isole Marianne settentrionali,marianne
-Norwegen,norwegen,Norway,norway,Norvège,norv(e|è)g(e|ien),Norvegia,norvegia|norveges
+Norwegen,norwegen,Norway,norway,Norvège,norv[eè]g(?:e|ien),Norvegia,norvegia|norveges
 Oldenburg,oldenb.?urg,Oldenburg,oldenburg,,oldenb.?urg,,oldenb.?urg
 Oman,\boman|trucial,Oman,\boman|trucial,Oman,\boman|trucial,Oman,\boman|trucial
 Oranje-Freistaat,oranje.*freistaat,Orange Free State,orange.free.state,,libre.*orange,,libero.*orange
 Pakistan,^(?!.*ost).*paki?stan,Pakistan,^(?!.*east).*paki?stan,Pakistan,^(?!.*ost).*paki?stan,Pakistan,^(?!.*ost).*paki?stan
 Palau,palau,Palau,palau,Palaos,palaos,Palau,palau
-Palästina,pal(ä|a)stin|\bgaza|west.?bank,"Palestine, State of",palestin|\bgaza|west.?bank,Territoires palestiniens,palestin|\bgaza|west.?bank|banque.*occidentale|cisjordanie,Territori palestinesi,palestin|\bgaza|west.?bank|cisgiordania|sponda.*occidentale
-Panama,panam(a|á),Panama,panama,Panama,panam(á|a|éen),Panamá,panam(á|a|ese|eso|esa)
-Papua-Neuguinea,papua|neu.?guinea,Papua New Guinea,papua|new.?guinea,Papouasie-Nouvelle-Guinée,papouasie.*(nouvelle|neo|néo).*guin(e|é)e|papouan-n(e|é)o-guin(e|é)en,Papua Nuova Guinea,papua.?nuova.?guinea|papuano
-Paraguay,paraguay,Paraguay,paraguay,Paraguay,paraguay,Paraguay,paragua(i|y)
-Parma,parma,Parma,parma,,parm(a|e),,parm(a|e)
-Peru,peru,Peru,peru,Pérou,\bp(e|é)rou|p(e|é)ruvien,Perù,per(u|ù)
-Philippinen,philippinen,Philippines,philippines,Philippines,philippin,Filippine,filippin(e|o|a)
-Piemont Sardinien,pie.?mont.sardini,Piedmont-Sardinia,piedmont.sardinia,,pi(e|é)mont.*sardaigne|pi(e|é)mont.*sarde,,piemonte.*sardegna
+Palästina,pal[äa]stin|\bgaza|west.?bank,"Palestine, State of",palestin|\bgaza|west.?bank,Territoires palestiniens,palestin|\bgaza|west.?bank|banque.*occidentale|cisjordanie,Territori palestinesi,palestin|\bgaza|west.?bank|cisgiordania|sponda.*occidentale
+Panama,panam[aá],Panama,panama,Panama,panam(?:á|a|éen),Panamá,panam(?:á|a|ese|eso|esa)
+Papua-Neuguinea,papua|neu.?guinea,Papua New Guinea,papua|new.?guinea,Papouasie-Nouvelle-Guinée,papouasie.*(?:nouvelle|neo|néo).*guin[eé]e|papouan-n[eé]o-guin[eé]en,Papua Nuova Guinea,papua.?nuova.?guinea|papuano
+Paraguay,paraguay,Paraguay,paraguay,Paraguay,paraguay,Paraguay,paragua[iy]
+Parma,parma,Parma,parma,,parm[ae],,parm[ae]
+Peru,peru,Peru,peru,Pérou,\bp[eé]rou|p[eé]ruvien,Perù,per[uù]
+Philippinen,philippinen,Philippines,philippines,Philippines,philippin,Filippine,filippin[eoa]
+Piemont Sardinien,pie.?mont.sardini,Piedmont-Sardinia,piedmont.sardinia,,pi[eé]mont.*sardaigne|pi[eé]mont.*sarde,,piemonte.*sardegna
 Pitcairn,pitcairn,Pitcairn,pitcairn,Îles Pitcairn,pitcairn,Isole Pitcairn,pitcairn
 Polen,polen,Poland,poland,Pologne,pologne|polonais,Polonia,polonia|polacco
-Portugal,portugal,Portugal,portugal,Portugal,portuga(l|is),Portogallo,portogallo|portoghes(e|a)
-Preussen,preussen|preussisch,Prussia,prussia,,pruss(e|ien),,prussia
-Puerto Rico,p(ue|o)rto.?rico,Puerto Rico,puerto.?rico,Porto Rico,p(o|ue)rto.?rico,Portorico,p(o|ue)rto.?rico
-Katar,(q|k)atar,Qatar,qatar,Qatar,(q|k)atar,Qatar,(q|k)atar
-"Korea, Republik von",^(?!.*demokrat)(?!.*volk)(?!.*nord).*korea,Republic of Korea,^(?!.*d.*p.*r)(?!.*democrat)(?!.*dem.*rep)(?!.*people)(?!.*north).*\bkorea(?!.*d.*p.*r)(?!.*dem.*rep),Corée du Sud,^(?!.*d(e|é)mocrat)(?!.*popu)(?!.*nord).*cor(e|é)e,Corea del Sud,^(?!.*democrat)(?!.*popo)(?!.*nord).*corea|corea.*sud
-Republik Moldau,moldau|mold(o|a)v|b(a|e)ssarabia,Republic of Moldova,moldov|b(a|e)ssarabia,Moldavie,moldau|mold(o|a)v|b(a|e)ssarabia,Moldavia,moldau|mold(o|a)v|b(a|e)ssarabia
+Portugal,portugal,Portugal,portugal,Portugal,portuga(?:l|is),Portogallo,portogallo|portoghes[ea]
+Preussen,preussen|preussisch,Prussia,prussia,,pruss(?:e|ien),,prussia
+Puerto Rico,p(?:ue|o)rto.?rico,Puerto Rico,puerto.?rico,Porto Rico,p(?:o|ue)rto.?rico,Portorico,p(?:o|ue)rto.?rico
+Katar,[qk]atar,Qatar,qatar,Qatar,[qk]atar,Qatar,[qk]atar
+"Korea, Republik von",^(?!.*demokrat)(?!.*volk)(?!.*nord).*korea,Republic of Korea,^(?!.*d.*p.*r)(?!.*democrat)(?!.*dem.*rep)(?!.*people)(?!.*north).*\bkorea(?!.*d.*p.*r)(?!.*dem.*rep),Corée du Sud,^(?!.*d[eé]mocrat)(?!.*popu)(?!.*nord).*cor[eé]e,Corea del Sud,^(?!.*democrat)(?!.*popo)(?!.*nord).*corea|corea.*sud
+Republik Moldau,moldau|mold[oa]v|b[ae]ssarabia,Republic of Moldova,moldov|b[ae]ssarabia,Moldavie,moldau|mold[oa]v|b[ae]ssarabia,Moldavia,moldau|mold[oa]v|b[ae]ssarabia
 Südvietnam,s.d.?vietnam,Republic of Vietnam,^republic.of.viet.?nam|south.viet.?nam|viet.?nam.south,,sud.*viet.?nam,,vietnam.*sud
-Réunion,r(e|é)union,Reunion,r(e|é)union,La Réunion,r(e|é)union,Riunione,r(e|i)union
-Rumänien,rum(a|ä)nien,Romania,r(o|u|ou)mania,Roumanie,rouma(nie|in),Romania,romania|romen(o|a)|rumen(o|a)
-Russische Föderation,\brussland|russ.*föderation|sowjet.?union|u\.?s\.?s\.?r|sowjet.?republik|udssr,Russian Federation,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics,Russie,^(?!.*\bbela)(?!.*\bbrunei)(?!.*\bda)russ(ie|e),Russia,^(?!.*\bbela)(?!.*\bbrunei)(?!.*\bda)russ(ia|a)
-Ruanda,r(u|w)anda,Rwanda,rwanda,Rwanda,r(u|w)anda(is)?,Ruanda,r(u|w)and(a|ese|eso|esa)
-Saint-Barthelemy,barth(e|é)lemy,Saint Barthelemy,barth(e|é)lemy,Saint-Barthélemy,barth(e|é)lemy,Saint-Barthélemy,barth(e|é)lemy
-"St. Helena, Ascension und Tristan da Cunha",helena|ascension|tristan,"Saint Helena, Ascension and Tristan da Cunha",helena,Sainte-Hélène,h(e|é)l(e|è)na?|ascension|tristan,Sant’Elena,^(?=sant).*elena|ascension|tristan
-St. Kitts und Nevis,kitts|\bnevis,Saint Kitts and Nevis,kitts|\bnevis,Saint-Christophe-et-Niévès,kitts|\bnevis|^(?=saint.chris).*ni(e|é)v(e|è)s,Saint Kitts e Nevis,kitts|\bnevis
+Réunion,r[eé]union,Reunion,r[eé]union,La Réunion,r[eé]union,Riunione,r[ei]union
+Rumänien,rum[aä]nien,Romania,r(?:o|u|ou)mania,Roumanie,rouma(?:nie|in),Romania,romania|romen[oa]|rumen[oa]
+Russische Föderation,\brussland|russ.*föderation|sowjet.?union|u\.?s\.?s\.?r|sowjet.?republik|udssr,Russian Federation,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics,Russie,^(?!.*\bbela)(?!.*\bbrunei)(?!.*\bda)russ(?:ie|e),Russia,^(?!.*\bbela)(?!.*\bbrunei)(?!.*\bda)russ(?:ia|a)
+Ruanda,r[uw]anda,Rwanda,rwanda,Rwanda,r[uw]anda(?:is)?,Ruanda,r[uw]and(?:a|ese|eso|esa)
+Saint-Barthelemy,barth[eé]lemy,Saint Barthelemy,barth[eé]lemy,Saint-Barthélemy,barth[eé]lemy,Saint-Barthélemy,barth[eé]lemy
+"St. Helena, Ascension und Tristan da Cunha",helena|ascension|tristan,"Saint Helena, Ascension and Tristan da Cunha",helena,Sainte-Hélène,h[eé]l[eè]na?|ascension|tristan,Sant’Elena,^(?=sant).*elena|ascension|tristan
+St. Kitts und Nevis,kitts|\bnevis,Saint Kitts and Nevis,kitts|\bnevis,Saint-Christophe-et-Niévès,kitts|\bnevis|^(?=saint.chris).*ni[eé]v[eè]s,Saint Kitts e Nevis,kitts|\bnevis
 Saint Lucia,\blucia,Saint Lucia,\blucia,Sainte-Lucie,sainte-lucie,Saint Lucia,\blucia
 Saint Martin (französischer Teil),^(?=.*franz).*saint.*martin(?!ique),Saint Martin (French part),saint.martin.*FR|^(?=.*collectivity).*martin|^(?=.*france).*martin(?!ique)|^(?=.*french).*martin(?!ique),Saint-Martin (partie française),^(?=.*fran).*saint.*martin(?!ique),,^(?=.*francese).*saint.*martin
 Saint-Pierre und Miquelon,miquelon,Saint Pierre and Miquelon,miquelon,Saint-Pierre-et-Miquelon,miquelon,Saint-Pierre e Miquelon,miquelon
 St. Vincent und die Grenadinen,vincent,Saint Vincent and the Grenadines,vincent,Saint-Vincent-et-les-Grenadines,vincent,Saint Vincent e Grenadine,vincent|grenadin
-Samoa,^(?!.*amer).*samoa,Samoa,^(?!.*amer).*samoa,Samoa,samoa(?!.*amér)(?!.*amer)|etat.*ind(é|e)p.*samoa,Samoa,samoa(?!.*amer)
-San Marino,san.?marino,San Marino,san.?marino,Saint-Marin,saint-marin,San Marino,san.?marin(o|ese|esa)
-Sao Tome und Principe,\bs(a|ã)o.?tom(e|é),Sao Tome and Principe,\bs(a|ã)o.?tom(e|é),Sao Tomé-et-Principe,\bs(a|ã)o.?tom(e|é)(.*principe)?,São Tomé e Príncipe,\bs(a|ã)o.?tom(e|é)|tom(e|é).*principe
+Samoa,^(?!.*amer).*samoa,Samoa,^(?!.*amer).*samoa,Samoa,samoa(?!.*amér)(?!.*amer)|etat.*ind[ée]p.*samoa,Samoa,samoa(?!.*amer)
+San Marino,san.?marino,San Marino,san.?marino,Saint-Marin,saint-marin,San Marino,san.?marin(?:o|ese|esa)
+Sao Tome und Principe,\bs[aã]o.?tom[eé],Sao Tome and Principe,\bs[aã]o.?tom[eé],Sao Tomé-et-Principe,\bs[aã]o.?tom[eé](?:.*principe)?,São Tomé e Príncipe,\bs[aã]o.?tom[eé]|tom[eé].*principe
 Sardinien,sardinien,Sardinia,^(?!.*piedmont)(?!.*italy).*\bsardinia,,sardaigne|sarde|sardinia,,sardegna|sardina
-Saudi Arabien,\bsa\w*.?arabien,Saudi Arabia,\bsa\w*.?arabia,Arabie saoudite,arabie.*saoudi,Arabia Saudita,(arabia.*)?saudita
+Saudi Arabien,\bsa\w*.?arabien,Saudi Arabia,\bsa\w*.?arabia,Arabie saoudite,arabie.*saoudi,Arabia Saudita,(?:arabia.*)?saudita
 Sachsen-Weimar-Eisenach,sachsen.*weimar.eisen,Saxe-Weimar-Eisenach,saxe.weimar.eisenach,,saxe.*weimar.*eisenach,,saxe.*weimar.*eisenach
 Sachsen,sachsen,Saxony,saxony,,saxe|saxon|saxonie,,sassonia|saxony|sassone
-Senegal,senegal,Senegal,senegal,Sénégal,s(e|é)n(e|é)gal,Senegal,senegal
-Serbien,^(?!.*monte).*serbien,Serbia,^(?!.*monte).*serbia,Serbie,serb(i)?e,Serbia,serbi(a|o)
-Serbien und Montenegro,serbien.*montenegro,Serbia and Montenegro,serbia.and.montenegro,,serbie.*mont(é|e)n(é|e)gro,,serbia.*montenegro
-Seychellen,seychell,Seychelles,seychell,Seychelles,seychell,Seychelles,se(i|y)ch?elle
+Senegal,senegal,Senegal,senegal,Sénégal,s[eé]n[eé]gal,Senegal,senegal
+Serbien,^(?!.*monte).*serbien,Serbia,^(?!.*monte).*serbia,Serbie,serbi?e,Serbia,serbi[ao]
+Serbien und Montenegro,serbien.*montenegro,Serbia and Montenegro,serbia.and.montenegro,,serbie.*mont[ée]n[ée]gro,,serbia.*montenegro
+Seychellen,seychell,Seychelles,seychell,Seychelles,seychell,Seychelles,se[iy]ch?elle
 Sierra Leone,sierra,Sierra Leone,sierra,Sierra Leone,sierra,Sierra Leone,sierra
 Singapur,singapur,Singapore,singapore,Singapour,singapour,Singapore,singapore
-Sint Maarten (Niederländischer Teil),^(?!.*martin)(?!.*saba).*maarten,Sint Maarten (Dutch part),^(?!.*martin)(?!.*saba).*maarten,Saint-Martin (partie néerlandaise),^(?!.*martin)(?!.*saba).*maarten|saint.martin.*n(e|é)erland|saint.martin(?!.*france),Sint Maarten,^(?!.*martin)(?!.*saba).*maarten|san.martin.*olandes|san.martin(?!.*france)
-Slowakei,^(?!.*tsch).*slowakei,Slovakia,^(?!.*cze).*slovak,Slovaquie,^(?!.*czech).*slovaqu,Slovacchia,^(?!.*czech)(?!.*cechia)(?!.*cec(o|a)).*slovacch
-Slowenien,slowenien,Slovenia,slovenia,Slovénie,slov(e|é)nie,Slovenia,slovenia
+Sint Maarten (Niederländischer Teil),^(?!.*martin)(?!.*saba).*maarten,Sint Maarten (Dutch part),^(?!.*martin)(?!.*saba).*maarten,Saint-Martin (partie néerlandaise),^(?!.*martin)(?!.*saba).*maarten|saint.martin.*n[eé]erland|saint.martin(?!.*france),Sint Maarten,^(?!.*martin)(?!.*saba).*maarten|san.martin.*olandes|san.martin(?!.*france)
+Slowakei,^(?!.*tsch).*slowakei,Slovakia,^(?!.*cze).*slovak,Slovaquie,^(?!.*czech).*slovaqu,Slovacchia,^(?!.*czech)(?!.*cechia)(?!.*cec[oa]).*slovacch
+Slowenien,slowenien,Slovenia,slovenia,Slovénie,slov[eé]nie,Slovenia,slovenia
 Salomon-Inseln,salomon,Solomon Islands,solomon,Îles Salomon,salomon,Isole Salomone,salomon
-Somalia,somalia,Somalia,somalia,Somalie,somali(e)?,Somalia,somalia
+Somalia,somalia,Somalia,somalia,Somalie,somalie?,Somalia,somalia
 Somaliland,somaliland,Somaliland,somaliland,,somaliland,,somaliland
-Südafrika,\bs(ü|u)d*.?afrika,South Africa,south.africa|s\\..?africa,Afrique du Sud,afrique.*sud,Sudafrica,sudafrica
-Südgeorgien und die Südlichen Sandwichinseln,sandwichinseln,South Georgia and the South Sandwich Islands,south.?georgia|sandwich,Géorgie du Sud et îles Sandwich du Sud,g(e|é)org.*sud.*sandwich,Georgia del Sud e Sandwich australi,georgia.*sud.*sandwich
-Südsudan,^s(ü|u)d.?sudan,South Sudan,\bs\w*.?sudan,Soudan du Sud,soudan.*sud,Sud Sudan,sudan.*sud|sud.*sudan
-Spanien,spanien,Spain,spain,Espagne,espagn(e|o),Spagna,spagn(a|olo|ola)
+Südafrika,\bs[üu]d*.?afrika,South Africa,south.africa|s\\..?africa,Afrique du Sud,afrique.*sud,Sudafrica,sudafrica
+Südgeorgien und die Südlichen Sandwichinseln,sandwichinseln,South Georgia and the South Sandwich Islands,south.?georgia|sandwich,Géorgie du Sud et îles Sandwich du Sud,g[eé]org.*sud.*sandwich,Georgia del Sud e Sandwich australi,georgia.*sud.*sandwich
+Südsudan,^s[üu]d.?sudan,South Sudan,\bs\w*.?sudan,Soudan du Sud,soudan.*sud,Sud Sudan,sudan.*sud|sud.*sudan
+Spanien,spanien,Spain,spain,Espagne,espagn[eo],Spagna,spagn(?:a|olo|ola)
 Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon,Sri Lanka,sri.?lanka|ceylon
 ,,Stateless,stateless,,,,
 Sudan,^(?!süd).?sudan,Sudan,^(?!.*\bs(?!u)).*sudan,Soudan,soudan(?!.*sud),Sudan,^(?!sud\b).*sudan
-Surinam,surinam|niederl(a|ä)ndisch.?gua(y|i)ana,Suriname,surinam|dutch.?gu(y|i)ana,Suriname,surinam|niederl(a|ä)ndisch.?gua(y|i)ana,Suriname,surinam|niederl(a|ä)ndisch.?gua(y|i)ana
+Surinam,surinam|niederl[aä]ndisch.?gua[yi]ana,Suriname,surinam|dutch.?gu[yi]ana,Suriname,surinam|niederl[aä]ndisch.?gua[yi]ana,Suriname,surinam|niederl[aä]ndisch.?gua[yi]ana
 Svalbard und Jan Mayen,svalbard|spitzbergen|jan.mayen,Svalbard and Jan Mayen,svalbard,Svalbard et Jan Mayen,svalbard|spitzberg|jan.mayen,Svalbard e Jan Mayen,svalbard|spitsbergen|jan.mayen
-Swasiland,swa(s|z)iland|eswatini,Swaziland,swaziland|eswatini,Eswatini,swa(s|z)iland|eswatini|swatinien,Swaziland,swa(s|z)iland|eswatini|swatinian
-Schweden,schweden,Sweden,sweden,Suède,su(e|è)de,Svezia,svezia|svedes
-Schweiz,schweiz,Switzerland,switz|swiss,Suisse,suisse|helv(e|é)tique,Svizzera,svizzer|elvetic(a|o)
+Swasiland,swa[sz]iland|eswatini,Swaziland,swaziland|eswatini,Eswatini,swa[sz]iland|eswatini|swatinien,Swaziland,swa[sz]iland|eswatini|swatinian
+Schweden,schweden,Sweden,sweden,Suède,su[eè]de,Svezia,svezia|svedes
+Schweiz,schweiz,Switzerland,switz|swiss,Suisse,suisse|helv[eé]tique,Svizzera,svizzer|elvetic[ao]
 Syrische Arabische Republik,syrien|syrisch,Syrian Arab Republic,syria,Syrie,syrie,Siria,siria
-Taiwan,taiwan|taipei|formosa,"Taiwan, Province of China",taiwan|taipei|formosa|^(?!.*peo)(?=.*rep).*china,Taïwan,ta(i|ï)wan|taipei|formosa,Taiwan,taiwan|taipei|formosa
-Tadschikistan,tadschikistan,Tajikistan,tajik,Tadjikistan,tadjik,Tagikistan,tagikistan|tagic(o|a)
-Thailand,thailand|\bsiam,Thailand,thailand|\bsiam,Thaïlande,tha(i|ï)lande,Thailandia,thailand|\bsiam
-Nordmazedonien,mazedonien|fyrom,The former Yugoslav Republic of Macedonia,macedonia|fyrom,Macédoine du Nord,mac(é|e)do(ine|ni)|fyrom,Macedonia del Nord,macedoni|fyrom
+Taiwan,taiwan|taipei|formosa,"Taiwan, Province of China",taiwan|taipei|formosa|^(?!.*peo)(?=.*rep).*china,Taïwan,ta[iï]wan|taipei|formosa,Taiwan,taiwan|taipei|formosa
+Tadschikistan,tadschikistan,Tajikistan,tajik,Tadjikistan,tadjik,Tagikistan,tagikistan|tagic[oa]
+Thailand,thailand|\bsiam,Thailand,thailand|\bsiam,Thaïlande,tha[iï]lande,Thailandia,thailand|\bsiam
+Nordmazedonien,mazedonien|fyrom,The former Yugoslav Republic of Macedonia,macedonia|fyrom,Macédoine du Nord,mac[ée]do(?:ine|ni)|fyrom,Macedonia del Nord,macedoni|fyrom
 ,,Tibet,tibet,,,,
 Timor-Leste,^(?=.*leste).*timor|^(?=.*ost).*timor|^(?=.*portu).*timor,Timor-Leste,^(?=.*leste).*timor|^(?=.*east).*timor,Timor oriental,^(?=.*leste).*timor|^(?=.*ost).*timor|timor.*orient|^(?=.*portu).*timor,Timor Est,^(?=.*est).*timor|^(?=.*oriental).*timor|^(?=.*port).*timor
 Togo,togo,Togo,togo,Togo,togo,Togo,togo
-Tokelau,tokelau,Tokelau,tokelau,Tokelau,tok(e|é)l(au|aou|ova),Tokelau,tokela(u|o)
+Tokelau,tokelau,Tokelau,tokelau,Tokelau,tok[eé]l(?:au|aou|ova),Tokelau,tokela[uo]
 Tonga,tonga,Tonga,tonga,Tonga,tonga,Tonga,tonga
 Trinidad und Tobago,trinidad|tobago,Trinidad and Tobago,trinidad|tobago,Trinité-et-Tobago,trinidad|tobago,Trinidad e Tobago,trinidad|tobago
-Tunesien,tunesien,Tunisia,tunisia,Tunisie,tunisie,Tunisia,tunisi(a|no|na)
-Türkei,türkei,Turkey,turkey|t(ü|u)rkiye,Turquie,^(?!.*île)^(?!.*ile).*(turquie|turc|turque|t(ü|u)rkiye),Turchia,turchia|turc(o|a)|t(uü)rkiye
-Turkmenistan,turkmen,Turkmenistan,turkmen,Turkménistan,turkm(e|é)nistan,Turkmenistan,turkmen
-Turks- und Caicosinseln,turks,Turks and Caicos Islands,turks,Îles Turques-et-Caïques,turks|(i|î)le.*(turque|caïques|caiques),Isole Turks e Caicos,turks
-Toskana,toskana,Tuscany,tuscany,,toscan(e|a),,toscan(a|o)|tuscany
+Tunesien,tunesien,Tunisia,tunisia,Tunisie,tunisie,Tunisia,tunisi(?:a|no|na)
+Türkei,türkei,Turkey,turkey|t[üu]rk[iİ]ye,Turquie,^(?!.*île)^(?!.*ile).*(?:turquie|turc|turque|t[üu]rk[iİ]ye),Turchia,turchia|turc[oa]|t[uü]rk[iİ]ye
+Turkmenistan,turkmen,Turkmenistan,turkmen,Turkménistan,turkm[eé]nistan,Turkmenistan,turkmen
+Turks- und Caicosinseln,turks,Turks and Caicos Islands,turks,Îles Turques-et-Caïques,turks|[iî]le.*(?:turque|caïques|caiques),Isole Turks e Caicos,turks
+Toskana,toskana,Tuscany,tuscany,,toscan[ea],,toscan[ao]|tuscany
 Tuvalu,tuvalu,Tuvalu,tuvalu,Tuvalu,tuvalu,Tuvalu,tuvalu
 Königreich beider Sizilien,sizilien,Two Sicilies,two.?sicilies,,sicile,,sicile
-Uganda,uganda,Uganda,uganda,Ouganda,ouganda,Uganda,ugand(a|ese|esa)
-Ukraine,ukrain,Ukraine,ukrain,Ukraine,ukrain,Ucraina,ucrain(a|o)
-Vereinigte Arabische Emirate,arabische.?emirate,United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Émirats arabes unis,(é|e)mirats.*arabes|\bu\.?a\.?e\.?\b,Emirati Arabi Uniti,emirati.?arabi.?uniti|\bu\.?a\.?e\.?\b
-Vereinigte Arabische Republik,arabische.?republik,United Arab Republic,united.arab.republic,,r(e|é)pu.*arab.*unie,,repubb.*arab.*unita
-Großbritannien,gro(ss|ß)britannien|britanien|vereinigtes.?k(ö|o)nigreich|^u\.?k\.?$,United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$,Royaume-Uni,grande-bretagne|royaume.*uni,Regno Unito,gran.*bretagna|regno.*unito|irlanda.*nord
+Uganda,uganda,Uganda,uganda,Ouganda,ouganda,Uganda,ugand(?:a|ese|esa)
+Ukraine,ukrain,Ukraine,ukrain,Ukraine,ukrain,Ucraina,ucrain[ao]
+Vereinigte Arabische Emirate,arabische.?emirate,United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Émirats arabes unis,[ée]mirats.*arabes|\bu\.?a\.?e\.?\b,Emirati Arabi Uniti,emirati.?arabi.?uniti|\bu\.?a\.?e\.?\b
+Vereinigte Arabische Republik,arabische.?republik,United Arab Republic,united.arab.republic,,r[eé]pu.*arab.*unie,,repubb.*arab.*unita
+Großbritannien,gro(?:ss|ß)britannien|britanien|vereinigtes.?k[öo]nigreich|^u\.?k\.?$,United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$|north.*ireland|ireland.*north|\bn\.?\s+ireland|ireland[^a-zA-Z]*n\.?(?!\w),Royaume-Uni,grande-bretagne|royaume.*uni,Regno Unito,gran.*bretagna|regno.*unito|irlanda.*nord
 Vereinigte Provinz CA,united.province.ca|vereinigte.provinz.ca,United Province CA,united.province.ca,,united.province.ca|province.unie.*ca,,united.province.ca|provincia.unita.ca
-Tansania,tan(s|z)ania,United Republic of Tanzania,tanzania,Tanzanie,tanzanie,Tanzania,tanzania
-United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,Mineures éloignées des États-Unis (les),minor.?outlying.?is|(î|i)les.*mineures.*(é|e)tats-unis,,minor.?outlying.?is|isole.*minori.*esterne.*stati.*uniti
-Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),États-Unis,^(é|e)tats-unis|^(?!.*samoa).*am(é|e)ricain|am(e|é)rique|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),Stati Uniti,^stati.?uniti|^(?!.*vergin)^(?!.*samoa).*america|statunite|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands)
+Tansania,tan[sz]ania,United Republic of Tanzania,tanzania,Tanzanie,tanzanie,Tanzania,tanzania
+United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,Mineures éloignées des États-Unis (les),minor.?outlying.?is|[îi]les.*mineures.*[ée]tats-unis,,minor.?outlying.?is|isole.*minori.*esterne.*stati.*uniti
+Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),États-Unis,^[ée]tats-unis|^(?!.*samoa).*am[ée]ricain|am[eé]rique|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),Stati Uniti,^stati.?uniti|^(?!.*vergin)^(?!.*samoa).*america|statunite|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands)
 ,,Unknown,unknown,,,,
-Uruguay,uruguay,Uruguay,uruguay,Uruguay,uruguay,Uruguay,urugua(i|y)
-Usbekistan,usbek,Uzbekistan,uzbek,Ouzbékistan,ouzb(e|é)k(istan)?,Uzbekistan,uzbekistan|uzbek(o|a)
-Vanuatu,vanuatu|neue.?hebriden,Vanuatu,vanuatu|new.?hebrides,Vanuatu,vanuatu|nouvelle.*h(e|é)bride,Vanuatu,vanuatu|nuvole.?hebride
+Uruguay,uruguay,Uruguay,uruguay,Uruguay,uruguay,Uruguay,urugua[iy]
+Usbekistan,usbek,Uzbekistan,uzbek,Ouzbékistan,ouzb[eé]k(?:istan)?,Uzbekistan,uzbekistan|uzbek[oa]
+Vanuatu,vanuatu|neue.?hebriden,Vanuatu,vanuatu|new.?hebrides,Vanuatu,vanuatu|nouvelle.*h[eé]bride,Vanuatu,vanuatu|nuvole.?hebride
 Venezuela,venezuela,"Venezuela, Bolivarian Republic of",venezuela,Venezuela,venezuela|vénézuélien,Venezuela,venezuela
 Vietnam,^(?!.*republik).*viet.?nam|^(?=.*sozialist).*viet.?nam,Viet Nam,^(?!south)(?!republic).*viet.?nam(?!.*south)|democratic.republic.of.vietnam|socialist.republic.of.viet.?nam|north.viet.?nam|viet.?nam.north,Vietnam,^(?!.*republique).*viet.?nam|^(?=.*socialist).*viet.?nam,Vietnam,^(?!.*republik).*viet.?nam|^(?=.*sozialist).*viet.?nam
-Britische Jungferninseln,brit.*jungferninseln,"Virgin Islands, British",^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin,Îles Vierges britanniques,(î|i)les.*vierges.*brit,Isole Vergini Britanniche,isole.*vergini.*brit
-"Virgin Islands, U.S.",^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin|amer.*jungferninseln,"Virgin Islands, U.S.",^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,Îles Vierges des États-Unis,(î|i)les.*vierges.*(\bu.?s.?\b|(e|é)tats.?unis|ameri|ameri),Isole Vergini Americane,isole.*vergini.*(\bu.?s.?\b|usa|stati.uniti|americ)
+Britische Jungferninseln,brit.*jungferninseln,"Virgin Islands, British",^(?=.*\bu\.?\s?k).*virgin|^(?=.*brit).*virgin|^(?=.*kingdom).*virgin,Îles Vierges britanniques,[îi]les.*vierges.*brit,Isole Vergini Britanniche,isole.*vergini.*brit
+"Virgin Islands, U.S.",^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin|amer.*jungferninseln,"Virgin Islands, U.S.",^(?=.*\bu\.?\s?s).*virgin|^(?=.*states).*virgin,Îles Vierges des États-Unis,[îi]les.*vierges.*(?:\bu.?s.?\b|[eé]tats.?unis|ameri),Isole Vergini Americane,isole.*vergini.*(?:\bu.?s.?\b|usa|stati.uniti|americ)
 Wallis und Futuna,futuna|wallis,Wallis and Futuna,futuna|wallis,Wallis-et-Futuna,futuna|wallis,Wallis e Futuna,futuna|wallis
-Westsahara,west.*sahara,Western Sahara,western.sahara,Sahara occidental,west.*sahara|sahara.*(occidental|ouest),Sahara occidentale,west.*sahara|sahara.*occidentale
-Württemberg,w(ue|ü)rttemberg,Wuerttemburg,w(ue|ü)rttemburg,,w.rt.?emberg,,w.rt.?emberg
+Westsahara,west.*sahara,Western Sahara,western.sahara,Sahara occidental,west.*sahara|sahara.*(?:occidental|ouest),Sahara occidentale,west.*sahara|sahara.*occidentale
+Württemberg,w(?:ue|ü)rttemberg,Wuerttemburg,w(?:ue|ü)rttemburg,,w.rt.?emberg,,w.rt.?emberg
 ,,Wurtemberg,w.rtemberg,,,,
-Jemen,^(?!.*arab)(?!.*nord)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*süd)(?!.*aden)(?!.*\bp\.?d\.?r).*jemen,Yemen,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Yémen,y(e|é)men,Yemen,yemen
-Jemenitische Arabische Republik,^(?=.*arab).*jemen|^(?=.*nord).*jemen|^(?=.*sana).*jemen,Yemen Arab Republic,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,,^(?=.*arab).*(j|y)(é|e)men|^(?=.*nord).*(j|y)(é|e)men|^(?=.*sana).*(j|y)(é|e)men,,^(?=.*arab).*yemen|^(?=.*nord).*yemen|^(?=.*sana).*yemen
+Jemen,^(?!.*arab)(?!.*nord)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*süd)(?!.*aden)(?!.*\bp\.?d\.?r).*jemen,Yemen,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Yémen,y[eé]men,Yemen,yemen
+Jemenitische Arabische Republik,^(?=.*arab).*jemen|^(?=.*nord).*jemen|^(?=.*sana).*jemen,Yemen Arab Republic,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,,^(?=.*arab).*[jy][ée]men|^(?=.*nord).*[jy][ée]men|^(?=.*sana).*[jy][ée]men,,^(?=.*arab).*yemen|^(?=.*nord).*yemen|^(?=.*sana).*yemen
 Demokratische Volksrepublik Jemen,^(?=.*volk).*jemen|^(?!.*rep)(?=.*dem).*jemen|^(?=.*süd).*jemen|^(?=.*aden).*jemen|^(?=.*\bp\.?d\.?r).*jemen,Yemen People's Republic,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,,,,
 Jugoslawien,jugoslawien,Yugoslavia,yugoslavia,,yougoslavie,,jugoslavia
-Sambia,sambia|nord.?rhodesien,Zambia,zambia|northern.?rhodesia,Zambie,zambie|r.?od(é|e)sie.*nord,Zambia,zambia|r.?odesia.*nord
+Sambia,sambia|nord.?rhodesien,Zambia,zambia|northern.?rhodesia,Zambie,zambie|r.?od[ée]sie.*nord,Zambia,zambia|r.?odesia.*nord
 ,,Zanzibar,zanzibar,,,,
-Simbabwe,(z|s)imbabwe|^(?!.*nord).*rhodesien,Zimbabwe,zimbabwe|^(?!.*northern).*rhodesia,Zimbabwe,(z|s)imbabwe|^(?!.*nord).*rhod(e|é)sie,Zimbabwe,(z|s)imbabw(e|a)|^(?!.*nord).*rodia
+Simbabwe,[zs]imbabwe|^(?!.*nord).*rhodesien,Zimbabwe,zimbabwe|^(?!.*northern).*rhodesia,Zimbabwe,[zs]imbabwe|^(?!.*nord).*rhod[eé]sie,Zimbabwe,[zs]imbabw[ea]|^(?!.*nord).*rodia

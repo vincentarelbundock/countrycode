@@ -54,7 +54,10 @@ of columns that are accepted as valid origin codes.
 \item{custom_match}{A named vector which supplies custom origin and
 destination matches that will supercede any matching default result. The name
 of each element will be used as the origin code, and the value of each
-element will be used as the destination code.}
+element will be used as the destination code. Values supplied via
+\code{custom_match} supersede ambiguous or duplicate matches and will not
+trigger the corresponding ambiguity/duplicate-match warnings for those
+values.}
 
 \item{origin_regex}{NULL or Logical: When using a custom
 dictionary, if TRUE then the origin codes will be matched as
@@ -108,17 +111,5 @@ countryname(x)
 countryname(x, destination = "cowc", warn = FALSE)
 countryname(x, destination = "cowc", warn = FALSE, nomatch = x)
 
-\dontrun{
- # Download the dictionary of US states from Github
- state_dict <- "https://bit.ly/2ToSrFv"
- state_dict <- read.csv(state_dict)
-
- # The "state.regex" column includes regular expressions, so we set an attribute.
- attr(state_dict, "origin_regex") <- "state.regex"
- countrycode(c('AL', 'AK'), 'abbreviation', 'state',
-             custom_dict = state_dict)
- countrycode(c('Alabama', 'North Dakota'), 'state.regex', 'state',
-             custom_dict = state_dict)
-}
 }
 \keyword{countrycode}

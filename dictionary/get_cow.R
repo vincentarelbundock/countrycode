@@ -9,10 +9,10 @@ get_file <- function(web) {
     return(out)
 }
 
-codes <- get_file('http://www.correlatesofwar.org/data-sets/cow-country-codes/cow-country-codes')
-panel <- get_file('http://www.correlatesofwar.org/data-sets/state-system-membership/system2016')
+codes <- get_file('https://correlatesofwar.org/wp-content/uploads/COW-country-codes.csv')
+panel <- get_file('https://correlatesofwar.org/wp-content/uploads/system2016.csv')
 
-out <- full_join(codes, panel, by = c('ccode', 'stateabb')) %>%
+out <- full_join(codes, panel, by = c('ccode', 'stateabb'), relationship = "many-to-many") %>%
        mutate(country = statenme) %>%
        select(country, cowc = stateabb, cown = ccode, cow.name = statenme, year) %>%
        # overlapping years; pick one arbitrarily

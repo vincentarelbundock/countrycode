@@ -3,4 +3,8 @@
 .RData
 .Ruserdata
 *.DS_Store
-docs
+README.html
+altdoc/freeze.rds
+_quarto/
+!_quarto/_freeze/
+docs/
