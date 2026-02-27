@@ -1269,6 +1269,23 @@ gwn,gwc,country,year
 80,BLZ,Belize,2015
 80,BLZ,Belize,2016
 80,BLZ,Belize,2017
+89,UPC,United Provinces of Central America,1823
+89,UPC,United Provinces of Central America,1824
+89,UPC,United Provinces of Central America,1825
+89,UPC,United Provinces of Central America,1826
+89,UPC,United Provinces of Central America,1827
+89,UPC,United Provinces of Central America,1828
+89,UPC,United Provinces of Central America,1829
+89,UPC,United Provinces of Central America,1830
+89,UPC,United Provinces of Central America,1831
+89,UPC,United Provinces of Central America,1832
+89,UPC,United Provinces of Central America,1833
+89,UPC,United Provinces of Central America,1834
+89,UPC,United Provinces of Central America,1835
+89,UPC,United Provinces of Central America,1836
+89,UPC,United Provinces of Central America,1837
+89,UPC,United Provinces of Central America,1838
+89,UPC,United Provinces of Central America,1839
 90,GUA,Guatemala,1840
 90,GUA,Guatemala,1841
 90,GUA,Guatemala,1842
@@ -11996,6 +12013,65 @@ gwn,gwc,country,year
 560,SAF,South Africa,2015
 560,SAF,South Africa,2016
 560,SAF,South Africa,2017
+563,TRA,Transvaal,1852
+563,TRA,Transvaal,1853
+563,TRA,Transvaal,1854
+563,TRA,Transvaal,1855
+563,TRA,Transvaal,1856
+563,TRA,Transvaal,1857
+563,TRA,Transvaal,1858
+563,TRA,Transvaal,1859
+563,TRA,Transvaal,1860
+563,TRA,Transvaal,1861
+563,TRA,Transvaal,1862
+563,TRA,Transvaal,1863
+563,TRA,Transvaal,1864
+563,TRA,Transvaal,1865
+563,TRA,Transvaal,1866
+563,TRA,Transvaal,1867
+563,TRA,Transvaal,1868
+563,TRA,Transvaal,1869
+563,TRA,Transvaal,1870
+563,TRA,Transvaal,1871
+563,TRA,Transvaal,1872
+563,TRA,Transvaal,1873
+563,TRA,Transvaal,1874
+563,TRA,Transvaal,1875
+563,TRA,Transvaal,1876
+563,TRA,Transvaal,1877
+563,TRA,Transvaal,1878
+563,TRA,Transvaal,1879
+563,TRA,Transvaal,1880
+563,TRA,Transvaal,1881
+563,TRA,Transvaal,1882
+563,TRA,Transvaal,1883
+563,TRA,Transvaal,1884
+563,TRA,Transvaal,1885
+563,TRA,Transvaal,1886
+563,TRA,Transvaal,1887
+563,TRA,Transvaal,1888
+563,TRA,Transvaal,1889
+563,TRA,Transvaal,1890
+563,TRA,Transvaal,1891
+563,TRA,Transvaal,1892
+563,TRA,Transvaal,1893
+563,TRA,Transvaal,1894
+563,TRA,Transvaal,1895
+563,TRA,Transvaal,1896
+563,TRA,Transvaal,1897
+563,TRA,Transvaal,1898
+563,TRA,Transvaal,1899
+563,TRA,Transvaal,1900
+563,TRA,Transvaal,1901
+563,TRA,Transvaal,1902
+563,TRA,Transvaal,1903
+563,TRA,Transvaal,1904
+563,TRA,Transvaal,1905
+563,TRA,Transvaal,1906
+563,TRA,Transvaal,1907
+563,TRA,Transvaal,1908
+563,TRA,Transvaal,1909
+563,TRA,Transvaal,1910
 564,OFS,Orange Free State,1854
 564,OFS,Orange Free State,1855
 564,OFS,Orange Free State,1856
@@ -14994,6 +15070,44 @@ gwn,gwc,country,year
 710,CHN,China,2015
 710,CHN,China,2016
 710,CHN,China,2017
+711,TBT,Tibet,1913
+711,TBT,Tibet,1914
+711,TBT,Tibet,1915
+711,TBT,Tibet,1916
+711,TBT,Tibet,1917
+711,TBT,Tibet,1918
+711,TBT,Tibet,1919
+711,TBT,Tibet,1920
+711,TBT,Tibet,1921
+711,TBT,Tibet,1922
+711,TBT,Tibet,1923
+711,TBT,Tibet,1924
+711,TBT,Tibet,1925
+711,TBT,Tibet,1926
+711,TBT,Tibet,1927
+711,TBT,Tibet,1928
+711,TBT,Tibet,1929
+711,TBT,Tibet,1930
+711,TBT,Tibet,1931
+711,TBT,Tibet,1932
+711,TBT,Tibet,1933
+711,TBT,Tibet,1934
+711,TBT,Tibet,1935
+711,TBT,Tibet,1936
+711,TBT,Tibet,1937
+711,TBT,Tibet,1938
+711,TBT,Tibet,1939
+711,TBT,Tibet,1940
+711,TBT,Tibet,1941
+711,TBT,Tibet,1942
+711,TBT,Tibet,1943
+711,TBT,Tibet,1944
+711,TBT,Tibet,1945
+711,TBT,Tibet,1946
+711,TBT,Tibet,1947
+711,TBT,Tibet,1948
+711,TBT,Tibet,1949
+711,TBT,Tibet,1950
 712,MON,Mongolia,1921
 712,MON,Mongolia,1922
 712,MON,Mongolia,1923
@@ -16729,28 +16843,28 @@ gwn,gwc,country,year
 815,VNM,Vietnam,1891
 815,VNM,Vietnam,1892
 815,VNM,Vietnam,1893
-817,RVN,"Vietnam, Republic of",1954
-817,RVN,"Vietnam, Republic of",1955
-817,RVN,"Vietnam, Republic of",1956
-817,RVN,"Vietnam, Republic of",1957
-817,RVN,"Vietnam, Republic of",1958
-817,RVN,"Vietnam, Republic of",1959
-817,RVN,"Vietnam, Republic of",1960
-817,RVN,"Vietnam, Republic of",1961
-817,RVN,"Vietnam, Republic of",1962
-817,RVN,"Vietnam, Republic of",1963
-817,RVN,"Vietnam, Republic of",1964
-817,RVN,"Vietnam, Republic of",1965
-817,RVN,"Vietnam, Republic of",1966
-817,RVN,"Vietnam, Republic of",1967
-817,RVN,"Vietnam, Republic of",1968
-817,RVN,"Vietnam, Republic of",1969
-817,RVN,"Vietnam, Republic of",1970
-817,RVN,"Vietnam, Republic of",1971
-817,RVN,"Vietnam, Republic of",1972
-817,RVN,"Vietnam, Republic of",1973
-817,RVN,"Vietnam, Republic of",1974
-817,RVN,"Vietnam, Republic of",1975
+817,RVN,Republic of Vietnam,1954
+817,RVN,Republic of Vietnam,1955
+817,RVN,Republic of Vietnam,1956
+817,RVN,Republic of Vietnam,1957
+817,RVN,Republic of Vietnam,1958
+817,RVN,Republic of Vietnam,1959
+817,RVN,Republic of Vietnam,1960
+817,RVN,Republic of Vietnam,1961
+817,RVN,Republic of Vietnam,1962
+817,RVN,Republic of Vietnam,1963
+817,RVN,Republic of Vietnam,1964
+817,RVN,Republic of Vietnam,1965
+817,RVN,Republic of Vietnam,1966
+817,RVN,Republic of Vietnam,1967
+817,RVN,Republic of Vietnam,1968
+817,RVN,Republic of Vietnam,1969
+817,RVN,Republic of Vietnam,1970
+817,RVN,Republic of Vietnam,1971
+817,RVN,Republic of Vietnam,1972
+817,RVN,Republic of Vietnam,1973
+817,RVN,Republic of Vietnam,1974
+817,RVN,Republic of Vietnam,1975
 820,MAL,Malaysia,1957
 820,MAL,Malaysia,1958
 820,MAL,Malaysia,1959

@@ -250,6 +250,7 @@ Tadschikistan,tadschikistan,Tajikistan,tajik,Tadjikistan,tadjik,Tagikistan,tagik
 Thailand,thailand|\bsiam,Thailand,thailand|\bsiam,Thaïlande,tha[iï]lande,Thailandia,thailand|\bsiam
 Nordmazedonien,mazedonien|fyrom,The former Yugoslav Republic of Macedonia,macedonia|fyrom,Macédoine du Nord,mac[ée]do(?:ine|ni)|fyrom,Macedonia del Nord,macedoni|fyrom
 ,,Tibet,tibet,,,,
+,,Transvaal,transvaal,,,,
 Timor-Leste,^(?=.*leste).*timor|^(?=.*ost).*timor|^(?=.*portu).*timor,Timor-Leste,^(?=.*leste).*timor|^(?=.*east).*timor,Timor oriental,^(?=.*leste).*timor|^(?=.*ost).*timor|timor.*orient|^(?=.*portu).*timor,Timor Est,^(?=.*est).*timor|^(?=.*oriental).*timor|^(?=.*port).*timor
 Togo,togo,Togo,togo,Togo,togo,Togo,togo
 Tokelau,tokelau,Tokelau,tokelau,Tokelau,tok[eé]l(?:au|aou|ova),Tokelau,tokela[uo]
@@ -267,7 +268,7 @@ Ukraine,ukrain,Ukraine,ukrain,Ukraine,ukrain,Ucraina,ucrain[ao]
 Vereinigte Arabische Emirate,arabische.?emirate,United Arab Emirates,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Émirats arabes unis,[ée]mirats.*arabes|\bu\.?a\.?e\.?\b,Emirati Arabi Uniti,emirati.?arabi.?uniti|\bu\.?a\.?e\.?\b
 Vereinigte Arabische Republik,arabische.?republik,United Arab Republic,united.arab.republic,,r[eé]pu.*arab.*unie,,repubb.*arab.*unita
 Großbritannien,gro(?:ss|ß)britannien|britanien|vereinigtes.?k[öo]nigreich|^u\.?k\.?$,United Kingdom of Great Britain and Northern Ireland,united.?kingdom|britain|^u\.?k\.?$|north.*ireland|ireland.*north|\bn\.?\s+ireland|ireland[^a-zA-Z]*n\.?(?!\w),Royaume-Uni,grande-bretagne|royaume.*uni,Regno Unito,gran.*bretagna|regno.*unito|irlanda.*nord
-Vereinigte Provinz CA,united.province.ca|vereinigte.provinz.ca,United Province CA,united.province.ca,,united.province.ca|province.unie.*ca,,united.province.ca|provincia.unita.ca
+Vereinigte Provinz CA,united.province(?:s)?.*(?:ca|central.*america)|vereinigte.provinz.ca,United Province CA,united.province(?:s)?.*(?:ca|central.*america),,united.province(?:s)?.*(?:ca|central.*america)|province.unie.*ca,,united.province(?:s)?.*(?:ca|central.*america)|provincia.unita.ca
 Tansania,tan[sz]ania,United Republic of Tanzania,tanzania,Tanzanie,tanzanie,Tanzania,tanzania
 United States Minor Outlying Islands,minor.?outlying.?is,United States Minor Outlying Islands,minor.?outlying.?is,Mineures éloignées des États-Unis (les),minor.?outlying.?is|[îi]les.*mineures.*[ée]tats-unis,,minor.?outlying.?is|isole.*minori.*esterne.*stati.*uniti
 Vereinigte Staaten,vereinigte.?staaten|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|^\s*u\.?s\.?\b(?!.*islands),États-Unis,^[ée]tats-unis|^(?!.*samoa).*am[ée]ricain|am[eé]rique|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands),Stati Uniti,^stati.?uniti|^(?!.*vergin)^(?!.*samoa).*america|statunite|\bu\.?s\.?a\.?\b|\bu\.?s\.?\b(?!.*islands)
