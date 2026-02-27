@@ -1,0 +1,233 @@
+country.name,telephone
+American Samoa,1
+Anguilla,1
+Antigua and Barbuda,1
+Bahamas (Commonwealth of the),1
+Barbados,1
+Bermuda,1
+British Virgin Islands,1
+Canada,1
+Cayman Islands,1
+Dominica (Commonwealth of),1
+Dominican Republic,1
+Grenada,1
+Guam,1
+Jamaica,1
+Montserrat,1
+Northern Mariana Islands (Commonwealth of the),1
+Puerto Rico,1
+Saint Kitts and Nevis,1
+Saint Lucia,1
+Saint Vincent and the Grenadines,1
+Sint Maarten (Dutch part),1
+Trinidad and Tobago,1
+Turks and Caicos Islands,1
+United States of America,1
+United States Virgin Islands,1
+Egypt (Arab Republic of),20
+South Sudan (Republic of),211
+Morocco (Kingdom of),212
+Algeria (People's Democratic Republic of),213
+Tunisia,216
+Libya (Socialist People's Libyan Arab Jamahiriya),218
+Gambia (Republic of the),220
+Senegal (Republic of),221
+Mauritania (Islamic Republic of),222
+Mali (Republic of),223
+Guinea (Republic of),224
+Côte d'Ivoire (Republic of),225
+Burkina Faso,226
+Niger (Republic of the),227
+Togolese Republic,228
+Benin (Republic of),229
+Mauritius (Republic of),230
+Liberia (Republic of),231
+Sierra Leone,232
+Ghana,233
+Nigeria (Federal Republic of),234
+Chad (Republic of),235
+Central African Republic,236
+Cameroon (Republic of),237
+Cape Verde (Republic of),238
+Sao Tome and Principe (Democratic Republic of),239
+Equatorial Guinea (Republic of),240
+Gabonese Republic,241
+Congo (Republic of the),242
+Democratic Republic of the Congo,243
+Angola (Republic of),244
+Guinea-Bissau (Republic of),245
+Diego Garcia,246
+"Saint Helena, Ascension and Tristan da Cunha",247
+Seychelles (Republic of),248
+Sudan (Republic of the),249
+Rwanda (Republic of),250
+Ethiopia (Federal Democratic Republic of),251
+Somali Democratic Republic,252
+Djibouti (Republic of),253
+Kenya (Republic of),254
+Tanzania (United Republic of),255
+Uganda (Republic of),256
+Burundi (Republic of),257
+Mozambique (Republic of),258
+Zambia (Republic of),260
+Madagascar (Republic of),261
+French Departments and Territories in the Indian Ocean,262
+Zimbabwe (Republic of),263
+Namibia (Republic of),264
+Malawi,265
+Lesotho (Kingdom of),266
+Botswana (Republic of),267
+Swaziland (Kingdom of),268
+Comoros (Union of the),269
+South Africa (Republic of),27
+"Saint Helena, Ascension and Tristan da Cunha",290
+Eritrea,291
+Aruba,297
+Faroe Islands,298
+Greenland (Denmark),299
+Greece,30
+Netherlands (Kingdom of the),31
+Belgium,32
+France,33
+Spain,34
+Gibraltar,350
+Portugal,351
+Luxembourg,352
+Ireland,353
+Iceland,354
+Albania (Republic of),355
+Malta,356
+Cyprus (Republic of),357
+Finland,358
+Bulgaria (Republic of),359
+Hungary (Republic of),36
+Lithuania (Republic of),370
+Latvia (Republic of),371
+Estonia (Republic of),372
+Moldova (Republic of),373
+Armenia (Republic of),374
+Belarus (Republic of),375
+Andorra (Principality of),376
+Monaco (Principality of),377
+San Marino (Republic of),378
+Vatican City State,379
+Ukraine,380
+Serbia (Republic of),381
+Montenegro (Republic of),382
+Croatia (Republic of),385
+Slovenia (Republic of),386
+Bosnia and Herzegovina,387
+The Former Yugoslav Republic of Macedonia,389
+Italy,39
+Vatican City State,39
+Romania,40
+Switzerland (Confederation of),41
+Czech Republic,420
+Slovak Republic,421
+Liechtenstein (Principality of),423
+Austria,43
+United Kingdom of Great Britain and Northern Ireland,44
+Denmark,45
+Sweden,46
+Norway,47
+Poland (Republic of),48
+Germany (Federal Republic of),49
+Falkland Islands (Malvinas),500
+Belize,501
+Guatemala (Republic of),502
+El Salvador (Republic of),503
+Honduras (Republic of),504
+Nicaragua,505
+Costa Rica,506
+Panama (Republic of),507
+Saint Pierre and Miquelon (Collectivité territoriale de la République française),508
+Haiti (Republic of),509
+Peru,51
+Mexico,52
+Cuba,53
+Argentine Republic,54
+Brazil (Federative Republic of),55
+Chile,56
+Colombia (Republic of),57
+Venezuela (Bolivarian Republic of),58
+Guadeloupe (French Department of),590
+Bolivia (Plurinational State of),591
+Guyana,592
+Ecuador,593
+French Guiana (French Department of),594
+Paraguay (Republic of),595
+Martinique (French Department of),596
+Suriname (Republic of),597
+Uruguay (Eastern Republic of),598
+"Bonaire, Saint Eustatius and Saba",599
+Curaçao,599
+Malaysia,60
+Australia,61
+Indonesia (Republic of),62
+Philippines (Republic of the),63
+New Zealand,64
+Singapore (Republic of),65
+Thailand,66
+Democratic Republic of Timor-Leste,670
+Australian External Territories,672
+Brunei Darussalam,673
+Nauru (Republic of),674
+Papua New Guinea,675
+Tonga (Kingdom of),676
+Solomon Islands,677
+Vanuatu (Republic of),678
+Fiji (Republic of),679
+Palau (Republic of),680
+Wallis and Futuna (Territoire français d'outre-mer),681
+Cook Islands,682
+Niue,683
+Samoa (Independent State of),685
+Kiribati (Republic of),686
+New Caledonia (Territoire français d'outre-mer),687
+Tuvalu,688
+French Polynesia (Territoire français d'outre-mer),689
+Tokelau,690
+Micronesia (Federated States of),691
+Marshall Islands (Republic of the),692
+Kazakhstan (Republic of),7
+Russian Federation,7
+Japan,81
+Korea (Republic of),82
+Viet Nam (Socialist Republic of),84
+Democratic People's Republic of Korea,850
+"Hong Kong, China",852
+"Macao, China",853
+Cambodia (Kingdom of),855
+Lao People's Democratic Republic,856
+China (People's Republic of),86
+Bangladesh (People's Republic of),880
+"Taiwan, China",886
+Turkey,90
+India (Republic of),91
+Pakistan (Islamic Republic of),92
+Afghanistan,93
+Sri Lanka (Democratic Socialist Republic of),94
+Myanmar (the Republic of the Union of),95
+Maldives (Republic of),960
+Lebanon,961
+Jordan (Hashemite Kingdom of),962
+Syrian Arab Republic,963
+Iraq (Republic of),964
+Kuwait (State of),965
+Saudi Arabia (Kingdom of),966
+Yemen (Republic of),967
+Oman (Sultanate of),968
+United Arab Emirates,971
+Israel (State of),972
+Bahrain (Kingdom of),973
+Qatar (State of),974
+Bhutan (Kingdom of),975
+Mongolia,976
+Nepal (Federal Democratic Republic of),977
+Iran (Islamic Republic of),98
+Tajikistan (Republic of),992
+Turkmenistan,993
+Azerbaijani Republic,994
+Georgia,995
+Kyrgyz Republic,996
+Uzbekistan (Republic of),998

@@ -40,6 +40,7 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \item \code{p5c}: Polity V character country code
 \item \code{p4n}: Polity IV numeric country code
 \item \code{p4c}: Polity IV character country code
+\item \code{telephone}: ITU-T E.164 country codes for telecommunication
 \item \code{un}: United Nations M49 numeric codes
 \item \code{unicode.symbol}: Region subtag (often displayed as emoji flag)
 \item \code{unhcr}: United Nations High Commissioner for Refugees
