@@ -8,6 +8,7 @@
 * Update many dictionaries to the latest versions from publishing organizations. Thanks to [@NilsEnevoldsen](https://github.com/NilsEnevoldsen).
 * Improve Ireland regular expressions and add tests. Issue [#313](https://github.com/vincentarelbundock/countrycode/issues/313).
 * Improve Germany / East Germany regular expressions and add tests. Issue [#313](https://github.com/vincentarelbundock/countrycode/issues/313).
+* Update ISO4217 currency codes. Thanks to [@cjyetman](https://github.com/cjyetman).
 
 ## countrycode 1.6.1
 
