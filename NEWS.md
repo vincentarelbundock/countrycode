@@ -2,6 +2,7 @@
 
 ## development
 
+* Add `telephone` as a new code from ITU-T E.164 country codes for telecommunication.
 * Add coverage for historical Gleditsch & Ward polities (including United Provinces of Central America, Transvaal, and Tibet) and regression tests. Thanks to @JoeNoonan for Issue #320.
 * `custom_match` now suppresses ambiguity and duplicate-match warnings for overridden values. Thanks to @victorhartman and @NilsEnevoldsen for the report and analysis (Issue #364).
 * Stricter Micronesia regular expressions. Thanks to @mattkerlogue, @stefgehrig, @cjyetman, @NilsEnevoldsen for discussion in Issue #354.
@@ -221,4 +222,3 @@ Misc:
 * Moved documentation to roxygen2
 * Fixed Trinidad Tobago regex
 * Added UN and FAO country codes
-
