@@ -8,7 +8,7 @@
 * Update many dictionaries to the latest versions from publishing organizations. Thanks to @NilsEnevoldsen.
 * Improve Ireland regular expressions and add tests. Issue #313.
 * Improve Germany / East Germany regular expressions and add tests. Issue #313.
-* Update ISO4217 currency codes.
+* Update ISO4217 currency codes. Thanks to @cjyetman.
 
 ## countrycode 1.6.1
 
