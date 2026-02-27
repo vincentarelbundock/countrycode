@@ -1,5 +1,6 @@
 
 <p align="center">
+
 <img src="https://user-images.githubusercontent.com/987058/167296405-e7798ac8-03e7-444e-acaf-d99fc42d1c9e.png" align="right" alt="" width="125" />
 </p>
 
@@ -9,7 +10,8 @@
 
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
 <a href = "https://vincentarelbundock.github.io/countrycode" target = "_blank"><img src="https://img.shields.io/static/v1?label=Website&message=Visit&color=blue"></a>
-[![R build status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
+[![R build
+status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
 <a href = "https://vincentarelbundock.github.io/countrycode" target = "_blank"><img src="http://cranlogs.r-pkg.org/badges/grand-total/countrycode"></a>
 <!-- badges: end -->
 
@@ -67,6 +69,7 @@ To get an up-to-date list of supported country codes, install the
 package and type `?codelist`. These include:
 
 - 600+ variants of country names in different languages and formats.
+- Telephone
 - AR5
 - Continent and region identifiers.
 - Correlates of War (numeric and character)

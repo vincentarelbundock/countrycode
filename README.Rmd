@@ -50,6 +50,7 @@ install_github('vincentarelbundock/countrycode')
 To get an up-to-date list of supported country codes, install the package and type `?codelist`. These include:
 
 * 600+ variants of country names in different languages and formats.
+* Telephone
 * AR5
 * Continent and region identifiers.
 * Correlates of War (numeric and character)
