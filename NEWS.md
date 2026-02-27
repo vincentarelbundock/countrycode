@@ -1,6 +1,6 @@
 # News
 
-## development
+## 1.7.0
 
 * Add `telephone` as a new code from ITU-T E.164 country codes for telecommunication.
 * Add coverage for historical Gleditsch & Ward polities (including United Provinces of Central America, Transvaal, and Tibet) and regression tests. Thanks to @JoeNoonan for Issue #320.
