@@ -32,7 +32,7 @@ Bouvet Island,Norwegian Krone,NOK,578
 Brazil,Brazilian Real,BRL,986
 British Indian Ocean Territory,US Dollar,USD,840
 Brunei,Brunei Dollar,BND,96
-Bulgaria,Bulgarian Lev,BGN,975
+Bulgaria,Euro,EUR,978
 Burkina Faso,CFA Franc BCEAO,XOF,952
 Burundi,Burundi Franc,BIF,108
 Cape Verde,Cabo Verde Escudo,CVE,132
@@ -55,7 +55,7 @@ Costa Rica,Costa Rican Colon,CRC,188
 Côte d’Ivoire,CFA Franc BCEAO,XOF,952
 Croatia,Euro,EUR,978
 Cuba,Cuban Peso,CUP,192
-Curaçao,Netherlands Antillean Guilder,ANG,532
+Curaçao,Caribbean Guilder,XCG,532
 Cyprus,Euro,EUR,978
 Czechia,Czech Koruna,CZK,203
 Denmark,Danish Krone,DKK,208
@@ -130,7 +130,6 @@ Liechtenstein,Swiss Franc,CHF,756
 Lithuania,Euro,EUR,978
 Luxembourg,Euro,EUR,978
 Macao SAR China,Pataca,MOP,446
-North Macedonia,Denar,MKD,807
 Madagascar,Malagasy Ariary,MGA,969
 Malawi,Malawi Kwacha,MWK,454
 Malaysia,Malaysian Ringgit,MYR,458
@@ -163,6 +162,7 @@ Niger,CFA Franc BCEAO,XOF,952
 Nigeria,Naira,NGN,566
 Niue,New Zealand Dollar,NZD,554
 Norfolk Island,Australian Dollar,AUD,36
+North Macedonia,Denar,MKD,807
 Northern Mariana Islands,US Dollar,USD,840
 Norway,Norwegian Krone,NOK,578
 Oman,Rial Omani,OMR,512
@@ -198,7 +198,7 @@ Serbia,Serbian Dinar,RSD,941
 Seychelles,Seychelles Rupee,SCR,690
 Sierra Leone,Leone,SLE,925
 Singapore,Singapore Dollar,SGD,702
-Sint Maarten,Netherlands Antillean Guilder,ANG,532
+Sint Maarten,Caribbean Guilder,XCG,532
 Slovakia,Euro,EUR,978
 Slovenia,Euro,EUR,978
 Solomon Islands,Solomon Islands Dollar,SBD,90
@@ -223,6 +223,7 @@ Tokelau,New Zealand Dollar,NZD,554
 Tonga,Pa’anga,TOP,776
 Trinidad & Tobago,Trinidad and Tobago Dollar,TTD,780
 Tunisia,Tunisian Dinar,TND,788
+Turkey,Turkish Lira,TRY,949
 Turkmenistan,Turkmenistan New Manat,TMT,934
 Turks & Caicos Islands,US Dollar,USD,840
 Tuvalu,Australian Dollar,AUD,36
@@ -243,4 +244,4 @@ Wallis & Futuna,CFP Franc,XPF,953
 Western Sahara,Moroccan Dirham,MAD,504
 Yemen,Yemeni Rial,YER,886
 Zambia,Zambian Kwacha,ZMW,967
-Zimbabwe,Zimbabwe Dollar,ZWL,932
+Zimbabwe,Zimbabwe Gold,ZWG,924
