@@ -2,6 +2,7 @@
 
 ## development
 
+* Add coverage for historical Gleditsch & Ward polities (including United Provinces of Central America, Transvaal, and Tibet) and regression tests. Thanks to @JoeNoonan for Issue #320.
 * `custom_match` now suppresses ambiguity and duplicate-match warnings for overridden values. Thanks to @victorhartman and @NilsEnevoldsen for the report and analysis (Issue #364).
 * Stricter Micronesia regular expressions. Thanks to @mattkerlogue, @stefgehrig, @cjyetman, @NilsEnevoldsen for discussion in Issue #354.
 * `TÜRKİYE` (dotted capital İ) now matches Turkey. Thanks to @cjyetman and @NilsEnevoldsen for report #347.
@@ -220,5 +221,4 @@ Misc:
 * Moved documentation to roxygen2
 * Fixed Trinidad Tobago regex
 * Added UN and FAO country codes
-
 

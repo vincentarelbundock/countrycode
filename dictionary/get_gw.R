@@ -18,10 +18,11 @@ gw <- gw %>%
     # pre-processing to avoid regex ambiguity
     mutate(
         country = gsub(" \\(Prussia\\)", "", country),
-        country = gsub(" \\(Annam.*", "", country)
+        country = gsub(" \\(Annam.*", "", country),
+        country = gsub("^Vietnam, Republic of$", "Republic of Vietnam", country)
     ) %>%
     # ambiguous or not covered
-    filter(!gwc %in% c("TBT", "DRV", "HSD", "HSE", "WRT", "UPC", "TRA")) %>% 
+    filter(!gwc %in% c("DRV", "HSD", "HSE", "WRT")) %>% 
     mutate(idx = 1:n()) |>
     group_by(idx) |>
     mutate(panel = list(year(birth):year(death))) %>%
@@ -34,4 +35,3 @@ gw <- gw %>%
     mutate(country = utf8::utf8_encode(country))
 
 gw %>% write_csv('dictionary/data_gw.csv', na = "")
-
