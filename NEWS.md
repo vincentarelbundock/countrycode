@@ -2,6 +2,7 @@
 
 ## development
 
+* Add coverage for historical Gleditsch & Ward polities (including United Provinces of Central America, Transvaal, and Tibet) and regression tests. Thanks to [@JoeNoonan](https://github.com/JoeNoonan) for Issue [#320](https://github.com/vincentarelbundock/countrycode/issues/320).
 * `custom_match` now suppresses ambiguity and duplicate-match warnings for overridden values. Thanks to [@victorhartman](https://github.com/victorhartman) and [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) for the report and analysis (Issue [#364](https://github.com/vincentarelbundock/countrycode/issues/364)).
 * Stricter Micronesia regular expressions. Thanks to [@mattkerlogue](https://github.com/mattkerlogue), [@stefgehrig](https://github.com/stefgehrig), [@cjyetman](https://github.com/cjyetman), [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) for discussion in Issue [#354](https://github.com/vincentarelbundock/countrycode/issues/354).
 * `TÜRKİYE` (dotted capital İ) now matches Turkey. Thanks to [@cjyetman](https://github.com/cjyetman) and [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) for report [#347](https://github.com/vincentarelbundock/countrycode/issues/347).
@@ -220,4 +221,3 @@ Misc:
 * Moved documentation to roxygen2
 * Fixed Trinidad Tobago regex
 * Added UN and FAO country codes
-
