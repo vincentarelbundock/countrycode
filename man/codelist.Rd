@@ -40,7 +40,6 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \item \code{p5c}: Polity V character country code
 \item \code{p4n}: Polity IV numeric country code
 \item \code{p4c}: Polity IV character country code
-\item \code{telephone}: ITU-T E.164 country codes for telecommunication
 \item \code{un}: United Nations M49 numeric codes
 \item \code{unicode.symbol}: Region subtag (often displayed as emoji flag)
 \item \code{unhcr}: United Nations High Commissioner for Refugees
@@ -73,6 +72,7 @@ without special territories
 \item \code{p4.name}: Polity IV country name
 \item \code{region}: 7 Regions as defined in the World Bank Development Indicators
 \item \code{region23}: 23 Regions as used to be in the World Bank Development Indicators (legacy)
+\item \code{telephone}: ITU-T E.164 country codes for telecommunication
 \item \code{un.name.ar}: United Nations Arabic country name
 \item \code{un.name.en}: United Nations English country name
 \item \code{un.name.es}: United Nations Spanish country name
