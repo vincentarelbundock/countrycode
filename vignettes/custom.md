@@ -5,11 +5,11 @@
 It is easy to to create alternative functions with different default
 arguments and/or dictionaries. For example, we can create:
 
--   `name_to_iso3c` function that sets new defaults for the `origin` and
-    `destination` arguments, and automatically converts country names to
-    iso3c
--   `statecode` function to convert US state codes using a custom
-    dictionary by default, that we download from the internet.
+- `name_to_iso3c` function that sets new defaults for the `origin` and
+  `destination` arguments, and automatically converts country names to
+  iso3c
+- `statecode` function to convert US state codes using a custom
+  dictionary by default, that we download from the internet.
 
 ``` r
 library(countrycode)

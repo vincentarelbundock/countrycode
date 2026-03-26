@@ -45,6 +45,11 @@ Origin and Destination
 </li>
 <li>
 
+<code>country.name.es</code>: country name (Spanish)
+
+</li>
+<li>
+
 <code>cowc</code>: Correlates of War character
 
 </li>

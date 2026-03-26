@@ -17,13 +17,13 @@ New country codes are created by two files:
 
 After creating those two files, you should:
 
--   Run `dictionary/build.R`
--   If the code is a valid origin code (i.e., no two countries share the
-    same code), add it to the `valid_origin` vector in `R/countrycode.R`
--   Add the new code name to the documentation in `R/codelist.R`
--   Build the documentation using the devtools package:
-    `devtools::document()`
--   Add a bullet point to `NEWS.md` file.
+- Run `dictionary/build.R`
+- If the code is a valid origin code (i.e., no two countries share the
+  same code), add it to the `valid_origin` vector in `R/countrycode.R`
+- Add the new code name to the documentation in `R/codelist.R`
+- Build the documentation using the devtools package:
+  `devtools::document()`
+- Add a bullet point to `NEWS.md` file.
 
 If you need help with any of these steps, or if you just want to submit
 a CSV file, feel free to open an issue on Github or write an email to
@@ -42,7 +42,7 @@ To add your own custom dictionary, please make sure that:
     existing custom dictionaries)
 3.  It uses UTF-8 encoding and conforms to RFC 4180 CSV standard
     (e.g. comma-delimited, etc.).
-    -   `R` commands to produce such a file are shown below.
+    - `R` commands to produce such a file are shown below.
 4.  <NA>/blank fields are blank, not the string ‘NA’ (not RFC 4180, but
     important here because of Namibia)
 5.  It has concise, sensible, valid (in the R data frame sense) column
