@@ -23,6 +23,11 @@ test_that("Italian regex vs. CLDR", {
     expect_equal(x, codelist$cldr.name.it)
 })
 
+test_that("Spanish regex vs. CLDR", {
+  x <- countrycode(codelist$cldr.name.es, "country.name.es", "cldr.name.es")
+  expect_equal(x, codelist$cldr.name.es)
+})
+
 test_that("German regex vs. CLDR", {
     x <- countrycode(codelist$cldr.name.de, "country.name.de", "cldr.name.de")
     expect_equal(x, codelist$cldr.name.de)
@@ -33,4 +38,21 @@ test_that("French regex vs. CLDR", {
     expect_equal(x, codelist$cldr.name.fr)
 })
 
+test_that("Spanish regex vs. CLDR 419", {
+  x <- countrycode(codelist$cldr.name.es_419, "country.name.es", "cldr.name.es_419")
+  expect_equal(x, codelist$cldr.name.es_419)
+})
 
+test_that("Spanish regex vs. CLDR short", {
+  x <- countrycode(codelist$cldr.short.es, "country.name.es", "cldr.short.es")
+  expect_equal(x, codelist$cldr.short.es)
+})
+
+test_that("Spanish regex vs. CLDR variant", {
+  x <- countrycode(codelist$cldr.variant.es, "country.name.es", "cldr.variant.es")
+  expect_equal(x, codelist$cldr.variant.es)
+})
+test_that("Spanish regex vs. UN", {
+  x <- countrycode(codelist$un.name.es, "country.name.es", "un.name.es")
+  expect_equal(x, codelist$un.name.es)
+})

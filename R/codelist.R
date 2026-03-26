@@ -9,6 +9,7 @@
 #' - `country.name.de`: country name (German)
 #' - `country.name.fr`: country name (French)
 #' - `country.name.it`: country name (Italian)
+#' - `country.name.es`: country name (Spanish)
 #' - `cowc`: Correlates of War character
 #' - `cown`: Correlates of War numeric
 #' - `dhs`: Demographic and Health Surveys Program

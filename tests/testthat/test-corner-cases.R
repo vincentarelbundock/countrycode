@@ -112,6 +112,9 @@ test_that("netherlands", {
     expect_equal(
         countrycode("Caraibi olandesi", "country.name.it", "country.name.en"),
         "Caribbean Netherlands")
+    expect_equal(
+      countrycode("Caribe holandes", "country.name.es", "country.name.en"),
+      "Netherlands Antilles")
 })
 
 
