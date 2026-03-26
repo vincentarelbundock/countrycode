@@ -141,6 +141,7 @@ test_that('Micronesia is not Federated States of Micronesia', {
     expect_equal(countrycode('Mikronesien', 'country.name.de', 'iso3c', warn = FALSE), NA_character_)
     expect_equal(countrycode('Micron\u00e9sie', 'country.name.fr', 'iso3c', warn = FALSE), NA_character_)
     expect_equal(countrycode('Micronesia', 'country.name.it', 'iso3c', warn = FALSE), NA_character_)
+    expect_equal(countrycode('Micronesia', 'country.name.es', 'iso3c', warn = FALSE), NA_character_)
     # unambiguous full English names → FSM
     expect_equal(iso3c_of('Federated States of Micronesia'), 'FSM')
     expect_equal(iso3c_of('Micronesia, Federated States of'), 'FSM')
@@ -162,6 +163,10 @@ test_that('Micronesia is not Federated States of Micronesia', {
     expect_equal(countrycode('Stati Federati di Micronesia', 'country.name.it', 'iso3c'), 'FSM')
     expect_equal(countrycode('Micronesia (Stati Federati di)', 'country.name.it', 'iso3c'), 'FSM')
     expect_equal(countrycode('FS Micronesia', 'country.name.it', 'iso3c'), 'FSM')
+    # Spanish: qualified forms → FSM, FS abbreviation → FSM
+    expect_equal(countrycode('Estados Federados de Micronesia', 'country.name.es', 'iso3c'), 'FSM')
+    expect_equal(countrycode('Micronesia (Estados Federados de)', 'country.name.es', 'iso3c'), 'FSM')
+    expect_equal(countrycode('FS Micronesia', 'country.name.es', 'iso3c'), 'FSM')
 })
 
 
