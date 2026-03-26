@@ -18,41 +18,29 @@ test_that('iso3c-to-country.name-to-iso3c is internally consistent', {
     }
 })
 
-test_that("Italian regex vs. CLDR", {
-    x <- countrycode(codelist$cldr.name.it, "country.name.it", "cldr.name.it")
-    expect_equal(x, codelist$cldr.name.it)
-})
+regex_langs <- c("de", "en", "es", "fr", "it")
+un_langs <- c("ar", "en", "es", "fr", "ru", "zh")
 
-test_that("Spanish regex vs. CLDR", {
-  x <- countrycode(codelist$cldr.name.es, "country.name.es", "cldr.name.es")
-  expect_equal(x, codelist$cldr.name.es)
-})
+for (lang in regex_langs) {
+  origin <- paste0("country.name.", lang)
 
-test_that("German regex vs. CLDR", {
-    x <- countrycode(codelist$cldr.name.de, "country.name.de", "cldr.name.de")
-    expect_equal(x, codelist$cldr.name.de)
-})
+  # All cldr columns (name, short, variant) for this language including xx_yy
+  cldr_pattern <- paste0("^cldr\\.(name|short|variant)\\.", lang, "($|_)")
+  cldr_cols <- grep(cldr_pattern, names(codelist), value = TRUE)
 
-test_that("French regex vs. CLDR", {
-    x <- countrycode(codelist$cldr.name.fr, "country.name.fr", "cldr.name.fr")
-    expect_equal(x, codelist$cldr.name.fr)
-})
+  for (col in cldr_cols) {
+    test_that(paste(lang, "regex vs.", col), {
+      result <- countrycode(codelist[[col]], origin, col)
+      expect_equal(result, codelist[[col]])
+    })
+  }
 
-test_that("Spanish regex vs. CLDR 419", {
-  x <- countrycode(codelist$cldr.name.es_419, "country.name.es", "cldr.name.es_419")
-  expect_equal(x, codelist$cldr.name.es_419)
-})
-
-test_that("Spanish regex vs. CLDR short", {
-  x <- countrycode(codelist$cldr.short.es, "country.name.es", "cldr.short.es")
-  expect_equal(x, codelist$cldr.short.es)
-})
-
-test_that("Spanish regex vs. CLDR variant", {
-  x <- countrycode(codelist$cldr.variant.es, "country.name.es", "cldr.variant.es")
-  expect_equal(x, codelist$cldr.variant.es)
-})
-test_that("Spanish regex vs. UN", {
-  x <- countrycode(codelist$un.name.es, "country.name.es", "un.name.es")
-  expect_equal(x, codelist$un.name.es)
-})
+  # UN names only for UN languages
+  if (lang %in% un_langs) {
+    un_col <- paste0("un.name.", lang)
+    test_that(paste(lang, "regex vs.", un_col), {
+      result <- countrycode(codelist[[un_col]], origin, un_col)
+      expect_equal(result, codelist[[un_col]])
+    })
+  }
+}
