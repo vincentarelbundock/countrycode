@@ -1,5 +1,9 @@
 # News
 
+## Development
+
+* New Spanish regular expressions and names: `country.name.es`, `cldr.name.es` and `country.name.es`. Thanks to [@dieghernan](https://github.com/dieghernan) for the contribution, and to [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) and [@cjyetman](https://github.com/cjyetman) for review.
+
 ## 1.7.0
 
 * Add `telephone` as a new code from ITU-T E.164 country codes for telecommunication.
