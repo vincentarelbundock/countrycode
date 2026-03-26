@@ -1,5 +1,5 @@
 country.name.de,country.name.de.regex,country.name.en,country.name.en.regex,country.name.fr,country.name.fr.regex,country.name.it,country.name.it.regex,country.name.es,country.name.es.regex
-Afghanistan,afghan,Afghanistan,afghan,Afghanistan,afghan,Afghanistan,afghan,Afganistán ,afgan
+Afghanistan,afghan,Afghanistan,afghan,Afghanistan,afghan,Afghanistan,afghan,Afganistán,afgan
 Ålandinseln,[aå]land,Aland Islands,^[åa]land,Îles Åland,[aå]land,Isole Åland,[aå]land,Islas Åland,[aå]land
 Albanien,albanien,Albania,albania,Albanie,albanie,Albania,albania,Albania,alban
 Algerien,algerien,Algeria,algeria,Algérie,alg[eé]rie,Algeria,algeria,Argelia,argelia
@@ -55,7 +55,7 @@ Kokosinseln (Keelinginseln),\bkokos|keeling,Cocos (Keeling) Islands,\bcocos|keel
 Kolumbien,kolumbien,Colombia,colombia,Colombie,colombi(?:e|ien),Colombia,colombia,Colombia,colombia
 Komoren,komoren,Comoros,comoro,Comores,comores|comorien,Comore,comore,Comoras,comor[as|e]
 Kongo,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bkongo,Congo,^(?!.*\bd.m)(?!.*\bd[\.]?r)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Congo-Brazzaville,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Congo-Brazzaville,^(?!.*\bd.m)(?!.*\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo,Congo,^(?!.*\bd.m)(?!.*\bd[\.]?r)(?!.*kins)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*libre).*\bcongo(?!.*\beste)
-Cookinseln,\bcook,Cook Islands,\bcook,Îles Cook,\bcook,Isole Cook,\bcook,Islas Cook,cook
+Cookinseln,\bcook,Cook Islands,\bcook,Îles Cook,\bcook,Isole Cook,\bcook,Islas Cook,\bcook
 Costa Rica,costa.?rica,Costa Rica,costa.?rica,Costa Rica,costa.?ric(?:a|ien),Costa Rica,costa.?rica,Costa Rica,costa.?ric(?:a|en)
 Kroatien,kroatien,Croatia,croatia,Croatie,croatie|croate,Croazia,croazia|croato,Croacia,croacia|croata
 Kuba,\bkuba,Cuba,\bcuba,Cuba,\bcuba(?:in)?,Cuba,cuba,Cuba,cuba
