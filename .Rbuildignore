@@ -27,3 +27,4 @@ README.html
 ^vignettes/
 Makefile
 ^_quarto$
+.claude/
