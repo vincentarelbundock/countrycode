@@ -8,11 +8,9 @@ name: scrutin
 permissions: read-all
 
 jobs:
-  check_r:
+  check:
     runs-on: ${{ matrix.config.os }}
-
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
-
     strategy:
       fail-fast: false
       matrix:
@@ -20,11 +18,16 @@ jobs:
           - {os: macos-latest,   r: 'release'}
           - {os: windows-latest, r: 'release'}
           - {os: ubuntu-latest,  r: 'release'}
-
     steps:
       - uses: actions/checkout@v4
 
-      - uses: vincentarelbundock/scrutin/.github/actions/check_r@main
+      - uses: vincentarelbundock/scrutin/.github/actions/install_r@main
         with:
           r-version: ${{ matrix.config.r }}
-          tool: testthat
+          packages: any::rcmdcheck
+
+      - uses: vincentarelbundock/scrutin/.github/actions/check_r@main
+
+      - uses: vincentarelbundock/scrutin/.github/actions/install_scrutin@main
+
+      - run: scrutin -r github --set run.tool=testthat
