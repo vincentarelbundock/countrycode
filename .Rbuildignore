@@ -28,3 +28,4 @@ README.html
 Makefile
 ^_quarto$
 .claude/
+^\.scrutin$

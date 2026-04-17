@@ -8,3 +8,6 @@ altdoc/freeze.rds
 _quarto/
 !_quarto/_freeze/
 docs/
+
+# scrutin history + caches (keep runner scripts tracked)
+.scrutin/state.db*
