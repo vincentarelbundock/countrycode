@@ -8,7 +8,7 @@ name: scrutin
 permissions: read-all
 
 jobs:
-  check_r_pkg:
+  check_r:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: vincentarelbundock/scrutin/.github/actions/check_r_pkg@main
+      - uses: vincentarelbundock/scrutin/.github/actions/check_r@main
         with:
           r-version: ${{ matrix.config.r }}
           tool: testthat
