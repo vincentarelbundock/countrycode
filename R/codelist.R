@@ -54,6 +54,8 @@
 #' - `eurocontrol_statfor`:  European Organisation for the Safety of Air Navigation
 #' - `eu28`: Member states of the European Union (as of December 2015),
 #'               without special territories
+#' - `eu27`: Member states of the European Union (as of February 2020),
+#'               without special territories
 #' - `icao.region`: International Civil Aviation Organization region
 #' - `iso.name.en`: ISO English short name
 #' - `iso.name.fr`: ISO French short name

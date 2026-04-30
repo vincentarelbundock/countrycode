@@ -65,6 +65,8 @@ available country names and examples.
 \item \code{eurocontrol_statfor}:  European Organisation for the Safety of Air Navigation
 \item \code{eu28}: Member states of the European Union (as of December 2015),
 without special territories
+\item \code{eu27}: Member states of the European Union (as of February 2020),
+without special territories
 \item \code{icao.region}: International Civil Aviation Organization region
 \item \code{iso.name.en}: ISO English short name
 \item \code{iso.name.fr}: ISO French short name
