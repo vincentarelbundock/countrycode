@@ -1,5 +1,9 @@
 # News
 
+## Development
+
+* Update World Bank `region` entries: "Afghanistan Middle East, North Africa, Afghanistan & Pakistan". Thanks to @gronert-m for Issue #381 and @cjyetman for helpful research.
+
 ## 1.8.0
 
 * New Spanish regular expressions and names: `country.name.es`, `cldr.name.es` and `country.name.es`. Thanks to @dieghernan for the contribution, and to @NilsEnevoldsen and @cjyetman for review.

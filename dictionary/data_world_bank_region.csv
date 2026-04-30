@@ -1,7 +1,7 @@
 country,region
 Andorra,Europe & Central Asia
-United Arab Emirates,Middle East & North Africa
-Afghanistan,South Asia
+United Arab Emirates,"Middle East, North Africa, Afghanistan & Pakistan"
+Afghanistan,"Middle East, North Africa, Afghanistan & Pakistan"
 Antigua and Barbuda,Latin America & Caribbean
 Albania,Europe & Central Asia
 Armenia,Europe & Central Asia
@@ -18,7 +18,7 @@ Bangladesh,South Asia
 Belgium,Europe & Central Asia
 Burkina Faso,Sub-Saharan Africa
 Bulgaria,Europe & Central Asia
-Bahrain,Middle East & North Africa
+Bahrain,"Middle East, North Africa, Afghanistan & Pakistan"
 Burundi,Sub-Saharan Africa
 Benin,Sub-Saharan Africa
 Bermuda,North America
@@ -47,14 +47,14 @@ Curacao,Latin America & Caribbean
 Cyprus,Europe & Central Asia
 Czechia,Europe & Central Asia
 Germany,Europe & Central Asia
-Djibouti,Middle East & North Africa
+Djibouti,"Middle East, North Africa, Afghanistan & Pakistan"
 Denmark,Europe & Central Asia
 Dominica,Latin America & Caribbean
 Dominican Republic,Latin America & Caribbean
-Algeria,Middle East & North Africa
+Algeria,"Middle East, North Africa, Afghanistan & Pakistan"
 Ecuador,Latin America & Caribbean
 Estonia,Europe & Central Asia
-"Egypt, Arab Rep.",Middle East & North Africa
+"Egypt, Arab Rep.","Middle East, North Africa, Afghanistan & Pakistan"
 Eritrea,Sub-Saharan Africa
 Spain,Europe & Central Asia
 Ethiopia,Sub-Saharan Africa
@@ -85,16 +85,16 @@ Haiti,Latin America & Caribbean
 Hungary,Europe & Central Asia
 Indonesia,East Asia & Pacific
 Ireland,Europe & Central Asia
-Israel,Middle East & North Africa
+Israel,"Middle East, North Africa, Afghanistan & Pakistan"
 Isle of Man,Europe & Central Asia
 India,South Asia
-Iraq,Middle East & North Africa
-"Iran, Islamic Rep.",Middle East & North Africa
+Iraq,"Middle East, North Africa, Afghanistan & Pakistan"
+"Iran, Islamic Rep.","Middle East, North Africa, Afghanistan & Pakistan"
 Iceland,Europe & Central Asia
 Italy,Europe & Central Asia
 Channel Islands,Europe & Central Asia
 Jamaica,Latin America & Caribbean
-Jordan,Middle East & North Africa
+Jordan,"Middle East, North Africa, Afghanistan & Pakistan"
 Japan,East Asia & Pacific
 Kenya,Sub-Saharan Africa
 Kyrgyz Republic,Europe & Central Asia
@@ -104,11 +104,11 @@ Comoros,Sub-Saharan Africa
 St. Kitts and Nevis,Latin America & Caribbean
 "Korea, Dem. People's Rep.",East Asia & Pacific
 "Korea, Rep.",East Asia & Pacific
-Kuwait,Middle East & North Africa
+Kuwait,"Middle East, North Africa, Afghanistan & Pakistan"
 Cayman Islands,Latin America & Caribbean
 Kazakhstan,Europe & Central Asia
 Lao PDR,East Asia & Pacific
-Lebanon,Middle East & North Africa
+Lebanon,"Middle East, North Africa, Afghanistan & Pakistan"
 St. Lucia,Latin America & Caribbean
 Liechtenstein,Europe & Central Asia
 Sri Lanka,South Asia
@@ -117,8 +117,8 @@ Lesotho,Sub-Saharan Africa
 Lithuania,Europe & Central Asia
 Luxembourg,Europe & Central Asia
 Latvia,Europe & Central Asia
-Libya,Middle East & North Africa
-Morocco,Middle East & North Africa
+Libya,"Middle East, North Africa, Afghanistan & Pakistan"
+Morocco,"Middle East, North Africa, Afghanistan & Pakistan"
 Monaco,Europe & Central Asia
 Moldova,Europe & Central Asia
 Montenegro,Europe & Central Asia
@@ -132,7 +132,7 @@ Mongolia,East Asia & Pacific
 "Macao SAR, China",East Asia & Pacific
 Northern Mariana Islands,East Asia & Pacific
 Mauritania,Sub-Saharan Africa
-Malta,Middle East & North Africa
+Malta,"Middle East, North Africa, Afghanistan & Pakistan"
 Mauritius,Sub-Saharan Africa
 Maldives,South Asia
 Malawi,Sub-Saharan Africa
@@ -149,24 +149,25 @@ Norway,Europe & Central Asia
 Nepal,South Asia
 Nauru,East Asia & Pacific
 New Zealand,East Asia & Pacific
-Oman,Middle East & North Africa
+Oman,"Middle East, North Africa, Afghanistan & Pakistan"
 Panama,Latin America & Caribbean
 Peru,Latin America & Caribbean
 French Polynesia,East Asia & Pacific
 Papua New Guinea,East Asia & Pacific
 Philippines,East Asia & Pacific
-Pakistan,South Asia
+Pakistan,"Middle East, North Africa, Afghanistan & Pakistan"
 Poland,Europe & Central Asia
-West Bank and Gaza,Middle East & North Africa
+Puerto Rico (US),Latin America & Caribbean
+West Bank and Gaza,"Middle East, North Africa, Afghanistan & Pakistan"
 Portugal,Europe & Central Asia
 Palau,East Asia & Pacific
 Paraguay,Latin America & Caribbean
-Qatar,Middle East & North Africa
+Qatar,"Middle East, North Africa, Afghanistan & Pakistan"
 Romania,Europe & Central Asia
 Serbia,Europe & Central Asia
 Russian Federation,Europe & Central Asia
 Rwanda,Sub-Saharan Africa
-Saudi Arabia,Middle East & North Africa
+Saudi Arabia,"Middle East, North Africa, Afghanistan & Pakistan"
 Solomon Islands,East Asia & Pacific
 Seychelles,Sub-Saharan Africa
 Sudan,Sub-Saharan Africa
@@ -177,12 +178,13 @@ Slovak Republic,Europe & Central Asia
 Sierra Leone,Sub-Saharan Africa
 San Marino,Europe & Central Asia
 Senegal,Sub-Saharan Africa
+"Somalia, Fed. Rep.",Sub-Saharan Africa
 Suriname,Latin America & Caribbean
 South Sudan,Sub-Saharan Africa
 Sao Tome and Principe,Sub-Saharan Africa
 El Salvador,Latin America & Caribbean
 Sint Maarten (Dutch part),Latin America & Caribbean
-Syrian Arab Republic,Middle East & North Africa
+Syrian Arab Republic,"Middle East, North Africa, Afghanistan & Pakistan"
 Eswatini,Sub-Saharan Africa
 Turks and Caicos Islands,Latin America & Caribbean
 Chad,Sub-Saharan Africa
@@ -191,7 +193,7 @@ Thailand,East Asia & Pacific
 Tajikistan,Europe & Central Asia
 Timor-Leste,East Asia & Pacific
 Turkmenistan,Europe & Central Asia
-Tunisia,Middle East & North Africa
+Tunisia,"Middle East, North Africa, Afghanistan & Pakistan"
 Tonga,East Asia & Pacific
 Turkiye,Europe & Central Asia
 Trinidad and Tobago,Latin America & Caribbean
@@ -210,7 +212,7 @@ Viet Nam,East Asia & Pacific
 Vanuatu,East Asia & Pacific
 Samoa,East Asia & Pacific
 Kosovo,Europe & Central Asia
-"Yemen, Rep.",Middle East & North Africa
+"Yemen, Rep.","Middle East, North Africa, Afghanistan & Pakistan"
 South Africa,Sub-Saharan Africa
 Zambia,Sub-Saharan Africa
 Zimbabwe,Sub-Saharan Africa
@@ -258,7 +260,6 @@ Sardinia,Europe & Central Asia
 Saxe-Weimar-Eisenach,Europe & Central Asia
 Saxony,Europe & Central Asia
 Serbia and Montenegro,Europe & Central Asia
-Somalia,Sub-Saharan Africa
 Somaliland,Sub-Saharan Africa
 South Georgia and the South Sandwich Islands,East Asia & Pacific
 "Taiwan, Province of China",East Asia & Pacific
