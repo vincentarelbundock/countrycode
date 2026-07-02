@@ -54,7 +54,7 @@ A data frame used internally by the \code{\link[=countrycode]{countrycode()}} fu
 \subsection{Destination only}{
 \itemize{
 \item \verb{cldr.*}: 600+ country name variants from the UNICODE CLDR project (e.g., "cldr.short.en").
-Inspect the \code{\link[=cldr_examples]{cldr_examples}} data.frame for a full list of
+Inspect the \code{\link{cldr_examples}} data.frame for a full list of
 available country names and examples.
 \item \code{ar5}: IPCC's regional mapping used both in the Fifth Assessment Report
 (AR5) and for the Reference Concentration Pathways (RCP)
@@ -100,7 +100,7 @@ justify changing codes over time. When building a purely cross-sectional
 conversion dictionary, this forces us to make arbitrary choices with respect
 to some entities (e.g., Western Germany, Vietnam, Serbia). \code{countrycode}
 includes a reconciled dataset in panel format,
-\code{\link[=codelist_panel]{codelist_panel}}. Instead of converting code, we recommend
+\code{\link{codelist_panel}}. Instead of converting code, we recommend
 that users dealing with panel data "left-merge" their data into this panel
 dictionary.
 }
