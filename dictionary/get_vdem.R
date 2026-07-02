@@ -1,11 +1,11 @@
 source(here::here('dictionary/utilities.R'))
 
-# readRDS("~/countrycode/dictionary/data_raw/V-Dem-CY-Core-v15.rds") %>%
+# readRDS("dictionary/data_raw/V-Dem-CY-Core-v16.rds") %>%
 #   arrange(country_text_id,year) %>%
 #   select(country_name,country_id,year) %>%
-#   saveRDS(file = "~/countrycode/dictionary/data_raw/data_vdem_v15_march2025.rds", version = 2, compress = "xz")
+#   saveRDS(file = "dictionary/data_raw/data_vdem_v16.rds", version = 2, compress = "xz")
 
-vdem <- readRDS('dictionary/data_raw/data_vdem_v15_march2025.rds') %>%
+vdem <- readRDS('dictionary/data_raw/data_vdem_v16.rds') %>%
 
   # TODO: Czechoslovakia vs. Czech Republic vs. Czechia
   mutate(country_name = case_when(

@@ -11,3 +11,6 @@ docs/
 
 # scrutin history + caches (keep runner scripts tracked)
 .scrutin/state.db*
+
+# Full V-Dem source releases
+dictionary/data_raw/V-Dem-*.rds
