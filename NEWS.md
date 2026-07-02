@@ -1,5 +1,11 @@
 # News
 
+## Development
+
+* Update VDEM codes to v.16. Thanks to [@victorhartman](https://github.com/victorhartman) PR [#383](https://github.com/vincentarelbundock/countrycode/issues/383).
+* Add `eu27`, a European Union membership code as of February 2020, excluding the United Kingdom. Thanks to [@chcoste](https://github.com/chcoste) and [@cjyetman](https://github.com/cjyetman) for Issue [#380](https://github.com/vincentarelbundock/countrycode/issues/380).
+* Update World Bank `region` entries: "Afghanistan Middle East, North Africa, Afghanistan & Pakistan". Thanks to [@gronert-m](https://github.com/gronert-m) for Issue [#381](https://github.com/vincentarelbundock/countrycode/issues/381) and [@cjyetman](https://github.com/cjyetman) for helpful research.
+
 ## 1.8.0
 
 * New Spanish regular expressions and names: `country.name.es`, `cldr.name.es` and `country.name.es`. Thanks to [@dieghernan](https://github.com/dieghernan) for the contribution, and to [@NilsEnevoldsen](https://github.com/NilsEnevoldsen) and [@cjyetman](https://github.com/cjyetman) for review.

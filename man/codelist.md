@@ -253,6 +253,12 @@ of Air Navigation
 </li>
 <li>
 
+<code>eu27</code>: Member states of the European Union (as of February
+2020), without special territories
+
+</li>
+<li>
+
 <code>icao.region</code>: International Civil Aviation Organization
 region
 
