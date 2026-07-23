@@ -35,9 +35,10 @@ r-man: ## convert R man/*.Rd to Markdown with pkgsite
 articles: ## convert docs-src/vignettes/*.qmd to Markdown
 	Rscript scripts/build-articles.R
 
-website: r-man articles ## build the Zensical website
+website: r-install r-man articles ## install R and build the Zensical website
 	Rscript scripts/build-website.R
 	uv run zensical build
+	touch docs/.nojekyll
 
 py-install: ## install the Python package in its uv environment
 	cd python && uv pip install .
