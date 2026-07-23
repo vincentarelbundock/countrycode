@@ -1,0 +1,15 @@
+[project]
+name = "countrycode-docs"
+version = "0.0.0"
+description = "Documentation toolchain for the countrycode R package"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+docs = [
+    "zensical==0.0.51",
+]
+
+[tool.uv]
+package = false
+default-groups = ["docs"]

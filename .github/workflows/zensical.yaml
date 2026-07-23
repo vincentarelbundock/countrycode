@@ -1,0 +1,47 @@
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+name: zensical
+
+jobs:
+  zensical:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: zensical-${{ github.event_name != 'pull_request' || github.run_id }}
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::pkgsite
+          needs: website
+
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Convert Rd reference pages to Markdown
+        run: Rscript scripts/build-reference.R
+
+      - name: Build Zensical site
+        run: uv run --frozen zensical build
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          clean: true
+          branch: gh-pages
+          folder: site

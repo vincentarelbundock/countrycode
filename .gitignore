@@ -14,3 +14,13 @@ docs/
 
 # Full V-Dem source releases
 dictionary/data_raw/V-Dem-*.rds
+
+# Zensical build output and generated pkgsite reference pages
+site/
+build/
+!docs/
+docs/*
+!docs/index.md
+!docs/reference/
+docs/reference/*
+!docs/reference/index.md

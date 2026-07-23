@@ -1,0 +1,12 @@
+[project]
+site_name = "countrycode"
+site_url = "https://vincentarelbundock.github.io/countrycode/"
+site_description = "Convert country names and country codes in R"
+docs_dir = "docs"
+site_dir = "site"
+
+[project.theme]
+language = "en"
+
+[project.extra]
+generator = false

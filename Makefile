@@ -1,4 +1,4 @@
-.PHONY: help website dictionary
+.PHONY: help website reference dictionary
 
 help:  ## Display this help screen
 	@echo -e "\033[1mAvailable commands:\033[0m\n"
@@ -19,7 +19,8 @@ install: document  ## install
 test: install ## test
 	Rscript -e "library(countrycode);devtools::test()"
 
-website: install ## render vignettes and website
-	Rscript -e "altdoc::render_docs(verbose = TRUE)"
-	# rm -rf _quarto
-	# rm -rf ~/Downloads/countrycode_website && cp -r docs ~/Downloads/countrycode_website
+reference: ## convert man/*.Rd to Markdown with pkgsite
+	Rscript scripts/build-reference.R
+
+website: reference ## build the Zensical website
+	uv run zensical build
