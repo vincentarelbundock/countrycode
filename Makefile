@@ -1,5 +1,5 @@
-.PHONY: help website reference articles dictionary \
-	r-document r-check r-install r-test r-build r-lint \
+.PHONY: help website articles dictionary \
+	r-document r-check r-install r-test r-build r-lint r-man \
 	py-install py-test py-lint py-coverage py-build py-publish
 
 help:  ## Display this help screen
@@ -29,13 +29,13 @@ r-lint: ## format and lint all R code
 	air format .
 	jarl check .
 
-reference: ## convert man/*.Rd to Markdown with pkgsite
+r-man: ## convert R man/*.Rd to Markdown with pkgsite
 	Rscript scripts/build-reference.R
 
 articles: ## convert docs-src/vignettes/*.qmd to Markdown
 	Rscript scripts/build-articles.R
 
-website: ## build the Zensical website
+website: r-man articles ## build the Zensical website
 	Rscript scripts/build-website.R
 	uv run zensical build
 

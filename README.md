@@ -1,24 +1,19 @@
-
-<p align="center">
+# countrycode for R and Python
 
 <img src="https://user-images.githubusercontent.com/987058/167296405-e7798ac8-03e7-444e-acaf-d99fc42d1c9e.png" align="right" alt="" width="125" />
-</p>
-
-<br>
 
 <!-- badges: start -->
 
 [![DOI](http://joss.theoj.org/papers/10.21105/joss.00848/status.svg)](https://doi.org/10.21105/joss.00848)
 <a href = "https://vincentarelbundock.github.io/countrycode" target = "_blank"><img src="https://img.shields.io/static/v1?label=Website&message=Visit&color=blue"></a>
-[![R build
-status](https://github.com/vincentarelbundock/countrycode/workflows/R-CMD-check/badge.svg)](https://github.com/vincentarelbundock/countrycode/actions)
+[![R](https://img.shields.io/badge/R-CRAN-276DC3)](https://cran.r-project.org/package=countrycode)
+[![Python](https://img.shields.io/badge/Python-PyPI-3776AB)](https://pypi.org/project/countrycode/)
 <a href = "https://vincentarelbundock.github.io/countrycode" target = "_blank"><img src="http://cranlogs.r-pkg.org/badges/grand-total/countrycode"></a>
 <!-- badges: end -->
 
-`countrycode` standardizes country names, converts them into ~40
-different coding schemes, and assigns region descriptors. Scroll down
-for more details or visit the [countrycode CRAN
-page](http://cran.r-project.org/web/packages/countrycode/index.html)
+`countrycode` is available for both R and Python. The two packages share
+the same country-code dictionary and convert country names and codes
+across more than 40 coding schemes and 600 country-name variants.
 
 If you use `countrycode` in your research, we would be very grateful if
 you could cite our paper:
@@ -40,12 +35,12 @@ country names to a coding scheme.
 
 ### The Solution
 
-The `countrycode` function can convert to and from 40+ different country
-coding schemes, and to 600+ variants of country names in different
-languages and formats. It uses regular expressions to convert long
-country names (e.g. Sri Lanka) into any of those coding schemes or
-country names. It can create new variables with various regional
-groupings.
+The R and Python packages provide a `countrycode()` function backed by a
+shared dictionary. It converts between more than 40 country coding
+schemes and 600 country-name variants in different languages and
+formats. Regular-expression matching supports conversion from long
+country names such as “Sri Lanka,” and destination fields include
+regional groupings.
 
 ## Installation
 
@@ -77,10 +72,46 @@ Install the development version from this monorepo:
 pip install "countrycode @ git+https://github.com/vincentarelbundock/countrycode.git#subdirectory=python"
 ```
 
+## Usage
+
+### R
+
+``` r
+library(countrycode)
+
+countrycode(
+  c("Canada", "Algeria"),
+  origin = "country.name",
+  destination = "iso3c"
+)
+#> [1] "CAN" "DZA"
+```
+
+### Python
+
+``` python
+from countrycode import countrycode
+
+countrycode(
+    ["Canada", "Algeria"],
+    origin="country.name",
+    destination="iso3c",
+)
+# ['CAN', 'DZA']
+```
+
 ## Supported codes
 
-To get an up-to-date list of supported country codes, install the
-package and type `?codelist`. These include:
+The R package documents the fields at `?codelist`. In Python, inspect
+them with `codelist.keys()`:
+
+``` python
+from countrycode import codelist
+
+codelist.keys()
+```
+
+Supported fields include:
 
 - 600+ variants of country names in different languages and formats.
 - Telephone
