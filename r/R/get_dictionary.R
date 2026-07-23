@@ -23,7 +23,7 @@ get_dictionary <- function(dictionary = NULL) {
         return(invisible(NULL))
     }
     if (isTRUE(is.character(dictionary) && length(dictionary) == 1 && dictionary %in% valid)) {
-        url <- sprintf("https://github.com/vincentarelbundock/countrycode/raw/main/custom_dictionaries/data_%s.rds", dictionary)
+        url <- sprintf("https://github.com/vincentarelbundock/countrycode/raw/main/custom-dictionaries/data_%s.rds", dictionary)
         tmp <- tempfile()
         utils::download.file(url, tmp)
         out <- readRDS(tmp)

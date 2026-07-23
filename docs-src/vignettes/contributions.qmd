@@ -19,11 +19,11 @@ If you need help with any of these steps, or if you just want to submit a CSV fi
 
 ## Custom dictionaries
 
-The `countrycode` repository holds several custom dictionaries: https://github.com/vincentarelbundock/countrycode/tree/main/custom_dictionaries
+The `countrycode` repository holds several custom dictionaries: https://github.com/vincentarelbundock/countrycode/tree/main/custom-dictionaries
 
 To add your own custom dictionary, please make sure that:
 
-1. You save a comma-separated CSV file that looks something like custom_dictionaries/data_us_states.csv
+1. You save a comma-separated CSV file that looks something like custom-dictionaries/data_us_states.csv
 2. The custom dictionary has a unique purpose (not overlapping with existing custom dictionaries)
 3. It uses UTF-8 encoding and conforms to RFC 4180 CSV standard (e.g. comma-delimited, etc.). 
     - `R` commands to produce such a file are shown below.
@@ -50,7 +50,7 @@ When using custom dictionaries, it is often useful to give "meta" information to
 ```{r, error = TRUE, message = FALSE}
 library(countrycode)
 
-state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/custom_dictionaries/data_us_states.csv"
+state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/custom-dictionaries/data_us_states.csv"
 state_dict <- read.csv(state_dict)
 
 attr(state_dict, "origin_regex") <- "state.regex"

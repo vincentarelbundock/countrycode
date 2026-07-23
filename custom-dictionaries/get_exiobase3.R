@@ -41,12 +41,12 @@ source(here::here("dictionary/utilities.R"))
 
 ## write_csv(
 ##   exiobase,
-##   here("custom_dictionaries", "data_exiobase3.csv"),
+##   here("custom-dictionaries", "data_exiobase3.csv"),
 ##   na = ""
 ## )
 
 
-tmp <- read.csv(here("custom_dictionaries/data_exiobase3.csv")) |>
+tmp <- read.csv(here("custom-dictionaries/data_exiobase3.csv")) |>
     unique() |>
     transform(country.name.en.regex = countrycode(country, "country.name", "country.name.en.regex")) |>
     select(country.name = country,
@@ -56,4 +56,4 @@ tmp <- read.csv(here("custom_dictionaries/data_exiobase3.csv")) |>
 attr(tmp, "origin_regex") <- "country.name.en.regex"
 attr(tmp, "valid_origin") <- "country.name.en.regex"
 
-saveRDS(tmp, here("custom_dictionaries/data_exiobase3.rds"))
+saveRDS(tmp, here("custom-dictionaries/data_exiobase3.rds"))

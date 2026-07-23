@@ -52,7 +52,7 @@ gtap_versions <- 6:11
 ##   walk(\(version)
 ##        get_gtap_mapping(version) |>
 ##          write_csv(
-##            here(str_glue("custom_dictionaries/data_gtap{version}.csv"))
+##            here(str_glue("custom-dictionaries/data_gtap{version}.csv"))
 ##          )
 ##       )
 
@@ -61,7 +61,7 @@ gtap_versions |>
   walk(function(version) {
     tmp <-
       read.csv(
-        here(str_glue("custom_dictionaries/data_gtap{version}.csv"))
+        here(str_glue("custom-dictionaries/data_gtap{version}.csv"))
       ) |>
       unique() |>
       transform(
@@ -79,5 +79,5 @@ gtap_versions |>
     attr(tmp, "valid_origin") <- "country.name.en.regex"
 
     saveRDS(tmp,
-            here(str_glue("custom_dictionaries/data_gtap{version}.rds")))
+            here(str_glue("custom-dictionaries/data_gtap{version}.rds")))
   })

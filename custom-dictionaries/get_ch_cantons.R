@@ -1,9 +1,9 @@
 source(here::here("dictionary/utilities.R"))
 
-tmp <- read.csv(here("custom_dictionaries/data_ch_cantons.csv")) |>
+tmp <- read.csv(here("custom-dictionaries/data_ch_cantons.csv")) |>
     unique() |>
     rename(canton.abb = abbreviation)
 attr(tmp, "origin_regex") <- "canton.name.regex"
 attr(tmp, "valid_origin") <- colnames(tmp)
 
-saveRDS(tmp, here("custom_dictionaries/data_ch_cantons.rds"))
+saveRDS(tmp, here("custom-dictionaries/data_ch_cantons.rds"))

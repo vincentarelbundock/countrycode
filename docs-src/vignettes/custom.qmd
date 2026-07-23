@@ -27,7 +27,7 @@ name_to_iso3c(c("Algeria", "Canada"))
 #############################
 
 # Download dictionary
-state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/custom_dictionaries/data_us_states.csv"
+state_dict <- "https://raw.githubusercontent.com/vincentarelbundock/countrycode/main/custom-dictionaries/data_us_states.csv"
 state_dict <- read.csv(state_dict)
 
 # Identify regular expression origin codes
