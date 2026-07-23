@@ -849,20 +849,20 @@ the 2 df):</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">df1</span>
 </span></code></pre></div>
 <div class="language-text highlight"><pre><span></span><code>  cowcodes var1
-1      ALG  386
-2      ALB  315
-3      UKG  302
-4      CAN  471
-5      USA  254
+1      ALG  361
+2      ALB  190
+3      UKG  473
+4      CAN   99
+5      USA    1
 </code></pre></div>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">df2</span>
 </span></code></pre></div>
 <div class="language-text highlight"><pre><span></span><code>  isocodes var2
-1       12  366
-2        8  291
-3      826  324
-4      124  493
-5      840   22
+1       12  159
+2        8  310
+3      826  327
+4      124  377
+5      840  343
 </code></pre></div>
 <p>Create a common variable with the iso3c code in each data frame, merge
 the data, and create a country identifier:</p>
@@ -873,11 +873,11 @@ the data, and create a country identifier:</p>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">df3</span>
 </span></code></pre></div>
 <div class="language-text highlight"><pre><span></span><code>  iso3c cowcodes var1 isocodes var2        country
-1   ALB      ALB  315        8  291        Albania
-2   CAN      CAN  471      124  493         Canada
-3   DZA      ALG  386       12  366        Algeria
-4   GBR      UKG  302      826  324 United Kingdom
-5   USA      USA  254      840   22  United States
+1   ALB      ALB  190        8  310        Albania
+2   CAN      CAN   99      124  377         Canada
+3   DZA      ALG  361       12  159        Algeria
+4   GBR      UKG  473      826  327 United Kingdom
+5   USA      USA    1      840  343  United States
 </code></pre></div>
 <h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
 <p><code>countrycode</code> can convert country names and codes to unicode flags. For
@@ -1071,7 +1071,7 @@ Eurostat is not necessary)</p>
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">countrycode</span><span class="p">)</span>
 </span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">eurostat</span><span class="o">::</span><span class="nf">get_eurostat</span><span class="p">(</span><span class="s">&quot;nama_10_lp_ulc&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code>Table nama_10_lp_ulc cached at /tmp/RtmpABlqo6/eurostat/f0a1b1e31f9f08d86f1ce4de8c508ad7.rds
+<div class="language-text highlight"><pre><span></span><code>Table nama_10_lp_ulc cached at /tmp/Rtmp00JEYr/eurostat/f0a1b1e31f9f08d86f1ce4de8c508ad7.rds
 </code></pre></div>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">custom_match</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">EL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Greece&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">UK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;United Kingdom&#39;</span><span class="p">)</span>
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">geo</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso2c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_match</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_match</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>

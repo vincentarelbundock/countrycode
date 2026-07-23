@@ -35,7 +35,27 @@ AVAILABLE_DICTIONARIES = (
 
 
 def guess_field(codes: Any, min_similarity: float = 80) -> list[dict[str, Any]]:
-    """Rank dictionary fields by the percentage of unique values matched."""
+    """Guess which coding scheme or name field contains a collection of values.
+
+    Compares the unique supplied values with every field in the built-in
+    ``countrycode`` dictionary and ranks fields by their match percentage.
+
+    Args:
+        codes: Country codes or country names. Scalars and iterable inputs
+            accepted by :func:`countrycode` are supported.
+        min_similarity: Minimum percentage of unique, non-missing values that
+            must occur in a field for that field to be returned.
+
+    Returns:
+        A list of dictionaries sorted by decreasing match percentage. Each
+        dictionary contains ``"code"`` and
+        ``"percent_of_unique_matched"``. Returns an empty list when no
+        non-missing values are supplied or no field meets the threshold.
+
+    Examples:
+        >>> guess_field(["DZA", "CAN", "DEU"])[0]
+        {'code': 'genc3c', 'percent_of_unique_matched': 100.0}
+    """
     values, _ = _normalize_input(codes)
     unique = list(dict.fromkeys(value for value in values if not _is_missing(value)))
     if not unique:
@@ -58,7 +78,38 @@ def countryname(
     nomatch: Any = _DEFAULT_NOMATCH,
     warn: bool = True,
 ) -> Any:
-    """Convert country names in many languages to a name or country code."""
+    """Convert country names in many languages to another name or code.
+
+    The function makes two passes over the data. First it detects country-name
+    variations in many languages extracted from the Unicode Common Locale Data
+    Repository. It then applies the English country-name patterns used by
+    :func:`countrycode` to unresolved values.
+
+    Because the two-pass approach is permissive, some names can be ambiguous,
+    such as Saint Martin versus Saint Martin (French part). Use
+    ``countrycode(x, "country.name", "country.name")`` when stricter English
+    name matching is preferable.
+
+    Args:
+        sourcevar: Country names to convert. Non-ASCII names are supported.
+            Accepts the same scalar and container types as :func:`countrycode`.
+        destination: Destination country-name or coding field. Defaults to the
+            standardized English name, ``"country.name.en"``.
+        nomatch: Replacement for unmatched values. By default they become
+            ``None``. Pass ``None`` to preserve the original input, or pass a
+            scalar or same-length sequence of replacements.
+        warn: Emit warnings listing values that could not be matched.
+
+    Returns:
+        Converted names or codes, preserving the scalar or container type of
+        ``sourcevar`` where supported.
+
+    Examples:
+        >>> countryname(["Barbadas", "Sverige", "UK"])
+        ['Barbados', 'Sweden', 'United Kingdom']
+        >>> countryname(["Barbadas", "Sverige"], destination="iso3c")
+        ['BRB', 'SWE']
+    """
     source, input_type = _normalize_input(sourcevar)
     global _COUNTRYNAME_DICT
     if _COUNTRYNAME_DICT is None:
@@ -96,7 +147,37 @@ def countryname(
 def get_dictionary(
     dictionary: str | None = None,
 ) -> dict[str, list[Any]] | tuple[str, ...]:
-    """Download one of the maintained custom conversion dictionaries."""
+    """List or download a maintained custom conversion dictionary.
+
+    Downloaded dictionaries can be passed directly to the ``custom_dict``
+    argument of :func:`countrycode`.
+
+    Args:
+        dictionary: Name of the dictionary to retrieve. If omitted, return the
+            names of all available dictionaries.
+
+    Returns:
+        A tuple of available names when ``dictionary`` is ``None``; otherwise,
+        a mapping of column names to values suitable for ``custom_dict``.
+
+    Raises:
+        ValueError: If ``dictionary`` is not one of the available names.
+        urllib.error.URLError: If the remote dictionary cannot be downloaded.
+
+    Examples:
+        List available dictionaries:
+
+        >>> "us_states" in get_dictionary()
+        True
+
+        Download and use a dictionary:
+
+        >>> states = get_dictionary("us_states")  # doctest: +SKIP
+        >>> countrycode(  # doctest: +SKIP
+        ...     "MO", "state.abb", "state.name", custom_dict=states
+        ... )
+        'Missouri'
+    """
     if dictionary is None:
         return AVAILABLE_DICTIONARIES
     if dictionary not in AVAILABLE_DICTIONARIES:

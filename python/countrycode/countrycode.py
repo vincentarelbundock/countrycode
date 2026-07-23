@@ -48,6 +48,8 @@ def _is_module_type(value: Any, module: str, type_name: str) -> bool:
         value_type.__module__ == module
         or value_type.__module__.startswith(f"{module}.")
     )
+
+
 _VALID_DEFAULT_ORIGINS = {
     "cctld",
     "country.name",
@@ -340,10 +342,72 @@ def countrycode(
 ) -> Any:
     """Convert country codes or names from one format to another.
 
-    Multiple destinations are tried from left to right and fill values which
-    were not covered by an earlier destination. By default, unmatched inputs
-    become ``None``. Pass ``nomatch=None`` to preserve the original input, or
-    pass a scalar/sequence to use explicit replacement values.
+    Converts long country names into coding schemes, translates between
+    schemes, standardizes country names, and identifies continents or regions.
+    The built-in conversion dictionary supports ISO, Correlates of War,
+    Gleditsch-Ward, World Bank, Unicode flag, and many other fields.
+
+    Multiple destinations are tried from left to right. Each destination fills
+    values not covered by an earlier one. Country-name origins use regular
+    expressions; other built-in origins use case-insensitive exact matching.
+
+    Args:
+        sourcevar: Country codes or names to convert. Accepts a scalar, list,
+            tuple, Pandas Series, Polars Series, or another iterable.
+        origin: Name of the source coding scheme, such as ``"iso3c"`` or
+            ``"country.name"``.
+        destination: Destination coding scheme, or a sequence of schemes to
+            try in order, such as ``["cowc", "iso3c"]``.
+        custom_dict: Optional replacement dictionary. Accepts a mapping of
+            column names to equal-length sequences, a Pandas or Polars
+            DataFrame, or a path to a ``.csv`` or ``.csv.gz`` file.
+        warn: Emit warnings listing unmatched or ambiguous input values.
+        nomatch: Replacement for unmatched values. By default they become
+            ``None``. Pass ``None`` to preserve the original inputs, a scalar
+            to use one replacement, or a sequence matching ``sourcevar``.
+        custom_match: Mapping of input values to destination values. These
+            overrides supersede normal or ambiguous matches.
+        origin_regex: Whether the origin column contains regular expressions.
+            The default selects regex matching for built-in country-name
+            origins and exact matching otherwise.
+
+    Returns:
+        Converted values. A scalar input returns a scalar; lists and tuples
+        retain their container kind; Pandas and Polars Series retain their
+        respective type and metadata where applicable.
+
+    Raises:
+        TypeError: If ``origin``, ``destination``, or ``sourcevar`` has an
+            unsupported shape or type.
+        ValueError: If a code field is invalid, a numeric origin receives
+            non-numeric input, the custom dictionary is malformed, or
+            ``nomatch`` has an incompatible length.
+        FileNotFoundError: If a custom dictionary path does not exist.
+        NotImplementedError: If a custom dictionary type or file format is
+            unsupported.
+
+    Examples:
+        Convert ISO codes to Correlates of War numeric codes:
+
+        >>> countrycode(["USA", "DZA"], "iso3c", "cown")
+        [2, 615]
+
+        Convert an English country name to ISO:
+
+        >>> countrycode("Albania", "country.name", "iso3c")
+        'ALB'
+
+        Try a historical code first, then fall back to ISO:
+
+        >>> countrycode("Serbia", "country.name", ["cowc", "iso3c"], warn=False)
+        'SRB'
+
+    Note:
+        Country-year data require special care because some political units,
+        including Vietnam and Serbia, change codes over time. For panel data,
+        prefer :func:`countrycode.datasets.load_codelist_panel` and merge on
+        the appropriate year instead of relying on the cross-sectional
+        dictionary.
     """
     if not isinstance(origin, str):
         raise TypeError("origin must be a string.")
@@ -438,9 +502,7 @@ def countrycode(
             using_default and "country" not in origin and origin != "unicode.symbol"
         )
         cache_key = (origin, ignore_case)
-        exact_lookup = (
-            _DEFAULT_EXACT_INDEXES.get(cache_key) if using_default else None
-        )
+        exact_lookup = _DEFAULT_EXACT_INDEXES.get(cache_key) if using_default else None
         if exact_lookup is None:
             exact_lookup = _exact_index(origin, dictionary, ignore_case=ignore_case)
             if using_default:
