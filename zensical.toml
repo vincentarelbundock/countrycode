@@ -13,10 +13,8 @@ nav = [
         { "Custom conversions" = "articles/custom.md" },
         { "Contributions" = "articles/contributions.md" },
     ] },
-    { "Reference" = [
-        { "R" = "reference/r/index.md" },
-        { "Python" = "reference/python.md" },
-    ] },
+    { "R" = "reference/r/index.md" },
+    { "Python" = "reference/python.md" },
 ]
 
 [project.plugins.mkdocstrings.handlers.python]

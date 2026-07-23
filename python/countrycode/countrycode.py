@@ -18,23 +18,24 @@ pkg_dir, pkg_filename = os.path.split(__file__)
 codelist = None
 
 
-def prepare_codelist(custom_dict=None, origin=None, destination=None):
-    """
-    Prepare and validate a codelist from various input types.
+def _prepare_codelist(custom_dict=None, origin=None, destination=None):
+    """Prepare and validate a codelist from various input types.
 
-    Parameters:
-    custom_dict: Can be None, dict, polars.DataFrame, str (path), or Path
-    origin (str, optional): The origin column that must be present
-    destination (str, optional): The destination column that must be present
+    Args:
+        custom_dict (dict | polars.DataFrame | str | pathlib.Path | None):
+            Codelist data. This can be `None`, a dictionary, a Polars
+            DataFrame, or a path to a CSV or pickle file.
+        origin (str | None): Origin column that must be present.
+        destination (str | None): Destination column that must be present.
 
     Returns:
-    dict: A validated codelist dictionary
+        dict: A validated codelist dictionary.
 
     Raises:
-    ValueError: If validation fails
-    NotImplementedError: If the type is not supported
-    FileNotFoundError: If a file path doesn't exist
-    ImportError: If Polars is required but not installed
+        ValueError: If the codelist fails validation.
+        NotImplementedError: If the input type or file type is unsupported.
+        FileNotFoundError: If a file does not exist or cannot be read.
+        ImportError: If Polars is required but not installed.
     """
     result_dict = None
     source_description = None
@@ -87,7 +88,7 @@ def prepare_codelist(custom_dict=None, origin=None, destination=None):
     elif custom_dict is None:
         # Default data path is just data/codelist.pickle
         default_path = os.path.join(pkg_dir, "data", "codelist.pickle")
-        return prepare_codelist(default_path, origin, destination)
+        return _prepare_codelist(default_path, origin, destination)
 
     else:
         error_msg = (
@@ -147,55 +148,44 @@ def countrycode(
     origin="iso3c",
     destination="country.name.en",
     custom_dict=None,
-):
-    """
-    Convert country codes or names from one format to another.
+) -> object:
+    """Convert country codes or names from one format to another.
 
-    This function takes a list, string, or Polars Series of country codes or names, and converts them to the desired
-    format, such as ISO 3-letter codes, country names in different languages, etc.
-
-    Parameters:
-    sourcevar (list, str, int, or polars.series.series.Series, optional):
-        A list, string, integer, or Polars Series of country codes or names to be converted. Default is ['DZA', 'CAN'].
-    origin (str, optional):
-        The format of the input country codes or names. Default is 'iso3c'.
-    destination (str, optional):
-        The desired format of the output country codes or names. Default is 'country.name.en'.
-    custom_dict (str, Path, dict, polars.DataFrame, optional):
-        A custom dictionary to be used for country code translations. Can be:
-        - None: Use the default built-in dictionary (default)
-        - dict: A raw dictionary with column names as keys and lists as values
-        - polars.DataFrame: A Polars DataFrame (will be converted to dict internally)
-        - str or Path: Path to a `.pickle` file (containing dict or DataFrame) or `.csv` file
+    Args:
+        sourcevar (list | str | int | pandas.Series | polars.Series):
+            Country codes or names to convert.
+        origin (str): Format of the input codes or names, such as `"iso3c"`.
+        destination (str): Desired output format, such as `"country.name.en"`.
+        custom_dict (dict | polars.DataFrame | str | pathlib.Path | None):
+            Custom dictionary used for the conversion. If `None`, the built-in
+            dictionary is used.
 
     Returns:
-    list, str, or polars.series.series.Series:
-        The converted country codes or names in the desired format. The output type depends on the input type:
-        - If `sourcevar` is a string or int, returns a string.
-        - If `sourcevar` is a list, returns a list.
-        - If `sourcevar` is a Polars Series, returns a Polars Series.
+        object: Converted country codes or names. The output type follows
+            `sourcevar`: a scalar input returns a scalar, a list returns a list,
+            and a Pandas or Polars Series returns the corresponding Series.
 
     Raises:
-    ValueError:
-        If the `origin` or `destination` format is not one of the supported formats.
-        If the input `sourcevar` is not a string, list, or Polars Series.
-        If custom_dict is missing required columns (origin or destination).
-        If custom_dict columns have inconsistent lengths.
-        If custom_dict columns are not list-like structures.
-    NotImplementedError:
-        If the custom_dict file path has an unsupported extension (not .pickle or .csv).
-        If the custom_dict argument is not one of the supported types.
-    FileNotFoundError:
-        If the custom_dict file path does not exist or cannot be read.
-    ImportError:
-        If attempting to read a CSV file without Polars installed.
+        ValueError: If an origin or destination is unsupported, or if the
+            custom dictionary fails validation.
+        NotImplementedError: If the custom dictionary or file type is
+            unsupported.
+        FileNotFoundError: If the custom dictionary file does not exist or
+            cannot be read.
+        ImportError: If reading a CSV file requires Polars but it is not
+            installed.
 
-    Example:
-    >>> countrycode(['DZA', 'CAN'], origin='iso3c', destination='country.name.en')
-    ['Algeria', 'Canada']
+    Examples:
+        >>> countrycode(
+        ...     ["DZA", "CAN"],
+        ...     origin="iso3c",
+        ...     destination="country.name.en",
+        ... )
+        ["Algeria", "Canada"]
 
     Note:
-    This function uses two helper functions (`replace_regex` and `replace_exact`) to perform the actual conversion.
+        This function uses `replace_regex` and `replace_exact` to perform the
+        conversion.
     """
 
     # user convenience shortcuts only for default dict
@@ -214,7 +204,7 @@ def countrycode(
         destination = "country.name.en"
 
     # Load and validate the codelist dict with required columns
-    codelist_data = prepare_codelist(
+    codelist_data = _prepare_codelist(
         custom_dict, origin=origin, destination=destination
     )
 
@@ -361,7 +351,7 @@ def replace_regex(sourcevar, origin, destination, codelist):
 
 # Initialize module-level codelist for backwards compatibility
 try:
-    codelist = prepare_codelist(None)
+    codelist = _prepare_codelist(None)
 except Exception:
     # If loading fails, keep it as None
     pass

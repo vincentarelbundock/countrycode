@@ -12,7 +12,7 @@ authors = [{ name = "Vincent Arel-Bundock", email = "vincent.arel-bundock@umontr
 
 [project.urls]
 Repository = "https://github.com/vincentarelbundock/countrycode"
-Readme = "https://github.com/vincentarelbundock/countrycode/blob/main/python/README.md"
+Readme = "https://github.com/vincentarelbundock/countrycode/blob/main/README.md"
 Changelog = "https://github.com/vincentarelbundock/countrycode/blob/main/python/NEWS.md"
 
 [build-system]

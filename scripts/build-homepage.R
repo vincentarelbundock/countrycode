@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-readme_file <- file.path("r", "README.md")
+readme_file <- "README.md"
 if (!file.exists(readme_file)) {
     stop("The R package README is missing: ", readme_file)
 }

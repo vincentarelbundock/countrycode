@@ -1,5 +1,9 @@
 # Changelog
 
+## Development
+
+* Updated the built-in country-code dictionary and synchronized its CSV and pickle representations with the R package.
+
 ## 0.6.0
 
 * Adds support for custom country code dictionaries in countrycode(). Users can now supply either a dictionary object or a path to a .pickle file via the new `custom_dict` argument to override the built-in conversion table when performing code and name translations. Thanks to @MelchiorReihlen for contribution #17.

@@ -2,6 +2,7 @@
 
 ## Development
 
+* Updated the built-in country-code dictionary and synchronized it with the Python package.
 * Update VDEM codes to v.16. Thanks to @victorhartman PR #383.
 * Add `eu27`, a European Union membership code as of February 2020, excluding the United Kingdom. Thanks to @chcoste and @cjyetman for Issue #380.
 * Update World Bank `region` entries: "Afghanistan Middle East, North Africa, Afghanistan & Pakistan". Thanks to @gronert-m for Issue #381 and @cjyetman for helpful research.

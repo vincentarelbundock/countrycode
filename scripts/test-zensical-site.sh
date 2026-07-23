@@ -17,7 +17,7 @@ fail() { printf 'FAIL: %s\n' "$1" >&2; exit 1; }
 grep -q 'file.path("r", "man")' scripts/build-reference.R || fail "R script does not enumerate r/man/*.Rd"
 grep -q 'pkgsite::rd_to_qmd' scripts/build-reference.R || fail "R script does not call pkgsite::rd_to_qmd()"
 grep -q 'pkgsite::index_to_qmd' scripts/build-reference.R || fail "R script does not create a reference index"
-grep -q 'file.path("r", "README.md")' scripts/build-homepage.R || fail "R script does not use r/README.md as the homepage"
+grep -q 'readme_file <- "README.md"' scripts/build-homepage.R || fail "R script does not use the root README.md as the homepage"
 grep -q '"--to", "gfm"' scripts/build-reference.R || fail "R script does not render QMD to GFM with Quarto"
 grep -q '\\.qmd' scripts/build-reference.R || fail "R script does not stage QMD files"
 grep -q 'uv run zensical build' Makefile || fail "Makefile does not build with project-pinned Zensical"

@@ -13,9 +13,11 @@
 *.Rcheck/
 *.Rout
 *.Rout.fail
-/*.tar.gz
+*.tar.gz
 README.html
 revdep/
+/r/README.md
+/python/README.md
 
 # Quarto, knitr, and Jupyter
 .quarto/
@@ -37,10 +39,8 @@ __pycache__/
 *.egg
 *.whl
 pip-wheel-metadata/
-/build/
-/dist/
-python/build/
-python/dist/
+build/
+dist/
 
 # Python test, lint, type-check, and coverage caches
 .cache/
