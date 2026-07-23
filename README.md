@@ -100,6 +100,33 @@ countrycode(
 # ['CAN', 'DZA']
 ```
 
+Python also provides the higher-level helpers available in R:
+
+``` python
+from countrycode import countryname, guess_field
+
+# Detect country names without first specifying their language.
+countryname(["Sverige", "ジンバブエ"], destination="iso3c")
+# ['SWE', 'ZWE']
+
+# Identify a column's likely coding scheme.
+guess_field(["DZA", "CAN", "DEU"])
+```
+
+The Python `countrycode()` function supports unmatched-value replacement,
+warnings, custom overrides, explicit regular-expression matching, and fallback
+destinations:
+
+``` python
+countrycode(
+    ["Serbia", "Atlantis"],
+    origin="country.name",
+    destination=["cowc", "iso3c"],
+    nomatch="Unknown",
+)
+# ['SRB', 'Unknown']
+```
+
 ## Supported codes
 
 The R package documents the fields at `?codelist`. In Python, inspect
@@ -109,6 +136,25 @@ them with `codelist.keys()`:
 from countrycode import codelist
 
 codelist.keys()
+```
+
+Country-year codes and the multilingual name dictionary are loaded on demand:
+
+``` python
+from countrycode import load_codelist_panel, load_countryname_dict
+
+panel = load_codelist_panel()
+names = load_countryname_dict()
+```
+
+Maintained custom dictionaries can be downloaded with `get_dictionary()`:
+
+``` python
+from countrycode import get_dictionary
+
+states = get_dictionary("us_states")
+countrycode("MO", "state.abb", "state.name", custom_dict=states)
+# 'Missouri'
 ```
 
 Supported fields include:

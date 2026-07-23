@@ -30,10 +30,9 @@ dev = [
   "pytest-cov>=5",
   "pytest-xdist >=3.6.1",
   "ruff>=0.6.4",
-  "jupyter",
   "hypothesis>=6.131.28",
   "pre-commit",
 ]
 
 [tool.setuptools.package-data]
-countrycode = ["data/*.pickle"]
+countrycode = ["data/*.csv.gz"]

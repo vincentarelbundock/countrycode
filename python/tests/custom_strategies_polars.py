@@ -10,7 +10,7 @@ try:
 
     pkg_dir, pkg_filename = os.path.split(__file__)
     pkg_dir = os.path.dirname(pkg_dir)
-    data_path = os.path.join(pkg_dir, "countrycode", "data", "codelist.csv")
+    data_path = os.path.join(pkg_dir, "countrycode", "data", "codelist.csv.gz")
     codelist = pl.read_csv(data_path)
 except ImportError:
     pass
@@ -47,6 +47,7 @@ def build_invalid_code(code="iso3c") -> SearchStrategy[str]:
     """
     Returns a string that is not represented in code within codelist
     """
+    valid = {value.casefold() for value in _select_codes(code)}
     return st.text(alphabet=string.printable, min_size=1, max_size=10).filter(
-        lambda z: z not in _select_codes(code)
+        lambda z: z.casefold() not in valid
     )

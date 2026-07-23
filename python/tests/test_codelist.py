@@ -9,7 +9,7 @@ try:
 
     pkg_dir, pkg_filename = os.path.split(__file__)
     pkg_dir = os.path.dirname(pkg_dir)
-    data_path = os.path.join(pkg_dir, "countrycode", "data", "codelist.csv")
+    data_path = os.path.join(pkg_dir, "countrycode", "data", "codelist.csv.gz")
     codelist = pl.read_csv(data_path)
 except ImportError:
     _has_polars = False

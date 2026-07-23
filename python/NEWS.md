@@ -3,6 +3,16 @@
 ## Development
 
 * Updated the built-in country-code dictionary and synchronized its CSV and pickle representations with the R package.
+* Bring `countrycode()` behavior in line with the R package: warnings,
+  `nomatch`, `custom_match`, `origin_regex`, fallback destinations,
+  ambiguity detection, case-insensitive built-in codes, and Spanish names.
+* Add `countryname()`, `guess_field()`, and `get_dictionary()`.
+* Add on-demand loaders for `codelist_panel`, `countryname_dict`, and
+  `cldr_examples`.
+* Preserve Pandas Series metadata and support Pandas custom dictionaries.
+* Remove the unused Jupyter development dependency.
+* Replace the Python-specific pickle dictionary with a compressed, portable
+  CSV representation for all packaged datasets.
 
 ## 0.6.0
 

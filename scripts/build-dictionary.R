@@ -253,6 +253,29 @@ write_csv(
   na = ""
 )
 
-# Keep the Python package's source CSV synchronized with the R dictionary.
+# Keep the Python package's compressed CSV synchronized with the R dictionary.
 dir.create(python_data_dir, recursive = TRUE, showWarnings = FALSE)
-write_csv(codelist, file.path(python_data_dir, "codelist.csv"), na = "")
+write_csv(
+  codelist,
+  gzfile(file.path(python_data_dir, "codelist.csv.gz")),
+  na = ""
+)
+write_csv(
+  codelist_panel,
+  gzfile(file.path(python_data_dir, "codelist_panel.csv.gz")),
+  na = ""
+)
+
+# Supplementary datasets used by Python's countryname() and data loaders.
+load(file.path(package_data_dir, "countryname_dict.rda"))
+load(file.path(package_data_dir, "cldr_examples.rda"))
+write_csv(
+  countryname_dict,
+  gzfile(file.path(python_data_dir, "countryname_dict.csv.gz")),
+  na = ""
+)
+write_csv(
+  cldr_examples,
+  gzfile(file.path(python_data_dir, "cldr_examples.csv.gz")),
+  na = ""
+)

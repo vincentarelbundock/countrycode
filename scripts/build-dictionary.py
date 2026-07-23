@@ -1,16 +1,21 @@
-import pickle
+"""Validate the generated Python data artifacts."""
+
+import gzip
 from pathlib import Path
 
 import polars as pl
 
 project_dir = Path(__file__).resolve().parent.parent
 data_dir = project_dir / "python" / "countrycode" / "data"
+path = data_dir / "codelist.csv.gz"
 
-df = pl.read_csv(data_dir / "codelist.csv")
-codelist = {col: df[col].to_list() for col in df.columns}
+with gzip.open(path, "rb") as stream:
+    dataframe = pl.read_csv(stream)
 
-data_dir.mkdir(parents=True, exist_ok=True)
-with (data_dir / "codelist.pickle").open("wb") as f:
-    pickle.dump(codelist, f, protocol=4)
+if dataframe.is_empty():
+    raise RuntimeError(f"Generated dictionary is empty: {path}")
 
-print("Converted the Python dictionary CSV to pickle")
+print(
+    f"Validated compressed Python dictionary "
+    f"({dataframe.height} rows, {dataframe.width} columns)"
+)

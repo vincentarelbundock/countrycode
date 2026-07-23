@@ -17,7 +17,6 @@
 README.html
 revdep/
 /r/README.md
-/python/README.md
 
 # Quarto, knitr, and Jupyter
 .quarto/
@@ -69,4 +68,5 @@ uv-cache/
 # Generated Zensical inputs and output
 docs-src/articles/
 docs-src/index.md
-docs-src/reference/
+docs-src/reference/*
+!docs-src/reference/python.md
