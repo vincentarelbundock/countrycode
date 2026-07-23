@@ -45,14 +45,21 @@ source(here::here("dictionary/utilities.R"))
 ##   na = ""
 ## )
 
-
 tmp <- read.csv(here("custom-dictionaries/data_exiobase3.csv")) |>
-    unique() |>
-    transform(country.name.en.regex = countrycode(country, "country.name", "country.name.en.regex")) |>
-    select(country.name = country,
-           country.name.en.regex,
-           exiobase.num = exiobase_num,
-           exiobase.cha = exiobase_code)
+  unique() |>
+  transform(
+    country.name.en.regex = countrycode(
+      country,
+      "country.name",
+      "country.name.en.regex"
+    )
+  ) |>
+  select(
+    country.name = country,
+    country.name.en.regex,
+    exiobase.num = exiobase_num,
+    exiobase.cha = exiobase_code
+  )
 attr(tmp, "origin_regex") <- "country.name.en.regex"
 attr(tmp, "valid_origin") <- "country.name.en.regex"
 

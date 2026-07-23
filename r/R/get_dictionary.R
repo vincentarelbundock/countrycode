@@ -1,5 +1,5 @@
 #' Get Custom Dictionaries
-#' 
+#'
 #' Download a custom dictionary to use in the `custom_dict` argument of `countrycode()`
 #'
 #' @param dictionary A character string that specifies the dictionary to be
@@ -17,19 +17,40 @@
 #' }
 #' @export
 get_dictionary <- function(dictionary = NULL) {
-    valid <- sort(c("global_burden_of_disease", "ch_cantons", "us_states", "exiobase3", "gtap10"))
-    if (is.null(dictionary)) {
-        message(sprintf("Available dictionaries: %s", paste(valid, collapse = ", ")))
-        return(invisible(NULL))
-    }
-    if (isTRUE(is.character(dictionary) && length(dictionary) == 1 && dictionary %in% valid)) {
-        url <- sprintf("https://github.com/vincentarelbundock/countrycode/raw/main/custom-dictionaries/data_%s.rds", dictionary)
-        tmp <- tempfile()
-        utils::download.file(url, tmp)
-        out <- readRDS(tmp)
-        unlink(tmp)
-        return(out)
-    } else {
-        stop("dictionary must be a character vector of length 1 and one of: ", paste(valid, collapse = ", "))
-    }
+  valid <- sort(c(
+    "global_burden_of_disease",
+    "ch_cantons",
+    "us_states",
+    "exiobase3",
+    "gtap10"
+  ))
+  if (is.null(dictionary)) {
+    message(sprintf(
+      "Available dictionaries: %s",
+      paste(valid, collapse = ", ")
+    ))
+    return(invisible(NULL))
+  }
+  if (
+    isTRUE(
+      is.character(dictionary) &&
+        length(dictionary) == 1 &&
+        dictionary %in% valid
+    )
+  ) {
+    url <- sprintf(
+      "https://github.com/vincentarelbundock/countrycode/raw/main/custom-dictionaries/data_%s.rds",
+      dictionary
+    )
+    tmp <- tempfile()
+    utils::download.file(url, tmp, mode = "wb")
+    out <- readRDS(tmp)
+    unlink(tmp)
+    return(out)
+  } else {
+    stop(
+      "dictionary must be a character vector of length 1 and one of: ",
+      paste(valid, collapse = ", ")
+    )
+  }
 }

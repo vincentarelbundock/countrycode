@@ -3,17 +3,64 @@ source(here::here('dictionary/utilities.R'))
 url <- 'https://databankfiles.worldbank.org/public/ddpext_download/site-content/CLASS.xlsx'
 
 filename <- tempfile(fileext = '.xlsx')
-download.file(url, filename, quiet = TRUE)
+download.file(url, filename, quiet = TRUE, mode = 'wb')
 
-not_countries <- c("Arab World", "Caribbean small states", "Central Europe and the Baltics", "Early-demographic dividend", "East Asia & Pacific", "East Asia & Pacific (excluding high income)", "East Asia & Pacific (IDA & IBRD)", "Euro area", "Europe & Central Asia", "Europe & Central Asia (excluding high income)", "Europe & Central Asia (IDA & IBRD)", "European Union", "Fragile and conflict affected situations", "Heavily indebted poor countries (HIPC)", "High income", "IBRD only", "IDA & IBRD total", "IDA blend", "IDA only", "IDA total", "Late-demographic dividend", "Latin America & Caribbean", "Latin America & Caribbean (excluding high income)", "Latin America & Caribbean (IDA & IBRD)", "Least developed countries: UN classification", "Low & middle income", "Low income", "Lower middle income", "Middle East & North Africa", "Middle East & North Africa (excluding high income)", "Middle East & North Africa (IDA & IBRD)", "Middle income", "North America", "OECD members", "Other small states", "Pacific island small states", "Post-demographic dividend", "Pre-demographic dividend", "Small states", "South Asia", "South Asia (IDA & IBRD)", "Sub-Saharan Africa", "Sub-Saharan Africa (excluding high income)", "Sub-Saharan Africa (IDA & IBRD)", "Upper middle income", "World")
+not_countries <- c(
+  "Arab World",
+  "Caribbean small states",
+  "Central Europe and the Baltics",
+  "Early-demographic dividend",
+  "East Asia & Pacific",
+  "East Asia & Pacific (excluding high income)",
+  "East Asia & Pacific (IDA & IBRD)",
+  "Euro area",
+  "Europe & Central Asia",
+  "Europe & Central Asia (excluding high income)",
+  "Europe & Central Asia (IDA & IBRD)",
+  "European Union",
+  "Fragile and conflict affected situations",
+  "Heavily indebted poor countries (HIPC)",
+  "High income",
+  "IBRD only",
+  "IDA & IBRD total",
+  "IDA blend",
+  "IDA only",
+  "IDA total",
+  "Late-demographic dividend",
+  "Latin America & Caribbean",
+  "Latin America & Caribbean (excluding high income)",
+  "Latin America & Caribbean (IDA & IBRD)",
+  "Least developed countries: UN classification",
+  "Low & middle income",
+  "Low income",
+  "Lower middle income",
+  "Middle East & North Africa",
+  "Middle East & North Africa (excluding high income)",
+  "Middle East & North Africa (IDA & IBRD)",
+  "Middle income",
+  "North America",
+  "OECD members",
+  "Other small states",
+  "Pacific island small states",
+  "Post-demographic dividend",
+  "Pre-demographic dividend",
+  "Small states",
+  "South Asia",
+  "South Asia (IDA & IBRD)",
+  "Sub-Saharan Africa",
+  "Sub-Saharan Africa (excluding high income)",
+  "Sub-Saharan Africa (IDA & IBRD)",
+  "Upper middle income",
+  "World"
+)
 
 wb <- read_excel(filename, sheet = "List of economies") %>%
-      select(Economy, Code) %>%
-      setNames(c('country', 'wb')) %>%
-      filter(
-        !country %in% not_countries,
-        !is.na(wb)
-      ) %>%
-      arrange(country)
+  select(Economy, Code) %>%
+  setNames(c('country', 'wb')) %>%
+  filter(
+    !country %in% not_countries,
+    !is.na(wb)
+  ) %>%
+  arrange(country)
 
 wb %>% write_csv('dictionary/data_world_bank.csv', na = "")

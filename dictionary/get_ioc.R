@@ -14,8 +14,8 @@ ioc = url %>%
   str_extract('[A-Z]{3}\\s+.+?(?=\\s{2})') %>%
   str_squish() %>%
   as_tibble() %>%
-  separate(value, c('ioc','country'), extra = "merge") %>%
-  filter(!ioc %in% c(NA,"NOC","IOA","IOP","EOR")) %>%
+  separate(value, c('ioc', 'country'), extra = "merge") %>%
+  filter(!ioc %in% c(NA, "NOC", "IOA", "IOP", "EOR")) %>%
   relocate(country) %>%
   arrange(country)
 

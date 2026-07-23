@@ -1,5 +1,5 @@
 .PHONY: help website reference articles dictionary \
-	r-document r-check r-install r-test r-build \
+	r-document r-check r-install r-test r-build r-lint \
 	py-install py-test py-lint py-coverage py-build py-publish
 
 help:  ## Display this help screen
@@ -24,6 +24,10 @@ r-test: r-install ## run the R test suite
 
 r-build: ## build the R package with the root README
 	@set -eu; cp README.md r/README.md; trap 'rm -f r/README.md' EXIT INT TERM; R CMD build r
+
+r-lint: ## format and lint all R code
+	air format .
+	jarl check .
 
 reference: ## convert man/*.Rd to Markdown with pkgsite
 	Rscript scripts/build-reference.R

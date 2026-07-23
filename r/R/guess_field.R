@@ -19,7 +19,9 @@
 #' guess_field(c('Guinea','Iran','Russia','North Korea',rep('Ivory Coast',50),'Scotland'))
 guess_field <- function(codes, min_similarity = 80) {
   if (!mode(codes) %in% c('character', 'numeric')) {
-    stop('sourcevar must be a character or numeric vector. This error often arises when users pass a tibble (e.g., from dplyr) instead of a column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2] vs. my_tbl[[2]]). This can also happen when `sourcevar` is entirely composed of `NA`, which `R` treats as entries of class logical.')
+    stop(
+      'sourcevar must be a character or numeric vector. This error often arises when users pass a tibble (e.g., from dplyr) instead of a column vector from a data.frame (i.e., my_tbl[, 2] vs. my_df[, 2] vs. my_tbl[[2]]). This can also happen when `sourcevar` is entirely composed of `NA`, which `R` treats as entries of class logical.'
+    )
   }
 
   x <- unique(codes)
@@ -31,9 +33,11 @@ guess_field <- function(codes, min_similarity = 80) {
 
   match_percentage <- match_percentage[match_percentage >= min_similarity]
 
-  match_percentage <- match_percentage[order(match_percentage, decreasing = TRUE)]
+  match_percentage <- sort(match_percentage, decreasing = TRUE)
 
-  data.frame(code = names(match_percentage),
-             percent_of_unique_matched = match_percentage,
-             stringsAsFactors = FALSE)
+  data.frame(
+    code = names(match_percentage),
+    percent_of_unique_matched = match_percentage,
+    stringsAsFactors = FALSE
+  )
 }

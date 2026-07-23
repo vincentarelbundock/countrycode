@@ -27,31 +27,40 @@
 #' countryname(x, destination = 'iso3c')
 #' }
 #'
-countryname <- function(sourcevar, destination = 'country.name.en', nomatch = NA, warn = TRUE) {
-    
-    out <- countrycode(sourcevar = sourcevar,
-                       origin = 'country.name.alt',
-                       destination = 'country.name.en',
-                       custom_dict = countrycode::countryname_dict,
-                       warn = FALSE)
-    
-    idx <- is.na(out)
-    out[idx] <- countrycode(sourcevar = sourcevar[idx], 
-                            origin = 'country.name.en', 
-                            destination = 'country.name.en', 
-                            nomatch = nomatch,
-                            warn = warn)
-    
-    if (destination != 'country.name.en') {
-      # Issue 309: in the second pass we can use the origin vector for NAs, but only if origin and destination are of the same type and origin is a country name, not a code.
-      out <- countrycode(sourcevar = out,
-                         origin = 'country.name.en', 
-                         destination = destination,
-                        #  custom_dict = countrycode::codelist, 
-                         nomatch = nomatch,
-                         warn = warn)
-    }
-    
-    return(out)
-}
+countryname <- function(
+  sourcevar,
+  destination = 'country.name.en',
+  nomatch = NA,
+  warn = TRUE
+) {
+  out <- countrycode(
+    sourcevar = sourcevar,
+    origin = 'country.name.alt',
+    destination = 'country.name.en',
+    custom_dict = countrycode::countryname_dict,
+    warn = FALSE
+  )
 
+  idx <- is.na(out)
+  out[idx] <- countrycode(
+    sourcevar = sourcevar[idx],
+    origin = 'country.name.en',
+    destination = 'country.name.en',
+    nomatch = nomatch,
+    warn = warn
+  )
+
+  if (destination != 'country.name.en') {
+    # Issue 309: in the second pass we can use the origin vector for NAs, but only if origin and destination are of the same type and origin is a country name, not a code.
+    out <- countrycode(
+      sourcevar = out,
+      origin = 'country.name.en',
+      destination = destination,
+      #  custom_dict = countrycode::codelist,
+      nomatch = nomatch,
+      warn = warn
+    )
+  }
+
+  return(out)
+}

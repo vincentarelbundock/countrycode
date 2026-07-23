@@ -69,15 +69,17 @@ gtap_versions |>
           country,
           "country.name",
           "country.name.en.regex"
-        )) |>
-      select(country.name = country,
-             country.name.en.regex,
-             gtap.name = gtap_name,
-             gtap.num = gtap_num,
-             gtap.cha = gtap_code)
+        )
+      ) |>
+      select(
+        country.name = country,
+        country.name.en.regex,
+        gtap.name = gtap_name,
+        gtap.num = gtap_num,
+        gtap.cha = gtap_code
+      )
     attr(tmp, "origin_regex") <- "country.name.en.regex"
     attr(tmp, "valid_origin") <- "country.name.en.regex"
 
-    saveRDS(tmp,
-            here(str_glue("custom-dictionaries/data_gtap{version}.rds")))
+    saveRDS(tmp, here(str_glue("custom-dictionaries/data_gtap{version}.rds")))
   })

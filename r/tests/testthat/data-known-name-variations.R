@@ -1,11 +1,9 @@
 variations <- list(
-
-
   #"Åland Islands" = c(
-    #"Aland Islands",
-    #"aland islands",
-    #"Åland Islands",
-    #"åland islands"
+  #"Aland Islands",
+  #"aland islands",
+  #"Åland Islands",
+  #"åland islands"
   #),
 
   "Suriname" = c(
@@ -54,7 +52,6 @@ variations <- list(
     # "rép. démocratique du congo",
   ),
 
-
   "China" = c(
     "People's Republic of China",
     "China, People's Republic",
@@ -78,7 +75,6 @@ variations <- list(
     x = "Taiwan, Province of China",
     x = "Taiwan"
   ),
-
 
   "Ireland" = c(
     "Republic of Ireland",
@@ -200,5 +196,4 @@ variations <- list(
     'democratic yemen',
     'yemen (aden)'
   )
-
 )
