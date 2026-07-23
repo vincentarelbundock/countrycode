@@ -1,0 +1,39 @@
+[project]
+name = "countrycode"
+version = "0.6.0"
+license = "GPL-3.0-or-later"
+description = "Convert country names and country codes"
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+]
+authors = [{ name = "Vincent Arel-Bundock", email = "vincent.arel-bundock@umontreal.ca" }]
+
+
+[project.urls]
+Repository = "https://github.com/vincentarelbundock/countrycode"
+Readme = "https://github.com/vincentarelbundock/countrycode/blob/main/python/README.md"
+Changelog = "https://github.com/vincentarelbundock/countrycode/blob/main/python/NEWS.md"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+pandas = ["pandas>=2.0.0"]
+polars = ["polars>=1.0.0"]
+full = ["pandas>=2.0.0", "polars>=1.0.0"]
+
+[dependency-groups]
+dev = [
+  "pytest >=8.1.1,<9",
+  "pytest-cov>=5",
+  "pytest-xdist >=3.6.1",
+  "ruff>=0.6.4",
+  "jupyter",
+  "hypothesis>=6.131.28",
+  "pre-commit",
+]
+
+[tool.setuptools.package-data]
+countrycode = ["data/*.pickle"]

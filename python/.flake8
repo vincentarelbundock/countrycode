@@ -1,0 +1,4 @@
+[flake8]
+ignore = E501
+exclude = ".git, __pycache__, .github"
+per-file-ignores = countrycode/__init__.py:F401

@@ -1,0 +1,31 @@
+name: Python lint
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "python/**"
+      - ".github/workflows/python-lint.yaml"
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "python/**"
+      - ".github/workflows/python-lint.yaml"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: python
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v7
+
+      - run: uv run --frozen --all-extras ruff check countrycode tests
+      - run: uv run --frozen --all-extras ruff format --check countrycode tests

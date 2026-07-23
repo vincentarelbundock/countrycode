@@ -1,26 +1,73 @@
-.Rproj.user
+# Operating systems and editors
+.DS_Store
+*.DS_Store
+.idea/
+.vscode/
+
+# R and R package builds
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
-*.DS_Store
+.Renviron
+*.Rcheck/
+*.Rout
+*.Rout.fail
+/*.tar.gz
 README.html
-altdoc/freeze.rds
+revdep/
+
+# Quarto, knitr, and Jupyter
+.quarto/
 _quarto/
 !_quarto/_freeze/
-docs/
+*.quarto_ipynb
+*.knit.md
+*.utf8.md
+*_files/
+.jupyter_cache/
+altdoc/freeze.rds
+
+# Python bytecode and packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+pip-wheel-metadata/
+/build/
+/dist/
+python/build/
+python/dist/
+
+# Python test, lint, type-check, and coverage caches
+.cache/
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Python and uv environments/caches
+.venv/
+venv/
+__pypackages__/
+.uv-cache/
+uv-cache/
 
 # scrutin history + caches (keep runner scripts tracked)
 .scrutin/state.db*
 
-# Full V-Dem source releases
-dictionary/data_raw/V-Dem-*.rds
-
-# Zensical build output and generated pkgsite reference pages
-site/
-build/
-!docs/
-docs/*
-!docs/index.md
-!docs/reference/
-docs/reference/*
-!docs/reference/index.md
+# Generated Zensical inputs and output
+docs-src/articles/
+docs-src/index.md
+docs-src/reference/
+docs/

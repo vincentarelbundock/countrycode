@@ -27,7 +27,10 @@ jobs:
           packages: any::rcmdcheck
 
       - uses: vincentarelbundock/scrutin/.github/actions/check_r@main
+        with:
+          working-directory: r
 
       - uses: vincentarelbundock/scrutin/.github/actions/install_scrutin@main
 
       - run: scrutin -r github --set run.tool=testthat
+        working-directory: r

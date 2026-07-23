@@ -49,4 +49,4 @@ dat <- bind_rows(a, b) %>%
 
 # save to file
 countryname_dict <- data.frame(dat)
-save(countryname_dict, file = 'data/countryname_dict.rda', compress='xz', version=2)
+save(countryname_dict, file = 'r/data/countryname_dict.rda', compress='xz', version=2)

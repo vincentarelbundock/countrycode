@@ -3,7 +3,7 @@ source(here::here('dictionary/utilities.R'))
 # ITU-T E.164 country codes for telecommunication
 # Source: https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-11-2011-MSW-E.doc
 
-telephone <- read_csv('dictionary/data_raw/data_telephone.csv',
+telephone <- read_csv("dictionary/data_telephone.csv",
                       col_types = cols(),
                       progress = FALSE) %>%
   rename(country = country.name) %>%
@@ -28,7 +28,6 @@ telephone <- read_csv('dictionary/data_raw/data_telephone.csv',
     !(country == 'Saint Helena, Ascension and Tristan da Cunha' & telephone == 247),
     !(country == 'Vatican City State' & telephone == 379)
   ) %>%
-  mutate(telephone = as.integer(telephone)) %>%
+  # Preserve the numeric type produced when the former derived CSV was read.
+  mutate(telephone = as.double(telephone)) %>%
   arrange(country)
-
-telephone %>% write_csv('dictionary/data_telephone.csv', na = "")

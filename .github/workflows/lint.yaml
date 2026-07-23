@@ -22,11 +22,12 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::lintr, local::.
+          extra-packages: any::lintr, local::r
           needs: lint
+          working-directory: r
 
       - name: Lint
-        run: lintr::lint_package()
+        run: lintr::lint_package("r")
         shell: Rscript {0}
         env:
           LINTR_ERROR_ON_LINT: false

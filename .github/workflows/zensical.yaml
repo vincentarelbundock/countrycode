@@ -29,11 +29,12 @@ jobs:
         with:
           extra-packages: any::pkgsite
           needs: website
+          working-directory: r
 
       - uses: astral-sh/setup-uv@v7
 
-      - name: Convert Rd reference pages to Markdown
-        run: Rscript scripts/build-reference.R
+      - name: Generate website content
+        run: Rscript scripts/build-website.R
 
       - name: Build Zensical site
         run: uv run --frozen zensical build
@@ -44,4 +45,4 @@ jobs:
         with:
           clean: true
           branch: gh-pages
-          folder: site
+          folder: docs

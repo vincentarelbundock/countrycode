@@ -3,7 +3,7 @@ source(here::here('dictionary/utilities.R'))
 # small countries not covered by V-Dem, CoW, or Polity
 # manually collected by the package maintainers
 
-idx <- read.csv('dictionary/data_raw/data_small_countries.csv', na.strings = '') %>%
+idx <- read.csv("dictionary/data_small_countries.csv", na.strings = "") %>%
        dplyr::mutate(end = replace_na(end, 2020))
 
 rec <- expand_grid(iso3c = idx$iso3c,

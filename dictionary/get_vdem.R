@@ -1,11 +1,9 @@
 source(here::here('dictionary/utilities.R'))
 
-# readRDS("dictionary/data_raw/V-Dem-CY-Core-v16.rds") %>%
-#   arrange(country_text_id,year) %>%
-#   select(country_name,country_id,year) %>%
-#   saveRDS(file = "dictionary/data_raw/data_vdem_v16.rds", version = 2, compress = "xz")
-
-vdem <- readRDS('dictionary/data_raw/data_vdem_v16.rds') %>%
+# Full V-Dem v16 source from the official vdemdata package:
+# https://github.com/vdeminstitute/vdemdata
+vdem <- readRDS("dictionary/data_vdem.rds") %>%
+  select(country_name, country_id, year) %>%
 
   # TODO: Czechoslovakia vs. Czech Republic vs. Czechia
   mutate(country_name = case_when(
@@ -18,8 +16,6 @@ vdem <- readRDS('dictionary/data_raw/data_vdem_v16.rds') %>%
          (year != 1948) | (country_name != 'Palestine/Gaza')) %>%
   select(country = country_name,
          vdem.name = country_name, vdem = country_id, year)
-
-vdem %>% write_csv('dictionary/data_vdem.csv', na = "")
 
 
 # CountryToRegex(c("Republic of Vietnam", "Democratic Republic of Vietnam"))

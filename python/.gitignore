@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+__pypackages__/
+*.ipynb
+
+# Poetry files
+/dist/
+*.egg-info/
+/.venv/
+
+# Testing
+.hypothesis/
+.pytest_cache/

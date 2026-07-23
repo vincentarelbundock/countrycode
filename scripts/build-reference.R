@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+local({
+
 if (!requireNamespace("pkgsite", quietly = TRUE)) {
     stop("The 'pkgsite' package is required. Install it with install.packages('pkgsite').")
 }
@@ -9,10 +11,32 @@ if (!nzchar(quarto)) {
     stop("The Quarto CLI is required to render pkgsite QMD files to GFM.")
 }
 
-qmd_dir <- file.path("build", "pkgsite-reference")
-reference_dir <- file.path("docs", "reference")
+build_dir <- "build"
+qmd_dir <- file.path(build_dir, "pkgsite-reference")
+reference_dir <- file.path("docs-src", "reference", "r")
 dir.create(qmd_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(reference_dir, recursive = TRUE, showWarnings = FALSE)
+
+# R reference pages previously lived directly in docs-src/reference/. Remove
+# those generated files while preserving the hand-written Python reference.
+legacy_reference_dir <- file.path("docs-src", "reference")
+legacy_reference_files <- list.files(
+    legacy_reference_dir,
+    pattern = "\\.md$",
+    full.names = TRUE
+)
+unlink(setdiff(legacy_reference_files, file.path(legacy_reference_dir, "python.md")))
+
+cleanup_staging <- function() {
+    unlink(qmd_dir, recursive = TRUE)
+    if (
+        dir.exists(build_dir) &&
+        !length(list.files(build_dir, all.files = TRUE, no.. = TRUE))
+    ) {
+        unlink(build_dir, recursive = TRUE)
+    }
+}
+on.exit(cleanup_staging(), add = TRUE)
 
 # Remove stale generated sources and pages so deleted Rd topics cannot survive.
 unlink(list.files(qmd_dir, pattern = "\\.qmd$", full.names = TRUE))
@@ -34,16 +58,16 @@ render_gfm <- function(input) {
     }
 }
 
-rd_files <- sort(list.files("man", pattern = "\\.Rd$", full.names = TRUE))
+rd_files <- sort(list.files(file.path("r", "man"), pattern = "\\.Rd$", full.names = TRUE))
 if (!length(rd_files)) {
-    stop("No man/*.Rd files found")
+    stop("No r/man/*.Rd files found")
 }
 
 qmd_files <- character()
 for (rd_file in rd_files) {
     page <- pkgsite::rd_to_qmd(
         path = rd_file,
-        pkg = ".",
+        pkg = "r",
         examples = FALSE,
         not_run_examples = FALSE
     )
@@ -62,7 +86,7 @@ for (rd_file in rd_files) {
 }
 
 index_qmd <- file.path(qmd_dir, "index.qmd")
-writeLines(pkgsite::index_to_qmd(pkg = "."), index_qmd, useBytes = TRUE)
+writeLines(pkgsite::index_to_qmd(pkg = "r"), index_qmd, useBytes = TRUE)
 qmd_files <- c(index_qmd, qmd_files)
 
 for (qmd_file in qmd_files) {
@@ -82,3 +106,5 @@ message(
     "Converted ", length(qmd_files) - 1L, " of ", length(rd_files),
     " Rd files via QMD to GFM in ", reference_dir
 )
+
+})

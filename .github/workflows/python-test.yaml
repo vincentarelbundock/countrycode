@@ -1,0 +1,34 @@
+name: Python tests
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "python/**"
+      - ".github/workflows/python-test.yaml"
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "python/**"
+      - ".github/workflows/python-test.yaml"
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.9", "3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: python
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - uses: astral-sh/setup-uv@v7
+
+      - run: uv run --frozen --all-extras pytest

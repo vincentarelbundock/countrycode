@@ -1,0 +1,227 @@
+country,gtap_num,gtap_code,gtap_name
+Australia,1,AUS,Australia
+New Zealand,2,NZL,New Zealand
+American Samoa,3,XOC,Rest of Oceania
+Cook Islands,3,XOC,Rest of Oceania
+Fiji,3,XOC,Rest of Oceania
+French Polynesia,3,XOC,Rest of Oceania
+Guam,3,XOC,Rest of Oceania
+Kiribati,3,XOC,Rest of Oceania
+Marshall Islands,3,XOC,Rest of Oceania
+Micronesia (Federated States of),3,XOC,Rest of Oceania
+Nauru,3,XOC,Rest of Oceania
+New Caledonia,3,XOC,Rest of Oceania
+Niue,3,XOC,Rest of Oceania
+Norfolk Island,3,XOC,Rest of Oceania
+Northern Mariana Islands,3,XOC,Rest of Oceania
+Palau,3,XOC,Rest of Oceania
+Papua New Guinea,3,XOC,Rest of Oceania
+Samoa,3,XOC,Rest of Oceania
+Solomon Islands,3,XOC,Rest of Oceania
+Tokelau,3,XOC,Rest of Oceania
+Tonga,3,XOC,Rest of Oceania
+Tuvalu,3,XOC,Rest of Oceania
+Vanuatu,3,XOC,Rest of Oceania
+Wallis & Futuna,3,XOC,Rest of Oceania
+China,4,CHN,China
+Hong Kong SAR China,5,HKG,"Hong Kong, Special Administrative Region of China"
+Japan,6,JPN,Japan
+South Korea,7,KOR,"Korea, Republic of"
+Taiwan,8,TWN,Taiwan
+North Korea,9,XEA,Rest of East Asia
+Macao SAR China,9,XEA,Rest of East Asia
+Mongolia,9,XEA,Rest of East Asia
+Cambodia,10,KHM,Cambodia
+Indonesia,11,IDN,Indonesia
+Laos,12,LAO,Lao PDR
+Myanmar (Burma),13,MMR,Myanmar
+Malaysia,14,MYS,Malaysia
+Philippines,15,PHL,Philippines
+Singapore,16,SGP,Singapore
+Thailand,17,THA,Thailand
+Vietnam,18,VNM,Viet Nam
+Brunei,19,XSE,Rest of Southeast Asia
+Timor-Leste,19,XSE,Rest of Southeast Asia
+Bangladesh,20,BGD,Bangladesh
+India,21,IND,India
+Pakistan,22,PAK,Pakistan
+Sri Lanka,23,LKA,Sri Lanka
+Afghanistan,24,XSA,Rest of South Asia
+Bhutan,24,XSA,Rest of South Asia
+Maldives,24,XSA,Rest of South Asia
+Nepal,24,XSA,Rest of South Asia
+Canada,25,CAN,Canada
+United States,26,USA,United States of America
+Mexico,27,MEX,Mexico
+Bermuda,28,XNA,Rest of North America
+Greenland,28,XNA,Rest of North America
+St. Pierre & Miquelon,28,XNA,Rest of North America
+Argentina,29,ARG,Argentina
+Bolivia,30,BOL,Bolivia
+Brazil,31,BRA,Brazil
+Chile,32,CHL,Chile
+Colombia,33,COL,Colombia
+Ecuador,34,ECU,Ecuador
+Paraguay,35,PRY,Paraguay
+Peru,36,PER,Peru
+Uruguay,37,URY,Uruguay
+Venezuela,38,VEN,Venezuela (Bolivarian Republic of)
+Falkland Islands,39,XSM,Rest of South America
+French Guiana,39,XSM,Rest of South America
+Guyana,39,XSM,Rest of South America
+Suriname,39,XSM,Rest of South America
+Costa Rica,40,CRI,Costa Rica
+Guatemala,41,GTM,Guatemala
+Nicaragua,42,NIC,Nicaragua
+Panama,43,PAN,Panama
+Belize,44,XCA,Rest of Central America
+El Salvador,44,XCA,Rest of Central America
+Honduras,44,XCA,Rest of Central America
+Anguilla,45,XCB,Rest of Caribbean
+Antigua & Barbuda,45,XCB,Rest of Caribbean
+Aruba,45,XCB,Rest of Caribbean
+Bahamas,45,XCB,Rest of Caribbean
+Barbados,45,XCB,Rest of Caribbean
+British Virgin Islands,45,XCB,Rest of Caribbean
+Cayman Islands,45,XCB,Rest of Caribbean
+Cuba,45,XCB,Rest of Caribbean
+Dominica,45,XCB,Rest of Caribbean
+Dominican Republic,45,XCB,Rest of Caribbean
+Grenada,45,XCB,Rest of Caribbean
+Guadeloupe,45,XCB,Rest of Caribbean
+Haiti,45,XCB,Rest of Caribbean
+Jamaica,45,XCB,Rest of Caribbean
+Martinique,45,XCB,Rest of Caribbean
+Montserrat,45,XCB,Rest of Caribbean
+Netherlands Antilles,45,XCB,Rest of Caribbean
+Puerto Rico,45,XCB,Rest of Caribbean
+St. Kitts & Nevis,45,XCB,Rest of Caribbean
+St. Lucia,45,XCB,Rest of Caribbean
+St. Vincent & Grenadines,45,XCB,Rest of Caribbean
+Trinidad & Tobago,45,XCB,Rest of Caribbean
+Turks & Caicos Islands,45,XCB,Rest of Caribbean
+U.S. Virgin Islands,45,XCB,Rest of Caribbean
+Austria,46,AUT,Austria
+Belgium,47,BEL,Belgium
+Cyprus,48,CYP,Cyprus
+Czechia,49,CZE,Czech Republic
+Denmark,50,DNK,Denmark
+Estonia,51,EST,Estonia
+Finland,52,FIN,Finland
+France,53,FRA,France
+Germany,54,DEU,Germany
+Greece,55,GRC,Greece
+Hungary,56,HUN,Hungary
+Ireland,57,IRL,Ireland
+Italy,58,ITA,Italy
+Latvia,59,LVA,Latvia
+Lithuania,60,LTU,Lithuania
+Luxembourg,61,LUX,Luxembourg
+Malta,62,MLT,Malta
+Netherlands,63,NLD,Netherlands
+Poland,64,POL,Poland
+Portugal,65,PRT,Portugal
+Slovakia,66,SVK,Slovakia
+Slovenia,67,SVN,Slovenia
+Spain,68,ESP,Spain
+Sweden,69,SWE,Sweden
+United Kingdom,70,GBR,United Kingdom
+Switzerland,71,CHE,Switzerland
+Norway,72,NOR,Norway
+Iceland,73,XEF,Rest of European Free Trade Association
+Liechtenstein,73,XEF,Rest of European Free Trade Association
+Albania,74,ALB,Albania
+Bulgaria,75,BGR,Bulgaria
+Belarus,76,BLR,Belarus
+Croatia,77,HRV,Croatia
+Romania,78,ROU,Romania
+Russia,79,RUS,Russian Federation
+Ukraine,80,UKR,Ukraine
+Moldova,81,XEE,Rest of Eastern Europe
+Andorra,82,XER,Rest of Europe
+Bosnia & Herzegovina,82,XER,Rest of Europe
+Faroe Islands,82,XER,Rest of Europe
+Gibraltar,82,XER,Rest of Europe
+North Macedonia,82,XER,Rest of Europe
+Monaco,82,XER,Rest of Europe
+San Marino,82,XER,Rest of Europe
+Serbia,82,XER,Rest of Europe
+Kazakhstan,83,KAZ,Kazakhstan
+Kyrgyzstan,84,KGZ,Kyrgyzstan
+Tajikistan,85,XSU,Rest of Former Soviet Union
+Turkmenistan,85,XSU,Rest of Former Soviet Union
+Uzbekistan,85,XSU,Rest of Former Soviet Union
+Armenia,86,ARM,Armenia
+Azerbaijan,87,AZE,Azerbaijan
+Georgia,88,GEO,Georgia
+Iran,89,IRN,"Iran, Islamic Republic of"
+Turkey,90,TUR,Turkey
+Bahrain,91,XWS,Rest of Western Asia
+Iraq,91,XWS,Rest of Western Asia
+Israel,91,XWS,Rest of Western Asia
+Jordan,91,XWS,Rest of Western Asia
+Kuwait,91,XWS,Rest of Western Asia
+Lebanon,91,XWS,Rest of Western Asia
+Oman,91,XWS,Rest of Western Asia
+Palestinian Territories,91,XWS,Rest of Western Asia
+Qatar,91,XWS,Rest of Western Asia
+Saudi Arabia,91,XWS,Rest of Western Asia
+Syria,91,XWS,Rest of Western Asia
+United Arab Emirates,91,XWS,Rest of Western Asia
+Yemen,91,XWS,Rest of Western Asia
+Egypt,92,EGY,Egypt
+Morocco,93,MAR,Morocco
+Tunisia,94,TUN,Tunisia
+Algeria,95,XNF,Rest of North Africa
+Libya,95,XNF,Rest of North Africa
+Nigeria,96,NGA,Nigeria
+Senegal,97,SEN,Senegal
+Benin,98,XWF,Rest of Western Africa
+Burkina Faso,98,XWF,Rest of Western Africa
+Cape Verde,98,XWF,Rest of Western Africa
+Côte d’Ivoire,98,XWF,Rest of Western Africa
+Gambia,98,XWF,Rest of Western Africa
+Ghana,98,XWF,Rest of Western Africa
+Guinea,98,XWF,Rest of Western Africa
+Guinea-Bissau,98,XWF,Rest of Western Africa
+Liberia,98,XWF,Rest of Western Africa
+Mali,98,XWF,Rest of Western Africa
+Mauritania,98,XWF,Rest of Western Africa
+Niger,98,XWF,Rest of Western Africa
+St. Helena,98,XWF,Rest of Western Africa
+Sierra Leone,98,XWF,Rest of Western Africa
+Togo,98,XWF,Rest of Western Africa
+Cameroon,99,XCF,Rest of Central Africa
+Central African Republic,99,XCF,Rest of Central Africa
+Chad,99,XCF,Rest of Central Africa
+Congo - Brazzaville,99,XCF,Rest of Central Africa
+Equatorial Guinea,99,XCF,Rest of Central Africa
+Gabon,99,XCF,Rest of Central Africa
+São Tomé & Príncipe,99,XCF,Rest of Central Africa
+Angola,100,XAC,Rest of South Central Africa
+Congo - Kinshasa,100,XAC,Rest of South Central Africa
+Ethiopia,101,ETH,Ethiopia
+Madagascar,102,MDG,Madagascar
+Malawi,103,MWI,Malawi
+Mauritius,104,MUS,Mauritius
+Mozambique,105,MOZ,Mozambique
+Tanzania,106,TZA,"Tanzania, United Republic of"
+Uganda,107,UGA,Uganda
+Zambia,108,ZMB,Zambia
+Zimbabwe,109,ZWE,Zimbabwe
+Burundi,110,XEC,Rest of Eastern Africa
+Comoros,110,XEC,Rest of Eastern Africa
+Djibouti,110,XEC,Rest of Eastern Africa
+Eritrea,110,XEC,Rest of Eastern Africa
+Kenya,110,XEC,Rest of Eastern Africa
+Mayotte,110,XEC,Rest of Eastern Africa
+Réunion,110,XEC,Rest of Eastern Africa
+Rwanda,110,XEC,Rest of Eastern Africa
+Seychelles,110,XEC,Rest of Eastern Africa
+Somalia,110,XEC,Rest of Eastern Africa
+Sudan,110,XEC,Rest of Eastern Africa
+Botswana,111,BWA,Botswana
+South Africa,112,ZAF,South Africa
+Lesotho,113,XSC,Rest of South African Customs Union
+Namibia,113,XSC,Rest of South African Customs Union
+Eswatini,113,XSC,Rest of South African Customs Union
