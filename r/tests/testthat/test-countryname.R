@@ -1,110 +1,43 @@
 context('countryname function')
 
-test_that('reported bugs', {
-  expect_identical(
-    countryname("Federated States of Micronesia"),
-    "Micronesia (Federated States of)"
-  )
-})
+countryname_cases <- read_shared_fixture("countryname.yaml")$country.name.en
+countryname_sources <- names(countryname_cases)
+countryname_expected <- unname(unlist(countryname_cases))
+countryname_cowc_cases <- read_shared_fixture("countryname.yaml")$cowc
 
-test_that('output types', {
-  expect_identical(countryname('ジンバブエ'), 'Zimbabwe')
-  expect_identical(countryname('ジンバブエ', 'country.name.de'), 'Simbabwe')
-  expect_identical(countryname('ジンバブエ', 'iso3c'), 'ZWE')
-  expect_identical(countryname('ジンバブエ', 'cown'), 552)
+test_that('numeric output does not emit an irrelevant warning', {
   # issue 309: irrelevant warning with numeric destination
-  expect_warning(countryname('ジンバブエ', 'cown'), NA)
+  source <- names(read_shared_fixture("countryname.yaml")$cown)[[1]]
+  expect_warning(countryname(source, 'cown'), NA)
 })
 
 test_that('input: character ', {
-  x <- c(
-    'ジンバブエ',
-    'Afeganistãu',
-    'Barbadas',
-    'Sverige',
-    'UK',
-    'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar'
-  )
-  answers <- c(
-    "Zimbabwe",
-    "Afghanistan",
-    "Barbados",
-    "Sweden",
-    "United Kingdom",
-    "South Georgia & South Sandwich Islands"
-  )
-  expect_identical(countryname(x), answers)
+  expect_identical(countryname(countryname_sources), countryname_expected)
 })
 
 test_that('input: factor vector', {
-  x <- c(
-    'ジンバブエ',
-    'Afeganistãu',
-    'Barbadas',
-    'Sverige',
-    'United Kingdom',
-    'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar'
+  expect_identical(
+    countryname(factor(countryname_sources)),
+    countryname_expected
   )
-  x <- factor(x)
-
-  answers <- c(
-    "Zimbabwe",
-    "Afghanistan",
-    "Barbados",
-    "Sweden",
-    "United Kingdom",
-    "South Georgia & South Sandwich Islands"
-  )
-  expect_identical(countryname(x), answers)
 })
 
 test_that('input: tibble ', {
   library(tibble)
-  x <- c(
-    'ジンバブエ',
-    'Afeganistãu',
-    'Barbadas',
-    'Sverige',
-    'UK',
-    'il-Georgia tan-Nofsinhar u l-Gżejjer Sandwich tan-Nofsinhar'
-  )
-  x <- tibble(x)
-
-  answers <- c(
-    "Zimbabwe",
-    "Afghanistan",
-    "Barbados",
-    "Sweden",
-    "United Kingdom",
-    "South Georgia & South Sandwich Islands"
-  )
-  expect_identical(countryname(x$x), answers)
+  x <- tibble(x = countryname_sources)
+  expect_identical(countryname(x$x), countryname_expected)
 })
 
 
 test_that("issue 336", {
-  a <- countrycode(
-    "antarctica",
-    origin = "country.name",
-    destination = "cowc",
-    warn = FALSE
-  )
-  expect_true(is.na(a))
-
-  a <- countryname("antarctica", destination = "cowc", warn = FALSE)
-  expect_true(is.na(a))
-
-  a <- countryname("xyz", destination = "cowc", warn = FALSE)
-  expect_true(is.na(a))
-
   x <- c("canada", "antarctica")
-  expect_identical(countryname(x), c("Canada", "Antarctica"))
+  expect_identical(countryname(x), unname(unlist(countryname_cases[x])))
   expect_identical(
     countryname(x, destination = "cowc", warn = FALSE),
-    c("CAN", NA)
+    c(countryname_cowc_cases$canada, NA)
   )
   expect_identical(
     countryname(x, destination = "cowc", warn = FALSE, nomatch = x),
-    c("CAN", "antarctica")
+    c(countryname_cowc_cases$canada, x[[2]])
   )
 })

@@ -1,0 +1,42 @@
+country.name:
+  iso3c:
+  - ROC
+  - united arab republic
+  - Southern Africa
+  - Guiana
+  - netherlands antilles
+  - dutch caribbean
+  - saint martin
+  - st. martin
+  - saint-martin
+  - St-Martin / Sint Maarten
+  - St-Martin / St-Maarten
+  - St. Martin and St. Maarten
+  - St Maarten – St Martin
+  - greater antilles
+  - lesser antilles
+  - abc islands
+  - leeward islands
+  - leeward antilles
+  - aruba, bonaire, and curaçao
+  - sss islands
+  - windward islands
+  - sint maarten, saba, and sint eustatius
+  - dutch antilles
+  - Micronesia
+  cowc:
+  - democratic republic of yemen
+  - antarctica
+  - Serbia
+country.name.de:
+  iso3c:
+  - Mikronesien
+country.name.fr:
+  iso3c:
+  - Micronésie
+country.name.it:
+  iso3c:
+  - Micronesia
+country.name.es:
+  iso3c:
+  - Micronesia

@@ -1,5 +1,7 @@
 from countrycode import countrycode
 
+from fixture_data import CONVERSIONS_BY_CODE
+
 try:
     import polars as pl
 except ImportError:
@@ -12,10 +14,12 @@ except ImportError:
 
 def test_optdep():
     inp = ["USA", "CAN"]
-    out = ["United States", "Canada"]
+    iso3c_cases = CONVERSIONS_BY_CODE["iso3c"]["country.name"]
+    out = [iso3c_cases["usa"], iso3c_cases["CAN"]]
 
     inp_cctld = [".us", ".ca"]
-    out_cctld = ["United States", "Canada"]
+    cctld_cases = CONVERSIONS_BY_CODE["cctld"]["country.name"]
+    out_cctld = [cctld_cases[code] for code in inp_cctld]
 
     if pl:
         # using replace_regex

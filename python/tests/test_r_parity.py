@@ -13,22 +13,22 @@ from countrycode import (
     load_codelist_panel,
     load_countryname_dict,
 )
+from fixture_data import CONVERSIONS_BY_CODE, COUNTRYNAME_BY_DESTINATION
 
 
 def test_nomatch_semantics():
     source = ["ALG", "AUH", "BAD"]
+    cases = CONVERSIONS_BY_CODE["cowc"]["iso3c"]
     assert countrycode(source, "cowc", "iso3c", warn=False) == [
-        "DZA",
-        None,
-        None,
+        cases[code] for code in source
     ]
     assert countrycode(source, "cowc", "iso3c", warn=False, nomatch="TEST") == [
-        "DZA",
+        cases["ALG"],
         "TEST",
         "TEST",
     ]
     assert countrycode(source, "cowc", "iso3c", warn=False, nomatch=None) == [
-        "DZA",
+        cases["ALG"],
         "AUH",
         "BAD",
     ]
@@ -38,24 +38,27 @@ def test_nomatch_semantics():
         "iso3c",
         warn=False,
         nomatch=["x", "y", "z"],
-    ) == ["DZA", "y", "z"]
+    ) == [cases["ALG"], "y", "z"]
     with pytest.raises(ValueError, match="same length"):
         countrycode(source, "cowc", "iso3c", nomatch=["x", "y"])
 
 
 def test_warn_and_case_insensitive_exact_matching():
-    assert countrycode("usa", "iso3c", "country.name", warn=False) == "United States"
+    cases = CONVERSIONS_BY_CODE["iso3c"]["country.name"]
     with pytest.raises(ValueError, match="must be numeric"):
         countrycode("2", "cown", "country.name")
     with pytest.warns(UserWarning, match="not matched"):
-        assert countrycode("BAD", "iso3c", "country.name") is None
+        assert countrycode("BAD", "iso3c", "country.name") is cases["BAD"]
     with warnings.catch_warnings():
         warnings.simplefilter("error")
-        assert countrycode("BAD", "iso3c", "country.name", warn=False) is None
+        assert countrycode("BAD", "iso3c", "country.name", warn=False) is cases["BAD"]
 
 
 def test_multiple_destinations_fill_missing_values():
-    assert countrycode("Serbia", "country.name", ["cowc", "iso3c"], warn=False) == "SRB"
+    expected = CONVERSIONS_BY_CODE["country.name"]["iso3c"]["Serbia"]
+    assert (
+        countrycode("Serbia", "country.name", ["cowc", "iso3c"], warn=False) == expected
+    )
 
 
 def test_regex_override_ambiguity_and_custom_match():
@@ -120,28 +123,10 @@ def test_custom_dictionary_regex_control_and_duplicates():
         )
 
 
-def test_spanish_country_name_origin():
-    assert (
-        countrycode(
-            "Caribe holandes",
-            "country.name.es",
-            "country.name.en",
-            warn=False,
-        )
-        == "Netherlands Antilles"
-    )
-
-
 def test_countryname_multilingual_and_destination():
-    source = ["ジンバブエ", "Afeganistãu", "Barbadas", "Sverige", "UK"]
-    assert countryname(source, warn=False) == [
-        "Zimbabwe",
-        "Afghanistan",
-        "Barbados",
-        "Sweden",
-        "United Kingdom",
-    ]
-    assert countryname("ジンバブエ", "iso3c", warn=False) == "ZWE"
+    cases = COUNTRYNAME_BY_DESTINATION["country.name.en"]
+    source = list(cases)
+    assert countryname(source, warn=False) == list(cases.values())
 
 
 def test_guess_field():

@@ -3,23 +3,15 @@
 from __future__ import annotations
 
 import csv
+import importlib
 import math
 import os
 import re
+import sys
 import warnings
 from collections.abc import Mapping, Sequence
 from pathlib import Path
 from typing import Any
-
-try:
-    import polars as pl
-except ImportError:
-    pl = None
-try:
-    import pandas as pd
-except ImportError:
-    pd = None
-
 
 pkg_dir = Path(__file__).resolve().parent
 
@@ -38,6 +30,24 @@ _NAME_ALIASES = {
     "country.name.fr",
     "country.name.it",
 }
+_DEFAULT_EXACT_INDEXES: dict[tuple[str, bool], dict[Any, list[int]]] = {}
+_DEFAULT_REGEX_PATTERNS: dict[str, list[tuple[re.Pattern, int]]] = {}
+
+
+def _import_optional(name: str):
+    """Import an optional dataframe library only when it is needed."""
+    try:
+        return importlib.import_module(name)
+    except ImportError:
+        return None
+
+
+def _is_module_type(value: Any, module: str, type_name: str) -> bool:
+    value_type = type(value)
+    return value_type.__name__ == type_name and (
+        value_type.__module__ == module
+        or value_type.__module__.startswith(f"{module}.")
+    )
 _VALID_DEFAULT_ORIGINS = {
     "cctld",
     "country.name",
@@ -131,10 +141,10 @@ def _prepare_codelist(
     elif isinstance(custom_dict, Mapping):
         source = "provided mapping"
         result = dict(custom_dict)
-    elif pl is not None and isinstance(custom_dict, pl.DataFrame):
+    elif _is_module_type(custom_dict, "polars", "DataFrame"):
         source = "provided Polars DataFrame"
         result = custom_dict.to_dict(as_series=False)
-    elif pd is not None and isinstance(custom_dict, pd.DataFrame):
+    elif _is_module_type(custom_dict, "pandas", "DataFrame"):
         source = "provided Pandas DataFrame"
         result = custom_dict.to_dict(orient="list")
     else:
@@ -181,9 +191,9 @@ def _prepare_codelist(
 
 
 def _normalize_input(sourcevar: Any) -> tuple[list[Any], str]:
-    if pl is not None and isinstance(sourcevar, pl.Series):
+    if _is_module_type(sourcevar, "polars", "Series"):
         return sourcevar.to_list(), "polars"
-    if pd is not None and isinstance(sourcevar, pd.Series):
+    if _is_module_type(sourcevar, "pandas", "Series"):
         return sourcevar.tolist(), "pandas"
     if isinstance(sourcevar, (str, int, float)) or sourcevar is None:
         return [sourcevar], "scalar"
@@ -201,8 +211,10 @@ def _restore_type(values: list[Any], original: Any, input_type: str) -> Any:
     if input_type == "tuple":
         return tuple(values)
     if input_type == "polars":
+        pl = sys.modules["polars"]
         return pl.Series(original.name, values)
     if input_type == "pandas":
+        pd = sys.modules["pandas"]
         return pd.Series(values, index=original.index, name=original.name)
     return values
 
@@ -223,28 +235,40 @@ def _warn_unmatched(values: list[Any]) -> None:
         )
 
 
-def _exact_convert(
-    source: list[Any],
+def _exact_index(
     origin: str,
-    destination: str,
     dictionary: dict[str, list[Any]],
     *,
     ignore_case: bool,
-) -> tuple[list[Any], dict[int, list[Any]]]:
-    lookup: dict[Any, list[Any]] = {}
-    for key, value in zip(dictionary[origin], dictionary[destination]):
-        if _is_missing(key) or _is_missing(value):
+) -> dict[Any, list[int]]:
+    lookup: dict[Any, list[int]] = {}
+    for index, key in enumerate(dictionary[origin]):
+        if _is_missing(key):
             continue
         normalized = key.casefold() if ignore_case and isinstance(key, str) else key
-        lookup.setdefault(normalized, []).append(value)
+        lookup.setdefault(normalized, []).append(index)
+    return lookup
 
+
+def _exact_convert(
+    source: list[Any],
+    destination: str,
+    dictionary: dict[str, list[Any]],
+    lookup: dict[Any, list[int]],
+    *,
+    ignore_case: bool,
+) -> tuple[list[Any], dict[int, list[Any]]]:
     output = []
     ambiguous = {}
     for index, value in enumerate(source):
         normalized = (
             value.casefold() if ignore_case and isinstance(value, str) else value
         )
-        matches = lookup.get(normalized, [])
+        matches = [
+            dictionary[destination][row]
+            for row in lookup.get(normalized, [])
+            if not _is_missing(dictionary[destination][row])
+        ]
         if len(matches) == 1:
             output.append(_coerce_numeric(matches[0]))
         else:
@@ -254,28 +278,45 @@ def _exact_convert(
     return output, ambiguous
 
 
-def _regex_convert(
+def _regex_match_rows(
     source: list[Any],
     origin: str,
+    dictionary: dict[str, list[Any]],
+    patterns: list[tuple[re.Pattern, int]] | None = None,
+) -> list[list[int]]:
+    if patterns is None:
+        patterns = [
+            (re.compile(str(pattern), re.IGNORECASE), row)
+            for row, pattern in enumerate(dictionary[origin])
+            if not _is_missing(pattern)
+        ]
+    cache: dict[str, list[int]] = {}
+    matches_by_source = []
+    for value in source:
+        if _is_missing(value):
+            matches_by_source.append([])
+            continue
+        normalized = str(value).strip()
+        if normalized not in cache:
+            cache[normalized] = [
+                row for pattern, row in patterns if pattern.search(normalized)
+            ]
+        matches_by_source.append(cache[normalized])
+    return matches_by_source
+
+
+def _regex_convert(
+    matches_by_source: list[list[int]],
     destination: str,
     dictionary: dict[str, list[Any]],
 ) -> tuple[list[Any], dict[int, list[Any]]]:
-    patterns = []
-    for pattern, value in zip(dictionary[origin], dictionary[destination]):
-        if _is_missing(pattern) or _is_missing(value):
-            continue
-        patterns.append((re.compile(str(pattern), re.IGNORECASE), value))
-
     output = []
     ambiguous = {}
-    for index, value in enumerate(source):
-        if _is_missing(value):
-            output.append(None)
-            continue
+    for index, rows in enumerate(matches_by_source):
         matches = [
-            destination_value
-            for pattern, destination_value in patterns
-            if pattern.search(str(value).strip())
+            dictionary[destination][row]
+            for row in rows
+            if not _is_missing(dictionary[destination][row])
         ]
         if len(matches) == 1:
             output.append(_coerce_numeric(matches[0]))
@@ -327,7 +368,11 @@ def countrycode(
                 "origin must be one of: " + ", ".join(sorted(_VALID_DEFAULT_ORIGINS))
             )
 
-    dictionary = _prepare_codelist(custom_dict, origin, destinations)
+    dictionary = (
+        _BUILTIN_CODELIST
+        if using_default
+        else _prepare_codelist(custom_dict, origin, destinations)
+    )
     if origin_regex is None:
         use_regex = using_default and origin in _REGEX_ORIGINS
     else:
@@ -375,15 +420,37 @@ def countrycode(
 
     result = [None] * len(source)
     all_ambiguous: dict[int, list[Any]] = {}
+    if use_regex:
+        if using_default:
+            patterns = _DEFAULT_REGEX_PATTERNS.get(origin)
+            if patterns is None:
+                patterns = [
+                    (re.compile(str(pattern), re.IGNORECASE), row)
+                    for row, pattern in enumerate(dictionary[origin])
+                    if not _is_missing(pattern)
+                ]
+                _DEFAULT_REGEX_PATTERNS[origin] = patterns
+        else:
+            patterns = None
+        regex_matches = _regex_match_rows(source, origin, dictionary, patterns)
+    else:
+        ignore_case = (
+            using_default and "country" not in origin and origin != "unicode.symbol"
+        )
+        cache_key = (origin, ignore_case)
+        exact_lookup = (
+            _DEFAULT_EXACT_INDEXES.get(cache_key) if using_default else None
+        )
+        if exact_lookup is None:
+            exact_lookup = _exact_index(origin, dictionary, ignore_case=ignore_case)
+            if using_default:
+                _DEFAULT_EXACT_INDEXES[cache_key] = exact_lookup
     for dest in destinations:
         if use_regex:
-            converted, ambiguous = _regex_convert(source, origin, dest, dictionary)
+            converted, ambiguous = _regex_convert(regex_matches, dest, dictionary)
         else:
-            ignore_case = (
-                using_default and "country" not in origin and origin != "unicode.symbol"
-            )
             converted, ambiguous = _exact_convert(
-                source, origin, dest, dictionary, ignore_case=ignore_case
+                source, dest, dictionary, exact_lookup, ignore_case=ignore_case
             )
         all_ambiguous.update(ambiguous)
         result = [
@@ -444,13 +511,16 @@ def countrycode(
 # Backwards-compatible helpers. These deliberately use exact/regex semantics
 # without warnings or fallback handling.
 def replace_exact(sourcevar, origin, destination, codelist):
+    lookup = _exact_index(origin, codelist, ignore_case=False)
     return _exact_convert(
-        list(sourcevar), origin, destination, codelist, ignore_case=False
+        list(sourcevar), destination, codelist, lookup, ignore_case=False
     )[0]
 
 
 def replace_regex(sourcevar, origin, destination, codelist):
-    return _regex_convert(list(sourcevar), origin, destination, codelist)[0]
+    matches = _regex_match_rows(list(sourcevar), origin, codelist)
+    return _regex_convert(matches, destination, codelist)[0]
 
 
-codelist = _prepare_codelist()
+_BUILTIN_CODELIST = _prepare_codelist()
+codelist = {name: list(values) for name, values in _BUILTIN_CODELIST.items()}

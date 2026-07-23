@@ -1,18 +1,19 @@
 context('nomatch argument to fill-in non-matching code')
 
 origin <- c('ALG', 'AUH', 'BAD')
+cowc_iso3c_cases <- read_shared_fixture("conversions.yaml")$cowc$iso3c
 test_that('nomatch argument works correctly', {
   expect_equal(
     countrycode(origin, 'cowc', 'iso3c', warn = FALSE),
-    c('DZA', NA, NA)
+    c(cowc_iso3c_cases$ALG, NA, NA)
   )
   expect_equal(
     countrycode(origin, 'cowc', 'iso3c', warn = FALSE, nomatch = 'TEST'),
-    c('DZA', 'TEST', 'TEST')
+    c(cowc_iso3c_cases$ALG, 'TEST', 'TEST')
   )
   expect_equal(
     countrycode(origin, 'cowc', 'iso3c', warn = FALSE, nomatch = NULL),
-    c('DZA', 'AUH', 'BAD')
+    c(cowc_iso3c_cases$ALG, 'AUH', 'BAD')
   )
   expect_warning(countrycode(
     origin,

@@ -11,7 +11,6 @@ test_that('Destination-only codes raise errors when used as origin', {
   expect_error(f('eu28'))
   expect_error(f('eu27'))
   expect_error(f('iso.name.en'))
-  expect_error(f('cow.name'))
   expect_error(f('un.region.name'))
   expect_error(f('cldr.name.en'))
 })

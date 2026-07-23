@@ -32,6 +32,7 @@ dev = [
   "ruff>=0.6.4",
   "hypothesis>=6.131.28",
   "pre-commit",
+  "pyyaml>=6",
 ]
 
 [tool.setuptools.package-data]

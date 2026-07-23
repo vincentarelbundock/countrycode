@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Literal
 
-from .countrycode import _read_csv, pd, pl
+from .countrycode import _import_optional, _read_csv
 
 _DATA_DIR = Path(__file__).resolve().parent / "data"
 _DATASETS = {
@@ -23,10 +23,12 @@ def load_dataset(name: str, as_type: Literal["dict", "pandas", "polars"] = "dict
     if as_type == "dict":
         return data
     if as_type == "pandas":
+        pd = _import_optional("pandas")
         if pd is None:
             raise ImportError("Pandas is not installed.")
         return pd.DataFrame(data)
     if as_type == "polars":
+        pl = _import_optional("polars")
         if pl is None:
             raise ImportError("Polars is not installed.")
         return pl.DataFrame(data)

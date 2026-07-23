@@ -18,6 +18,8 @@ from .countrycode import (
 )
 from .datasets import load_countryname_dict
 
+_COUNTRYNAME_DICT: dict[str, list[Any]] | None = None
+
 AVAILABLE_DICTIONARIES = (
     "ch_cantons",
     "exiobase3",
@@ -58,7 +60,10 @@ def countryname(
 ) -> Any:
     """Convert country names in many languages to a name or country code."""
     source, input_type = _normalize_input(sourcevar)
-    alternative_names = load_countryname_dict()
+    global _COUNTRYNAME_DICT
+    if _COUNTRYNAME_DICT is None:
+        _COUNTRYNAME_DICT = load_countryname_dict()
+    alternative_names = _COUNTRYNAME_DICT
     english = countrycode(
         source,
         "country.name.alt",

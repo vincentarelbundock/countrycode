@@ -40,8 +40,8 @@ Suggests:
     eurostat,
     testthat,
     tibble,
-    ISOcodes,
-    utf8
+    yaml,
+    ISOcodes
 Encoding: UTF-8
 LazyData: yes
 LazyLoad: yes

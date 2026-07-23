@@ -2,7 +2,8 @@
 
 ## Development
 
-* Updated the built-in country-code dictionary and synchronized its CSV and pickle representations with the R package.
+* Updated the built-in country-code dictionary and synchronized its compressed
+  CSV representation with the R package.
 * Bring `countrycode()` behavior in line with the R package: warnings,
   `nomatch`, `custom_match`, `origin_regex`, fallback destinations,
   ambiguity detection, case-insensitive built-in codes, and Spanish names.
@@ -13,6 +14,8 @@
 * Remove the unused Jupyter development dependency.
 * Replace the Python-specific pickle dictionary with a compressed, portable
   CSV representation for all packaged datasets.
+* Run canonical name variations and typed conversion cases from shared YAML
+  fixtures in both the pytest and testthat suites.
 
 ## 0.6.0
 
