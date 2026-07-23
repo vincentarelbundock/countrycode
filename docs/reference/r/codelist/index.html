@@ -1,0 +1,735 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Convert country names and country codes in R">
+      
+      
+      
+        <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/codelist/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/logo.png">
+      <meta name="generator" content="zensical-0.0.51">
+    
+    
+      
+        <title>Country Code Translation Data Frame (Cross-Sectional) - countrycode</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.62c9b9cc.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#country-code-translation-data-frame-cross-sectional" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="countrycode" class="md-header__button md-logo" aria-label="countrycode" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="countrycode">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            countrycode
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Country Code Translation Data Frame (Cross-Sectional)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/vincentarelbundock/countrycode" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="countrycode" class="md-nav__button md-logo" aria-label="countrycode" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="countrycode">
+
+    </a>
+    countrycode
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vincentarelbundock/countrycode" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Articles
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Articles
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../articles/countrycode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Country codes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../articles/countryname/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Country names
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../articles/custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Custom conversions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../articles/contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contributions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  R
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Python
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        codelist
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Description
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Format
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Details
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Note
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+<h1 id="country-code-translation-data-frame-cross-sectional">Country Code Translation Data Frame (Cross-Sectional)<a class="headerlink" href="#country-code-translation-data-frame-cross-sectional" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/edgararuiz/pkgsite/blob/main/R/codelist.R">R/codelist.R</a></p>
+<h2 id="codelist">codelist<a class="headerlink" href="#codelist" title="Permanent link">&para;</a></h2>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>A data frame used internally by the <code>countrycode()</code> function.
+<code>countrycode</code> can use any valid code as destination, but only some codes
+can be used as origin.</p>
+<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<p>A data frame with codes as columns.</p>
+<h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h2>
+<p><em>O</em>r_i_g_i_n <em>a</em>n_d <em>D</em>e_s_t_i_n_a_t_i_o_n:</p>
+<p>• <code>cctld</code>: IANA country code top-level domain</p>
+<p>• <code>country.name.en</code>: country name (English)</p>
+<p>• <code>country.name.de</code>: country name (German)</p>
+<p>• <code>country.name.fr</code>: country name (French)</p>
+<p>• <code>country.name.it</code>: country name (Italian)</p>
+<p>• <code>country.name.es</code>: country name (Spanish)</p>
+<p>• <code>cowc</code>: Correlates of War character</p>
+<p>• <code>cown</code>: Correlates of War numeric</p>
+<p>• <code>dhs</code>: Demographic and Health Surveys Program</p>
+<p>• <code>ecb</code>: European Central Bank</p>
+<p>• <code>eurostat</code>: Eurostat</p>
+<p>• <code>fao</code>: Food and Agriculture Organization of the United Nations
+numerical code</p>
+<p>• <code>fips</code>: FIPS 10-4 (Federal Information Processing Standard)</p>
+<p>• <code>gaul</code>: Global Administrative Unit Layers</p>
+<p>• <code>genc2c</code>: GENC 2-letter code</p>
+<p>• <code>genc3c</code>: GENC 3-letter code</p>
+<p>• <code>genc3n</code>: GENC numeric code</p>
+<p>• <code>gwc</code>: Gleditsch &amp; Ward character</p>
+<p>• <code>gwn</code>: Gleditsch &amp; Ward numeric</p>
+<p>• <code>imf</code>: International Monetary Fund (Warning: The IMF generally uses
+ISO codes. These codes are WEO-related, but may be inconsistently used
+in the wild.)</p>
+<p>• <code>ioc</code>: International Olympic Committee</p>
+<p>• <code>iso2c</code>: ISO-2 character</p>
+<p>• <code>iso3c</code>: ISO-3 character</p>
+<p>• <code>iso3n</code>: ISO-3 numeric</p>
+<p>• <code>p5n</code>: Polity V numeric country code</p>
+<p>• <code>p5c</code>: Polity V character country code</p>
+<p>• <code>p4n</code>: Polity IV numeric country code</p>
+<p>• <code>p4c</code>: Polity IV character country code</p>
+<p>• <code>un</code>: United Nations M49 numeric codes</p>
+<p>• <code>unicode.symbol</code>: Region subtag (often displayed as emoji flag)</p>
+<p>• <code>unhcr</code>: United Nations High Commissioner for Refugees</p>
+<p>• <code>unpd</code>: United Nations Procurement Division</p>
+<p>• <code>vdem</code>: Varieties of Democracy (V-Dem version 8, April 2018)</p>
+<p>• <code>wb</code>: World Bank (very similar but not identical to iso3c)</p>
+<p>• <code>wvs</code>: World Values Survey numeric code</p>
+<p><em>D</em>e_s_t_i_n_a_t_i_o_n <em>o</em>n_l_y:</p>
+<p>• cldr.*: 600+ country name variants from the UNICODE CLDR project
+(e.g., “cldr.short.en”). Inspect the <code>cldr_examples</code> data.frame for a
+full list of available country names and examples.</p>
+<p>• <code>ar5</code>: IPCC’s regional mapping used both in the Fifth Assessment
+Report (AR5) and for the Reference Concentration Pathways (RCP)</p>
+<p>• <code>continent</code>: Continent as defined in the World Bank Development
+Indicators</p>
+<p>• <code>cow.name</code>: Correlates of War country name</p>
+<p>• <code>currency</code>: ISO 4217 currency name</p>
+<p>• <code>eurocontrol_pru</code>: European Organisation for the Safety of Air
+Navigation</p>
+<p>• <code>eurocontrol_statfor</code>: European Organisation for the Safety of Air
+Navigation</p>
+<p>• <code>eu28</code>: Member states of the European Union (as of December 2015),
+without special territories</p>
+<p>• <code>eu27</code>: Member states of the European Union (as of February 2020),
+without special territories</p>
+<p>• <code>icao.region</code>: International Civil Aviation Organization region</p>
+<p>• <code>iso.name.en</code>: ISO English short name</p>
+<p>• <code>iso.name.fr</code>: ISO French short name</p>
+<p>• <code>iso4217c</code>: ISO 4217 currency alphabetic code</p>
+<p>• <code>iso4217n</code>: ISO 4217 currency numeric code</p>
+<p>• <code>p4.name</code>: Polity IV country name</p>
+<p>• <code>region</code>: 7 Regions as defined in the World Bank Development
+Indicators</p>
+<p>• <code>region23</code>: 23 Regions as used to be in the World Bank Development
+Indicators (legacy)</p>
+<p>• <code>telephone</code>: ITU-T E.164 country codes for telecommunication</p>
+<p>• <code>un.name.ar</code>: United Nations Arabic country name</p>
+<p>• <code>un.name.en</code>: United Nations English country name</p>
+<p>• <code>un.name.es</code>: United Nations Spanish country name</p>
+<p>• <code>un.name.fr</code>: United Nations French country name</p>
+<p>• <code>un.name.ru</code>: United Nations Russian country name</p>
+<p>• <code>un.name.zh</code>: United Nations Chinese country name</p>
+<p>• <code>un.region.name</code>: United Nations region name</p>
+<p>• <code>un.region.code</code>: United Nations region code</p>
+<p>• <code>un.regionintermediate.name</code>: United Nations intermediate region name</p>
+<p>• <code>un.regionintermediate.code</code>: United Nations intermediate region code</p>
+<p>• <code>un.regionsub.name</code>: United Nations sub-region name</p>
+<p>• <code>un.regionsub.code</code>: United Nations sub-region code</p>
+<p>• <code>unhcr.region</code>: United Nations High Commissioner for Refugees region
+name</p>
+<p>• <code>wvs.name</code>: World Values Survey numeric code country name</p>
+<h2 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h2>
+<p>The Correlates of War (cow) and Polity 4 (p4) project produce codes in
+country year format. Some countries go through political transitions
+that justify changing codes over time. When building a purely
+cross-sectional conversion dictionary, this forces us to make arbitrary
+choices with respect to some entities (e.g., Western Germany, Vietnam,
+Serbia). <code>countrycode</code> includes a reconciled dataset in panel format,
+<code>codelist_panel</code>. Instead of converting code, we recommend that users
+dealing with panel data “left-merge” their data into this panel
+dictionary.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":[],"search":"../../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7f30b55.min.js"></script>
+      
+    
+  </body>
+</html>

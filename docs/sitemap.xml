@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/</loc>
+      </url>
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/articles/countrycode/</loc>
+      </url>
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/articles/countryname/</loc>
+      </url>
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/articles/custom/</loc>
+      </url>
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/articles/contributions/</loc>
+      </url>
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/reference/r/</loc>
+      </url>
+      <url>
+        <loc>https://vincentarelbundock.github.io/countrycode/reference/python/</loc>
+      </url>
+</urlset>

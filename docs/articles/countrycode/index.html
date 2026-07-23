@@ -1,0 +1,1146 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Convert country names and country codes in R">
+      
+      
+      
+        <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/articles/countrycode/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../countryname/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="zensical-0.0.51">
+    
+    
+      
+        <title>Country codes - countrycode</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.62c9b9cc.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#country-codes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="countrycode" class="md-header__button md-logo" aria-label="countrycode" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="countrycode">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            countrycode
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Country codes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/vincentarelbundock/countrycode" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="countrycode" class="md-nav__button md-logo" aria-label="countrycode" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="countrycode">
+
+    </a>
+    countrycode
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vincentarelbundock/countrycode" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Articles
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Articles
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Country codes
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Country codes
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#convert-a-single-name-or-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Convert a single name or code
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-a-vector-of-country-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Convert a vector of country codes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flags
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#country-names-in-600-different-languages-and-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Country names in 600+ different languages and formats
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Custom dictionaries and cross-walks: <code>get_dictionary()</code> and <code>custom_dict</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom dictionaries and cross-walks: get_dictionary() and custom_dict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom_dict-the-isocodes-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>custom_dict</code>: the <code>ISOcodes</code> package
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destination-fallback-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>destination</code>: Fallback codes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nomatch-fill-in-missing-codes-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>nomatch</code>: Fill in missing codes manually
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_match-override-default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>custom_match</code>: Override default values
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warn-silence-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>warn</code>: Silence warnings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../countryname/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Country names
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Custom conversions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contributions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  R
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Python
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#convert-a-single-name-or-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Convert a single name or code
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-a-vector-of-country-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Convert a vector of country codes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flags
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#country-names-in-600-different-languages-and-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Country names in 600+ different languages and formats
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Custom dictionaries and cross-walks: <code>get_dictionary()</code> and <code>custom_dict</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom dictionaries and cross-walks: get_dictionary() and custom_dict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom_dict-the-isocodes-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>custom_dict</code>: the <code>ISOcodes</code> package
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destination-fallback-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>destination</code>: Fallback codes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nomatch-fill-in-missing-codes-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>nomatch</code>: Fill in missing codes manually
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_match-override-default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>custom_match</code>: Override default values
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warn-silence-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>warn</code>: Silence warnings
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+<h1 id="country-codes">Country codes<a class="headerlink" href="#country-codes" title="Permanent link">&para;</a></h1>
+<h2 id="convert-a-single-name-or-code">Convert a single name or code<a class="headerlink" href="#convert-a-single-name-or-code" title="Permanent link">&para;</a></h2>
+<p>Load library:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">countrycode</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Convert single country codes:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## ISO to Correlates of War</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&#39;DZA&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso3c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;cown&#39;</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] 615
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">## English to ISO</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&#39;Albania&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso3c&#39;</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;ALB&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">## German or Italian to Arabic</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Algerien&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Albanien&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name.de&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;un.name.ar&#39;</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;الجزائر&quot; &quot;ألبانيا&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Moldavia&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Stati Uniti&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name.it&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;un.name.ar&#39;</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;جمهورية مولدوفا&quot;            &quot;الولايات المتحدة الأمريكية&quot;
+</code></pre></div>
+<h2 id="convert-a-vector-of-country-codes">Convert a vector of country codes<a class="headerlink" href="#convert-a-vector-of-country-codes" title="Permanent link">&para;</a></h2>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">cowcodes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ALG&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ALB&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UKG&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CAN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USA&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">cowcodes</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cowc&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iso3c&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;DZA&quot; &quot;ALB&quot; &quot;GBR&quot; &quot;CAN&quot; &quot;USA&quot;
+</code></pre></div>
+<p>Generate vectors and 2 data frames without a common id (i.e. can’t merge
+the 2 df):</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">isocodes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">826</span><span class="p">,</span><span class="m">124</span><span class="p">,</span><span class="m">840</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">var1</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">var2</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">500</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">df1</span><span class="w">      </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">cowcodes</span><span class="p">,</span><span class="n">var1</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">df2</span><span class="w">      </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">isocodes</span><span class="p">,</span><span class="n">var2</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Inspect the data:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">df1</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>  cowcodes var1
+1      ALG  414
+2      ALB  209
+3      UKG  197
+4      CAN  465
+5      USA  482
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">df2</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>  isocodes var2
+1       12  471
+2        8  489
+3      826  387
+4      124   62
+5      840   41
+</code></pre></div>
+<p>Create a common variable with the iso3c code in each data frame, merge
+the data, and create a country identifier:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">df1</span><span class="o">$</span><span class="n">iso3c</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">countrycode</span><span class="p">(</span><span class="n">df1</span><span class="o">$</span><span class="n">cowcodes</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cowc&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iso3c&quot;</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">df2</span><span class="o">$</span><span class="n">iso3c</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">countrycode</span><span class="p">(</span><span class="n">df2</span><span class="o">$</span><span class="n">isocodes</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iso3n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iso3c&quot;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">df3</span><span class="w">         </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">,</span><span class="n">id</span><span class="o">=</span><span class="s">&quot;iso3c&quot;</span><span class="p">)</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">df3</span><span class="o">$</span><span class="n">country</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">countrycode</span><span class="p">(</span><span class="n">df3</span><span class="o">$</span><span class="n">iso3c</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iso3c&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;country.name&quot;</span><span class="p">)</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">df3</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>  iso3c cowcodes var1 isocodes var2        country
+1   ALB      ALB  209        8  489        Albania
+2   CAN      CAN  465      124   62         Canada
+3   DZA      ALG  414       12  471        Algeria
+4   GBR      UKG  197      826  387 United Kingdom
+5   USA      USA  482      840   41  United States
+</code></pre></div>
+<h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<p><code>countrycode</code> can convert country names and codes to unicode flags. For
+example, we can use the <code>gt</code> package to draw a table with countries and
+their corresponding flags:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">gt</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">countrycode</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">Countries</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Canada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Germany&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Thailand&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Algeria&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Eritrea&#39;</span><span class="p">)</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">Flags</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">countrycode</span><span class="p">(</span><span class="n">Countries</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;unicode.symbol&#39;</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">Countries</span><span class="p">,</span><span class="w"> </span><span class="n">Flags</span><span class="p">)</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nf">gt</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="gt_flags" src="https://github.com/vincentarelbundock/countrycode/assets/987057/c0c29aa3-0aab-4274-af80-1ae3efc89203.png" /></p>
+<p>Note that embedding unicode characters in <code>R</code> graphics is possible, but
+it can be tricky. If your output looks like <code>\U0001f1e6\U0001f1f6</code>, then
+you could try feeding it to this function: <code>utf8::utf8_print()</code>. That
+should cover a lot of cases without dipping into the complexity of
+graphics devices. As a rule of thumb, if your output looks like <code>□□□□</code>
+(boxes), things tend to get more complicated. In that case, you’ll have
+to think about different output devices, file viewers, and/or file
+formats (e.g., ‘SVG’ or ‘HTML’).</p>
+<p>Since inserting unicode symbols into <code>R</code> graphics is not a
+<code>countrycode</code>-specific issue, we won’t be able to offer any more support
+than this. Good luck!</p>
+<h2 id="country-names-in-600-different-languages-and-formats">Country names in 600+ different languages and formats<a class="headerlink" href="#country-names-in-600-different-languages-and-formats" title="Permanent link">&para;</a></h2>
+<p>The Unicode organisation hosts the CLDR project, which publishes many
+variants of country names. For each language/culture locale, there is a
+full set of names, plus possible ‘alt-short’ or ‘alt-variant’ variations
+of specific country names.</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&#39;United States of America&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;cldr.name.en&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;United States&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&#39;United States of America&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;cldr.short.en&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;US&quot;
+</code></pre></div>
+<p>To see a full list of country name variants available, inspect this
+data.frame:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">head</span><span class="p">(</span><span class="n">countrycode</span><span class="o">::</span><span class="n">cldr_examples</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>             Code                    Example
+1   cldr.name.agq                         TF
+2    cldr.name.ak                         TF
+3    cldr.name.am           የፈረንሳይ ደቡባዊ ግዛቶች
+4    cldr.name.ar الأقاليم الجنوبية الفرنسية
+5 cldr.name.ar_ly الأقاليم الجنوبية الفرنسية
+6 cldr.name.ar_sa الأقاليم الجنوبية الفرنسية
+</code></pre></div>
+<h2 id="custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict">Custom dictionaries and cross-walks: <code>get_dictionary()</code> and <code>custom_dict</code><a class="headerlink" href="#custom-dictionaries-and-cross-walks-get_dictionary-and-custom_dict" title="Permanent link">&para;</a></h2>
+<p>The <code>custom_dict</code> argument accepts data frame which can be used as
+custom dictionaries to create “crosswalks” between arbitrary entities
+(non-countries). You can create your own dictionaries (see examples
+below) or use one of the dictionaries already hosted on the
+<code>countrycode</code> Github repository. The current list of available
+dictionaries can be seen by calling:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">get_dictionary</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Available dictionaries: ch_cantons, exiobase3, global_burden_of_disease, gtap10, us_states
+</code></pre></div>
+<p>You can download a dictionary and see available fields with:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">cd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_dictionary</span><span class="p">(</span><span class="s">&quot;us_states&quot;</span><span class="p">)</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nf">head</span><span class="p">(</span><span class="n">cd</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>  state.name state.abb    state.regex
+1    Alabama        AL    .*alabama.*
+2     Alaska        AK     .*alaska.*
+3    Arizona        AZ    .*arizona.*
+4   Arkansas        AR   .*arkansas.*
+5 California        CA .*california.*
+6   Colorado        CO   .*colorado.*
+</code></pre></div>
+<p>Now we can use the dictionary for conversions:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">st</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Arkansas&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Quebec&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tennessee&quot;</span><span class="p">)</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">st</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;state.regex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;state.abb&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cd</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Warning: Some values were not matched unambiguously: Quebec
+To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
+
+[1] &quot;AR&quot; NA   &quot;TN&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;MN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MO&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;state.abb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;state.name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cd</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;Minnesota&quot;     &quot;Massachusetts&quot; &quot;Missouri&quot;
+</code></pre></div>
+<p>Here’s an example with the GTAP dataset:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">cd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_dictionary</span><span class="p">(</span><span class="s">&quot;gtap10&quot;</span><span class="p">)</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&quot;Christmas Island&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;country.name.en.regex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gtap.cha&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cd</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;AUS&quot;
+</code></pre></div>
+<h3 id="custom_dict-the-isocodes-package"><code>custom_dict</code>: the <code>ISOcodes</code> package<a class="headerlink" href="#custom_dict-the-isocodes-package" title="Permanent link">&para;</a></h3>
+<p><code>countrycode</code> already supports ISO4217 (currencies) and ISO3166 (country
+codes). The <code>ISOcodes</code> package supplies other codes, including ISO15924
+(language writing systems), ISO639 (languages), and ISO8859 (computer
+character encodings). Users can convert those codes using
+<code>countrycode</code>’s <code>custom_dict</code> argument.</p>
+<p>For example, the <code>ISOcodes::ISO_639_2</code> dataframe includes 4 columns:
+<code>Alpha_3_B</code>, <code>Alpha_3_T</code>, <code>Alpha_2</code>, and <code>Name</code>. We can convert language
+names like this:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&#39;abk&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Alpha_3_B&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ISOcodes</span><span class="o">::</span><span class="n">ISO_639_2</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;Abkhazian&quot;
+</code></pre></div>
+<p>The <code>ISOcodes::ISO_8859</code> dataset is a 3-dimensional array where the
+second dimension represents the character encoding. We take the subset
+of <code>ISO_8859_1</code> codes and convert the dict to a dataframe for use in
+<code>countrycode</code>’s <code>custom_dict</code> argument:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">ISOcodes</span><span class="p">)</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">dict</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ISOcodes</span><span class="o">::</span><span class="n">ISO_8859</span><span class="p">[,</span><span class="w"> </span><span class="s">&#39;ISO_8859_1&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">dict</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">dict</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The resulting dataframe has 3 columns: <code>Code</code>, <code>Name</code>, <code>Character</code>. We
+convert the code <code>0x00fd</code> like this:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&quot;0x00fd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Code&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dict</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;LATIN SMALL LETTER Y WITH ACUTE&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="s">&quot;0x00fd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Code&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Character&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dict</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;ý&quot;
+</code></pre></div>
+<h2 id="destination-fallback-codes"><code>destination</code>: Fallback codes<a class="headerlink" href="#destination-fallback-codes" title="Permanent link">&para;</a></h2>
+<p>Some destination codes not cover all the relevant countries. For
+example, “SRB” is included in the <code>iso3c</code> code but <em>not</em> in the <code>cowc</code>
+code. Some users may want to use <code>cowc</code> but to fill in missing entries
+with <code>iso3c</code> codes. We can do this by feeding a vector of code names to
+the <code>destination</code> argument. <code>countrycode</code> will then try one after the
+other.</p>
+<p>For example,</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Algeria&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Serbia&quot;</span><span class="p">)</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;country.name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cowc&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Warning: Some values were not matched unambiguously: Serbia
+To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
+
+[1] &quot;ALG&quot; NA
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;country.name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iso3c&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;DZA&quot; &quot;SRB&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;country.name&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;cowc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;iso3c&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Warning: Some values were not matched unambiguously: Serbia
+To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
+
+[1] &quot;ALG&quot; &quot;SRB&quot;
+</code></pre></div>
+<h2 id="nomatch-fill-in-missing-codes-manually"><code>nomatch</code>: Fill in missing codes manually<a class="headerlink" href="#nomatch-fill-in-missing-codes-manually" title="Permanent link">&para;</a></h2>
+<p>Use the <code>nomatch</code> argument to specify the value that <code>countrycode</code>
+inserts where no match was found:</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;DZA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;USA&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;???&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso3c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">nomatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;BAD CODE&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;Algeria&quot;       &quot;United States&quot; &quot;BAD CODE&quot;
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nf">countrycode</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Canada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Fake country&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso3c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">nomatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;BAD&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;CAN&quot; &quot;BAD&quot;
+</code></pre></div>
+<h2 id="custom_match-override-default-values"><code>custom_match</code>: Override default values<a class="headerlink" href="#custom_match-override-default-values" title="Permanent link">&para;</a></h2>
+<p><code>countrycode</code> accepts a user supplied named vector of custom matches via
+the <code>custom_match</code> argument. Any match pairs in the <code>custom_match</code>
+vector will supercede the default results of the command. This allows
+the user to convert to an available country code and make minor
+post-edits all at once. The names of the named vector are used as the
+origin code, and the values of the named vector are used as the
+destination code.</p>
+<p>For example, Eurostat uses a modified version of iso2c, with Greece (EL
+instead of GR) and the UK (UK instead of GB) being the only differences.
+Getting a proper result converting to Eurostat is easy to achieve using
+the <code>iso2c</code> destination and the new <code>custom_match</code> argument. (Note:
+since version 0.19, <code>countrycode</code> also includes a <code>eurostat</code>
+origin/destination code, so while this is a good example, doing so for
+Eurostat is not necessary)</p>
+<p>Example: convert from country name to Eurostat code</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">countrycode</span><span class="p">)</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">country_names</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Greece&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;United Kingdom&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Germany&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;France&#39;</span><span class="p">)</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">custom_match</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">Greece</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;EL&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">`United Kingdom`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;UK&#39;</span><span class="p">)</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">country_names</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">            </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">            </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso2c&#39;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">            </span><span class="n">custom_match</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_match</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[1] &quot;EL&quot; &quot;UK&quot; &quot;DE&quot; &quot;FR&quot;
+</code></pre></div>
+<p>Example: convert from Eurostat code to country name</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">eurostat</span><span class="p">)</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">countrycode</span><span class="p">)</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">eurostat</span><span class="o">::</span><span class="nf">get_eurostat</span><span class="p">(</span><span class="s">&quot;nama_10_lp_ulc&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Table nama_10_lp_ulc cached at /tmp/RtmpGBB2PH/eurostat/f0a1b1e31f9f08d86f1ce4de8c508ad7.rds
+</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">custom_match</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">EL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Greece&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">UK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;United Kingdom&#39;</span><span class="p">)</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nf">countrycode</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">geo</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;iso2c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;country.name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">custom_match</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_match</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="nf">head</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Warning: Some values were not matched unambiguously: EA, EA12, EA19, EA20, EA21, EU27_2020, XK
+To fix unmatched values, please use the `custom_match` argument. If you think the default matching rules should be improved, please file an issue at https://github.com/vincentarelbundock/countrycode/issues
+
+[1] &quot;Austria&quot; &quot;Austria&quot; &quot;Austria&quot; &quot;Austria&quot; &quot;Austria&quot; &quot;Austria&quot;
+</code></pre></div>
+<h2 id="warn-silence-warnings"><code>warn</code>: Silence warnings<a class="headerlink" href="#warn-silence-warnings" title="Permanent link">&para;</a></h2>
+<p>Use <code>warn = TRUE</code> to print out a list of source elements for which no
+match was found. When the source vector are long country names that need
+to be matched using regular expressions, there is always a risk that
+multiple regex will match a given string. When this is the case,
+<code>countrycode</code> assigns a value arbitrarily, but the <code>warn</code> argument
+allows the user to print a list of all strings that were matched many
+times.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":[],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7f30b55.min.js"></script>
+      
+    
+  </body>
+</html>
