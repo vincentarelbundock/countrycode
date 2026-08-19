@@ -1,6 +1,6 @@
 # News
 
-## Development
+## 1.9.0
 
 * Updated the built-in country-code dictionary and synchronized it with the Python package.
 * Run canonical name variations and typed conversion cases from shared YAML
