@@ -1,7 +1,5 @@
 context('Internal validity of regex')
 
-iso3c_of <- function(name) countrycode(name, 'country.name', 'iso3c')
-
 test_that('all country names with iso3c codes are matched exactly once', {
   name <- subset(codelist, !is.na(iso3c))$country.name.en
   iso3c_from_name <- countrycode(name, 'country.name', 'iso3c', warn = TRUE)
