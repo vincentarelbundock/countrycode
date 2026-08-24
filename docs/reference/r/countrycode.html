@@ -1,12 +1,12 @@
 
 
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>R reference</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Convert Country Codes</title>
     
     
     
-    <meta name="description" content="Every documented object in the countrycode R package.">
-    <meta property="og:description" content="Every documented object in the countrycode R package.">
-    <meta name="twitter:description" content="Every documented object in the countrycode R package.">
+    <meta name="description" content="Convert Country Codes">
+    <meta property="og:description" content="Convert Country Codes">
+    <meta name="twitter:description" content="Convert Country Codes">
     
     
     
@@ -17,8 +17,8 @@
     
     
     
-    <meta property="og:title" content="R reference | countrycode">
-    <meta name="twitter:title" content="R reference | countrycode">
+    <meta property="og:title" content="Convert Country Codes | countrycode">
+    <meta name="twitter:title" content="Convert Country Codes | countrycode">
     
     
     <meta property="og:type" content="article">
@@ -26,8 +26,8 @@
     <meta name="twitter:card" content="summary">
     
     
-    <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/">
-    <meta property="og:url" content="https://vincentarelbundock.github.io/countrycode/reference/r/">
+    <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/countrycode.html">
+    <meta property="og:url" content="https://vincentarelbundock.github.io/countrycode/reference/r/countrycode.html">
     
     
     <link rel="icon" href="../../assets/logo.png">
@@ -2856,7 +2856,7 @@ html:not([data-theme]) {
                 
                                 <li><a href="../../articles/countrycode.html" aria-label="Articles">Articles</a></li>
                 
-                                <li><a href="index.html" aria-label="R" aria-current="page">R</a></li>
+                                <li><a href="index.html" aria-label="R">R</a></li>
                 
                                 <li><a href="../python/index.html" aria-label="Python">Python</a></li>
                 
@@ -2893,7 +2893,7 @@ html:not([data-theme]) {
                     
                                     <li><a href="../../articles/countrycode.html" aria-label="Articles">Articles</a></li>
                     
-                                    <li><a href="index.html" aria-label="R" aria-current="page">R</a></li>
+                                    <li><a href="index.html" aria-label="R">R</a></li>
                     
                                     <li><a href="../python/index.html" aria-label="Python">Python</a></li>
                     
@@ -2971,7 +2971,7 @@ html:not([data-theme]) {
 <ul>
     
     
-<li class="calepin-website-sidebar-link"><a href="index.html" aria-label="Overview" class="active" aria-current="page">Overview</a></li>
+<li class="calepin-website-sidebar-link"><a href="index.html" aria-label="Overview">Overview</a></li>
 
     
     
@@ -2987,7 +2987,7 @@ html:not([data-theme]) {
 
     
     
-<li class="calepin-website-sidebar-link"><a href="countrycode.html" aria-label="countrycode">countrycode</a></li>
+<li class="calepin-website-sidebar-link"><a href="countrycode.html" aria-label="countrycode" class="active" aria-current="page">countrycode</a></li>
 
     
     
@@ -3071,9 +3071,58 @@ html:not([data-theme]) {
             </nav>
         </aside>
         <main class="calepin-website-main calepin-content" data-pagefind-body>
-            <h1 id="r-reference">R reference</h1><dl><dt><a href="cldr_examples.typ"><code>cldr_examples</code></a></dt><dd>List of CLDR country name codes and associated examples</dd><dt><a href="codelist.typ"><code>codelist</code></a></dt><dd>Country Code Translation Data Frame (Cross-Sectional)</dd><dt><a href="codelist_panel.typ"><code>codelist_panel</code></a></dt><dd>Country Code Translation Data Frame (Country-Year Panel)</dd><dt><a href="countrycode.typ"><code>countrycode</code></a></dt><dd>Convert Country Codes</dd><dt><a href="countryname.typ"><code>countryname</code></a></dt><dd>Convert country names in any language to another name or code</dd><dt><a href="countryname_dict.typ"><code>countryname_dict</code></a></dt><dd>A dataframe of alternative country names in many languages. Used internally by the <code>countryname</code> function.</dd><dt><a href="get_dictionary.typ"><code>get_dictionary</code></a></dt><dd>Get Custom Dictionaries</dd><dt><a href="guess_field.typ"><code>guess_field</code></a></dt><dd>Guess the code/name of a vector</dd></dl>
+            <h2 id="countrycode">Convert Country Codes</h2><div class="sourceCode" data-lang="R"><pre><code data-lang="r"><span class="calepin-syntax-scope-22">countrycode</span>(
+  sourcevar<span class="calepin-syntax-scope-26">,</span>
+  origin<span class="calepin-syntax-scope-26">,</span>
+  destination<span class="calepin-syntax-scope-26">,</span>
+  <span class="calepin-syntax-scope-28">warn</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">TRUE</span><span class="calepin-syntax-scope-26">,</span>
+  <span class="calepin-syntax-scope-28">nomatch</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">NA</span><span class="calepin-syntax-scope-26">,</span>
+  <span class="calepin-syntax-scope-28">custom_dict</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">NULL</span><span class="calepin-syntax-scope-26">,</span>
+  <span class="calepin-syntax-scope-28">custom_match</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">NULL</span><span class="calepin-syntax-scope-26">,</span>
+  <span class="calepin-syntax-scope-28">origin_regex</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">NULL</span>
+)
+</code></pre></div><h3 id="description">Description</h3><p>Converts long country names into one of many different coding schemes. Translates from one scheme to another. Converts country name or coding scheme to the official short English country name. Creates a new variable with the name of the continent or region to which each country belongs.</p><h3 id="arguments">Arguments</h3><table><tr><td><code>sourcevar</code></td><td>Vector which contains the codes or country names to be converted (character or factor)</td></tr><tr><td><code>origin</code></td><td>A string which identifies the coding scheme of origin (e.g., <code>"iso3c"</code>). See <code>codelist</code> for a list of available codes.</td></tr><tr><td><code>destination</code></td><td>A string or vector of strings which identify the coding scheme of destination (e.g., <code>"iso3c"</code> or <code>c("cowc", "iso3c")</code>). See <code>codelist</code> for a list of available codes. When users supply a vector of destination codes, they are used sequentially to fill in missing values not covered by the previous destination code in the vector.</td></tr><tr><td><code>warn</code></td><td>Prints unique elements from sourcevar for which no match was found</td></tr><tr><td><code>nomatch</code></td><td>When countrycode fails to find a match for the code of origin, it fills-in the destination vector with <code>nomatch</code>. The default behavior is to fill non-matching codes with <code>NA</code>. If <code>nomatch = NULL</code>, countrycode tries to use the origin vector to fill-in missing values in the destination vector. <code>nomatch</code> must be either <code>NULL</code>, of length 1, or of the same length as <code>sourcevar</code>.</td></tr><tr><td><code>custom_dict</code></td><td><p>A data frame which supplies a new dictionary to replace the built-in country code dictionary. Each column contains a different code and must include no duplicates. The data frame format should resemble <code>codelist</code>. Users can pre-assign attributes to this custom dictionary to affect behavior (see Examples section):</p><ul><li>“origin.regex” attribute: a character vector with the names of columns containing regular expressions.</li><li>“origin.valid” attribute: a character vector with the names of columns that are accepted as valid origin codes.</li></ul></td></tr><tr><td><code>custom_match</code></td><td>A named vector which supplies custom origin and destination matches that will supercede any matching default result. The name of each element will be used as the origin code, and the value of each element will be used as the destination code. Values supplied via <code>custom_match</code> supersede ambiguous or duplicate matches and will not trigger the corresponding ambiguity/duplicate-match warnings for those values.</td></tr><tr><td><code>origin_regex</code></td><td>NULL or Logical: When using a custom dictionary, if TRUE then the origin codes will be matched as regex, if FALSE they will be matched exactly. When NULL, <code>countrycode</code> will behave as TRUE if the origin name is in the <code>custom_dictionary</code>’s <code>origin_regex</code> attribute, and FALSE otherwise. See examples section below.</td></tr></table><h3 id="note">Note</h3><p>For a complete description of available country codes and languages, please see the documentation for the <code>codelist</code> conversion dictionary. Panel data (i.e., country-year) can pose particular problems when converting codes. For instance, some countries like Vietnam or Serbia go through political transitions that justify changing codes over time. This can pose problems when using codes from organizations like CoW or Polity IV, which produce codes in country-year format. Instead of converting codes using <code>countrycode()</code>, we recommend that users use the <code>codelist_panel</code> data.frame as a base into which they can merge their other data. This data.frame includes most relevant code, and is already “reconciled” to ensure that each political unit is only represented by one row in any given year. From there, it is just a matter of using <code>merge()</code> to combine different datasets which use different codes.</p><h3 id="examples">Examples</h3><div class="sourceCode" data-lang="R"><pre><code data-lang="r"><span class="calepin-syntax-scope-21">library</span>(countrycode)
+
+<span class="calepin-syntax-scope-2">#</span><span class="calepin-syntax-scope-1"> ISO to Correlates of War</span>
+<span class="calepin-syntax-scope-22">countrycode</span>(<span class="calepin-syntax-scope-21">c</span>(<span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">USA</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">DZA</span><span class="calepin-syntax-scope-4">'</span>)<span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">origin</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">iso3c</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">destination</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">cown</span><span class="calepin-syntax-scope-4">'</span>)
+
+<span class="calepin-syntax-scope-2">#</span><span class="calepin-syntax-scope-1"> English to ISO</span>
+<span class="calepin-syntax-scope-22">countrycode</span>(<span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">Albania</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">origin</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">country.name</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">destination</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">iso3c</span><span class="calepin-syntax-scope-4">'</span>)
+
+<span class="calepin-syntax-scope-2">#</span><span class="calepin-syntax-scope-1"> German to French</span>
+<span class="calepin-syntax-scope-22">countrycode</span>(<span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">Albanien</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">origin</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">country.name.de</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">destination</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">iso.name.fr</span><span class="calepin-syntax-scope-4">'</span>)
+
+<span class="calepin-syntax-scope-2">#</span><span class="calepin-syntax-scope-1"> Using custom_match to supercede default codes</span>
+<span class="calepin-syntax-scope-22">countrycode</span>(<span class="calepin-syntax-scope-21">c</span>(<span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">United States</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">Algeria</span><span class="calepin-syntax-scope-4">'</span>)<span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">country.name</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">iso3c</span><span class="calepin-syntax-scope-4">'</span>)
+<span class="calepin-syntax-scope-22">countrycode</span>(<span class="calepin-syntax-scope-21">c</span>(<span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">United States</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">Algeria</span><span class="calepin-syntax-scope-4">'</span>)<span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">country.name</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">iso3c</span><span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-26">,</span>
+            <span class="calepin-syntax-scope-28">custom_match</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-21">c</span>(<span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">Algeria</span><span class="calepin-syntax-scope-4">'</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">'</span><span class="calepin-syntax-scope-3">ALG</span><span class="calepin-syntax-scope-4">'</span>))
+
+x <span class="calepin-syntax-scope-27">&lt;-</span> <span class="calepin-syntax-scope-21">c</span>(<span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">canada</span><span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">antarctica</span><span class="calepin-syntax-scope-4">"</span>)
+<span class="calepin-syntax-scope-22">countryname</span>(x)
+<span class="calepin-syntax-scope-22">countryname</span>(x<span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">destination</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">cowc</span><span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">warn</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">FALSE</span>)
+<span class="calepin-syntax-scope-22">countryname</span>(x<span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">destination</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">cowc</span><span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">warn</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">FALSE</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">nomatch</span> <span class="calepin-syntax-scope-27">=</span> x)
+</code></pre></div>
         </main>
                 
+        <aside class="calepin-website-toc is-floating">
+            <p class="calepin-website-toc-title">On this page</p>
+            <nav aria-label="On this page">
+                <ul>
+                    
+                    <li class="level-2"><a href="#countrycode">Convert Country Codes</a></li>
+                    
+                    <li class="level-3"><a href="#description">Description</a></li>
+                    
+                    <li class="level-3"><a href="#arguments">Arguments</a></li>
+                    
+                    <li class="level-3"><a href="#note">Note</a></li>
+                    
+                    <li class="level-3"><a href="#examples">Examples</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        
     </div>
     
     
@@ -3115,17 +3164,6 @@ html:not([data-theme]) {
     
         
         
-            
-            
-        
-        
-        
-    
-        
-        
-            
-            
-        
         
             
         
@@ -3153,6 +3191,17 @@ html:not([data-theme]) {
         
     
         
+        
+            
+            
+        
+        
+        
+    
+        
+        
+            
+            
         
         
             
@@ -3248,20 +3297,20 @@ html:not([data-theme]) {
     <footer class="calepin-website-page-nav" aria-label="Page navigation">
       <div class="calepin-website-page-nav-inner">
         
-        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--prev outline secondary" href="../../articles/contributions.html" role="button">
+        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--prev outline secondary" href="codelist_panel.html" role="button">
           <span class="calepin-website-page-nav-arrow" aria-hidden="true">&larr;</span>
           <span class="calepin-website-page-nav-content">
             <span class="calepin-website-page-nav-kind">Previous</span>
-            <span class="calepin-website-page-nav-title">Contributions</span>
+            <span class="calepin-website-page-nav-title">codelist_panel</span>
           </span>
         </a>
         
 
         
-        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--next outline secondary" href="cldr_examples.html" role="button">
+        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--next outline secondary" href="countryname.html" role="button">
           <span class="calepin-website-page-nav-content">
             <span class="calepin-website-page-nav-kind">Next</span>
-            <span class="calepin-website-page-nav-title">cldr_examples</span>
+            <span class="calepin-website-page-nav-title">countryname</span>
           </span>
           <span class="calepin-website-page-nav-arrow" aria-hidden="true">&rarr;</span>
         </a>

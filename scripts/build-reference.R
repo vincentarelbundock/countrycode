@@ -1,123 +1,187 @@
 #!/usr/bin/env Rscript
 
+# Generate the Typst reference pages consumed by the Calepin website.
+#
+#   docs-src/reference/r/*.typ       from r/man/*.Rd
+#   docs-src/reference/python/*.typ  from python/countrycode/*.py
+#
+# Both are rendered by the typst-doc CLI, which emits plain Typst. This script
+# adds the `<website-metadata>` front matter Calepin reads for navigation, and
+# replaces typst-doc's `#include`-based index with a linked one.
+
 local({
-  if (!requireNamespace("pkgsite", quietly = TRUE)) {
+  typst_doc <- Sys.which("typst-doc")
+  if (!nzchar(typst_doc)) {
     stop(
-      "The 'pkgsite' package is required. Install it with install.packages('pkgsite')."
+      "The 'typst-doc' executable is required. Install it from ",
+      "https://github.com/vincentarelbundock/typst-doc.",
+      call. = FALSE
+    )
+  }
+  typst_doc <- unname(typst_doc)
+
+  # Typst markup escapes punctuation with a backslash. Metadata values are
+  # plain strings, so they need those escapes removed.
+  unescape_typst <- function(x) gsub("\\\\(.)", "\\1", x, perl = TRUE)
+
+  quote_typst <- function(x) {
+    paste0('"', gsub('(["\\\\])', "\\\\\\1", x, perl = TRUE), '"')
+  }
+
+  # typst-doc opens every page with `= <title> <label>`, where the label is the
+  # topic name. That line is the only page metadata this script needs.
+  read_topic <- function(path) {
+    lines <- readLines(path, warn = FALSE)
+    heading <- if (length(lines)) lines[[1]] else ""
+    matched <- regmatches(heading, regexec("^= (.*) <([^>]+)>\\s*$", heading))[[1]]
+    if (length(matched) != 3L) {
+      stop("Unexpected first line in ", path, ": ", heading)
+    }
+    list(
+      file = tools::file_path_sans_ext(basename(path)),
+      path = path,
+      title = matched[[2]],
+      name = matched[[3]]
     )
   }
 
-  quarto <- Sys.which("quarto")
-  if (!nzchar(quarto)) {
-    stop("The Quarto CLI is required to render pkgsite QMD files to GFM.")
-  }
-
-  build_dir <- "build"
-  qmd_dir <- file.path(build_dir, "pkgsite-reference")
-  reference_dir <- file.path("docs-src", "reference", "r")
-  dir.create(qmd_dir, recursive = TRUE, showWarnings = FALSE)
-  dir.create(reference_dir, recursive = TRUE, showWarnings = FALSE)
-
-  # R reference pages previously lived directly in docs-src/reference/. Remove
-  # those generated files while preserving the hand-written Python reference.
-  legacy_reference_dir <- file.path("docs-src", "reference")
-  legacy_reference_files <- list.files(
-    legacy_reference_dir,
-    pattern = "\\.md$",
-    full.names = TRUE
+  # Usage synopses and `\dontrun` examples are illustrations, not a notebook.
+  # Calepin executes every fenced R or Python block it finds, so reference pages
+  # have to turn evaluation off explicitly.
+  no_eval <- c(
+    '#import "/.calepin/calepin.typ" as calepin',
+    "#show: calepin.document",
+    "",
+    "#calepin.setup(eval: false, echo: true)",
+    ""
   )
-  unlink(setdiff(
-    legacy_reference_files,
-    file.path(legacy_reference_dir, "python.md")
-  ))
 
-  cleanup_staging <- function() {
-    unlink(qmd_dir, recursive = TRUE)
-    if (
-      dir.exists(build_dir) &&
-        !length(list.files(build_dir, all.files = TRUE, no.. = TRUE))
-    ) {
-      unlink(build_dir, recursive = TRUE)
-    }
-  }
-  on.exit(cleanup_staging(), add = TRUE)
-
-  # Remove stale generated sources and pages so deleted Rd topics cannot survive.
-  unlink(list.files(qmd_dir, pattern = "\\.qmd$", full.names = TRUE))
-  unlink(list.files(reference_dir, pattern = "\\.md$", full.names = TRUE))
-
-  render_gfm <- function(input) {
-    status <- system2(
-      quarto,
+  add_front_matter <- function(topic, label) {
+    writeLines(
       c(
-        "render",
-        normalizePath(input, mustWork = TRUE),
-        "--to",
-        "gfm",
-        "--output-dir",
-        normalizePath(reference_dir, mustWork = TRUE),
-        "--quiet"
+        no_eval,
+        paste0("#set document(title: [", topic$title, "])"),
+        "",
+        "#metadata((",
+        paste0("  title: ", quote_typst(label), ","),
+        paste0("  summary: ", quote_typst(unescape_typst(topic$title)), ","),
+        ")) <website-metadata>",
+        "",
+        readLines(topic$path, warn = FALSE)
+      ),
+      topic$path,
+      useBytes = TRUE
+    )
+  }
+
+  write_index <- function(dir, title, summary, topics, labels) {
+    lines <- c(
+      paste0("#set document(title: [", title, "])"),
+      "",
+      "#metadata((",
+      '  title: "Overview",',
+      paste0("  summary: ", quote_typst(summary), ","),
+      ")) <website-metadata>",
+      "",
+      "#title()",
+      ""
+    )
+    for (i in seq_along(topics)) {
+      lines <- c(
+        lines,
+        paste0(
+          "/ #link(",
+          quote_typst(paste0(topics[[i]]$file, ".typ")),
+          ")[`",
+          labels[[i]],
+          "`]: ",
+          topics[[i]]$title
+        )
       )
-    )
+    }
+    writeLines(lines, file.path(dir, "index.typ"), useBytes = TRUE)
+  }
+
+  render <- function(input, dir) {
+    dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+    # Remove stale pages so deleted topics cannot survive a rebuild.
+    unlink(list.files(dir, pattern = "\\.typ$", full.names = TRUE))
+
+    status <- system2(typst_doc, c(shQuote(input), "--split", "-o", shQuote(dir)))
     if (!identical(status, 0L)) {
-      stop("Quarto failed to render ", input, " to GFM")
-    }
-  }
-
-  rd_files <- sort(list.files(
-    file.path("r", "man"),
-    pattern = "\\.Rd$",
-    full.names = TRUE
-  ))
-  if (!length(rd_files)) {
-    stop("No r/man/*.Rd files found")
-  }
-
-  qmd_files <- character()
-  for (rd_file in rd_files) {
-    page <- pkgsite::rd_to_qmd(
-      path = rd_file,
-      pkg = "r",
-      examples = FALSE,
-      not_run_examples = FALSE
-    )
-
-    # pkgsite returns NULL for internal-only topics.
-    if (is.null(page)) {
-      next
+      stop("typst-doc failed on ", input)
     }
 
-    output <- file.path(
-      qmd_dir,
-      paste0(tools::file_path_sans_ext(basename(rd_file)), ".qmd")
-    )
-    writeLines(page, output, useBytes = TRUE)
-    qmd_files <- c(qmd_files, output)
+    # typst-doc's index is a list of `#include`s for a single joined document.
+    # A website wants one page per topic and a linked index instead.
+    unlink(file.path(dir, "index.typ"))
+
+    files <- list.files(dir, pattern = "\\.typ$", full.names = TRUE)
+    if (!length(files)) {
+      stop("typst-doc produced no pages from ", input)
+    }
+    lapply(files, read_topic)
   }
 
-  index_qmd <- file.path(qmd_dir, "index.qmd")
-  writeLines(pkgsite::index_to_qmd(pkg = "r"), index_qmd, useBytes = TRUE)
-  qmd_files <- c(index_qmd, qmd_files)
+  ## ------------------------------------------------------------------ R ----
 
-  for (qmd_file in qmd_files) {
-    render_gfm(qmd_file)
+  r_dir <- file.path("docs-src", "reference", "r")
+  r_topics <- render(file.path("r", "man"), r_dir)
+  r_topics <- r_topics[order(vapply(r_topics, function(x) x$name, ""))]
+  r_labels <- vapply(r_topics, function(x) x$name, "")
+
+  for (i in seq_along(r_topics)) {
+    add_front_matter(r_topics[[i]], r_labels[[i]])
+  }
+  write_index(
+    r_dir,
+    "R reference",
+    "Every documented object in the countrycode R package.",
+    r_topics,
+    r_labels
+  )
+
+  ## ------------------------------------------------------------- Python ----
+
+  py_dir <- file.path("docs-src", "reference", "python")
+  py_topics <- render(file.path("python", "countrycode"), py_dir)
+
+  # typst-doc names Python topics `<module>.<definition>`, and gives each module
+  # docstring a topic of its own. A bare module summary is not a reference page,
+  # so keep only the definitions.
+  is_definition <- grepl(".", vapply(py_topics, function(x) x$name, ""), fixed = TRUE)
+  for (topic in py_topics[!is_definition]) {
+    unlink(topic$path)
+  }
+  py_topics <- py_topics[is_definition]
+  if (!length(py_topics)) {
+    stop("typst-doc found no documented definitions in python/countrycode")
   }
 
-  # Quarto normally rewrites QMD links for GFM. Normalize any literal suffixes
-  # retained by templates or raw Markdown so Zensical never receives .qmd links.
-  md_files <- list.files(reference_dir, pattern = "\\.md$", full.names = TRUE)
-  for (md_file in md_files) {
-    lines <- readLines(md_file, warn = FALSE)
-    lines <- gsub("\\.qmd(?=([#?)[:space:]]|$))", ".md", lines, perl = TRUE)
-    writeLines(lines, md_file, useBytes = TRUE)
+  # Navigation shows the bare object name; the page heading keeps its summary.
+  py_labels <- sub("^.*\\.", "", vapply(py_topics, function(x) x$name, ""))
+  py_topics <- py_topics[order(py_labels)]
+  py_labels <- sort(py_labels)
+
+  for (i in seq_along(py_topics)) {
+    add_front_matter(py_topics[[i]], py_labels[[i]])
   }
+  write_index(
+    py_dir,
+    "Python reference",
+    "Every documented function in the countrycode Python package.",
+    py_topics,
+    py_labels
+  )
 
   message(
-    "Converted ",
-    length(qmd_files) - 1L,
-    " of ",
-    length(rd_files),
-    " Rd files via QMD to GFM in ",
-    reference_dir
+    "Wrote ",
+    length(r_topics),
+    " R reference pages to ",
+    r_dir,
+    " and ",
+    length(py_topics),
+    " Python reference pages to ",
+    py_dir
   )
 })

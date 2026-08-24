@@ -65,8 +65,9 @@ uv-cache/
 # scrutin history + caches (keep runner scripts tracked)
 .scrutin/state.db*
 
-# Generated Zensical inputs and output
-docs-src/articles/
-docs-src/index.md
-docs-src/reference/*
-!docs-src/reference/python.md
+# Calepin build artifacts (regenerable)
+.calepin/
+.calepin-entry.*
+
+# Generated reference pages (rebuilt by scripts/build-reference.R)
+docs-src/reference/

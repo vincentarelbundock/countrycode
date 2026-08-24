@@ -1,12 +1,12 @@
 
 
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>R reference</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Country Code Translation Data Frame (Cross-Sectional)</title>
     
     
     
-    <meta name="description" content="Every documented object in the countrycode R package.">
-    <meta property="og:description" content="Every documented object in the countrycode R package.">
-    <meta name="twitter:description" content="Every documented object in the countrycode R package.">
+    <meta name="description" content="Country Code Translation Data Frame (Cross-Sectional)">
+    <meta property="og:description" content="Country Code Translation Data Frame (Cross-Sectional)">
+    <meta name="twitter:description" content="Country Code Translation Data Frame (Cross-Sectional)">
     
     
     
@@ -17,8 +17,8 @@
     
     
     
-    <meta property="og:title" content="R reference | countrycode">
-    <meta name="twitter:title" content="R reference | countrycode">
+    <meta property="og:title" content="Country Code Translation Data Frame (Cross-Sectional) | countrycode">
+    <meta name="twitter:title" content="Country Code Translation Data Frame (Cross-Sectional) | countrycode">
     
     
     <meta property="og:type" content="article">
@@ -26,8 +26,8 @@
     <meta name="twitter:card" content="summary">
     
     
-    <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/">
-    <meta property="og:url" content="https://vincentarelbundock.github.io/countrycode/reference/r/">
+    <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/codelist.html">
+    <meta property="og:url" content="https://vincentarelbundock.github.io/countrycode/reference/r/codelist.html">
     
     
     <link rel="icon" href="../../assets/logo.png">
@@ -2856,7 +2856,7 @@ html:not([data-theme]) {
                 
                                 <li><a href="../../articles/countrycode.html" aria-label="Articles">Articles</a></li>
                 
-                                <li><a href="index.html" aria-label="R" aria-current="page">R</a></li>
+                                <li><a href="index.html" aria-label="R">R</a></li>
                 
                                 <li><a href="../python/index.html" aria-label="Python">Python</a></li>
                 
@@ -2893,7 +2893,7 @@ html:not([data-theme]) {
                     
                                     <li><a href="../../articles/countrycode.html" aria-label="Articles">Articles</a></li>
                     
-                                    <li><a href="index.html" aria-label="R" aria-current="page">R</a></li>
+                                    <li><a href="index.html" aria-label="R">R</a></li>
                     
                                     <li><a href="../python/index.html" aria-label="Python">Python</a></li>
                     
@@ -2971,7 +2971,7 @@ html:not([data-theme]) {
 <ul>
     
     
-<li class="calepin-website-sidebar-link"><a href="index.html" aria-label="Overview" class="active" aria-current="page">Overview</a></li>
+<li class="calepin-website-sidebar-link"><a href="index.html" aria-label="Overview">Overview</a></li>
 
     
     
@@ -2979,7 +2979,7 @@ html:not([data-theme]) {
 
     
     
-<li class="calepin-website-sidebar-link"><a href="codelist.html" aria-label="codelist">codelist</a></li>
+<li class="calepin-website-sidebar-link"><a href="codelist.html" aria-label="codelist" class="active" aria-current="page">codelist</a></li>
 
     
     
@@ -3071,9 +3071,28 @@ html:not([data-theme]) {
             </nav>
         </aside>
         <main class="calepin-website-main calepin-content" data-pagefind-body>
-            <h1 id="r-reference">R reference</h1><dl><dt><a href="cldr_examples.typ"><code>cldr_examples</code></a></dt><dd>List of CLDR country name codes and associated examples</dd><dt><a href="codelist.typ"><code>codelist</code></a></dt><dd>Country Code Translation Data Frame (Cross-Sectional)</dd><dt><a href="codelist_panel.typ"><code>codelist_panel</code></a></dt><dd>Country Code Translation Data Frame (Country-Year Panel)</dd><dt><a href="countrycode.typ"><code>countrycode</code></a></dt><dd>Convert Country Codes</dd><dt><a href="countryname.typ"><code>countryname</code></a></dt><dd>Convert country names in any language to another name or code</dd><dt><a href="countryname_dict.typ"><code>countryname_dict</code></a></dt><dd>A dataframe of alternative country names in many languages. Used internally by the <code>countryname</code> function.</dd><dt><a href="get_dictionary.typ"><code>get_dictionary</code></a></dt><dd>Get Custom Dictionaries</dd><dt><a href="guess_field.typ"><code>guess_field</code></a></dt><dd>Guess the code/name of a vector</dd></dl>
+            <h2 id="codelist">Country Code Translation Data Frame (Cross-Sectional)</h2><h3 id="description">Description</h3><p>A data frame used internally by the <code>countrycode()</code> function. <code>countrycode</code> can use any valid code as destination, but only some codes can be used as origin.</p><h3 id="details">Details</h3><h4 id="origin-and-destination">Origin and Destination</h4><ul><li><code>cctld</code>: IANA country code top-level domain</li><li><code>country.name.en</code>: country name (English)</li><li><code>country.name.de</code>: country name (German)</li><li><code>country.name.fr</code>: country name (French)</li><li><code>country.name.it</code>: country name (Italian)</li><li><code>country.name.es</code>: country name (Spanish)</li><li><code>cowc</code>: Correlates of War character</li><li><code>cown</code>: Correlates of War numeric</li><li><code>dhs</code>: Demographic and Health Surveys Program</li><li><code>ecb</code>: European Central Bank</li><li><code>eurostat</code>: Eurostat</li><li><code>fao</code>: Food and Agriculture Organization of the United Nations numerical code</li><li><code>fips</code>: FIPS 10-4 (Federal Information Processing Standard)</li><li><code>gaul</code>: Global Administrative Unit Layers</li><li><code>genc2c</code>: GENC 2-letter code</li><li><code>genc3c</code>: GENC 3-letter code</li><li><code>genc3n</code>: GENC numeric code</li><li><code>gwc</code>: Gleditsch &amp; Ward character</li><li><code>gwn</code>: Gleditsch &amp; Ward numeric</li><li><code>imf</code>: International Monetary Fund (Warning: The IMF generally uses ISO codes. These codes are WEO-related, but may be inconsistently used in the wild.)</li><li><code>ioc</code>: International Olympic Committee</li><li><code>iso2c</code>: ISO-2 character</li><li><code>iso3c</code>: ISO-3 character</li><li><code>iso3n</code>: ISO-3 numeric</li><li><code>p5n</code>: Polity V numeric country code</li><li><code>p5c</code>: Polity V character country code</li><li><code>p4n</code>: Polity IV numeric country code</li><li><code>p4c</code>: Polity IV character country code</li><li><code>un</code>: United Nations M49 numeric codes</li><li><code>unicode.symbol</code>: Region subtag (often displayed as emoji flag)</li><li><code>unhcr</code>: United Nations High Commissioner for Refugees</li><li><code>unpd</code>: United Nations Procurement Division</li><li><code>vdem</code>: Varieties of Democracy (V-Dem version 8, April 2018)</li><li><code>wb</code>: World Bank (very similar but not identical to iso3c)</li><li><code>wvs</code>: World Values Survey numeric code</li></ul><h4 id="destination-only">Destination only</h4><ul><li><code>cldr.*</code>: 600+ country name variants from the UNICODE CLDR project (e.g., “cldr.short.en”). Inspect the <code>cldr_examples</code> data.frame for a full list of available country names and examples.</li><li><code>ar5</code>: IPCC’s regional mapping used both in the Fifth Assessment Report (AR5) and for the Reference Concentration Pathways (RCP)</li><li><code>continent</code>: Continent as defined in the World Bank Development Indicators</li><li><code>cow.name</code>: Correlates of War country name</li><li><code>currency</code>: ISO 4217 currency name</li><li><code>eurocontrol_pru</code>: European Organisation for the Safety of Air Navigation</li><li><code>eurocontrol_statfor</code>: European Organisation for the Safety of Air Navigation</li><li><code>eu28</code>: Member states of the European Union (as of December 2015), without special territories</li><li><code>eu27</code>: Member states of the European Union (as of February 2020), without special territories</li><li><code>icao.region</code>: International Civil Aviation Organization region</li><li><code>iso.name.en</code>: ISO English short name</li><li><code>iso.name.fr</code>: ISO French short name</li><li><code>iso4217c</code>: ISO 4217 currency alphabetic code</li><li><code>iso4217n</code>: ISO 4217 currency numeric code</li><li><code>p4.name</code>: Polity IV country name</li><li><code>region</code>: 7 Regions as defined in the World Bank Development Indicators</li><li><code>region23</code>: 23 Regions as used to be in the World Bank Development Indicators (legacy)</li><li><code>telephone</code>: ITU-T E.164 country codes for telecommunication</li><li><code>un.name.ar</code>: United Nations Arabic country name</li><li><code>un.name.en</code>: United Nations English country name</li><li><code>un.name.es</code>: United Nations Spanish country name</li><li><code>un.name.fr</code>: United Nations French country name</li><li><code>un.name.ru</code>: United Nations Russian country name</li><li><code>un.name.zh</code>: United Nations Chinese country name</li><li><code>un.region.name</code>: United Nations region name</li><li><code>un.region.code</code>: United Nations region code</li><li><code>un.regionintermediate.name</code>: United Nations intermediate region name</li><li><code>un.regionintermediate.code</code>: United Nations intermediate region code</li><li><code>un.regionsub.name</code>: United Nations sub-region name</li><li><code>un.regionsub.code</code>: United Nations sub-region code</li><li><code>unhcr.region</code>: United Nations High Commissioner for Refugees region name</li><li><code>wvs.name</code>: World Values Survey numeric code country name</li></ul><h3 id="format">Format</h3><p>A data frame with codes as columns.</p><h3 id="note">Note</h3><p>The Correlates of War (cow) and Polity 4 (p4) project produce codes in country year format. Some countries go through political transitions that justify changing codes over time. When building a purely cross-sectional conversion dictionary, this forces us to make arbitrary choices with respect to some entities (e.g., Western Germany, Vietnam, Serbia). <code>countrycode</code> includes a reconciled dataset in panel format, <code>codelist_panel</code>. Instead of converting code, we recommend that users dealing with panel data “left-merge” their data into this panel dictionary.</p>
         </main>
                 
+        <aside class="calepin-website-toc is-floating">
+            <p class="calepin-website-toc-title">On this page</p>
+            <nav aria-label="On this page">
+                <ul>
+                    
+                    <li class="level-2"><a href="#codelist">Country Code Translation Data Frame (Cross-Sectional)</a></li>
+                    
+                    <li class="level-3"><a href="#description">Description</a></li>
+                    
+                    <li class="level-3"><a href="#details">Details</a></li>
+                    
+                    <li class="level-3"><a href="#format">Format</a></li>
+                    
+                    <li class="level-3"><a href="#note">Note</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        
     </div>
     
     
@@ -3115,17 +3134,6 @@ html:not([data-theme]) {
     
         
         
-            
-            
-        
-        
-        
-    
-        
-        
-            
-            
-        
         
             
         
@@ -3139,6 +3147,17 @@ html:not([data-theme]) {
         
     
         
+        
+            
+            
+        
+        
+        
+    
+        
+        
+            
+            
         
         
             
@@ -3248,20 +3267,20 @@ html:not([data-theme]) {
     <footer class="calepin-website-page-nav" aria-label="Page navigation">
       <div class="calepin-website-page-nav-inner">
         
-        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--prev outline secondary" href="../../articles/contributions.html" role="button">
+        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--prev outline secondary" href="cldr_examples.html" role="button">
           <span class="calepin-website-page-nav-arrow" aria-hidden="true">&larr;</span>
           <span class="calepin-website-page-nav-content">
             <span class="calepin-website-page-nav-kind">Previous</span>
-            <span class="calepin-website-page-nav-title">Contributions</span>
+            <span class="calepin-website-page-nav-title">cldr_examples</span>
           </span>
         </a>
         
 
         
-        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--next outline secondary" href="cldr_examples.html" role="button">
+        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--next outline secondary" href="codelist_panel.html" role="button">
           <span class="calepin-website-page-nav-content">
             <span class="calepin-website-page-nav-kind">Next</span>
-            <span class="calepin-website-page-nav-title">cldr_examples</span>
+            <span class="calepin-website-page-nav-title">codelist_panel</span>
           </span>
           <span class="calepin-website-page-nav-arrow" aria-hidden="true">&rarr;</span>
         </a>

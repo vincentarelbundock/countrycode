@@ -1,0 +1,29 @@
+# countrycode
+
+> Convert country names and country codes in R and Python.
+
+## Pages
+
+- [Contributions](https://vincentarelbundock.github.io/countrycode/articles/contributions.html): How to add a new country code, contribute a custom dictionary, and set the dictionary attributes countrycode reads.
+- [Country codes](https://vincentarelbundock.github.io/countrycode/articles/countrycode.html): Convert single codes and whole vectors between coding schemes, merge datasets on a shared identifier, and control matching with custom dictionaries, fallback destinations, and custom matches.
+- [Country names](https://vincentarelbundock.github.io/countrycode/articles/countryname.html): countryname() converts country names written in any language to another name or code.
+- [Custom conversions](https://vincentarelbundock.github.io/countrycode/articles/custom.html): Wrap countrycode() in your own functions with different default arguments and custom dictionaries.
+- [Home](https://vincentarelbundock.github.io/countrycode/): countrycode converts country names and country codes across more than 40 coding schemes and 600 country-name variants, in R and in Python.
+- [countrycode](https://vincentarelbundock.github.io/countrycode/reference/python/countrycode.countrycode.html): Convert country codes or names from one format to another.
+- [load_cldr_examples](https://vincentarelbundock.github.io/countrycode/reference/python/datasets.load_cldr_examples.html): Load examples of available Unicode CLDR destination fields.
+- [load_codelist_panel](https://vincentarelbundock.github.io/countrycode/reference/python/datasets.load_codelist_panel.html): Load the reconciled country-year conversion dictionary.
+- [load_countryname_dict](https://vincentarelbundock.github.io/countrycode/reference/python/datasets.load_countryname_dict.html): Load alternative country names used by `countryname`.
+- [load_dataset](https://vincentarelbundock.github.io/countrycode/reference/python/datasets.load_dataset.html): Load a supplementary dataset distributed with `countrycode`.
+- [countryname](https://vincentarelbundock.github.io/countrycode/reference/python/helpers.countryname.html): Convert country names in many languages to another name or code.
+- [get_dictionary](https://vincentarelbundock.github.io/countrycode/reference/python/helpers.get_dictionary.html): List or download a maintained custom conversion dictionary.
+- [guess_field](https://vincentarelbundock.github.io/countrycode/reference/python/helpers.guess_field.html): Guess which coding scheme or name field contains a collection of values.
+- [Overview](https://vincentarelbundock.github.io/countrycode/reference/python/): Every documented function in the countrycode Python package.
+- [cldr_examples](https://vincentarelbundock.github.io/countrycode/reference/r/cldr_examples.html): List of CLDR country name codes and associated examples
+- [codelist](https://vincentarelbundock.github.io/countrycode/reference/r/codelist.html): Country Code Translation Data Frame (Cross-Sectional)
+- [codelist_panel](https://vincentarelbundock.github.io/countrycode/reference/r/codelist_panel.html): Country Code Translation Data Frame (Country-Year Panel)
+- [countrycode](https://vincentarelbundock.github.io/countrycode/reference/r/countrycode.html): Convert Country Codes
+- [countryname](https://vincentarelbundock.github.io/countrycode/reference/r/countryname.html): Convert country names in any language to another name or code
+- [countryname_dict](https://vincentarelbundock.github.io/countrycode/reference/r/countryname_dict.html): A dataframe of alternative country names in many languages. Used internally by the `countryname` function.
+- [get_dictionary](https://vincentarelbundock.github.io/countrycode/reference/r/get_dictionary.html): Get Custom Dictionaries
+- [guess_field](https://vincentarelbundock.github.io/countrycode/reference/r/guess_field.html): Guess the code/name of a vector
+- [Overview](https://vincentarelbundock.github.io/countrycode/reference/r/): Every documented object in the countrycode R package.

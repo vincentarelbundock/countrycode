@@ -1,5 +1,5 @@
-.PHONY: help website articles dictionary \
-	r-document r-check r-install r-test r-build r-lint r-man \
+.PHONY: help website serve reference dictionary \
+	r-document r-check r-install r-test r-build r-lint \
 	py-install py-test py-lint py-coverage py-build py-publish
 
 help:  ## Display this help screen
@@ -29,16 +29,15 @@ r-lint: ## format and lint all R code
 	air format .
 	jarl check .
 
-r-man: ## convert R man/*.Rd to Markdown with pkgsite
+reference: ## generate Typst reference pages from r/man/*.Rd and python/countrycode
 	Rscript scripts/build-reference.R
 
-articles: ## convert docs-src/vignettes/*.qmd to Markdown
-	Rscript scripts/build-articles.R
-
-website: r-install r-man articles ## install R and build the Zensical website
-	Rscript scripts/build-website.R
-	uv run zensical build
+website: r-install reference ## install R and build the Calepin website into docs/
+	calepin compile docs-src docs
 	touch docs/.nojekyll
+
+serve: ## rebuild the website on change and serve it locally
+	calepin watch docs-src docs --serve --open
 
 py-install: ## install the Python package in its uv environment
 	cd python && uv pip install .

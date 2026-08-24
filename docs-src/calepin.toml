@@ -1,0 +1,83 @@
+title = "countrycode"
+description = "Convert country names and country codes in R and Python."
+base-url = "https://vincentarelbundock.github.io/countrycode"
+logo = "assets/logo.png"
+logo-alt = "countrycode"
+favicon = "assets/logo.png"
+search = "pagefind"
+pdf = false
+# HTML-only: no PDF twins and no copied .typ source, so bundled themes drop the
+# view-mode picker entirely.
+typ = false
+
+[static]
+include = ["assets/**"]
+
+[menus]
+
+  [[menus.main]]
+  target = "articles/countrycode.typ"
+  label = "Articles"
+
+  [[menus.main]]
+  target = "reference/r/index.typ"
+  label = "R"
+
+  [[menus.main]]
+  target = "reference/python/index.typ"
+  label = "Python"
+
+  [[menus.social]]
+  target = "https://github.com/vincentarelbundock/countrycode"
+  label = "{icon:github}"
+  aria-label = "GitHub"
+
+[footer]
+
+  [[footer.item]]
+  label = "© 2026 Vincent Arel-Bundock"
+
+  [[footer.item]]
+  label = "Made with Calepin."
+  target = "https://vincentarelbundock.github.io/calepin"
+
+[sidebar]
+fold = true
+
+[[sidebar.section]]
+
+  [[sidebar.section.item]]
+  target = "index.typ"
+
+[[sidebar.section]]
+title = "Articles"
+
+  [[sidebar.section.item]]
+  target = "articles/countrycode.typ"
+
+  [[sidebar.section.item]]
+  target = "articles/countryname.typ"
+
+  [[sidebar.section.item]]
+  target = "articles/custom.typ"
+
+  [[sidebar.section.item]]
+  target = "articles/contributions.typ"
+
+[[sidebar.section]]
+title = "R reference"
+
+  [[sidebar.section.item]]
+  target = "reference/r/index.typ"
+
+  [[sidebar.section.item]]
+  glob = "reference/r/*.typ"
+
+[[sidebar.section]]
+title = "Python reference"
+
+  [[sidebar.section.item]]
+  target = "reference/python/index.typ"
+
+  [[sidebar.section.item]]
+  glob = "reference/python/*.typ"

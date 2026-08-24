@@ -1,12 +1,12 @@
 
 
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>R reference</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Get Custom Dictionaries</title>
     
     
     
-    <meta name="description" content="Every documented object in the countrycode R package.">
-    <meta property="og:description" content="Every documented object in the countrycode R package.">
-    <meta name="twitter:description" content="Every documented object in the countrycode R package.">
+    <meta name="description" content="Get Custom Dictionaries">
+    <meta property="og:description" content="Get Custom Dictionaries">
+    <meta name="twitter:description" content="Get Custom Dictionaries">
     
     
     
@@ -17,8 +17,8 @@
     
     
     
-    <meta property="og:title" content="R reference | countrycode">
-    <meta name="twitter:title" content="R reference | countrycode">
+    <meta property="og:title" content="Get Custom Dictionaries | countrycode">
+    <meta name="twitter:title" content="Get Custom Dictionaries | countrycode">
     
     
     <meta property="og:type" content="article">
@@ -26,8 +26,8 @@
     <meta name="twitter:card" content="summary">
     
     
-    <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/">
-    <meta property="og:url" content="https://vincentarelbundock.github.io/countrycode/reference/r/">
+    <link rel="canonical" href="https://vincentarelbundock.github.io/countrycode/reference/r/get_dictionary.html">
+    <meta property="og:url" content="https://vincentarelbundock.github.io/countrycode/reference/r/get_dictionary.html">
     
     
     <link rel="icon" href="../../assets/logo.png">
@@ -2856,7 +2856,7 @@ html:not([data-theme]) {
                 
                                 <li><a href="../../articles/countrycode.html" aria-label="Articles">Articles</a></li>
                 
-                                <li><a href="index.html" aria-label="R" aria-current="page">R</a></li>
+                                <li><a href="index.html" aria-label="R">R</a></li>
                 
                                 <li><a href="../python/index.html" aria-label="Python">Python</a></li>
                 
@@ -2893,7 +2893,7 @@ html:not([data-theme]) {
                     
                                     <li><a href="../../articles/countrycode.html" aria-label="Articles">Articles</a></li>
                     
-                                    <li><a href="index.html" aria-label="R" aria-current="page">R</a></li>
+                                    <li><a href="index.html" aria-label="R">R</a></li>
                     
                                     <li><a href="../python/index.html" aria-label="Python">Python</a></li>
                     
@@ -2971,7 +2971,7 @@ html:not([data-theme]) {
 <ul>
     
     
-<li class="calepin-website-sidebar-link"><a href="index.html" aria-label="Overview" class="active" aria-current="page">Overview</a></li>
+<li class="calepin-website-sidebar-link"><a href="index.html" aria-label="Overview">Overview</a></li>
 
     
     
@@ -2999,7 +2999,7 @@ html:not([data-theme]) {
 
     
     
-<li class="calepin-website-sidebar-link"><a href="get_dictionary.html" aria-label="get_dictionary">get_dictionary</a></li>
+<li class="calepin-website-sidebar-link"><a href="get_dictionary.html" aria-label="get_dictionary" class="active" aria-current="page">get_dictionary</a></li>
 
     
     
@@ -3071,9 +3071,31 @@ html:not([data-theme]) {
             </nav>
         </aside>
         <main class="calepin-website-main calepin-content" data-pagefind-body>
-            <h1 id="r-reference">R reference</h1><dl><dt><a href="cldr_examples.typ"><code>cldr_examples</code></a></dt><dd>List of CLDR country name codes and associated examples</dd><dt><a href="codelist.typ"><code>codelist</code></a></dt><dd>Country Code Translation Data Frame (Cross-Sectional)</dd><dt><a href="codelist_panel.typ"><code>codelist_panel</code></a></dt><dd>Country Code Translation Data Frame (Country-Year Panel)</dd><dt><a href="countrycode.typ"><code>countrycode</code></a></dt><dd>Convert Country Codes</dd><dt><a href="countryname.typ"><code>countryname</code></a></dt><dd>Convert country names in any language to another name or code</dd><dt><a href="countryname_dict.typ"><code>countryname_dict</code></a></dt><dd>A dataframe of alternative country names in many languages. Used internally by the <code>countryname</code> function.</dd><dt><a href="get_dictionary.typ"><code>get_dictionary</code></a></dt><dd>Get Custom Dictionaries</dd><dt><a href="guess_field.typ"><code>guess_field</code></a></dt><dd>Guess the code/name of a vector</dd></dl>
+            <h2 id="get_dictionary">Get Custom Dictionaries</h2><div class="sourceCode" data-lang="R"><pre><code data-lang="r"><span class="calepin-syntax-scope-22">get_dictionary</span>(<span class="calepin-syntax-scope-28">dictionary</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-11">NULL</span>)
+</code></pre></div><h3 id="description">Description</h3><p>Download a custom dictionary to use in the <code>custom_dict</code> argument of <code>countrycode()</code></p><h3 id="arguments">Arguments</h3><table><tr><td><code>dictionary</code></td><td>A character string that specifies the dictionary to be retrieved. It must be one of “global_burden_of_disease”, “ch_cantons”, “us_states”, “exiobase3”, “gtap10”. If NULL, the function will print the list of available dictionaries. Default is NULL.</td></tr></table><h3 id="value">Value</h3><p>If a valid dictionary is specified, the function will return that dictionary as a data.frame. If an invalid dictionary or no dictionary is specified, the function will stop and throw an error message.</p><h3 id="examples">Examples</h3><div class="sourceCode" data-lang="R"><pre><code data-lang="r">cd <span class="calepin-syntax-scope-27">&lt;-</span> <span class="calepin-syntax-scope-22">get_dictionary</span>(<span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">us_states</span><span class="calepin-syntax-scope-4">"</span>)
+countrycode::<span class="calepin-syntax-scope-22">countrycode</span>(<span class="calepin-syntax-scope-21">c</span>(<span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">MO</span><span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">MN</span><span class="calepin-syntax-scope-4">"</span>)<span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">origin</span> <span class="calepin-syntax-scope-27">=</span> <span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">state.abb</span><span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-3">state.name</span><span class="calepin-syntax-scope-4">"</span><span class="calepin-syntax-scope-26">,</span> <span class="calepin-syntax-scope-28">custom_dict</span> <span class="calepin-syntax-scope-27">=</span> cd)
+</code></pre></div>
         </main>
                 
+        <aside class="calepin-website-toc is-floating">
+            <p class="calepin-website-toc-title">On this page</p>
+            <nav aria-label="On this page">
+                <ul>
+                    
+                    <li class="level-2"><a href="#get_dictionary">Get Custom Dictionaries</a></li>
+                    
+                    <li class="level-3"><a href="#description">Description</a></li>
+                    
+                    <li class="level-3"><a href="#arguments">Arguments</a></li>
+                    
+                    <li class="level-3"><a href="#value">Value</a></li>
+                    
+                    <li class="level-3"><a href="#examples">Examples</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        
     </div>
     
     
@@ -3115,17 +3137,6 @@ html:not([data-theme]) {
     
         
         
-            
-            
-        
-        
-        
-    
-        
-        
-            
-            
-        
         
             
         
@@ -3174,6 +3185,17 @@ html:not([data-theme]) {
         
     
         
+        
+            
+            
+        
+        
+        
+    
+        
+        
+            
+            
         
         
             
@@ -3248,20 +3270,20 @@ html:not([data-theme]) {
     <footer class="calepin-website-page-nav" aria-label="Page navigation">
       <div class="calepin-website-page-nav-inner">
         
-        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--prev outline secondary" href="../../articles/contributions.html" role="button">
+        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--prev outline secondary" href="countryname_dict.html" role="button">
           <span class="calepin-website-page-nav-arrow" aria-hidden="true">&larr;</span>
           <span class="calepin-website-page-nav-content">
             <span class="calepin-website-page-nav-kind">Previous</span>
-            <span class="calepin-website-page-nav-title">Contributions</span>
+            <span class="calepin-website-page-nav-title">countryname_dict</span>
           </span>
         </a>
         
 
         
-        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--next outline secondary" href="cldr_examples.html" role="button">
+        <a class="calepin-website-page-nav-link calepin-website-page-nav-link--next outline secondary" href="guess_field.html" role="button">
           <span class="calepin-website-page-nav-content">
             <span class="calepin-website-page-nav-kind">Next</span>
-            <span class="calepin-website-page-nav-title">cldr_examples</span>
+            <span class="calepin-website-page-nav-title">guess_field</span>
           </span>
           <span class="calepin-website-page-nav-arrow" aria-hidden="true">&rarr;</span>
         </a>
