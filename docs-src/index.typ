@@ -13,15 +13,12 @@
   summary: "countrycode converts country names and country codes across more than 40 coding schemes and 600 country-name variants, in R and in Python.",
 )) <website-metadata>
 
-// The hex logo is square, so it needs a tighter width than the theme's default
-// wordmark variable, which is sized for a wide horizontal logo.
 #let hero() = calepin.elements.target(
   html: () => html.elem("section", attrs: (class: "landing-hero"))[
     #html.elem("img", attrs: (
-      src: calepin.url("/assets/logo.png"),
+      src: calepin.url("/assets/countrycode.svg"),
       alt: "countrycode",
       class: "landing-hero-wordmark",
-      style: "width: min(60%, 11rem);",
     ))[]
     #html.elem("h2")[Convert country names and codes, in R and Python]
     #html.elem("p", attrs: (class: "landing-hero-copy"))[
@@ -34,7 +31,7 @@
     ]
   ],
   paged: () => align(center)[
-    #image("/assets/logo.png", width: 25%, alt: "countrycode logo")
+    #image("/assets/countrycode.svg", width: 70%, alt: "countrycode logo")
     #v(0.5em)
     #text(size: 1.3em, weight: "bold")[Convert country names and codes, in R and Python]
   ],

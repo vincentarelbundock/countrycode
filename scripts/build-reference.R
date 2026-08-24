@@ -107,7 +107,7 @@ local({
     # Remove stale pages so deleted topics cannot survive a rebuild.
     unlink(list.files(dir, pattern = "\\.typ$", full.names = TRUE))
 
-    status <- system2(typst_doc, c(shQuote(input), "--split", "-o", shQuote(dir)))
+    status <- system2(typst_doc, c(shQuote(input), "-o", shQuote(dir)))
     if (!identical(status, 0L)) {
       stop("typst-doc failed on ", input)
     }
