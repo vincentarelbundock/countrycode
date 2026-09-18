@@ -4,6 +4,7 @@ library(purrr)
 library(dplyr)
 library(countrycode)
 library(readr)
+library(stringr)
 
 url <- 'https://www.iana.org/domains/root/db'
 
