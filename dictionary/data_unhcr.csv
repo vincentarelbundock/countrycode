@@ -3,7 +3,7 @@ Afghanistan,AFG,Asia and the Pacific
 Albania,ALB,Europe
 Algeria,ALG,Middle East and North Africa
 Andorra,AND,Europe
-Angola,ANG,Southern Africa
+Angola,ANG,Eastern and Southern Africa
 Anguilla,AIA,The Americas
 Antigua and Barbuda,ANT,The Americas
 Argentina,ARG,The Americas
@@ -25,14 +25,14 @@ Bhutan,BHU,Asia and the Pacific
 Bolivia (Plurinational State of),BOL,The Americas
 "Bonaire, Saint Eustatius and Saba",BES,The Americas
 Bosnia and Herzegovina,BSN,Europe
-Botswana,BOT,Southern Africa
+Botswana,BOT,Eastern and Southern Africa
 Bouvet Island,BVT,Europe
 Brazil,BRA,The Americas
 British Virgin Islands,BVI,The Americas
 Brunei Darussalam,BRU,Asia and the Pacific
 Bulgaria,BUL,Europe
 Burkina Faso,BKF,West and Central Africa
-Burundi,BDI,East and Horn of Africa
+Burundi,BDI,Eastern and Southern Africa
 Cabo Verde,CVI,West and Central Africa
 Cambodia,CAM,Asia and the Pacific
 Cameroon,CMR,West and Central Africa
@@ -45,8 +45,8 @@ China,CHI,Asia and the Pacific
 "China, Hong Kong SAR",HKG,Asia and the Pacific
 "China, Macao SAR",MAC,Asia and the Pacific
 Colombia,COL,The Americas
-Comoros,COI,Southern Africa
-Congo,COB,Southern Africa
+Comoros,COI,Eastern and Southern Africa
+Congo,COB,West and Central Africa
 Cook Islands,COK,Asia and the Pacific
 Costa Rica,COS,The Americas
 Cote d'Ivoire,ICO,West and Central Africa
@@ -56,19 +56,19 @@ Curacao ,CUW,The Americas
 Cyprus,CYP,Europe
 Czechia,CZE,Europe
 Dem. People's Rep. of Korea,KRN,Asia and the Pacific
-Dem. Rep. of the Congo,COD,Southern Africa
+Dem. Rep. of the Congo,COD,West and Central Africa
 Denmark,DEN,Europe
-Djibouti,DJB,East and Horn of Africa
+Djibouti,DJB,Eastern and Southern Africa
 Dominica,DMA,The Americas
 Dominican Rep.,DOM,The Americas
 Ecuador,ECU,The Americas
 Egypt,ARE,Middle East and North Africa
 El Salvador,SAL,The Americas
 Equatorial Guinea,EGU,West and Central Africa
-Eritrea,ERT,East and Horn of Africa
+Eritrea,ERT,Eastern and Southern Africa
 Estonia,EST,Europe
-Eswatini,SWA,Southern Africa
-Ethiopia,ETH,East and Horn of Africa
+Eswatini,SWA,Eastern and Southern Africa
+Ethiopia,ETH,Eastern and Southern Africa
 Faeroe Islands,FRO,Europe
 Fiji,FIJ,Asia and the Pacific
 Finland,FIN,Europe
@@ -106,7 +106,7 @@ Jamaica,JAM,The Americas
 Japan,JPN,Asia and the Pacific
 Jordan,JOR,Middle East and North Africa
 Kazakhstan,KAZ,Asia and the Pacific
-Kenya,KEN,East and Horn of Africa
+Kenya,KEN,Eastern and Southern Africa
 Kiribati,KIR,Asia and the Pacific
 Kosovo,KOS,Europe
 Kuwait,KUW,Middle East and North Africa
@@ -114,22 +114,22 @@ Kyrgyzstan,KGZ,Asia and the Pacific
 Lao People's Dem. Rep.,LAO,Asia and the Pacific
 Latvia,LVA,Europe
 Lebanon,LEB,Middle East and North Africa
-Lesotho,LES,Southern Africa
+Lesotho,LES,Eastern and Southern Africa
 Liberia,LBR,West and Central Africa
 Libya,LBY,Middle East and North Africa
 Liechtenstein,LIE,Europe
 Lithuania,LTU,Europe
 Luxembourg,LUX,Europe
-Madagascar,MAD,Southern Africa
-Malawi,MLW,Southern Africa
+Madagascar,MAD,Eastern and Southern Africa
+Malawi,MLW,Eastern and Southern Africa
 Malaysia,MLS,Asia and the Pacific
-Maldives,MDV,Southern Africa
+Maldives,MDV,Asia and the Pacific
 Mali,MLI,West and Central Africa
 Malta,MTA,Europe
 Marshall Islands,MHL,Asia and the Pacific
 Martinique,MAR,The Americas
 Mauritania,MAU,Middle East and North Africa
-Mauritius,MTS,Southern Africa
+Mauritius,MTS,Eastern and Southern Africa
 Mexico,MEX,The Americas
 Micronesia (Federated States of),FSM,Asia and the Pacific
 Monaco,MCO,Europe
@@ -137,12 +137,12 @@ Mongolia,MNG,Asia and the Pacific
 Montenegro,MNE,Europe
 Montserrat,MSR,The Americas
 Morocco,MOR,Middle East and North Africa
-Mozambique,MOZ,Southern Africa
+Mozambique,MOZ,Eastern and Southern Africa
 Myanmar,MYA,Asia and the Pacific
-Namibia,NAM,Southern Africa
+Namibia,NAM,Eastern and Southern Africa
 Nauru,NRU,Asia and the Pacific
 Nepal,NEP,Asia and the Pacific
-Netherlands,NET,Europe
+Netherlands (Kingdom of the),NET,Europe
 New Caledonia,FNC,Asia and the Pacific
 New Zealand,NZL,Asia and the Pacific
 Nicaragua,NIC,The Americas
@@ -166,10 +166,10 @@ Puerto Rico,PUE,The Americas
 Qatar,QAT,Middle East and North Africa
 Rep. of Korea,KOR,Asia and the Pacific
 Rep. of Moldova,MDA,Europe
-Reunion,REU,East and Horn of Africa
+Reunion,REU,Eastern and Southern Africa
 Romania,ROM,Europe
 Russian Federation,RUS,Europe
-Rwanda,RWA,East and Horn of Africa
+Rwanda,RWA,Eastern and Southern Africa
 Saint Kitts and Nevis,STK,The Americas
 Saint Lucia,LCA,The Americas
 Saint Vincent and the Grenadines,VCT,The Americas
@@ -181,22 +181,22 @@ Sao Tome and Principe,STP,West and Central Africa
 Saudi Arabia,SAU,Middle East and North Africa
 Senegal,SEN,West and Central Africa
 Serbia,SRB,Europe
-Seychelles,SEY,Southern Africa
+Seychelles,SEY,Eastern and Southern Africa
 Sierra Leone,SLE,West and Central Africa
 Singapore,SIN,Asia and the Pacific
 Sint Maarten (Dutch part),SXM,The Americas
 Slovakia,SVK,Europe
 Slovenia,SVN,Europe
 Solomon Islands,SOL,Asia and the Pacific
-Somalia,SOM,East and Horn of Africa
-South Africa,RSA,Southern Africa
+Somalia,SOM,Eastern and Southern Africa
+South Africa,RSA,Eastern and Southern Africa
 South Georgia and the South Sandwich Islands,SGS,Europe
-South Sudan,SSD,East and Horn of Africa
+South Sudan,SSD,Eastern and Southern Africa
 Spain,SPA,Europe
 Sri Lanka,LKA,Asia and the Pacific
 State of Palestine,GAZ,Middle East and North Africa
 Stateless,STA,
-Sudan,SUD,East and Horn of Africa
+Sudan,SUD,Eastern and Southern Africa
 Suriname,SUR,The Americas
 Svalbard and Jan Mayen,SJM,Europe
 Sweden,SWE,Europe
@@ -214,11 +214,11 @@ Turkmenistan,TKM,Asia and the Pacific
 Turks and Caicos Islands,TCI,The Americas
 Tuvalu,TUV,Asia and the Pacific
 Türkiye,TUR,Europe
-Uganda,UGA,East and Horn of Africa
+Uganda,UGA,Eastern and Southern Africa
 Ukraine,UKR,Europe
 United Arab Emirates,UAE,Middle East and North Africa
 United Kingdom of Great Britain and Northern Ireland,GBR,Europe
-United Rep. of Tanzania,TAN,East and Horn of Africa
+United Rep. of Tanzania,TAN,Eastern and Southern Africa
 United States of America,USA,The Americas
 Unknown ,UKN,
 Uruguay,URU,The Americas
@@ -228,5 +228,5 @@ Venezuela (Bolivarian Republic of),VEN,The Americas
 Viet Nam,SRV,Asia and the Pacific
 Western Sahara,WSH,Middle East and North Africa
 Yemen,YEM,Middle East and North Africa
-Zambia,ZAM,Southern Africa
-Zimbabwe,ZIM,Southern Africa
+Zambia,ZAM,Eastern and Southern Africa
+Zimbabwe,ZIM,Eastern and Southern Africa
