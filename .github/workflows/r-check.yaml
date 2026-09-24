@@ -25,6 +25,7 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           packages: any::rcmdcheck
+          working-directory: r
 
       - uses: vincentarelbundock/scrutin/.github/actions/check_r@main
         with:
