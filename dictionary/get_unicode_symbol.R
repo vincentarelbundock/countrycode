@@ -5,6 +5,7 @@ require(stringr)
 require(httr)
 require(xml2)
 require(assertthat)
+require(readr)
 
 # This script creates Unicode region subtags as pairs of Regional Indicator Symbols. Region subtags represent regions,
 # not flags. When composed of Regional Indicator Symbols, they are displayed as flags on most systems, but on Windows

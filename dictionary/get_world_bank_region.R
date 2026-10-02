@@ -52,6 +52,7 @@ manual <- tribble(
   "Modena"                                       , "Europe & Central Asia"      ,
   "Montserrat"                                   , "Latin America & Caribbean"  ,
   "Nassau"                                       , "Latin America & Caribbean"  ,
+  "Naoero"                                       , "East Asia & Pacific"        ,
   "Netherlands Antilles"                         , "Latin America & Caribbean"  ,
   "Niue"                                         , "East Asia & Pacific"        ,
   "Norfolk Island"                               , "East Asia & Pacific"        ,

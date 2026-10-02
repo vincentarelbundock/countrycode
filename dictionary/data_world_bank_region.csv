@@ -1,7 +1,7 @@
 country,region
 Andorra,Europe & Central Asia
-United Arab Emirates,"Middle East, North Africa, Afghanistan & Pakistan"
-Afghanistan,"Middle East, North Africa, Afghanistan & Pakistan"
+United Arab Emirates,Middle East & North Africa
+Afghanistan,South Asia
 Antigua and Barbuda,Latin America & Caribbean
 Albania,Europe & Central Asia
 Armenia,Europe & Central Asia
@@ -18,7 +18,7 @@ Bangladesh,South Asia
 Belgium,Europe & Central Asia
 Burkina Faso,Sub-Saharan Africa
 Bulgaria,Europe & Central Asia
-Bahrain,"Middle East, North Africa, Afghanistan & Pakistan"
+Bahrain,Middle East & North Africa
 Burundi,Sub-Saharan Africa
 Benin,Sub-Saharan Africa
 Bermuda,North America
@@ -47,14 +47,14 @@ Curacao,Latin America & Caribbean
 Cyprus,Europe & Central Asia
 Czechia,Europe & Central Asia
 Germany,Europe & Central Asia
-Djibouti,"Middle East, North Africa, Afghanistan & Pakistan"
+Djibouti,Middle East & North Africa
 Denmark,Europe & Central Asia
 Dominica,Latin America & Caribbean
 Dominican Republic,Latin America & Caribbean
-Algeria,"Middle East, North Africa, Afghanistan & Pakistan"
+Algeria,Middle East & North Africa
 Ecuador,Latin America & Caribbean
 Estonia,Europe & Central Asia
-"Egypt, Arab Rep.","Middle East, North Africa, Afghanistan & Pakistan"
+"Egypt, Arab Rep.",Middle East & North Africa
 Eritrea,Sub-Saharan Africa
 Spain,Europe & Central Asia
 Ethiopia,Sub-Saharan Africa
@@ -85,16 +85,16 @@ Haiti,Latin America & Caribbean
 Hungary,Europe & Central Asia
 Indonesia,East Asia & Pacific
 Ireland,Europe & Central Asia
-Israel,"Middle East, North Africa, Afghanistan & Pakistan"
+Israel,Middle East & North Africa
 Isle of Man,Europe & Central Asia
 India,South Asia
-Iraq,"Middle East, North Africa, Afghanistan & Pakistan"
-"Iran, Islamic Rep.","Middle East, North Africa, Afghanistan & Pakistan"
+Iraq,Middle East & North Africa
+"Iran, Islamic Rep.",Middle East & North Africa
 Iceland,Europe & Central Asia
 Italy,Europe & Central Asia
 Channel Islands,Europe & Central Asia
 Jamaica,Latin America & Caribbean
-Jordan,"Middle East, North Africa, Afghanistan & Pakistan"
+Jordan,Middle East & North Africa
 Japan,East Asia & Pacific
 Kenya,Sub-Saharan Africa
 Kyrgyz Republic,Europe & Central Asia
@@ -104,11 +104,11 @@ Comoros,Sub-Saharan Africa
 St. Kitts and Nevis,Latin America & Caribbean
 "Korea, Dem. People's Rep.",East Asia & Pacific
 "Korea, Rep.",East Asia & Pacific
-Kuwait,"Middle East, North Africa, Afghanistan & Pakistan"
+Kuwait,Middle East & North Africa
 Cayman Islands,Latin America & Caribbean
 Kazakhstan,Europe & Central Asia
 Lao PDR,East Asia & Pacific
-Lebanon,"Middle East, North Africa, Afghanistan & Pakistan"
+Lebanon,Middle East & North Africa
 St. Lucia,Latin America & Caribbean
 Liechtenstein,Europe & Central Asia
 Sri Lanka,South Asia
@@ -117,8 +117,8 @@ Lesotho,Sub-Saharan Africa
 Lithuania,Europe & Central Asia
 Luxembourg,Europe & Central Asia
 Latvia,Europe & Central Asia
-Libya,"Middle East, North Africa, Afghanistan & Pakistan"
-Morocco,"Middle East, North Africa, Afghanistan & Pakistan"
+Libya,Middle East & North Africa
+Morocco,Middle East & North Africa
 Monaco,Europe & Central Asia
 Moldova,Europe & Central Asia
 Montenegro,Europe & Central Asia
@@ -132,7 +132,7 @@ Mongolia,East Asia & Pacific
 "Macao SAR, China",East Asia & Pacific
 Northern Mariana Islands,East Asia & Pacific
 Mauritania,Sub-Saharan Africa
-Malta,"Middle East, North Africa, Afghanistan & Pakistan"
+Malta,Middle East & North Africa
 Mauritius,Sub-Saharan Africa
 Maldives,South Asia
 Malawi,Sub-Saharan Africa
@@ -147,27 +147,25 @@ Nicaragua,Latin America & Caribbean
 Netherlands,Europe & Central Asia
 Norway,Europe & Central Asia
 Nepal,South Asia
-Nauru,East Asia & Pacific
 New Zealand,East Asia & Pacific
-Oman,"Middle East, North Africa, Afghanistan & Pakistan"
+Oman,Middle East & North Africa
 Panama,Latin America & Caribbean
 Peru,Latin America & Caribbean
 French Polynesia,East Asia & Pacific
 Papua New Guinea,East Asia & Pacific
 Philippines,East Asia & Pacific
-Pakistan,"Middle East, North Africa, Afghanistan & Pakistan"
+Pakistan,South Asia
 Poland,Europe & Central Asia
-Puerto Rico (US),Latin America & Caribbean
-West Bank and Gaza,"Middle East, North Africa, Afghanistan & Pakistan"
+West Bank and Gaza,Middle East & North Africa
 Portugal,Europe & Central Asia
 Palau,East Asia & Pacific
 Paraguay,Latin America & Caribbean
-Qatar,"Middle East, North Africa, Afghanistan & Pakistan"
+Qatar,Middle East & North Africa
 Romania,Europe & Central Asia
 Serbia,Europe & Central Asia
 Russian Federation,Europe & Central Asia
 Rwanda,Sub-Saharan Africa
-Saudi Arabia,"Middle East, North Africa, Afghanistan & Pakistan"
+Saudi Arabia,Middle East & North Africa
 Solomon Islands,East Asia & Pacific
 Seychelles,Sub-Saharan Africa
 Sudan,Sub-Saharan Africa
@@ -178,13 +176,12 @@ Slovak Republic,Europe & Central Asia
 Sierra Leone,Sub-Saharan Africa
 San Marino,Europe & Central Asia
 Senegal,Sub-Saharan Africa
-"Somalia, Fed. Rep.",Sub-Saharan Africa
 Suriname,Latin America & Caribbean
 South Sudan,Sub-Saharan Africa
 Sao Tome and Principe,Sub-Saharan Africa
 El Salvador,Latin America & Caribbean
 Sint Maarten (Dutch part),Latin America & Caribbean
-Syrian Arab Republic,"Middle East, North Africa, Afghanistan & Pakistan"
+Syrian Arab Republic,Middle East & North Africa
 Eswatini,Sub-Saharan Africa
 Turks and Caicos Islands,Latin America & Caribbean
 Chad,Sub-Saharan Africa
@@ -193,7 +190,7 @@ Thailand,East Asia & Pacific
 Tajikistan,Europe & Central Asia
 Timor-Leste,East Asia & Pacific
 Turkmenistan,Europe & Central Asia
-Tunisia,"Middle East, North Africa, Afghanistan & Pakistan"
+Tunisia,Middle East & North Africa
 Tonga,East Asia & Pacific
 Turkiye,Europe & Central Asia
 Trinidad and Tobago,Latin America & Caribbean
@@ -212,7 +209,7 @@ Viet Nam,East Asia & Pacific
 Vanuatu,East Asia & Pacific
 Samoa,East Asia & Pacific
 Kosovo,Europe & Central Asia
-"Yemen, Rep.","Middle East, North Africa, Afghanistan & Pakistan"
+"Yemen, Rep.",Middle East & North Africa
 South Africa,Sub-Saharan Africa
 Zambia,Sub-Saharan Africa
 Zimbabwe,Sub-Saharan Africa
@@ -246,6 +243,7 @@ Mecklenburg Schwerin,Europe & Central Asia
 Modena,Europe & Central Asia
 Montserrat,Latin America & Caribbean
 Nassau,Latin America & Caribbean
+Naoero,East Asia & Pacific
 Netherlands Antilles,Latin America & Caribbean
 Niue,East Asia & Pacific
 Norfolk Island,East Asia & Pacific
@@ -260,6 +258,7 @@ Sardinia,Europe & Central Asia
 Saxe-Weimar-Eisenach,Europe & Central Asia
 Saxony,Europe & Central Asia
 Serbia and Montenegro,Europe & Central Asia
+Somalia,Sub-Saharan Africa
 Somaliland,Sub-Saharan Africa
 South Georgia and the South Sandwich Islands,East Asia & Pacific
 "Taiwan, Province of China",East Asia & Pacific
