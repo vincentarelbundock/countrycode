@@ -78,6 +78,7 @@
 #' - `un.regionsub.name`: United Nations sub-region name
 #' - `un.regionsub.code`: United Nations sub-region code
 #' - `unhcr.region`: United Nations High Commissioner for Refugees region name
+#' - `wb_api.name`: World Bank country names
 #' - `wvs.name`: World Values Survey numeric code country name
 #'
 #' @note The Correlates of War (cow) and Polity 4 (p4) project produce codes in

@@ -6,6 +6,6 @@ download.file(url, tmp, quiet = TRUE, mode = 'wb')
 
 wb_api <- fromJSON(tmp, flatten = T)[[2]] %>%
   filter(region.value != 'Aggregates') %>%
-  select(country = name, wb_api2c = iso2Code, wb_api3c = id)
+  select(country = name, wb_api2c = iso2Code, wb_api3c = id, wb_api.name = name)
 
 wb_api %>% write_csv('dictionary/data_world_bank_api.csv', na = "")

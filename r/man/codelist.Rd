@@ -89,6 +89,7 @@ without special territories
 \item \code{un.regionsub.name}: United Nations sub-region name
 \item \code{un.regionsub.code}: United Nations sub-region code
 \item \code{unhcr.region}: United Nations High Commissioner for Refugees region name
+\item \code{wb_api.name}: World Bank country names
 \item \code{wvs.name}: World Values Survey numeric code country name
 }
 }
